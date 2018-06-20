@@ -100,7 +100,6 @@
 				524EEE6B20DA840D006B9917 /* Frameworks */,
 				524EEE6C20DA840D006B9917 /* Resources */,
 				94637E4F20268CEF4DF8057A /* [CP] Embed Pods Frameworks */,
-				33AB4F24C6CC12EAF021642A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -158,21 +157,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		33AB4F24C6CC12EAF021642A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JazHotels/Pods-JazHotels-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		94637E4F20268CEF4DF8057A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

@@ -12,9 +12,11 @@
 		524EEE7720DA840D006B9917 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 524EEE7520DA840D006B9917 /* Main.storyboard */; };
 		524EEE7920DA840F006B9917 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 524EEE7820DA840F006B9917 /* Assets.xcassets */; };
 		524EEE7C20DA840F006B9917 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 524EEE7A20DA840F006B9917 /* LaunchScreen.storyboard */; };
+		FA34B49D79DD74C9696B2EEE /* Pods_JazHotels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 925F604466D8797ABBF10B44 /* Pods_JazHotels.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		42D73029D47BCCF9EDE78E08 /* Pods-JazHotels.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JazHotels.release.xcconfig"; path = "Pods/Target Support Files/Pods-JazHotels/Pods-JazHotels.release.xcconfig"; sourceTree = "<group>"; };
 		524EEE6E20DA840D006B9917 /* JazHotels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JazHotels.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		524EEE7120DA840D006B9917 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		524EEE7320DA840D006B9917 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		524EEE7820DA840F006B9917 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		524EEE7B20DA840F006B9917 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		524EEE7D20DA840F006B9917 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8963E40941314293147FBF58 /* Pods-JazHotels.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JazHotels.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JazHotels/Pods-JazHotels.debug.xcconfig"; sourceTree = "<group>"; };
+		925F604466D8797ABBF10B44 /* Pods_JazHotels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JazHotels.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA34B49D79DD74C9696B2EEE /* Pods_JazHotels.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				524EEE7020DA840D006B9917 /* JazHotels */,
 				524EEE6F20DA840D006B9917 /* Products */,
+				92276CA12D50E4A86FD2D42D /* Pods */,
+				B5E9232516D4B0033B321F42 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = JazHotels;
 			sourceTree = "<group>";
 		};
+		92276CA12D50E4A86FD2D42D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8963E40941314293147FBF58 /* Pods-JazHotels.debug.xcconfig */,
+				42D73029D47BCCF9EDE78E08 /* Pods-JazHotels.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B5E9232516D4B0033B321F42 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				925F604466D8797ABBF10B44 /* Pods_JazHotels.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 524EEE8020DA840F006B9917 /* Build configuration list for PBXNativeTarget "JazHotels" */;
 			buildPhases = (
+				C1317609AE491E811935A58B /* [CP] Check Pods Manifest.lock */,
 				524EEE6A20DA840D006B9917 /* Sources */,
 				524EEE6B20DA840D006B9917 /* Frameworks */,
 				524EEE6C20DA840D006B9917 /* Resources */,
+				94637E4F20268CEF4DF8057A /* [CP] Embed Pods Frameworks */,
+				33AB4F24C6CC12EAF021642A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -129,6 +156,72 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		33AB4F24C6CC12EAF021642A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JazHotels/Pods-JazHotels-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		94637E4F20268CEF4DF8057A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-JazHotels/Pods-JazHotels-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/BSKeyboardControls/BSKeyboardControls.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/PullToRefreshKit/PullToRefreshKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
+				"${BUILT_PRODUCTS_DIR}/SwifterSwift/SwifterSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BSKeyboardControls.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PullToRefreshKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwifterSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JazHotels/Pods-JazHotels-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1317609AE491E811935A58B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JazHotels-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		524EEE6A20DA840D006B9917 /* Sources */ = {
@@ -278,15 +371,13 @@
 		};
 		524EEE8120DA840F006B9917 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8963E40941314293147FBF58 /* Pods-JazHotels.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7H9L7MTT7T;
 				INFOPLIST_FILE = JazHotels/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Nada.JazHotels;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -296,15 +387,13 @@
 		};
 		524EEE8220DA840F006B9917 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42D73029D47BCCF9EDE78E08 /* Pods-JazHotels.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7H9L7MTT7T;
 				INFOPLIST_FILE = JazHotels/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Nada.JazHotels;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

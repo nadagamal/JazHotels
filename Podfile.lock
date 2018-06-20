@@ -1,0 +1,46 @@
+PODS:
+  - Alamofire (4.7.2)
+  - BSKeyboardControls (2.2)
+  - Kingfisher (4.8.0)
+  - NVActivityIndicatorView (4.2.1):
+    - NVActivityIndicatorView/Presenter (= 4.2.1)
+  - NVActivityIndicatorView/Presenter (4.2.1)
+  - PullToRefreshKit (0.8.6)
+  - SkyFloatingLabelTextField (3.4.1)
+  - SwifterSwift (4.3.0):
+    - SwifterSwift/AppKit (= 4.3.0)
+    - SwifterSwift/CoreGraphics (= 4.3.0)
+    - SwifterSwift/CoreLocation (= 4.3.0)
+    - SwifterSwift/Foundation (= 4.3.0)
+    - SwifterSwift/MapKit (= 4.3.0)
+    - SwifterSwift/SwiftStdlib (= 4.3.0)
+    - SwifterSwift/UIKit (= 4.3.0)
+  - SwifterSwift/AppKit (4.3.0)
+  - SwifterSwift/CoreGraphics (4.3.0)
+  - SwifterSwift/CoreLocation (4.3.0)
+  - SwifterSwift/Foundation (4.3.0)
+  - SwifterSwift/MapKit (4.3.0)
+  - SwifterSwift/SwiftStdlib (4.3.0)
+  - SwifterSwift/UIKit (4.3.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - BSKeyboardControls (~> 2.2)
+  - Kingfisher (~> 4.0)
+  - NVActivityIndicatorView
+  - PullToRefreshKit
+  - SkyFloatingLabelTextField (~> 3.0)
+  - SwifterSwift
+
+SPEC CHECKSUMS:
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  BSKeyboardControls: b701935e789961102e3f20063bba7185800a2d3f
+  Kingfisher: 976d828df2b24834c6a3f2fc4d82cdbd26552be1
+  NVActivityIndicatorView: 8068ba3ad39cb44cbaab25d89ff2546b3f092681
+  PullToRefreshKit: 172df52ab9c6cb2c1d4b1872b49f448d6291523f
+  SkyFloatingLabelTextField: 8085f20f57f74a00cfcae58099299faa1a971035
+  SwifterSwift: f3fce2b9fc5b9d8fda6eec33825e5243c60aebba
+
+PODFILE CHECKSUM: 3d977a86058e63b0028c38f13ea624f395dc58b7
+
+COCOAPODS: 1.4.0

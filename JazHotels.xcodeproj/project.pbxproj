@@ -71,6 +71,44 @@
 		52B6166920E891C100A1A416 /* JAcceptedPayment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B6163020E891C100A1A416 /* JAcceptedPayment.swift */; };
 		52B6166A20E891C100A1A416 /* JCountryName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B6163120E891C100A1A416 /* JCountryName.swift */; };
 		52B6166B20E891C100A1A416 /* JHotelName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B6163220E891C100A1A416 /* JHotelName.swift */; };
+		52B616BA20E9341E00A1A416 /* JCRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B6169420E9341700A1A416 /* JCRate.swift */; };
+		52B616BB20E9341E00A1A416 /* JCDeadline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B6169520E9341800A1A416 /* JCDeadline.swift */; };
+		52B616BC20E9341E00A1A416 /* JCGuarantee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B6169620E9341800A1A416 /* JCGuarantee.swift */; };
+		52B616BD20E9341E00A1A416 /* JCOTAHotelAvailRS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B6169720E9341800A1A416 /* JCOTAHotelAvailRS.swift */; };
+		52B616BE20E9341E00A1A416 /* JCMealsIncluded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B6169820E9341800A1A416 /* JCMealsIncluded.swift */; };
+		52B616BF20E9341E00A1A416 /* JCRoomRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B6169920E9341800A1A416 /* JCRoomRate.swift */; };
+		52B616C020E9341E00A1A416 /* JCAdditionalDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B6169A20E9341800A1A416 /* JCAdditionalDetail.swift */; };
+		52B616C120E9341E00A1A416 /* JCWarning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B6169B20E9341900A1A416 /* JCWarning.swift */; };
+		52B616C220E9341E00A1A416 /* JCAvailability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B6169C20E9341900A1A416 /* JCAvailability.swift */; };
+		52B616C320E9341E00A1A416 /* JCGuaranteePayment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B6169D20E9341900A1A416 /* JCGuaranteePayment.swift */; };
+		52B616C420E9341E00A1A416 /* JCPenaltyDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B6169E20E9341900A1A416 /* JCPenaltyDescription.swift */; };
+		52B616C520E9341E00A1A416 /* JCHotelRef.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B6169F20E9341900A1A416 /* JCHotelRef.swift */; };
+		52B616C620E9341E00A1A416 /* JCFee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B616A020E9341900A1A416 /* JCFee.swift */; };
+		52B616C720E9341E00A1A416 /* JCTax.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B616A120E9341A00A1A416 /* JCTax.swift */; };
+		52B616C820E9341E00A1A416 /* JCBasicPropertyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B616A220E9341A00A1A416 /* JCBasicPropertyInfo.swift */; };
+		52B616C920E9341E00A1A416 /* JCAddres.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B616A320E9341A00A1A416 /* JCAddres.swift */; };
+		52B616CA20E9341E00A1A416 /* JCCancelPenalty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B616A420E9341A00A1A416 /* JCCancelPenalty.swift */; };
+		52B616CB20E9341E00A1A416 /* JCCriteria.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B616A520E9341A00A1A416 /* JCCriteria.swift */; };
+		52B616CC20E9341E00A1A416 /* JCCheckAvaibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B616A620E9341A00A1A416 /* JCCheckAvaibility.swift */; };
+		52B616CD20E9341E00A1A416 /* JCRatePlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B616A720E9341A00A1A416 /* JCRatePlan.swift */; };
+		52B616CE20E9341E00A1A416 /* JCRoomType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B616A820E9341B00A1A416 /* JCRoomType.swift */; };
+		52B616CF20E9341E00A1A416 /* JCRatePlanDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B616A920E9341B00A1A416 /* JCRatePlanDescription.swift */; };
+		52B616D020E9341E00A1A416 /* JCCancelPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B616AA20E9341B00A1A416 /* JCCancelPolicy.swift */; };
+		52B616D120E9341E00A1A416 /* JCNightlyRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B616AB20E9341B00A1A416 /* JCNightlyRate.swift */; };
+		52B616D220E9341E00A1A416 /* JCPaymentPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B616AC20E9341B00A1A416 /* JCPaymentPolicy.swift */; };
+		52B616D320E9341E00A1A416 /* JCCriterion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B616AD20E9341B00A1A416 /* JCCriterion.swift */; };
+		52B616D420E9341E00A1A416 /* JCRoomStay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B616AE20E9341B00A1A416 /* JCRoomStay.swift */; };
+		52B616D520E9341E00A1A416 /* JCEnvelope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B616AF20E9341C00A1A416 /* JCEnvelope.swift */; };
+		52B616D620E9341E00A1A416 /* JCRoomDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B616B020E9341C00A1A416 /* JCRoomDescription.swift */; };
+		52B616D720E9341E00A1A416 /* JCBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B616B120E9341C00A1A416 /* JCBase.swift */; };
+		52B616D820E9341E00A1A416 /* JCBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B616B220E9341C00A1A416 /* JCBody.swift */; };
+		52B616D920E9341E00A1A416 /* JCCountryName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B616B320E9341C00A1A416 /* JCCountryName.swift */; };
+		52B616DA20E9341E00A1A416 /* JCOccupancy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B616B420E9341C00A1A416 /* JCOccupancy.swift */; };
+		52B616DB20E9341E00A1A416 /* JCTPAExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B616B520E9341D00A1A416 /* JCTPAExtension.swift */; };
+		52B616DC20E9341E00A1A416 /* JCContactNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B616B620E9341D00A1A416 /* JCContactNumber.swift */; };
+		52B616DD20E9341E00A1A416 /* JCAmountPercent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B616B720E9341D00A1A416 /* JCAmountPercent.swift */; };
+		52B616DE20E9341E00A1A416 /* JCTotal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B616B820E9341D00A1A416 /* JCTotal.swift */; };
+		52B616DF20E9341E00A1A416 /* JCTaxe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B616B920E9341E00A1A416 /* JCTaxe.swift */; };
 		9AE61CA220DAC74B006160C1 /* Montserrat-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9AE61C7D20DAC74B006160C1 /* Montserrat-MediumItalic.otf */; };
 		9AE61CA320DAC74B006160C1 /* Montserrat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9AE61C7E20DAC74B006160C1 /* Montserrat-Bold.otf */; };
 		9AE61CA420DAC74B006160C1 /* Montserrat-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9AE61C7F20DAC74B006160C1 /* Montserrat-BlackItalic.otf */; };
@@ -182,6 +220,44 @@
 		52B6163020E891C100A1A416 /* JAcceptedPayment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JAcceptedPayment.swift; sourceTree = "<group>"; };
 		52B6163120E891C100A1A416 /* JCountryName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCountryName.swift; sourceTree = "<group>"; };
 		52B6163220E891C100A1A416 /* JHotelName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JHotelName.swift; sourceTree = "<group>"; };
+		52B6169420E9341700A1A416 /* JCRate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCRate.swift; sourceTree = "<group>"; };
+		52B6169520E9341800A1A416 /* JCDeadline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCDeadline.swift; sourceTree = "<group>"; };
+		52B6169620E9341800A1A416 /* JCGuarantee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCGuarantee.swift; sourceTree = "<group>"; };
+		52B6169720E9341800A1A416 /* JCOTAHotelAvailRS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCOTAHotelAvailRS.swift; sourceTree = "<group>"; };
+		52B6169820E9341800A1A416 /* JCMealsIncluded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCMealsIncluded.swift; sourceTree = "<group>"; };
+		52B6169920E9341800A1A416 /* JCRoomRate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCRoomRate.swift; sourceTree = "<group>"; };
+		52B6169A20E9341800A1A416 /* JCAdditionalDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCAdditionalDetail.swift; sourceTree = "<group>"; };
+		52B6169B20E9341900A1A416 /* JCWarning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCWarning.swift; sourceTree = "<group>"; };
+		52B6169C20E9341900A1A416 /* JCAvailability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCAvailability.swift; sourceTree = "<group>"; };
+		52B6169D20E9341900A1A416 /* JCGuaranteePayment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCGuaranteePayment.swift; sourceTree = "<group>"; };
+		52B6169E20E9341900A1A416 /* JCPenaltyDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCPenaltyDescription.swift; sourceTree = "<group>"; };
+		52B6169F20E9341900A1A416 /* JCHotelRef.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCHotelRef.swift; sourceTree = "<group>"; };
+		52B616A020E9341900A1A416 /* JCFee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCFee.swift; sourceTree = "<group>"; };
+		52B616A120E9341A00A1A416 /* JCTax.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCTax.swift; sourceTree = "<group>"; };
+		52B616A220E9341A00A1A416 /* JCBasicPropertyInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCBasicPropertyInfo.swift; sourceTree = "<group>"; };
+		52B616A320E9341A00A1A416 /* JCAddres.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCAddres.swift; sourceTree = "<group>"; };
+		52B616A420E9341A00A1A416 /* JCCancelPenalty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCCancelPenalty.swift; sourceTree = "<group>"; };
+		52B616A520E9341A00A1A416 /* JCCriteria.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCCriteria.swift; sourceTree = "<group>"; };
+		52B616A620E9341A00A1A416 /* JCCheckAvaibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCCheckAvaibility.swift; sourceTree = "<group>"; };
+		52B616A720E9341A00A1A416 /* JCRatePlan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCRatePlan.swift; sourceTree = "<group>"; };
+		52B616A820E9341B00A1A416 /* JCRoomType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCRoomType.swift; sourceTree = "<group>"; };
+		52B616A920E9341B00A1A416 /* JCRatePlanDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCRatePlanDescription.swift; sourceTree = "<group>"; };
+		52B616AA20E9341B00A1A416 /* JCCancelPolicy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCCancelPolicy.swift; sourceTree = "<group>"; };
+		52B616AB20E9341B00A1A416 /* JCNightlyRate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCNightlyRate.swift; sourceTree = "<group>"; };
+		52B616AC20E9341B00A1A416 /* JCPaymentPolicy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCPaymentPolicy.swift; sourceTree = "<group>"; };
+		52B616AD20E9341B00A1A416 /* JCCriterion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCCriterion.swift; sourceTree = "<group>"; };
+		52B616AE20E9341B00A1A416 /* JCRoomStay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCRoomStay.swift; sourceTree = "<group>"; };
+		52B616AF20E9341C00A1A416 /* JCEnvelope.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCEnvelope.swift; sourceTree = "<group>"; };
+		52B616B020E9341C00A1A416 /* JCRoomDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCRoomDescription.swift; sourceTree = "<group>"; };
+		52B616B120E9341C00A1A416 /* JCBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCBase.swift; sourceTree = "<group>"; };
+		52B616B220E9341C00A1A416 /* JCBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCBody.swift; sourceTree = "<group>"; };
+		52B616B320E9341C00A1A416 /* JCCountryName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCCountryName.swift; sourceTree = "<group>"; };
+		52B616B420E9341C00A1A416 /* JCOccupancy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCOccupancy.swift; sourceTree = "<group>"; };
+		52B616B520E9341D00A1A416 /* JCTPAExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCTPAExtension.swift; sourceTree = "<group>"; };
+		52B616B620E9341D00A1A416 /* JCContactNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCContactNumber.swift; sourceTree = "<group>"; };
+		52B616B720E9341D00A1A416 /* JCAmountPercent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCAmountPercent.swift; sourceTree = "<group>"; };
+		52B616B820E9341D00A1A416 /* JCTotal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCTotal.swift; sourceTree = "<group>"; };
+		52B616B920E9341E00A1A416 /* JCTaxe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCTaxe.swift; sourceTree = "<group>"; };
 		8963E40941314293147FBF58 /* Pods-JazHotels.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JazHotels.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JazHotels/Pods-JazHotels.debug.xcconfig"; sourceTree = "<group>"; };
 		925F604466D8797ABBF10B44 /* Pods_JazHotels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JazHotels.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE61C7D20DAC74B006160C1 /* Montserrat-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-MediumItalic.otf"; sourceTree = "<group>"; };
@@ -300,6 +376,44 @@
 		52B615F920E891C100A1A416 /* JModels */ = {
 			isa = PBXGroup;
 			children = (
+				52B6169A20E9341800A1A416 /* JCAdditionalDetail.swift */,
+				52B616A320E9341A00A1A416 /* JCAddres.swift */,
+				52B616B720E9341D00A1A416 /* JCAmountPercent.swift */,
+				52B6169C20E9341900A1A416 /* JCAvailability.swift */,
+				52B616B120E9341C00A1A416 /* JCBase.swift */,
+				52B616A220E9341A00A1A416 /* JCBasicPropertyInfo.swift */,
+				52B616B220E9341C00A1A416 /* JCBody.swift */,
+				52B616A420E9341A00A1A416 /* JCCancelPenalty.swift */,
+				52B616AA20E9341B00A1A416 /* JCCancelPolicy.swift */,
+				52B616A620E9341A00A1A416 /* JCCheckAvaibility.swift */,
+				52B616B620E9341D00A1A416 /* JCContactNumber.swift */,
+				52B616B320E9341C00A1A416 /* JCCountryName.swift */,
+				52B616A520E9341A00A1A416 /* JCCriteria.swift */,
+				52B616AD20E9341B00A1A416 /* JCCriterion.swift */,
+				52B6169520E9341800A1A416 /* JCDeadline.swift */,
+				52B616AF20E9341C00A1A416 /* JCEnvelope.swift */,
+				52B616A020E9341900A1A416 /* JCFee.swift */,
+				52B6169620E9341800A1A416 /* JCGuarantee.swift */,
+				52B6169D20E9341900A1A416 /* JCGuaranteePayment.swift */,
+				52B6169F20E9341900A1A416 /* JCHotelRef.swift */,
+				52B6169820E9341800A1A416 /* JCMealsIncluded.swift */,
+				52B616AB20E9341B00A1A416 /* JCNightlyRate.swift */,
+				52B616B420E9341C00A1A416 /* JCOccupancy.swift */,
+				52B6169720E9341800A1A416 /* JCOTAHotelAvailRS.swift */,
+				52B616AC20E9341B00A1A416 /* JCPaymentPolicy.swift */,
+				52B6169E20E9341900A1A416 /* JCPenaltyDescription.swift */,
+				52B6169420E9341700A1A416 /* JCRate.swift */,
+				52B616A720E9341A00A1A416 /* JCRatePlan.swift */,
+				52B616A920E9341B00A1A416 /* JCRatePlanDescription.swift */,
+				52B616B020E9341C00A1A416 /* JCRoomDescription.swift */,
+				52B6169920E9341800A1A416 /* JCRoomRate.swift */,
+				52B616AE20E9341B00A1A416 /* JCRoomStay.swift */,
+				52B616A820E9341B00A1A416 /* JCRoomType.swift */,
+				52B616A120E9341A00A1A416 /* JCTax.swift */,
+				52B616B920E9341E00A1A416 /* JCTaxe.swift */,
+				52B616B820E9341D00A1A416 /* JCTotal.swift */,
+				52B616B520E9341D00A1A416 /* JCTPAExtension.swift */,
+				52B6169B20E9341900A1A416 /* JCWarning.swift */,
 				52B615FA20E891C100A1A416 /* JTextItem.swift */,
 				52B615FB20E891C100A1A416 /* JCancelPolicy.swift */,
 				52B615FC20E891C100A1A416 /* JAward.swift */,
@@ -624,41 +738,67 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52B616D120E9341E00A1A416 /* JCNightlyRate.swift in Sources */,
 				52B6163520E891C100A1A416 /* JAward.swift in Sources */,
 				52B6165B20E891C100A1A416 /* JAffiliationInfo.swift in Sources */,
 				52B6166520E891C100A1A416 /* JTransportation.swift in Sources */,
 				52B6163820E891C100A1A416 /* JGuestRoomInfo.swift in Sources */,
 				52B6165C20E891C100A1A416 /* JMeetingRoom.swift in Sources */,
+				52B616D520E9341E00A1A416 /* JCEnvelope.swift in Sources */,
+				52B616DA20E9341E00A1A416 /* JCOccupancy.swift in Sources */,
 				52B6165020E891C100A1A416 /* JHotelDescriptiveContent.swift in Sources */,
 				52B6164B20E891C100A1A416 /* JOTAHotelDescriptiveInfoRS.swift in Sources */,
 				52B6164F20E891C100A1A416 /* JAttraction.swift in Sources */,
 				52B615F720E8847100A1A416 /* XMLDictionary.m in Sources */,
 				52B6166420E891C100A1A416 /* JPolicy.swift in Sources */,
+				52B616D420E9341E00A1A416 /* JCRoomStay.swift in Sources */,
 				52B6165320E891C100A1A416 /* JService.swift in Sources */,
+				52B616D920E9341E00A1A416 /* JCCountryName.swift in Sources */,
 				52B6163A20E891C100A1A416 /* JAmenity.swift in Sources */,
 				52B6164E20E891C100A1A416 /* JFeature.swift in Sources */,
+				52B616BE20E9341E00A1A416 /* JCMealsIncluded.swift in Sources */,
 				52B6163920E891C100A1A416 /* JRefPoint.swift in Sources */,
+				52B616D320E9341E00A1A416 /* JCCriterion.swift in Sources */,
+				52B616C520E9341E00A1A416 /* JCHotelRef.swift in Sources */,
+				52B616BB20E9341E00A1A416 /* JCDeadline.swift in Sources */,
 				52B6164120E891C100A1A416 /* JEmail.swift in Sources */,
 				52B6165520E891C100A1A416 /* JDimension.swift in Sources */,
+				52B616C920E9341E00A1A416 /* JCAddres.swift in Sources */,
 				52B6165120E891C100A1A416 /* JPolicyInfo.swift in Sources */,
 				52B6166220E891C100A1A416 /* JTypeRoom.swift in Sources */,
 				52B6166920E891C100A1A416 /* JAcceptedPayment.swift in Sources */,
+				52B616D720E9341E00A1A416 /* JCBase.swift in Sources */,
+				52B616DF20E9341E00A1A416 /* JCTaxe.swift in Sources */,
+				52B616C020E9341E00A1A416 /* JCAdditionalDetail.swift in Sources */,
 				52B6166620E891C100A1A416 /* JCommissionPolicy.swift in Sources */,
 				52B6163420E891C100A1A416 /* JCancelPolicy.swift in Sources */,
 				52B6165F20E891C100A1A416 /* JGuestRoom.swift in Sources */,
 				528F600C20E82EA0003111E7 /* XMLParser.swift in Sources */,
 				524EEE7420DA840D006B9917 /* ViewController.swift in Sources */,
+				52B616D020E9341E00A1A416 /* JCCancelPolicy.swift in Sources */,
+				52B616C220E9341E00A1A416 /* JCAvailability.swift in Sources */,
 				52B6164020E891C100A1A416 /* JInfoCode.swift in Sources */,
+				52B616C620E9341E00A1A416 /* JCFee.swift in Sources */,
 				52B6165A20E891C100A1A416 /* JCancelPenalty.swift in Sources */,
+				52B616C720E9341E00A1A416 /* JCTax.swift in Sources */,
+				52B616BA20E9341E00A1A416 /* JCRate.swift in Sources */,
 				52B6166320E891C100A1A416 /* JRequiredPayment.swift in Sources */,
 				52B6164720E891C100A1A416 /* JMultimediaDescription.swift in Sources */,
 				52B6164D20E891C100A1A416 /* JAvailableCapacity.swift in Sources */,
+				52B616D620E9341E00A1A416 /* JCRoomDescription.swift in Sources */,
+				52B616CC20E9341E00A1A416 /* JCCheckAvaibility.swift in Sources */,
 				52B6166720E891C100A1A416 /* JDeadline.swift in Sources */,
+				52B616DE20E9341E00A1A416 /* JCTotal.swift in Sources */,
 				52B6166820E891C100A1A416 /* JRecreation.swift in Sources */,
 				52B6164620E891C100A1A416 /* JName.swift in Sources */,
 				52B6164820E891C100A1A416 /* JPaymentPolicy.swift in Sources */,
+				52B616C820E9341E00A1A416 /* JCBasicPropertyInfo.swift in Sources */,
+				52B616CB20E9341E00A1A416 /* JCCriteria.swift in Sources */,
+				52B616C120E9341E00A1A416 /* JCWarning.swift in Sources */,
 				524EEE7220DA840D006B9917 /* AppDelegate.swift in Sources */,
 				52B6164520E891C100A1A416 /* JRenovation.swift in Sources */,
+				52B616DC20E9341E00A1A416 /* JCContactNumber.swift in Sources */,
+				52B616C420E9341E00A1A416 /* JCPenaltyDescription.swift in Sources */,
 				52B6164920E891C100A1A416 /* JHotelCategory.swift in Sources */,
 				52B6164C20E891C100A1A416 /* JRestaurant.swift in Sources */,
 				52B6166120E891C100A1A416 /* JCategoryCode.swift in Sources */,
@@ -666,6 +806,7 @@
 				52B6166A20E891C100A1A416 /* JCountryName.swift in Sources */,
 				52B6166B20E891C100A1A416 /* JHotelName.swift in Sources */,
 				52B6163D20E891C100A1A416 /* JPosition.swift in Sources */,
+				52B616DD20E9341E00A1A416 /* JCAmountPercent.swift in Sources */,
 				52B6163620E891C100A1A416 /* JPetsPolicy.swift in Sources */,
 				52B6165D20E891C100A1A416 /* JPaymentCard.swift in Sources */,
 				52B6163E20E891C100A1A416 /* JURL.swift in Sources */,
@@ -673,18 +814,29 @@
 				52B6165220E891C100A1A416 /* JContactInfo.swift in Sources */,
 				52B6164420E891C100A1A416 /* JOccupancy.swift in Sources */,
 				52B6163C20E891C100A1A416 /* JAreaInfo.swift in Sources */,
+				52B616CE20E9341E00A1A416 /* JCRoomType.swift in Sources */,
+				52B616D820E9341E00A1A416 /* JCBody.swift in Sources */,
+				52B616BD20E9341E00A1A416 /* JCOTAHotelAvailRS.swift in Sources */,
+				52B616BF20E9341E00A1A416 /* JCRoomRate.swift in Sources */,
 				52B6165420E891C100A1A416 /* JMeetingRoomCapacity.swift in Sources */,
 				52B6165E20E891C100A1A416 /* JSoap:Envelope.swift in Sources */,
 				52B6163320E891C100A1A416 /* JTextItem.swift in Sources */,
+				52B616CA20E9341E00A1A416 /* JCCancelPenalty.swift in Sources */,
 				52B6165720E891C100A1A416 /* JStateProv.swift in Sources */,
 				52B6166020E891C100A1A416 /* JHotels.swift in Sources */,
 				52B6164320E891C100A1A416 /* JSoap:Body.swift in Sources */,
+				52B616BC20E9341E00A1A416 /* JCGuarantee.swift in Sources */,
+				52B616CF20E9341E00A1A416 /* JCRatePlanDescription.swift in Sources */,
 				52B6165920E891C100A1A416 /* JFacilityInfo.swift in Sources */,
 				528F600920E7BFB9003111E7 /* ServiceManager.swift in Sources */,
+				52B616CD20E9341E00A1A416 /* JCRatePlan.swift in Sources */,
+				52B616C320E9341E00A1A416 /* JCGuaranteePayment.swift in Sources */,
 				52B6163B20E891C100A1A416 /* JRelativePosition.swift in Sources */,
 				52B6164A20E891C100A1A416 /* JPenaltyDescription.swift in Sources */,
 				52B6165820E891C100A1A416 /* JDescription.swift in Sources */,
+				52B616D220E9341E00A1A416 /* JCPaymentPolicy.swift in Sources */,
 				52B6165620E891C100A1A416 /* JAddresse.swift in Sources */,
+				52B616DB20E9341E00A1A416 /* JCTPAExtension.swift in Sources */,
 				52B6164220E891C100A1A416 /* JPhone.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

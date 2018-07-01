@@ -20,6 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ServiceManager().getHotels { (data, error) in
             
         }
+        ServiceManager().checkAvailbility(startDate: "2018-06-10", endDate: "2018-06-20", adultsNum: "2", childNum: "0", hotelCode: "61579") { (data, error) in
+            
+        }
         return true
     }
 

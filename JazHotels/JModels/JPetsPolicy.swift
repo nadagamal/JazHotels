@@ -7,7 +7,8 @@
 
 import Foundation
 
-class JPetsPolicy{
+
+class JPetsPolicy : NSObject, NSCoding{
 
 	var petsPolicy : JCommissionPolicy!
 
@@ -19,6 +20,40 @@ class JPetsPolicy{
 		if let petsPolicyData = dictionary["PetsPolicy"] as? [String:Any]{
 			petsPolicy = JCommissionPolicy(fromDictionary: petsPolicyData)
 		}
+	}
+
+	/**
+	 * Returns all the available property values in the form of [String:Any] object where the key is the approperiate json key and the value is the value of the corresponding property
+	 */
+	func toDictionary() -> [String:Any]
+	{
+		var dictionary = [String:Any]()
+		if petsPolicy != nil{
+			dictionary["PetsPolicy"] = petsPolicy.toDictionary()
+		}
+		return dictionary
+	}
+
+    /**
+    * NSCoding required initializer.
+    * Fills the data from the passed decoder
+    */
+    @objc required init(coder aDecoder: NSCoder)
+	{
+         petsPolicy = aDecoder.decodeObject(forKey: "PetsPolicy") as? JCommissionPolicy
+
+	}
+
+    /**
+    * NSCoding required method.
+    * Encodes mode properties into the decoder
+    */
+    @objc func encode(with aCoder: NSCoder)
+	{
+		if petsPolicy != nil{
+			aCoder.encode(petsPolicy, forKey: "PetsPolicy")
+		}
+
 	}
 
 }

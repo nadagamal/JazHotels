@@ -7,7 +7,8 @@
 
 import Foundation
 
-class JURL{
+
+class JURL : NSObject, NSCoding{
 
 	var uRL : String!
 
@@ -17,6 +18,40 @@ class JURL{
 	 */
 	init(fromDictionary dictionary: [String:Any]){
 		uRL = dictionary["URL"] as? String
+	}
+
+	/**
+	 * Returns all the available property values in the form of [String:Any] object where the key is the approperiate json key and the value is the value of the corresponding property
+	 */
+	func toDictionary() -> [String:Any]
+	{
+		var dictionary = [String:Any]()
+		if uRL != nil{
+			dictionary["URL"] = uRL
+		}
+		return dictionary
+	}
+
+    /**
+    * NSCoding required initializer.
+    * Fills the data from the passed decoder
+    */
+    @objc required init(coder aDecoder: NSCoder)
+	{
+         uRL = aDecoder.decodeObject(forKey: "URL") as? String
+
+	}
+
+    /**
+    * NSCoding required method.
+    * Encodes mode properties into the decoder
+    */
+    @objc func encode(with aCoder: NSCoder)
+	{
+		if uRL != nil{
+			aCoder.encode(uRL, forKey: "URL")
+		}
+
 	}
 
 }

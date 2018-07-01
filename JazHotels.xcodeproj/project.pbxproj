@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		524EEE7220DA840D006B9917 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524EEE7120DA840D006B9917 /* AppDelegate.swift */; };
+		524EEE7420DA840D006B9917 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524EEE7320DA840D006B9917 /* ViewController.swift */; };
 		524EEE7920DA840F006B9917 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 524EEE7820DA840F006B9917 /* Assets.xcassets */; };
 		524EEE7C20DA840F006B9917 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 524EEE7A20DA840F006B9917 /* LaunchScreen.storyboard */; };
 		528F600920E7BFB9003111E7 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F600820E7BFB9003111E7 /* ServiceManager.swift */; };
@@ -108,6 +109,12 @@
 		52B616DD20E9341E00A1A416 /* JCAmountPercent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B616B720E9341D00A1A416 /* JCAmountPercent.swift */; };
 		52B616DE20E9341E00A1A416 /* JCTotal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B616B820E9341D00A1A416 /* JCTotal.swift */; };
 		52B616DF20E9341E00A1A416 /* JCTaxe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B616B920E9341E00A1A416 /* JCTaxe.swift */; };
+		52B616E120E948F200A1A416 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B616E020E948F200A1A416 /* SplashViewController.swift */; };
+		52B616E320E94B5C00A1A416 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B616E220E94B5B00A1A416 /* AlertView.swift */; };
+		52B616E520E94D3F00A1A416 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B616E420E94D3F00A1A416 /* Helper.swift */; };
+		52B616E920E9566400A1A416 /* JImageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B616E620E9566300A1A416 /* JImageItem.swift */; };
+		52B616EA20E9566400A1A416 /* JBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B616E720E9566300A1A416 /* JBody.swift */; };
+		52B616EB20E9566400A1A416 /* JEnvelope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B616E820E9566400A1A416 /* JEnvelope.swift */; };
 		9AE61CA220DAC74B006160C1 /* Montserrat-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9AE61C7D20DAC74B006160C1 /* Montserrat-MediumItalic.otf */; };
 		9AE61CA320DAC74B006160C1 /* Montserrat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9AE61C7E20DAC74B006160C1 /* Montserrat-Bold.otf */; };
 		9AE61CA420DAC74B006160C1 /* Montserrat-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9AE61C7F20DAC74B006160C1 /* Montserrat-BlackItalic.otf */; };
@@ -146,15 +153,6 @@
 		9AE61CC520DAC74B006160C1 /* MontserratAlternates-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9AE61CA020DAC74B006160C1 /* MontserratAlternates-Italic.otf */; };
 		9AE61CC620DAC74B006160C1 /* Montserrat-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9AE61CA120DAC74B006160C1 /* Montserrat-SemiBold.otf */; };
 		9AE61CCE20DAE0BD006160C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AE61CCC20DAE0BD006160C1 /* Main.storyboard */; };
-		9AF7952420E9399C0053F3E2 /* ExampleBackgroundContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF7951920E9399C0053F3E2 /* ExampleBackgroundContentView.swift */; };
-		9AF7952520E9399C0053F3E2 /* ExampleBouncesContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF7951A20E9399C0053F3E2 /* ExampleBouncesContentView.swift */; };
-		9AF7952620E9399C0053F3E2 /* ExampleAnimateTipsContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF7951B20E9399C0053F3E2 /* ExampleAnimateTipsContentView.swift */; };
-		9AF7952720E9399C0053F3E2 /* ExampleBasicContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF7951C20E9399C0053F3E2 /* ExampleBasicContentView.swift */; };
-		9AF7952820E9399C0053F3E2 /* ExampleHighlightableContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF7951D20E9399C0053F3E2 /* ExampleHighlightableContentView.swift */; };
-		9AF7952920E9399C0053F3E2 /* ExampleTipsContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF7951E20E9399C0053F3E2 /* ExampleTipsContentView.swift */; };
-		9AF7952A20E9399C0053F3E2 /* ExampleIrregularityContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF7951F20E9399C0053F3E2 /* ExampleIrregularityContentView.swift */; };
-		9AF7952B20E9399C0053F3E2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF7952120E9399C0053F3E2 /* HomeViewController.swift */; };
-		9AF7952C20E9399C0053F3E2 /* HomeTabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF7952320E9399C0053F3E2 /* HomeTabbar.swift */; };
 		FA34B49D79DD74C9696B2EEE /* Pods_JazHotels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 925F604466D8797ABBF10B44 /* Pods_JazHotels.framework */; };
 /* End PBXBuildFile section */
 
@@ -162,6 +160,7 @@
 		42D73029D47BCCF9EDE78E08 /* Pods-JazHotels.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JazHotels.release.xcconfig"; path = "Pods/Target Support Files/Pods-JazHotels/Pods-JazHotels.release.xcconfig"; sourceTree = "<group>"; };
 		524EEE6E20DA840D006B9917 /* JazHotels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JazHotels.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		524EEE7120DA840D006B9917 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		524EEE7320DA840D006B9917 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		524EEE7820DA840F006B9917 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		524EEE7B20DA840F006B9917 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		524EEE7D20DA840F006B9917 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -265,6 +264,12 @@
 		52B616B720E9341D00A1A416 /* JCAmountPercent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCAmountPercent.swift; sourceTree = "<group>"; };
 		52B616B820E9341D00A1A416 /* JCTotal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCTotal.swift; sourceTree = "<group>"; };
 		52B616B920E9341E00A1A416 /* JCTaxe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCTaxe.swift; sourceTree = "<group>"; };
+		52B616E020E948F200A1A416 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		52B616E220E94B5B00A1A416 /* AlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		52B616E420E94D3F00A1A416 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		52B616E620E9566300A1A416 /* JImageItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JImageItem.swift; sourceTree = "<group>"; };
+		52B616E720E9566300A1A416 /* JBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JBody.swift; sourceTree = "<group>"; };
+		52B616E820E9566400A1A416 /* JEnvelope.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JEnvelope.swift; sourceTree = "<group>"; };
 		8963E40941314293147FBF58 /* Pods-JazHotels.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JazHotels.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JazHotels/Pods-JazHotels.debug.xcconfig"; sourceTree = "<group>"; };
 		925F604466D8797ABBF10B44 /* Pods_JazHotels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JazHotels.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE61C7D20DAC74B006160C1 /* Montserrat-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-MediumItalic.otf"; sourceTree = "<group>"; };
@@ -305,15 +310,6 @@
 		9AE61CA020DAC74B006160C1 /* MontserratAlternates-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-Italic.otf"; sourceTree = "<group>"; };
 		9AE61CA120DAC74B006160C1 /* Montserrat-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.otf"; sourceTree = "<group>"; };
 		9AE61CCD20DAE0BD006160C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9AF7951920E9399C0053F3E2 /* ExampleBackgroundContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleBackgroundContentView.swift; sourceTree = "<group>"; };
-		9AF7951A20E9399C0053F3E2 /* ExampleBouncesContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleBouncesContentView.swift; sourceTree = "<group>"; };
-		9AF7951B20E9399C0053F3E2 /* ExampleAnimateTipsContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleAnimateTipsContentView.swift; sourceTree = "<group>"; };
-		9AF7951C20E9399C0053F3E2 /* ExampleBasicContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleBasicContentView.swift; sourceTree = "<group>"; };
-		9AF7951D20E9399C0053F3E2 /* ExampleHighlightableContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleHighlightableContentView.swift; sourceTree = "<group>"; };
-		9AF7951E20E9399C0053F3E2 /* ExampleTipsContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleTipsContentView.swift; sourceTree = "<group>"; };
-		9AF7951F20E9399C0053F3E2 /* ExampleIrregularityContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleIrregularityContentView.swift; sourceTree = "<group>"; };
-		9AF7952120E9399C0053F3E2 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		9AF7952320E9399C0053F3E2 /* HomeTabbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTabbar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -373,9 +369,11 @@
 		528F600A20E82E87003111E7 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				52B616E220E94B5B00A1A416 /* AlertView.swift */,
 				52B615F420E8847100A1A416 /* XMLDictionary */,
 				528F600B20E82EA0003111E7 /* XMLParser.swift */,
 				52B615F820E884C500A1A416 /* JazHotels-Bridging-Header.h */,
+				52B616E420E94D3F00A1A416 /* Helper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -392,6 +390,9 @@
 		52B615F920E891C100A1A416 /* JModels */ = {
 			isa = PBXGroup;
 			children = (
+				52B616E720E9566300A1A416 /* JBody.swift */,
+				52B616E820E9566400A1A416 /* JEnvelope.swift */,
+				52B616E620E9566300A1A416 /* JImageItem.swift */,
 				52B6169A20E9341800A1A416 /* JCAdditionalDetail.swift */,
 				52B616A320E9341A00A1A416 /* JCAddres.swift */,
 				52B616B720E9341D00A1A416 /* JCAmountPercent.swift */,
@@ -564,9 +565,8 @@
 		9AE61CC720DAE057006160C1 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				9AF7951820E9399C0053F3E2 /* Content */,
-				9AF7952020E9399C0053F3E2 /* Home */,
-				9AF7952220E9399C0053F3E2 /* Tabbar */,
+				524EEE7320DA840D006B9917 /* ViewController.swift */,
+				52B616E020E948F200A1A416 /* SplashViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -585,36 +585,6 @@
 				9AE61CCC20DAE0BD006160C1 /* Main.storyboard */,
 			);
 			path = StoryBoards;
-			sourceTree = "<group>";
-		};
-		9AF7951820E9399C0053F3E2 /* Content */ = {
-			isa = PBXGroup;
-			children = (
-				9AF7951920E9399C0053F3E2 /* ExampleBackgroundContentView.swift */,
-				9AF7951A20E9399C0053F3E2 /* ExampleBouncesContentView.swift */,
-				9AF7951B20E9399C0053F3E2 /* ExampleAnimateTipsContentView.swift */,
-				9AF7951C20E9399C0053F3E2 /* ExampleBasicContentView.swift */,
-				9AF7951D20E9399C0053F3E2 /* ExampleHighlightableContentView.swift */,
-				9AF7951E20E9399C0053F3E2 /* ExampleTipsContentView.swift */,
-				9AF7951F20E9399C0053F3E2 /* ExampleIrregularityContentView.swift */,
-			);
-			path = Content;
-			sourceTree = "<group>";
-		};
-		9AF7952020E9399C0053F3E2 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				9AF7952120E9399C0053F3E2 /* HomeViewController.swift */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		9AF7952220E9399C0053F3E2 /* Tabbar */ = {
-			isa = PBXGroup;
-			children = (
-				9AF7952320E9399C0053F3E2 /* HomeTabbar.swift */,
-			);
-			path = Tabbar;
 			sourceTree = "<group>";
 		};
 		B5E9232516D4B0033B321F42 /* Frameworks */ = {
@@ -743,6 +713,8 @@
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/PullToRefreshKit/PullToRefreshKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SCLAlertView/SCLAlertView.framework",
+				"${BUILT_PRODUCTS_DIR}/SIAlertView/SIAlertView.framework",
 				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/SwifterSwift/SwifterSwift.framework",
 			);
@@ -753,6 +725,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PullToRefreshKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SIAlertView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwifterSwift.framework",
 			);
@@ -786,10 +760,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AF7952C20E9399C0053F3E2 /* HomeTabbar.swift in Sources */,
+				52B616E120E948F200A1A416 /* SplashViewController.swift in Sources */,
 				52B616D120E9341E00A1A416 /* JCNightlyRate.swift in Sources */,
 				52B6163520E891C100A1A416 /* JAward.swift in Sources */,
-				9AF7952520E9399C0053F3E2 /* ExampleBouncesContentView.swift in Sources */,
 				52B6165B20E891C100A1A416 /* JAffiliationInfo.swift in Sources */,
 				52B6166520E891C100A1A416 /* JTransportation.swift in Sources */,
 				52B6163820E891C100A1A416 /* JGuestRoomInfo.swift in Sources */,
@@ -801,12 +774,10 @@
 				52B6164F20E891C100A1A416 /* JAttraction.swift in Sources */,
 				52B615F720E8847100A1A416 /* XMLDictionary.m in Sources */,
 				52B6166420E891C100A1A416 /* JPolicy.swift in Sources */,
-				9AF7952720E9399C0053F3E2 /* ExampleBasicContentView.swift in Sources */,
 				52B616D420E9341E00A1A416 /* JCRoomStay.swift in Sources */,
 				52B6165320E891C100A1A416 /* JService.swift in Sources */,
 				52B616D920E9341E00A1A416 /* JCCountryName.swift in Sources */,
 				52B6163A20E891C100A1A416 /* JAmenity.swift in Sources */,
-				9AF7952920E9399C0053F3E2 /* ExampleTipsContentView.swift in Sources */,
 				52B6164E20E891C100A1A416 /* JFeature.swift in Sources */,
 				52B616BE20E9341E00A1A416 /* JCMealsIncluded.swift in Sources */,
 				52B6163920E891C100A1A416 /* JRefPoint.swift in Sources */,
@@ -823,10 +794,10 @@
 				52B616DF20E9341E00A1A416 /* JCTaxe.swift in Sources */,
 				52B616C020E9341E00A1A416 /* JCAdditionalDetail.swift in Sources */,
 				52B6166620E891C100A1A416 /* JCommissionPolicy.swift in Sources */,
-				9AF7952B20E9399C0053F3E2 /* HomeViewController.swift in Sources */,
 				52B6163420E891C100A1A416 /* JCancelPolicy.swift in Sources */,
 				52B6165F20E891C100A1A416 /* JGuestRoom.swift in Sources */,
 				528F600C20E82EA0003111E7 /* XMLParser.swift in Sources */,
+				524EEE7420DA840D006B9917 /* ViewController.swift in Sources */,
 				52B616D020E9341E00A1A416 /* JCCancelPolicy.swift in Sources */,
 				52B616C220E9341E00A1A416 /* JCAvailability.swift in Sources */,
 				52B6164020E891C100A1A416 /* JInfoCode.swift in Sources */,
@@ -835,7 +806,6 @@
 				52B616C720E9341E00A1A416 /* JCTax.swift in Sources */,
 				52B616BA20E9341E00A1A416 /* JCRate.swift in Sources */,
 				52B6166320E891C100A1A416 /* JRequiredPayment.swift in Sources */,
-				9AF7952820E9399C0053F3E2 /* ExampleHighlightableContentView.swift in Sources */,
 				52B6164720E891C100A1A416 /* JMultimediaDescription.swift in Sources */,
 				52B6164D20E891C100A1A416 /* JAvailableCapacity.swift in Sources */,
 				52B616D620E9341E00A1A416 /* JCRoomDescription.swift in Sources */,
@@ -863,27 +833,28 @@
 				52B6163620E891C100A1A416 /* JPetsPolicy.swift in Sources */,
 				52B6165D20E891C100A1A416 /* JPaymentCard.swift in Sources */,
 				52B6163E20E891C100A1A416 /* JURL.swift in Sources */,
-				9AF7952420E9399C0053F3E2 /* ExampleBackgroundContentView.swift in Sources */,
 				52B6163720E891C100A1A416 /* JAddres.swift in Sources */,
 				52B6165220E891C100A1A416 /* JContactInfo.swift in Sources */,
-				9AF7952A20E9399C0053F3E2 /* ExampleIrregularityContentView.swift in Sources */,
+				52B616E520E94D3F00A1A416 /* Helper.swift in Sources */,
 				52B6164420E891C100A1A416 /* JOccupancy.swift in Sources */,
 				52B6163C20E891C100A1A416 /* JAreaInfo.swift in Sources */,
 				52B616CE20E9341E00A1A416 /* JCRoomType.swift in Sources */,
+				52B616E920E9566400A1A416 /* JImageItem.swift in Sources */,
 				52B616D820E9341E00A1A416 /* JCBody.swift in Sources */,
 				52B616BD20E9341E00A1A416 /* JCOTAHotelAvailRS.swift in Sources */,
 				52B616BF20E9341E00A1A416 /* JCRoomRate.swift in Sources */,
 				52B6165420E891C100A1A416 /* JMeetingRoomCapacity.swift in Sources */,
+				52B616EB20E9566400A1A416 /* JEnvelope.swift in Sources */,
 				52B6165E20E891C100A1A416 /* JSoap:Envelope.swift in Sources */,
 				52B6163320E891C100A1A416 /* JTextItem.swift in Sources */,
 				52B616CA20E9341E00A1A416 /* JCCancelPenalty.swift in Sources */,
 				52B6165720E891C100A1A416 /* JStateProv.swift in Sources */,
 				52B6166020E891C100A1A416 /* JHotels.swift in Sources */,
 				52B6164320E891C100A1A416 /* JSoap:Body.swift in Sources */,
+				52B616EA20E9566400A1A416 /* JBody.swift in Sources */,
 				52B616BC20E9341E00A1A416 /* JCGuarantee.swift in Sources */,
 				52B616CF20E9341E00A1A416 /* JCRatePlanDescription.swift in Sources */,
 				52B6165920E891C100A1A416 /* JFacilityInfo.swift in Sources */,
-				9AF7952620E9399C0053F3E2 /* ExampleAnimateTipsContentView.swift in Sources */,
 				528F600920E7BFB9003111E7 /* ServiceManager.swift in Sources */,
 				52B616CD20E9341E00A1A416 /* JCRatePlan.swift in Sources */,
 				52B616C320E9341E00A1A416 /* JCGuaranteePayment.swift in Sources */,
@@ -894,6 +865,7 @@
 				52B6165620E891C100A1A416 /* JAddresse.swift in Sources */,
 				52B616DB20E9341E00A1A416 /* JCTPAExtension.swift in Sources */,
 				52B6164220E891C100A1A416 /* JPhone.swift in Sources */,
+				52B616E320E94B5C00A1A416 /* AlertView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1038,6 +1010,7 @@
 			baseConfigurationReference = 8963E40941314293147FBF58 /* Pods-JazHotels.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MAG9DAS3TQ;
 				INFOPLIST_FILE = JazHotels/resources/Info.plist;
@@ -1059,6 +1032,7 @@
 			baseConfigurationReference = 42D73029D47BCCF9EDE78E08 /* Pods-JazHotels.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MAG9DAS3TQ;
 				INFOPLIST_FILE = JazHotels/resources/Info.plist;

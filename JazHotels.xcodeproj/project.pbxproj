@@ -109,6 +109,9 @@
 		52B616DD20E9341E00A1A416 /* JCAmountPercent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B616B720E9341D00A1A416 /* JCAmountPercent.swift */; };
 		52B616DE20E9341E00A1A416 /* JCTotal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B616B820E9341D00A1A416 /* JCTotal.swift */; };
 		52B616DF20E9341E00A1A416 /* JCTaxe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B616B920E9341E00A1A416 /* JCTaxe.swift */; };
+		52B616E120E948F200A1A416 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B616E020E948F200A1A416 /* SplashViewController.swift */; };
+		52B616E320E94B5C00A1A416 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B616E220E94B5B00A1A416 /* AlertView.swift */; };
+		52B616E520E94D3F00A1A416 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B616E420E94D3F00A1A416 /* Helper.swift */; };
 		9AE61CA220DAC74B006160C1 /* Montserrat-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9AE61C7D20DAC74B006160C1 /* Montserrat-MediumItalic.otf */; };
 		9AE61CA320DAC74B006160C1 /* Montserrat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9AE61C7E20DAC74B006160C1 /* Montserrat-Bold.otf */; };
 		9AE61CA420DAC74B006160C1 /* Montserrat-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9AE61C7F20DAC74B006160C1 /* Montserrat-BlackItalic.otf */; };
@@ -258,6 +261,9 @@
 		52B616B720E9341D00A1A416 /* JCAmountPercent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCAmountPercent.swift; sourceTree = "<group>"; };
 		52B616B820E9341D00A1A416 /* JCTotal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCTotal.swift; sourceTree = "<group>"; };
 		52B616B920E9341E00A1A416 /* JCTaxe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCTaxe.swift; sourceTree = "<group>"; };
+		52B616E020E948F200A1A416 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		52B616E220E94B5B00A1A416 /* AlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		52B616E420E94D3F00A1A416 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		8963E40941314293147FBF58 /* Pods-JazHotels.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JazHotels.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JazHotels/Pods-JazHotels.debug.xcconfig"; sourceTree = "<group>"; };
 		925F604466D8797ABBF10B44 /* Pods_JazHotels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JazHotels.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE61C7D20DAC74B006160C1 /* Montserrat-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-MediumItalic.otf"; sourceTree = "<group>"; };
@@ -357,9 +363,11 @@
 		528F600A20E82E87003111E7 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				52B616E220E94B5B00A1A416 /* AlertView.swift */,
 				52B615F420E8847100A1A416 /* XMLDictionary */,
 				528F600B20E82EA0003111E7 /* XMLParser.swift */,
 				52B615F820E884C500A1A416 /* JazHotels-Bridging-Header.h */,
+				52B616E420E94D3F00A1A416 /* Helper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -549,6 +557,7 @@
 			isa = PBXGroup;
 			children = (
 				524EEE7320DA840D006B9917 /* ViewController.swift */,
+				52B616E020E948F200A1A416 /* SplashViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -695,6 +704,8 @@
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/PullToRefreshKit/PullToRefreshKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SCLAlertView/SCLAlertView.framework",
+				"${BUILT_PRODUCTS_DIR}/SIAlertView/SIAlertView.framework",
 				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/SwifterSwift/SwifterSwift.framework",
 			);
@@ -705,6 +716,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PullToRefreshKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SIAlertView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwifterSwift.framework",
 			);
@@ -738,6 +751,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52B616E120E948F200A1A416 /* SplashViewController.swift in Sources */,
 				52B616D120E9341E00A1A416 /* JCNightlyRate.swift in Sources */,
 				52B6163520E891C100A1A416 /* JAward.swift in Sources */,
 				52B6165B20E891C100A1A416 /* JAffiliationInfo.swift in Sources */,
@@ -812,6 +826,7 @@
 				52B6163E20E891C100A1A416 /* JURL.swift in Sources */,
 				52B6163720E891C100A1A416 /* JAddres.swift in Sources */,
 				52B6165220E891C100A1A416 /* JContactInfo.swift in Sources */,
+				52B616E520E94D3F00A1A416 /* Helper.swift in Sources */,
 				52B6164420E891C100A1A416 /* JOccupancy.swift in Sources */,
 				52B6163C20E891C100A1A416 /* JAreaInfo.swift in Sources */,
 				52B616CE20E9341E00A1A416 /* JCRoomType.swift in Sources */,
@@ -838,6 +853,7 @@
 				52B6165620E891C100A1A416 /* JAddresse.swift in Sources */,
 				52B616DB20E9341E00A1A416 /* JCTPAExtension.swift in Sources */,
 				52B6164220E891C100A1A416 /* JPhone.swift in Sources */,
+				52B616E320E94B5C00A1A416 /* AlertView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -982,6 +998,7 @@
 			baseConfigurationReference = 8963E40941314293147FBF58 /* Pods-JazHotels.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MAG9DAS3TQ;
 				INFOPLIST_FILE = JazHotels/resources/Info.plist;
@@ -1003,6 +1020,7 @@
 			baseConfigurationReference = 42D73029D47BCCF9EDE78E08 /* Pods-JazHotels.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MAG9DAS3TQ;
 				INFOPLIST_FILE = JazHotels/resources/Info.plist;

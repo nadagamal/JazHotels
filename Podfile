@@ -14,6 +14,8 @@ target 'JazHotels' do
   pod 'SwifterSwift'
   pod 'BSKeyboardControls', '~> 2.2'
   # pod 'ESTabBarController-swift'
+  pod 'SCLAlertView'
+  pod 'SIAlertView'
 
 
 

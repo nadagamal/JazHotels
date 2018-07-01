@@ -1,7 +1,6 @@
 PODS:
   - Alamofire (4.6.0)
   - BSKeyboardControls (2.2)
-  - ESTabBarController-swift (2.5)
   - Kingfisher (4.6.1)
   - NVActivityIndicatorView (4.1.1):
     - NVActivityIndicatorView/Presenter (= 4.1.1)
@@ -25,7 +24,6 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - BSKeyboardControls (~> 2.2)
-  - ESTabBarController-swift
   - Kingfisher (~> 4.0)
   - NVActivityIndicatorView
   - PullToRefreshKit
@@ -33,10 +31,9 @@ DEPENDENCIES:
   - SwifterSwift
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - Alamofire
     - BSKeyboardControls
-    - ESTabBarController-swift
     - Kingfisher
     - NVActivityIndicatorView
     - PullToRefreshKit
@@ -46,13 +43,12 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
   BSKeyboardControls: b701935e789961102e3f20063bba7185800a2d3f
-  ESTabBarController-swift: 8daa432f2a9be8ebd25101dc46c84472fd760512
   Kingfisher: 1f9157d9c02b380cbd0b7cc890161195164eb634
   NVActivityIndicatorView: 60109b9bf46efc2e71ab81453196ccdfdfeea870
   PullToRefreshKit: 0a2a019bf094b8beba18c8a1bedfb1fb67ee70fd
   SkyFloatingLabelTextField: 703aa1420b697392b1e7dba25571180dde018477
   SwifterSwift: 4d962b5d653760b85266832aff6ab6d08c1b7974
 
-PODFILE CHECKSUM: c57c1f99706afdbd22187df0ee780f60b82f6936
+PODFILE CHECKSUM: a0406b8bb6d56296e32c00c4bf7e36dbb72a930d
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3

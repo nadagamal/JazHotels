@@ -16,6 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        //test
+        ServiceManager().getHotels { (data, error) in
+            
+        }
+        ServiceManager().checkAvailbility(startDate: "2018-06-10", endDate: "2018-06-20", adultsNum: "2", childNum: "0", hotelCode: "61579") { (data, error) in
+            
+        }
         return true
     }
 

@@ -31,7 +31,7 @@ DEPENDENCIES:
   - SwifterSwift
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - Alamofire
     - BSKeyboardControls
     - Kingfisher
@@ -49,6 +49,6 @@ SPEC CHECKSUMS:
   SkyFloatingLabelTextField: 703aa1420b697392b1e7dba25571180dde018477
   SwifterSwift: 4d962b5d653760b85266832aff6ab6d08c1b7974
 
-PODFILE CHECKSUM: 903d9e8f03ad4547b74de083d86f30eabef082ad
+PODFILE CHECKSUM: a0406b8bb6d56296e32c00c4bf7e36dbb72a930d
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3

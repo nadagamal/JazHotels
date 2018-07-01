@@ -8,6 +8,10 @@
 
 import Foundation
 import UIKit
+public struct JazHotels {
+    static var hotels: JHotelDescriptiveContent!
+
+}
 extension UIFont {
     class func cairoFontExtraLightOfSize(size: CGFloat) -> UIFont {
         return UIFont(name: "Cairo-ExtraLight", size: size)!

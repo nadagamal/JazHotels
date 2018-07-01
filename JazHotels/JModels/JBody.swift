@@ -1,5 +1,5 @@
 //
-//	JPosition.swift
+//	JBody.swift
 //
 //	Create by Nada Gamal on 1/7/2018
 //	Copyright © 2018. All rights reserved.
@@ -8,18 +8,20 @@
 import Foundation
 
 
-class JPosition : NSObject, NSCoding{
+class JBody : NSObject, NSCoding{
 
-	var latitude : String!
-	var longitude : String!
+	var oTAHotelDescriptiveInfoRS : JOTAHotelDescriptiveInfoRS!
+	var prefix : String!
 
 
 	/**
 	 * Instantiate the instance using the passed dictionary values to set the properties values
 	 */
 	init(fromDictionary dictionary: [String:Any]){
-		latitude = dictionary["_Latitude"] as? String
-		longitude = dictionary["_Longitude"] as? String
+		if let oTAHotelDescriptiveInfoRSData = dictionary["OTA_HotelDescriptiveInfoRS"] as? [String:Any]{
+			oTAHotelDescriptiveInfoRS = JOTAHotelDescriptiveInfoRS(fromDictionary: oTAHotelDescriptiveInfoRSData)
+		}
+		prefix = dictionary["__prefix"] as? String
 	}
 
 	/**
@@ -28,11 +30,11 @@ class JPosition : NSObject, NSCoding{
 	func toDictionary() -> [String:Any]
 	{
 		var dictionary = [String:Any]()
-		if latitude != nil{
-			dictionary["_Latitude"] = latitude
+		if oTAHotelDescriptiveInfoRS != nil{
+			dictionary["OTA_HotelDescriptiveInfoRS"] = oTAHotelDescriptiveInfoRS.toDictionary()
 		}
-		if longitude != nil{
-			dictionary["_Longitude"] = longitude
+		if prefix != nil{
+			dictionary["__prefix"] = prefix
 		}
 		return dictionary
 	}
@@ -43,8 +45,8 @@ class JPosition : NSObject, NSCoding{
     */
     @objc required init(coder aDecoder: NSCoder)
 	{
-         latitude = aDecoder.decodeObject(forKey: "_Latitude") as? String
-         longitude = aDecoder.decodeObject(forKey: "_Longitude") as? String
+         oTAHotelDescriptiveInfoRS = aDecoder.decodeObject(forKey: "OTA_HotelDescriptiveInfoRS") as? JOTAHotelDescriptiveInfoRS
+         prefix = aDecoder.decodeObject(forKey: "__prefix") as? String
 
 	}
 
@@ -54,11 +56,11 @@ class JPosition : NSObject, NSCoding{
     */
     @objc func encode(with aCoder: NSCoder)
 	{
-		if latitude != nil{
-			aCoder.encode(latitude, forKey: "_Latitude")
+		if oTAHotelDescriptiveInfoRS != nil{
+			aCoder.encode(oTAHotelDescriptiveInfoRS, forKey: "OTA_HotelDescriptiveInfoRS")
 		}
-		if longitude != nil{
-			aCoder.encode(longitude, forKey: "_Longitude")
+		if prefix != nil{
+			aCoder.encode(prefix, forKey: "__prefix")
 		}
 
 	}

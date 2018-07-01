@@ -112,6 +112,9 @@
 		52B616E120E948F200A1A416 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B616E020E948F200A1A416 /* SplashViewController.swift */; };
 		52B616E320E94B5C00A1A416 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B616E220E94B5B00A1A416 /* AlertView.swift */; };
 		52B616E520E94D3F00A1A416 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B616E420E94D3F00A1A416 /* Helper.swift */; };
+		52B616E920E9566400A1A416 /* JImageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B616E620E9566300A1A416 /* JImageItem.swift */; };
+		52B616EA20E9566400A1A416 /* JBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B616E720E9566300A1A416 /* JBody.swift */; };
+		52B616EB20E9566400A1A416 /* JEnvelope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B616E820E9566400A1A416 /* JEnvelope.swift */; };
 		9AE61CA220DAC74B006160C1 /* Montserrat-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9AE61C7D20DAC74B006160C1 /* Montserrat-MediumItalic.otf */; };
 		9AE61CA320DAC74B006160C1 /* Montserrat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9AE61C7E20DAC74B006160C1 /* Montserrat-Bold.otf */; };
 		9AE61CA420DAC74B006160C1 /* Montserrat-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9AE61C7F20DAC74B006160C1 /* Montserrat-BlackItalic.otf */; };
@@ -264,6 +267,9 @@
 		52B616E020E948F200A1A416 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		52B616E220E94B5B00A1A416 /* AlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		52B616E420E94D3F00A1A416 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		52B616E620E9566300A1A416 /* JImageItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JImageItem.swift; sourceTree = "<group>"; };
+		52B616E720E9566300A1A416 /* JBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JBody.swift; sourceTree = "<group>"; };
+		52B616E820E9566400A1A416 /* JEnvelope.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JEnvelope.swift; sourceTree = "<group>"; };
 		8963E40941314293147FBF58 /* Pods-JazHotels.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JazHotels.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JazHotels/Pods-JazHotels.debug.xcconfig"; sourceTree = "<group>"; };
 		925F604466D8797ABBF10B44 /* Pods_JazHotels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JazHotels.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE61C7D20DAC74B006160C1 /* Montserrat-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-MediumItalic.otf"; sourceTree = "<group>"; };
@@ -384,6 +390,9 @@
 		52B615F920E891C100A1A416 /* JModels */ = {
 			isa = PBXGroup;
 			children = (
+				52B616E720E9566300A1A416 /* JBody.swift */,
+				52B616E820E9566400A1A416 /* JEnvelope.swift */,
+				52B616E620E9566300A1A416 /* JImageItem.swift */,
 				52B6169A20E9341800A1A416 /* JCAdditionalDetail.swift */,
 				52B616A320E9341A00A1A416 /* JCAddres.swift */,
 				52B616B720E9341D00A1A416 /* JCAmountPercent.swift */,
@@ -830,16 +839,19 @@
 				52B6164420E891C100A1A416 /* JOccupancy.swift in Sources */,
 				52B6163C20E891C100A1A416 /* JAreaInfo.swift in Sources */,
 				52B616CE20E9341E00A1A416 /* JCRoomType.swift in Sources */,
+				52B616E920E9566400A1A416 /* JImageItem.swift in Sources */,
 				52B616D820E9341E00A1A416 /* JCBody.swift in Sources */,
 				52B616BD20E9341E00A1A416 /* JCOTAHotelAvailRS.swift in Sources */,
 				52B616BF20E9341E00A1A416 /* JCRoomRate.swift in Sources */,
 				52B6165420E891C100A1A416 /* JMeetingRoomCapacity.swift in Sources */,
+				52B616EB20E9566400A1A416 /* JEnvelope.swift in Sources */,
 				52B6165E20E891C100A1A416 /* JSoap:Envelope.swift in Sources */,
 				52B6163320E891C100A1A416 /* JTextItem.swift in Sources */,
 				52B616CA20E9341E00A1A416 /* JCCancelPenalty.swift in Sources */,
 				52B6165720E891C100A1A416 /* JStateProv.swift in Sources */,
 				52B6166020E891C100A1A416 /* JHotels.swift in Sources */,
 				52B6164320E891C100A1A416 /* JSoap:Body.swift in Sources */,
+				52B616EA20E9566400A1A416 /* JBody.swift in Sources */,
 				52B616BC20E9341E00A1A416 /* JCGuarantee.swift in Sources */,
 				52B616CF20E9341E00A1A416 /* JCRatePlanDescription.swift in Sources */,
 				52B6165920E891C100A1A416 /* JFacilityInfo.swift in Sources */,

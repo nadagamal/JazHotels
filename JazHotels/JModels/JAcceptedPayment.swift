@@ -7,7 +7,8 @@
 
 import Foundation
 
-class JAcceptedPayment{
+
+class JAcceptedPayment : NSObject, NSCoding{
 
 	var paymentCard : JPaymentCard!
 	var acceptedPayment : [JAcceptedPayment]!
@@ -27,6 +28,51 @@ class JAcceptedPayment{
 				acceptedPayment.append(value)
 			}
 		}
+	}
+
+	/**
+	 * Returns all the available property values in the form of [String:Any] object where the key is the approperiate json key and the value is the value of the corresponding property
+	 */
+	func toDictionary() -> [String:Any]
+	{
+		var dictionary = [String:Any]()
+		if paymentCard != nil{
+			dictionary["PaymentCard"] = paymentCard.toDictionary()
+		}
+		if acceptedPayment != nil{
+			var dictionaryElements = [[String:Any]]()
+			for acceptedPaymentElement in acceptedPayment {
+				dictionaryElements.append(acceptedPaymentElement.toDictionary())
+			}
+			dictionary["AcceptedPayment"] = dictionaryElements
+		}
+		return dictionary
+	}
+
+    /**
+    * NSCoding required initializer.
+    * Fills the data from the passed decoder
+    */
+    @objc required init(coder aDecoder: NSCoder)
+	{
+         paymentCard = aDecoder.decodeObject(forKey: "PaymentCard") as? JPaymentCard
+         acceptedPayment = aDecoder.decodeObject(forKey :"AcceptedPayment") as? [JAcceptedPayment]
+
+	}
+
+    /**
+    * NSCoding required method.
+    * Encodes mode properties into the decoder
+    */
+    @objc func encode(with aCoder: NSCoder)
+	{
+		if paymentCard != nil{
+			aCoder.encode(paymentCard, forKey: "PaymentCard")
+		}
+		if acceptedPayment != nil{
+			aCoder.encode(acceptedPayment, forKey: "AcceptedPayment")
+		}
+
 	}
 
 }

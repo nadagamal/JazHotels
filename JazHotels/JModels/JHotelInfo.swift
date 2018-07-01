@@ -7,22 +7,21 @@
 
 import Foundation
 
-class JHotelInfo{
 
-	var whenBuilt : String!
+class JHotelInfo : NSObject, NSCoding{
+
 	var categoryCodes : JCategoryCode!
 	var descriptions : JDescription!
 	var hotelName : JHotelName!
 	var position : JPosition!
-	var relativePosition : JRelativePosition!
 	var services : JService!
+	var whenBuilt : String!
 
 
 	/**
 	 * Instantiate the instance using the passed dictionary values to set the properties values
 	 */
 	init(fromDictionary dictionary: [String:Any]){
-		whenBuilt = dictionary["_WhenBuilt"] as? String
 		if let categoryCodesData = dictionary["CategoryCodes"] as? [String:Any]{
 			categoryCodes = JCategoryCode(fromDictionary: categoryCodesData)
 		}
@@ -35,12 +34,79 @@ class JHotelInfo{
 		if let positionData = dictionary["Position"] as? [String:Any]{
 			position = JPosition(fromDictionary: positionData)
 		}
-		if let relativePositionData = dictionary["RelativePosition"] as? [String:Any]{
-			relativePosition = JRelativePosition(fromDictionary: relativePositionData)
-		}
 		if let servicesData = dictionary["Services"] as? [String:Any]{
 			services = JService(fromDictionary: servicesData)
 		}
+		whenBuilt = dictionary["_WhenBuilt"] as? String
+	}
+
+	/**
+	 * Returns all the available property values in the form of [String:Any] object where the key is the approperiate json key and the value is the value of the corresponding property
+	 */
+	func toDictionary() -> [String:Any]
+	{
+		var dictionary = [String:Any]()
+		if categoryCodes != nil{
+			dictionary["CategoryCodes"] = categoryCodes.toDictionary()
+		}
+		if descriptions != nil{
+			dictionary["Descriptions"] = descriptions.toDictionary()
+		}
+		if hotelName != nil{
+			dictionary["HotelName"] = hotelName.toDictionary()
+		}
+		if position != nil{
+			dictionary["Position"] = position.toDictionary()
+		}
+		if services != nil{
+			dictionary["Services"] = services.toDictionary()
+		}
+		if whenBuilt != nil{
+			dictionary["_WhenBuilt"] = whenBuilt
+		}
+		return dictionary
+	}
+
+    /**
+    * NSCoding required initializer.
+    * Fills the data from the passed decoder
+    */
+    @objc required init(coder aDecoder: NSCoder)
+	{
+         categoryCodes = aDecoder.decodeObject(forKey: "CategoryCodes") as? JCategoryCode
+         descriptions = aDecoder.decodeObject(forKey: "Descriptions") as? JDescription
+         hotelName = aDecoder.decodeObject(forKey: "HotelName") as? JHotelName
+         position = aDecoder.decodeObject(forKey: "Position") as? JPosition
+         services = aDecoder.decodeObject(forKey: "Services") as? JService
+         whenBuilt = aDecoder.decodeObject(forKey: "_WhenBuilt") as? String
+
+	}
+
+    /**
+    * NSCoding required method.
+    * Encodes mode properties into the decoder
+    */
+    @objc func encode(with aCoder: NSCoder)
+	{
+		if categoryCodes != nil{
+			aCoder.encode(categoryCodes, forKey: "CategoryCodes")
+		}
+		if descriptions != nil{
+			aCoder.encode(descriptions, forKey: "Descriptions")
+		}
+		if hotelName != nil{
+			aCoder.encode(hotelName, forKey: "HotelName")
+		}
+		if position != nil{
+			aCoder.encode(position, forKey: "Position")
+		}
+		if services != nil{
+			aCoder.encode(services, forKey: "Services")
+		}
+		if whenBuilt != nil{
+			aCoder.encode(whenBuilt, forKey: "_WhenBuilt")
+		}
+
 	}
 
 }

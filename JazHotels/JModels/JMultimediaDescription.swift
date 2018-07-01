@@ -7,10 +7,12 @@
 
 import Foundation
 
-class JMultimediaDescription{
+
+class JMultimediaDescription : NSObject, NSCoding{
 
 	var textItems : JTextItem!
-	var multimediaDescrip : JMultimediaDescription!
+	var multimediaDescriptionn : JMultimediaDescription!
+	var imageItems : JImageItem!
 	var additionalDetailCode : String!
 	var multimediaDescription : [JMultimediaDescription]!
 
@@ -23,7 +25,10 @@ class JMultimediaDescription{
 			textItems = JTextItem(fromDictionary: textItemsData)
 		}
 		if let multimediaDescriptionData = dictionary["MultimediaDescription"] as? [String:Any]{
-			multimediaDescrip = JMultimediaDescription(fromDictionary: multimediaDescriptionData)
+			multimediaDescriptionn = JMultimediaDescription(fromDictionary: multimediaDescriptionData)
+		}
+		if let imageItemsData = dictionary["ImageItems"] as? [String:Any]{
+			imageItems = JImageItem(fromDictionary: imageItemsData)
 		}
 		additionalDetailCode = dictionary["_AdditionalDetailCode"] as? String
 		multimediaDescription = [JMultimediaDescription]()
@@ -33,6 +38,72 @@ class JMultimediaDescription{
 				multimediaDescription.append(value)
 			}
 		}
+	}
+
+	/**
+	 * Returns all the available property values in the form of [String:Any] object where the key is the approperiate json key and the value is the value of the corresponding property
+	 */
+	func toDictionary() -> [String:Any]
+	{
+		var dictionary = [String:Any]()
+		if textItems != nil{
+			dictionary["TextItems"] = textItems.toDictionary()
+		}
+		if multimediaDescription != nil{
+			dictionary["MultimediaDescription"] = multimediaDescriptionn.toDictionary()
+		}
+		if imageItems != nil{
+			dictionary["ImageItems"] = imageItems.toDictionary()
+		}
+		if additionalDetailCode != nil{
+			dictionary["_AdditionalDetailCode"] = additionalDetailCode
+		}
+		if multimediaDescription != nil{
+			var dictionaryElements = [[String:Any]]()
+			for multimediaDescriptionElement in multimediaDescription {
+				dictionaryElements.append(multimediaDescriptionElement.toDictionary())
+			}
+			dictionary["MultimediaDescription"] = dictionaryElements
+		}
+		return dictionary
+	}
+
+    /**
+    * NSCoding required initializer.
+    * Fills the data from the passed decoder
+    */
+    @objc required init(coder aDecoder: NSCoder)
+	{
+         textItems = aDecoder.decodeObject(forKey: "TextItems") as? JTextItem
+         multimediaDescriptionn = aDecoder.decodeObject(forKey: "MultimediaDescription") as? JMultimediaDescription
+         imageItems = aDecoder.decodeObject(forKey: "ImageItems") as? JImageItem
+         additionalDetailCode = aDecoder.decodeObject(forKey: "_AdditionalDetailCode") as? String
+         multimediaDescription = aDecoder.decodeObject(forKey :"MultimediaDescription") as? [JMultimediaDescription]
+
+	}
+
+    /**
+    * NSCoding required method.
+    * Encodes mode properties into the decoder
+    */
+    @objc func encode(with aCoder: NSCoder)
+	{
+		if textItems != nil{
+			aCoder.encode(textItems, forKey: "TextItems")
+		}
+		if multimediaDescriptionn != nil{
+			aCoder.encode(multimediaDescriptionn, forKey: "MultimediaDescription")
+		}
+		if imageItems != nil{
+			aCoder.encode(imageItems, forKey: "ImageItems")
+		}
+		if additionalDetailCode != nil{
+			aCoder.encode(additionalDetailCode, forKey: "_AdditionalDetailCode")
+		}
+		if multimediaDescription != nil{
+			aCoder.encode(multimediaDescription, forKey: "MultimediaDescription")
+		}
+
 	}
 
 }

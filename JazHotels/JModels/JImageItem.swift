@@ -1,5 +1,5 @@
 //
-//	JPaymentCard.swift
+//	JImageItem.swift
 //
 //	Create by Nada Gamal on 1/7/2018
 //	Copyright © 2018. All rights reserved.
@@ -8,16 +8,22 @@
 import Foundation
 
 
-class JPaymentCard : NSObject, NSCoding{
+class JImageItem : NSObject, NSCoding{
 
-	var cardCode : String!
+	var imageFormat : JURL!
+	var imageItem : JImageItem!
 
 
 	/**
 	 * Instantiate the instance using the passed dictionary values to set the properties values
 	 */
 	init(fromDictionary dictionary: [String:Any]){
-		cardCode = dictionary["_CardCode"] as? String
+		if let imageFormatData = dictionary["ImageFormat"] as? [String:Any]{
+			imageFormat = JURL(fromDictionary: imageFormatData)
+		}
+		if let imageItemData = dictionary["ImageItem"] as? [String:Any]{
+			imageItem = JImageItem(fromDictionary: imageItemData)
+		}
 	}
 
 	/**
@@ -26,8 +32,11 @@ class JPaymentCard : NSObject, NSCoding{
 	func toDictionary() -> [String:Any]
 	{
 		var dictionary = [String:Any]()
-		if cardCode != nil{
-			dictionary["_CardCode"] = cardCode
+		if imageFormat != nil{
+			dictionary["ImageFormat"] = imageFormat.toDictionary()
+		}
+		if imageItem != nil{
+			dictionary["ImageItem"] = imageItem.toDictionary()
 		}
 		return dictionary
 	}
@@ -38,7 +47,8 @@ class JPaymentCard : NSObject, NSCoding{
     */
     @objc required init(coder aDecoder: NSCoder)
 	{
-         cardCode = aDecoder.decodeObject(forKey: "_CardCode") as? String
+         imageFormat = aDecoder.decodeObject(forKey: "ImageFormat") as? JURL
+         imageItem = aDecoder.decodeObject(forKey: "ImageItem") as? JImageItem
 
 	}
 
@@ -48,8 +58,11 @@ class JPaymentCard : NSObject, NSCoding{
     */
     @objc func encode(with aCoder: NSCoder)
 	{
-		if cardCode != nil{
-			aCoder.encode(cardCode, forKey: "_CardCode")
+		if imageFormat != nil{
+			aCoder.encode(imageFormat, forKey: "ImageFormat")
+		}
+		if imageItem != nil{
+			aCoder.encode(imageItem, forKey: "ImageItem")
 		}
 
 	}

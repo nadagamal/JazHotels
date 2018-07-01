@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		524EEE7220DA840D006B9917 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524EEE7120DA840D006B9917 /* AppDelegate.swift */; };
-		524EEE7420DA840D006B9917 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524EEE7320DA840D006B9917 /* ViewController.swift */; };
+		524EEE7420DA840D006B9917 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524EEE7320DA840D006B9917 /* HomeViewController.swift */; };
 		524EEE7920DA840F006B9917 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 524EEE7820DA840F006B9917 /* Assets.xcassets */; };
 		524EEE7C20DA840F006B9917 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 524EEE7A20DA840F006B9917 /* LaunchScreen.storyboard */; };
 		9AE61CA220DAC74B006160C1 /* Montserrat-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9AE61C7D20DAC74B006160C1 /* Montserrat-MediumItalic.otf */; };
@@ -49,14 +49,47 @@
 		9AE61CC520DAC74B006160C1 /* MontserratAlternates-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9AE61CA020DAC74B006160C1 /* MontserratAlternates-Italic.otf */; };
 		9AE61CC620DAC74B006160C1 /* Montserrat-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9AE61CA120DAC74B006160C1 /* Montserrat-SemiBold.otf */; };
 		9AE61CCE20DAE0BD006160C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AE61CCC20DAE0BD006160C1 /* Main.storyboard */; };
+		9AE61CD120DB10BF006160C1 /* HomeTabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE61CD020DB10BF006160C1 /* HomeTabbar.swift */; };
+		9AE61CE120DB1B9A006160C1 /* pop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE61CDE20DB1AF2006160C1 /* pop.framework */; };
+		9AE61CE220DB1BBD006160C1 /* pop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE61CDE20DB1AF2006160C1 /* pop.framework */; };
+		9AE61CE320DB1BBD006160C1 /* pop.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE61CDE20DB1AF2006160C1 /* pop.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9AE61D0F20DB1DFA006160C1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9AE61D0620DB1DFA006160C1 /* Localizable.strings */; };
+		9AE61D1020DB1DFA006160C1 /* ESTabBarItemMoreContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE61D0820DB1DFA006160C1 /* ESTabBarItemMoreContentView.swift */; };
+		9AE61D1120DB1DFA006160C1 /* ESTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE61D0920DB1DFA006160C1 /* ESTabBarController.swift */; };
+		9AE61D1220DB1DFA006160C1 /* ESTabBarItemContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE61D0A20DB1DFA006160C1 /* ESTabBarItemContentView.swift */; };
+		9AE61D1320DB1DFA006160C1 /* ESTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE61D0B20DB1DFA006160C1 /* ESTabBarItem.swift */; };
+		9AE61D1420DB1DFA006160C1 /* ESTabBarItemBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE61D0C20DB1DFA006160C1 /* ESTabBarItemBadgeView.swift */; };
+		9AE61D1520DB1DFA006160C1 /* ESTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE61D0D20DB1DFA006160C1 /* ESTabBar.swift */; };
+		9AE61D1620DB1DFA006160C1 /* ESTabBarItemContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE61D0E20DB1DFA006160C1 /* ESTabBarItemContainer.swift */; };
+		9AE61D1F20DB1EAC006160C1 /* ExampleBackgroundContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE61D1820DB1EAC006160C1 /* ExampleBackgroundContentView.swift */; };
+		9AE61D2020DB1EAC006160C1 /* ExampleBouncesContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE61D1920DB1EAC006160C1 /* ExampleBouncesContentView.swift */; };
+		9AE61D2120DB1EAC006160C1 /* ExampleAnimateTipsContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE61D1A20DB1EAC006160C1 /* ExampleAnimateTipsContentView.swift */; };
+		9AE61D2220DB1EAC006160C1 /* ExampleBasicContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE61D1B20DB1EAC006160C1 /* ExampleBasicContentView.swift */; };
+		9AE61D2320DB1EAC006160C1 /* ExampleHighlightableContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE61D1C20DB1EAC006160C1 /* ExampleHighlightableContentView.swift */; };
+		9AE61D2420DB1EAC006160C1 /* ExampleTipsContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE61D1D20DB1EAC006160C1 /* ExampleTipsContentView.swift */; };
+		9AE61D2520DB1EAC006160C1 /* ExampleIrregularityContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE61D1E20DB1EAC006160C1 /* ExampleIrregularityContentView.swift */; };
 		FA34B49D79DD74C9696B2EEE /* Pods_JazHotels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 925F604466D8797ABBF10B44 /* Pods_JazHotels.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9AE61CE420DB1BBD006160C1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9AE61CE320DB1BBD006160C1 /* pop.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		42D73029D47BCCF9EDE78E08 /* Pods-JazHotels.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JazHotels.release.xcconfig"; path = "Pods/Target Support Files/Pods-JazHotels/Pods-JazHotels.release.xcconfig"; sourceTree = "<group>"; };
 		524EEE6E20DA840D006B9917 /* JazHotels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JazHotels.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		524EEE7120DA840D006B9917 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		524EEE7320DA840D006B9917 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		524EEE7320DA840D006B9917 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		524EEE7820DA840F006B9917 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		524EEE7B20DA840F006B9917 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		524EEE7D20DA840F006B9917 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -100,6 +133,23 @@
 		9AE61CA020DAC74B006160C1 /* MontserratAlternates-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-Italic.otf"; sourceTree = "<group>"; };
 		9AE61CA120DAC74B006160C1 /* Montserrat-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.otf"; sourceTree = "<group>"; };
 		9AE61CCD20DAE0BD006160C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9AE61CD020DB10BF006160C1 /* HomeTabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabbar.swift; sourceTree = "<group>"; };
+		9AE61CDE20DB1AF2006160C1 /* pop.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = pop.framework; sourceTree = "<group>"; };
+		9AE61D0720DB1DFA006160C1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		9AE61D0820DB1DFA006160C1 /* ESTabBarItemMoreContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESTabBarItemMoreContentView.swift; sourceTree = "<group>"; };
+		9AE61D0920DB1DFA006160C1 /* ESTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESTabBarController.swift; sourceTree = "<group>"; };
+		9AE61D0A20DB1DFA006160C1 /* ESTabBarItemContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESTabBarItemContentView.swift; sourceTree = "<group>"; };
+		9AE61D0B20DB1DFA006160C1 /* ESTabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESTabBarItem.swift; sourceTree = "<group>"; };
+		9AE61D0C20DB1DFA006160C1 /* ESTabBarItemBadgeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESTabBarItemBadgeView.swift; sourceTree = "<group>"; };
+		9AE61D0D20DB1DFA006160C1 /* ESTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESTabBar.swift; sourceTree = "<group>"; };
+		9AE61D0E20DB1DFA006160C1 /* ESTabBarItemContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESTabBarItemContainer.swift; sourceTree = "<group>"; };
+		9AE61D1820DB1EAC006160C1 /* ExampleBackgroundContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleBackgroundContentView.swift; sourceTree = "<group>"; };
+		9AE61D1920DB1EAC006160C1 /* ExampleBouncesContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleBouncesContentView.swift; sourceTree = "<group>"; };
+		9AE61D1A20DB1EAC006160C1 /* ExampleAnimateTipsContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleAnimateTipsContentView.swift; sourceTree = "<group>"; };
+		9AE61D1B20DB1EAC006160C1 /* ExampleBasicContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleBasicContentView.swift; sourceTree = "<group>"; };
+		9AE61D1C20DB1EAC006160C1 /* ExampleHighlightableContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleHighlightableContentView.swift; sourceTree = "<group>"; };
+		9AE61D1D20DB1EAC006160C1 /* ExampleTipsContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleTipsContentView.swift; sourceTree = "<group>"; };
+		9AE61D1E20DB1EAC006160C1 /* ExampleIrregularityContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleIrregularityContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +157,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AE61CE120DB1B9A006160C1 /* pop.framework in Frameworks */,
+				9AE61CE220DB1BBD006160C1 /* pop.framework in Frameworks */,
 				FA34B49D79DD74C9696B2EEE /* Pods_JazHotels.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -117,6 +169,7 @@
 		524EEE6520DA840D006B9917 = {
 			isa = PBXGroup;
 			children = (
+				9AE61CDE20DB1AF2006160C1 /* pop.framework */,
 				524EEE7020DA840D006B9917 /* JazHotels */,
 				524EEE6F20DA840D006B9917 /* Products */,
 				92276CA12D50E4A86FD2D42D /* Pods */,
@@ -135,10 +188,12 @@
 		524EEE7020DA840D006B9917 /* JazHotels */ = {
 			isa = PBXGroup;
 			children = (
+				9AE61D0320DB1DFA006160C1 /* libs */,
 				9AE61CCA20DAE077006160C1 /* AppDelegate */,
 				9AE61CC920DAE06C006160C1 /* Models */,
 				9AE61CC820DAE065006160C1 /* Views */,
 				9AE61CC720DAE057006160C1 /* ViewControllers */,
+				9AE61CD220DB1646006160C1 /* Extension */,
 				9AE61CCB20DAE09F006160C1 /* StoryBoards */,
 				9AE61C7A20DAC737006160C1 /* resources */,
 				524EEE7820DA840F006B9917 /* Assets.xcassets */,
@@ -220,7 +275,9 @@
 		9AE61CC720DAE057006160C1 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				524EEE7320DA840D006B9917 /* ViewController.swift */,
+				9AE61D1720DB1EAC006160C1 /* Content */,
+				9AE61CD520DB166F006160C1 /* Home */,
+				9AE61CCF20DB10B3006160C1 /* Tabbar */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -255,6 +312,74 @@
 			path = StoryBoards;
 			sourceTree = "<group>";
 		};
+		9AE61CCF20DB10B3006160C1 /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				9AE61CD020DB10BF006160C1 /* HomeTabbar.swift */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		9AE61CD220DB1646006160C1 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		9AE61CD520DB166F006160C1 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				524EEE7320DA840D006B9917 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		9AE61D0320DB1DFA006160C1 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				9AE61D0420DB1DFA006160C1 /* Tab */,
+			);
+			path = libs;
+			sourceTree = "<group>";
+		};
+		9AE61D0420DB1DFA006160C1 /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				9AE61D0520DB1DFA006160C1 /* Sources */,
+			);
+			path = Tab;
+			sourceTree = "<group>";
+		};
+		9AE61D0520DB1DFA006160C1 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				9AE61D0620DB1DFA006160C1 /* Localizable.strings */,
+				9AE61D0820DB1DFA006160C1 /* ESTabBarItemMoreContentView.swift */,
+				9AE61D0920DB1DFA006160C1 /* ESTabBarController.swift */,
+				9AE61D0A20DB1DFA006160C1 /* ESTabBarItemContentView.swift */,
+				9AE61D0B20DB1DFA006160C1 /* ESTabBarItem.swift */,
+				9AE61D0C20DB1DFA006160C1 /* ESTabBarItemBadgeView.swift */,
+				9AE61D0D20DB1DFA006160C1 /* ESTabBar.swift */,
+				9AE61D0E20DB1DFA006160C1 /* ESTabBarItemContainer.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		9AE61D1720DB1EAC006160C1 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				9AE61D1820DB1EAC006160C1 /* ExampleBackgroundContentView.swift */,
+				9AE61D1920DB1EAC006160C1 /* ExampleBouncesContentView.swift */,
+				9AE61D1A20DB1EAC006160C1 /* ExampleAnimateTipsContentView.swift */,
+				9AE61D1B20DB1EAC006160C1 /* ExampleBasicContentView.swift */,
+				9AE61D1C20DB1EAC006160C1 /* ExampleHighlightableContentView.swift */,
+				9AE61D1D20DB1EAC006160C1 /* ExampleTipsContentView.swift */,
+				9AE61D1E20DB1EAC006160C1 /* ExampleIrregularityContentView.swift */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
 		B5E9232516D4B0033B321F42 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -275,6 +400,7 @@
 				524EEE6B20DA840D006B9917 /* Frameworks */,
 				524EEE6C20DA840D006B9917 /* Resources */,
 				94637E4F20268CEF4DF8057A /* [CP] Embed Pods Frameworks */,
+				9AE61CE420DB1BBD006160C1 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -355,6 +481,7 @@
 				9AE61CBA20DAC74B006160C1 /* Montserrat-Regular.otf in Resources */,
 				9AE61CA220DAC74B006160C1 /* Montserrat-MediumItalic.otf in Resources */,
 				524EEE7920DA840F006B9917 /* Assets.xcassets in Resources */,
+				9AE61D0F20DB1DFA006160C1 /* Localizable.strings in Resources */,
 				9AE61CC020DAC74B006160C1 /* MontserratAlternates-ExtraLight.otf in Resources */,
 				9AE61CBC20DAC74B006160C1 /* MontserratAlternates-BoldItalic.otf in Resources */,
 				9AE61CB020DAC74B006160C1 /* MontserratAlternates-Bold.otf in Resources */,
@@ -378,7 +505,6 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-JazHotels/Pods-JazHotels-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/BSKeyboardControls/BSKeyboardControls.framework",
-				"${BUILT_PRODUCTS_DIR}/ESTabBarController-swift/ESTabBarController_swift.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/PullToRefreshKit/PullToRefreshKit.framework",
@@ -389,7 +515,6 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BSKeyboardControls.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ESTabBarController_swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PullToRefreshKit.framework",
@@ -426,8 +551,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				524EEE7420DA840D006B9917 /* ViewController.swift in Sources */,
+				9AE61D2220DB1EAC006160C1 /* ExampleBasicContentView.swift in Sources */,
+				9AE61D1320DB1DFA006160C1 /* ESTabBarItem.swift in Sources */,
+				9AE61D1020DB1DFA006160C1 /* ESTabBarItemMoreContentView.swift in Sources */,
+				9AE61D1620DB1DFA006160C1 /* ESTabBarItemContainer.swift in Sources */,
+				9AE61D1520DB1DFA006160C1 /* ESTabBar.swift in Sources */,
+				9AE61D1F20DB1EAC006160C1 /* ExampleBackgroundContentView.swift in Sources */,
+				9AE61D1120DB1DFA006160C1 /* ESTabBarController.swift in Sources */,
+				9AE61D2520DB1EAC006160C1 /* ExampleIrregularityContentView.swift in Sources */,
+				9AE61D1420DB1DFA006160C1 /* ESTabBarItemBadgeView.swift in Sources */,
+				9AE61D2020DB1EAC006160C1 /* ExampleBouncesContentView.swift in Sources */,
+				9AE61D2420DB1EAC006160C1 /* ExampleTipsContentView.swift in Sources */,
+				524EEE7420DA840D006B9917 /* HomeViewController.swift in Sources */,
+				9AE61CD120DB10BF006160C1 /* HomeTabbar.swift in Sources */,
 				524EEE7220DA840D006B9917 /* AppDelegate.swift in Sources */,
+				9AE61D2120DB1EAC006160C1 /* ExampleAnimateTipsContentView.swift in Sources */,
+				9AE61D1220DB1DFA006160C1 /* ESTabBarItemContentView.swift in Sources */,
+				9AE61D2320DB1EAC006160C1 /* ExampleHighlightableContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,6 +588,14 @@
 				9AE61CCD20DAE0BD006160C1 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9AE61D0620DB1DFA006160C1 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9AE61D0720DB1DFA006160C1 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -574,6 +722,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MAG9DAS3TQ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = JazHotels/resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -594,6 +746,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MAG9DAS3TQ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = JazHotels/resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (

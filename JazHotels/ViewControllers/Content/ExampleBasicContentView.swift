@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import ESTabBarController_swift
+
 class ExampleBasicContentView: ESTabBarItemContentView {
 
     override init(frame: CGRect) {

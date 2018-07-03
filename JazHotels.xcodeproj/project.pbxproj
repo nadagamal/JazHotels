@@ -114,16 +114,8 @@
 		52B616E920E9566400A1A416 /* JImageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B616E620E9566300A1A416 /* JImageItem.swift */; };
 		52B616EA20E9566400A1A416 /* JBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B616E720E9566300A1A416 /* JBody.swift */; };
 		52B616EB20E9566400A1A416 /* JEnvelope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B616E820E9566400A1A416 /* JEnvelope.swift */; };
-		9A06CB1C20EACC4900AFBCA2 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A06CB1B20EACC4900AFBCA2 /* TabBarVC.swift */; };
+		9A06CB1C20EACC4900AFBCA2 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A06CB1B20EACC4900AFBCA2 /* MainTabBar.swift */; };
 		9A06CB1F20EACF6700AFBCA2 /* HotelJazConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A06CB1E20EACF6700AFBCA2 /* HotelJazConstants.swift */; };
-		9A45DCD020EAD707000FB356 /* ExampleBasicContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A45DCC920EAD706000FB356 /* ExampleBasicContentView.swift */; };
-		9A45DCD120EAD707000FB356 /* ExampleBackgroundContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A45DCCA20EAD706000FB356 /* ExampleBackgroundContentView.swift */; };
-		9A45DCD220EAD707000FB356 /* ExampleHighlightableContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A45DCCB20EAD706000FB356 /* ExampleHighlightableContentView.swift */; };
-		9A45DCD320EAD707000FB356 /* ExampleTipsContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A45DCCC20EAD706000FB356 /* ExampleTipsContentView.swift */; };
-		9A45DCD420EAD707000FB356 /* ExampleAnimateTipsContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A45DCCD20EAD706000FB356 /* ExampleAnimateTipsContentView.swift */; };
-		9A45DCD520EAD707000FB356 /* ExampleBouncesContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A45DCCE20EAD706000FB356 /* ExampleBouncesContentView.swift */; };
-		9A45DCD620EAD707000FB356 /* ExampleIrregularityContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A45DCCF20EAD706000FB356 /* ExampleIrregularityContentView.swift */; };
-		9A45DCDA20EAD926000FB356 /* HomeTabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A45DCD920EAD926000FB356 /* HomeTabbar.swift */; };
 		9AE61CA220DAC74B006160C1 /* Montserrat-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9AE61C7D20DAC74B006160C1 /* Montserrat-MediumItalic.otf */; };
 		9AE61CA320DAC74B006160C1 /* Montserrat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9AE61C7E20DAC74B006160C1 /* Montserrat-Bold.otf */; };
 		9AE61CA420DAC74B006160C1 /* Montserrat-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9AE61C7F20DAC74B006160C1 /* Montserrat-BlackItalic.otf */; };
@@ -162,8 +154,6 @@
 		9AE61CC520DAC74B006160C1 /* MontserratAlternates-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9AE61CA020DAC74B006160C1 /* MontserratAlternates-Italic.otf */; };
 		9AE61CC620DAC74B006160C1 /* Montserrat-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9AE61CA120DAC74B006160C1 /* Montserrat-SemiBold.otf */; };
 		9AE61CCE20DAE0BD006160C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AE61CCC20DAE0BD006160C1 /* Main.storyboard */; };
-		9AF1BE8620EAE024008ECDC4 /* pop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A45DCD720EAD8F2000FB356 /* pop.framework */; };
-		9AF1BE8720EAE024008ECDC4 /* pop.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9A45DCD720EAD8F2000FB356 /* pop.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9AF7954020E96CCB0053F3E2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF7953620E96CCB0053F3E2 /* HomeViewController.swift */; };
 		FA34B49D79DD74C9696B2EEE /* Pods_JazHotels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 925F604466D8797ABBF10B44 /* Pods_JazHotels.framework */; };
 /* End PBXBuildFile section */
@@ -175,7 +165,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				9AF1BE8720EAE024008ECDC4 /* pop.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,17 +286,8 @@
 		52B616E820E9566400A1A416 /* JEnvelope.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JEnvelope.swift; sourceTree = "<group>"; };
 		8963E40941314293147FBF58 /* Pods-JazHotels.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JazHotels.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JazHotels/Pods-JazHotels.debug.xcconfig"; sourceTree = "<group>"; };
 		925F604466D8797ABBF10B44 /* Pods_JazHotels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JazHotels.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9A06CB1B20EACC4900AFBCA2 /* TabBarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
+		9A06CB1B20EACC4900AFBCA2 /* MainTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		9A06CB1E20EACF6700AFBCA2 /* HotelJazConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotelJazConstants.swift; sourceTree = "<group>"; };
-		9A45DCC920EAD706000FB356 /* ExampleBasicContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleBasicContentView.swift; sourceTree = "<group>"; };
-		9A45DCCA20EAD706000FB356 /* ExampleBackgroundContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleBackgroundContentView.swift; sourceTree = "<group>"; };
-		9A45DCCB20EAD706000FB356 /* ExampleHighlightableContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleHighlightableContentView.swift; sourceTree = "<group>"; };
-		9A45DCCC20EAD706000FB356 /* ExampleTipsContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleTipsContentView.swift; sourceTree = "<group>"; };
-		9A45DCCD20EAD706000FB356 /* ExampleAnimateTipsContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleAnimateTipsContentView.swift; sourceTree = "<group>"; };
-		9A45DCCE20EAD706000FB356 /* ExampleBouncesContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleBouncesContentView.swift; sourceTree = "<group>"; };
-		9A45DCCF20EAD706000FB356 /* ExampleIrregularityContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleIrregularityContentView.swift; sourceTree = "<group>"; };
-		9A45DCD720EAD8F2000FB356 /* pop.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = pop.framework; sourceTree = SOURCE_ROOT; };
-		9A45DCD920EAD926000FB356 /* HomeTabbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTabbar.swift; sourceTree = "<group>"; };
 		9AE61C7D20DAC74B006160C1 /* Montserrat-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-MediumItalic.otf"; sourceTree = "<group>"; };
 		9AE61C7E20DAC74B006160C1 /* Montserrat-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.otf"; sourceTree = "<group>"; };
 		9AE61C7F20DAC74B006160C1 /* Montserrat-BlackItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-BlackItalic.otf"; sourceTree = "<group>"; };
@@ -354,7 +334,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AF1BE8620EAE024008ECDC4 /* pop.framework in Frameworks */,
 				FA34B49D79DD74C9696B2EEE /* Pods_JazHotels.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -383,7 +362,6 @@
 		524EEE7020DA840D006B9917 /* JazHotels */ = {
 			isa = PBXGroup;
 			children = (
-				9A45DCD720EAD8F2000FB356 /* pop.framework */,
 				9AE61CCA20DAE077006160C1 /* AppDelegate */,
 				528F600720E7BF7B003111E7 /* Managers */,
 				52B615F920E891C100A1A416 /* JModels */,
@@ -613,7 +591,6 @@
 		9AE61CC720DAE057006160C1 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				9AF7952D20E96CCB0053F3E2 /* Content */,
 				9AF7953520E96CCB0053F3E2 /* Home */,
 				9AF7953720E96CCB0053F3E2 /* Tabbar */,
 				52B616E020E948F200A1A416 /* SplashViewController.swift */,
@@ -637,20 +614,6 @@
 			path = StoryBoards;
 			sourceTree = "<group>";
 		};
-		9AF7952D20E96CCB0053F3E2 /* Content */ = {
-			isa = PBXGroup;
-			children = (
-				9A45DCCD20EAD706000FB356 /* ExampleAnimateTipsContentView.swift */,
-				9A45DCCA20EAD706000FB356 /* ExampleBackgroundContentView.swift */,
-				9A45DCC920EAD706000FB356 /* ExampleBasicContentView.swift */,
-				9A45DCCE20EAD706000FB356 /* ExampleBouncesContentView.swift */,
-				9A45DCCB20EAD706000FB356 /* ExampleHighlightableContentView.swift */,
-				9A45DCCF20EAD706000FB356 /* ExampleIrregularityContentView.swift */,
-				9A45DCCC20EAD706000FB356 /* ExampleTipsContentView.swift */,
-			);
-			path = Content;
-			sourceTree = "<group>";
-		};
 		9AF7953520E96CCB0053F3E2 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -662,8 +625,7 @@
 		9AF7953720E96CCB0053F3E2 /* Tabbar */ = {
 			isa = PBXGroup;
 			children = (
-				9A45DCD920EAD926000FB356 /* HomeTabbar.swift */,
-				9A06CB1B20EACC4900AFBCA2 /* TabBarVC.swift */,
+				9A06CB1B20EACC4900AFBCA2 /* MainTabBar.swift */,
 			);
 			path = Tabbar;
 			sourceTree = "<group>";
@@ -792,7 +754,6 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-JazHotels/Pods-JazHotels-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/BSKeyboardControls/BSKeyboardControls.framework",
-				"${BUILT_PRODUCTS_DIR}/ESTabBarController-swift/ESTabBarController_swift.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/PullToRefreshKit/PullToRefreshKit.framework",
@@ -805,7 +766,6 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BSKeyboardControls.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ESTabBarController_swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PullToRefreshKit.framework",
@@ -867,15 +827,13 @@
 				9A06CB1F20EACF6700AFBCA2 /* HotelJazConstants.swift in Sources */,
 				52B6163920E891C100A1A416 /* JRefPoint.swift in Sources */,
 				52B616D320E9341E00A1A416 /* JCCriterion.swift in Sources */,
-				9A45DCD220EAD707000FB356 /* ExampleHighlightableContentView.swift in Sources */,
 				52B616C520E9341E00A1A416 /* JCHotelRef.swift in Sources */,
 				52B616BB20E9341E00A1A416 /* JCDeadline.swift in Sources */,
 				52B6164120E891C100A1A416 /* JEmail.swift in Sources */,
 				52B6165520E891C100A1A416 /* JDimension.swift in Sources */,
-				9A06CB1C20EACC4900AFBCA2 /* TabBarVC.swift in Sources */,
+				9A06CB1C20EACC4900AFBCA2 /* MainTabBar.swift in Sources */,
 				52B616C920E9341E00A1A416 /* JCAddres.swift in Sources */,
 				52B6165120E891C100A1A416 /* JPolicyInfo.swift in Sources */,
-				9A45DCD520EAD707000FB356 /* ExampleBouncesContentView.swift in Sources */,
 				52B6166220E891C100A1A416 /* JTypeRoom.swift in Sources */,
 				52B6166920E891C100A1A416 /* JAcceptedPayment.swift in Sources */,
 				52B616D720E9341E00A1A416 /* JCBase.swift in Sources */,
@@ -887,10 +845,8 @@
 				9AF7954020E96CCB0053F3E2 /* HomeViewController.swift in Sources */,
 				528F600C20E82EA0003111E7 /* XMLParser.swift in Sources */,
 				52B616D020E9341E00A1A416 /* JCCancelPolicy.swift in Sources */,
-				9A45DCD020EAD707000FB356 /* ExampleBasicContentView.swift in Sources */,
 				52B616C220E9341E00A1A416 /* JCAvailability.swift in Sources */,
 				52B6164020E891C100A1A416 /* JInfoCode.swift in Sources */,
-				9A45DCD420EAD707000FB356 /* ExampleAnimateTipsContentView.swift in Sources */,
 				52B616C620E9341E00A1A416 /* JCFee.swift in Sources */,
 				52B6165A20E891C100A1A416 /* JCancelPenalty.swift in Sources */,
 				52B616C720E9341E00A1A416 /* JCTax.swift in Sources */,
@@ -928,15 +884,12 @@
 				52B616E520E94D3F00A1A416 /* Helper.swift in Sources */,
 				52B6164420E891C100A1A416 /* JOccupancy.swift in Sources */,
 				52B6163C20E891C100A1A416 /* JAreaInfo.swift in Sources */,
-				9A45DCD120EAD707000FB356 /* ExampleBackgroundContentView.swift in Sources */,
 				52B616CE20E9341E00A1A416 /* JCRoomType.swift in Sources */,
 				52B616E920E9566400A1A416 /* JImageItem.swift in Sources */,
 				52B616D820E9341E00A1A416 /* JCBody.swift in Sources */,
 				52B616BD20E9341E00A1A416 /* JCOTAHotelAvailRS.swift in Sources */,
 				52B616BF20E9341E00A1A416 /* JCRoomRate.swift in Sources */,
 				52B6165420E891C100A1A416 /* JMeetingRoomCapacity.swift in Sources */,
-				9A45DCD320EAD707000FB356 /* ExampleTipsContentView.swift in Sources */,
-				9A45DCDA20EAD926000FB356 /* HomeTabbar.swift in Sources */,
 				52B616EB20E9566400A1A416 /* JEnvelope.swift in Sources */,
 				52B6165E20E891C100A1A416 /* JSoap:Envelope.swift in Sources */,
 				52B6163320E891C100A1A416 /* JTextItem.swift in Sources */,
@@ -949,7 +902,6 @@
 				52B616CF20E9341E00A1A416 /* JCRatePlanDescription.swift in Sources */,
 				52B6165920E891C100A1A416 /* JFacilityInfo.swift in Sources */,
 				528F600920E7BFB9003111E7 /* ServiceManager.swift in Sources */,
-				9A45DCD620EAD707000FB356 /* ExampleIrregularityContentView.swift in Sources */,
 				52B616CD20E9341E00A1A416 /* JCRatePlan.swift in Sources */,
 				52B616C320E9341E00A1A416 /* JCGuaranteePayment.swift in Sources */,
 				52B6163B20E891C100A1A416 /* JRelativePosition.swift in Sources */,
@@ -1113,10 +1065,7 @@
 				);
 				INFOPLIST_FILE = JazHotels/resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Nada.JazHotels;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "JazHotels/Helpers/JazHotels-Bridging-Header.h";
@@ -1139,10 +1088,7 @@
 				);
 				INFOPLIST_FILE = JazHotels/resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Nada.JazHotels;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "JazHotels/Helpers/JazHotels-Bridging-Header.h";

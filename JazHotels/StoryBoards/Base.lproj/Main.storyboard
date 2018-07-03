@@ -62,7 +62,7 @@
             </objects>
             <point key="canvasLocation" x="616.79999999999995" y="-89.505247376311857"/>
         </scene>
-        <!--Home-->
+        <!--Home View Controller-->
         <scene sceneID="auY-ph-suW">
             <objects>
                 <viewController id="8bO-EW-SUk" customClass="HomeViewController" customModule="JazHotels" customModuleProvider="target" sceneMemberID="viewController">
@@ -72,13 +72,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="aqg-Ik-d4D"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="home" landscapeImage="home" largeContentSizeImage="home" selectedImage="home_1" id="r3f-T9-PKF"/>
+                    <tabBarItem key="tabBarItem" title="" image="hotel-icon" landscapeImage="hotel-icon" largeContentSizeImage="hotel-icon" id="r3f-T9-PKF"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ePg-wY-gMG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1329" y="1484"/>
         </scene>
-        <!--Find-->
+        <!--Home View Controller-->
         <scene sceneID="Skc-QJ-aOT">
             <objects>
                 <viewController id="uGF-lN-xnv" customClass="HomeViewController" customModule="JazHotels" customModuleProvider="target" sceneMemberID="viewController">
@@ -88,7 +88,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="koj-hl-c5f"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Find" image="find" landscapeImage="find" largeContentSizeImage="find" selectedImage="find_1" id="M5j-BJ-3KQ"/>
+                    <tabBarItem key="tabBarItem" title="" image="favor-icon" landscapeImage="favor-icon" largeContentSizeImage="favor-icon" selectedImage="find_1" id="M5j-BJ-3KQ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JZT-oh-skY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -104,13 +104,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="I5G-Yi-9lO"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="photo_verybig" landscapeImage="photo_verybig" largeContentSizeImage="photo_verybig" selectedImage="photo_verybig_1" id="V2h-ai-K8x"/>
+                    <tabBarItem key="tabBarItem" title="" image="checkAvailable-icon" landscapeImage="checkAvailable-icon" largeContentSizeImage="checkAvailable-icon" selectedImage="photo_verybig_1" id="V2h-ai-K8x"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nEc-UM-UC6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="452" y="1495"/>
         </scene>
-        <!--Favor-->
+        <!--Home View Controller-->
         <scene sceneID="W1g-IR-MZy">
             <objects>
                 <viewController id="dX6-0T-Ctc" customClass="HomeViewController" customModule="JazHotels" customModuleProvider="target" sceneMemberID="viewController">
@@ -120,13 +120,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="3yW-pc-8XO"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Favor" image="favor" landscapeImage="favor" largeContentSizeImage="favor" selectedImage="favor_1" id="obb-06-Ql1"/>
+                    <tabBarItem key="tabBarItem" title="" image="about-icon" landscapeImage="about-icon" largeContentSizeImage="about-icon" selectedImage="favor_1" id="obb-06-Ql1"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="prd-Ci-4D4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1213" y="1484"/>
         </scene>
-        <!--Me-->
+        <!--Home View Controller-->
         <scene sceneID="p3H-XX-Kzi">
             <objects>
                 <viewController id="j7I-BO-Ua9" customClass="HomeViewController" customModule="JazHotels" customModuleProvider="target" sceneMemberID="viewController">
@@ -136,7 +136,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="BTt-mq-kgT"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Me" image="me" landscapeImage="me" largeContentSizeImage="me" selectedImage="me_1" id="F3E-Tw-2Af"/>
+                    <tabBarItem key="tabBarItem" title="" image="account-icon" landscapeImage="account-icon" largeContentSizeImage="account-icon" selectedImage="me_1" id="F3E-Tw-2Af"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GsT-FJ-aHN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -154,9 +154,6 @@
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="selectedImageTintColor" red="0.36862745098039218" green="0.054901960784313725" blue="0.54509803921568623" alpha="1" colorSpace="calibratedRGB"/>
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                 <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </userDefinedRuntimeAttribute>
@@ -177,15 +174,14 @@
     </scenes>
     <resources>
         <image name="Splash" width="1242" height="2208"/>
-        <image name="favor" width="23" height="23"/>
+        <image name="about-icon" width="21" height="21"/>
+        <image name="account-icon" width="23" height="21"/>
+        <image name="checkAvailable-icon" width="82" height="82"/>
+        <image name="favor-icon" width="23" height="21"/>
         <image name="favor_1" width="23" height="23"/>
-        <image name="find" width="23" height="23"/>
         <image name="find_1" width="23" height="23"/>
-        <image name="home" width="23" height="23"/>
-        <image name="home_1" width="23" height="23"/>
-        <image name="me" width="23" height="23"/>
+        <image name="hotel-icon" width="26" height="21"/>
         <image name="me_1" width="23" height="23"/>
-        <image name="photo_verybig" width="70" height="70"/>
         <image name="photo_verybig_1" width="70" height="70"/>
     </resources>
 </document>

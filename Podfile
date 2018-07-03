@@ -13,9 +13,9 @@ target 'JazHotels' do
   pod 'SkyFloatingLabelTextField', '~> 3.0'
   pod 'SwifterSwift'
   pod 'BSKeyboardControls', '~> 2.2'
-  pod 'ESTabBarController-swift'
   pod 'SCLAlertView'
   pod 'SIAlertView'
+
 
 
 

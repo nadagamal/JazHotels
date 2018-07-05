@@ -116,6 +116,16 @@
 		52B616EB20E9566400A1A416 /* JEnvelope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B616E820E9566400A1A416 /* JEnvelope.swift */; };
 		9A06CB1C20EACC4900AFBCA2 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A06CB1B20EACC4900AFBCA2 /* MainTabBar.swift */; };
 		9A06CB1F20EACF6700AFBCA2 /* HotelJazConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A06CB1E20EACF6700AFBCA2 /* HotelJazConstants.swift */; };
+		9AADBF1120ED5052009183FE /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AADBF1020ED5052009183FE /* FavoriteViewController.swift */; };
+		9AADBF1320ED509C009183FE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AADBF1220ED509C009183FE /* ProfileViewController.swift */; };
+		9AADBF1720ED50D0009183FE /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AADBF1620ED50D0009183FE /* AboutViewController.swift */; };
+		9AADBF1A20ED50FF009183FE /* CheckAvailabilityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AADBF1920ED50FF009183FE /* CheckAvailabilityViewController.swift */; };
+		9AADBF1D20ED5189009183FE /* HotelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AADBF1C20ED5189009183FE /* HotelsViewController.swift */; };
+		9AADBF2320ED56A1009183FE /* NoCopyPasteUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AADBF2220ED56A1009183FE /* NoCopyPasteUITextField.swift */; };
+		9AADBF8220EDC0DB009183FE /* HotelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AADBF8120EDC0DB009183FE /* HotelCollectionViewCell.swift */; };
+		9AADBF8420EDC0F0009183FE /* HotelCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AADBF8320EDC0F0009183FE /* HotelCollectionViewCell.xib */; };
+		9AADBF8920EDCA78009183FE /* HotelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AADBF8820EDCA78009183FE /* HotelListViewController.swift */; };
+		9AADBF8B20EDCA85009183FE /* HotelOnMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AADBF8A20EDCA85009183FE /* HotelOnMapViewController.swift */; };
 		9AE61CA220DAC74B006160C1 /* Montserrat-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9AE61C7D20DAC74B006160C1 /* Montserrat-MediumItalic.otf */; };
 		9AE61CA320DAC74B006160C1 /* Montserrat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9AE61C7E20DAC74B006160C1 /* Montserrat-Bold.otf */; };
 		9AE61CA420DAC74B006160C1 /* Montserrat-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9AE61C7F20DAC74B006160C1 /* Montserrat-BlackItalic.otf */; };
@@ -288,6 +298,16 @@
 		925F604466D8797ABBF10B44 /* Pods_JazHotels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JazHotels.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A06CB1B20EACC4900AFBCA2 /* MainTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		9A06CB1E20EACF6700AFBCA2 /* HotelJazConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotelJazConstants.swift; sourceTree = "<group>"; };
+		9AADBF1020ED5052009183FE /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		9AADBF1220ED509C009183FE /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		9AADBF1620ED50D0009183FE /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		9AADBF1920ED50FF009183FE /* CheckAvailabilityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckAvailabilityViewController.swift; sourceTree = "<group>"; };
+		9AADBF1C20ED5189009183FE /* HotelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelsViewController.swift; sourceTree = "<group>"; };
+		9AADBF2220ED56A1009183FE /* NoCopyPasteUITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoCopyPasteUITextField.swift; sourceTree = "<group>"; };
+		9AADBF8120EDC0DB009183FE /* HotelCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelCollectionViewCell.swift; sourceTree = "<group>"; };
+		9AADBF8320EDC0F0009183FE /* HotelCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HotelCollectionViewCell.xib; sourceTree = "<group>"; };
+		9AADBF8820EDCA78009183FE /* HotelListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelListViewController.swift; sourceTree = "<group>"; };
+		9AADBF8A20EDCA85009183FE /* HotelOnMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelOnMapViewController.swift; sourceTree = "<group>"; };
 		9AE61C7D20DAC74B006160C1 /* Montserrat-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-MediumItalic.otf"; sourceTree = "<group>"; };
 		9AE61C7E20DAC74B006160C1 /* Montserrat-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.otf"; sourceTree = "<group>"; };
 		9AE61C7F20DAC74B006160C1 /* Montserrat-BlackItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-BlackItalic.otf"; sourceTree = "<group>"; };
@@ -365,6 +385,7 @@
 				9AE61CCA20DAE077006160C1 /* AppDelegate */,
 				528F600720E7BF7B003111E7 /* Managers */,
 				52B615F920E891C100A1A416 /* JModels */,
+				9AADBF2020ED5208009183FE /* Views */,
 				9AE61CC720DAE057006160C1 /* ViewControllers */,
 				9A06CB1D20EACF4100AFBCA2 /* Utilities */,
 				528F600A20E82E87003111E7 /* Helpers */,
@@ -527,6 +548,108 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		9AADBF0D20ED502F009183FE /* Favourite */ = {
+			isa = PBXGroup;
+			children = (
+				9AADBF1020ED5052009183FE /* FavoriteViewController.swift */,
+			);
+			path = Favourite;
+			sourceTree = "<group>";
+		};
+		9AADBF1420ED50A1009183FE /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				9AADBF1220ED509C009183FE /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		9AADBF1520ED50C3009183FE /* About */ = {
+			isa = PBXGroup;
+			children = (
+				9AADBF1620ED50D0009183FE /* AboutViewController.swift */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
+		9AADBF1820ED50DB009183FE /* CheckAvailability */ = {
+			isa = PBXGroup;
+			children = (
+				9AADBF1B20ED517F009183FE /* Hotels */,
+				9AADBF1920ED50FF009183FE /* CheckAvailabilityViewController.swift */,
+			);
+			path = CheckAvailability;
+			sourceTree = "<group>";
+		};
+		9AADBF1B20ED517F009183FE /* Hotels */ = {
+			isa = PBXGroup;
+			children = (
+				9AADBF8520EDC8C4009183FE /* HotelDetails */,
+				9AADBF1C20ED5189009183FE /* HotelsViewController.swift */,
+			);
+			path = Hotels;
+			sourceTree = "<group>";
+		};
+		9AADBF1E20ED51D6009183FE /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				52B616E020E948F200A1A416 /* SplashViewController.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		9AADBF2020ED5208009183FE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9AADBF8020EDC0B7009183FE /* HotelCell */,
+				9AADBF2120ED5696009183FE /* TextField */,
+				9AF7953720E96CCB0053F3E2 /* Tabbar */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9AADBF2120ED5696009183FE /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				9AADBF2220ED56A1009183FE /* NoCopyPasteUITextField.swift */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
+		9AADBF8020EDC0B7009183FE /* HotelCell */ = {
+			isa = PBXGroup;
+			children = (
+				9AADBF8120EDC0DB009183FE /* HotelCollectionViewCell.swift */,
+				9AADBF8320EDC0F0009183FE /* HotelCollectionViewCell.xib */,
+			);
+			path = HotelCell;
+			sourceTree = "<group>";
+		};
+		9AADBF8520EDC8C4009183FE /* HotelDetails */ = {
+			isa = PBXGroup;
+			children = (
+				9AADBF8720EDCA60009183FE /* HotelOnMap */,
+				9AADBF8620EDCA56009183FE /* HotelList */,
+			);
+			path = HotelDetails;
+			sourceTree = "<group>";
+		};
+		9AADBF8620EDCA56009183FE /* HotelList */ = {
+			isa = PBXGroup;
+			children = (
+				9AADBF8820EDCA78009183FE /* HotelListViewController.swift */,
+			);
+			path = HotelList;
+			sourceTree = "<group>";
+		};
+		9AADBF8720EDCA60009183FE /* HotelOnMap */ = {
+			isa = PBXGroup;
+			children = (
+				9AADBF8A20EDCA85009183FE /* HotelOnMapViewController.swift */,
+			);
+			path = HotelOnMap;
+			sourceTree = "<group>";
+		};
 		9AE61C7A20DAC737006160C1 /* resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -591,9 +714,12 @@
 		9AE61CC720DAE057006160C1 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				9AADBF1E20ED51D6009183FE /* Splash */,
+				9AADBF1820ED50DB009183FE /* CheckAvailability */,
+				9AADBF1520ED50C3009183FE /* About */,
+				9AADBF1420ED50A1009183FE /* Profile */,
+				9AADBF0D20ED502F009183FE /* Favourite */,
 				9AF7953520E96CCB0053F3E2 /* Home */,
-				9AF7953720E96CCB0053F3E2 /* Tabbar */,
-				52B616E020E948F200A1A416 /* SplashViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -735,6 +861,7 @@
 				9AE61CBC20DAC74B006160C1 /* MontserratAlternates-BoldItalic.otf in Resources */,
 				9AE61CB020DAC74B006160C1 /* MontserratAlternates-Bold.otf in Resources */,
 				9AE61CC520DAC74B006160C1 /* MontserratAlternates-Italic.otf in Resources */,
+				9AADBF8420EDC0F0009183FE /* HotelCollectionViewCell.xib in Resources */,
 				9AE61CB620DAC74B006160C1 /* Montserrat-SemiBoldItalic.otf in Resources */,
 				9AE61CB920DAC74B006160C1 /* MontserratAlternates-SemiBold.otf in Resources */,
 				9AE61CB520DAC74B006160C1 /* MontserratAlternates-SemiBoldItalic.otf in Resources */,
@@ -761,6 +888,7 @@
 				"${BUILT_PRODUCTS_DIR}/SIAlertView/SIAlertView.framework",
 				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/SwifterSwift/SwifterSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/TTSegmentedControl/TTSegmentedControl.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -773,6 +901,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SIAlertView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwifterSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TTSegmentedControl.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -807,6 +936,7 @@
 				52B616E120E948F200A1A416 /* SplashViewController.swift in Sources */,
 				52B616D120E9341E00A1A416 /* JCNightlyRate.swift in Sources */,
 				52B6163520E891C100A1A416 /* JAward.swift in Sources */,
+				9AADBF8920EDCA78009183FE /* HotelListViewController.swift in Sources */,
 				52B6165B20E891C100A1A416 /* JAffiliationInfo.swift in Sources */,
 				52B6166520E891C100A1A416 /* JTransportation.swift in Sources */,
 				52B6163820E891C100A1A416 /* JGuestRoomInfo.swift in Sources */,
@@ -823,11 +953,13 @@
 				52B616D920E9341E00A1A416 /* JCCountryName.swift in Sources */,
 				52B6163A20E891C100A1A416 /* JAmenity.swift in Sources */,
 				52B6164E20E891C100A1A416 /* JFeature.swift in Sources */,
+				9AADBF1D20ED5189009183FE /* HotelsViewController.swift in Sources */,
 				52B616BE20E9341E00A1A416 /* JCMealsIncluded.swift in Sources */,
 				9A06CB1F20EACF6700AFBCA2 /* HotelJazConstants.swift in Sources */,
 				52B6163920E891C100A1A416 /* JRefPoint.swift in Sources */,
 				52B616D320E9341E00A1A416 /* JCCriterion.swift in Sources */,
 				52B616C520E9341E00A1A416 /* JCHotelRef.swift in Sources */,
+				9AADBF1A20ED50FF009183FE /* CheckAvailabilityViewController.swift in Sources */,
 				52B616BB20E9341E00A1A416 /* JCDeadline.swift in Sources */,
 				52B6164120E891C100A1A416 /* JEmail.swift in Sources */,
 				52B6165520E891C100A1A416 /* JDimension.swift in Sources */,
@@ -838,6 +970,7 @@
 				52B6166920E891C100A1A416 /* JAcceptedPayment.swift in Sources */,
 				52B616D720E9341E00A1A416 /* JCBase.swift in Sources */,
 				52B616DF20E9341E00A1A416 /* JCTaxe.swift in Sources */,
+				9AADBF8220EDC0DB009183FE /* HotelCollectionViewCell.swift in Sources */,
 				52B616C020E9341E00A1A416 /* JCAdditionalDetail.swift in Sources */,
 				52B6166620E891C100A1A416 /* JCommissionPolicy.swift in Sources */,
 				52B6163420E891C100A1A416 /* JCancelPolicy.swift in Sources */,
@@ -850,6 +983,7 @@
 				52B616C620E9341E00A1A416 /* JCFee.swift in Sources */,
 				52B6165A20E891C100A1A416 /* JCancelPenalty.swift in Sources */,
 				52B616C720E9341E00A1A416 /* JCTax.swift in Sources */,
+				9AADBF1120ED5052009183FE /* FavoriteViewController.swift in Sources */,
 				52B616BA20E9341E00A1A416 /* JCRate.swift in Sources */,
 				52B6166320E891C100A1A416 /* JRequiredPayment.swift in Sources */,
 				52B6164720E891C100A1A416 /* JMultimediaDescription.swift in Sources */,
@@ -875,14 +1009,17 @@
 				52B6166A20E891C100A1A416 /* JCountryName.swift in Sources */,
 				52B6166B20E891C100A1A416 /* JHotelName.swift in Sources */,
 				52B6163D20E891C100A1A416 /* JPosition.swift in Sources */,
+				9AADBF1320ED509C009183FE /* ProfileViewController.swift in Sources */,
 				52B616DD20E9341E00A1A416 /* JCAmountPercent.swift in Sources */,
 				52B6163620E891C100A1A416 /* JPetsPolicy.swift in Sources */,
 				52B6165D20E891C100A1A416 /* JPaymentCard.swift in Sources */,
 				52B6163E20E891C100A1A416 /* JURL.swift in Sources */,
+				9AADBF2320ED56A1009183FE /* NoCopyPasteUITextField.swift in Sources */,
 				52B6163720E891C100A1A416 /* JAddres.swift in Sources */,
 				52B6165220E891C100A1A416 /* JContactInfo.swift in Sources */,
 				52B616E520E94D3F00A1A416 /* Helper.swift in Sources */,
 				52B6164420E891C100A1A416 /* JOccupancy.swift in Sources */,
+				9AADBF8B20EDCA85009183FE /* HotelOnMapViewController.swift in Sources */,
 				52B6163C20E891C100A1A416 /* JAreaInfo.swift in Sources */,
 				52B616CE20E9341E00A1A416 /* JCRoomType.swift in Sources */,
 				52B616E920E9566400A1A416 /* JImageItem.swift in Sources */,
@@ -910,6 +1047,7 @@
 				52B616D220E9341E00A1A416 /* JCPaymentPolicy.swift in Sources */,
 				52B6165620E891C100A1A416 /* JAddresse.swift in Sources */,
 				52B616DB20E9341E00A1A416 /* JCTPAExtension.swift in Sources */,
+				9AADBF1720ED50D0009183FE /* AboutViewController.swift in Sources */,
 				52B6164220E891C100A1A416 /* JPhone.swift in Sources */,
 				52B616E320E94B5C00A1A416 /* AlertView.swift in Sources */,
 			);
@@ -1065,7 +1203,10 @@
 				);
 				INFOPLIST_FILE = JazHotels/resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Nada.JazHotels;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "JazHotels/Helpers/JazHotels-Bridging-Header.h";
@@ -1088,7 +1229,10 @@
 				);
 				INFOPLIST_FILE = JazHotels/resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Nada.JazHotels;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "JazHotels/Helpers/JazHotels-Bridging-Header.h";

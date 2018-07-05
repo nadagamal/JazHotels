@@ -14,16 +14,9 @@ class SplashViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        let tabBar = UIStoryboard(name: HotelJazConstants.StoryBoard.mainSB, bundle: nil).instantiateViewController(withIdentifier: "HomeTabbar")
-//        self.navigationController?.present(tabBar, animated: true, completion: nil)
-        
-       self.navigationController?.present(Helper.customIrregularityStyle(delegate: nil), animated: true, completion: nil)
+        let tabBar = UIStoryboard(name: HotelJazConstants.StoryBoard.mainSB, bundle: nil).instantiateViewController(withIdentifier: "HomeTabbar") 
+        self.navigationController?.present(tabBar, animated: true, completion: nil)
 
-        
-        
-//        self.navigationController?.present(tabBar.customIrregularityStyle(delegate: nil), animated: true, completion: nil)
-
-        
         
 //        // Do any additional setup after loading the view.
 //        if let appInfo = UserDefaults.standard.object(forKey: "HotelDescriptiveContents") {

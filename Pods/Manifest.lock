@@ -1,33 +1,35 @@
 PODS:
-  - Alamofire (4.6.0)
+  - Alamofire (4.7.2)
   - BSKeyboardControls (2.2)
-  - ESTabBarController-swift (2.6.2)
-  - Kingfisher (4.6.1)
-  - NVActivityIndicatorView (4.1.1):
-    - NVActivityIndicatorView/Presenter (= 4.1.1)
-  - NVActivityIndicatorView/Presenter (4.1.1)
-  - PullToRefreshKit (0.8.2)
+  - Kingfisher (4.8.0)
+  - NVActivityIndicatorView (4.2.1):
+    - NVActivityIndicatorView/Presenter (= 4.2.1)
+  - NVActivityIndicatorView/Presenter (4.2.1)
+  - PullToRefreshKit (0.8.6)
   - SCLAlertView (0.8)
   - SIAlertView (1.3)
-  - SkyFloatingLabelTextField (3.4.0)
-  - SwifterSwift (4.1.0):
-    - SwifterSwift/AppKit (= 4.1.0)
-    - SwifterSwift/CoreGraphics (= 4.1.0)
-    - SwifterSwift/CoreLocation (= 4.1.0)
-    - SwifterSwift/Foundation (= 4.1.0)
-    - SwifterSwift/SwiftStdlib (= 4.1.0)
-    - SwifterSwift/UIKit (= 4.1.0)
-  - SwifterSwift/AppKit (4.1.0)
-  - SwifterSwift/CoreGraphics (4.1.0)
-  - SwifterSwift/CoreLocation (4.1.0)
-  - SwifterSwift/Foundation (4.1.0)
-  - SwifterSwift/SwiftStdlib (4.1.0)
-  - SwifterSwift/UIKit (4.1.0)
+  - SkyFloatingLabelTextField (3.5.1)
+  - SwifterSwift (4.4.0):
+    - SwifterSwift/AppKit (= 4.4.0)
+    - SwifterSwift/CoreGraphics (= 4.4.0)
+    - SwifterSwift/CoreLocation (= 4.4.0)
+    - SwifterSwift/Foundation (= 4.4.0)
+    - SwifterSwift/MapKit (= 4.4.0)
+    - SwifterSwift/SpriteKit (= 4.4.0)
+    - SwifterSwift/SwiftStdlib (= 4.4.0)
+    - SwifterSwift/UIKit (= 4.4.0)
+  - SwifterSwift/AppKit (4.4.0)
+  - SwifterSwift/CoreGraphics (4.4.0)
+  - SwifterSwift/CoreLocation (4.4.0)
+  - SwifterSwift/Foundation (4.4.0)
+  - SwifterSwift/MapKit (4.4.0)
+  - SwifterSwift/SpriteKit (4.4.0)
+  - SwifterSwift/SwiftStdlib (4.4.0)
+  - SwifterSwift/UIKit (4.4.0)
 
 DEPENDENCIES:
   - Alamofire
   - BSKeyboardControls (~> 2.2)
-  - ESTabBarController-swift
   - Kingfisher (~> 4.0)
   - NVActivityIndicatorView
   - PullToRefreshKit
@@ -40,7 +42,6 @@ SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - BSKeyboardControls
-    - ESTabBarController-swift
     - Kingfisher
     - NVActivityIndicatorView
     - PullToRefreshKit
@@ -50,17 +51,16 @@ SPEC REPOS:
     - SwifterSwift
 
 SPEC CHECKSUMS:
-  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   BSKeyboardControls: b701935e789961102e3f20063bba7185800a2d3f
-  ESTabBarController-swift: f0a8679e43df1e60b7b36bbcaf1dc98ba6273c7d
-  Kingfisher: 1f9157d9c02b380cbd0b7cc890161195164eb634
-  NVActivityIndicatorView: 60109b9bf46efc2e71ab81453196ccdfdfeea870
-  PullToRefreshKit: 0a2a019bf094b8beba18c8a1bedfb1fb67ee70fd
+  Kingfisher: 976d828df2b24834c6a3f2fc4d82cdbd26552be1
+  NVActivityIndicatorView: 8068ba3ad39cb44cbaab25d89ff2546b3f092681
+  PullToRefreshKit: 172df52ab9c6cb2c1d4b1872b49f448d6291523f
   SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
   SIAlertView: 20c794b55eaf44d888773ea51647cf8907723919
-  SkyFloatingLabelTextField: 703aa1420b697392b1e7dba25571180dde018477
-  SwifterSwift: 4d962b5d653760b85266832aff6ab6d08c1b7974
+  SkyFloatingLabelTextField: 4cbeece9c3aae97c6019d8fae511cb5b755874f7
+  SwifterSwift: 1ce0e31801ddd3a2bd3256626275425adb01067a
 
-PODFILE CHECKSUM: aa47400289f700a21b1468986885a999242d629d
+PODFILE CHECKSUM: bc5cfa39ecf0320667c7c8b4b714fb7092b56195
 
 COCOAPODS: 1.5.0

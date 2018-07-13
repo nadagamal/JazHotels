@@ -15,6 +15,8 @@ target 'JazHotels' do
   pod 'BSKeyboardControls', '~> 2.2'
   pod 'SCLAlertView'
   pod 'SIAlertView'
+  pod 'TTSegmentedControl'
+
 
 
 

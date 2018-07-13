@@ -26,20 +26,22 @@ PODS:
   - SwifterSwift/SpriteKit (4.4.0)
   - SwifterSwift/SwiftStdlib (4.4.0)
   - SwifterSwift/UIKit (4.4.0)
+  - TTSegmentedControl (0.4.4)
 
 DEPENDENCIES:
   - Alamofire
   - BSKeyboardControls (~> 2.2)
-  - Kingfisher
+  - Kingfisher (~> 4.0)
   - NVActivityIndicatorView
   - PullToRefreshKit
   - SCLAlertView
   - SIAlertView
   - SkyFloatingLabelTextField (~> 3.0)
   - SwifterSwift
+  - TTSegmentedControl
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - BSKeyboardControls
     - Kingfisher
@@ -49,6 +51,7 @@ SPEC REPOS:
     - SIAlertView
     - SkyFloatingLabelTextField
     - SwifterSwift
+    - TTSegmentedControl
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
@@ -60,7 +63,8 @@ SPEC CHECKSUMS:
   SIAlertView: 20c794b55eaf44d888773ea51647cf8907723919
   SkyFloatingLabelTextField: 4cbeece9c3aae97c6019d8fae511cb5b755874f7
   SwifterSwift: 1ce0e31801ddd3a2bd3256626275425adb01067a
+  TTSegmentedControl: 7a5fc6c3e117c340106efd3a35205b987f2ba23c
 
-PODFILE CHECKSUM: 04db53f6e1cec78b3c33ed71a4ad1f8217868990
+PODFILE CHECKSUM: 95af481c2515ff9e0d70a90339b19f3d6665ff2d
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.5.0

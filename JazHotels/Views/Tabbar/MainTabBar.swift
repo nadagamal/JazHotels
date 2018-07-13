@@ -29,14 +29,17 @@ class MainTabBar: UITabBar {
     }
     
     func setupMiddleButton() {
-        middleButton.frame.size = CGSize(width: 70, height: 70)
-        middleButton.layer.cornerRadius = 35
+        middleButton.frame.size = CGSize(width: 100, height: 100)
+        middleButton.layer.cornerRadius = 15
+        middleButton.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         middleButton.setBackgroundImage(UIImage(named: "checkAvailable-icon"), for:UIControlState.normal)
         middleButton.layer.masksToBounds = true
-        middleButton.center = CGPoint(x: UIScreen.main.bounds.width / 2, y: 0)
+        middleButton.center = CGPoint(x: UIScreen.main.bounds.width / 2, y: 15)
         middleButton.addTarget(self, action: #selector(checkAvaibilityAction), for: .touchUpInside)
         addSubview(middleButton)
     }
+    
+    
 
     @objc func checkAvaibilityAction() {
         

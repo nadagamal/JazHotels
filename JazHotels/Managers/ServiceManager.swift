@@ -61,13 +61,13 @@ class ServiceManager: NSObject {
         lobj_Request.addValue("http://synxis.com/OTA2004AService/CheckAvailability", forHTTPHeaderField: "SOAPAction")
         lobj_Request.httpBody=String(format: "%@%@", soapHeader,"<n1:OTA_HotelAvailRQ xmlns:n1=\"http://www.opentravel.org/OTA/2003/05\" AvailRatesOnly=\"false\" BestOnly=\"false\" EchoToken=\"JAZ-Android_QkPvCUzmFr\" ExactMatchOnly=\"false\" HotelStayOnly=\"false\" MaxResponses=\"0\" PrimaryLangID=\"en-US\" SummaryOnly=\"false\"><n1:POS><n1:Source><n1:RequestorID ID=\"10\" ID_Context=\"Synxis\"><n1:CompanyName Code=\"MobileGC\"></n1:CompanyName></n1:RequestorID></n1:Source></n1:POS><n1:AvailRequestSegments><n1:AvailRequestSegment><n1:StayDateRange End=\"2018-08-06\" Start=\"2018-08-05\" /><n1:RoomStayCandidates><n1:RoomStayCandidate Quantity=\"1\"><n1:GuestCounts><n1:GuestCount AgeQualifyingCode=\"10\" Count=\"1\" /><n1:GuestCount AgeQualifyingCode=\"8\" Count=\"0\" /></n1:GuestCounts></n1:RoomStayCandidate></n1:RoomStayCandidates><n1:HotelSearchCriteria><n1:Criterion><n1:HotelRef HotelCode=\"61579\" /></n1:Criterion></n1:HotelSearchCriteria></n1:AvailRequestSegment></n1:AvailRequestSegments></n1:OTA_HotelAvailRQ></v:Body></v:Envelope>").data(using: .ascii)
         let task = session.dataTask(with: lobj_Request, completionHandler: {data, response, error -> Void in
-            let strData = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
             if error != nil
             {
                 print("Error: " + error.debugDescription)
                 completion(nil, error! as NSError)
             }
             else{
+                let strData = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
                 let outputDic = NSDictionary(xmlString: strData as! String)
                 let obj  =  JCCheckAvaibility.init(fromDictionary: outputDic as! [String : Any])
                 completion(obj, nil)

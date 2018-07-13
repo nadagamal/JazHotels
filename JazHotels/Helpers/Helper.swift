@@ -10,7 +10,8 @@ import Foundation
 import UIKit
 
 public struct JazHotels {
-    static var hotels: JHotelDescriptiveContent!
+    static var hotels: [JHotelDescriptiveContent]!
+    static var hotelsImages: Dictionary<String,[String]>?
 
 }
 extension UIFont {

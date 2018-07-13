@@ -10,6 +10,9 @@
 		524EEE7220DA840D006B9917 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524EEE7120DA840D006B9917 /* AppDelegate.swift */; };
 		524EEE7920DA840F006B9917 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 524EEE7820DA840F006B9917 /* Assets.xcassets */; };
 		524EEE7C20DA840F006B9917 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 524EEE7A20DA840F006B9917 /* LaunchScreen.storyboard */; };
+		524F784920F9222700AF0EF6 /* hotels-images.json in Resources */ = {isa = PBXBuildFile; fileRef = 524F784620F9222700AF0EF6 /* hotels-images.json */; };
+		524F784A20F9222700AF0EF6 /* hotels-urls.json in Resources */ = {isa = PBXBuildFile; fileRef = 524F784720F9222700AF0EF6 /* hotels-urls.json */; };
+		524F784B20F9222700AF0EF6 /* hotels-coords.json in Resources */ = {isa = PBXBuildFile; fileRef = 524F784820F9222700AF0EF6 /* hotels-coords.json */; };
 		528F600920E7BFB9003111E7 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F600820E7BFB9003111E7 /* ServiceManager.swift */; };
 		528F600C20E82EA0003111E7 /* XMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F600B20E82EA0003111E7 /* XMLParser.swift */; };
 		52B615F720E8847100A1A416 /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B615F620E8847100A1A416 /* XMLDictionary.m */; };
@@ -191,6 +194,9 @@
 		524EEE7820DA840F006B9917 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		524EEE7B20DA840F006B9917 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		524EEE7D20DA840F006B9917 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		524F784620F9222700AF0EF6 /* hotels-images.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "hotels-images.json"; sourceTree = "<group>"; };
+		524F784720F9222700AF0EF6 /* hotels-urls.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "hotels-urls.json"; sourceTree = "<group>"; };
+		524F784820F9222700AF0EF6 /* hotels-coords.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "hotels-coords.json"; sourceTree = "<group>"; };
 		528F600820E7BFB9003111E7 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 		528F600B20E82EA0003111E7 /* XMLParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLParser.swift; sourceTree = "<group>"; };
 		52B615F520E8847100A1A416 /* XMLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLDictionary.h; sourceTree = "<group>"; };
@@ -388,6 +394,7 @@
 		524EEE7020DA840D006B9917 /* JazHotels */ = {
 			isa = PBXGroup;
 			children = (
+				524F784520F9222700AF0EF6 /* JsonFiles */,
 				9AE61CCA20DAE077006160C1 /* AppDelegate */,
 				528F600720E7BF7B003111E7 /* Managers */,
 				52B615F920E891C100A1A416 /* JModels */,
@@ -402,6 +409,16 @@
 				524EEE7A20DA840F006B9917 /* LaunchScreen.storyboard */,
 			);
 			path = JazHotels;
+			sourceTree = "<group>";
+		};
+		524F784520F9222700AF0EF6 /* JsonFiles */ = {
+			isa = PBXGroup;
+			children = (
+				524F784620F9222700AF0EF6 /* hotels-images.json */,
+				524F784720F9222700AF0EF6 /* hotels-urls.json */,
+				524F784820F9222700AF0EF6 /* hotels-coords.json */,
+			);
+			path = JsonFiles;
 			sourceTree = "<group>";
 		};
 		528F600720E7BF7B003111E7 /* Managers */ = {
@@ -845,6 +862,7 @@
 				9AE61CBB20DAC74B006160C1 /* MontserratAlternates-ExtraBold.otf in Resources */,
 				9AE61CBD20DAC74B006160C1 /* Montserrat-ExtraBold.otf in Resources */,
 				9AE61CC320DAC74B006160C1 /* Montserrat-Black.otf in Resources */,
+				524F784A20F9222700AF0EF6 /* hotels-urls.json in Resources */,
 				9AE61CA520DAC74B006160C1 /* SIL Open Font License.txt in Resources */,
 				9AE61CC120DAC74B006160C1 /* MontserratAlternates-Regular.otf in Resources */,
 				9AE61CA620DAC74B006160C1 /* MontserratAlternates-Black.otf in Resources */,
@@ -853,6 +871,7 @@
 				9AE61CAF20DAC74B006160C1 /* MontserratAlternates-BlackItalic.otf in Resources */,
 				9AE61CC620DAC74B006160C1 /* Montserrat-SemiBold.otf in Resources */,
 				524EEE7C20DA840F006B9917 /* LaunchScreen.storyboard in Resources */,
+				524F784B20F9222700AF0EF6 /* hotels-coords.json in Resources */,
 				9AE61CCE20DAE0BD006160C1 /* Main.storyboard in Resources */,
 				9AE61CA920DAC74B006160C1 /* Montserrat-BoldItalic.otf in Resources */,
 				9AE61CC220DAC74B006160C1 /* MontserratAlternates-ThinItalic.otf in Resources */,
@@ -862,6 +881,7 @@
 				9AE61CAE20DAC74B006160C1 /* Montserrat-ExtraLight.otf in Resources */,
 				9AE61CA420DAC74B006160C1 /* Montserrat-BlackItalic.otf in Resources */,
 				9AE61CB420DAC74B006160C1 /* Montserrat-Medium.otf in Resources */,
+				524F784920F9222700AF0EF6 /* hotels-images.json in Resources */,
 				9AE61CB120DAC74B006160C1 /* MontserratAlternates-ExtraLightItalic.otf in Resources */,
 				9AE61CC420DAC74B006160C1 /* MontserratAlternates-ExtraBoldItalic.otf in Resources */,
 				9AE61CA720DAC74B006160C1 /* MontserratAlternates-LightItalic.otf in Resources */,

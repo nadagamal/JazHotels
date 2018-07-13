@@ -39,7 +39,9 @@ class MainTabBar: UITabBar {
     }
 
     @objc func checkAvaibilityAction() {
-        print("my name is %@")
+        
+        let tabBarController = self.window?.rootViewController as! UITabBarController
+        tabBarController.selectedIndex = 2;
         
     }
 }

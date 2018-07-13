@@ -9,6 +9,10 @@ class HotelJazConstants: NSObject {
 
     }
     
-    
+    struct JAppDelegate
+    {
+        static let appdelegate = UIApplication.shared.delegate as! AppDelegate
+        
+    }
    
 }

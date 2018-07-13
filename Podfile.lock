@@ -41,7 +41,7 @@ DEPENDENCIES:
   - TTSegmentedControl
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - Alamofire
     - BSKeyboardControls
     - Kingfisher
@@ -67,4 +67,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 95af481c2515ff9e0d70a90339b19f3d6665ff2d
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3

@@ -21,6 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UITabBarDelegate {
             
         }
       //  self.window?.rootViewController = tabbarController
+        UITabBar.appearance().layer.borderWidth = 0.0
+        UITabBar.appearance().clipsToBounds = true
         return true
     }
     func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {

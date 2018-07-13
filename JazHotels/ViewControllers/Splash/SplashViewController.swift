@@ -15,11 +15,9 @@ class SplashViewController: UIViewController {
         super.viewDidLoad()
 
         HotelJazConstants.JAppDelegate.appdelegate.tabbarController = UIStoryboard(name: HotelJazConstants.StoryBoard.mainSB, bundle: nil).instantiateViewController(withIdentifier: "HomeTabbar") as? UITabBarController
-        
         HotelJazConstants.JAppDelegate.appdelegate.window?.rootViewController = HotelJazConstants.JAppDelegate.appdelegate.tabbarController
-        
-        let tabBar = UIStoryboard(name: HotelJazConstants.StoryBoard.mainSB, bundle: nil).instantiateViewController(withIdentifier: "HomeTabbar")
-        self.navigationController?.present(tabBar, animated: true, completion: nil)
+        let tabBarController = UIStoryboard(name: HotelJazConstants.StoryBoard.mainSB, bundle: nil).instantiateViewController(withIdentifier: "HomeTabbar") as! UITabBarController
+        self.navigationController?.present(tabBarController, animated: true, completion: nil)
 
         
         // Do any additional setup after loading the view.

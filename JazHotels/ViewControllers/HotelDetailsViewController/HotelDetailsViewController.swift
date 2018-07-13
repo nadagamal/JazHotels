@@ -39,17 +39,28 @@ class HotelDetailsViewController: UIViewController {
         let recognizer = UITapGestureRecognizer(target: self, action: #selector(didTap))
         slideshow.addGestureRecognizer(recognizer)
     }
-    
+    func setTransparentNavigationBar(){
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = UIColor.clear
+    }
     @objc public static func create() -> HotelDetailsViewController {
         
         return UIStoryboard(name: HotelJazConstants.StoryBoard.mainSB, bundle: Bundle.main).instantiateViewController(withIdentifier: String(describing: self)) as! HotelDetailsViewController
     }
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.isNavigationBarHidden = true
+       setTransparentNavigationBar()
+        let shareBtn = UIBarButtonItem(image: UIImage(named: "favHeader"), style: .done, target: self, action: #selector(shareBtnAction))
+        let favBtn = UIBarButtonItem(image: UIImage(named: "share"), style: .done, target: self, action: #selector(shareBtnAction))
+        self.navigationItem.rightBarButtonItems = [shareBtn,favBtn]
     }
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = false
 
+    }
+    @objc func shareBtnAction(){
+        
     }
     @objc func didTap() {
     let fullScreenController = slideshow.presentFullScreenController(from:self)

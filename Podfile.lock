@@ -30,7 +30,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - BSKeyboardControls (~> 2.2)
-  - Kingfisher (~> 4.0)
+  - Kingfisher
   - NVActivityIndicatorView
   - PullToRefreshKit
   - SCLAlertView
@@ -39,7 +39,7 @@ DEPENDENCIES:
   - SwifterSwift
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - Alamofire
     - BSKeyboardControls
     - Kingfisher
@@ -61,6 +61,6 @@ SPEC CHECKSUMS:
   SkyFloatingLabelTextField: 4cbeece9c3aae97c6019d8fae511cb5b755874f7
   SwifterSwift: 1ce0e31801ddd3a2bd3256626275425adb01067a
 
-PODFILE CHECKSUM: bc5cfa39ecf0320667c7c8b4b714fb7092b56195
+PODFILE CHECKSUM: 04db53f6e1cec78b3c33ed71a4ad1f8217868990
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3

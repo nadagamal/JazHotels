@@ -19,30 +19,31 @@ class SplashViewController: UIViewController {
 
         
 //        // Do any additional setup after loading the view.
-//        if let appInfo = UserDefaults.standard.object(forKey: "HotelDescriptiveContents") {
-//            self.activityIndicator .stopAnimating()
-//            let decodedAppInfo = NSKeyedUnarchiver.unarchiveObject(with: appInfo as! Data) as! JHotelDescriptiveContent
-//            JazHotels.hotels = decodedAppInfo
-//        } else {
-//            ServiceManager().getHotels { (data, error) in
-//                if error != nil{
-//                    DispatchQueue.main.async {
-//                        self.activityIndicator .stopAnimating()
-//                        SCLAlertView.showRetryCustomAlertWithMessage(message: "Internet Connection Error") { (response) in
-//                            self.viewDidLoad()
-//                        }
-//                    }
-//                }
-//                else{
-//                    DispatchQueue.main.async {
-//                        self.activityIndicator .stopAnimating()
+        if let appInfo = UserDefaults.standard.object(forKey: "HotelDescriptiveContents") {
+            self.activityIndicator .stopAnimating()
+            let decodedAppInfo = NSKeyedUnarchiver.unarchiveObject(with: appInfo as! Data) as! JHotelDescriptiveContent
+            JazHotels.hotels = decodedAppInfo
+        } else {
+            ServiceManager().getHotels { (data, error) in
+                if error != nil{
+                    DispatchQueue.main.async {
+                        self.activityIndicator .stopAnimating()
+                        SCLAlertView.showRetryCustomAlertWithMessage(message: "Internet Connection Error") { (response) in
+                            self.viewDidLoad()
+                        }
+                    }
+                }
+                else{
+                    DispatchQueue.main.async {
+                        self.activityIndicator .stopAnimating()
+                        NSKeyedArchiver.archivedData(withRootObject: data?.body.oTAHotelDescriptiveInfoRS.hotelDescriptiveContents)
 //                        let tabBar = UIStoryboard(name: HotelJazConstants.StoryBoard.mainSB, bundle: nil).instantiateViewController(withIdentifier: "HomeTabbar") as! HomeTabbar
 //                        self.navigationController?.present(tabBar, animated: true, completion: nil)
-//
-//                    }
-//                }
-//            }
-//        }
+
+                    }
+                }
+            }
+        }
         
         
 

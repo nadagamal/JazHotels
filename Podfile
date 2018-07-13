@@ -6,7 +6,7 @@ target 'JazHotels' do
   use_frameworks!
 
   # Pods for JazHotels
-  pod 'Kingfisher', '~> 4.0'
+  pod 'Kingfisher'
   pod 'Alamofire'
   pod 'NVActivityIndicatorView'
   pod 'PullToRefreshKit'

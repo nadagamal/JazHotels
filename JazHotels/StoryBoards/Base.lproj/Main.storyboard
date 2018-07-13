@@ -525,11 +525,11 @@
             <objects>
                 <viewController storyboardIdentifier="HotelsViewController" id="k5V-Cb-OC2" customClass="HotelsViewController" customModule="JazHotels" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6mj-MA-k8y">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Toi-5e-5nt" customClass="TTSegmentedControl" customModule="TTSegmentedControl">
-                                <rect key="frame" x="50" y="50" width="275" height="40"/>
+                                <rect key="frame" x="50" y="30" width="275" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="QH4-Xp-HxO"/>
@@ -566,7 +566,7 @@
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hx2-VV-wlE">
-                                <rect key="frame" x="0.0" y="120" width="375" height="547"/>
+                                <rect key="frame" x="0.0" y="100" width="375" height="454"/>
                                 <connections>
                                     <segue destination="AEi-0m-Tkp" kind="embed" id="j51-r7-eDN"/>
                                 </connections>
@@ -635,7 +635,7 @@
         <scene sceneID="CXl-Q4-dzm">
             <objects>
                 <tabBarController storyboardIdentifier="HomeTabbar" id="nna-uu-X7A" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="emM-kw-aB1">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="emM-kw-aB1" customClass="MainTabBar" customModule="JazHotels" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -648,6 +648,9 @@
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
                                 <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="0.0"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </tabBar>
@@ -688,7 +691,11 @@
                             <constraint firstItem="1Xy-2x-iep" firstAttribute="leading" secondItem="YgO-Fb-wGR" secondAttribute="leading" id="l0A-rV-94i"/>
                             <constraint firstItem="1Xy-2x-iep" firstAttribute="top" secondItem="YgO-Fb-wGR" secondAttribute="top" id="tbv-Cf-jSM"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="4bW-Vs-11g"/>
                     </view>
+                    <connections>
+                        <outlet property="hotelTB" destination="1Xy-2x-iep" id="HeZ-P5-6I6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0TX-wV-QwB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -699,9 +706,10 @@
             <objects>
                 <viewController storyboardIdentifier="HotelOnMapViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AEi-0m-Tkp" customClass="HotelOnMapViewController" customModule="JazHotels" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GiV-nS-NxP">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="547"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="454"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="80I-Vv-Ta7"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rnV-ES-5Ru" userLabel="First Responder" sceneMemberID="firstResponder"/>

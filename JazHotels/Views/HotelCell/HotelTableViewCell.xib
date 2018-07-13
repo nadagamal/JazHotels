@@ -23,7 +23,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="272" id="KmJ-ck-6WG">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="hotel_cell" rowHeight="280" id="KmJ-ck-6WG" customClass="HotelTableViewCell" customModule="JazHotels" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="657" height="272"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KmJ-ck-6WG" id="sXL-P7-Xvb">
@@ -43,8 +43,8 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jaz Lamaya Resort" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gT3-Nh-QQP">
-                        <rect key="frame" x="12" y="227" width="132.5" height="17.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hurghada - Egypt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gT3-Nh-QQP">
+                        <rect key="frame" x="12" y="227" width="127" height="18"/>
                         <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="14"/>
                         <color key="textColor" red="0.45098039220000002" green="0.45098039220000002" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -104,6 +104,14 @@
                     <constraint firstAttribute="trailing" secondItem="ebj-D4-4NF" secondAttribute="trailing" id="dbl-Lf-RFE"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="fav_btn" destination="TEp-ck-eGG" id="yUz-fS-jZ7"/>
+                <outlet property="hotel_img" destination="ebj-D4-4NF" id="rC1-qw-Et8"/>
+                <outlet property="hotel_name" destination="zf3-dE-Sqr" id="SQC-H2-Zo8"/>
+                <outlet property="hotel_place" destination="gT3-Nh-QQP" id="IHq-CK-gBG"/>
+                <outlet property="hotel_price" destination="xUR-LG-nbs" id="Wyu-OP-I5p"/>
+                <outlet property="hotel_price_currency" destination="d66-HI-3jo" id="8xw-2K-H41"/>
+            </connections>
             <point key="canvasLocation" x="140.5" y="-70"/>
         </tableViewCell>
     </objects>

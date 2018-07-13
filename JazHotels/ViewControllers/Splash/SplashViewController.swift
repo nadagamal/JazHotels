@@ -14,8 +14,12 @@ class SplashViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let tabBar = UIStoryboard(name: HotelJazConstants.StoryBoard.mainSB, bundle: nil).instantiateViewController(withIdentifier: "HomeTabbar")
-        self.navigationController?.present(tabBar, animated: true, completion: nil)
+        let tabBarController = UIStoryboard(name: HotelJazConstants.StoryBoard.mainSB, bundle: nil).instantiateViewController(withIdentifier: "HomeTabbar") as! UITabBarController
+        tabBarController.tabBar.layer.borderWidth = 0
+       tabBarController.tabBar.layer.borderColor = UIColor.white.cgColor
+
+        
+        self.navigationController?.present(tabBarController, animated: true, completion: nil)
 
         
         // Do any additional setup after loading the view.

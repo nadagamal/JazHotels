@@ -8,7 +8,4 @@ class HotelJazConstants: NSObject {
         static let mainSB = "Main"
 
     }
-    
-    
-   
 }

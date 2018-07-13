@@ -10,4 +10,7 @@ import UIKit
 
 class HotelCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var regionLbl: UILabel!
+    @IBOutlet weak var nameLbl: UILabel!
+    @IBOutlet weak var imgView: UIImageView!
 }

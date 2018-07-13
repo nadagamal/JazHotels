@@ -16,7 +16,7 @@ class ServiceManager: NSObject {
     }
     var soapHeader: String = "<v:Envelope xmlns:v=\"http://www.w3.org/2003/05/soap-envelope\"><v:Header><n0:HTNGHeader xmlns:n0=\"http://htng.org/1.1/Header/\"><n0:From><n0:Credential><n0:userName>JAZHTLMCBEPROD</n0:userName><n0:password>1fvnZ$1aUKO</n0:password></n0:Credential></n0:From></n0:HTNGHeader></v:Header><v:Body>"
 
-    func getHotels(completion:  @escaping (_ :JSoapEnvelope?, _ :NSError?) -> Void)
+    func getHotels(completion:  @escaping (_ hotels:[JHotelDescriptiveContent]?, _ :NSError?) -> Void)
     {
         
         var lobj_Request = NSMutableURLRequest(url: NSURL(string: getBaseUrl)! as URL) as URLRequest
@@ -40,7 +40,9 @@ class ServiceManager: NSObject {
             else{
                 let outputDic = NSDictionary(xmlString: strData as! String)
                 let obj  =  JSoapEnvelope.init(fromDictionary: outputDic as! [String : Any])
-                completion(obj, nil)
+                if obj.body.oTAHotelDescriptiveInfoRS.hotelDescriptiveContents != nil{
+            completion(obj.body.oTAHotelDescriptiveInfoRS.hotelDescriptiveContents.hotelDescriptiveContent, nil)
+                }
 
             }
             

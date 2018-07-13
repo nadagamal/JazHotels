@@ -1,6 +1,12 @@
 PODS:
   - Alamofire (4.7.2)
   - BSKeyboardControls (2.2)
+  - ImageSlideshow (1.6.1):
+    - ImageSlideshow/Core (= 1.6.1)
+  - ImageSlideshow/Core (1.6.1)
+  - ImageSlideshow/Kingfisher (1.6.1):
+    - ImageSlideshow/Core
+    - Kingfisher (> 3.0)
   - Kingfisher (4.8.0)
   - NVActivityIndicatorView (4.2.1):
     - NVActivityIndicatorView/Presenter (= 4.2.1)
@@ -31,6 +37,8 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - BSKeyboardControls (~> 2.2)
+  - ImageSlideshow (~> 1.6)
+  - ImageSlideshow/Kingfisher
   - Kingfisher (~> 4.0)
   - NVActivityIndicatorView
   - PullToRefreshKit
@@ -44,6 +52,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - BSKeyboardControls
+    - ImageSlideshow
     - Kingfisher
     - NVActivityIndicatorView
     - PullToRefreshKit
@@ -56,6 +65,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   BSKeyboardControls: b701935e789961102e3f20063bba7185800a2d3f
+  ImageSlideshow: f0f33e1a20668e83d77f5fb7729e4ae4437c0759
   Kingfisher: 976d828df2b24834c6a3f2fc4d82cdbd26552be1
   NVActivityIndicatorView: 8068ba3ad39cb44cbaab25d89ff2546b3f092681
   PullToRefreshKit: 172df52ab9c6cb2c1d4b1872b49f448d6291523f
@@ -65,6 +75,6 @@ SPEC CHECKSUMS:
   SwifterSwift: 1ce0e31801ddd3a2bd3256626275425adb01067a
   TTSegmentedControl: 7a5fc6c3e117c340106efd3a35205b987f2ba23c
 
-PODFILE CHECKSUM: 95af481c2515ff9e0d70a90339b19f3d6665ff2d
+PODFILE CHECKSUM: f1e946f3c983ed1a22eaff3cc8ed679300ee6882
 
 COCOAPODS: 1.5.3

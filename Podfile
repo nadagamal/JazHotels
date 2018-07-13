@@ -16,6 +16,8 @@ target 'JazHotels' do
   pod 'SCLAlertView'
   pod 'SIAlertView'
   pod 'TTSegmentedControl'
+  pod 'ImageSlideshow', '~> 1.6'
+  pod "ImageSlideshow/Kingfisher"
 
 
 

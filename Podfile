@@ -18,8 +18,16 @@ target 'JazHotels' do
   pod 'TTSegmentedControl'
   pod 'ImageSlideshow', '~> 1.6'
   pod "ImageSlideshow/Kingfisher"
-  pod 'Cosmos', '~> 16.0'
+  pod 'Cosmos', '~> 15.0'
+  #pod 'Segmentio', '~> 3.0'
+  pod 'XLPagerTabStrip', '~> 8.0'
 
+  post_install do |installer|
+      installer.pods_project.build_configurations.each do |config|
+          config.build_settings.delete('CODE_SIGNING_ALLOWED')
+          config.build_settings.delete('CODE_SIGNING_REQUIRED')
+      end
+  end
 
 
 

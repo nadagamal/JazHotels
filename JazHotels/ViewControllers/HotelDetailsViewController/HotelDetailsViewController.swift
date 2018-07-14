@@ -8,9 +8,16 @@
 
 import UIKit
 import ImageSlideshow
-class HotelDetailsViewController: UIViewController {
+import Cosmos
+import XLPagerTabStrip
+class HotelDetailsViewController: SegmentedPagerTabStripViewController {
     @IBOutlet weak var slideshow: ImageSlideshow!
     var hotel:JHotelDescriptiveContent!
+    
+    @IBOutlet weak var hotelLocationLbl: UILabel!
+    @IBOutlet weak var hotelNameLbl: UILabel!
+    @IBOutlet weak var segmentioView: UIView!
+    @IBOutlet weak var starView: CosmosView!
     var kingfisherSource = [InputSource]()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +46,7 @@ class HotelDetailsViewController: UIViewController {
         let recognizer = UITapGestureRecognizer(target: self, action: #selector(didTap))
         slideshow.addGestureRecognizer(recognizer)
     }
+ 
     func setTransparentNavigationBar(){
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
@@ -66,4 +74,12 @@ class HotelDetailsViewController: UIViewController {
     let fullScreenController = slideshow.presentFullScreenController(from:self)
     fullScreenController.slideshow.activityIndicator = DefaultActivityIndicator(style: .white, color: nil)
     }
+    // MARK: - PagerTabStripDataSource
+    
+    override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
+        let child_4 = HotelOnMapViewController(itemInfo: "View 2")
+        let childViewControllers = [child_4, child_4]
+        return childViewControllers
+    }
+
 }

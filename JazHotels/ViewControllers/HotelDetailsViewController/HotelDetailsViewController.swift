@@ -48,6 +48,22 @@ class HotelDetailsViewController: SegmentedPagerTabStripViewController {
         slideshow.setImageInputs(kingfisherSource)
         let recognizer = UITapGestureRecognizer(target: self, action: #selector(didTap))
         slideshow.addGestureRecognizer(recognizer)
+        self.hotelNameLbl.text = hotel.hotelName
+        if hotel.contactInfos != nil && hotel.contactInfos.contactInfo != nil && hotel.contactInfos.contactInfo.addresses != nil && hotel.contactInfos.contactInfo.addresses.address != nil && hotel.contactInfos.contactInfo.addresses.address.addressLine != nil && hotel.contactInfos.contactInfo.addresses.address.addressLine.count>0{
+            hotelLocationLbl.text = hotel.contactInfos.contactInfo.addresses.address.addressLine[0] + "  -  " + hotel.contactInfos.contactInfo.addresses.address.cityName
+        }
+        if hotel.affiliationInfo.awards != nil && hotel.affiliationInfo.awards.award != nil && hotel.affiliationInfo.awards.award.count>0 && hotel.affiliationInfo.awards.award[0].rating != nil{
+            let stringArray = hotel.affiliationInfo.awards.award[0].rating.components(separatedBy: CharacterSet.decimalDigits.inverted)
+            for item in stringArray {
+                if let number = Double(item) {
+                    self.starView.rating = number
+                }
+            }
+            
+        }
+        else{
+            self.starView.rating = 0
+        }
     }
  
     func setTransparentNavigationBar(){
@@ -81,7 +97,9 @@ class HotelDetailsViewController: SegmentedPagerTabStripViewController {
     
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
         let child_1 = HotelDetailsContactViewController.create()
+        child_1.hotel = hotel
         let child_2 = HotelDetailsOverviewViewController.create()
+        child_2.hotel = hotel
 
         let childViewControllers = [child_2, child_1]
         return childViewControllers

@@ -15,6 +15,7 @@ class SplashViewController: UIViewController {
         super.viewDidLoad()
         getHotels()
         readHotelImagesJSON()
+        readHotelURLSJSON()
     }
     
     func getHotels(){
@@ -58,6 +59,18 @@ class SplashViewController: UIViewController {
                 let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
                 if let jsonResult = jsonResult as? Dictionary<String, [String]>{
                     JazHotels.hotelsImages = jsonResult
+                }
+            } catch {
+            }
+        }
+    }
+    func readHotelURLSJSON(){
+        if let path = Bundle.main.path(forResource: "hotels-urls", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
+                if let jsonResult = jsonResult as? Dictionary<String, String>{
+                    JazHotels.hotelsURLs = jsonResult
                 }
             } catch {
             }

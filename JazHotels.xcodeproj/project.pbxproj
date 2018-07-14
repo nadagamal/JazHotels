@@ -120,6 +120,7 @@
 		52B616E920E9566400A1A416 /* JImageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B616E620E9566300A1A416 /* JImageItem.swift */; };
 		52B616EA20E9566400A1A416 /* JBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B616E720E9566300A1A416 /* JBody.swift */; };
 		52B616EB20E9566400A1A416 /* JEnvelope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B616E820E9566400A1A416 /* JEnvelope.swift */; };
+		52D670A620FA9FC1004F8B53 /* HotelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D670A520FA9FC1004F8B53 /* HotelCollectionViewCell.swift */; };
 		9A06CB1C20EACC4900AFBCA2 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A06CB1B20EACC4900AFBCA2 /* MainTabBar.swift */; };
 		9A06CB1F20EACF6700AFBCA2 /* HotelJazConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A06CB1E20EACF6700AFBCA2 /* HotelJazConstants.swift */; };
 		9A8E78CF20F8F7FA0034C3AF /* CAGradientLayer+GradientColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8E78CE20F8F7FA0034C3AF /* CAGradientLayer+GradientColor.swift */; };
@@ -309,6 +310,7 @@
 		52B616E620E9566300A1A416 /* JImageItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JImageItem.swift; sourceTree = "<group>"; };
 		52B616E720E9566300A1A416 /* JBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JBody.swift; sourceTree = "<group>"; };
 		52B616E820E9566400A1A416 /* JEnvelope.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JEnvelope.swift; sourceTree = "<group>"; };
+		52D670A520FA9FC1004F8B53 /* HotelCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotelCollectionViewCell.swift; sourceTree = "<group>"; };
 		8963E40941314293147FBF58 /* Pods-JazHotels.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JazHotels.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JazHotels/Pods-JazHotels.debug.xcconfig"; sourceTree = "<group>"; };
 		925F604466D8797ABBF10B44 /* Pods_JazHotels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JazHotels.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A06CB1B20EACC4900AFBCA2 /* MainTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
@@ -669,6 +671,7 @@
 		9AADBF8020EDC0B7009183FE /* HotelCell */ = {
 			isa = PBXGroup;
 			children = (
+				52D670A520FA9FC1004F8B53 /* HotelCollectionViewCell.swift */,
 				9AADBF8120EDC0DB009183FE /* HotelTableViewCell.swift */,
 				9AADBF8320EDC0F0009183FE /* HotelTableViewCell.xib */,
 			);
@@ -1004,6 +1007,7 @@
 				52B6165C20E891C100A1A416 /* JMeetingRoom.swift in Sources */,
 				52B616D520E9341E00A1A416 /* JCEnvelope.swift in Sources */,
 				52B616DA20E9341E00A1A416 /* JCOccupancy.swift in Sources */,
+				52D670A620FA9FC1004F8B53 /* HotelCollectionViewCell.swift in Sources */,
 				52B6165020E891C100A1A416 /* JHotelDescriptiveContent.swift in Sources */,
 				52B6164B20E891C100A1A416 /* JOTAHotelDescriptiveInfoRS.swift in Sources */,
 				52B6164F20E891C100A1A416 /* JAttraction.swift in Sources */,

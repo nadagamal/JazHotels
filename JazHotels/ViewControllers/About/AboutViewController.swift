@@ -21,7 +21,19 @@ class AboutViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func linkedInAction(_ sender: Any) {
+    }
+    @IBAction func pintrestAction(_ sender: Any) {
+    }
+    @IBAction func twitterAction(_ sender: Any) {
+    }
+    @IBAction func youtubeAction(_ sender: Any) {
+    }
+    @IBAction func facebookAction(_ sender: Any) {
+    }
+    
+    @IBAction func instagramAction(_ sender: Any) {
+    }
     /*
     // MARK: - Navigation
 

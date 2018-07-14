@@ -1178,7 +1178,140 @@ Alam Road, Red Sea, Egypt.</string>
                     <view key="view" contentMode="scaleToFill" id="hRT-89-GyA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z3W-Jv-Z0A">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="270"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headBg" translatesAutoresizingMaskIntoConstraints="NO" id="e3V-mZ-WUi">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="223"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="223" id="5hZ-MR-vMu"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="223" id="Wcn-IR-JWN"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jazLauncherLogo" translatesAutoresizingMaskIntoConstraints="NO" id="8Xu-ip-CD5">
+                                        <rect key="frame" x="142" y="75" width="90" height="66"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="66" id="1t4-ht-a86"/>
+                                            <constraint firstAttribute="width" constant="90" id="2gd-I7-TP9"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="e3V-mZ-WUi" firstAttribute="top" secondItem="Z3W-Jv-Z0A" secondAttribute="top" id="9U5-Vl-flb"/>
+                                    <constraint firstAttribute="trailing" secondItem="e3V-mZ-WUi" secondAttribute="trailing" id="Hmh-eJ-D3G"/>
+                                    <constraint firstItem="8Xu-ip-CD5" firstAttribute="top" secondItem="Z3W-Jv-Z0A" secondAttribute="top" constant="75" id="bOB-BU-CSa"/>
+                                    <constraint firstAttribute="bottom" secondItem="e3V-mZ-WUi" secondAttribute="bottom" constant="47" id="moA-Ib-mMI"/>
+                                    <constraint firstItem="8Xu-ip-CD5" firstAttribute="centerX" secondItem="e3V-mZ-WUi" secondAttribute="centerX" id="n3S-Jy-Ddc"/>
+                                    <constraint firstItem="e3V-mZ-WUi" firstAttribute="leading" secondItem="Z3W-Jv-Z0A" secondAttribute="leading" id="nvb-Xo-hcM"/>
+                                </constraints>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="XBf-vM-wFC">
+                                <rect key="frame" x="16" y="243" width="343" height="313"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="313" id="Ola-lO-aD1"/>
+                                </constraints>
+                                <mutableString key="text">On your next Egypt holiday, you will feel the merry atmosphere of progress, the pride and the energy, which is characteristic for our country and currently eminently perceptible.Don’t miss visiting the best Egypt beach holiday destinations. Experience the matchless shores of South Sinai and the Red Sea with their impeccable reef, not to mention the unruffled North Coast - Egypt's prime destination - with its velvet sandy beaches.Or discover Luxor and Aswan that are immensely rich in history. For unwinding, try any of the oases amidst the virgin unspoiled nature.</mutableString>
+                                <color key="textColor" red="0.45098039215686275" green="0.45098039215686275" blue="0.45098039215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="13"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ot5-Nn-of8">
+                                <rect key="frame" x="53.5" y="564" width="28" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="28" id="Ik8-Sg-Vkv"/>
+                                    <constraint firstAttribute="height" constant="28" id="Oej-C6-lzb"/>
+                                </constraints>
+                                <state key="normal" image="fb"/>
+                                <connections>
+                                    <action selector="facebookAction:" destination="dX6-0T-Ctc" eventType="touchUpOutside" id="yP3-3c-Sdr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nzV-Af-DeG">
+                                <rect key="frame" x="101.5" y="564" width="28" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="28" id="qkW-bD-7Qg"/>
+                                    <constraint firstAttribute="height" constant="28" id="wsI-0x-B2j"/>
+                                </constraints>
+                                <state key="normal" image="insta"/>
+                                <connections>
+                                    <action selector="instagramAction:" destination="dX6-0T-Ctc" eventType="touchUpInside" id="VzV-6s-sdI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ngB-pn-Do6">
+                                <rect key="frame" x="149.5" y="564" width="28" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="28" id="eRf-Ci-6mu"/>
+                                    <constraint firstAttribute="height" constant="28" id="gfe-eW-iZW"/>
+                                </constraints>
+                                <state key="normal" image="yt"/>
+                                <connections>
+                                    <action selector="youtubeAction:" destination="dX6-0T-Ctc" eventType="touchUpInside" id="n7H-Jb-O2N"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tf8-Aw-Me8">
+                                <rect key="frame" x="197.5" y="564" width="28" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="28" id="7OI-zc-DFi"/>
+                                    <constraint firstAttribute="height" constant="28" id="GVo-gr-ryn"/>
+                                </constraints>
+                                <state key="normal" image="tw"/>
+                                <connections>
+                                    <action selector="twitterAction:" destination="dX6-0T-Ctc" eventType="touchUpInside" id="hSo-5o-2uD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zej-Lp-UVD">
+                                <rect key="frame" x="245.5" y="564" width="28" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="37n-LH-yFW"/>
+                                    <constraint firstAttribute="width" constant="28" id="KoU-nD-wd4"/>
+                                </constraints>
+                                <state key="normal" image="pintrest"/>
+                                <connections>
+                                    <action selector="pintrestAction:" destination="dX6-0T-Ctc" eventType="touchUpInside" id="xUB-cY-dub"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xEB-uo-six">
+                                <rect key="frame" x="293.5" y="564" width="28" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="5bf-Hf-wVw"/>
+                                    <constraint firstAttribute="width" constant="28" id="h6b-lo-O0K"/>
+                                </constraints>
+                                <state key="normal" image="linkedin"/>
+                                <connections>
+                                    <action selector="linkedInAction:" destination="dX6-0T-Ctc" eventType="touchUpInside" id="Fce-YK-snK"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zej-Lp-UVD" firstAttribute="top" secondItem="XBf-vM-wFC" secondAttribute="bottom" constant="8" id="3Ul-U8-eKt"/>
+                            <constraint firstItem="XBf-vM-wFC" firstAttribute="top" secondItem="Z3W-Jv-Z0A" secondAttribute="bottom" constant="-27" id="61b-F9-TcK"/>
+                            <constraint firstItem="tf8-Aw-Me8" firstAttribute="leading" secondItem="ngB-pn-Do6" secondAttribute="trailing" constant="20" id="BJB-xZ-1rx"/>
+                            <constraint firstItem="3yW-pc-8XO" firstAttribute="trailing" secondItem="XBf-vM-wFC" secondAttribute="trailing" constant="16" id="Cbl-oL-3Me"/>
+                            <constraint firstItem="Z3W-Jv-Z0A" firstAttribute="leading" secondItem="3yW-pc-8XO" secondAttribute="leading" id="D1P-LQ-hXp"/>
+                            <constraint firstItem="zej-Lp-UVD" firstAttribute="leading" secondItem="tf8-Aw-Me8" secondAttribute="trailing" constant="20" id="Ibg-nB-RKj"/>
+                            <constraint firstItem="nzV-Af-DeG" firstAttribute="top" secondItem="XBf-vM-wFC" secondAttribute="bottom" constant="8" id="Ieb-EE-3KG"/>
+                            <constraint firstItem="ngB-pn-Do6" firstAttribute="top" secondItem="XBf-vM-wFC" secondAttribute="bottom" constant="8" id="Iq0-80-7DI"/>
+                            <constraint firstItem="tf8-Aw-Me8" firstAttribute="top" secondItem="XBf-vM-wFC" secondAttribute="bottom" constant="8" id="M4f-7g-7ae"/>
+                            <constraint firstItem="3yW-pc-8XO" firstAttribute="bottom" secondItem="zej-Lp-UVD" secondAttribute="bottom" constant="26" id="PAB-cc-Xdl"/>
+                            <constraint firstItem="XBf-vM-wFC" firstAttribute="leading" secondItem="3yW-pc-8XO" secondAttribute="leading" constant="16" id="R36-r1-1Tl"/>
+                            <constraint firstItem="Ot5-Nn-of8" firstAttribute="top" secondItem="XBf-vM-wFC" secondAttribute="bottom" constant="8" id="SVs-f0-tk4"/>
+                            <constraint firstItem="3yW-pc-8XO" firstAttribute="bottom" secondItem="nzV-Af-DeG" secondAttribute="bottom" constant="26" id="Tsa-hp-CvG"/>
+                            <constraint firstItem="xEB-uo-six" firstAttribute="leading" secondItem="zej-Lp-UVD" secondAttribute="trailing" constant="20" id="U7G-S1-m3x"/>
+                            <constraint firstItem="Z3W-Jv-Z0A" firstAttribute="top" secondItem="hRT-89-GyA" secondAttribute="top" id="YKn-rT-tTW"/>
+                            <constraint firstItem="nzV-Af-DeG" firstAttribute="leading" secondItem="Ot5-Nn-of8" secondAttribute="trailing" constant="20" id="b2g-uI-CTc"/>
+                            <constraint firstItem="3yW-pc-8XO" firstAttribute="bottom" secondItem="xEB-uo-six" secondAttribute="bottom" constant="26" id="jw2-bg-JgB"/>
+                            <constraint firstItem="3yW-pc-8XO" firstAttribute="bottom" secondItem="tf8-Aw-Me8" secondAttribute="bottom" constant="26" id="ouN-td-dPx"/>
+                            <constraint firstItem="tf8-Aw-Me8" firstAttribute="centerX" secondItem="XBf-vM-wFC" secondAttribute="centerX" constant="24" id="pbg-Hs-vAk"/>
+                            <constraint firstItem="3yW-pc-8XO" firstAttribute="bottom" secondItem="Ot5-Nn-of8" secondAttribute="bottom" constant="26" id="r7b-cO-7lF"/>
+                            <constraint firstItem="xEB-uo-six" firstAttribute="top" secondItem="XBf-vM-wFC" secondAttribute="bottom" constant="8" id="r7x-r4-PKc"/>
+                            <constraint firstItem="ngB-pn-Do6" firstAttribute="leading" secondItem="nzV-Af-DeG" secondAttribute="trailing" constant="20" id="ufR-57-MBl"/>
+                            <constraint firstItem="3yW-pc-8XO" firstAttribute="bottom" secondItem="ngB-pn-Do6" secondAttribute="bottom" constant="26" id="yCZ-1i-JyC"/>
+                            <constraint firstItem="Z3W-Jv-Z0A" firstAttribute="trailing" secondItem="3yW-pc-8XO" secondAttribute="trailing" id="yq1-14-E4N"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="3yW-pc-8XO"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="about-icon" landscapeImage="about-icon" largeContentSizeImage="about-icon" id="obb-06-Ql1"/>
@@ -1324,6 +1457,7 @@ Alam Road, Red Sea, Egypt.</string>
         <image name="checkAvailable-icon" width="82" height="82"/>
         <image name="email" width="20" height="15"/>
         <image name="favor-icon" width="23" height="21"/>
+        <image name="fb" width="28" height="28"/>
         <image name="headBg" width="375" height="261"/>
         <image name="hotel-icon" width="26" height="21"/>
         <image name="hotelLocation" width="18" height="22"/>
@@ -1960,12 +2094,17 @@ qAy1DMIM1wzcDOAM4gzkDOYM7wz0DPoNAg0EDQYNCA0KDQ8NFx6DHoUeih6YHpweox6oHrUeuB7FHsoe
 0h7VHtoe4h7lHvce+h7/AAAAAAAAAgEAAAAAAAAAWQAAAAAAAAAAAAAAAAAAHwE
 </mutableData>
         </image>
+        <image name="insta" width="28" height="28"/>
         <image name="jazLauncherLogo" width="89" height="65"/>
+        <image name="linkedin" width="28" height="28"/>
         <image name="location" width="24" height="30"/>
         <image name="locationdetails" width="24" height="31"/>
         <image name="phone" width="18" height="27"/>
+        <image name="pintrest" width="28" height="28"/>
         <image name="review" width="20" height="19"/>
         <image name="reviewS" width="20" height="19"/>
+        <image name="tw" width="28" height="28"/>
         <image name="website" width="18" height="17"/>
+        <image name="yt" width="28" height="28"/>
     </resources>
 </document>

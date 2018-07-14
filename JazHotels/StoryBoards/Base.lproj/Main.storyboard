@@ -504,7 +504,7 @@ Iberotel Borg El Arab</string>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NtS-it-WsX">
-                                        <rect key="frame" x="10" y="157" width="355" height="454.5"/>
+                                        <rect key="frame" x="10" y="120" width="355" height="640.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jaz Lamaya Resort" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YoX-0u-CcC">
                                                 <rect key="frame" x="8" y="19" width="339" height="34.5"/>
@@ -523,7 +523,7 @@ Alam Road, Red Sea, Egypt.</string>
                                                 <color key="textColor" red="0.45098039215686275" green="0.45098039215686275" blue="0.45098039215686275" alpha="0.56264378831595097" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZwV-PL-aSU" customClass="CosmosView" customModule="Cosmos">
+                                            <view userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZwV-PL-aSU">
                                                 <rect key="frame" x="117.5" y="128.5" width="120" height="20"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -535,7 +535,7 @@ Alam Road, Red Sea, Egypt.</string>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ogd-HL-lDr" customClass="UIScrollView">
-                                                <rect key="frame" x="10" y="230.5" width="335" height="214"/>
+                                                <rect key="frame" x="10" y="230.5" width="335" height="400"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="400" id="6lt-qU-nos"/>
@@ -608,7 +608,7 @@ Alam Road, Red Sea, Egypt.</string>
                                     <constraint firstItem="uEt-fk-wrv" firstAttribute="top" secondItem="RNe-2X-tv9" secondAttribute="top" constant="-64" id="cQn-8X-9PG"/>
                                     <constraint firstAttribute="trailing" secondItem="uEt-fk-wrv" secondAttribute="trailing" id="fR5-kU-CvD"/>
                                     <constraint firstItem="EcA-xz-FzB" firstAttribute="top" secondItem="RNe-2X-tv9" secondAttribute="top" constant="110" id="jWT-pX-Gzx"/>
-                                    <constraint firstItem="NtS-it-WsX" firstAttribute="top" secondItem="RNe-2X-tv9" secondAttribute="top" constant="157" id="lsP-14-UOv"/>
+                                    <constraint firstItem="NtS-it-WsX" firstAttribute="top" secondItem="RNe-2X-tv9" secondAttribute="top" constant="120" id="lsP-14-UOv"/>
                                     <constraint firstItem="NtS-it-WsX" firstAttribute="leading" secondItem="RNe-2X-tv9" secondAttribute="leading" constant="10" id="ohe-Ju-gJ4"/>
                                     <constraint firstAttribute="bottom" secondItem="NtS-it-WsX" secondAttribute="bottom" constant="49" id="sWq-9x-Lhc"/>
                                 </constraints>

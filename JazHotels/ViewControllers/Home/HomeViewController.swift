@@ -61,7 +61,11 @@ extension HomeViewController:UICollectionViewDelegate,UICollectionViewDataSource
         return JazHotels.hotels.count
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        let hotelDetailsVC = UIStoryboard(name: HotelJazConstants.StoryBoard.mainSB, bundle: nil).instantiateViewController(withIdentifier: "HotelDetailsViewController") as! HotelDetailsViewController
+        let  hotel = JazHotels.hotels[indexPath.item]
+        hotelDetailsVC.hotel = hotel
+        self.navigationController?.show(hotelDetailsVC, sender: nil)
+
     }
 }
 

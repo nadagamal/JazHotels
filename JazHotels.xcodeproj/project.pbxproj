@@ -13,6 +13,7 @@
 		524F784920F9222700AF0EF6 /* hotels-images.json in Resources */ = {isa = PBXBuildFile; fileRef = 524F784620F9222700AF0EF6 /* hotels-images.json */; };
 		524F784A20F9222700AF0EF6 /* hotels-urls.json in Resources */ = {isa = PBXBuildFile; fileRef = 524F784720F9222700AF0EF6 /* hotels-urls.json */; };
 		524F784B20F9222700AF0EF6 /* hotels-coords.json in Resources */ = {isa = PBXBuildFile; fileRef = 524F784820F9222700AF0EF6 /* hotels-coords.json */; };
+		524F784E20F9365700AF0EF6 /* HotelDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524F784D20F9365700AF0EF6 /* HotelDetailsViewController.swift */; };
 		528F600920E7BFB9003111E7 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F600820E7BFB9003111E7 /* ServiceManager.swift */; };
 		528F600C20E82EA0003111E7 /* XMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F600B20E82EA0003111E7 /* XMLParser.swift */; };
 		52B615F720E8847100A1A416 /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B615F620E8847100A1A416 /* XMLDictionary.m */; };
@@ -198,6 +199,7 @@
 		524F784620F9222700AF0EF6 /* hotels-images.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "hotels-images.json"; sourceTree = "<group>"; };
 		524F784720F9222700AF0EF6 /* hotels-urls.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "hotels-urls.json"; sourceTree = "<group>"; };
 		524F784820F9222700AF0EF6 /* hotels-coords.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "hotels-coords.json"; sourceTree = "<group>"; };
+		524F784D20F9365700AF0EF6 /* HotelDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelDetailsViewController.swift; sourceTree = "<group>"; };
 		528F600820E7BFB9003111E7 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 		528F600B20E82EA0003111E7 /* XMLParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLParser.swift; sourceTree = "<group>"; };
 		52B615F520E8847100A1A416 /* XMLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLDictionary.h; sourceTree = "<group>"; };
@@ -421,6 +423,14 @@
 				524F784820F9222700AF0EF6 /* hotels-coords.json */,
 			);
 			path = JsonFiles;
+			sourceTree = "<group>";
+		};
+		524F784C20F9364400AF0EF6 /* HotelDetailsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				524F784D20F9365700AF0EF6 /* HotelDetailsViewController.swift */,
+			);
+			path = HotelDetailsViewController;
 			sourceTree = "<group>";
 		};
 		528F600720E7BF7B003111E7 /* Managers */ = {
@@ -751,6 +761,7 @@
 		9AE61CC720DAE057006160C1 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				524F784C20F9364400AF0EF6 /* HotelDetailsViewController */,
 				9AADBF1E20ED51D6009183FE /* Splash */,
 				9AADBF1820ED50DB009183FE /* CheckAvailability */,
 				9AADBF1520ED50C3009183FE /* About */,
@@ -921,25 +932,33 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-JazHotels/Pods-JazHotels-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/BSKeyboardControls/BSKeyboardControls.framework",
+				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
+				"${BUILT_PRODUCTS_DIR}/ImageSlideshow/ImageSlideshow.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/PullToRefreshKit/PullToRefreshKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SCLAlertView/SCLAlertView.framework",
 				"${BUILT_PRODUCTS_DIR}/SIAlertView/SIAlertView.framework",
 				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/SwifterSwift/SwifterSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/TTSegmentedControl/TTSegmentedControl.framework",
+				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BSKeyboardControls.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImageSlideshow.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PullToRefreshKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SIAlertView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwifterSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TTSegmentedControl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1036,6 +1055,7 @@
 				52B6166820E891C100A1A416 /* JRecreation.swift in Sources */,
 				52B6164620E891C100A1A416 /* JName.swift in Sources */,
 				52B6164820E891C100A1A416 /* JPaymentPolicy.swift in Sources */,
+				524F784E20F9365700AF0EF6 /* HotelDetailsViewController.swift in Sources */,
 				52B616C820E9341E00A1A416 /* JCBasicPropertyInfo.swift in Sources */,
 				52B616CB20E9341E00A1A416 /* JCCriteria.swift in Sources */,
 				52B616C120E9341E00A1A416 /* JCWarning.swift in Sources */,

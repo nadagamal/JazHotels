@@ -7,9 +7,19 @@
 //
 
 import UIKit
-
-class HotelOnMapViewController: UIViewController {
-
+import XLPagerTabStrip
+class HotelOnMapViewController: UIViewController , IndicatorInfoProvider{
+    var itemInfo: IndicatorInfo = "View"
+    
+    init(itemInfo: IndicatorInfo) {
+        self.itemInfo = itemInfo
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,7 +31,11 @@ class HotelOnMapViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    // MARK: - IndicatorInfoProvider
+    
+    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
+        return itemInfo
+    }
     /*
     // MARK: - Navigation
 

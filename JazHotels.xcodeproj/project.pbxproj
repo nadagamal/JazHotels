@@ -122,6 +122,7 @@
 		9A8E78CF20F8F7FA0034C3AF /* CAGradientLayer+GradientColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8E78CE20F8F7FA0034C3AF /* CAGradientLayer+GradientColor.swift */; };
 		9A8E78D120F8F8490034C3AF /* UINavigationController+GradientColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8E78D020F8F8490034C3AF /* UINavigationController+GradientColor.swift */; };
 		9A8E78D520F8F98E0034C3AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8E78D420F8F98E0034C3AF /* ViewController.swift */; };
+		9A8E78D720F93EFE0034C3AF /* HotelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8E78D620F93EFD0034C3AF /* HotelCollectionViewCell.swift */; };
 		9AADBF1120ED5052009183FE /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AADBF1020ED5052009183FE /* FavoriteViewController.swift */; };
 		9AADBF1320ED509C009183FE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AADBF1220ED509C009183FE /* ProfileViewController.swift */; };
 		9AADBF1720ED50D0009183FE /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AADBF1620ED50D0009183FE /* AboutViewController.swift */; };
@@ -310,6 +311,7 @@
 		9A8E78CE20F8F7FA0034C3AF /* CAGradientLayer+GradientColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAGradientLayer+GradientColor.swift"; sourceTree = "<group>"; };
 		9A8E78D020F8F8490034C3AF /* UINavigationController+GradientColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+GradientColor.swift"; sourceTree = "<group>"; };
 		9A8E78D420F8F98E0034C3AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9A8E78D620F93EFD0034C3AF /* HotelCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotelCollectionViewCell.swift; sourceTree = "<group>"; };
 		9AADBF1020ED5052009183FE /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		9AADBF1220ED509C009183FE /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		9AADBF1620ED50D0009183FE /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
@@ -653,6 +655,7 @@
 		9AADBF8020EDC0B7009183FE /* HotelCell */ = {
 			isa = PBXGroup;
 			children = (
+				9A8E78D620F93EFD0034C3AF /* HotelCollectionViewCell.swift */,
 				9AADBF8120EDC0DB009183FE /* HotelTableViewCell.swift */,
 				9AADBF8320EDC0F0009183FE /* HotelTableViewCell.xib */,
 			);
@@ -987,6 +990,7 @@
 				52B616D420E9341E00A1A416 /* JCRoomStay.swift in Sources */,
 				52B6165320E891C100A1A416 /* JService.swift in Sources */,
 				52B616D920E9341E00A1A416 /* JCCountryName.swift in Sources */,
+				9A8E78D720F93EFE0034C3AF /* HotelCollectionViewCell.swift in Sources */,
 				52B6163A20E891C100A1A416 /* JAmenity.swift in Sources */,
 				52B6164E20E891C100A1A416 /* JFeature.swift in Sources */,
 				9AADBF1D20ED5189009183FE /* HotelsViewController.swift in Sources */,

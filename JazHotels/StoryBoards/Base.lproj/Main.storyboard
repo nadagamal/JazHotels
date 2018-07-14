@@ -163,7 +163,8 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="38" id="lEj-Br-J6h"/>
                                                     </constraints>
-                                                    <string key="text">Iberotel Borg El ArabIberotel Borg El Arab</string>
+                                                    <string key="text">Iberotel Borg El Arab
+Iberotel Borg El Arab</string>
                                                     <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="12"/>
                                                     <color key="textColor" red="0.37254901959999998" green="0.1137254902" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>

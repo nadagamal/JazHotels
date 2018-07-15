@@ -10,7 +10,7 @@ import UIKit
 import XLPagerTabStrip
 class HotelDetailsContactViewController: UITableViewController , IndicatorInfoProvider{
     var itemInfo: IndicatorInfo = "Contact"
-    
+    var hotel:JHotelDescriptiveContent!
     @IBOutlet weak var websiteLbl: UILabel!
     @IBOutlet weak var websiteCell: UITableViewCell!
     @IBOutlet weak var mailLbl: UILabel!
@@ -34,8 +34,20 @@ class HotelDetailsContactViewController: UITableViewController , IndicatorInfoPr
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        if hotel.contactInfos != nil && hotel.contactInfos.contactInfo != nil && hotel.contactInfos.contactInfo.addresses != nil && hotel.contactInfos.contactInfo.addresses.address != nil && hotel.contactInfos.contactInfo.addresses.address.addressLine != nil && hotel.contactInfos.contactInfo.addresses.address.addressLine.count>0{
+            locationLbl.text = hotel.contactInfos.contactInfo.addresses.address.addressLine[0] + "  -  " + hotel.contactInfos.contactInfo.addresses.address.cityName
+            
+        }
+        if hotel.contactInfos != nil && hotel.contactInfos.contactInfo != nil && hotel.contactInfos.contactInfo.phones != nil && hotel.contactInfos.contactInfo.phones.phone != nil && hotel.contactInfos.contactInfo.phones.phoneNumber != nil{
+        phoneLbl.text = hotel.contactInfos.contactInfo.phones.phoneNumber
     }
-    
+        if hotel.contactInfos != nil && hotel.contactInfos.contactInfo != nil && hotel.contactInfos.contactInfo.emails != nil && hotel.contactInfos.contactInfo.emails.email != nil{
+         mailLbl.text = hotel.contactInfos.contactInfo.emails.email
+        }
+      if JazHotels.hotelsURLs![hotel.hotelCode] != nil{
+        websiteLbl.text = JazHotels.hotelsURLs![hotel.hotelCode]!
+        }
+}
 
     /*
     // MARK: - Navigation

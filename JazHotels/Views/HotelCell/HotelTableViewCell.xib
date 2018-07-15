@@ -80,7 +80,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hurghada - Egypt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x8G-Mc-tZZ">
-                                <rect key="frame" x="10" y="214.5" width="127" height="18"/>
+                                <rect key="frame" x="10" y="214.5" width="127" height="17.5"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="14"/>
                                 <color key="textColor" red="0.45098039220000002" green="0.45098039220000002" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>

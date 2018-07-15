@@ -211,19 +211,21 @@ class CheckAvailabilityViewController: UIViewController , UIScrollViewDelegate  
                 SVProgressHUD.dismiss()
                 if error == nil
                 {
-                    if let rooms = data?.soapBody.oTAHotelAvailRS.roomStays.roomRates
+                    if let rooms = data?.soapBody.oTAHotelAvailRS.roomStays.roomStay.roomRates
                     {
                        let price =  rooms.roomRate?[0].rates?.rate.tpaExtensions.nightlyRate.price
                         let currency = rooms.roomRate?[0].rates?.rate.fees.fee.currencyCode
                         
-                        
                         let hotelRooms = JazHotels.hotels[0]
-                        
                         let hotelView = HotelsViewController.create()
                         hotelView.roomPrice = price
                         hotelView.roomCurrency = currency
                         hotelView.rooms = hotelRooms
                         self.navigationController?.pushViewController(hotelView, animated: true)
+                    }
+                    else
+                    {
+                        SCLAlertView().showInfo("", subTitle: "No rooms avaiable")
                     }
                 }
                 else
@@ -236,7 +238,7 @@ class CheckAvailabilityViewController: UIViewController , UIScrollViewDelegate  
         }
         else
         {
-            SCLAlertView().showError("please set hotel or destination", subTitle: "")
+            SCLAlertView().showError("", subTitle: "please set hotel or destination")
         }
     }
     

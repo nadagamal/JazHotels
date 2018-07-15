@@ -1153,7 +1153,7 @@ Alam Road, Red Sea, Egypt.</string>
         <!--Matro7-->
         <scene sceneID="Mvm-fX-YHn">
             <objects>
-                <viewController storyboardIdentifier="HotelsViewController" id="k5V-Cb-OC2" customClass="HotelsViewController" customModule="JazHotels" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HotelsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="k5V-Cb-OC2" customClass="HotelsViewController" customModule="JazHotels" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6mj-MA-k8y">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -84,16 +84,13 @@ class  Helper  {
             alpha: CGFloat(1.0)
         )
     }
-    static func convertDateFormatter(date: String,formate:String = "dd MMM, yyyy",toFormate:String = "yyy-mm-dd") -> String
+    static func convertDateFormatter(date: String,formate:String = "dd MMM, yyyy",toFormate:String = "yyy-MM-dd") -> String
     {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = formate//this your string date format
-        
-        dateFormatter.timeZone = NSTimeZone(name: "UTC")! as TimeZone
+
         let date = dateFormatter.date(from: date)
         dateFormatter.dateFormat = toFormate///this is what you want to convert format
-        
-        dateFormatter.timeZone = NSTimeZone(name: "UTC")! as TimeZone
         let timeStamp = dateFormatter.string(from: date!)
         
         

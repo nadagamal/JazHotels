@@ -12,6 +12,7 @@ import UIKit
 public struct JazHotels {
     static var hotels: [JHotelDescriptiveContent]!
     static var hotelsImages: Dictionary<String,[String]>?
+    static var hotelsURLs: Dictionary<String,String>?
     static var hotelsName: [String]?
     static var hotelsCode: [Int]?
 

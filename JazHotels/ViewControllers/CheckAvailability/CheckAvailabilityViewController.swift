@@ -221,16 +221,25 @@ class CheckAvailabilityViewController: UIViewController , UIScrollViewDelegate  
                         hotelView.roomPrice = price
                         hotelView.roomCurrency = currency
                         hotelView.rooms = hotelRooms
-                        self.navigationController?.pushViewController(hotelView, animated: true)
+                        DispatchQueue.main.async {
+                            self.navigationController?.pushViewController(hotelView, animated: true)
+
+                        }
                     }
                     else
                     {
-                        SCLAlertView().showInfo("", subTitle: "No rooms avaiable")
+                        DispatchQueue.main.async {
+                            SCLAlertView().showInfo("", subTitle: "No rooms avaiable")
+
+                        }
                     }
                 }
                 else
                 {
-                    SCLAlertView().showError((error?.localizedDescription)!, subTitle: "")
+                    DispatchQueue.main.async {
+                        SCLAlertView().showError((error?.localizedDescription)!, subTitle: "")
+
+                    }
                 }
                 
                 
@@ -238,7 +247,10 @@ class CheckAvailabilityViewController: UIViewController , UIScrollViewDelegate  
         }
         else
         {
-            SCLAlertView().showError("", subTitle: "please set hotel or destination")
+            DispatchQueue.main.async {
+                SCLAlertView().showError("", subTitle: "please set hotel or destination")
+
+            }
         }
     }
     

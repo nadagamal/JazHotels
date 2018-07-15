@@ -22,17 +22,36 @@ class AboutViewController: UIViewController {
     }
     
     @IBAction func linkedInAction(_ sender: Any) {
+        UIApplication.shared.open(URL(string: "https://www.linkedin.com/company/18467184/")!, options: [:]) { (handler) in
+            
+        }
     }
     @IBAction func pintrestAction(_ sender: Any) {
+        UIApplication.shared.open(URL(string: "https://www.pinterest.com/jazcollection/")!, options: [:]) { (handler) in
+            
+        }
     }
     @IBAction func twitterAction(_ sender: Any) {
+        UIApplication.shared.open(URL(string: "https://twitter.com/Jaz_Hotels")!, options: [:]) { (handler) in
+            
+        }
     }
     @IBAction func youtubeAction(_ sender: Any) {
+        UIApplication.shared.open(URL(string: "https://www.youtube.com/user/JazHotelsandResorts")!, options: [:]) { (handler) in
+            
+        }
     }
     @IBAction func facebookAction(_ sender: Any) {
+        UIApplication.shared.open(URL(string: "https://www.facebook.com/jazcollectionegypt/")!, options: [:]) { (handler) in
+            
+        }
     }
     
     @IBAction func instagramAction(_ sender: Any) {
+        UIApplication.shared.open(URL(string: "https://www.instagram.com/jazcollectionegypt/")!, options: [:]) { (handler) in
+            
+        }
+        
     }
     /*
     // MARK: - Navigation

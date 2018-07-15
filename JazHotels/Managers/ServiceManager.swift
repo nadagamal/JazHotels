@@ -31,13 +31,13 @@ class ServiceManager: NSObject {
         lobj_Request.addValue("http://synxis.com/OTA2004AService/GetHotelDetails", forHTTPHeaderField: "SOAPAction")
         
         let task = session.dataTask(with: lobj_Request, completionHandler: {data, response, error -> Void in
-            let strData = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
             if error != nil
             {
                 print("Error: " + error.debugDescription)
                 completion(nil, error! as NSError)
             }
             else{
+                let strData = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
                 let outputDic = NSDictionary(xmlString: strData as! String)
                 let obj  =  JSoapEnvelope.init(fromDictionary: outputDic as! [String : Any])
                 if obj.body.oTAHotelDescriptiveInfoRS.hotelDescriptiveContents != nil{

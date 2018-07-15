@@ -12,6 +12,9 @@ class HotelsViewController: UIViewController {
 
     @IBOutlet weak var hotelListContainer: UIView!
     @IBOutlet weak var hotelOnMapContainer: UIView!
+    var roomPrice:String?
+    var roomCurrency:String?
+    var rooms:JHotelDescriptiveContent?
     override func viewDidLoad() {
         super.viewDidLoad()
         hotelListContainer.isHidden = false
@@ -21,5 +24,8 @@ class HotelsViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-   
+    @objc public static func create() -> HotelsViewController {
+        
+        return UIStoryboard(name: HotelJazConstants.StoryBoard.mainSB, bundle: Bundle.main).instantiateViewController(withIdentifier: String(describing: self)) as! HotelsViewController
+    }
 }

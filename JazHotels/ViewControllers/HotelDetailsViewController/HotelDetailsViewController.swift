@@ -21,6 +21,9 @@ class HotelDetailsViewController: SegmentedPagerTabStripViewController {
     var kingfisherSource = [InputSource]()
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        settings.style.segmentedControlColor = #colorLiteral(red: 0.9215686275, green: 0.9254901961, blue: 0.9333333333, alpha: 1)
+        
         if JazHotels.hotelsImages![hotel.hotelCode] != nil{
             let images = JazHotels.hotelsImages![hotel.hotelCode]
             for imageStr in images!{
@@ -33,7 +36,7 @@ class HotelDetailsViewController: SegmentedPagerTabStripViewController {
         slideshow.slideshowInterval = 10.0
         slideshow.pageIndicatorPosition = .init(horizontal: .center, vertical: .customBottom(padding: 30))
         slideshow.contentScaleMode = UIViewContentMode.scaleAspectFill
-
+        segmentedControl.removeBorders()
         let pageControl = UIPageControl()
         pageControl.currentPageIndicatorTintColor = UIColor.white
         pageControl.pageIndicatorTintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.5626437883)
@@ -77,8 +80,10 @@ class HotelDetailsViewController: SegmentedPagerTabStripViewController {
     // MARK: - PagerTabStripDataSource
     
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
-        let child_4 = HotelOnMapViewController(itemInfo: "View 2")
-        let childViewControllers = [child_4, child_4]
+        let child_1 = HotelDetailsContactViewController.create()
+        let child_2 = HotelDetailsOverviewViewController.create()
+
+        let childViewControllers = [child_2, child_1]
         return childViewControllers
     }
 

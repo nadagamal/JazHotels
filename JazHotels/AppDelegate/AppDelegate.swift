@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import GradientNavigationBar
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate,UITabBarDelegate {
@@ -18,12 +18,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UITabBarDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
 
-        ServiceManager().checkAvailbility(startDate: "2018-06-10", endDate: "2018-06-20", adultsNum: "2", childNum: "0", hotelCode: "61579") { (data, error) in
-            
-        }
-      //  self.window?.rootViewController = tabbarController
+        IQKeyboardManager.shared.enable = true
+
         UITabBar.appearance().layer.borderWidth = 0.0
         UITabBar.appearance().clipsToBounds = true
+        
+        GradientNavigationBar.appearance().colors = [Helper.hexStringToUIColor(hex: "DF1B8E"), Helper.hexStringToUIColor(hex: "7E0E8B"),Helper.hexStringToUIColor(hex: "5E0E8B")]
+
+        GradientNavigationBar.appearance().startPoint = CGPoint.zero
+        GradientNavigationBar.appearance().endPoint = CGPoint(x: 1, y: 1)
+
         return true
     }
     func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {

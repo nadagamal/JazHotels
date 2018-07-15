@@ -1233,22 +1233,6 @@ Alam Road, Red Sea, Egypt.</string>
             </objects>
             <point key="canvasLocation" x="452" y="3067"/>
         </scene>
-        <!--About View Controller-->
-        <scene sceneID="W1g-IR-MZy">
-            <objects>
-                <viewController storyboardIdentifier="AboutViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dX6-0T-Ctc" customClass="AboutViewController" customModule="JazHotels" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="hRT-89-GyA">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="3yW-pc-8XO"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="" image="about-icon" landscapeImage="about-icon" largeContentSizeImage="about-icon" id="obb-06-Ql1"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="prd-Ci-4D4" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2151.1999999999998" y="1483.8080959520241"/>
-        </scene>
         <!--Profile View Controller-->
         <scene sceneID="p3H-XX-Kzi">
             <objects>
@@ -1292,7 +1276,7 @@ Alam Road, Red Sea, Egypt.</string>
                         <segue destination="lFj-Yz-DSO" kind="relationship" relationship="viewControllers" id="Wf3-np-dbO"/>
                         <segue destination="uGF-lN-xnv" kind="relationship" relationship="viewControllers" id="9Qb-Rn-Jgh"/>
                         <segue destination="hA6-x8-ph3" kind="relationship" relationship="viewControllers" id="pBi-Jy-Xz9"/>
-                        <segue destination="dX6-0T-Ctc" kind="relationship" relationship="viewControllers" id="Faz-oY-Qto"/>
+                        <segue destination="DC0-80-bba" kind="relationship" relationship="viewControllers" id="xQe-Ot-PG9"/>
                         <segue destination="j7I-BO-Ua9" kind="relationship" relationship="viewControllers" id="SS9-F6-ztx"/>
                     </connections>
                 </tabBarController>
@@ -1381,6 +1365,158 @@ Alam Road, Red Sea, Egypt.</string>
             </objects>
             <point key="canvasLocation" x="452" y="1494.6026986506747"/>
         </scene>
+        <!--About View Controller-->
+        <scene sceneID="3AD-9r-i45">
+            <objects>
+                <viewController storyboardIdentifier="AboutViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DC0-80-bba" customClass="AboutViewController" customModule="JazHotels" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UcG-fx-FhI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yxY-tH-vBf">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="270"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headBg" translatesAutoresizingMaskIntoConstraints="NO" id="uer-SA-w9A">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="223"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="223" id="9Bg-uv-Hoa"/>
+                                            <constraint firstAttribute="height" constant="223" id="PAx-pW-Zm5"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jazLauncherLogo" translatesAutoresizingMaskIntoConstraints="NO" id="F3i-Fn-IDY">
+                                        <rect key="frame" x="142" y="75" width="90" height="66"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="90" id="V76-Us-Ri5"/>
+                                            <constraint firstAttribute="height" constant="66" id="x24-VV-4ps"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="uer-SA-w9A" secondAttribute="trailing" id="57N-bY-aaf"/>
+                                    <constraint firstItem="uer-SA-w9A" firstAttribute="top" secondItem="yxY-tH-vBf" secondAttribute="top" id="Nad-l7-8GK"/>
+                                    <constraint firstItem="F3i-Fn-IDY" firstAttribute="top" secondItem="yxY-tH-vBf" secondAttribute="top" constant="75" id="b6l-AB-Vux"/>
+                                    <constraint firstItem="F3i-Fn-IDY" firstAttribute="centerX" secondItem="uer-SA-w9A" secondAttribute="centerX" id="k3I-fV-0yy"/>
+                                    <constraint firstItem="uer-SA-w9A" firstAttribute="leading" secondItem="yxY-tH-vBf" secondAttribute="leading" id="y4G-BU-gBx"/>
+                                </constraints>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CEx-ta-nDL">
+                                <rect key="frame" x="16" y="243" width="343" height="313"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="313" id="BAd-BL-G1X"/>
+                                </constraints>
+                                <string key="text">On your next Egypt holiday, you will feel the merry atmosphere of progress, the pride and the energy, which is characteristic for our country and currently eminently perceptible.
+
+Don’t miss visiting the best Egypt beach holiday destinations. Experience the matchless shores of South Sinai and the Red Sea with their impeccable reef, not to mention the unruffled North Coast - Egypt's prime destination - with its velvet sandy beaches.
+
+Or discover Luxor and Aswan that are immensely rich in history. For unwinding, try any of the oases amidst the virgin unspoiled nature.</string>
+                                <color key="textColor" red="0.45098039220000002" green="0.45098039220000002" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="13"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="15H-b8-ALr">
+                                <rect key="frame" x="53.5" y="564" width="28" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="28" id="tm3-2L-5e7"/>
+                                    <constraint firstAttribute="height" constant="28" id="w1E-Pj-Co7"/>
+                                </constraints>
+                                <state key="normal" image="fb"/>
+                                <connections>
+                                    <action selector="facebookAction:" destination="DC0-80-bba" eventType="touchUpOutside" id="lf8-RJ-pna"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y9S-Ka-Fmc">
+                                <rect key="frame" x="101.5" y="564" width="28" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="voE-l5-zBz"/>
+                                    <constraint firstAttribute="width" constant="28" id="wLg-HH-5du"/>
+                                </constraints>
+                                <state key="normal" image="insta"/>
+                                <connections>
+                                    <action selector="instagramAction:" destination="DC0-80-bba" eventType="touchUpInside" id="drf-5v-QeG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yef-SR-z7H">
+                                <rect key="frame" x="149.5" y="564" width="28" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="crr-F9-D0k"/>
+                                    <constraint firstAttribute="width" constant="28" id="pJe-H2-xpD"/>
+                                </constraints>
+                                <state key="normal" image="yt"/>
+                                <connections>
+                                    <action selector="youtubeAction:" destination="DC0-80-bba" eventType="touchUpInside" id="UHZ-ro-wI6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGe-ai-YLz">
+                                <rect key="frame" x="197.5" y="564" width="28" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="28" id="IFN-SH-Fhb"/>
+                                    <constraint firstAttribute="height" constant="28" id="mph-if-yfT"/>
+                                </constraints>
+                                <state key="normal" image="tw"/>
+                                <connections>
+                                    <action selector="twitterAction:" destination="DC0-80-bba" eventType="touchUpInside" id="O3G-cx-jBe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jzg-26-9Y4">
+                                <rect key="frame" x="245.5" y="564" width="28" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="Iyo-jc-f8d"/>
+                                    <constraint firstAttribute="width" constant="28" id="a9M-8O-CKN"/>
+                                </constraints>
+                                <state key="normal" image="pintrest"/>
+                                <connections>
+                                    <action selector="pintrestAction:" destination="DC0-80-bba" eventType="touchUpInside" id="aPz-e1-VpK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V5a-Xe-GlR">
+                                <rect key="frame" x="293.5" y="564" width="28" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="28" id="T11-Bg-Odh"/>
+                                    <constraint firstAttribute="height" constant="28" id="pCL-KT-2fp"/>
+                                </constraints>
+                                <state key="normal" image="linkedin"/>
+                                <connections>
+                                    <action selector="linkedInAction:" destination="DC0-80-bba" eventType="touchUpInside" id="VWd-Au-Oxf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Yef-SR-z7H" firstAttribute="top" secondItem="CEx-ta-nDL" secondAttribute="bottom" constant="8" id="1WH-n7-ri2"/>
+                            <constraint firstItem="yxY-tH-vBf" firstAttribute="top" secondItem="UcG-fx-FhI" secondAttribute="top" id="2W2-eZ-LDz"/>
+                            <constraint firstItem="t3Y-4d-vL2" firstAttribute="trailing" secondItem="CEx-ta-nDL" secondAttribute="trailing" constant="16" id="5bD-Ui-3zL"/>
+                            <constraint firstItem="Y9S-Ka-Fmc" firstAttribute="leading" secondItem="15H-b8-ALr" secondAttribute="trailing" constant="20" id="6gr-dC-pkr"/>
+                            <constraint firstItem="Y9S-Ka-Fmc" firstAttribute="top" secondItem="CEx-ta-nDL" secondAttribute="bottom" constant="8" id="89P-jv-j6n"/>
+                            <constraint firstItem="t3Y-4d-vL2" firstAttribute="bottom" secondItem="V5a-Xe-GlR" secondAttribute="bottom" constant="26" id="8Z0-Oo-zzs"/>
+                            <constraint firstItem="t3Y-4d-vL2" firstAttribute="bottom" secondItem="Y9S-Ka-Fmc" secondAttribute="bottom" constant="26" id="9md-Cr-Olc"/>
+                            <constraint firstItem="CEx-ta-nDL" firstAttribute="leading" secondItem="t3Y-4d-vL2" secondAttribute="leading" constant="16" id="EpW-kb-rmI"/>
+                            <constraint firstItem="t3Y-4d-vL2" firstAttribute="bottom" secondItem="Jzg-26-9Y4" secondAttribute="bottom" constant="26" id="LBK-Ip-hu0"/>
+                            <constraint firstItem="yxY-tH-vBf" firstAttribute="trailing" secondItem="t3Y-4d-vL2" secondAttribute="trailing" id="LG4-cK-0Nu"/>
+                            <constraint firstItem="CEx-ta-nDL" firstAttribute="top" secondItem="yxY-tH-vBf" secondAttribute="bottom" constant="-27" id="M2I-ym-Ntk"/>
+                            <constraint firstItem="V5a-Xe-GlR" firstAttribute="top" secondItem="CEx-ta-nDL" secondAttribute="bottom" constant="8" id="QX6-Cg-oAi"/>
+                            <constraint firstItem="V5a-Xe-GlR" firstAttribute="leading" secondItem="Jzg-26-9Y4" secondAttribute="trailing" constant="20" id="SZy-CA-3ht"/>
+                            <constraint firstItem="Jzg-26-9Y4" firstAttribute="top" secondItem="CEx-ta-nDL" secondAttribute="bottom" constant="8" id="W8N-tv-kYm"/>
+                            <constraint firstItem="Yef-SR-z7H" firstAttribute="leading" secondItem="Y9S-Ka-Fmc" secondAttribute="trailing" constant="20" id="dd0-rq-u8i"/>
+                            <constraint firstItem="t3Y-4d-vL2" firstAttribute="bottom" secondItem="15H-b8-ALr" secondAttribute="bottom" constant="26" id="fAe-xC-q47"/>
+                            <constraint firstItem="gGe-ai-YLz" firstAttribute="leading" secondItem="Yef-SR-z7H" secondAttribute="trailing" constant="20" id="gsh-bT-ofq"/>
+                            <constraint firstItem="gGe-ai-YLz" firstAttribute="top" secondItem="CEx-ta-nDL" secondAttribute="bottom" constant="8" id="kEY-9n-jjA"/>
+                            <constraint firstItem="t3Y-4d-vL2" firstAttribute="bottom" secondItem="Yef-SR-z7H" secondAttribute="bottom" constant="26" id="l0t-aU-ZhO"/>
+                            <constraint firstItem="15H-b8-ALr" firstAttribute="top" secondItem="CEx-ta-nDL" secondAttribute="bottom" constant="8" id="qPx-2X-jLF"/>
+                            <constraint firstItem="Jzg-26-9Y4" firstAttribute="leading" secondItem="gGe-ai-YLz" secondAttribute="trailing" constant="20" id="u9B-rT-K2Z"/>
+                            <constraint firstItem="gGe-ai-YLz" firstAttribute="centerX" secondItem="CEx-ta-nDL" secondAttribute="centerX" constant="24" id="w2Z-If-fH6"/>
+                            <constraint firstItem="t3Y-4d-vL2" firstAttribute="bottom" secondItem="gGe-ai-YLz" secondAttribute="bottom" constant="26" id="wgF-Bi-Sdg"/>
+                            <constraint firstItem="yxY-tH-vBf" firstAttribute="leading" secondItem="t3Y-4d-vL2" secondAttribute="leading" id="xW8-Un-eNW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="t3Y-4d-vL2"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="about-icon" landscapeImage="about-icon" largeContentSizeImage="about-icon" id="CYn-DM-M9k"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sam-6R-jYO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1764" y="1495"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Splash" width="1242" height="2208"/>
@@ -1393,6 +1529,7 @@ Alam Road, Red Sea, Egypt.</string>
         <image name="edit_icon" width="24" height="24"/>
         <image name="email" width="20" height="15"/>
         <image name="favor-icon" width="23" height="21"/>
+        <image name="fb" width="16" height="16"/>
         <image name="headBg" width="375" height="261"/>
         <image name="hotel-icon" width="26" height="21"/>
         <image name="hotelLocation" width="18" height="22"/>
@@ -1538,12 +1675,17 @@ qAy1DMIM1wzcDOAM4gzkDOYM7wz0DPoNAg0EDQYNCA0KDQ8NFx6DHoUeih6YHpweox6oHrUeuB7FHsoe
 0h7VHtoe4h7lHvce+h7/AAAAAAAAAgEAAAAAAAAAWQAAAAAAAAAAAAAAAAAAHwE
 </mutableData>
         </image>
+        <image name="insta" width="16" height="16"/>
         <image name="jazLauncherLogo" width="89" height="65"/>
+        <image name="linkedin" width="16" height="16"/>
         <image name="location" width="24" height="30"/>
         <image name="locationdetails" width="24" height="31"/>
         <image name="phone" width="18" height="27"/>
+        <image name="pintrest" width="16" height="16"/>
         <image name="review" width="20" height="19"/>
         <image name="reviewS" width="20" height="19"/>
+        <image name="tw" width="16" height="16"/>
         <image name="website" width="18" height="17"/>
+        <image name="yt" width="16" height="16"/>
     </resources>
 </document>

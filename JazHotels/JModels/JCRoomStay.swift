@@ -14,6 +14,7 @@ class JCRoomStay{
 	var roomRates : JCRoomRate!
 	var roomTypes : JCRoomType!
 	var roomStay : JCRoomStay!
+    var roomStays : [JCRoomStay]!
 
 
 	/**
@@ -35,6 +36,14 @@ class JCRoomStay{
 		if let roomStayData = dictionary["RoomStay"] as? [String:Any]{
 			roomStay = JCRoomStay(fromDictionary: roomStayData)
 		}
+        roomStays = [JCRoomStay]()
+        if let roomStayData = dictionary["RoomStay"] as? [[String : Any]]{
+            for room in roomStayData {
+                if room != nil{
+                roomStays.append(JCRoomStay(fromDictionary: room as! [String : Any]))
+                }
+            }
+        }
 	}
 
 }

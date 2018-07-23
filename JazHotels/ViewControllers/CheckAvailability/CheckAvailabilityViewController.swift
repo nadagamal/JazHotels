@@ -36,6 +36,11 @@ class CheckAvailabilityViewController: UIViewController , UIScrollViewDelegate  
     override func viewDidLoad() {
         super.viewDidLoad()
         initView()
+       // getHotelCodes(text: "Sharm El Sheikh")
+        ServiceManager().checkAvailbility(startDate: "2018-09-06", endDate: "2018-09-09", adultsNum: "2", childNum: "1", hotelCodes:getHotelCodes(text: "Sharm El Sheikh") , roomsNum: "1") { (success, error) in
+            
+        }
+        Helper.getCities()
     }
     
     func initView()
@@ -44,7 +49,6 @@ class CheckAvailabilityViewController: UIViewController , UIScrollViewDelegate  
         hotelSearchTF.optionArray = JazHotels.hotelsName ?? []
         hotelSearchTF.optionIds = JazHotels.hotelsCode ?? []
         hotelSearchTF.didSelect{(selectedHotel , index , id) in
-           
             print("Selected Hotel: \(selectedHotel) \n index: \(index) \n Id: \(id)")
             self.selectedHotelCode = String(id)
         }
@@ -57,7 +61,6 @@ class CheckAvailabilityViewController: UIViewController , UIScrollViewDelegate  
         startDate = checkInDateLb.text
         endDate = checkoutDateLb.text
         numberOfNightsLb.text = String(Helper.nightsBetweenDates(startDate: Date(), endDate: Date().tomorrow))
-
     }
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = true
@@ -242,7 +245,6 @@ class CheckAvailabilityViewController: UIViewController , UIScrollViewDelegate  
                     }
                 }
                 
-                
             }
         }
         else
@@ -253,5 +255,16 @@ class CheckAvailabilityViewController: UIViewController , UIScrollViewDelegate  
             }
         }
     }
+    //MARK:- Get Hotel Codes by city name or hotel name
+    func getHotelCodes(text:String) -> [String] {
+        var codes = [String]()
+        for hotel in JazHotels.hotels {
+            if text == hotel.hotelName || text == hotel.contactInfos.contactInfo.addresses.address.cityName{
+                codes.append(hotel.hotelCode)
+            }
+        }
+        return codes
+    }
+
     
 }

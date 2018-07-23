@@ -113,4 +113,75 @@ class ServiceManager: NSObject {
         })
         task.resume()
     }
+    func checkAvailbility(startDate:String, endDate:String ,adultsNum:String , childNum:String, hotelCode:String,roomsNum:String ,promoCode:String,completion:  @escaping (_ :JCCheckAvaibility?, _ :NSError?) -> Void)
+    {
+        
+        var lobj_Request = NSMutableURLRequest(url: NSURL(string: getBaseUrl)! as URL) as URLRequest
+        let session = URLSession.shared
+        var err: NSError?
+        
+        lobj_Request.httpMethod = "POST"
+        lobj_Request.addValue("text/xml; charset=utf-8", forHTTPHeaderField: "Content-Type")
+        //lobj_Request.addValue("223", forHTTPHeaderField: "Content-Length")
+        lobj_Request.addValue("http://synxis.com/OTA2004AService/CheckAvailability", forHTTPHeaderField: "SOAPAction")
+        lobj_Request.httpBody=String(format: "%@%@", soapHeader,"<n1:OTA_HotelAvailRQ xmlns:n1=\"http://www.opentravel.org/OTA/2003/05\" AvailRatesOnly=\"false\" BestOnly=\"false\" EchoToken=\"JAZ-Android_QkPvCUzmFr\" ExactMatchOnly=\"false\" HotelStayOnly=\"false\" MaxResponses=\"0\" PrimaryLangID=\"en-US\" SummaryOnly=\"false\"><n1:POS><n1:Source><n1:RequestorID ID=\"10\" ID_Context=\"Synxis\"><n1:CompanyName Code=\"MobileGC\"></n1:CompanyName></n1:RequestorID></n1:Source></n1:POS><n1:AvailRequestSegments><n1:AvailRequestSegment><n1:StayDateRange End=\"\(endDate)\" Start=\"\(startDate)\" /><n1:RoomStayCandidates><n1:RoomStayCandidate Quantity=\"\(roomsNum)\"><n1:GuestCounts><n1:GuestCount AgeQualifyingCode=\"10\" Count=\"\(adultsNum)\" /><n1:GuestCount AgeQualifyingCode=\"8\" Count=\"\(childNum)\" /></n1:GuestCounts></n1:RoomStayCandidate></n1:RoomStayCandidates><n1:HotelSearchCriteria><n1:Criterion><n1:HotelRef HotelCode=\"\(hotelCode)\" /></n1:Criterion></n1:HotelSearchCriteria></n1:AvailRequestSegment></n1:AvailRequestSegments></n1:OTA_HotelAvailRQ></v:Body></v:Envelope>").data(using: .ascii)
+        
+        
+        let task = session.dataTask(with: lobj_Request, completionHandler: {data, response, error -> Void in
+            if error != nil
+            {
+                print("Error: " + error.debugDescription)
+                completion(nil, error! as NSError)
+            }
+            else{
+                let strData = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
+                let outputDic = NSDictionary(xmlString: strData as! String)
+                let obj  =  JCCheckAvaibility.init(fromDictionary: outputDic as! [String : Any])
+                completion(obj, nil)
+                
+            }
+            
+        })
+        task.resume()
+    }
+    func getHotelCodesBody(hotels:[String]) -> String {
+        var hotelStr = ""
+        for hotel in hotels {
+            hotelStr += "<n1:Criterion><n1:HotelRef HotelCode=\"\(hotel)\" /></n1:Criterion>"
+        }
+        return hotelStr
+    }
+    func checkAvailbility(startDate:String, endDate:String ,adultsNum:String , childNum:String, hotelCodes:[String],roomsNum:String,completion:  @escaping (_ :JCCheckAvaibility?, _ :NSError?) -> Void)
+    {
+        
+        var lobj_Request = NSMutableURLRequest(url: NSURL(string: getBaseUrl)! as URL) as URLRequest
+        let session = URLSession.shared
+        var err: NSError?
+        
+        lobj_Request.httpMethod = "POST"
+        lobj_Request.addValue("text/xml; charset=utf-8", forHTTPHeaderField: "Content-Type")
+        //lobj_Request.addValue("223", forHTTPHeaderField: "Content-Length")
+        lobj_Request.addValue("http://synxis.com/OTA2004AService/CheckAvailability", forHTTPHeaderField: "SOAPAction")
+        lobj_Request.httpBody=String(format: "%@%@", soapHeader,"<n1:OTA_HotelAvailRQ xmlns:n1=\"http://www.opentravel.org/OTA/2003/05\" AvailRatesOnly=\"false\" BestOnly=\"false\" EchoToken=\"JAZ-Android_QkPvCUzmFr\" ExactMatchOnly=\"false\" HotelStayOnly=\"false\" MaxResponses=\"0\" PrimaryLangID=\"en-US\" SummaryOnly=\"false\"><n1:POS><n1:Source><n1:RequestorID ID=\"10\" ID_Context=\"Synxis\"><n1:CompanyName Code=\"MobileGC\"></n1:CompanyName></n1:RequestorID></n1:Source></n1:POS><n1:AvailRequestSegments><n1:AvailRequestSegment><n1:StayDateRange End=\"\(endDate)\" Start=\"\(startDate)\" /><n1:RoomStayCandidates><n1:RoomStayCandidate Quantity=\"\(roomsNum)\"><n1:GuestCounts><n1:GuestCount AgeQualifyingCode=\"10\" Count=\"\(adultsNum)\" /><n1:GuestCount AgeQualifyingCode=\"8\" Count=\"\(childNum)\" /></n1:GuestCounts></n1:RoomStayCandidate></n1:RoomStayCandidates><n1:HotelSearchCriteria>\(getHotelCodesBody(hotels: hotelCodes))</n1:HotelSearchCriteria></n1:AvailRequestSegment></n1:AvailRequestSegments></n1:OTA_HotelAvailRQ></v:Body></v:Envelope>").data(using: .ascii)
+        
+        print(String(format: "%@%@", soapHeader,"<n1:OTA_HotelAvailRQ xmlns:n1=\"http://www.opentravel.org/OTA/2003/05\" AvailRatesOnly=\"false\" BestOnly=\"false\" EchoToken=\"JAZ-Android_QkPvCUzmFr\" ExactMatchOnly=\"false\" HotelStayOnly=\"false\" MaxResponses=\"0\" PrimaryLangID=\"en-US\" SummaryOnly=\"false\"><n1:POS><n1:Source><n1:RequestorID ID=\"10\" ID_Context=\"Synxis\"><n1:CompanyName Code=\"MobileGC\"></n1:CompanyName></n1:RequestorID></n1:Source></n1:POS><n1:AvailRequestSegments><n1:AvailRequestSegment><n1:StayDateRange End=\"\(endDate)\" Start=\"\(startDate)\" /><n1:RoomStayCandidates><n1:RoomStayCandidate Quantity=\"\(roomsNum)\"><n1:GuestCounts><n1:GuestCount AgeQualifyingCode=\"10\" Count=\"\(adultsNum)\" /><n1:GuestCount AgeQualifyingCode=\"8\" Count=\"\(childNum)\" /></n1:GuestCounts></n1:RoomStayCandidate></n1:RoomStayCandidates><n1:HotelSearchCriteria>\(getHotelCodesBody(hotels: hotelCodes))</n1:HotelSearchCriteria></n1:AvailRequestSegment></n1:AvailRequestSegments></n1:OTA_HotelAvailRQ></v:Body></v:Envelope>"))
+        
+        let task = session.dataTask(with: lobj_Request, completionHandler: {data, response, error -> Void in
+            if error != nil
+            {
+                print("Error: " + error.debugDescription)
+                completion(nil, error! as NSError)
+            }
+            else{
+                let strData = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
+                let outputDic = NSDictionary(xmlString: strData as! String)
+                let obj  =  JCCheckAvaibility.init(fromDictionary: outputDic as! [String : Any])
+                completion(obj, nil)
+                
+            }
+            
+        })
+        task.resume()
+    }
+    
 }

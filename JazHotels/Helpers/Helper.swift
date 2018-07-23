@@ -122,5 +122,13 @@ class  Helper  {
         return (hotelsName,hotelsCode)
         
     }
-  
+    static func getCities() -> [String] {
+        var cities = [String]()
+        for hotel in JazHotels.hotels {
+            if  hotel.contactInfos.contactInfo.addresses.address.cityName != nil && !(cities .contains(hotel.contactInfos.contactInfo.addresses.address.cityName)){
+                cities.append(hotel.contactInfos.contactInfo.addresses.address.cityName)
+            }
+        }
+        return cities
+    }
 }

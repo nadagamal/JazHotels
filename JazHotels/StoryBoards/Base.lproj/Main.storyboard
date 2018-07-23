@@ -741,7 +741,7 @@ Alam Road, Red Sea, Egypt.</string>
                                                         <rect key="frame" x="251.5" y="0.0" width="82.5" height="70"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BjB-ao-RW5">
-                                                                <rect key="frame" x="36.5" y="16.5" width="10.5" height="21"/>
+                                                                <rect key="frame" x="36" y="16.5" width="10.5" height="21"/>
                                                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -826,7 +826,7 @@ Alam Road, Red Sea, Egypt.</string>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5JM-au-hWN">
-                                                                        <rect key="frame" x="13" y="29.5" width="30" height="32"/>
+                                                                        <rect key="frame" x="13.5" y="29.5" width="30" height="32"/>
                                                                         <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="16"/>
                                                                         <state key="normal" title="-">
                                                                             <color key="titleColor" red="0.70980392160000005" green="0.73333333329999995" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -836,13 +836,13 @@ Alam Road, Red Sea, Egypt.</string>
                                                                         </connections>
                                                                     </button>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jYr-Zs-76m">
-                                                                        <rect key="frame" x="51" y="35.5" width="6.5" height="20"/>
+                                                                        <rect key="frame" x="51.5" y="35.5" width="6.5" height="20"/>
                                                                         <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="16"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kiZ-9R-NOr">
-                                                                        <rect key="frame" x="65.5" y="29.5" width="30" height="32"/>
+                                                                        <rect key="frame" x="66" y="29.5" width="30" height="32"/>
                                                                         <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="16"/>
                                                                         <state key="normal" title="+">
                                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -884,7 +884,7 @@ Alam Road, Red Sea, Egypt.</string>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Mo-SD-U2B">
-                                                                        <rect key="frame" x="13.5" y="29.5" width="30" height="32"/>
+                                                                        <rect key="frame" x="13" y="29.5" width="30" height="32"/>
                                                                         <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="16"/>
                                                                         <state key="normal" title="+">
                                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -894,13 +894,13 @@ Alam Road, Red Sea, Egypt.</string>
                                                                         </connections>
                                                                     </button>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xyj-33-kY3">
-                                                                        <rect key="frame" x="51.5" y="35.5" width="6.5" height="20"/>
+                                                                        <rect key="frame" x="51" y="35.5" width="6.5" height="20"/>
                                                                         <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="16"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uqA-wj-Od9">
-                                                                        <rect key="frame" x="65" y="29.5" width="30" height="32"/>
+                                                                        <rect key="frame" x="64.5" y="29.5" width="30" height="32"/>
                                                                         <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="16"/>
                                                                         <state key="normal" title="-">
                                                                             <color key="titleColor" red="0.70980392160000005" green="0.73333333329999995" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -1529,7 +1529,7 @@ Or discover Luxor and Aswan that are immensely rich in history. For unwinding, t
         <image name="edit_icon" width="24" height="24"/>
         <image name="email" width="20" height="15"/>
         <image name="favor-icon" width="23" height="21"/>
-        <image name="fb" width="16" height="16"/>
+        <image name="fb" width="28" height="28"/>
         <image name="headBg" width="375" height="261"/>
         <image name="hotel-icon" width="26" height="21"/>
         <image name="hotelLocation" width="18" height="22"/>
@@ -1675,17 +1675,17 @@ qAy1DMIM1wzcDOAM4gzkDOYM7wz0DPoNAg0EDQYNCA0KDQ8NFx6DHoUeih6YHpweox6oHrUeuB7FHsoe
 0h7VHtoe4h7lHvce+h7/AAAAAAAAAgEAAAAAAAAAWQAAAAAAAAAAAAAAAAAAHwE
 </mutableData>
         </image>
-        <image name="insta" width="16" height="16"/>
+        <image name="insta" width="28" height="28"/>
         <image name="jazLauncherLogo" width="89" height="65"/>
-        <image name="linkedin" width="16" height="16"/>
+        <image name="linkedin" width="28" height="28"/>
         <image name="location" width="24" height="30"/>
         <image name="locationdetails" width="24" height="31"/>
         <image name="phone" width="18" height="27"/>
-        <image name="pintrest" width="16" height="16"/>
+        <image name="pintrest" width="28" height="28"/>
         <image name="review" width="20" height="19"/>
         <image name="reviewS" width="20" height="19"/>
-        <image name="tw" width="16" height="16"/>
+        <image name="tw" width="28" height="28"/>
         <image name="website" width="18" height="17"/>
-        <image name="yt" width="16" height="16"/>
+        <image name="yt" width="28" height="28"/>
     </resources>
 </document>

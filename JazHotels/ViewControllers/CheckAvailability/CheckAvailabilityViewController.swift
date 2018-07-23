@@ -207,7 +207,7 @@ class CheckAvailabilityViewController: UIViewController , UIScrollViewDelegate  
             endDate = Helper.convertDateFormatter(date: endDate ?? "")
             
             SVProgressHUD.show()
-            ServiceManager().checkAvailbility(startDate: startDate ?? "" , endDate: endDate ?? "", adultsNum: numberOfAdultsLb.text!, childNum: numberOfChildsLb.text!, hotelCode: selectedHotelCode) { (data, error) in
+            ServiceManager().checkAvailbility(startDate: startDate ?? "" , endDate: endDate ?? "", adultsNum: numberOfAdultsLb.text!, childNum: numberOfChildsLb.text!, hotelCode: selectedHotelCode,roomsNum: numberOfRoomLb.text!) { (data, error) in
                 SVProgressHUD.dismiss()
                 if error == nil
                 {

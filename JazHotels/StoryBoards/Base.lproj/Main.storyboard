@@ -1158,11 +1158,42 @@ Alam Road, Red Sea, Egypt.</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Toi-5e-5nt" customClass="TTSegmentedControl" customModule="TTSegmentedControl">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Toi-5e-5nt">
                                 <rect key="frame" x="50" y="50" width="275" height="40"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="30A-TI-NEr">
+                                        <rect key="frame" x="0.0" y="0.0" width="275" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1cK-4O-W5o">
+                                                <rect key="frame" x="0.0" y="0.0" width="137.5" height="40"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="13"/>
+                                                <state key="normal" title="Hotels List">
+                                                    <color key="titleColor" red="0.31372549019607843" green="0.043137254901960784" blue="0.46274509803921571" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="hotelListBtnAction:" destination="k5V-Cb-OC2" eventType="touchUpInside" id="uor-EK-SeS"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2pT-o8-gM7">
+                                                <rect key="frame" x="137.5" y="0.0" width="137.5" height="40"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="13"/>
+                                                <state key="normal" title="View on Map">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.34999999999999998" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="viewOnMapBtnAction:" destination="k5V-Cb-OC2" eventType="touchUpInside" id="9E5-RL-Ohh"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="30A-TI-NEr" secondAttribute="trailing" id="7Yr-M8-ATu"/>
                                     <constraint firstAttribute="height" constant="40" id="QH4-Xp-HxO"/>
+                                    <constraint firstItem="30A-TI-NEr" firstAttribute="leading" secondItem="Toi-5e-5nt" secondAttribute="leading" id="flz-Sy-EZ9"/>
+                                    <constraint firstItem="30A-TI-NEr" firstAttribute="top" secondItem="Toi-5e-5nt" secondAttribute="top" id="hlW-rr-gPN"/>
+                                    <constraint firstAttribute="bottom" secondItem="30A-TI-NEr" secondAttribute="bottom" id="ql9-Wx-kpd"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -1222,11 +1253,16 @@ Alam Road, Red Sea, Egypt.</string>
                     <navigationItem key="navigationItem" title="Matro7" id="nhA-ch-HWk">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="edit_icon" id="68v-th-Bvf">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="editReservationBtn:" destination="k5V-Cb-OC2" id="atL-XJ-Sf1"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="hotelListBtn" destination="1cK-4O-W5o" id="rkj-9U-Dxk"/>
                         <outlet property="hotelListContainer" destination="OTO-I9-wBZ" id="JcW-pm-LhD"/>
                         <outlet property="hotelOnMapContainer" destination="hx2-VV-wlE" id="zS6-D6-DHK"/>
+                        <outlet property="viewOnMapBtn" destination="2pT-o8-gM7" id="3VN-u0-dzF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CTo-Qn-QEX" userLabel="First Responder" sceneMemberID="firstResponder"/>

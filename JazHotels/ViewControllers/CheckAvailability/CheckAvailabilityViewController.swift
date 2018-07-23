@@ -12,9 +12,9 @@ import DatePickerDialog
 import SCLAlertView
 import SIAlertView
 import SVProgressHUD
+import CoreLocation
 
-
-class CheckAvailabilityViewController: UIViewController , UIScrollViewDelegate  {
+class CheckAvailabilityViewController: UIViewController , UIScrollViewDelegate ,CLLocationManagerDelegate  {
     @IBOutlet weak var hotelSearchTF: DropDown!
     @IBOutlet weak var numberOfNightsLb: UILabel!
     @IBOutlet weak var numberOfRoomLb: UILabel!
@@ -33,6 +33,8 @@ class CheckAvailabilityViewController: UIViewController , UIScrollViewDelegate  
     private var startDate:String?
     private var checkInDate:Date?
     private var endDate:String?
+    let locationManager = CLLocationManager()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         initView()
@@ -205,7 +207,8 @@ class CheckAvailabilityViewController: UIViewController , UIScrollViewDelegate  
         {
             
             SVProgressHUD.show()
-            ServiceManager().checkAvailbility(startDate: Helper.convertDateFormatter(date: startDate ?? "") , endDate: Helper.convertDateFormatter(date: endDate ?? "") , adultsNum: numberOfAdultsLb.text!, childNum: numberOfChildsLb.text!, hotelCode: selectedHotelCode) { (data, error) in
+            
+            ServiceManager().checkAvailbility(startDate: Helper.convertDateFormatter(date: startDate ?? "") , endDate: Helper.convertDateFormatter(date: endDate ?? "") , adultsNum: numberOfAdultsLb.text!, childNum: numberOfChildsLb.text!, hotelCode: selectedHotelCode,roomsNum: numberOfRoomLb.text!) { (data, error) in
                 SVProgressHUD.dismiss()
                 if error == nil
                 {

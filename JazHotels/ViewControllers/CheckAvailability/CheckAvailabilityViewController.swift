@@ -12,9 +12,10 @@ import DatePickerDialog
 import SCLAlertView
 import SIAlertView
 import SVProgressHUD
+import CoreLocation
+import ZAlertView
 
-
-class CheckAvailabilityViewController: UIViewController , UIScrollViewDelegate  {
+class CheckAvailabilityViewController: UIViewController , UIScrollViewDelegate {
     @IBOutlet weak var hotelSearchTF: DropDown!
     @IBOutlet weak var numberOfNightsLb: UILabel!
     @IBOutlet weak var numberOfRoomLb: UILabel!
@@ -33,24 +34,32 @@ class CheckAvailabilityViewController: UIViewController , UIScrollViewDelegate  
     private var startDate:String?
     private var checkInDate:Date?
     private var endDate:String?
+    var locationManager = CLLocationManager()
+    private var selectedHotelCodes:[String] = []
+    fileprivate var longtitude:String = ""
+    fileprivate var latitude:String = ""
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
         initView()
        // getHotelCodes(text: "Sharm El Sheikh")
-        ServiceManager().checkAvailbility(startDate: "2018-09-06", endDate: "2018-09-09", adultsNum: "2", childNum: "1", hotelCodes:getHotelCodes(text: "Sharm El Sheikh") , roomsNum: "1") { (success, error) in
-            
-        }
-        Helper.getCities()
+//        ServiceManager().checkAvailbility(startDate: "2018-09-06", endDate: "2018-09-09", adultsNum: "2", childNum: "1", hotelCodes:getHotelCodes(text: "Sharm El Sheikh") , roomsNum: "1") { (success, error) in
+//
+//        }
     }
     
     func initView()
     {
         hotelSearchTF.isSearchEnable =  true
+        
         hotelSearchTF.optionArray = JazHotels.hotelsName ?? []
         hotelSearchTF.optionIds = JazHotels.hotelsCode ?? []
         hotelSearchTF.didSelect{(selectedHotel , index , id) in
             print("Selected Hotel: \(selectedHotel) \n index: \(index) \n Id: \(id)")
             self.selectedHotelCode = String(id)
+            self.selectedHotelCodes = self.getHotelCodes(text: selectedHotel)
+            
         }
         
         let formatter = DateFormatter()
@@ -71,6 +80,27 @@ class CheckAvailabilityViewController: UIViewController , UIScrollViewDelegate  
         super.didReceiveMemoryWarning()
     }
    
+    @IBAction func addPromoCodeAlert(_ sender: Any) {
+        
+        let dialog = ZAlertView(title: "", message: "", isOkButtonLeft: true, okButtonText: "Done", cancelButtonText: "Cancel",
+                                okButtonHandler: { alertView in
+                                    
+                                    let promoTF  = alertView.getTextFieldWithIdentifier("promo")?.text ?? ""
+
+                                    print(promoTF)
+
+                                    alertView.dismissAlertView()
+                                    
+                                    
+        },
+                                cancelButtonHandler: { alertView in
+                                    alertView.dismissAlertView()
+        })
+        ZAlertView.normalTextColor = #colorLiteral(red: 0.3137254902, green: 0.0431372549, blue: 0.462745098, alpha: 1)
+        dialog.addTextField("promo", placeHolder: "Add promo code")
+        dialog.show()
+        
+    }
     @IBAction func checkInDateAction(_ sender: Any)
     {
         dateDailog.show("Select Date", doneButtonTitle: "Done", cancelButtonTitle: "Cancel", datePickerMode: .date) {
@@ -202,59 +232,138 @@ class CheckAvailabilityViewController: UIViewController , UIScrollViewDelegate  
         }
     }
     
+    @IBAction func getCurrentLocationBtnAction(_ sender: Any) {
+        
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestAlwaysAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.startUpdatingLocation()
+            hotelSearchTF.text = "Current Location"
+        }
+    }
     @IBAction func checkAvaibilityBtnAction(_ sender: Any)
     {
-        if hotelSearchTF.text != ""
+        if hotelSearchTF.text != "" && (isContainNewHotel(hotel: hotelSearchTF.text!) ||  hotelSearchTF.text == "Current Location")
         {
-            startDate = Helper.convertDateFormatter(date: startDate ?? "")
-            endDate = Helper.convertDateFormatter(date: endDate ?? "")
             
-            SVProgressHUD.show()
-            ServiceManager().checkAvailbility(startDate: startDate ?? "" , endDate: endDate ?? "", adultsNum: numberOfAdultsLb.text!, childNum: numberOfChildsLb.text!, hotelCode: selectedHotelCode,roomsNum: numberOfRoomLb.text!) { (data, error) in
-                SVProgressHUD.dismiss()
-                if error == nil
+            if hotelSearchTF.text == "Current Location"
+            {
+                getHotelsUsingCurrentLocation()
+            }
+                
+            else
+            {
+                getHotelsUsingHotelCode()
+               
+            }
+            
+        }
+        else
+        {
+            if hotelSearchTF.text == ""
+            {
+                DispatchQueue.main.async {
+                    SCLAlertView().showError("", subTitle: "please set hotel or destination.")
+                    
+                }
+            }
+            else
+            {
+                DispatchQueue.main.async {
+                    SCLAlertView().showError("", subTitle: "your search didnot match any avaiable room stays.")
+                    
+                }
+            }
+        }
+        
+    }
+    
+    func getHotelsUsingCurrentLocation()
+    {
+        
+    }
+    func getHotelsUsingHotelCode()
+    {
+        ////
+        SVProgressHUD.show()
+        ServiceManager().checkAvailbility(startDate: Helper.convertDateFormatter(date: startDate ?? "") , endDate: Helper.convertDateFormatter(date: endDate ?? "") , adultsNum: numberOfAdultsLb.text!, childNum: numberOfChildsLb.text!, hotelCodes: selectedHotelCodes,roomsNum: numberOfRoomLb.text!) { (data, error) in
+            SVProgressHUD.dismiss()
+            if error == nil
+            {
+                if let rooms = data?.soapBody.oTAHotelAvailRS
                 {
-                    if let rooms = data?.soapBody.oTAHotelAvailRS.roomStays.roomStay.roomRates
+                    
+                    
+                    
+                    let roomInfoList = rooms.criteria?.criterion
+                    
+                    let roomStayInfo = rooms.roomStays?.roomStay?.basicPropertyInfo
+                    let roomStays = rooms.roomStays?.roomStays
+                    
+                    //                    let currency = rooms.roomRate?[0].rates?.rate.fees.fee.currencyCode
+                    
+                    //                    let hotelRooms = JazHotels.hotels[0]
+                    
+                    if roomInfoList?.count == 0 || roomStays?.count == 0
                     {
-                       let price =  rooms.roomRate?[0].rates?.rate.tpaExtensions.nightlyRate[0].price
-                        let currency = rooms.roomRate?[0].rates?.rate.fees.fee.currencyCode
-                        
-                        let hotelRooms = JazHotels.hotels[0]
-                        let hotelView = HotelsViewController.create()
-                        hotelView.roomPrice = price
-                        hotelView.roomCurrency = currency
-                        hotelView.rooms = hotelRooms
                         DispatchQueue.main.async {
-                            self.navigationController?.pushViewController(hotelView, animated: true)
-
+                            SCLAlertView().showInfo("", subTitle: "No rooms avaiable")
+                            
                         }
                     }
                     else
                     {
-                        DispatchQueue.main.async {
-                            SCLAlertView().showInfo("", subTitle: "No rooms avaiable")
+                        let hotelView = HotelsViewController.create()
+                        hotelView.roomInfoList = roomInfoList
+                        hotelView.roomStayInfo = roomStayInfo
+                        hotelView.roomStays = roomStays
+                        hotelView.hotelTitle = self.hotelSearchTF.text!
+                        
 
+                        //                        hotelView.roomPrice = price
+                        //                    hotelView.roomCurrency = currency
+                        //                    hotelView.rooms = hotelRooms
+                        DispatchQueue.main.async {
+
+                            self.navigationController?.pushViewController(hotelView, animated: true)
+                            
                         }
                     }
+
                 }
                 else
                 {
                     DispatchQueue.main.async {
-                        SCLAlertView().showError((error?.localizedDescription)!, subTitle: "")
-
+                        SCLAlertView().showInfo("", subTitle: "No rooms avaiable")
+                        
                     }
                 }
-                
             }
-        }
-        else
-        {
-            DispatchQueue.main.async {
-                SCLAlertView().showError("", subTitle: "please set hotel or destination")
-
+            else
+            {
+                DispatchQueue.main.async {
+                    SCLAlertView().showError((error?.localizedDescription)!, subTitle: "")
+                    
+                }
             }
+            
         }
     }
+    func isContainNewHotel(hotel:String) -> Bool
+    {
+        for (_,item) in hotelSearchTF.optionArray.enumerated()
+        {
+            if hotel == item
+            {
+                return true
+            }
+        }
+        return false
+    }
+    
     //MARK:- Get Hotel Codes by city name or hotel name
     func getHotelCodes(text:String) -> [String] {
         var codes = [String]()
@@ -267,4 +376,23 @@ class CheckAvailabilityViewController: UIViewController , UIScrollViewDelegate  
     }
 
     
+}
+
+extension CheckAvailabilityViewController : CLLocationManagerDelegate
+{
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let userLocation:CLLocation = locations[0] as CLLocation
+        
+        // Call stopUpdatingLocation() to stop listening for location updates,
+        // other wise this function will be called every time when user location changes.
+        
+        self.longtitude  =  String(format: "%f", userLocation.coordinate.longitude)
+        self.latitude  =  String(format: "%f", userLocation.coordinate.latitude)
+
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error)
+    {
+        print("Error \(error)")
+    }
 }

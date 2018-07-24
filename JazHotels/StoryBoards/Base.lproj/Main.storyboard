@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,8 +17,14 @@
         <array key="Montserrat-ExtraBold.otf">
             <string>Montserrat-ExtraBold</string>
         </array>
+        <array key="Montserrat-Light.otf">
+            <string>Montserrat-Light</string>
+        </array>
         <array key="Montserrat-Medium.otf">
             <string>Montserrat-Medium</string>
+        </array>
+        <array key="Montserrat-Regular.otf">
+            <string>Montserrat-Regular</string>
         </array>
         <array key="Montserrat-SemiBold.otf">
             <string>Montserrat-SemiBold</string>
@@ -1081,6 +1088,7 @@ Alam Road, Red Sea, Egypt.</string>
                                                     </label>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstItem="8n3-j1-hfJ" firstAttribute="centerX" secondItem="L3D-lW-SYF" secondAttribute="centerX" id="D1w-Aw-hdt"/>
                                                     <constraint firstItem="qe5-RF-uY5" firstAttribute="centerY" secondItem="L3D-lW-SYF" secondAttribute="centerY" id="FdK-qT-w17"/>
@@ -1099,6 +1107,9 @@ Alam Road, Red Sea, Egypt.</string>
                                                         <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="9W3-0W-h3H" appends="YES" id="QxM-x6-Eat"/>
+                                                </connections>
                                             </view>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Destination or Hotel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TnI-Ni-KBT" customClass="DropDown" customModule="iOSDropDown">
                                                 <rect key="frame" x="20" y="198" width="334" height="60"/>
@@ -1120,6 +1131,9 @@ Alam Road, Red Sea, Egypt.</string>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TRe-l8-ejd">
                                                 <rect key="frame" x="326" y="213" width="24" height="30"/>
                                                 <state key="normal" image="location"/>
+                                                <connections>
+                                                    <action selector="getCurrentLocationBtnAction:" destination="QCg-b4-2nr" eventType="touchUpInside" id="DId-Mn-Cz1"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fwo-2j-aqR">
                                                 <rect key="frame" x="20" y="528.5" width="334" height="60"/>
@@ -1217,6 +1231,11 @@ Alam Road, Red Sea, Egypt.</string>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nEc-UM-UC6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="9W3-0W-h3H">
+                    <connections>
+                        <action selector="addPromoCodeAlert:" destination="QCg-b4-2nr" id="pOt-fX-JMz"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="452" y="2262.8185907046477"/>
         </scene>
@@ -1228,15 +1247,58 @@ Alam Road, Red Sea, Egypt.</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Toi-5e-5nt" customClass="TTSegmentedControl" customModule="TTSegmentedControl">
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OTO-I9-wBZ">
+                                <rect key="frame" x="0.0" y="120" width="375" height="547"/>
+                                <connections>
+                                    <segue destination="dqM-vH-fvz" kind="embed" id="KiV-Xw-amV"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hx2-VV-wlE">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <connections>
+                                    <segue destination="AEi-0m-Tkp" kind="embed" id="j51-r7-eDN"/>
+                                </connections>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Toi-5e-5nt">
                                 <rect key="frame" x="50" y="50" width="275" height="40"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="30A-TI-NEr">
+                                        <rect key="frame" x="0.0" y="0.0" width="275" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1cK-4O-W5o">
+                                                <rect key="frame" x="0.0" y="0.0" width="137.5" height="40"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="13"/>
+                                                <state key="normal" title="Hotels List">
+                                                    <color key="titleColor" red="0.31372549019607843" green="0.043137254901960784" blue="0.46274509803921571" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="hotelListBtnAction:" destination="k5V-Cb-OC2" eventType="touchUpInside" id="uor-EK-SeS"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2pT-o8-gM7">
+                                                <rect key="frame" x="137.5" y="0.0" width="137.5" height="40"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="13"/>
+                                                <state key="normal" title="View on Map">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.34999999999999998" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="viewOnMapBtnAction:" destination="k5V-Cb-OC2" eventType="touchUpInside" id="9E5-RL-Ohh"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="30A-TI-NEr" secondAttribute="trailing" id="7Yr-M8-ATu"/>
                                     <constraint firstAttribute="height" constant="40" id="QH4-Xp-HxO"/>
+                                    <constraint firstItem="30A-TI-NEr" firstAttribute="leading" secondItem="Toi-5e-5nt" secondAttribute="leading" id="flz-Sy-EZ9"/>
+                                    <constraint firstItem="30A-TI-NEr" firstAttribute="top" secondItem="Toi-5e-5nt" secondAttribute="top" id="hlW-rr-gPN"/>
+                                    <constraint firstAttribute="bottom" secondItem="30A-TI-NEr" secondAttribute="bottom" id="ql9-Wx-kpd"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="25"/>
+                                        <real key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="size" keyPath="padding">
                                         <size key="value" width="2" height="2"/>
@@ -1259,30 +1321,18 @@ Alam Road, Red Sea, Egypt.</string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OTO-I9-wBZ">
-                                <rect key="frame" x="0.0" y="120" width="375" height="547"/>
-                                <connections>
-                                    <segue destination="dqM-vH-fvz" kind="embed" id="KiV-Xw-amV"/>
-                                </connections>
-                            </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hx2-VV-wlE">
-                                <rect key="frame" x="0.0" y="120" width="375" height="547"/>
-                                <connections>
-                                    <segue destination="AEi-0m-Tkp" kind="embed" id="j51-r7-eDN"/>
-                                </connections>
-                            </containerView>
                         </subviews>
                         <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="hx2-VV-wlE" firstAttribute="leading" secondItem="GWU-aR-IpH" secondAttribute="leading" id="Bgh-hO-7Nb"/>
                             <constraint firstItem="GWU-aR-IpH" firstAttribute="bottom" secondItem="hx2-VV-wlE" secondAttribute="bottom" id="FXI-wl-fPq"/>
                             <constraint firstItem="OTO-I9-wBZ" firstAttribute="leading" secondItem="GWU-aR-IpH" secondAttribute="leading" id="JS1-Lj-XJR"/>
-                            <constraint firstItem="hx2-VV-wlE" firstAttribute="top" secondItem="Toi-5e-5nt" secondAttribute="bottom" constant="30" id="Qhq-iy-z5W"/>
                             <constraint firstItem="OTO-I9-wBZ" firstAttribute="trailing" secondItem="GWU-aR-IpH" secondAttribute="trailing" id="TuQ-n6-O6F"/>
                             <constraint firstItem="Toi-5e-5nt" firstAttribute="leading" secondItem="GWU-aR-IpH" secondAttribute="leading" constant="50" id="X5S-M3-pzk"/>
                             <constraint firstItem="GWU-aR-IpH" firstAttribute="bottom" secondItem="OTO-I9-wBZ" secondAttribute="bottom" id="eo9-7T-w9T"/>
                             <constraint firstItem="Toi-5e-5nt" firstAttribute="centerX" secondItem="6mj-MA-k8y" secondAttribute="centerX" id="g4Y-Eg-aJP"/>
                             <constraint firstItem="GWU-aR-IpH" firstAttribute="trailing" secondItem="hx2-VV-wlE" secondAttribute="trailing" id="jek-ol-71j"/>
+                            <constraint firstItem="hx2-VV-wlE" firstAttribute="centerY" secondItem="GWU-aR-IpH" secondAttribute="centerY" id="lic-PU-sJG"/>
                             <constraint firstItem="GWU-aR-IpH" firstAttribute="trailing" secondItem="Toi-5e-5nt" secondAttribute="trailing" constant="50" id="mqk-m9-MHK"/>
                             <constraint firstItem="OTO-I9-wBZ" firstAttribute="top" secondItem="Toi-5e-5nt" secondAttribute="bottom" constant="30" id="xIG-Ec-Lsm"/>
                             <constraint firstItem="Toi-5e-5nt" firstAttribute="top" secondItem="GWU-aR-IpH" secondAttribute="top" constant="30" id="yyy-Ff-Vb1"/>
@@ -1292,16 +1342,214 @@ Alam Road, Red Sea, Egypt.</string>
                     <navigationItem key="navigationItem" title="Matro7" id="nhA-ch-HWk">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="edit_icon" id="68v-th-Bvf">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="editReservationBtn:" destination="k5V-Cb-OC2" id="atL-XJ-Sf1"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="hotelListBtn" destination="1cK-4O-W5o" id="rkj-9U-Dxk"/>
                         <outlet property="hotelListContainer" destination="OTO-I9-wBZ" id="JcW-pm-LhD"/>
                         <outlet property="hotelOnMapContainer" destination="hx2-VV-wlE" id="zS6-D6-DHK"/>
+                        <outlet property="viewOnMapBtn" destination="2pT-o8-gM7" id="3VN-u0-dzF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CTo-Qn-QEX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="452" y="3067"/>
+        </scene>
+        <!--Rate Plans View Controller-->
+        <scene sceneID="iQd-fD-Ycv">
+            <objects>
+                <viewController storyboardIdentifier="RatePlansViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XOR-wh-UQo" customClass="RatePlansViewController" customModule="JazHotels" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L36-A9-FCz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5rj-3B-gYO">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" red="0.75686274509999996" green="0.75686274509999996" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.75686274509999996" green="0.75686274509999996" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="rate_cell" rowHeight="150" id="CHw-8S-Swo" customClass="RatePlanTableViewCell" customModule="JazHotels" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CHw-8S-Swo" id="uCp-lj-gxw">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9W7-Ul-OdV">
+                                                    <rect key="frame" x="20" y="10" width="335" height="130"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rCj-dV-nuQ" customClass="GradientView" customModule="JazHotels" customModuleProvider="target">
+                                                            <rect key="frame" x="10" y="0.0" width="111.5" height="130"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbj-tO-OED">
+                                                                    <rect key="frame" x="22.5" y="39.5" width="27" height="12"/>
+                                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="10"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2A-wl-kni">
+                                                                    <rect key="frame" x="22.5" y="56.5" width="48.5" height="21"/>
+                                                                    <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="17"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FA8-o9-2f1">
+                                                                    <rect key="frame" x="22.5" y="80" width="28" height="13"/>
+                                                                    <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="11"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/ Night" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3FU-Fy-8gI">
+                                                                    <rect key="frame" x="52.5" y="81" width="34.5" height="12"/>
+                                                                    <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="10"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="3FU-Fy-8gI" firstAttribute="leading" secondItem="FA8-o9-2f1" secondAttribute="trailing" constant="2" id="1X4-ur-Vix"/>
+                                                                <constraint firstItem="kbj-tO-OED" firstAttribute="centerY" secondItem="rCj-dV-nuQ" secondAttribute="centerY" constant="-20" id="6cq-GK-MYB"/>
+                                                                <constraint firstItem="FA8-o9-2f1" firstAttribute="top" secondItem="d2A-wl-kni" secondAttribute="bottom" constant="3" id="LZz-qO-hnB"/>
+                                                                <constraint firstItem="d2A-wl-kni" firstAttribute="leading" secondItem="kbj-tO-OED" secondAttribute="leading" id="VM2-LK-TmK"/>
+                                                                <constraint firstItem="d2A-wl-kni" firstAttribute="top" secondItem="kbj-tO-OED" secondAttribute="bottom" constant="5" id="a85-Sa-LY4"/>
+                                                                <constraint firstItem="3FU-Fy-8gI" firstAttribute="centerY" secondItem="FA8-o9-2f1" secondAttribute="centerY" id="bp1-Qu-8Gs"/>
+                                                                <constraint firstItem="FA8-o9-2f1" firstAttribute="leading" secondItem="d2A-wl-kni" secondAttribute="leading" id="cEu-sC-VEA"/>
+                                                                <constraint firstItem="kbj-tO-OED" firstAttribute="centerX" secondItem="rCj-dV-nuQ" secondAttribute="centerX" constant="-20" id="eDk-Jk-fsP"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="topColor">
+                                                                    <color key="value" red="0.36862745099999999" green="0.054901960780000002" blue="0.5450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
+                                                                    <color key="value" red="0.87450980389999999" green="0.1058823529" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="startPointX">
+                                                                    <real key="value" value="0.5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="endPointX">
+                                                                    <real key="value" value="0.5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="startPointY">
+                                                                    <real key="value" value="0.0"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="endPointY">
+                                                                    <real key="value" value="0.90000000000000002"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MvS-6Q-cv6">
+                                                            <rect key="frame" x="141.5" y="20" width="173.5" height="24.5"/>
+                                                            <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="20"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="la8-dM-rQm">
+                                                            <rect key="frame" x="141.5" y="59.5" width="173.5" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" red="0.45098039220000002" green="0.45098039220000002" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="MvS-6Q-cv6" firstAttribute="top" secondItem="9W7-Ul-OdV" secondAttribute="top" constant="20" id="2Le-F6-agh"/>
+                                                        <constraint firstItem="MvS-6Q-cv6" firstAttribute="leading" secondItem="rCj-dV-nuQ" secondAttribute="trailing" constant="20" id="4qf-Fh-bII"/>
+                                                        <constraint firstItem="rCj-dV-nuQ" firstAttribute="leading" secondItem="9W7-Ul-OdV" secondAttribute="leading" constant="10" id="BEc-OX-UWj"/>
+                                                        <constraint firstAttribute="width" secondItem="rCj-dV-nuQ" secondAttribute="width" multiplier="3" id="DOf-eD-5bA"/>
+                                                        <constraint firstAttribute="bottom" secondItem="rCj-dV-nuQ" secondAttribute="bottom" id="PJh-Iq-8IT"/>
+                                                        <constraint firstItem="la8-dM-rQm" firstAttribute="top" secondItem="MvS-6Q-cv6" secondAttribute="bottom" constant="15" id="ccy-iT-Gse"/>
+                                                        <constraint firstItem="la8-dM-rQm" firstAttribute="leading" secondItem="MvS-6Q-cv6" secondAttribute="leading" id="fy7-oh-pb1"/>
+                                                        <constraint firstItem="la8-dM-rQm" firstAttribute="trailing" secondItem="MvS-6Q-cv6" secondAttribute="trailing" id="ieC-Bd-ld8"/>
+                                                        <constraint firstItem="rCj-dV-nuQ" firstAttribute="top" secondItem="9W7-Ul-OdV" secondAttribute="top" id="sBd-AF-cKy"/>
+                                                        <constraint firstAttribute="trailing" secondItem="MvS-6Q-cv6" secondAttribute="trailing" constant="20" id="w5V-kj-nnU"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Quz-os-b27">
+                                                    <rect key="frame" x="132.5" y="125" width="150" height="25"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="150" id="vJd-eD-CDQ"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="10"/>
+                                                    <state key="normal" title="Available Rooms">
+                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="avaiableRoomBtnAction:" destination="CHw-8S-Swo" eventType="touchUpInside" id="vch-hU-CuL"/>
+                                                    </connections>
+                                                </button>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="closed" translatesAutoresizingMaskIntoConstraints="NO" id="YFd-QE-f9P">
+                                                    <rect key="frame" x="253" y="134.5" width="9" height="6"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="9W7-Ul-OdV" secondAttribute="trailing" constant="20" id="C2V-rR-TPh"/>
+                                                <constraint firstItem="Quz-os-b27" firstAttribute="bottom" secondItem="9W7-Ul-OdV" secondAttribute="bottom" constant="10" id="DvA-dM-9TQ"/>
+                                                <constraint firstAttribute="bottom" secondItem="9W7-Ul-OdV" secondAttribute="bottom" constant="10" id="MGM-Me-uga"/>
+                                                <constraint firstItem="YFd-QE-f9P" firstAttribute="centerY" secondItem="Quz-os-b27" secondAttribute="centerY" id="aeo-AL-biW"/>
+                                                <constraint firstItem="9W7-Ul-OdV" firstAttribute="top" secondItem="uCp-lj-gxw" secondAttribute="top" constant="10" id="dOc-bA-5Ia"/>
+                                                <constraint firstItem="YFd-QE-f9P" firstAttribute="leading" secondItem="Quz-os-b27" secondAttribute="trailing" constant="-29.5" id="dxa-qr-8hO"/>
+                                                <constraint firstItem="9W7-Ul-OdV" firstAttribute="leading" secondItem="uCp-lj-gxw" secondAttribute="leading" constant="20" id="f1M-CK-Yec"/>
+                                                <constraint firstItem="Quz-os-b27" firstAttribute="centerX" secondItem="9W7-Ul-OdV" secondAttribute="centerX" constant="20" id="vnF-cW-xkL"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="avaiableRoomBtn" destination="Quz-os-b27" id="kOd-z2-EpM"/>
+                                            <outlet property="rateDesc" destination="la8-dM-rQm" id="g8C-fl-U3h"/>
+                                            <outlet property="ratePrice" destination="d2A-wl-kni" id="v6Y-ty-imM"/>
+                                            <outlet property="rateTitle" destination="MvS-6Q-cv6" id="KNt-kn-WZG"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="XOR-wh-UQo" id="AY0-Lb-cVV"/>
+                                    <outlet property="delegate" destination="XOR-wh-UQo" id="2ta-jG-2Xj"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="0.5154644691780822" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Qpk-c8-6ib" firstAttribute="trailing" secondItem="5rj-3B-gYO" secondAttribute="trailing" id="Yhm-hm-Ey4"/>
+                            <constraint firstItem="5rj-3B-gYO" firstAttribute="leading" secondItem="Qpk-c8-6ib" secondAttribute="leading" id="cIr-zV-GBW"/>
+                            <constraint firstItem="5rj-3B-gYO" firstAttribute="top" secondItem="Qpk-c8-6ib" secondAttribute="top" id="djG-oy-E4O"/>
+                            <constraint firstItem="Qpk-c8-6ib" firstAttribute="bottom" secondItem="5rj-3B-gYO" secondAttribute="bottom" id="klu-8r-fVg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Qpk-c8-6ib"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="5rj-3B-gYO" id="fMv-7b-stE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Qr-Zp-4NU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationItem title="Rate Plans" id="ykk-P5-hmX">
+                    <barButtonItem key="rightBarButtonItem" title="Item" image="edit_icon" id="0Wx-8u-TXl">
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <action selector="editReservationBtn:" destination="k5V-Cb-OC2" id="ggh-hk-8eM"/>
+                        </connections>
+                    </barButtonItem>
+                </navigationItem>
+            </objects>
+            <point key="canvasLocation" x="1711" y="3056"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="p3H-XX-Kzi">
@@ -1387,11 +1635,28 @@ Alam Road, Red Sea, Egypt.</string>
             <objects>
                 <viewController storyboardIdentifier="HotelOnMapViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AEi-0m-Tkp" customClass="HotelOnMapViewController" customModule="JazHotels" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GiV-nS-NxP">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="547"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Zgm-2C-5zd">
+                                <rect key="frame" x="0.0" y="20" width="375" height="627"/>
+                                <connections>
+                                    <outlet property="delegate" destination="AEi-0m-Tkp" id="DWs-FU-b8A"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="80I-Vv-Ta7" firstAttribute="bottom" secondItem="Zgm-2C-5zd" secondAttribute="bottom" id="4Or-7c-j7X"/>
+                            <constraint firstItem="Zgm-2C-5zd" firstAttribute="top" secondItem="80I-Vv-Ta7" secondAttribute="top" id="VVV-oI-xnp"/>
+                            <constraint firstItem="80I-Vv-Ta7" firstAttribute="trailing" secondItem="Zgm-2C-5zd" secondAttribute="trailing" id="wYe-Ai-XFf"/>
+                            <constraint firstItem="Zgm-2C-5zd" firstAttribute="leading" secondItem="80I-Vv-Ta7" secondAttribute="leading" id="wnH-Oj-YAs"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="80I-Vv-Ta7"/>
                     </view>
+                    <connections>
+                        <outlet property="map" destination="Zgm-2C-5zd" id="kMH-6A-bGA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rnV-ES-5Ru" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1584,6 +1849,7 @@ Or discover Luxor and Aswan that are immensely rich in history. For unwinding, t
         <image name="availabilty_bg" width="360" height="584"/>
         <image name="back" width="10" height="16"/>
         <image name="checkLogo" width="89" height="65"/>
+        <image name="closed" width="9" height="6"/>
         <image name="edit_icon" width="24" height="24"/>
         <image name="email" width="20" height="15"/>
         <image name="favor-icon" width="23" height="21"/>

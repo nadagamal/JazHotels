@@ -117,6 +117,19 @@ class  Helper  {
         for (_,item) in hotelArray.enumerated() {
             hotelsName.append(item.hotelName)
             hotelsCode.append(Int(item.hotelCode ?? "")!)
+           
+        }
+        
+        
+        var cities = [String]()
+        for hotel in hotelArray {
+            if  hotel.contactInfos.contactInfo.addresses.address.cityName != nil &&
+                !(cities.contains(hotel.contactInfos.contactInfo.addresses.address.cityName)){
+                cities.append(hotel.contactInfos.contactInfo.addresses.address.cityName)
+                hotelsName.append(hotel.contactInfos.contactInfo.addresses.address.cityName)
+                hotelsCode.append(0)
+
+            }
         }
         
         return (hotelsName,hotelsCode)
@@ -125,7 +138,8 @@ class  Helper  {
     static func getCities() -> [String] {
         var cities = [String]()
         for hotel in JazHotels.hotels {
-            if  hotel.contactInfos.contactInfo.addresses.address.cityName != nil && !(cities .contains(hotel.contactInfos.contactInfo.addresses.address.cityName)){
+            if  hotel.contactInfos.contactInfo.addresses.address.cityName != nil &&
+                !(cities .contains(hotel.contactInfos.contactInfo.addresses.address.cityName)){
                 cities.append(hotel.contactInfos.contactInfo.addresses.address.cityName)
             }
         }

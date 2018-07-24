@@ -122,6 +122,14 @@
                     </userDefinedRuntimeAttribute>
                 </userDefinedRuntimeAttributes>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="fav_btn" destination="aqs-B0-AGb" id="EbX-kK-Mwn"/>
+                <outlet property="hotel_img" destination="cKh-2y-tXO" id="vyl-FL-kuo"/>
+                <outlet property="hotel_name" destination="C1w-8q-ZOv" id="fDn-1f-LNg"/>
+                <outlet property="hotel_place" destination="x8G-Mc-tZZ" id="7IA-LQ-0Mg"/>
+                <outlet property="hotel_price" destination="Dhg-cU-lgW" id="yoP-xo-jUu"/>
+                <outlet property="hotel_price_currency" destination="Ahh-6g-f2Z" id="Pjt-OH-dK1"/>
+            </connections>
             <point key="canvasLocation" x="140.5" y="-70"/>
         </tableViewCell>
     </objects>

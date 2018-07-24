@@ -12,19 +12,35 @@ class HotelsViewController: UIViewController {
 
     @IBOutlet weak var hotelListContainer: UIView!
     @IBOutlet weak var hotelOnMapContainer: UIView!
-    var roomPrice:String?
-    var roomCurrency:String?
-    var rooms:JHotelDescriptiveContent?
+    var roomStays: [JCRoomStay]?
+    var roomStayInfo: JCBasicPropertyInfo?
+    var roomInfoList: [JCCriterion]?
+    var hotelTitle:String?
     @IBOutlet weak var hotelListBtn: UIButton!
     @IBOutlet weak var viewOnMapBtn: UIButton!
+    
+    //    let price =  roomStays?[0].roomRates?.roomRate?[0].rates?.rate.tpaExtensions.nightlyRate?[0].price
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        NotificationCenter.default.post(name: Notification.Name("getHotelListInfo"), object: nil , userInfo: ["roomStays":roomStays ?? [] ,"roomStayInfo": roomStayInfo ?? "" , "roomInfoList":roomInfoList ?? [] ,"hotelTitle":hotelTitle])
+
         hotelListContainer.isHidden = false
         hotelOnMapContainer.isHidden = true
     }
+    
+//    @objc func updateHotelList(notification: Notification){
+//
+//        self.roomStays = notification.userInfo!["roomStays"] as? [JCRoomStay]
+//        self.roomStayInfo = notification.userInfo!["roomStayInfo"] as? JCBasicPropertyInfo
+//        self.roomInfoList = notification.userInfo!["roomInfoList"] as? [JCCriterion]
+//
+//    }
 
     @IBAction func hotelListBtnAction(_ sender: Any)
     {
+
         hotelListBtn.setTitleColor(#colorLiteral(red: 0.3137254902, green: 0.0431372549, blue: 0.462745098, alpha: 1), for: UIControlState.normal)
         viewOnMapBtn.setTitleColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.35), for: UIControlState.normal)
         hotelListContainer.isHidden = false

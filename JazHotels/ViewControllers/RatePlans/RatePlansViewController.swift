@@ -11,6 +11,7 @@ import UIKit
 class RatePlansViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    var roomRateList :[JCRoomRate] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,13 +42,14 @@ extension RatePlansViewController :UITableViewDelegate , UITableViewDataSource
 {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "rate_cell") as! RatePlanTableViewCell
+        cell.ratePrice.text = roomRateList[indexPath.row].rates?.rate?.total?.amountAfterTax
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 9
+        return roomRateList.count
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         

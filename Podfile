@@ -25,6 +25,7 @@ target 'JazHotels' do
   pod 'IQKeyboardManagerSwift'
   pod 'DatePickerDialog'
   pod 'SVProgressHUD'
+  pod 'SideMenu'
 
   post_install do |installer|
       installer.pods_project.build_configurations.each do |config|

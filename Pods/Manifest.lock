@@ -3,6 +3,9 @@ PODS:
   - BSKeyboardControls (2.2)
   - Cosmos (15.0.0)
   - DatePickerDialog (2.0)
+  - HCFramework (1.2.9)
+  - HCMapInfoView (1.0.0):
+    - HCFramework
   - ImageSlideshow (1.6.1):
     - ImageSlideshow/Core (= 1.6.1)
   - ImageSlideshow/Core (1.6.1)
@@ -45,6 +48,7 @@ DEPENDENCIES:
   - BSKeyboardControls (~> 2.2)
   - Cosmos (~> 15.0)
   - DatePickerDialog
+  - HCMapInfoView
   - ImageSlideshow (~> 1.6)
   - ImageSlideshow/Kingfisher
   - iOSDropDown
@@ -61,11 +65,13 @@ DEPENDENCIES:
   - XLPagerTabStrip (~> 8.0)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - BSKeyboardControls
     - Cosmos
     - DatePickerDialog
+    - HCFramework
+    - HCMapInfoView
     - ImageSlideshow
     - iOSDropDown
     - IQKeyboardManagerSwift
@@ -85,6 +91,8 @@ SPEC CHECKSUMS:
   BSKeyboardControls: b701935e789961102e3f20063bba7185800a2d3f
   Cosmos: a6dbd3d0baa0cc8f51f8598f7508d5a09d0a9ade
   DatePickerDialog: 5e1c24d9fe6506cd45dbc573eed7b0a251b1c09d
+  HCFramework: c2cc43840b694b435df171e6c02e7f92cbf0be3c
+  HCMapInfoView: 7613d773f231920a8f75d844bcdf402b5f9b6e56
   ImageSlideshow: f0f33e1a20668e83d77f5fb7729e4ae4437c0759
   iOSDropDown: 13af990620061ab42732b86edf1bd5268035e90e
   IQKeyboardManagerSwift: 36dbe324b4f9793f5f41ba5227f3e7c76dfefd50
@@ -99,6 +107,6 @@ SPEC CHECKSUMS:
   TTSegmentedControl: 7a5fc6c3e117c340106efd3a35205b987f2ba23c
   XLPagerTabStrip: c908b17cbf42fcd2598ee1adfc49bae25444d88a
 
-PODFILE CHECKSUM: c838af694c21ed7dea8d82e7782d9bee6b955364
+PODFILE CHECKSUM: a61f2b3b10a27a53c396557de95eea41ee5d5524
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.5.0

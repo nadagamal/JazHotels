@@ -14,7 +14,7 @@ import SIAlertView
 import SVProgressHUD
 import CoreLocation
 
-class CheckAvailabilityViewController: UIViewController , UIScrollViewDelegate ,CLLocationManagerDelegate  {
+class CheckAvailabilityViewController: UIViewController , UIScrollViewDelegate {
     @IBOutlet weak var hotelSearchTF: DropDown!
     @IBOutlet weak var numberOfNightsLb: UILabel!
     @IBOutlet weak var numberOfRoomLb: UILabel!
@@ -33,7 +33,7 @@ class CheckAvailabilityViewController: UIViewController , UIScrollViewDelegate ,
     private var startDate:String?
     private var checkInDate:Date?
     private var endDate:String?
-    let locationManager = CLLocationManager()
+    var locationManager = CLLocationManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -204,6 +204,17 @@ class CheckAvailabilityViewController: UIViewController , UIScrollViewDelegate ,
         }
     }
     
+    @IBAction func getCurrentLocationBtnAction(_ sender: Any) {
+        
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestAlwaysAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.startUpdatingLocation()
+        }
+    }
     @IBAction func checkAvaibilityBtnAction(_ sender: Any)
     {
         if hotelSearchTF.text != ""
@@ -268,4 +279,24 @@ class CheckAvailabilityViewController: UIViewController , UIScrollViewDelegate ,
     }
 
     
+}
+
+extension CheckAvailabilityViewController : CLLocationManagerDelegate
+{
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let userLocation:CLLocation = locations[0] as CLLocation
+        
+        // Call stopUpdatingLocation() to stop listening for location updates,
+        // other wise this function will be called every time when user location changes.
+        
+        // manager.stopUpdatingLocation()
+        
+        print("user latitude = \(userLocation.coordinate.latitude)")
+        print("user longitude = \(userLocation.coordinate.longitude)")
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error)
+    {
+        print("Error \(error)")
+    }
 }

@@ -13,6 +13,7 @@ import SCLAlertView
 import SIAlertView
 import SVProgressHUD
 import CoreLocation
+import ZAlertView
 
 class CheckAvailabilityViewController: UIViewController , UIScrollViewDelegate {
     @IBOutlet weak var hotelSearchTF: DropDown!
@@ -73,6 +74,27 @@ class CheckAvailabilityViewController: UIViewController , UIScrollViewDelegate {
         super.didReceiveMemoryWarning()
     }
    
+    @IBAction func addPromoCodeAlert(_ sender: Any) {
+        
+        let dialog = ZAlertView(title: "", message: "", isOkButtonLeft: true, okButtonText: "Done", cancelButtonText: "Cancel",
+                                okButtonHandler: { alertView in
+                                    
+                                    let promoTF  = alertView.getTextFieldWithIdentifier("promo")?.text ?? ""
+
+                                    print(promoTF)
+
+                                    alertView.dismissAlertView()
+                                    
+                                    
+        },
+                                cancelButtonHandler: { alertView in
+                                    alertView.dismissAlertView()
+        })
+        ZAlertView.normalTextColor = #colorLiteral(red: 0.3137254902, green: 0.0431372549, blue: 0.462745098, alpha: 1)
+        dialog.addTextField("promo", placeHolder: "Add promo code")
+        dialog.show()
+        
+    }
     @IBAction func checkInDateAction(_ sender: Any)
     {
         dateDailog.show("Select Date", doneButtonTitle: "Done", cancelButtonTitle: "Cancel", datePickerMode: .date) {
@@ -228,12 +250,13 @@ class CheckAvailabilityViewController: UIViewController , UIScrollViewDelegate {
                 {
                     if let rooms = data?.soapBody.oTAHotelAvailRS.roomStays.roomStay.roomRates
                     {
-                       let price =  rooms.roomRate?[0].rates?.rate.tpaExtensions.nightlyRate[0].price
+                        
+//                       let price =  rooms.roomRate?[0].rates?.rate.tpaExtensions.nightlyRate?[0].price
                         let currency = rooms.roomRate?[0].rates?.rate.fees.fee.currencyCode
                         
                         let hotelRooms = JazHotels.hotels[0]
                         let hotelView = HotelsViewController.create()
-                        hotelView.roomPrice = price
+//                        hotelView.roomPrice = price
                         hotelView.roomCurrency = currency
                         hotelView.rooms = hotelRooms
                         DispatchQueue.main.async {

@@ -42,6 +42,7 @@ PODS:
   - SwifterSwift/UIKit (4.4.0)
   - TTSegmentedControl (0.4.4)
   - XLPagerTabStrip (8.0.1)
+  - ZAlertView (1.0.4)
 
 DEPENDENCIES:
   - Alamofire
@@ -63,6 +64,7 @@ DEPENDENCIES:
   - SwifterSwift
   - TTSegmentedControl
   - XLPagerTabStrip (~> 8.0)
+  - ZAlertView
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -85,6 +87,7 @@ SPEC REPOS:
     - SwifterSwift
     - TTSegmentedControl
     - XLPagerTabStrip
+    - ZAlertView
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
@@ -106,7 +109,8 @@ SPEC CHECKSUMS:
   SwifterSwift: 1ce0e31801ddd3a2bd3256626275425adb01067a
   TTSegmentedControl: 7a5fc6c3e117c340106efd3a35205b987f2ba23c
   XLPagerTabStrip: c908b17cbf42fcd2598ee1adfc49bae25444d88a
+  ZAlertView: 59fffdb4e37a01df461835566d5101052b8af953
 
-PODFILE CHECKSUM: a61f2b3b10a27a53c396557de95eea41ee5d5524
+PODFILE CHECKSUM: efd7d532961b77c87cac3899631a1da041c083df
 
 COCOAPODS: 1.5.0

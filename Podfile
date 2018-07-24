@@ -26,6 +26,7 @@ target 'JazHotels' do
   pod 'DatePickerDialog'
   pod 'SVProgressHUD'
   pod 'HCMapInfoView'
+  pod 'ZAlertView'
 
 
   post_install do |installer|

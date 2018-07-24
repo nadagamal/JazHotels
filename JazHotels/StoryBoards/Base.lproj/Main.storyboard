@@ -1249,28 +1249,17 @@ Alam Road, Red Sea, Egypt.</string>
             </objects>
             <point key="canvasLocation" x="2892" y="1494.6026986506747"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Raised Tab Bar Controller-->
         <scene sceneID="CXl-Q4-dzm">
             <objects>
-                <tabBarController storyboardIdentifier="HomeTabbar" id="nna-uu-X7A" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="emM-kw-aB1" customClass="MainTabBar" customModule="JazHotels" customModuleProvider="target">
+                <tabBarController storyboardIdentifier="HomeTabbar" id="nna-uu-X7A" customClass="RaisedTabBarController" customModule="JazHotels" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="emM-kw-aB1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="selectedImageTintColor" red="0.36862745099999999" green="0.054901960780000002" blue="0.5450980392" alpha="1" colorSpace="calibratedRGB"/>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                <real key="value" value="0.0"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="lFj-Yz-DSO" kind="relationship" relationship="viewControllers" id="Wf3-np-dbO"/>
@@ -1342,7 +1331,7 @@ Alam Road, Red Sea, Egypt.</string>
         <scene sceneID="rQq-QS-EgD">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hA6-x8-ph3" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="checkAvailable-icon" landscapeImage="checkAvailable-icon" largeContentSizeImage="checkAvailable-icon" id="V2h-ai-K8x"/>
+                    <tabBarItem key="tabBarItem" title="" id="V2h-ai-K8x"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="9Hd-vP-uYf" customClass="GradientNavigationBar" customModule="JazHotels" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -1524,7 +1513,6 @@ Or discover Luxor and Aswan that are immensely rich in history. For unwinding, t
         <image name="account-icon" width="23" height="21"/>
         <image name="availabilty_bg" width="360" height="584"/>
         <image name="back" width="10" height="16"/>
-        <image name="checkAvailable-icon" width="82" height="82"/>
         <image name="checkLogo" width="89" height="65"/>
         <image name="edit_icon" width="24" height="24"/>
         <image name="email" width="20" height="15"/>

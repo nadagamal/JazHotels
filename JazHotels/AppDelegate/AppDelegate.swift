@@ -28,6 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UITabBarDelegate {
         GradientNavigationBar.appearance().startPoint = CGPoint.zero
         GradientNavigationBar.appearance().endPoint = CGPoint(x: 1, y: 1)
 
+        
         return true
     }
     func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {

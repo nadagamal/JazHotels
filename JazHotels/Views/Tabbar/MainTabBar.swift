@@ -30,13 +30,15 @@ class MainTabBar: UITabBar {
     
     func setupMiddleButton() {
         middleButton.frame.size = CGSize(width: 100, height: 100)
-        middleButton.layer.cornerRadius = 15
-        middleButton.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        middleButton.setBackgroundImage(UIImage(named: "checkAvailable-icon"), for:UIControlState.normal)
+        middleButton.backgroundColor = .blue
+        middleButton.layer.cornerRadius = 50
         middleButton.layer.masksToBounds = true
-        middleButton.center = CGPoint(x: UIScreen.main.bounds.width / 2, y: 15)
+        middleButton.center = CGPoint(x: UIScreen.main.bounds.width / 2, y:
+            UIScreen.main.bounds.height - 40)
         middleButton.addTarget(self, action: #selector(checkAvaibilityAction), for: .touchUpInside)
+        middleButton.setBackgroundImage(#imageLiteral(resourceName: "checkAvailableNavHCopy"), for:UIControlState.normal)
         addSubview(middleButton)
+        
     }
     
     

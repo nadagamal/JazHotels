@@ -9,16 +9,20 @@ import Foundation
 
 class JCTpaExtension{
 
-	var nightlyRate : JCNightlyRate!
-
-
-	/**
-	 * Instantiate the instance using the passed dictionary values to set the properties values
-	 */
-	init(fromDictionary dictionary: [String:Any]){
-		if let nightlyRateData = dictionary["NightlyRate"] as? [String:Any]{
-			nightlyRate = JCNightlyRate(fromDictionary: nightlyRateData)
-		}
-	}
+    var nightlyRate : [JCNightlyRate]!
+    
+    
+    /**
+     * Instantiate the instance using the passed dictionary values to set the properties values
+     */
+    init(fromDictionary dictionary: [String:Any]){
+        nightlyRate = [JCNightlyRate]()
+        if let nightlyRateArray = dictionary["NightlyRate"] as? [[String:Any]]{
+            for dic in nightlyRateArray{
+                let value = JCNightlyRate(fromDictionary: dic)
+                nightlyRate.append(value)
+            }
+        }
+    }
 
 }

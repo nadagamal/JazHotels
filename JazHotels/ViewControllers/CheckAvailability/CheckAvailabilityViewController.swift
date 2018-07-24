@@ -228,7 +228,7 @@ class CheckAvailabilityViewController: UIViewController , UIScrollViewDelegate {
                 {
                     if let rooms = data?.soapBody.oTAHotelAvailRS.roomStays.roomStay.roomRates
                     {
-                       let price =  rooms.roomRate?[0].rates?.rate.tpaExtensions.nightlyRate.price
+                       let price =  rooms.roomRate?[0].rates?.rate.tpaExtensions.nightlyRate[0].price
                         let currency = rooms.roomRate?[0].rates?.rate.fees.fee.currencyCode
                         
                         let hotelRooms = JazHotels.hotels[0]

@@ -62,7 +62,8 @@ extension HotelListViewController: UITableViewDelegate , UITableViewDataSource
       
         cell.hotel_place.text =
         "\(String(describing: roomStayInfo?.address.cityName)) - \(String(describing: roomStayInfo?.address.countryName))"
-  
+        cell.hotel_price.text = "0"
+            //roomStays?[0].roomRates?.roomRate?[0].rates?.rate.tpaExtensions.nightlyRate?[0].price ?? "0"
         if  JazHotels.hotelsImages![(roomStays?[indexPath.row].basicPropertyInfo.hotelCode)!]?[0] != nil
         {
             let imageURL = URL(string: (JazHotels.hotelsImages![(roomStays?[indexPath.row].basicPropertyInfo.hotelCode)!]?[0])!)

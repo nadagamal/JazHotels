@@ -33,6 +33,13 @@ class HomeViewController: UIViewController {
     }
 
     @IBAction func checkAvailbilityAction(_ sender: Any) {
+        if self.tabBarController?.tabBar.subviews.last is UIButton{
+            var button = self.view.subviews.last as! UIButton
+            button.setBackgroundImage(#imageLiteral(resourceName: "checkAvailableNav"), for: .normal)
+        }
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let tabBarController = appDelegate.window?.rootViewController as! UITabBarController
+        tabBarController.selectedIndex = 2;
     }
     @objc public static func create() -> HomeViewController {
         

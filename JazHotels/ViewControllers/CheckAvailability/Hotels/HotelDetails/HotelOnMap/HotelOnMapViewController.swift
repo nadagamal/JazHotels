@@ -46,7 +46,7 @@ class HotelOnMapViewController: UIViewController {
     @objc func updateHotelListCoordinates(notification: Notification){
         
         self.roomStays = (notification.userInfo!["roomStays"] as? [JCRoomStay])!
-        let hotelName = (notification.userInfo!["hotelTitle"] as? String
+        let hotelName = notification.userInfo!["hotelTitle"] as? String
 
         for (_,hotel) in (roomStays.enumerated())
         {
@@ -60,7 +60,8 @@ class HotelOnMapViewController: UIViewController {
         
         for (index,item) in hotelsLocation.enumerated()
         {
-            map.addAnnotation(HotelMapDetailsView(hotelName:hotelName!, hotelLocation:roomStays[index].basicPropertyInfo.hotelName, coordinate:CLLocationCoordinate2D(latitude: item.latitude, longitude:item.longtitude), image:#imageLiteral(resourceName: "Splash")))
+        
+            map.addAnnotation(HotelMapDetailsView(hotelName:hotelName ?? "", hotelLocation:roomStays[index].basicPropertyInfo.hotelName, coordinate:CLLocationCoordinate2D(latitude: item.latitude, longitude:item.longtitude), image:#imageLiteral(resourceName: "Splash")))
 
         }
         

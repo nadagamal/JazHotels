@@ -27,6 +27,7 @@ target 'JazHotels' do
   pod 'SVProgressHUD'
   pod 'HCMapInfoView'
   pod 'ZAlertView'
+  pod 'SideMenu'
 
 
   post_install do |installer|

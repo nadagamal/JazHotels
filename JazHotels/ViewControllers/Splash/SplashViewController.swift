@@ -16,6 +16,7 @@ class SplashViewController: UIViewController {
         getHotels()
         readHotelImagesJSON()
         readHotelURLSJSON()
+        readHotelCoordinatesJSON()
     }
     
     func getHotels(){
@@ -65,6 +66,22 @@ class SplashViewController: UIViewController {
             }
         }
     }
+    
+    
+    func readHotelCoordinatesJSON(){
+        if let path = Bundle.main.path(forResource: "hotels-coords", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
+                if let jsonResult = jsonResult as? Dictionary<String, [String]>{
+                    JazHotels.hotelsCoords = jsonResult
+                }
+            } catch {
+            }
+        }
+    }
+    
+    
     func readHotelURLSJSON(){
         if let path = Bundle.main.path(forResource: "hotels-urls", ofType: "json") {
             do {

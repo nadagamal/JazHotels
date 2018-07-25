@@ -15,17 +15,25 @@ class HotelOnMapViewController: UIViewController {
     
     @IBOutlet weak var map: MKMapView!
     fileprivate var annotation: MKAnnotation!
+    var roomStays: [JCRoomStay] = []
+    var hotelsLocation:[Location] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.updateHotelListCoordinates(notification:)), name: Notification.Name("getHotelListInfo"), object: nil)
 
+
+        
         map.addAnnotation(HotelMapDetailsView(hotelName:"Rover", hotelLocation:"Dog", coordinate:CLLocationCoordinate2D(latitude: 39.0, longitude: -99.0), image:#imageLiteral(resourceName: "Splash")))
 
     }
 
     override func viewWillAppear(_ animated: Bool) {
+        NotificationCenter.default.addObserver(self, selector: #selector(self.updateHotelListCoordinates(notification:)), name: Notification.Name("getHotelListInfo"), object: nil)
+
         self.navigationController?.navigationBar.isHidden = false
-        
+
     }
     @objc public static func create() -> HotelOnMapViewController {
         
@@ -35,7 +43,29 @@ class HotelOnMapViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    @objc func updateHotelListCoordinates(notification: Notification){
+        
+        self.roomStays = (notification.userInfo!["roomStays"] as? [JCRoomStay])!
+        let hotelName = notification.userInfo!["hotelTitle"] as? String
+
+        for (_,hotel) in (roomStays.enumerated())
+        {
+            if let location =  JazHotels.hotelsCoords![(hotel.basicPropertyInfo.hotelCode)!]
+            {
+
+                hotelsLocation.append(Location(latitude: Double(location[0] )! , longtitude: Double(location[1] )!))
+                
+            }
+        }
+        
+        for (index,item) in hotelsLocation.enumerated()
+        {
+        
+            map.addAnnotation(HotelMapDetailsView(hotelName:hotelName ?? "", hotelLocation:roomStays[index].basicPropertyInfo.hotelName, coordinate:CLLocationCoordinate2D(latitude: item.latitude, longitude:item.longtitude), image:#imageLiteral(resourceName: "Splash")))
+
+        }
+        
+    }
 }
 extension HotelOnMapViewController : MKMapViewDelegate
 {

@@ -23,8 +23,8 @@ class HotelsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        NotificationCenter.default.post(name: Notification.Name("getHotelListInfo"), object: nil , userInfo: ["roomStays":roomStays ?? [] ,"roomStayInfo": roomStayInfo ?? "" , "roomInfoList":roomInfoList ?? [] ,"hotelTitle":hotelTitle])
+        self.navigationItem.title = hotelTitle
+        NotificationCenter.default.post(name: Notification.Name("getHotelListInfo"), object: nil , userInfo: ["roomStays":roomStays ?? [] ,"roomStayInfo": roomStayInfo ?? "" , "roomInfoList":roomInfoList ?? [] ,"hotelTitle":hotelTitle ?? ""])
 
         hotelListContainer.isHidden = false
         hotelOnMapContainer.isHidden = true

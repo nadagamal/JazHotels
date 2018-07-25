@@ -38,6 +38,7 @@ class CheckAvailabilityViewController: UIViewController , UIScrollViewDelegate {
     private var selectedHotelCodes:[String] = []
     fileprivate var longtitude:String = ""
     fileprivate var latitude:String = ""
+    fileprivate var selectedHotelTitle:String = ""
 
 
     override func viewDidLoad() {
@@ -56,6 +57,7 @@ class CheckAvailabilityViewController: UIViewController , UIScrollViewDelegate {
         hotelSearchTF.optionArray = JazHotels.hotelsName ?? []
         hotelSearchTF.optionIds = JazHotels.hotelsCode ?? []
         hotelSearchTF.didSelect{(selectedHotel , index , id) in
+            self.selectedHotelTitle = selectedHotel
             print("Selected Hotel: \(selectedHotel) \n index: \(index) \n Id: \(id)")
             self.selectedHotelCode = String(id)
             self.selectedHotelCodes = self.getHotelCodes(text: selectedHotel)
@@ -383,7 +385,7 @@ class CheckAvailabilityViewController: UIViewController , UIScrollViewDelegate {
                         hotelView.roomInfoList = roomInfoList
                         hotelView.roomStayInfo = roomStayInfo
                         hotelView.roomStays = roomStays
-                        hotelView.hotelTitle = self.hotelSearchTF.text!
+                        hotelView.hotelTitle = self.selectedHotelTitle
                         
 
                         //                        hotelView.roomPrice = price

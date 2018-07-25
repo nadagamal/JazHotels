@@ -16,9 +16,11 @@ class HotelListViewController: UIViewController {
     var roomStays: [JCRoomStay]?
     var roomStayInfo: JCBasicPropertyInfo?
     var roomInfoList: [JCCriterion]?
+    var hotelTitle:String?
     override func viewDidLoad() {
         super.viewDidLoad()
 
+//        self.navigationItem.title = hotelTitle
         // Do any additional setup after loading the view.
         hotelTB.register(UINib(nibName: "HotelTableViewCell", bundle: nil), forCellReuseIdentifier: "hotel_cell")
 
@@ -37,14 +39,15 @@ class HotelListViewController: UIViewController {
         self.roomStays = notification.userInfo!["roomStays"] as? [JCRoomStay]
         self.roomStayInfo = notification.userInfo!["roomStayInfo"] as? JCBasicPropertyInfo
         self.roomInfoList = notification.userInfo!["roomInfoList"] as? [JCCriterion]
+        self.hotelTitle = notification.userInfo!["hotelTitle"] as? String
         self.hotelTB.reloadData()
 
     }
     override func viewWillAppear(_ animated: Bool) {
+        self.navigationItem.title = hotelTitle
         self.navigationController?.navigationBar.isHidden = false
         NotificationCenter.default.addObserver(self, selector: #selector(self.updateHotelList(notification:)), name: Notification.Name("getHotelListInfo"), object: nil)
 
-        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -43,7 +43,8 @@ extension RatePlansViewController :UITableViewDelegate , UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "rate_cell") as! RatePlanTableViewCell
         cell.ratePrice.text = roomRateList[indexPath.row].rates?.rate?.total?.amountAfterTax
-        
+        cell.rateTitle.text = ""
+        cell.rateDesc.text = ""
         return cell
     }
     

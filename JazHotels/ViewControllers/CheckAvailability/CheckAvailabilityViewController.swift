@@ -283,7 +283,70 @@ class CheckAvailabilityViewController: UIViewController , UIScrollViewDelegate {
     
     func getHotelsUsingCurrentLocation()
     {
-        
+        SVProgressHUD.show()
+        ServiceManager().checkAvailbility(startDate:Helper.convertDateFormatter(date: startDate ?? ""), endDate:Helper.convertDateFormatter(date: endDate ?? "")  ,adultsNum:numberOfAdultsLb.text! , childNum:numberOfChildsLb.text!, hotelCode:"",roomsNum:numberOfRoomLb.text!,longitude:longtitude,latitude:latitude) {
+            (data, error) in
+            SVProgressHUD.dismiss()
+            if error == nil
+            {
+                if let rooms = data?.soapBody.oTAHotelAvailRS
+                {
+                    
+                    
+                    
+                    let roomInfoList = rooms.criteria?.criterion
+                    
+                    let roomStayInfo = rooms.roomStays?.roomStay?.basicPropertyInfo
+                    let roomStays = rooms.roomStays?.roomStays
+                    
+                    //                    let currency = rooms.roomRate?[0].rates?.rate.fees.fee.currencyCode
+                    
+                    //                    let hotelRooms = JazHotels.hotels[0]
+                    
+                    if roomInfoList?.count == 0 || roomStays?.count == 0
+                    {
+                        DispatchQueue.main.async {
+                            SCLAlertView().showInfo("", subTitle: "No rooms avaiable")
+                            
+                        }
+                    }
+                    else
+                    {
+                        let hotelView = HotelsViewController.create()
+                        hotelView.roomInfoList = roomInfoList
+                        hotelView.roomStayInfo = roomStayInfo
+                        hotelView.roomStays = roomStays
+                        hotelView.hotelTitle = self.hotelSearchTF.text!
+                        
+                        
+                        //                        hotelView.roomPrice = price
+                        //                    hotelView.roomCurrency = currency
+                        //                    hotelView.rooms = hotelRooms
+                        DispatchQueue.main.async {
+                            
+                            self.navigationController?.pushViewController(hotelView, animated: true)
+                            
+                        }
+                    }
+                    
+                }
+                else
+                {
+                    DispatchQueue.main.async {
+                        SCLAlertView().showInfo("", subTitle: "No rooms avaiable")
+                        
+                    }
+                }
+            }
+            else
+            {
+                DispatchQueue.main.async {
+                    SCLAlertView().showError((error?.localizedDescription)!, subTitle: "")
+                    
+                }
+            }
+            
+        }
     }
     func getHotelsUsingHotelCode()
     {

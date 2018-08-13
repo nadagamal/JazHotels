@@ -63,10 +63,9 @@ extension HotelListViewController: UITableViewDelegate , UITableViewDataSource
         let cell = hotelTB.dequeueReusableCell(withIdentifier: "hotel_cell") as! HotelTableViewCell
         cell.hotel_name.text = roomStays?[indexPath.row].basicPropertyInfo.hotelName
       
-        cell.hotel_place.text =
-        "\(String(describing: roomStayInfo?.address.cityName)) - \(String(describing: roomStayInfo?.address.countryName))"
-        cell.hotel_price.text = "0"
-            //roomStays?[0].roomRates?.roomRate?[0].rates?.rate.tpaExtensions.nightlyRate?[0].price ?? "0"
+        cell.hotel_place.text = roomStayInfo?.address.cityName
+        
+        cell.hotel_price.text = roomStays?[indexPath.row].roomRates?.roomRate?[0].rates?.rate.tpaExtensions.nightlyRate?[0].price ?? "0"
         if  JazHotels.hotelsImages![(roomStays?[indexPath.row].basicPropertyInfo.hotelCode)!]?[0] != nil
         {
             let imageURL = URL(string: (JazHotels.hotelsImages![(roomStays?[indexPath.row].basicPropertyInfo.hotelCode)!]?[0])!)
@@ -95,7 +94,8 @@ extension HotelListViewController: UITableViewDelegate , UITableViewDataSource
         if roomStays?[indexPath.row].roomRates?.roomRate?.count != 0
         {
             rateView.roomRateList = (roomStays?[indexPath.row].roomRates?.roomRate)!
-            
+            rateView.ratePlans = roomStays?[indexPath.row].ratePlans
+
             self.navigationController?.pushViewController(rateView, animated: true)
         }
         else

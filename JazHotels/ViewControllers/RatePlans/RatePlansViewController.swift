@@ -12,14 +12,10 @@ class RatePlansViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     var roomRateList :[JCRoomRate] = []
-    
+    var ratePlans:JCRatePlan!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-        
-        //        tableView.register(UINib(nibName: "RatePlanTableViewCell", bundle: nil), forCellReuseIdentifier: "rate_cell")
-        
+        self.title = "Rate Plans"
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -43,8 +39,15 @@ extension RatePlansViewController :UITableViewDelegate , UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "rate_cell") as! RatePlanTableViewCell
         cell.ratePrice.text = roomRateList[indexPath.row].rates?.rate?.total?.amountAfterTax
-        cell.rateTitle.text = ""
-        cell.rateDesc.text = ""
+        if ratePlans != nil{
+        cell.rateTitle.text = ratePlans.ratePlan[0].ratePlanDescription.name ?? ""
+            if ratePlans.ratePlan[0].ratePlanDescription.text != nil{
+                let str = ratePlans.ratePlan[0].ratePlanDescription.text.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
+                cell.rateDesc.text = str
+
+            }
+
+        }
         return cell
     }
     
@@ -59,6 +62,6 @@ extension RatePlansViewController :UITableViewDelegate , UITableViewDataSource
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        return 150.0
+        return 180.0
     }
 }

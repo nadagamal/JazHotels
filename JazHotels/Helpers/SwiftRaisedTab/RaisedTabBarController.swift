@@ -13,7 +13,8 @@ open class RaisedTabBarController: UITabBarController {
     override open func viewDidLoad() {
         super.viewDidLoad()
       //  self.insertEmptyTabItem("", atIndex: 2)
-        let img = #imageLiteral(resourceName: "checkAvailableNav")
+        self.selectedIndex = 2
+        let img = #imageLiteral(resourceName: "checkAvailableNavHCopy")
         self.addRaisedButton(img, highlightImage: #imageLiteral(resourceName: "checkAvailableNavHCopy"), offset: -5.0)
     }
     

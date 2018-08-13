@@ -366,13 +366,17 @@ class CheckAvailabilityViewController: UIViewController , UIScrollViewDelegate {
                     let roomInfoList = rooms.criteria?.criterion
                     
                     let roomStayInfo = rooms.roomStays?.roomStay?.basicPropertyInfo
-                    let roomStays = rooms.roomStays?.roomStays
+                    var roomStays = rooms.roomStays?.roomStays
+                    
+                    if self.selectedHotelCodes.count == 1{
+                        roomStays?.append((rooms.roomStays?.roomStay)!)
+                    }
                     
                     //                    let currency = rooms.roomRate?[0].rates?.rate.fees.fee.currencyCode
                     
                     //                    let hotelRooms = JazHotels.hotels[0]
                     
-                    if roomInfoList?.count == 0 || roomStays?.count == 0
+                    if roomStays?.count == 0
                     {
                         DispatchQueue.main.async {
                             SCLAlertView().showInfo("", subTitle: "No rooms avaiable")

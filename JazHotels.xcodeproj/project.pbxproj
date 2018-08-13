@@ -129,6 +129,8 @@
 		9A8E78D120F8F8490034C3AF /* UINavigationController+GradientColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8E78D020F8F8490034C3AF /* UINavigationController+GradientColor.swift */; };
 		9A8E78D520F8F98E0034C3AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8E78D420F8F98E0034C3AF /* ViewController.swift */; };
 		9A8E78D720F93EFE0034C3AF /* HotelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8E78D620F93EFD0034C3AF /* HotelCollectionViewCell.swift */; };
+		9A9A92D621212F5500203502 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9A92D521212F5400203502 /* LoginViewController.swift */; };
+		9A9A92D821213BBC00203502 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9A9A92D721213BBC00203502 /* GoogleService-Info.plist */; };
 		9AADBF1120ED5052009183FE /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AADBF1020ED5052009183FE /* FavoriteViewController.swift */; };
 		9AADBF1320ED509C009183FE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AADBF1220ED509C009183FE /* ProfileViewController.swift */; };
 		9AADBF1720ED50D0009183FE /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AADBF1620ED50D0009183FE /* AboutViewController.swift */; };
@@ -333,6 +335,8 @@
 		9A8E78D020F8F8490034C3AF /* UINavigationController+GradientColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+GradientColor.swift"; sourceTree = "<group>"; };
 		9A8E78D420F8F98E0034C3AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9A8E78D620F93EFD0034C3AF /* HotelCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotelCollectionViewCell.swift; sourceTree = "<group>"; };
+		9A9A92D521212F5400203502 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9A9A92D721213BBC00203502 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9AADBF1020ED5052009183FE /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		9AADBF1220ED509C009183FE /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		9AADBF1620ED50D0009183FE /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
@@ -637,6 +641,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		9A9A92D421212F3200203502 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				9A9A92D521212F5400203502 /* LoginViewController.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
 		9AADBF0D20ED502F009183FE /* Favourite */ = {
 			isa = PBXGroup;
 			children = (
@@ -789,6 +801,7 @@
 		9AE61C7A20DAC737006160C1 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				9A9A92D721213BBC00203502 /* GoogleService-Info.plist */,
 				524EEE7D20DA840F006B9917 /* Info.plist */,
 				9AE61C7B20DAC740006160C1 /* fonts */,
 			);
@@ -850,6 +863,7 @@
 		9AE61CC720DAE057006160C1 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				9A9A92D421212F3200203502 /* Authentication */,
 				9ADD3E432106B1DD00D00078 /* RatePlans */,
 				524F784C20F9364400AF0EF6 /* HotelDetailsViewController */,
 				9AADBF1E20ED51D6009183FE /* Splash */,
@@ -917,6 +931,7 @@
 				524EEE6C20DA840D006B9917 /* Resources */,
 				94637E4F20268CEF4DF8057A /* [CP] Embed Pods Frameworks */,
 				9AF1BE8820EAE025008ECDC4 /* Embed Frameworks */,
+				766AD8CC11AE391551AA7BDA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -984,6 +999,7 @@
 				9AE61CC220DAC74B006160C1 /* MontserratAlternates-ThinItalic.otf in Resources */,
 				9AE61CAB20DAC74B006160C1 /* Montserrat-ThinItalic.otf in Resources */,
 				9AE61CA820DAC74B006160C1 /* MontserratAlternates-Medium.otf in Resources */,
+				9A9A92D821213BBC00203502 /* GoogleService-Info.plist in Resources */,
 				9AE61CAD20DAC74B006160C1 /* MontserratAlternates-MediumItalic.otf in Resources */,
 				9AE61CAE20DAC74B006160C1 /* Montserrat-ExtraLight.otf in Resources */,
 				9AE61CA420DAC74B006160C1 /* Montserrat-BlackItalic.otf in Resources */,
@@ -1016,6 +1032,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		766AD8CC11AE391551AA7BDA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-JazHotels/Pods-JazHotels-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JazHotels/Pods-JazHotels-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		94637E4F20268CEF4DF8057A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1027,6 +1061,9 @@
 				"${BUILT_PRODUCTS_DIR}/BSKeyboardControls/BSKeyboardControls.framework",
 				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
 				"${BUILT_PRODUCTS_DIR}/DatePickerDialog/DatePickerDialog.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/HCFramework/HCFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/HCMapInfoView/HCMapInfoView.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
@@ -1050,6 +1087,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BSKeyboardControls.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DatePickerDialog.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HCFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HCMapInfoView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
@@ -1179,6 +1219,7 @@
 				52B6164C20E891C100A1A416 /* JRestaurant.swift in Sources */,
 				52B6166120E891C100A1A416 /* JCategoryCode.swift in Sources */,
 				52B6163F20E891C100A1A416 /* JHotelInfo.swift in Sources */,
+				9A9A92D621212F5500203502 /* LoginViewController.swift in Sources */,
 				9ACCCC9A20FAE6000083CBD2 /* Date.swift in Sources */,
 				9ADD3E3F2106A6D500D00078 /* MapInfoHotelView.swift in Sources */,
 				52B6166A20E891C100A1A416 /* JCountryName.swift in Sources */,
@@ -1389,7 +1430,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Nada.JazHotels;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jaz.JazHotels;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "JazHotels/Helpers/JazHotels-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
@@ -1415,7 +1456,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Nada.JazHotels;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jaz.JazHotels;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "JazHotels/Helpers/JazHotels-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;

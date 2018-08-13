@@ -27,6 +27,9 @@ target 'JazHotels' do
   pod 'SVProgressHUD'
   pod 'HCMapInfoView'
   pod 'ZAlertView'
+  pod 'Firebase/Auth'
+  pod 'GoogleSignIn'
+
 
 
   post_install do |installer|

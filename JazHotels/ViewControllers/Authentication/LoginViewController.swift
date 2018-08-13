@@ -14,6 +14,7 @@ class LoginViewController: UIViewController , GIDSignInUIDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        GIDSignIn.sharedInstance().uiDelegate = self
 
         NotificationCenter.default.addObserver(self, selector: #selector(LoginViewController.signInWithGoogle(notification:)), name: Notification.Name(HotelJazConstants.SocialPath.kSocialAuthenticationPathGoogle), object: nil)
     }
@@ -30,7 +31,7 @@ class LoginViewController: UIViewController , GIDSignInUIDelegate {
     
     @IBAction func siginGoogleAction(_ sender: Any) {
         
-        GIDSignIn.sharedInstance().signIn()
+//        GIDSignIn.sharedInstance().signIn()
         
     }
     

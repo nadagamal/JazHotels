@@ -40,27 +40,27 @@ extension UISegmentedControl {
 }
 extension UIFont {
     class func cairoFontExtraLightOfSize(size: CGFloat) -> UIFont {
-        return UIFont(name: "Cairo-ExtraLight", size: size)!
+        return UIFont(name: "MontserratAlternates-ExtraLight", size: size)!
     }
     
     class func cairoFontLightOfSize(size: CGFloat) -> UIFont {
-        return UIFont(name: "Cairo-Light", size: size)!
+        return UIFont(name: "Montserrat-Light", size: size)!
     }
     
     class func cairoFontRegularOfSize(size: CGFloat) -> UIFont {
-        return UIFont(name: "Cairo-Regular", size: size)!
+        return UIFont(name: "Montserrat-Regular", size: size)!
     }
     
     class func cairoFontSemiBlodOfSize(size: CGFloat) -> UIFont {
-        return UIFont(name: "Cairo-SemiBold", size: size)!
+        return UIFont(name: "Montserrat-SemiBold", size: size)!
     }
     
     class func cairoFontBlodOfSize(size: CGFloat) -> UIFont {
-        return UIFont(name: "Cairo-Bold", size: size)!
+        return UIFont(name: "Montserrat-Bold", size: size)!
     }
     
     class func cairoFontSemiBlackOfSize(size: CGFloat) -> UIFont {
-        return UIFont(name: "Cairo-Black", size: size)!
+        return UIFont(name: "Montserrat-Bold", size: size)!
     }
 }
 class  Helper  {

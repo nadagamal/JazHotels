@@ -121,6 +121,7 @@
 		52B616E920E9566400A1A416 /* JImageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B616E620E9566300A1A416 /* JImageItem.swift */; };
 		52B616EA20E9566400A1A416 /* JBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B616E720E9566300A1A416 /* JBody.swift */; };
 		52B616EB20E9566400A1A416 /* JEnvelope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B616E820E9566400A1A416 /* JEnvelope.swift */; };
+		52E1C20B212171D100010EBB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52E1C20A212171D000010EBB /* GoogleService-Info.plist */; };
 		9A06CB1C20EACC4900AFBCA2 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A06CB1B20EACC4900AFBCA2 /* MainTabBar.swift */; };
 		9A06CB1F20EACF6700AFBCA2 /* HotelJazConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A06CB1E20EACF6700AFBCA2 /* HotelJazConstants.swift */; };
 		9A41478D2108C31200C95F0A /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A41478C2108C31200C95F0A /* Location.swift */; };
@@ -323,6 +324,7 @@
 		52B616E620E9566300A1A416 /* JImageItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JImageItem.swift; sourceTree = "<group>"; };
 		52B616E720E9566300A1A416 /* JBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JBody.swift; sourceTree = "<group>"; };
 		52B616E820E9566400A1A416 /* JEnvelope.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JEnvelope.swift; sourceTree = "<group>"; };
+		52E1C20A212171D000010EBB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8963E40941314293147FBF58 /* Pods-JazHotels.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JazHotels.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JazHotels/Pods-JazHotels.debug.xcconfig"; sourceTree = "<group>"; };
 		925F604466D8797ABBF10B44 /* Pods_JazHotels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JazHotels.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A06CB1B20EACC4900AFBCA2 /* MainTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
@@ -428,6 +430,7 @@
 		524EEE7020DA840D006B9917 /* JazHotels */ = {
 			isa = PBXGroup;
 			children = (
+				52E1C20A212171D000010EBB /* GoogleService-Info.plist */,
 				9ADD3E402106A74600D00078 /* Model */,
 				524F784520F9222700AF0EF6 /* JsonFiles */,
 				9AE61CCA20DAE077006160C1 /* AppDelegate */,
@@ -917,6 +920,7 @@
 				524EEE6C20DA840D006B9917 /* Resources */,
 				94637E4F20268CEF4DF8057A /* [CP] Embed Pods Frameworks */,
 				9AF1BE8820EAE025008ECDC4 /* Embed Frameworks */,
+				1CD2E64FD5B845F61B118588 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -984,6 +988,7 @@
 				9AE61CC220DAC74B006160C1 /* MontserratAlternates-ThinItalic.otf in Resources */,
 				9AE61CAB20DAC74B006160C1 /* Montserrat-ThinItalic.otf in Resources */,
 				9AE61CA820DAC74B006160C1 /* MontserratAlternates-Medium.otf in Resources */,
+				52E1C20B212171D100010EBB /* GoogleService-Info.plist in Resources */,
 				9AE61CAD20DAC74B006160C1 /* MontserratAlternates-MediumItalic.otf in Resources */,
 				9AE61CAE20DAC74B006160C1 /* Montserrat-ExtraLight.otf in Resources */,
 				9AE61CA420DAC74B006160C1 /* Montserrat-BlackItalic.otf in Resources */,
@@ -1016,6 +1021,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1CD2E64FD5B845F61B118588 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-JazHotels/Pods-JazHotels-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JazHotels/Pods-JazHotels-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		94637E4F20268CEF4DF8057A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1027,6 +1050,9 @@
 				"${BUILT_PRODUCTS_DIR}/BSKeyboardControls/BSKeyboardControls.framework",
 				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
 				"${BUILT_PRODUCTS_DIR}/DatePickerDialog/DatePickerDialog.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/HCFramework/HCFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/HCMapInfoView/HCMapInfoView.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
@@ -1051,6 +1077,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BSKeyboardControls.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DatePickerDialog.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HCFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HCMapInfoView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
@@ -1391,7 +1420,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Jaz.JazHotels;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jaz.JazHotels;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "JazHotels/Helpers/JazHotels-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
@@ -1417,7 +1446,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Jaz.JazHotels;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jaz.JazHotels;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "JazHotels/Helpers/JazHotels-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;

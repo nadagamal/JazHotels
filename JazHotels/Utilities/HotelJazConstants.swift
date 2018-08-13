@@ -3,6 +3,11 @@ import UIKit
 
 class HotelJazConstants: NSObject {
 
+    struct SocialPath{
+        static let kSocialAuthenticationPathGoogle: String = "GOOGLE"
+    }
+
+    
     struct StoryBoard
     {
         static let mainSB = "Main"

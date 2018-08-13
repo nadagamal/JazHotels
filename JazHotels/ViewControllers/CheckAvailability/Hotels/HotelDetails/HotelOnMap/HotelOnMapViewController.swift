@@ -23,10 +23,6 @@ class HotelOnMapViewController: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.updateHotelListCoordinates(notification:)), name: Notification.Name("getHotelListInfo"), object: nil)
 
-
-        
-        map.addAnnotation(HotelMapDetailsView(hotelName:"Rover", hotelLocation:"Dog", coordinate:CLLocationCoordinate2D(latitude: 39.0, longitude: -99.0), image:#imageLiteral(resourceName: "Splash")))
-
     }
 
     override func viewWillAppear(_ animated: Bool) {

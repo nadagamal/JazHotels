@@ -39,7 +39,7 @@ extension RatePlansViewController :UITableViewDelegate , UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "rate_cell") as! RatePlanTableViewCell
         cell.ratePrice.text = roomRateList[indexPath.row].rates?.rate?.total?.amountAfterTax
-        if ratePlans != nil{
+        if ratePlans != nil && ratePlans.ratePlan.count>0{
         cell.rateTitle.text = ratePlans.ratePlan[0].ratePlanDescription.name ?? ""
             if ratePlans.ratePlan[0].ratePlanDescription.text != nil{
                 let str = ratePlans.ratePlan[0].ratePlanDescription.text.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)

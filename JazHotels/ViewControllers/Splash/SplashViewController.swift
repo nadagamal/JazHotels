@@ -45,6 +45,7 @@ class SplashViewController: UIViewController {
                             let dataa = NSKeyedArchiver.archivedData(withRootObject: data!)
                             UserDefaults.standard.set(dataa, forKey: "Hotels")
                             self.activityIndicator .stopAnimating()
+                            (JazHotels.hotelsName,JazHotels.hotelsCode) = Helper.getHotelNamesAndIds(hotelArray: JazHotels.hotels)
                         }
                         self.setRootViewController()
                         

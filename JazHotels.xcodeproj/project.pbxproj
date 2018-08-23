@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		520726EF212D9A0A009A284B /* JazHotelsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520726EE212D9A0A009A284B /* JazHotelsTests.swift */; };
+		520726FD212DA06C009A284B /* JazHotelsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520726FC212DA06C009A284B /* JazHotelsUITests.swift */; };
 		524EEE7220DA840D006B9917 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524EEE7120DA840D006B9917 /* AppDelegate.swift */; };
 		524EEE7920DA840F006B9917 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 524EEE7820DA840F006B9917 /* Assets.xcassets */; };
 		524EEE7C20DA840F006B9917 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 524EEE7A20DA840F006B9917 /* LaunchScreen.storyboard */; };
@@ -191,6 +193,23 @@
 		FA34B49D79DD74C9696B2EEE /* Pods_JazHotels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 925F604466D8797ABBF10B44 /* Pods_JazHotels.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		520726F1212D9A0A009A284B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 524EEE6620DA840D006B9917 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 524EEE6D20DA840D006B9917;
+			remoteInfo = JazHotels;
+		};
+		520726FF212DA06C009A284B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 524EEE6620DA840D006B9917 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 524EEE6D20DA840D006B9917;
+			remoteInfo = JazHotels;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		9AF1BE8820EAE025008ECDC4 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -206,6 +225,12 @@
 
 /* Begin PBXFileReference section */
 		42D73029D47BCCF9EDE78E08 /* Pods-JazHotels.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JazHotels.release.xcconfig"; path = "Pods/Target Support Files/Pods-JazHotels/Pods-JazHotels.release.xcconfig"; sourceTree = "<group>"; };
+		520726EC212D9A0A009A284B /* JazHotelsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JazHotelsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		520726EE212D9A0A009A284B /* JazHotelsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JazHotelsTests.swift; sourceTree = "<group>"; };
+		520726F0212D9A0A009A284B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		520726FA212DA06C009A284B /* JazHotelsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JazHotelsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		520726FC212DA06C009A284B /* JazHotelsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JazHotelsUITests.swift; sourceTree = "<group>"; };
+		520726FE212DA06C009A284B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		524EEE6E20DA840D006B9917 /* JazHotels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JazHotels.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		524EEE7120DA840D006B9917 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		524EEE7820DA840F006B9917 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -396,6 +421,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		520726E9212D9A0A009A284B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		520726F7212DA06C009A284B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		524EEE6B20DA840D006B9917 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -409,10 +448,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		520726ED212D9A0A009A284B /* JazHotelsTests */ = {
+			isa = PBXGroup;
+			children = (
+				520726EE212D9A0A009A284B /* JazHotelsTests.swift */,
+				520726F0212D9A0A009A284B /* Info.plist */,
+			);
+			path = JazHotelsTests;
+			sourceTree = "<group>";
+		};
+		520726FB212DA06C009A284B /* JazHotelsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				520726FC212DA06C009A284B /* JazHotelsUITests.swift */,
+				520726FE212DA06C009A284B /* Info.plist */,
+			);
+			path = JazHotelsUITests;
+			sourceTree = "<group>";
+		};
 		524EEE6520DA840D006B9917 = {
 			isa = PBXGroup;
 			children = (
 				524EEE7020DA840D006B9917 /* JazHotels */,
+				520726ED212D9A0A009A284B /* JazHotelsTests */,
+				520726FB212DA06C009A284B /* JazHotelsUITests */,
 				524EEE6F20DA840D006B9917 /* Products */,
 				92276CA12D50E4A86FD2D42D /* Pods */,
 				B5E9232516D4B0033B321F42 /* Frameworks */,
@@ -423,6 +482,8 @@
 			isa = PBXGroup;
 			children = (
 				524EEE6E20DA840D006B9917 /* JazHotels.app */,
+				520726EC212D9A0A009A284B /* JazHotelsTests.xctest */,
+				520726FA212DA06C009A284B /* JazHotelsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -910,6 +971,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		520726EB212D9A0A009A284B /* JazHotelsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 520726F5212D9A0A009A284B /* Build configuration list for PBXNativeTarget "JazHotelsTests" */;
+			buildPhases = (
+				520726E8212D9A0A009A284B /* Sources */,
+				520726E9212D9A0A009A284B /* Frameworks */,
+				520726EA212D9A0A009A284B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				520726F2212D9A0A009A284B /* PBXTargetDependency */,
+			);
+			name = JazHotelsTests;
+			productName = JazHotelsTests;
+			productReference = 520726EC212D9A0A009A284B /* JazHotelsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		520726F9212DA06C009A284B /* JazHotelsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52072701212DA06C009A284B /* Build configuration list for PBXNativeTarget "JazHotelsUITests" */;
+			buildPhases = (
+				520726F6212DA06C009A284B /* Sources */,
+				520726F7212DA06C009A284B /* Frameworks */,
+				520726F8212DA06C009A284B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				52072700212DA06C009A284B /* PBXTargetDependency */,
+			);
+			name = JazHotelsUITests;
+			productName = JazHotelsUITests;
+			productReference = 520726FA212DA06C009A284B /* JazHotelsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		524EEE6D20DA840D006B9917 /* JazHotels */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 524EEE8020DA840F006B9917 /* Build configuration list for PBXNativeTarget "JazHotels" */;
@@ -937,10 +1034,18 @@
 		524EEE6620DA840D006B9917 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0940;
+				LastSwiftUpdateCheck = 1000;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = Jaz;
 				TargetAttributes = {
+					520726EB212D9A0A009A284B = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 524EEE6D20DA840D006B9917;
+					};
+					520726F9212DA06C009A284B = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 524EEE6D20DA840D006B9917;
+					};
 					524EEE6D20DA840D006B9917 = {
 						CreatedOnToolsVersion = 9.4;
 					};
@@ -960,11 +1065,27 @@
 			projectRoot = "";
 			targets = (
 				524EEE6D20DA840D006B9917 /* JazHotels */,
+				520726EB212D9A0A009A284B /* JazHotelsTests */,
+				520726F9212DA06C009A284B /* JazHotelsUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		520726EA212D9A0A009A284B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		520726F8212DA06C009A284B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		524EEE6C20DA840D006B9917 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1124,6 +1245,22 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		520726E8212D9A0A009A284B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				520726EF212D9A0A009A284B /* JazHotelsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		520726F6212DA06C009A284B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				520726FD212DA06C009A284B /* JazHotelsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		524EEE6A20DA840D006B9917 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1266,6 +1403,19 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		520726F2212D9A0A009A284B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 524EEE6D20DA840D006B9917 /* JazHotels */;
+			targetProxy = 520726F1212D9A0A009A284B /* PBXContainerItemProxy */;
+		};
+		52072700212DA06C009A284B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 524EEE6D20DA840D006B9917 /* JazHotels */;
+			targetProxy = 520726FF212DA06C009A284B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		524EEE7A20DA840F006B9917 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -1286,6 +1436,94 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		520726F3212D9A0A009A284B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PKX77P5J33;
+				INFOPLIST_FILE = JazHotelsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.JazHotels.JazHotelsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JazHotels.app/JazHotels";
+			};
+			name = Debug;
+		};
+		520726F4212D9A0A009A284B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PKX77P5J33;
+				INFOPLIST_FILE = JazHotelsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.JazHotels.JazHotelsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JazHotels.app/JazHotels";
+			};
+			name = Release;
+		};
+		52072702212DA06C009A284B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PKX77P5J33;
+				INFOPLIST_FILE = JazHotelsUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.JazHotels.JazHotelsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = JazHotels;
+			};
+			name = Debug;
+		};
+		52072703212DA06C009A284B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PKX77P5J33;
+				INFOPLIST_FILE = JazHotelsUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.JazHotels.JazHotelsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = JazHotels;
+			};
+			name = Release;
+		};
 		524EEE7E20DA840F006B9917 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1463,6 +1701,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		520726F5212D9A0A009A284B /* Build configuration list for PBXNativeTarget "JazHotelsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				520726F3212D9A0A009A284B /* Debug */,
+				520726F4212D9A0A009A284B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52072701212DA06C009A284B /* Build configuration list for PBXNativeTarget "JazHotelsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52072702212DA06C009A284B /* Debug */,
+				52072703212DA06C009A284B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		524EEE6920DA840D006B9917 /* Build configuration list for PBXProject "JazHotels" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

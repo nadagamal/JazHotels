@@ -13,6 +13,7 @@ class RatePlansViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var roomRateList :[JCRoomRate] = []
     var ratePlans:JCRatePlan!
+    var roomStay:JCRoomStay!
     var isExpanded = false
     var expandableCells=[Int]()
     override func viewDidLoad() {
@@ -52,12 +53,22 @@ class RatePlansViewController: UIViewController {
         tableView.reloadData()
         
     }
+    func getRoomPrice(ratePlanCode:String) ->String {
+        var price:String = ""
+        for rate in roomStay.roomRates.roomRate{
+            if rate.ratePlanCode == ratePlanCode{
+                price = rate.rates.rate.total.amountAfterTax
+                break
+            }
+        }
+        return price
+    }
 }
 
 extension RatePlansViewController :UITableViewDelegate , UITableViewDataSource
 {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "DetailsCell") as! RatePlanTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DetailsCell") as! RoomDetailsCell
 
         return cell
     }
@@ -71,22 +82,23 @@ extension RatePlansViewController :UITableViewDelegate , UITableViewDataSource
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         
-        return roomRateList.count
+        return roomStay.ratePlans.ratePlan.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        return 287.0
+        return 295.0
     }
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(headerTapped))
         let cell = tableView.dequeueReusableCell(withIdentifier: "rate_cell") as! RatePlanTableViewCell
         cell.tag = section
-        cell.ratePrice.text = roomRateList[section].rates?.rate?.total?.amountAfterTax
-        if ratePlans != nil && ratePlans.ratePlan.count>0{
-            cell.rateTitle.text = ratePlans.ratePlan[0].ratePlanDescription.name ?? ""
-            if ratePlans.ratePlan[0].ratePlanDescription.text != nil{
-                let str = ratePlans.ratePlan[0].ratePlanDescription.text.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
+        let ratePlan:JCRatePlan = roomStay.ratePlans.ratePlan[section]
+        cell.ratePrice.text = getRoomPrice(ratePlanCode: ratePlan.ratePlanCode)
+        if ratePlan != nil{
+            cell.rateTitle.text = ratePlan.ratePlanDescription.name ?? ""
+            if ratePlan.ratePlanDescription.text != nil{
+                let str = ratePlan.ratePlanDescription.text.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
                 cell.rateDesc.text = str
                 
             }
@@ -96,6 +108,6 @@ extension RatePlansViewController :UITableViewDelegate , UITableViewDataSource
         return cell
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 180
+        return 185
     }
 }

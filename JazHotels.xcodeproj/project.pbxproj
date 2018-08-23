@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		520726EF212D9A0A009A284B /* JazHotelsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520726EE212D9A0A009A284B /* JazHotelsTests.swift */; };
 		520726FD212DA06C009A284B /* JazHotelsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520726FC212DA06C009A284B /* JazHotelsUITests.swift */; };
+		52072705212EF9BF009A284B /* RoomDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52072704212EF9BF009A284B /* RoomDetailsCell.swift */; };
 		524EEE7220DA840D006B9917 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524EEE7120DA840D006B9917 /* AppDelegate.swift */; };
 		524EEE7920DA840F006B9917 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 524EEE7820DA840F006B9917 /* Assets.xcassets */; };
 		524EEE7C20DA840F006B9917 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 524EEE7A20DA840F006B9917 /* LaunchScreen.storyboard */; };
@@ -231,6 +232,7 @@
 		520726FA212DA06C009A284B /* JazHotelsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JazHotelsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		520726FC212DA06C009A284B /* JazHotelsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JazHotelsUITests.swift; sourceTree = "<group>"; };
 		520726FE212DA06C009A284B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52072704212EF9BF009A284B /* RoomDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomDetailsCell.swift; sourceTree = "<group>"; };
 		524EEE6E20DA840D006B9917 /* JazHotels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JazHotels.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		524EEE7120DA840D006B9917 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		524EEE7820DA840F006B9917 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -846,6 +848,7 @@
 			isa = PBXGroup;
 			children = (
 				9ADD3E4B2106B70900D00078 /* RatePlanTableViewCell.swift */,
+				52072704212EF9BF009A284B /* RoomDetailsCell.swift */,
 			);
 			path = RatePlanView;
 			sourceTree = "<group>";
@@ -1280,6 +1283,7 @@
 				52B6165020E891C100A1A416 /* JHotelDescriptiveContent.swift in Sources */,
 				52B6164B20E891C100A1A416 /* JOTAHotelDescriptiveInfoRS.swift in Sources */,
 				52B6164F20E891C100A1A416 /* JAttraction.swift in Sources */,
+				52072705212EF9BF009A284B /* RoomDetailsCell.swift in Sources */,
 				52B615F720E8847100A1A416 /* XMLDictionary.m in Sources */,
 				52B6166420E891C100A1A416 /* JPolicy.swift in Sources */,
 				5279A5A220FA710F00E94FB1 /* HotelDetailsContactViewController.swift in Sources */,

@@ -53,6 +53,16 @@ class HotelListViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    func getRoomPrice(ratePlanCode:String,roomStay:JCRoomStay) ->String {
+        var price:String = ""
+        for rate in roomStay.roomRates.roomRate{
+            if rate.ratePlanCode == ratePlanCode{
+                price = rate.rates.rate.total.amountAfterTax
+                break
+            }
+        }
+        return price
+    }
     
 }
 extension HotelListViewController: UITableViewDelegate , UITableViewDataSource
@@ -64,11 +74,12 @@ extension HotelListViewController: UITableViewDelegate , UITableViewDataSource
         cell.hotel_name.text = roomStays?[indexPath.row].basicPropertyInfo.hotelName
       
         cell.hotel_place.text = roomStayInfo?.address.cityName
-        if (roomStays?[indexPath.row].roomRates?.roomRate.count)!>0 && roomStays?[indexPath.row].roomRates?.roomRate?[0].rates != nil &&  (roomStays?[indexPath.row].roomRates?.roomRate?[0].rates?.rate.tpaExtensions.nightlyRate?.count)!>0{
-        cell.hotel_price.text = roomStays?[indexPath.row].roomRates?.roomRate?[0].rates?.rate.tpaExtensions.nightlyRate?[0].price ?? "0"
+        if (roomStays?[indexPath.row].ratePlans != nil && roomStays?[indexPath.row].ratePlans.ratePlan != nil && (roomStays?[indexPath.row].ratePlans.ratePlan.count)!>0){
+            let ratePlan:JCRatePlan = (roomStays?[indexPath.row].ratePlans.ratePlan[0])!
+            cell.hotel_price.text = getRoomPrice(ratePlanCode: ratePlan.ratePlanCode,roomStay: (roomStays?[indexPath.row])!)
+          //  roomStays?[indexPath.row].roomRates?.roomRate?[0].rates?.rate.tpaExtensions.nightlyRate?[0].price ?? "0"
         }
-        if  JazHotels.hotelsImages![(roomStays?[indexPath.row].basicPropertyInfo.hotelCode)!]?[0] != nil
-        {
+        if  JazHotels.hotelsImages![(roomStays?[indexPath.row].basicPropertyInfo.hotelCode)!]?[0] != nil{
             let imageURL = URL(string: (JazHotels.hotelsImages![(roomStays?[indexPath.row].basicPropertyInfo.hotelCode)!]?[0])!)
             cell.hotel_img.kf.indicatorType = .activity
             cell.hotel_img.kf.setImage(with: imageURL, placeholder: UIImage(named: "jazLauncherLogo"), options: [.transition(ImageTransition.fade(0.7))], progressBlock: nil, completionHandler: nil)
@@ -91,12 +102,12 @@ extension HotelListViewController: UITableViewDelegate , UITableViewDataSource
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        var rateView = RatePlansViewController.create()
+        let rateView = RatePlansViewController.create()
         if roomStays?[indexPath.row].roomRates?.roomRate?.count != 0
         {
             rateView.roomRateList = (roomStays?[indexPath.row].roomRates?.roomRate)!
             rateView.ratePlans = roomStays?[indexPath.row].ratePlans
-
+            rateView.roomStay = roomStays?[indexPath.row]
             self.navigationController?.pushViewController(rateView, animated: true)
         }
         else

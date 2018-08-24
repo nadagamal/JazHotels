@@ -11,6 +11,9 @@ import IQKeyboardManagerSwift
 import Firebase
 import GoogleSignIn
 import FirebaseAuth
+import FBSDKCoreKit
+import TwitterKit
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate,UITabBarDelegate, GIDSignInDelegate {
 
@@ -34,7 +37,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UITabBarDelegate, GIDSignI
         FirebaseApp.configure()
         
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
+        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         GIDSignIn.sharedInstance().delegate = self
+        TWTRTwitter.sharedInstance().start(withConsumerKey: "r8QRfM6loE4WTLBAOu2fWbkOZ", consumerSecret: "ZyxEnmbQ9rWgotrCz5o5KyvMJYbqVmwKK76iwqUngSoFVYWSMz")
 
 
         
@@ -47,12 +52,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UITabBarDelegate, GIDSignI
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey: Any] = [:]) -> Bool {
         
         
+
 //        if TWTRTwitter.sharedInstance().application(app, open:url, options: options) {
 //            return true
 //        }
 //
         return GIDSignIn.sharedInstance().handle(url,sourceApplication:options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String,
-                                                 annotation: [:])
+                                                 annotation: [:]) || FBSDKApplicationDelegate.sharedInstance().application(app, open: url, options: options) || TWTRTwitter.sharedInstance().application(app, open: url, options: options)
 
             }
     
@@ -76,8 +82,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UITabBarDelegate, GIDSignI
         }
         
         guard user.authentication != nil else { return }
-       // let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
-                                                     //  accessToken: authentication.accessToken)
+        let credential = GoogleAuthProvider.credential(withIDToken: user.authentication.idToken,
+                                                       accessToken: user.authentication.accessToken)
+        
+
+        Auth.auth().signInAndRetrieveData(with: credential) { (authResult, error) in
+            if error != nil {
+                // ...
+                return
+            }
+            // User is signed in
+            // ...
+        }
         
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: HotelJazConstants.SocialPath.kSocialAuthenticationPathGoogle), object: user)
 
@@ -90,6 +106,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UITabBarDelegate, GIDSignI
 
     }
     
+    
+
     
     
 

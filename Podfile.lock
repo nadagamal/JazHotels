@@ -1,8 +1,18 @@
 PODS:
   - Alamofire (4.7.2)
+  - Bolts (1.9.0):
+    - Bolts/AppLinks (= 1.9.0)
+    - Bolts/Tasks (= 1.9.0)
+  - Bolts/AppLinks (1.9.0):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.9.0)
   - BSKeyboardControls (2.2)
   - Cosmos (15.0.0)
   - DatePickerDialog (2.0)
+  - FBSDKCoreKit (4.35.0):
+    - Bolts (~> 1.7)
+  - FBSDKLoginKit (4.35.0):
+    - FBSDKCoreKit
   - Firebase/Auth (5.4.1):
     - Firebase/CoreOnly
     - FirebaseAuth (= 5.0.2)
@@ -74,14 +84,20 @@ PODS:
   - SwifterSwift/SwiftStdlib (4.4.0)
   - SwifterSwift/UIKit (4.4.0)
   - TTSegmentedControl (0.4.4)
+  - TwitterCore (3.2.0)
+  - TwitterKit (3.4.0):
+    - TwitterCore (>= 3.1.0)
   - XLPagerTabStrip (8.0.1)
   - ZAlertView (1.0.4)
 
 DEPENDENCIES:
   - Alamofire
+  - Bolts
   - BSKeyboardControls (~> 2.2)
   - Cosmos (~> 15.0)
   - DatePickerDialog
+  - FBSDKCoreKit
+  - FBSDKLoginKit
   - Firebase/Auth
   - GoogleSignIn
   - HCMapInfoView
@@ -99,15 +115,19 @@ DEPENDENCIES:
   - SVProgressHUD
   - SwifterSwift
   - TTSegmentedControl
+  - TwitterKit
   - XLPagerTabStrip (~> 8.0)
   - ZAlertView
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Alamofire
+    - Bolts
     - BSKeyboardControls
     - Cosmos
     - DatePickerDialog
+    - FBSDKCoreKit
+    - FBSDKLoginKit
     - Firebase
     - FirebaseAuth
     - FirebaseCore
@@ -130,14 +150,19 @@ SPEC REPOS:
     - SVProgressHUD
     - SwifterSwift
     - TTSegmentedControl
+    - TwitterCore
+    - TwitterKit
     - XLPagerTabStrip
     - ZAlertView
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   BSKeyboardControls: b701935e789961102e3f20063bba7185800a2d3f
   Cosmos: a6dbd3d0baa0cc8f51f8598f7508d5a09d0a9ade
   DatePickerDialog: 5e1c24d9fe6506cd45dbc573eed7b0a251b1c09d
+  FBSDKCoreKit: 1a5b2e3ceb5ca827a53c54aa5f4a3480efff80d2
+  FBSDKLoginKit: 00a3d65d1226852f9d76dcddff01981e5e6d9c38
   Firebase: 355bd535bfdacaa82a7fe8d9784115edefd6fc03
   FirebaseAuth: 096e457cdd4274412a66c4a35874787e411f5a03
   FirebaseCore: 4c28e3b9708ba48a765e76515f913a71596eb5dd
@@ -160,9 +185,11 @@ SPEC CHECKSUMS:
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwifterSwift: 1ce0e31801ddd3a2bd3256626275425adb01067a
   TTSegmentedControl: 7a5fc6c3e117c340106efd3a35205b987f2ba23c
+  TwitterCore: 8cbc9ad34d91c63a0035ea05bfbfc0d7ca72a28c
+  TwitterKit: bc7bd086b9b724a1d888745a054e1d0b1ecc4f3f
   XLPagerTabStrip: c908b17cbf42fcd2598ee1adfc49bae25444d88a
   ZAlertView: 59fffdb4e37a01df461835566d5101052b8af953
 
-PODFILE CHECKSUM: b083407b0ec33d936045710a5dcf34942a93ff34
+PODFILE CHECKSUM: a31db00a06c10e20bd99967cb53bb54a8969b9b9
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.5.0

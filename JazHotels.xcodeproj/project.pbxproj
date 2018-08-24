@@ -123,10 +123,12 @@
 		52B616E920E9566400A1A416 /* JImageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B616E620E9566300A1A416 /* JImageItem.swift */; };
 		52B616EA20E9566400A1A416 /* JBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B616E720E9566300A1A416 /* JBody.swift */; };
 		52B616EB20E9566400A1A416 /* JEnvelope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B616E820E9566400A1A416 /* JEnvelope.swift */; };
-		52E1C20B212171D100010EBB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52E1C20A212171D000010EBB /* GoogleService-Info.plist */; };
 		9A06CB1C20EACC4900AFBCA2 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A06CB1B20EACC4900AFBCA2 /* MainTabBar.swift */; };
 		9A06CB1F20EACF6700AFBCA2 /* HotelJazConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A06CB1E20EACF6700AFBCA2 /* HotelJazConstants.swift */; };
 		9A41478D2108C31200C95F0A /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A41478C2108C31200C95F0A /* Location.swift */; };
+		9A640D46212EF67B002CB116 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A640D45212EF67B002CB116 /* Authentication.storyboard */; };
+		9A640D4921305F94002CB116 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A640D4821305F94002CB116 /* LoginViewController.swift */; };
+		9A640D4F2130690F002CB116 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9A640D4E2130690F002CB116 /* GoogleService-Info.plist */; };
 		9A76D23421067EFD00D23FB1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A76D23321067EFD00D23FB1 /* CoreLocation.framework */; };
 		9A8E78CF20F8F7FA0034C3AF /* CAGradientLayer+GradientColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8E78CE20F8F7FA0034C3AF /* CAGradientLayer+GradientColor.swift */; };
 		9A8E78D120F8F8490034C3AF /* UINavigationController+GradientColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8E78D020F8F8490034C3AF /* UINavigationController+GradientColor.swift */; };
@@ -349,12 +351,14 @@
 		52B616E620E9566300A1A416 /* JImageItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JImageItem.swift; sourceTree = "<group>"; };
 		52B616E720E9566300A1A416 /* JBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JBody.swift; sourceTree = "<group>"; };
 		52B616E820E9566400A1A416 /* JEnvelope.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JEnvelope.swift; sourceTree = "<group>"; };
-		52E1C20A212171D000010EBB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8963E40941314293147FBF58 /* Pods-JazHotels.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JazHotels.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JazHotels/Pods-JazHotels.debug.xcconfig"; sourceTree = "<group>"; };
 		925F604466D8797ABBF10B44 /* Pods_JazHotels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JazHotels.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A06CB1B20EACC4900AFBCA2 /* MainTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		9A06CB1E20EACF6700AFBCA2 /* HotelJazConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotelJazConstants.swift; sourceTree = "<group>"; };
 		9A41478C2108C31200C95F0A /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		9A640D45212EF67B002CB116 /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
+		9A640D4821305F94002CB116 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9A640D4E2130690F002CB116 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9A76D23321067EFD00D23FB1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		9A8E78CE20F8F7FA0034C3AF /* CAGradientLayer+GradientColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAGradientLayer+GradientColor.swift"; sourceTree = "<group>"; };
 		9A8E78D020F8F8490034C3AF /* UINavigationController+GradientColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+GradientColor.swift"; sourceTree = "<group>"; };
@@ -491,7 +495,6 @@
 		524EEE7020DA840D006B9917 /* JazHotels */ = {
 			isa = PBXGroup;
 			children = (
-				52E1C20A212171D000010EBB /* GoogleService-Info.plist */,
 				9ADD3E402106A74600D00078 /* Model */,
 				524F784520F9222700AF0EF6 /* JsonFiles */,
 				9AE61CCA20DAE077006160C1 /* AppDelegate */,
@@ -690,6 +693,14 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		9A640D4721305F94002CB116 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				9A640D4821305F94002CB116 /* LoginViewController.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
 		9A8E78CD20F8F7A60034C3AF /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -853,6 +864,7 @@
 		9AE61C7A20DAC737006160C1 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				9A640D4E2130690F002CB116 /* GoogleService-Info.plist */,
 				524EEE7D20DA840F006B9917 /* Info.plist */,
 				9AE61C7B20DAC740006160C1 /* fonts */,
 			);
@@ -914,6 +926,7 @@
 		9AE61CC720DAE057006160C1 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				9A640D4721305F94002CB116 /* Authentication */,
 				9ADD3E432106B1DD00D00078 /* RatePlans */,
 				524F784C20F9364400AF0EF6 /* HotelDetailsViewController */,
 				9AADBF1E20ED51D6009183FE /* Splash */,
@@ -938,6 +951,7 @@
 			isa = PBXGroup;
 			children = (
 				9AE61CCC20DAE0BD006160C1 /* Main.storyboard */,
+				9A640D45212EF67B002CB116 /* Authentication.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -1091,6 +1105,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AE61CBB20DAC74B006160C1 /* MontserratAlternates-ExtraBold.otf in Resources */,
+				9A640D4F2130690F002CB116 /* GoogleService-Info.plist in Resources */,
 				9AE61CBD20DAC74B006160C1 /* Montserrat-ExtraBold.otf in Resources */,
 				9AE61CC320DAC74B006160C1 /* Montserrat-Black.otf in Resources */,
 				524F784A20F9222700AF0EF6 /* hotels-urls.json in Resources */,
@@ -1109,13 +1124,13 @@
 				9AE61CC220DAC74B006160C1 /* MontserratAlternates-ThinItalic.otf in Resources */,
 				9AE61CAB20DAC74B006160C1 /* Montserrat-ThinItalic.otf in Resources */,
 				9AE61CA820DAC74B006160C1 /* MontserratAlternates-Medium.otf in Resources */,
-				52E1C20B212171D100010EBB /* GoogleService-Info.plist in Resources */,
 				9AE61CAD20DAC74B006160C1 /* MontserratAlternates-MediumItalic.otf in Resources */,
 				9AE61CAE20DAC74B006160C1 /* Montserrat-ExtraLight.otf in Resources */,
 				9AE61CA420DAC74B006160C1 /* Montserrat-BlackItalic.otf in Resources */,
 				9AE61CB420DAC74B006160C1 /* Montserrat-Medium.otf in Resources */,
 				524F784920F9222700AF0EF6 /* hotels-images.json in Resources */,
 				9AE61CB120DAC74B006160C1 /* MontserratAlternates-ExtraLightItalic.otf in Resources */,
+				9A640D46212EF67B002CB116 /* Authentication.storyboard in Resources */,
 				9AE61CC420DAC74B006160C1 /* MontserratAlternates-ExtraBoldItalic.otf in Resources */,
 				9AE61CA720DAC74B006160C1 /* MontserratAlternates-LightItalic.otf in Resources */,
 				9AE61CB820DAC74B006160C1 /* Montserrat-Italic.otf in Resources */,
@@ -1150,10 +1165,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-JazHotels/Pods-JazHotels-resources.sh",
 				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterKitResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1169,8 +1186,11 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-JazHotels/Pods-JazHotels-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/BSKeyboardControls/BSKeyboardControls.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
 				"${BUILT_PRODUCTS_DIR}/DatePickerDialog/DatePickerDialog.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
@@ -1188,6 +1208,8 @@
 				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/SwifterSwift/SwifterSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/TTSegmentedControl/TTSegmentedControl.framework",
+				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
 				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
 				"${BUILT_PRODUCTS_DIR}/ZAlertView/ZAlertView.framework",
 				"${BUILT_PRODUCTS_DIR}/iOSDropDown/iOSDropDown.framework",
@@ -1196,8 +1218,11 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BSKeyboardControls.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DatePickerDialog.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
@@ -1215,6 +1240,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwifterSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TTSegmentedControl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZAlertView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/iOSDropDown.framework",
@@ -1347,6 +1374,7 @@
 				52B6164C20E891C100A1A416 /* JRestaurant.swift in Sources */,
 				52B6166120E891C100A1A416 /* JCategoryCode.swift in Sources */,
 				52B6163F20E891C100A1A416 /* JHotelInfo.swift in Sources */,
+				9A640D4921305F94002CB116 /* LoginViewController.swift in Sources */,
 				9ACCCC9A20FAE6000083CBD2 /* Date.swift in Sources */,
 				9ADD3E3F2106A6D500D00078 /* MapInfoHotelView.swift in Sources */,
 				52B6166A20E891C100A1A416 /* JCountryName.swift in Sources */,
@@ -1648,7 +1676,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PKX77P5J33;
+				DEVELOPMENT_TEAM = MAG9DAS3TQ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1677,7 +1705,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PKX77P5J33;
+				DEVELOPMENT_TEAM = MAG9DAS3TQ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

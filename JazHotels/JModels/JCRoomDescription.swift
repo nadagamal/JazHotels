@@ -9,7 +9,7 @@ import Foundation
 
 class JCRoomDescription{
 
-	var image : [String]!
+	var image : String!
 	var text : String!
 	var name : String!
 
@@ -18,7 +18,7 @@ class JCRoomDescription{
 	 * Instantiate the instance using the passed dictionary values to set the properties values
 	 */
 	init(fromDictionary dictionary: [String:Any]){
-		image = dictionary["Image"] as? [String]
+		image = dictionary["Image"] as? String
 		text = dictionary["Text"] as? String
 		name = dictionary["_Name"] as? String
 	}

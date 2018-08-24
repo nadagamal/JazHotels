@@ -10,6 +10,7 @@
 		520726EF212D9A0A009A284B /* JazHotelsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520726EE212D9A0A009A284B /* JazHotelsTests.swift */; };
 		520726FD212DA06C009A284B /* JazHotelsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520726FC212DA06C009A284B /* JazHotelsUITests.swift */; };
 		52072705212EF9BF009A284B /* RoomDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52072704212EF9BF009A284B /* RoomDetailsCell.swift */; };
+		5246BA4521303F1B00E9202B /* RoomDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5246BA4421303F1B00E9202B /* RoomDetailsViewController.swift */; };
 		524EEE7220DA840D006B9917 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524EEE7120DA840D006B9917 /* AppDelegate.swift */; };
 		524EEE7920DA840F006B9917 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 524EEE7820DA840F006B9917 /* Assets.xcassets */; };
 		524EEE7C20DA840F006B9917 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 524EEE7A20DA840F006B9917 /* LaunchScreen.storyboard */; };
@@ -233,6 +234,7 @@
 		520726FC212DA06C009A284B /* JazHotelsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JazHotelsUITests.swift; sourceTree = "<group>"; };
 		520726FE212DA06C009A284B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52072704212EF9BF009A284B /* RoomDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomDetailsCell.swift; sourceTree = "<group>"; };
+		5246BA4421303F1B00E9202B /* RoomDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomDetailsViewController.swift; sourceTree = "<group>"; };
 		524EEE6E20DA840D006B9917 /* JazHotels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JazHotels.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		524EEE7120DA840D006B9917 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		524EEE7820DA840F006B9917 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -840,6 +842,7 @@
 			isa = PBXGroup;
 			children = (
 				9ADD3E442106B1F500D00078 /* RatePlansViewController.swift */,
+				5246BA4421303F1B00E9202B /* RoomDetailsViewController.swift */,
 			);
 			path = RatePlans;
 			sourceTree = "<group>";
@@ -1174,6 +1177,7 @@
 				"${BUILT_PRODUCTS_DIR}/BSKeyboardControls/BSKeyboardControls.framework",
 				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
 				"${BUILT_PRODUCTS_DIR}/DatePickerDialog/DatePickerDialog.framework",
+				"${BUILT_PRODUCTS_DIR}/DynamicBlurView/DynamicBlurView.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
@@ -1183,6 +1187,7 @@
 				"${BUILT_PRODUCTS_DIR}/ImageSlideshow/ImageSlideshow.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/PopupDialog/PopupDialog.framework",
 				"${BUILT_PRODUCTS_DIR}/PullToRefreshKit/PullToRefreshKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SCLAlertView/SCLAlertView.framework",
 				"${BUILT_PRODUCTS_DIR}/SIAlertView/SIAlertView.framework",
@@ -1201,6 +1206,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BSKeyboardControls.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DatePickerDialog.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DynamicBlurView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
@@ -1210,6 +1216,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImageSlideshow.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PopupDialog.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PullToRefreshKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SIAlertView.framework",
@@ -1300,6 +1307,7 @@
 				9ADD3E4C2106B70900D00078 /* RatePlanTableViewCell.swift in Sources */,
 				52B616D320E9341E00A1A416 /* JCCriterion.swift in Sources */,
 				52B616C520E9341E00A1A416 /* JCHotelRef.swift in Sources */,
+				5246BA4521303F1B00E9202B /* RoomDetailsViewController.swift in Sources */,
 				9AADBF1A20ED50FF009183FE /* CheckAvailabilityViewController.swift in Sources */,
 				52B616BB20E9341E00A1A416 /* JCDeadline.swift in Sources */,
 				52B6164120E891C100A1A416 /* JEmail.swift in Sources */,

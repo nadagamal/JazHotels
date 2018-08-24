@@ -30,6 +30,7 @@ target 'JazHotels' do
   pod 'SideMenu'
   pod 'Firebase/Auth'
   pod 'GoogleSignIn'
+  pod 'PopupDialog', '~> 0.8'
 
 
 

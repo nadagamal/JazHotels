@@ -49,9 +49,7 @@ class LoginViewController: UIViewController , GIDSignInUIDelegate  {
     }
     
     @IBAction func siginGoogleAction(_ sender: Any) {
-        SVProgressHUD.show()
         GIDSignIn.sharedInstance().signIn()
-        
     }
     
     @IBAction func siginFacebookAction(_ sender: Any) {
@@ -59,10 +57,9 @@ class LoginViewController: UIViewController , GIDSignInUIDelegate  {
         
         let fbLoginManager = FBSDKLoginManager()
         fbLoginManager.logIn(withReadPermissions: ["public_profile", "email"], from: self) { (result, error) in
-            
+    
             SVProgressHUD.show()
 
-           
             if let error = error {
                 DispatchQueue.main.async {
                     SVProgressHUD.dismiss()

@@ -31,7 +31,8 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb305850266488530</string>
+<!--                <string>fb305850266488530</string>-->
+                <string>fb274721793138743</string>
 			</array>
 		</dict>
 		<dict>
@@ -47,7 +48,8 @@
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>FacebookAppID</key>
-	<string>305850266488530</string>
+<!--    <string>305850266488530</string>-->
+    <string>274721793138743</string>
 	<key>FacebookDisplayName</key>
 	<string>JazHotels</string>
 	<key>LSApplicationQueriesSchemes</key>

@@ -23,12 +23,40 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>920764747568-8imi7dlk9va8gnppu3kr7a5q7lan7lcv.apps.googleusercontent.com</string>
+				<string>com.googleusercontent.apps.920764747568-8imi7dlk9va8gnppu3kr7a5q7lan7lcv</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb305850266488530</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+<!--                <string>twitterkit-btrzmWJV3VYvBqagPXDjKi1Mu</string>-->
+                <string>twitterkit-r8QRfM6loE4WTLBAOu2fWbkOZ</string>
 			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>FacebookAppID</key>
+	<string>305850266488530</string>
+	<key>FacebookDisplayName</key>
+	<string>JazHotels</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbapi</string>
+		<string>fb-messenger-api</string>
+		<string>fbauth2</string>
+		<string>fbshareextension</string>
+	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>

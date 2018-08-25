@@ -28,8 +28,13 @@ target 'JazHotels' do
     pod 'HCMapInfoView'
     pod 'ZAlertView'
     pod 'SideMenu'
+    pod 'ACFloatingTextfield-Swift', '~> 1.7'
+
+
+    # Pods for FirebaseAuth
+
     pod 'Firebase/Auth'
-    
+
     # Pods for Gmail
     pod 'GoogleSignIn'
     

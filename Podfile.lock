@@ -1,4 +1,5 @@
 PODS:
+  - ACFloatingTextfield-Swift (1.7)
   - Alamofire (4.7.2)
   - Bolts (1.9.0):
     - Bolts/AppLinks (= 1.9.0)
@@ -91,6 +92,7 @@ PODS:
   - ZAlertView (1.0.4)
 
 DEPENDENCIES:
+  - ACFloatingTextfield-Swift (~> 1.7)
   - Alamofire
   - Bolts
   - BSKeyboardControls (~> 2.2)
@@ -121,6 +123,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - ACFloatingTextfield-Swift
     - Alamofire
     - Bolts
     - BSKeyboardControls
@@ -156,6 +159,7 @@ SPEC REPOS:
     - ZAlertView
 
 SPEC CHECKSUMS:
+  ACFloatingTextfield-Swift: df075d5ed5d441d8603f985fc106ec7ebe0c673f
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   BSKeyboardControls: b701935e789961102e3f20063bba7185800a2d3f
@@ -190,6 +194,6 @@ SPEC CHECKSUMS:
   XLPagerTabStrip: c908b17cbf42fcd2598ee1adfc49bae25444d88a
   ZAlertView: 59fffdb4e37a01df461835566d5101052b8af953
 
-PODFILE CHECKSUM: a31db00a06c10e20bd99967cb53bb54a8969b9b9
+PODFILE CHECKSUM: 33f8ddedaf7d01868afab8fdfd3c4fc74bd43447
 
 COCOAPODS: 1.5.0

@@ -16,11 +16,6 @@
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
-    <key>LSApplicationQueriesSchemes</key>
-    <array>
-        <string>twitter</string>
-        <string>twitterauth</string>
-    </array>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -36,7 +31,7 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb274721793138743</string>
+				<string>fb305850266488530</string>
 			</array>
 		</dict>
 		<dict>
@@ -44,14 +39,14 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>twitterkit-r8QRfM6loE4WTLBAOu2fWbkOZ</string>
+				<string>twitterkit-btrzmWJV3VYvBqagPXDjKi1Mu</string>
 			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>FacebookAppID</key>
-	<string>274721793138743</string>
+	<string>305850266488530</string>
 	<key>FacebookDisplayName</key>
 	<string>JazHotels</string>
 	<key>LSApplicationQueriesSchemes</key>

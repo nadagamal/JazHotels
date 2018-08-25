@@ -109,6 +109,9 @@
                                                 <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="Lgj-lu-RGU" kind="show" id="5SI-7f-94l"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -141,13 +144,29 @@
                     <view key="view" contentMode="scaleToFill" id="8F4-C4-rPk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ebd-Mw-F2k" customClass="ACFloatingTextfield" customModule="ACFloatingTextfield_Swift">
+                                <rect key="frame" x="16" y="60" width="343" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="bBG-A7-SZz"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Bxl-1Z-T6c" firstAttribute="trailing" secondItem="Ebd-Mw-F2k" secondAttribute="trailing" constant="16" id="JKM-d5-hrt"/>
+                            <constraint firstItem="Ebd-Mw-F2k" firstAttribute="top" secondItem="Bxl-1Z-T6c" secondAttribute="top" constant="40" id="guW-qA-dZf"/>
+                            <constraint firstItem="Ebd-Mw-F2k" firstAttribute="leading" secondItem="Bxl-1Z-T6c" secondAttribute="leading" constant="16" id="ouf-yw-feY"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Bxl-1Z-T6c"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OUc-GZ-EHG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4766" y="1523"/>
+            <point key="canvasLocation" x="4765.6000000000004" y="1523.3883058470765"/>
         </scene>
     </scenes>
     <resources>

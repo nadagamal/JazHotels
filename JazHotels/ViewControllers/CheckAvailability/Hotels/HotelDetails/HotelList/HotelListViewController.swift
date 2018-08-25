@@ -23,7 +23,6 @@ class HotelListViewController: UIViewController {
 //        self.navigationItem.title = hotelTitle
         // Do any additional setup after loading the view.
         hotelTB.register(UINib(nibName: "HotelTableViewCell", bundle: nil), forCellReuseIdentifier: "hotel_cell")
-
         NotificationCenter.default.addObserver(self, selector: #selector(self.updateHotelList(notification:)), name: Notification.Name("getHotelListInfo"), object: nil)
 
        

@@ -29,7 +29,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UITabBarDelegate, GIDSignI
 
         GradientNavigationBar.appearance().startPoint = CGPoint.zero
         GradientNavigationBar.appearance().endPoint = CGPoint(x: 1, y: 1)
-
         
         FirebaseApp.configure()
         

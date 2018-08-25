@@ -9,6 +9,7 @@
 import UIKit
 
 class HotelTableViewCell: UITableViewCell {
+    @IBOutlet weak var priceView: UIView!
     @IBOutlet weak var hotel_img: UIImageView!
     @IBOutlet weak var fav_btn: UIButton!
     @IBOutlet weak var hotel_price: UILabel!

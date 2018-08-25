@@ -7,30 +7,83 @@
 //
 
 import UIKit
-
+import Kingfisher
 class FavoriteViewController: UIViewController {
-
+    
     @IBOutlet weak var tableView: UITableView!
+    var hotelsList = [JHotelDescriptiveContent]()
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
+        tableView.register(UINib(nibName: "HotelTableViewCell", bundle: nil), forCellReuseIdentifier: "hotel_cell")
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        GradientNavigationBar.appearance().colors = [Helper.hexStringToUIColor(hex: "DF1B8E"), Helper.hexStringToUIColor(hex: "7E0E8B"),Helper.hexStringToUIColor(hex: "5E0E8B")]
+        if UserDefaults.standard.object(forKey: "Favourites") != nil{
+            var list = [String]()
+            list = UserDefaults.standard.object(forKey: "Favourites") as! [String]
+            hotelsList = getHotels(codes: list)
+            self.tableView.reloadData()
+        }
     }
-    */
-
+    
+    func getHotels(codes:[String]) -> [JHotelDescriptiveContent] {
+        var hotels = [JHotelDescriptiveContent]()
+        for code in codes{
+            for hotel in JazHotels.hotels {
+                if code == hotel.hotelCode{
+                    hotels.append(hotel)
+                }
+            }
+        }
+        return hotels
+    }
+    
+    
+}
+extension FavoriteViewController: UITableViewDelegate , UITableViewDataSource
+{
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "hotel_cell") as! HotelTableViewCell
+        cell.priceView.isHidden = true
+        cell.fav_btn .setImage(UIImage(named: "addFavH"), for: .normal)
+        let  hotel = hotelsList[indexPath.item]
+        cell.hotel_name.text = hotel.hotelName
+        let imageURL = URL(string: JazHotels.hotelsImages![hotel.hotelCode]![0])
+        cell.hotel_img.kf.indicatorType = .activity
+        cell.hotel_img.kf.setImage(with: imageURL, placeholder: UIImage(named: "jazLauncherLogo"), options: [.transition(ImageTransition.fade(0.7))], progressBlock: nil, completionHandler: nil)
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return hotelsList.count
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 280
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let hotelDetailsVC = UIStoryboard(name: HotelJazConstants.StoryBoard.mainSB, bundle: nil).instantiateViewController(withIdentifier: "HotelDetailsViewController") as! HotelDetailsViewController
+        let  hotel = JazHotels.hotels[indexPath.row]
+        hotelDetailsVC.hotel = hotel
+        self.navigationController?.show(hotelDetailsVC, sender: nil)
+    }
 }

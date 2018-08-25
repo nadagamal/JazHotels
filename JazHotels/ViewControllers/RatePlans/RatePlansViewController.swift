@@ -7,17 +7,20 @@
 //
 
 import UIKit
-
+import Kingfisher
+import PopupDialog
 class RatePlansViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     var roomRateList :[JCRoomRate] = []
     var ratePlans:JCRatePlan!
+    var roomStay:JCRoomStay!
     var isExpanded = false
     var expandableCells=[Int]()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Rate Plans"
+  
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -52,41 +55,91 @@ class RatePlansViewController: UIViewController {
         tableView.reloadData()
         
     }
+    func getRoomPrice(ratePlanCode:String) ->String {
+        var price:String = ""
+        for rate in roomStay.roomRates.roomRate{
+            if rate.ratePlanCode == ratePlanCode{
+                price = rate.rates.rate.total.amountAfterTax
+                break
+            }
+        }
+        return price
+    }
+    func getRoomPrice(roomTypeCode:String) ->String {
+        var price:String = ""
+        for rate in roomStay.roomRates.roomRate{
+            if rate.roomTypeCode == roomTypeCode{
+                price = rate.rates.rate.total.amountAfterTax
+                break
+            }
+        }
+        return price
+    }
+    @objc func bookNowAction(sender:UIButton){
+
+    }
+    @objc func roomDetailsAction(sender:UIButton){
+        guard let cell = sender.superview?.superview as? RoomDetailsCell else {
+            return
+        }
+        
+        let indexPath = tableView.indexPath(for: cell) as! NSIndexPath
+        
+        let viewController = RoomDetailsViewController.create()
+        var roomTypeslist = roomStay.roomTypes.roomType as [JCRoomType]
+        viewController.room = roomTypeslist[indexPath.row]
+        let popup = PopupDialog(viewController: viewController,
+                                buttonAlignment: .horizontal,
+                                transitionStyle: .fadeIn,
+                                tapGestureDismissal: true,
+                                panGestureDismissal: true)
+        
+        self.navigationController?.topViewController?.present(popup, animated: true, completion: nil)
+    }
 }
 
 extension RatePlansViewController :UITableViewDelegate , UITableViewDataSource
 {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "DetailsCell") as! RatePlanTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DetailsCell") as! RoomDetailsCell
+        var roomTypeslist = roomStay.roomTypes.roomType as [JCRoomType]
+        cell.priceLbl.text = getRoomPrice(roomTypeCode: roomTypeslist[indexPath.row].roomTypeCode)
+        cell.roomDescriptionLbl.text = roomTypeslist[indexPath.row].roomDescription.text.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
+        cell.bookNowBtn.addTarget(self, action: #selector(bookNowAction(sender:)), for: .touchUpInside)
+        cell.roomDetailsBtn.addTarget(self, action: #selector(roomDetailsAction(sender:)), for: .touchUpInside)
 
+        cell.roomNameLbl.text = roomTypeslist[indexPath.row].roomDescription.name
+        let imageURL = URL(string: (roomTypeslist[indexPath.row].roomDescription!.image))
+        cell.imgView.kf.indicatorType = .activity
+        cell.imgView.kf.setImage(with: imageURL, placeholder: UIImage(named: "jazLauncherLogo"), options: [.transition(ImageTransition.fade(0.7))], progressBlock: nil, completionHandler: nil)
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if expandableCells.contains(section){
-            return 1
+            return roomStay.roomTypes.roomType.count
         }else{
             return 0
         }
     }
     func numberOfSections(in tableView: UITableView) -> Int {
-        
-        return roomRateList.count
+        return roomStay.ratePlans.ratePlan.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        return 287.0
+        return 295.0
     }
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(headerTapped))
         let cell = tableView.dequeueReusableCell(withIdentifier: "rate_cell") as! RatePlanTableViewCell
         cell.tag = section
-        cell.ratePrice.text = roomRateList[section].rates?.rate?.total?.amountAfterTax
-        if ratePlans != nil && ratePlans.ratePlan.count>0{
-            cell.rateTitle.text = ratePlans.ratePlan[0].ratePlanDescription.name ?? ""
-            if ratePlans.ratePlan[0].ratePlanDescription.text != nil{
-                let str = ratePlans.ratePlan[0].ratePlanDescription.text.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
+        let ratePlan:JCRatePlan = roomStay.ratePlans.ratePlan[section]
+        cell.ratePrice.text = getRoomPrice(ratePlanCode: ratePlan.ratePlanCode)
+        if ratePlan != nil{
+            cell.rateTitle.text = ratePlan.ratePlanDescription.name ?? ""
+            if ratePlan.ratePlanDescription.text != nil{
+                let str = ratePlan.ratePlanDescription.text.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
                 cell.rateDesc.text = str
                 
             }
@@ -96,6 +149,6 @@ extension RatePlansViewController :UITableViewDelegate , UITableViewDataSource
         return cell
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 180
+        return 185
     }
 }

@@ -144,6 +144,8 @@
 		9AADBF8420EDC0F0009183FE /* HotelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AADBF8320EDC0F0009183FE /* HotelTableViewCell.xib */; };
 		9AADBF8920EDCA78009183FE /* HotelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AADBF8820EDCA78009183FE /* HotelListViewController.swift */; };
 		9AADBF8B20EDCA85009183FE /* HotelOnMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AADBF8A20EDCA85009183FE /* HotelOnMapViewController.swift */; };
+		9AC6E48A2131AFEF00E70ABE /* RoomDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC6E4892131AFEF00E70ABE /* RoomDetailsViewController.swift */; };
+		9AC6E48C2131B00800E70ABE /* RoomDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC6E48B2131B00800E70ABE /* RoomDetailsCell.swift */; };
 		9ACCCC9820FAA1F00083CBD2 /* GradientNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACCCC9720FAA1F00083CBD2 /* GradientNavigationBar.swift */; };
 		9ACCCC9A20FAE6000083CBD2 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACCCC9920FAE6000083CBD2 /* Date.swift */; };
 		9ADD3E3A21069B5000D00078 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ADD3E3921069B5000D00078 /* MapKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
@@ -374,6 +376,8 @@
 		9AADBF8320EDC0F0009183FE /* HotelTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HotelTableViewCell.xib; sourceTree = "<group>"; };
 		9AADBF8820EDCA78009183FE /* HotelListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelListViewController.swift; sourceTree = "<group>"; };
 		9AADBF8A20EDCA85009183FE /* HotelOnMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelOnMapViewController.swift; sourceTree = "<group>"; };
+		9AC6E4892131AFEF00E70ABE /* RoomDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomDetailsViewController.swift; sourceTree = "<group>"; };
+		9AC6E48B2131B00800E70ABE /* RoomDetailsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomDetailsCell.swift; sourceTree = "<group>"; };
 		9ACCCC9720FAA1F00083CBD2 /* GradientNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientNavigationBar.swift; sourceTree = "<group>"; };
 		9ACCCC9920FAE6000083CBD2 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		9ADD3E3921069B5000D00078 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -848,6 +852,7 @@
 		9ADD3E432106B1DD00D00078 /* RatePlans */ = {
 			isa = PBXGroup;
 			children = (
+				9AC6E4892131AFEF00E70ABE /* RoomDetailsViewController.swift */,
 				9ADD3E442106B1F500D00078 /* RatePlansViewController.swift */,
 			);
 			path = RatePlans;
@@ -856,6 +861,7 @@
 		9ADD3E462106B23A00D00078 /* RatePlanView */ = {
 			isa = PBXGroup;
 			children = (
+				9AC6E48B2131B00800E70ABE /* RoomDetailsCell.swift */,
 				9ADD3E4B2106B70900D00078 /* RatePlanTableViewCell.swift */,
 			);
 			path = RatePlanView;
@@ -1190,6 +1196,7 @@
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
 				"${BUILT_PRODUCTS_DIR}/DatePickerDialog/DatePickerDialog.framework",
+				"${BUILT_PRODUCTS_DIR}/DynamicBlurView/DynamicBlurView.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
@@ -1201,6 +1208,7 @@
 				"${BUILT_PRODUCTS_DIR}/ImageSlideshow/ImageSlideshow.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/PopupDialog/PopupDialog.framework",
 				"${BUILT_PRODUCTS_DIR}/PullToRefreshKit/PullToRefreshKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SCLAlertView/SCLAlertView.framework",
 				"${BUILT_PRODUCTS_DIR}/SIAlertView/SIAlertView.framework",
@@ -1223,6 +1231,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DatePickerDialog.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DynamicBlurView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
@@ -1234,6 +1243,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImageSlideshow.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PopupDialog.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PullToRefreshKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SIAlertView.framework",
@@ -1326,6 +1336,7 @@
 				52B616D320E9341E00A1A416 /* JCCriterion.swift in Sources */,
 				52B616C520E9341E00A1A416 /* JCHotelRef.swift in Sources */,
 				9AADBF1A20ED50FF009183FE /* CheckAvailabilityViewController.swift in Sources */,
+				9AC6E48A2131AFEF00E70ABE /* RoomDetailsViewController.swift in Sources */,
 				52B616BB20E9341E00A1A416 /* JCDeadline.swift in Sources */,
 				52B6164120E891C100A1A416 /* JEmail.swift in Sources */,
 				9A8E78D520F8F98E0034C3AF /* ViewController.swift in Sources */,
@@ -1400,6 +1411,7 @@
 				9A41478D2108C31200C95F0A /* Location.swift in Sources */,
 				52B616D820E9341E00A1A416 /* JCBody.swift in Sources */,
 				9A8E78CF20F8F7FA0034C3AF /* CAGradientLayer+GradientColor.swift in Sources */,
+				9AC6E48C2131B00800E70ABE /* RoomDetailsCell.swift in Sources */,
 				52B616BD20E9341E00A1A416 /* JCOTAHotelAvailRS.swift in Sources */,
 				52B616BF20E9341E00A1A416 /* JCRoomRate.swift in Sources */,
 				52B6165420E891C100A1A416 /* JMeetingRoomCapacity.swift in Sources */,

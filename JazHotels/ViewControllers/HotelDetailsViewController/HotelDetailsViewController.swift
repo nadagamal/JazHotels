@@ -71,6 +71,7 @@ class HotelDetailsViewController: SegmentedPagerTabStripViewController {
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = UIColor.clear
+        GradientNavigationBar.appearance().colors = [UIColor .clear]
     }
     @objc public static func create() -> HotelDetailsViewController {
         
@@ -78,16 +79,56 @@ class HotelDetailsViewController: SegmentedPagerTabStripViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
        setTransparentNavigationBar()
-        let shareBtn = UIBarButtonItem(image: UIImage(named: "favHeader"), style: .done, target: self, action: #selector(shareBtnAction))
-        let favBtn = UIBarButtonItem(image: UIImage(named: "share"), style: .done, target: self, action: #selector(shareBtnAction))
-        self.navigationItem.rightBarButtonItems = [shareBtn,favBtn]
+        var list = [String]()
+        if UserDefaults.standard.object(forKey: "Favourites") != nil{
+            list = UserDefaults.standard.object(forKey: "Favourites") as! [String]
+        }
+        if list.count>0 && list .contains(hotel.hotelCode){
+            updateRighBarButton(isFavourite: true)
+        }else{
+            updateRighBarButton(isFavourite: false)
+        }
+
     }
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = false
 
     }
+    func updateRighBarButton(isFavourite : Bool){
+        var shareBtn:UIBarButtonItem!
+        var favBtn:UIBarButtonItem!
+        if isFavourite == false{
+        favBtn = UIBarButtonItem(image: UIImage(named: "favHeader"), style: .done, target: self, action: #selector(favBtnAction))
+        }
+        else{
+            favBtn = UIBarButtonItem(image: UIImage(named: "addFavH"), style: .done, target: self, action: #selector(favBtnAction))
+
+        }
+       shareBtn = UIBarButtonItem(image: UIImage(named: "share"), style: .done, target: self, action: #selector(shareBtnAction))
+        self.navigationItem.rightBarButtonItems = [favBtn,shareBtn]
+    }
+
     @objc func shareBtnAction(){
         
+    }
+    @objc func favBtnAction(){
+        var list = [String]()
+        if UserDefaults.standard.object(forKey: "Favourites") != nil{
+            list = UserDefaults.standard.object(forKey: "Favourites") as! [String]
+        }
+        if list.count>0 && list .contains(hotel.hotelCode){
+            for i in 0...list.count-1{
+                list.remove(at: i)
+                
+            }
+            updateRighBarButton(isFavourite: false)
+        }
+        else{
+            updateRighBarButton(isFavourite: true)
+        list.append(hotel.hotelCode)
+        }
+        UserDefaults.standard.set(list, forKey: "Favourites")
+        UserDefaults.standard.synchronize()
     }
     @objc func didTap() {
     let fullScreenController = slideshow.presentFullScreenController(from:self)

@@ -1,6 +1,6 @@
 PODS:
   - ACFloatingTextfield-Swift (1.7)
-  - Alamofire (4.7.2)
+  - Alamofire (4.7.3)
   - Bolts (1.9.0):
     - Bolts/AppLinks (= 1.9.0)
     - Bolts/Tasks (= 1.9.0)
@@ -10,6 +10,7 @@ PODS:
   - BSKeyboardControls (2.2)
   - Cosmos (15.0.0)
   - DatePickerDialog (2.0)
+  - DynamicBlurView (2.0.2)
   - FBSDKCoreKit (4.35.0):
     - Bolts (~> 1.7)
   - FBSDKLoginKit (4.35.0):
@@ -55,12 +56,14 @@ PODS:
   - ImageSlideshow/Kingfisher (1.6.1):
     - ImageSlideshow/Core
     - Kingfisher (> 3.0)
-  - iOSDropDown (0.2.3)
-  - IQKeyboardManagerSwift (6.0.4)
-  - Kingfisher (4.8.0)
-  - NVActivityIndicatorView (4.2.1):
-    - NVActivityIndicatorView/Presenter (= 4.2.1)
-  - NVActivityIndicatorView/Presenter (4.2.1)
+  - iOSDropDown (0.2.4)
+  - IQKeyboardManagerSwift (6.1.1)
+  - Kingfisher (4.8.1)
+  - NVActivityIndicatorView (4.3.0):
+    - NVActivityIndicatorView/Presenter (= 4.3.0)
+  - NVActivityIndicatorView/Presenter (4.3.0)
+  - PopupDialog (0.8.0):
+    - DynamicBlurView (~> 2.0)
   - PullToRefreshKit (0.8.6)
   - SCLAlertView (0.8)
   - SIAlertView (1.3)
@@ -109,6 +112,7 @@ DEPENDENCIES:
   - IQKeyboardManagerSwift
   - Kingfisher (~> 4.0)
   - NVActivityIndicatorView
+  - PopupDialog (~> 0.8)
   - PullToRefreshKit
   - SCLAlertView
   - SIAlertView
@@ -129,6 +133,7 @@ SPEC REPOS:
     - BSKeyboardControls
     - Cosmos
     - DatePickerDialog
+    - DynamicBlurView
     - FBSDKCoreKit
     - FBSDKLoginKit
     - Firebase
@@ -145,6 +150,7 @@ SPEC REPOS:
     - IQKeyboardManagerSwift
     - Kingfisher
     - NVActivityIndicatorView
+    - PopupDialog
     - PullToRefreshKit
     - SCLAlertView
     - SIAlertView
@@ -160,11 +166,12 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   ACFloatingTextfield-Swift: df075d5ed5d441d8603f985fc106ec7ebe0c673f
-  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   BSKeyboardControls: b701935e789961102e3f20063bba7185800a2d3f
   Cosmos: a6dbd3d0baa0cc8f51f8598f7508d5a09d0a9ade
   DatePickerDialog: 5e1c24d9fe6506cd45dbc573eed7b0a251b1c09d
+  DynamicBlurView: aa6db4defc6e537eb86fc5e58dd3991666178399
   FBSDKCoreKit: 1a5b2e3ceb5ca827a53c54aa5f4a3480efff80d2
   FBSDKLoginKit: 00a3d65d1226852f9d76dcddff01981e5e6d9c38
   Firebase: 355bd535bfdacaa82a7fe8d9784115edefd6fc03
@@ -177,10 +184,11 @@ SPEC CHECKSUMS:
   HCFramework: c2cc43840b694b435df171e6c02e7f92cbf0be3c
   HCMapInfoView: 7613d773f231920a8f75d844bcdf402b5f9b6e56
   ImageSlideshow: f0f33e1a20668e83d77f5fb7729e4ae4437c0759
-  iOSDropDown: 13af990620061ab42732b86edf1bd5268035e90e
-  IQKeyboardManagerSwift: 36dbe324b4f9793f5f41ba5227f3e7c76dfefd50
-  Kingfisher: 976d828df2b24834c6a3f2fc4d82cdbd26552be1
-  NVActivityIndicatorView: 8068ba3ad39cb44cbaab25d89ff2546b3f092681
+  iOSDropDown: 6d928eddd336c7bc698ad0ba4b324ce3d2d43c59
+  IQKeyboardManagerSwift: 977affaeb4d6e971975c7790a6850f31d38f1207
+  Kingfisher: 868c1149679a7ab6869be118faa9b5aed154aaf0
+  NVActivityIndicatorView: 963f62bf9f993fcf23218e55958e5b1761b9504c
+  PopupDialog: 11347197b6ac3e0548ac445d40ce68d1d407e9a0
   PullToRefreshKit: 172df52ab9c6cb2c1d4b1872b49f448d6291523f
   SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
   SIAlertView: 20c794b55eaf44d888773ea51647cf8907723919
@@ -194,6 +202,6 @@ SPEC CHECKSUMS:
   XLPagerTabStrip: c908b17cbf42fcd2598ee1adfc49bae25444d88a
   ZAlertView: 59fffdb4e37a01df461835566d5101052b8af953
 
-PODFILE CHECKSUM: 33f8ddedaf7d01868afab8fdfd3c4fc74bd43447
+PODFILE CHECKSUM: fb00d13210cca75bda9fa66ef2f977dfbd430c08
 
 COCOAPODS: 1.5.0

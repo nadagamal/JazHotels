@@ -71,7 +71,9 @@ class CheckAvailabilityViewController: UIViewController , UIScrollViewDelegate {
         checkInDate = Date()
         startDate = checkInDateLb.text
         endDate = checkoutDateLb.text
-        numberOfNightsLb.text = String(Helper.nightsBetweenDates(startDate: Date(), endDate: Date().tomorrow))
+//        numberOfNightsLb.text = String(Helper.nightsBetweenDates(startDate: Date(), endDate: Date().tomorrow))
+        numberOfNightsLb.text = "1"
+
     }
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = true

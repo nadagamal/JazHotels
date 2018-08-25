@@ -77,10 +77,11 @@ class SplashViewController: UIViewController {
                 do {
                     let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
                     let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
-                    if let jsonResult = jsonResult as? Dictionary<String, [String]>{
-                        let obj  =  JSoapEnvelope.init(fromDictionary: jsonResult as [String : Any])
+                    if let jsonResult = jsonResult as? Dictionary<String, Any>{
+                        let obj  =  JSoapEnvelope.init(fromDictionary: jsonResult as Dictionary<String, Any>)
                         if obj.body.oTAHotelDescriptiveInfoRS.hotelDescriptiveContents != nil{
                             JazHotels.hotels = obj.body.oTAHotelDescriptiveInfoRS.hotelDescriptiveContents.hotelDescriptiveContent
+                            (JazHotels.hotelsName,JazHotels.hotelsCode) = Helper.getHotelNamesAndIds(hotelArray: JazHotels.hotels)
                             self.setRootViewController()
                             DispatchQueue.main.async {
                                 self.activityIndicator .stopAnimating()
@@ -88,9 +89,14 @@ class SplashViewController: UIViewController {
 
                         }
                     }
-                } catch {
+                } catch{
+                    
+                    
                 }
+                
+                
             }
+            
         }
     
     func readHotelCoordinatesJSON(){

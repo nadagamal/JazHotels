@@ -119,6 +119,7 @@ class HotelDetailsViewController: SegmentedPagerTabStripViewController {
         if list.count>0 && list .contains(hotel.hotelCode){
             for i in 0...list.count-1{
                 list.remove(at: i)
+                break
                 
             }
             updateRighBarButton(isFavourite: false)

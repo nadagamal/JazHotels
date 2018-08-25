@@ -1,16 +1,18 @@
 //
-//  ProfileViewController.swift
+//  CreateAccountViewController.swift
 //  JazHotels
 //
-//  Created by Zeinab Reda on 7/4/18.
+//  Created by Zeinab Reda on 8/25/18.
 //  Copyright © 2018 Jaz. All rights reserved.
 //
 
 import UIKit
+import ACFloatingTextfield_Swift
 
-class ProfileViewController: UITableViewController {
+class CreateAccountViewController: UIViewController {
 
-    @IBOutlet weak var profileImg: UIImageView!
+    @IBOutlet weak var mailTF: ACFloatingTextfield!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,4 +24,9 @@ class ProfileViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func closeBtnAcrion(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+
 }

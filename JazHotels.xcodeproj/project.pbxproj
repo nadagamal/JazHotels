@@ -146,6 +146,7 @@
 		9AADBF8B20EDCA85009183FE /* HotelOnMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AADBF8A20EDCA85009183FE /* HotelOnMapViewController.swift */; };
 		9AC6E48A2131AFEF00E70ABE /* RoomDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC6E4892131AFEF00E70ABE /* RoomDetailsViewController.swift */; };
 		9AC6E48C2131B00800E70ABE /* RoomDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC6E48B2131B00800E70ABE /* RoomDetailsCell.swift */; };
+		9AC6E48E2131D46B00E70ABE /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC6E48D2131D46B00E70ABE /* CreateAccountViewController.swift */; };
 		9ACCCC9820FAA1F00083CBD2 /* GradientNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACCCC9720FAA1F00083CBD2 /* GradientNavigationBar.swift */; };
 		9ACCCC9A20FAE6000083CBD2 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACCCC9920FAE6000083CBD2 /* Date.swift */; };
 		9ADD3E3A21069B5000D00078 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ADD3E3921069B5000D00078 /* MapKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
@@ -378,6 +379,7 @@
 		9AADBF8A20EDCA85009183FE /* HotelOnMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelOnMapViewController.swift; sourceTree = "<group>"; };
 		9AC6E4892131AFEF00E70ABE /* RoomDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomDetailsViewController.swift; sourceTree = "<group>"; };
 		9AC6E48B2131B00800E70ABE /* RoomDetailsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomDetailsCell.swift; sourceTree = "<group>"; };
+		9AC6E48D2131D46B00E70ABE /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		9ACCCC9720FAA1F00083CBD2 /* GradientNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientNavigationBar.swift; sourceTree = "<group>"; };
 		9ACCCC9920FAE6000083CBD2 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		9ADD3E3921069B5000D00078 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -701,6 +703,7 @@
 			isa = PBXGroup;
 			children = (
 				9A640D4821305F94002CB116 /* LoginViewController.swift */,
+				9AC6E48D2131D46B00E70ABE /* CreateAccountViewController.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -1411,6 +1414,7 @@
 				9A41478D2108C31200C95F0A /* Location.swift in Sources */,
 				52B616D820E9341E00A1A416 /* JCBody.swift in Sources */,
 				9A8E78CF20F8F7FA0034C3AF /* CAGradientLayer+GradientColor.swift in Sources */,
+				9AC6E48E2131D46B00E70ABE /* CreateAccountViewController.swift in Sources */,
 				9AC6E48C2131B00800E70ABE /* RoomDetailsCell.swift in Sources */,
 				52B616BD20E9341E00A1A416 /* JCOTAHotelAvailRS.swift in Sources */,
 				52B616BF20E9341E00A1A416 /* JCRoomRate.swift in Sources */,

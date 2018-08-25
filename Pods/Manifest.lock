@@ -126,7 +126,7 @@ DEPENDENCIES:
   - ZAlertView
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - ACFloatingTextfield-Swift
     - Alamofire
     - Bolts
@@ -204,4 +204,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: fb00d13210cca75bda9fa66ef2f977dfbd430c08
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3

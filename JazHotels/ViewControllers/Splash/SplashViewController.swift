@@ -27,6 +27,10 @@ class SplashViewController: UIViewController {
             self.activityIndicator .stopAnimating()
             self.setRootViewController()
             
+            var path: [AnyObject] = NSSearchPathForDirectoriesInDomains(.libraryDirectory, .userDomainMask, true) as [AnyObject]
+            let folder: String = path[0] as! String
+            NSLog("Your NSUserDefaults are stored in this folder: %@/Preferences", folder)
+            
         }
         else {
             ServiceManager().getHotels { (data, error) in

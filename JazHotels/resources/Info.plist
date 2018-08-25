@@ -39,7 +39,8 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>twitterkit-btrzmWJV3VYvBqagPXDjKi1Mu</string>
+<!--                <string>twitterkit-btrzmWJV3VYvBqagPXDjKi1Mu</string>-->
+                <string>twitterkit-r8QRfM6loE4WTLBAOu2fWbkOZ</string>
 			</array>
 		</dict>
 	</array>

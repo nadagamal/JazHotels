@@ -38,7 +38,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UITabBarDelegate, GIDSignI
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         GIDSignIn.sharedInstance().delegate = self
-        TWTRTwitter.sharedInstance().start(withConsumerKey: "btrzmWJV3VYvBqagPXDjKi1Mu", consumerSecret: "utYexWTFtmmJtEQiXp72J7Ke3jGjIxnFADHgj42Da64IjsOdpQ")
+//        TWTRTwitter.sharedInstance().start(withConsumerKey: "btrzmWJV3VYvBqagPXDjKi1Mu", consumerSecret: "utYexWTFtmmJtEQiXp72J7Ke3jGjIxnFADHgj42Da64IjsOdpQ")
+        TWTRTwitter.sharedInstance().start(withConsumerKey: "r8QRfM6loE4WTLBAOu2fWbkOZ", consumerSecret: "ZyxEnmbQ9rWgotrCz5o5KyvMJYbqVmwKK76iwqUngSoFVYWSMz")
 
 
         

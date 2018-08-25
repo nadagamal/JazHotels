@@ -17,6 +17,7 @@
 		524F784B20F9222700AF0EF6 /* hotels-coords.json in Resources */ = {isa = PBXBuildFile; fileRef = 524F784820F9222700AF0EF6 /* hotels-coords.json */; };
 		524F784E20F9365700AF0EF6 /* HotelDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524F784D20F9365700AF0EF6 /* HotelDetailsViewController.swift */; };
 		5254F33C2106A17700A397B4 /* RaisedTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5254F33B2106A17700A397B4 /* RaisedTabBarController.swift */; };
+		5275C080213207CE00DEB849 /* hotels.json in Resources */ = {isa = PBXBuildFile; fileRef = 5275C07F213207CE00DEB849 /* hotels.json */; };
 		5279A5A020FA70F000E94FB1 /* HotelDetailsOverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5279A59F20FA70F000E94FB1 /* HotelDetailsOverviewViewController.swift */; };
 		5279A5A220FA710F00E94FB1 /* HotelDetailsContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5279A5A120FA710F00E94FB1 /* HotelDetailsContactViewController.swift */; };
 		528F600920E7BFB9003111E7 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F600820E7BFB9003111E7 /* ServiceManager.swift */; };
@@ -246,6 +247,7 @@
 		524F784820F9222700AF0EF6 /* hotels-coords.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "hotels-coords.json"; sourceTree = "<group>"; };
 		524F784D20F9365700AF0EF6 /* HotelDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelDetailsViewController.swift; sourceTree = "<group>"; };
 		5254F33B2106A17700A397B4 /* RaisedTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RaisedTabBarController.swift; sourceTree = "<group>"; };
+		5275C07F213207CE00DEB849 /* hotels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hotels.json; sourceTree = "<group>"; };
 		5279A59F20FA70F000E94FB1 /* HotelDetailsOverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelDetailsOverviewViewController.swift; sourceTree = "<group>"; };
 		5279A5A120FA710F00E94FB1 /* HotelDetailsContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelDetailsContactViewController.swift; sourceTree = "<group>"; };
 		528F600820E7BFB9003111E7 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
@@ -522,6 +524,7 @@
 		524F784520F9222700AF0EF6 /* JsonFiles */ = {
 			isa = PBXGroup;
 			children = (
+				5275C07F213207CE00DEB849 /* hotels.json */,
 				524F784620F9222700AF0EF6 /* hotels-images.json */,
 				524F784720F9222700AF0EF6 /* hotels-urls.json */,
 				524F784820F9222700AF0EF6 /* hotels-coords.json */,
@@ -1131,6 +1134,7 @@
 				9AE61CCE20DAE0BD006160C1 /* Main.storyboard in Resources */,
 				9AE61CA920DAC74B006160C1 /* Montserrat-BoldItalic.otf in Resources */,
 				9AE61CC220DAC74B006160C1 /* MontserratAlternates-ThinItalic.otf in Resources */,
+				5275C080213207CE00DEB849 /* hotels.json in Resources */,
 				9AE61CAB20DAC74B006160C1 /* Montserrat-ThinItalic.otf in Resources */,
 				9AE61CA820DAC74B006160C1 /* MontserratAlternates-Medium.otf in Resources */,
 				9AE61CAD20DAC74B006160C1 /* MontserratAlternates-MediumItalic.otf in Resources */,

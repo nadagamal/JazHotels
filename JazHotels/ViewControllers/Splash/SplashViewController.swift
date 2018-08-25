@@ -33,13 +33,14 @@ class SplashViewController: UIViewController {
             
         }
         else {
+            readHotelsJSON()
             ServiceManager().getHotels { (data, error) in
                 if error != nil{
                     DispatchQueue.main.async {
                         self.activityIndicator .stopAnimating()
-                        SCLAlertView.showRetryCustomAlertWithMessage(message: "Internet Connection Error") { (response) in
-                            self.viewDidLoad()
-                        }
+//                        SCLAlertView.showRetryCustomAlertWithMessage(message: "Internet Connection Error") { (response) in
+//                            self.viewDidLoad()
+//                        }
                     }
                 }
                 else{
@@ -51,7 +52,7 @@ class SplashViewController: UIViewController {
                             self.activityIndicator .stopAnimating()
                             (JazHotels.hotelsName,JazHotels.hotelsCode) = Helper.getHotelNamesAndIds(hotelArray: JazHotels.hotels)
                         }
-                        self.setRootViewController()
+                      //  self.setRootViewController()
                         
                     }
                 }
@@ -71,7 +72,26 @@ class SplashViewController: UIViewController {
             }
         }
     }
-    
+        func readHotelsJSON(){
+            if let path = Bundle.main.path(forResource: "hotels", ofType: "json") {
+                do {
+                    let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                    let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
+                    if let jsonResult = jsonResult as? Dictionary<String, [String]>{
+                        let obj  =  JSoapEnvelope.init(fromDictionary: jsonResult as [String : Any])
+                        if obj.body.oTAHotelDescriptiveInfoRS.hotelDescriptiveContents != nil{
+                            JazHotels.hotels = obj.body.oTAHotelDescriptiveInfoRS.hotelDescriptiveContents.hotelDescriptiveContent
+                            self.setRootViewController()
+                            DispatchQueue.main.async {
+                                self.activityIndicator .stopAnimating()
+                            }
+
+                        }
+                    }
+                } catch {
+                }
+            }
+        }
     
     func readHotelCoordinatesJSON(){
         if let path = Bundle.main.path(forResource: "hotels-coords", ofType: "json") {

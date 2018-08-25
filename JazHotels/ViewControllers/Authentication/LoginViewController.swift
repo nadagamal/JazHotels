@@ -13,7 +13,7 @@ import FirebaseAuth
 import Firebase
 import FBSDKLoginKit
 import TwitterKit
-
+import SVProgressHUD
 
 class LoginViewController: UIViewController , GIDSignInUIDelegate  {
     
@@ -29,13 +29,27 @@ class LoginViewController: UIViewController , GIDSignInUIDelegate  {
     }
     @objc private func signInWithGoogle(notification: Notification) {
         
+        SVProgressHUD.dismiss()
         let user = notification.object as! GIDGoogleUser
-        print(user.profile.email)
+        
+        guard let authentication = user.authentication else { return }
+        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
+                                                       accessToken: authentication.accessToken)
+        
+        
+        Auth.auth().signInAndRetrieveData(with: credential) { (authResult, error) in
+            if error != nil {
+                
+                print(error?.localizedDescription ?? "")
+                return
+            }
+            print(authResult?.user.email)
+        }
         
     }
     
     @IBAction func siginGoogleAction(_ sender: Any) {
-        
+        SVProgressHUD.show()
         GIDSignIn.sharedInstance().signIn()
         
     }
@@ -45,7 +59,14 @@ class LoginViewController: UIViewController , GIDSignInUIDelegate  {
         
         let fbLoginManager = FBSDKLoginManager()
         fbLoginManager.logIn(withReadPermissions: ["public_profile", "email"], from: self) { (result, error) in
+            
+            SVProgressHUD.show()
+
+           
             if let error = error {
+                DispatchQueue.main.async {
+                    SVProgressHUD.dismiss()
+                }
                 print("Failed to login: \(error.localizedDescription)")
                 return
             }
@@ -59,6 +80,11 @@ class LoginViewController: UIViewController , GIDSignInUIDelegate  {
             
             // Perform login by calling Firebase APIs
             Auth.auth().signInAndRetrieveData(with: credential, completion: { (authResult, error) in
+                
+                DispatchQueue.main.async {
+                    SVProgressHUD.dismiss()
+                }
+                
                 if let error = error {
                     print("Login error: \(error.localizedDescription)")
                     let alertController = UIAlertController(title: "Login Error", message: error.localizedDescription, preferredStyle: .alert)
@@ -83,8 +109,9 @@ class LoginViewController: UIViewController , GIDSignInUIDelegate  {
     
     @IBAction func siginTwitterAction(_ sender: Any) {
         
-        
         TWTRTwitter.sharedInstance().logIn(completion: { [weak self] (session, error) in
+            SVProgressHUD.show()
+
             if (session != nil) {
                 debugPrint("signed in as \(String(describing: session?.userName))")
                 debugPrint("signed in as \(String(describing: session?.authToken))")
@@ -93,6 +120,9 @@ class LoginViewController: UIViewController , GIDSignInUIDelegate  {
                 let credential = TwitterAuthProvider.credential(withToken: (session?.authToken)!, secret: (session?.authTokenSecret)!)
                 
                 Auth.auth().signInAndRetrieveData(with: credential) { (authResult, error) in
+                    DispatchQueue.main.async {
+                        SVProgressHUD.dismiss()
+                    }
                     if let error = error {
                         print("Login error: \(error.localizedDescription)")
                         let alertController = UIAlertController(title: "Login Error", message: error.localizedDescription, preferredStyle: .alert)
@@ -112,6 +142,9 @@ class LoginViewController: UIViewController , GIDSignInUIDelegate  {
                 }
                 
             } else {
+                DispatchQueue.main.async {
+                    SVProgressHUD.dismiss()
+                }
                 debugPrint("error: \(String(describing: error?.localizedDescription))")
                 
             }

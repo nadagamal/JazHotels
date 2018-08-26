@@ -78,23 +78,27 @@ extension HotelOnMapViewController : MKMapViewDelegate
 {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         var image = UIImage()
+        //            DispatchQueue.main.async {
+        //                for (_,hotel) in (self.roomStays.enumerated())
+        //                {
+        //                    if let imageURLs =  JazHotels.hotelsImages![(hotel.basicPropertyInfo.hotelCode)!]
+        //                    {
+        //                        let url = URL(string:imageURLs[0])
+        //                        if let data = try? Data(contentsOf: url!)
+        //                        {
+        //                            image = UIImage(data: data)!
+        //                            image = self.resizeImage(image: image, newWidth: 100)
+        //                            view.image = image
+        //                            break
+        //                        }
+        //
+        //                    }
+        //                }
+        //            }
+
         if let view = annotation as? HotelMapDetailsView
         {
-            for (_,hotel) in (roomStays.enumerated())
-            {
-                if let imageURLs =  JazHotels.hotelsImages![(hotel.basicPropertyInfo.hotelCode)!]
-                {
-                    let url = URL(string:imageURLs[0])
-                    if let data = try? Data(contentsOf: url!)
-                    {
-                        image = UIImage(data: data)!
-                        image = self.resizeImage(image: image, newWidth: 100)
-                        view.image = image
-                        break
-                    }
-                
-                }
-            }
+
             return HCAnnotationView.hcCreatePin(forMap: mapView, forAnnotation: annotation, withPinImage:UIImage(named: "locationdetails"), withReuseIdentifier:"location", withClass: MapInfoHotelView.self, mapInfoViewName: "MapInfoHotelView", showInfoViewHandler: {infoView in
                 if let redView = infoView as? MapInfoHotelView
                 {

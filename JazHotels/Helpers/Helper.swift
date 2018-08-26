@@ -16,8 +16,8 @@ public struct JazHotels {
     static var hotelsURLs: Dictionary<String,String>?
     static var hotelsName: [String]?
     static var hotelsCode: [Int]?
-
-
+    
+    
 }
 extension UISegmentedControl {
     func removeBorders() {
@@ -63,8 +63,49 @@ extension UIFont {
         return UIFont(name: "Montserrat-Bold", size: size)!
     }
 }
+
+
+
+extension UserDefaults
+{
+    static let userDef = UserDefaults.standard
+    
+    static func saveUserDefault(key: String, value: Any) {
+        userDef.set(value, forKey: key)
+    }
+    static func getUserDefault(key: String)->Any {
+        return userDef.object(forKey: key) as Any
+    }
+    static func removeKeyUserDefault(key: String) {
+        return userDef.removeObject(forKey: key)
+    }
+    
+    static func isKeyPresentInUserDefaults(key: String) -> Bool {
+        return userDef.object(forKey: key) != nil
+    }
+    
+    static func saveObjectDefault(key: String, value: Any) {
+        let userDataEncoded = NSKeyedArchiver.archivedData(withRootObject: value)
+        userDef.set(userDataEncoded, forKey: key)
+        userDef.synchronize()
+    }
+    
+    static func getObjectDefault(key: String)->Any {
+        
+        if let decodedNSData = UserDefaults.standard.object(forKey: key) as? NSData,
+            let Data = NSKeyedUnarchiver.unarchiveObject(with: decodedNSData as Data) {
+            
+            return Data
+        } else {
+            debugPrint("Failed")
+            
+            return ""
+        }
+    }
+}
 class  Helper  {
     
+  
     static func hexStringToUIColor (hex: String) -> UIColor {
         var cString: String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
         
@@ -90,7 +131,7 @@ class  Helper  {
     {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = formate//this your string date format
-
+        
         let date = dateFormatter.date(from: date)
         dateFormatter.dateFormat = toFormate///this is what you want to convert format
         let timeStamp = dateFormatter.string(from: date!)
@@ -107,10 +148,10 @@ class  Helper  {
             return nigths < 0 ? 0 : nigths
         }
         return 0
-
+        
     }
     
-   static func getHotelNamesAndIds(hotelArray:[JHotelDescriptiveContent]) ->([String]?,[Int]?)
+    static func getHotelNamesAndIds(hotelArray:[JHotelDescriptiveContent]) ->([String]?,[Int]?)
     {
         var hotelsName:[String] = []
         var hotelsCode:[Int] = []
@@ -118,7 +159,7 @@ class  Helper  {
         for (_,item) in hotelArray.enumerated() {
             hotelsName.append(item.hotelName)
             hotelsCode.append(Int(item.hotelCode ?? "")!)
-           
+            
         }
         
         
@@ -129,7 +170,7 @@ class  Helper  {
                 cities.append(hotel.contactInfos.contactInfo.addresses.address.cityName)
                 hotelsName.append(hotel.contactInfos.contactInfo.addresses.address.cityName)
                 hotelsCode.append(0)
-
+                
             }
         }
         

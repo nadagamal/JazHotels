@@ -14,18 +14,57 @@ import Firebase
 import FBSDKLoginKit
 import TwitterKit
 import SVProgressHUD
+import FirebaseFirestore
 
 class LoginViewController: UIViewController , GIDSignInUIDelegate  {
     
+    fileprivate let db = Firestore.firestore()
+    fileprivate var user:User?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         GIDSignIn.sharedInstance().uiDelegate = self
         NotificationCenter.default.addObserver(self, selector: #selector(LoginViewController.signInWithGoogle(notification:)), name: Notification.Name(HotelJazConstants.SocialPath.kSocialAuthenticationPathGoogle), object: nil)
+        let settings = db.settings
+        settings.areTimestampsInSnapshotsEnabled = true
+        db.settings = settings
+
+        var ref: DocumentReference? = nil
+        ref = db.collection("users").addDocument(data: [
+            "first": "Zeinab",
+            "last": "Reda"
+        ]) { err in
+            if let err = err {
+                print("Error adding document: \(err)")
+            } else {
+                print("Document added with ID: \(ref!.documentID)")
+            }
+        }
+
     }
     
+    @objc public static func create() -> LoginViewController {
+        
+        return UIStoryboard(name: HotelJazConstants.StoryBoard.authSB, bundle: Bundle.main).instantiateViewController(withIdentifier: String(describing: self)) as! LoginViewController
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    
+    @IBAction func closeView(_ sender: Any) {
+//        self.dismiss(animated: true, completion: nil)
+//        self.navigationController?.dismiss(animated: true, completion: {
+//
+//            tabBarHome?.selectedIndex = 0
+//
+//        })
+        
+        let mainSB = UIStoryboard(name: HotelJazConstants.StoryBoard.mainSB, bundle: nil)
+        let tabBarHome = mainSB.instantiateViewController(withIdentifier: "HomeTabbar") as? RaisedTabBarController
+        self.present(tabBarHome!, animated: true, completion: nil)
+        
     }
     @objc private func signInWithGoogle(notification: Notification) {
         
@@ -44,6 +83,9 @@ class LoginViewController: UIViewController , GIDSignInUIDelegate  {
                 return
             }
             print(authResult?.user.email)
+            self.user?.fullName = authResult?.user.displayName
+            self.user?.emailAddress = authResult?.user.email
+            self.viewProfile()
         }
         
     }
@@ -94,8 +136,10 @@ class LoginViewController: UIViewController , GIDSignInUIDelegate  {
                     
                 else
                 {
-                    
-                    print("Sucess")
+                    print(authResult?.user.email)
+                    self.user?.fullName = authResult?.user.displayName
+                    self.user?.emailAddress = authResult?.user.email
+                    self.viewProfile()
                 }
             })
             
@@ -120,6 +164,7 @@ class LoginViewController: UIViewController , GIDSignInUIDelegate  {
                     DispatchQueue.main.async {
                         SVProgressHUD.dismiss()
                     }
+                    
                     if let error = error {
                         print("Login error: \(error.localizedDescription)")
                         let alertController = UIAlertController(title: "Login Error", message: error.localizedDescription, preferredStyle: .alert)
@@ -132,8 +177,10 @@ class LoginViewController: UIViewController , GIDSignInUIDelegate  {
                         
                     else
                     {
-                        
-                        print("Sucess")
+                        self?.user?.fullName = authResult?.user.displayName
+                        self?.user?.emailAddress = authResult?.user.email
+
+                        self?.viewProfile()
                     }
                     
                 }
@@ -149,23 +196,17 @@ class LoginViewController: UIViewController , GIDSignInUIDelegate  {
         
     }
     
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
-        if error != nil {
-            return
-        }
+    
+    func viewProfile()
+    {
+        UserDefaults.saveObjectDefault(key: HotelJazConstants.userDefault.userData, value: self.user ?? "")
+
+        self.dismiss(animated: true, completion: nil)
+
+     
         
-        guard let authentication = user.authentication else { return }
-        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
-                                                       accessToken: authentication.accessToken)
         
         
-        Auth.auth().signInAndRetrieveData(with: credential) { (authResult, error) in
-            if error != nil {
-                // ...
-                return
-            }
-            // User is signed in
-            // ...
-        }
     }
+   
 }

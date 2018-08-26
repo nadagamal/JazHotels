@@ -30,13 +30,13 @@ target 'JazHotels' do
     pod 'SideMenu'
     pod 'ACFloatingTextfield-Swift', '~> 1.7'
     pod 'PopupDialog', '~> 0.8'
-
-
-
+    
+    
+    
     # Pods for FirebaseAuth
-
+    
     pod 'Firebase/Auth'
-
+    
     # Pods for Gmail
     pod 'GoogleSignIn'
     
@@ -47,8 +47,13 @@ target 'JazHotels' do
     
     
     # Pods for Twitter
-
+    
     pod 'TwitterKit'
+    
+    # Pods for Database Firebase
+    
+    pod 'Firebase/Core'
+    pod 'Firebase/Firestore'
 
     
     post_install do |installer|
@@ -60,4 +65,4 @@ target 'JazHotels' do
     
     
     
- end
+end

@@ -230,7 +230,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="ProfileViewController" id="QO0-ZJ-5Sj" customClass="ProfileViewController" customModule="JazHotels" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gSE-ES-gvM">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="R55-8Y-iH8">
@@ -486,11 +486,10 @@
         <!--Navigation Controller-->
         <scene sceneID="Slu-he-kIx">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="M62-yI-JNf" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="M62-yI-JNf" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="account-icon" landscapeImage="account-icon" largeContentSizeImage="account-icon" id="HFY-kr-8Jw"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Lld-6k-uZn">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Lld-6k-uZn" customClass="GradientNavigationBar" customModule="JazHotels" customModuleProvider="target">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

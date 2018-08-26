@@ -323,7 +323,7 @@ Iberotel Borg El Arab</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hOd-9g-C6H">
-                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="rjc-Ue-DvF" id="OfC-Cu-QWy"/>
@@ -1974,10 +1974,9 @@ Alam Road, Red Sea, Egypt.</string>
         <!--Navigation Controller-->
         <scene sceneID="FP9-et-jDE">
             <objects>
-                <navigationController id="FK2-ce-JBX" sceneMemberID="viewController">
+                <navigationController navigationBarHidden="YES" id="FK2-ce-JBX" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="favHeader" id="r56-8U-Of1"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6Ul-CD-V97" customClass="GradientNavigationBar" customModule="JazHotels" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">

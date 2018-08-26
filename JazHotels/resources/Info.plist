@@ -23,7 +23,7 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.googleusercontent.apps.920764747568-8imi7dlk9va8gnppu3kr7a5q7lan7lcv</string>
+				<string>com.googleusercontent.apps.787426090971-ov0uj4kkqneikriaa2n89ofla2v18cc8</string>
 			</array>
 		</dict>
 		<dict>
@@ -31,8 +31,7 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-<!--                <string>fb305850266488530</string>-->
-                <string>fb274721793138743</string>
+				<string>fb274721793138743</string>
 			</array>
 		</dict>
 		<dict>
@@ -40,16 +39,14 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-<!--                <string>twitterkit-btrzmWJV3VYvBqagPXDjKi1Mu</string>-->
-                <string>twitterkit-r8QRfM6loE4WTLBAOu2fWbkOZ</string>
+				<string>twitterkit-r8QRfM6loE4WTLBAOu2fWbkOZ</string>
 			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>FacebookAppID</key>
-<!--    <string>305850266488530</string>-->
-    <string>274721793138743</string>
+	<string>274721793138743</string>
 	<key>FacebookDisplayName</key>
 	<string>JazHotels</string>
 	<key>LSApplicationQueriesSchemes</key>

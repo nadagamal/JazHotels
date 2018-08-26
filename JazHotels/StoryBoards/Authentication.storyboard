@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Tx0-gd-a1D">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M62-yI-JNf">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -29,6 +29,17 @@
                                     <constraint firstAttribute="height" constant="230" id="pGz-oW-ELP"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qhf-kO-c4N">
+                                <rect key="frame" x="16" y="16" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="cg6-O5-6nY"/>
+                                    <constraint firstAttribute="height" constant="30" id="hie-In-eRR"/>
+                                </constraints>
+                                <state key="normal" image="cancel"/>
+                                <connections>
+                                    <action selector="closeView:" destination="Tx0-gd-a1D" eventType="touchUpInside" id="MCC-dH-dPD"/>
+                                </connections>
+                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jazLauncherLogo" translatesAutoresizingMaskIntoConstraints="NO" id="jZ8-z6-idg">
                                 <rect key="frame" x="143" y="63" width="89" height="65"/>
                             </imageView>
@@ -109,9 +120,6 @@
                                                 <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <segue destination="QO0-ZJ-5Sj" kind="presentation" id="qab-Cc-1Rc"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -122,15 +130,16 @@
                             <constraint firstItem="jZ8-z6-idg" firstAttribute="centerX" secondItem="wLt-YZ-ybN" secondAttribute="centerX" id="MgZ-Ru-rff"/>
                             <constraint firstItem="jZ8-z6-idg" firstAttribute="centerY" secondItem="wLt-YZ-ybN" secondAttribute="centerY" id="NNP-L5-iyv"/>
                             <constraint firstItem="wLt-YZ-ybN" firstAttribute="leading" secondItem="sF2-zY-ug4" secondAttribute="leading" id="V5S-Fo-Y3g"/>
+                            <constraint firstItem="Qhf-kO-c4N" firstAttribute="top" secondItem="GP1-y5-FuY" secondAttribute="top" constant="16" id="aC2-Db-vzB"/>
                             <constraint firstItem="sF2-zY-ug4" firstAttribute="trailing" secondItem="fgd-l2-dbX" secondAttribute="trailing" constant="40" id="ckh-Sc-boz"/>
                             <constraint firstItem="wLt-YZ-ybN" firstAttribute="trailing" secondItem="sF2-zY-ug4" secondAttribute="trailing" id="dLZ-Yw-IZH"/>
                             <constraint firstItem="sF2-zY-ug4" firstAttribute="bottom" secondItem="fgd-l2-dbX" secondAttribute="bottom" constant="55" id="fE6-Ri-h8I"/>
+                            <constraint firstItem="Qhf-kO-c4N" firstAttribute="leading" secondItem="GP1-y5-FuY" secondAttribute="leading" constant="16" id="nlM-5L-1Ad"/>
                             <constraint firstItem="fgd-l2-dbX" firstAttribute="leading" secondItem="sF2-zY-ug4" secondAttribute="leading" constant="40" id="oB6-MN-3Qq"/>
                             <constraint firstItem="fgd-l2-dbX" firstAttribute="top" secondItem="wLt-YZ-ybN" secondAttribute="bottom" constant="55" id="rXS-WZ-RYl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sF2-zY-ug4"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="account-icon" landscapeImage="account-icon" largeContentSizeImage="account-icon" id="efW-H1-7dt"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MOf-6V-fF7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -214,14 +223,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OUc-GZ-EHG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5135" y="1407"/>
+            <point key="canvasLocation" x="4833" y="1523"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="cLo-nV-VaV">
             <objects>
                 <tableViewController storyboardIdentifier="ProfileViewController" id="QO0-ZJ-5Sj" customClass="ProfileViewController" customModule="JazHotels" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gSE-ES-gvM">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="R55-8Y-iH8">
@@ -277,6 +286,9 @@
                                                             <real key="value" value="1"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="editProfileBtn:" destination="QO0-ZJ-5Sj" eventType="touchUpInside" id="Rer-gI-A7n"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NAo-Bh-q8b">
                                                     <rect key="frame" x="166" y="143" width="42" height="20.5"/>
@@ -319,12 +331,6 @@
                                                 <constraint firstAttribute="trailing" secondItem="8HH-Qr-TwL" secondAttribute="trailing" constant="16" id="sha-oS-0ps"/>
                                                 <constraint firstItem="4ey-AQ-58V" firstAttribute="centerX" secondItem="mXA-A5-5tj" secondAttribute="centerX" id="umv-uN-OnS"/>
                                             </constraints>
-                                            <variation key="default">
-                                                <mask key="subviews">
-                                                    <exclude reference="8HH-Qr-TwL"/>
-                                                    <exclude reference="cRh-vp-49J"/>
-                                                </mask>
-                                            </variation>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="pvQ-rD-BQI" imageView="VJl-cZ-HvU" rowHeight="60" style="IBUITableViewCellStyleDefault" id="ZJZ-Sg-yTt">
@@ -461,11 +467,38 @@
                             <outlet property="delegate" destination="QO0-ZJ-5Sj" id="flU-Um-cUR"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="XVs-Bi-t2Z"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="profileImg" destination="mXA-A5-5tj" id="Dmo-yv-yjF"/>
+                        <outlet property="userAddress" destination="Jbf-vE-9m8" id="ydD-pR-5FA"/>
+                        <outlet property="userCountry" destination="Ofj-wc-vuc" id="75l-9T-43u"/>
+                        <outlet property="userCreditNumber" destination="Mvc-eE-eVc" id="vAl-tK-tbV"/>
+                        <outlet property="userMobile" destination="aaG-3U-KLD" id="NDi-VN-QSe"/>
+                        <outlet property="userName" destination="NAo-Bh-q8b" id="H7G-MH-dAO"/>
+                        <outlet property="userTitle" destination="pvQ-rD-BQI" id="pbm-dJ-08n"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dZM-Zp-Z4k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4904.8000000000002" y="2299.7001499250377"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Slu-he-kIx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="M62-yI-JNf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="account-icon" landscapeImage="account-icon" largeContentSizeImage="account-icon" id="HFY-kr-8Jw"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Lld-6k-uZn">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="QO0-ZJ-5Sj" kind="relationship" relationship="rootViewController" id="97x-d6-nK9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GH6-qN-WEH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3965.5999999999999" y="2299.7001499250377"/>
         </scene>

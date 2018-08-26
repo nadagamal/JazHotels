@@ -123,7 +123,10 @@ extension RatePlansViewController :UITableViewDelegate , UITableViewDataSource
         }
     }
     func numberOfSections(in tableView: UITableView) -> Int {
+        if roomStay.ratePlans != nil && roomStay.ratePlans.ratePlan != nil && roomStay.ratePlans.ratePlan.count != 0{
         return roomStay.ratePlans.ratePlan.count
+        }
+        return 0
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

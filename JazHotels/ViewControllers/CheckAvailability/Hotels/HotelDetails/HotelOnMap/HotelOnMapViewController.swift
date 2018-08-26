@@ -62,14 +62,40 @@ class HotelOnMapViewController: UIViewController {
         }
         
     }
+    func resizeImage(image: UIImage, newWidth: CGFloat) -> UIImage {
+        let scale = newWidth / image.size.width
+        let newHeight = image.size.height * scale
+        UIGraphicsBeginImageContext(CGSize(width:newWidth, height:newHeight))
+        image.draw(in:CGRect(x:0,y:0,width:newWidth,height:newHeight))
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return newImage!
+    }
 }
+
 extension HotelOnMapViewController : MKMapViewDelegate
 {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        
+        var image = UIImage()
         if let view = annotation as? HotelMapDetailsView
         {
-            return HCAnnotationView.hcCreatePin(forMap: mapView, forAnnotation: annotation, withPinImage:#imageLiteral(resourceName: "locationdetails"), withReuseIdentifier:"location", withClass: MapInfoHotelView.self, mapInfoViewName: "MapInfoHotelView", showInfoViewHandler: {infoView in
+            for (_,hotel) in (roomStays.enumerated())
+            {
+                if let imageURLs =  JazHotels.hotelsImages![(hotel.basicPropertyInfo.hotelCode)!]
+                {
+                    let url = URL(string:imageURLs[0])
+                    if let data = try? Data(contentsOf: url!)
+                    {
+                        image = UIImage(data: data)!
+                        image = self.resizeImage(image: image, newWidth: 100)
+                        view.image = image
+                        break
+                    }
+                
+                }
+            }
+            return HCAnnotationView.hcCreatePin(forMap: mapView, forAnnotation: annotation, withPinImage:UIImage(named: "locationdetails"), withReuseIdentifier:"location", withClass: MapInfoHotelView.self, mapInfoViewName: "MapInfoHotelView", showInfoViewHandler: {infoView in
                 if let redView = infoView as? MapInfoHotelView
                 {
                     redView.update(withHotel: view)

@@ -59,6 +59,7 @@
 		521A4BD721458BD1008A01F8 /* JBAdditionalDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521A4BA521458BD1008A01F8 /* JBAdditionalDetail.swift */; };
 		521A4BD821458BD1008A01F8 /* JBCompanyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521A4BA621458BD1008A01F8 /* JBCompanyInfo.swift */; };
 		521A4BD921458BD1008A01F8 /* JBTotal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521A4BA721458BD1008A01F8 /* JBTotal.swift */; };
+		521A4BDB2145C380008A01F8 /* hotels.json in Resources */ = {isa = PBXBuildFile; fileRef = 521A4BDA2145C37F008A01F8 /* hotels.json */; };
 		524EEE7220DA840D006B9917 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524EEE7120DA840D006B9917 /* AppDelegate.swift */; };
 		524EEE7920DA840F006B9917 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 524EEE7820DA840F006B9917 /* Assets.xcassets */; };
 		524EEE7C20DA840F006B9917 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 524EEE7A20DA840F006B9917 /* LaunchScreen.storyboard */; };
@@ -340,6 +341,7 @@
 		521A4BA521458BD1008A01F8 /* JBAdditionalDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JBAdditionalDetail.swift; sourceTree = "<group>"; };
 		521A4BA621458BD1008A01F8 /* JBCompanyInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JBCompanyInfo.swift; sourceTree = "<group>"; };
 		521A4BA721458BD1008A01F8 /* JBTotal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JBTotal.swift; sourceTree = "<group>"; };
+		521A4BDA2145C37F008A01F8 /* hotels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hotels.json; sourceTree = "<group>"; };
 		524EEE6E20DA840D006B9917 /* JazHotels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JazHotels.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		524EEE7120DA840D006B9917 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		524EEE7820DA840F006B9917 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -687,6 +689,7 @@
 		524F784520F9222700AF0EF6 /* JsonFiles */ = {
 			isa = PBXGroup;
 			children = (
+				521A4BDA2145C37F008A01F8 /* hotels.json */,
 				524F784620F9222700AF0EF6 /* hotels-images.json */,
 				524F784720F9222700AF0EF6 /* hotels-urls.json */,
 				524F784820F9222700AF0EF6 /* hotels-coords.json */,
@@ -1317,6 +1320,7 @@
 				9AE61CCE20DAE0BD006160C1 /* Main.storyboard in Resources */,
 				9AE61CA920DAC74B006160C1 /* Montserrat-BoldItalic.otf in Resources */,
 				9AE61CC220DAC74B006160C1 /* MontserratAlternates-ThinItalic.otf in Resources */,
+				521A4BDB2145C380008A01F8 /* hotels.json in Resources */,
 				9AE61CAB20DAC74B006160C1 /* Montserrat-ThinItalic.otf in Resources */,
 				9AE61CA820DAC74B006160C1 /* MontserratAlternates-Medium.otf in Resources */,
 				9AE61CAD20DAC74B006160C1 /* MontserratAlternates-MediumItalic.otf in Resources */,

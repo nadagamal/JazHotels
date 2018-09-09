@@ -7,8 +7,7 @@
 
 import Foundation
 
-
-class JBPOS : NSObject, NSCoding{
+class JBPOS{
 
 	var source : JBSource!
 
@@ -20,40 +19,6 @@ class JBPOS : NSObject, NSCoding{
 		if let sourceData = dictionary["Source"] as? [String:Any]{
 			source = JBSource(fromDictionary: sourceData)
 		}
-	}
-
-	/**
-	 * Returns all the available property values in the form of [String:Any] object where the key is the approperiate json key and the value is the value of the corresponding property
-	 */
-	func toDictionary() -> [String:Any]
-	{
-		var dictionary = [String:Any]()
-		if source != nil{
-			dictionary["Source"] = source.toDictionary()
-		}
-		return dictionary
-	}
-
-    /**
-    * NSCoding required initializer.
-    * Fills the data from the passed decoder
-    */
-    @objc required init(coder aDecoder: NSCoder)
-	{
-         source = aDecoder.decodeObject(forKey: "Source") as? JBSource
-
-	}
-
-    /**
-    * NSCoding required method.
-    * Encodes mode properties into the decoder
-    */
-    @objc func encode(with aCoder: NSCoder)
-	{
-		if source != nil{
-			aCoder.encode(source, forKey: "Source")
-		}
-
 	}
 
 }

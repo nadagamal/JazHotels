@@ -7,8 +7,7 @@
 
 import Foundation
 
-
-class JBResStatu : NSObject, NSCoding{
+class JBResStatu{
 
 	var text : String!
 	var isCancellable : Bool!
@@ -19,48 +18,7 @@ class JBResStatu : NSObject, NSCoding{
 	 */
 	init(fromDictionary dictionary: [String:Any]){
 		text = dictionary["#text"] as? String
-		isCancellable = dictionary["IsCancellable"] as? Bool
-	}
-
-	/**
-	 * Returns all the available property values in the form of [String:Any] object where the key is the approperiate json key and the value is the value of the corresponding property
-	 */
-	func toDictionary() -> [String:Any]
-	{
-		var dictionary = [String:Any]()
-		if text != nil{
-			dictionary["#text"] = text
-		}
-		if isCancellable != nil{
-			dictionary["IsCancellable"] = isCancellable
-		}
-		return dictionary
-	}
-
-    /**
-    * NSCoding required initializer.
-    * Fills the data from the passed decoder
-    */
-    @objc required init(coder aDecoder: NSCoder)
-	{
-         text = aDecoder.decodeObject(forKey: "#text") as? String
-         isCancellable = aDecoder.decodeObject(forKey: "IsCancellable") as? Bool
-
-	}
-
-    /**
-    * NSCoding required method.
-    * Encodes mode properties into the decoder
-    */
-    @objc func encode(with aCoder: NSCoder)
-	{
-		if text != nil{
-			aCoder.encode(text, forKey: "#text")
-		}
-		if isCancellable != nil{
-			aCoder.encode(isCancellable, forKey: "IsCancellable")
-		}
-
+		isCancellable = dictionary["_IsCancellable"] as? Bool
 	}
 
 }

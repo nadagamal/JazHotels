@@ -7,8 +7,7 @@
 
 import Foundation
 
-
-class JBProfileInfo : NSObject, NSCoding{
+class JBProfileInfo{
 
 	var profile : JBProfile!
 	var uniqueID : JBUniqueID!
@@ -24,47 +23,6 @@ class JBProfileInfo : NSObject, NSCoding{
 		if let uniqueIDData = dictionary["UniqueID"] as? [String:Any]{
 			uniqueID = JBUniqueID(fromDictionary: uniqueIDData)
 		}
-	}
-
-	/**
-	 * Returns all the available property values in the form of [String:Any] object where the key is the approperiate json key and the value is the value of the corresponding property
-	 */
-	func toDictionary() -> [String:Any]
-	{
-		var dictionary = [String:Any]()
-		if profile != nil{
-			dictionary["Profile"] = profile.toDictionary()
-		}
-		if uniqueID != nil{
-			dictionary["UniqueID"] = uniqueID.toDictionary()
-		}
-		return dictionary
-	}
-
-    /**
-    * NSCoding required initializer.
-    * Fills the data from the passed decoder
-    */
-    @objc required init(coder aDecoder: NSCoder)
-	{
-         profile = aDecoder.decodeObject(forKey: "Profile") as? JBProfile
-         uniqueID = aDecoder.decodeObject(forKey: "UniqueID") as? JBUniqueID
-
-	}
-
-    /**
-    * NSCoding required method.
-    * Encodes mode properties into the decoder
-    */
-    @objc func encode(with aCoder: NSCoder)
-	{
-		if profile != nil{
-			aCoder.encode(profile, forKey: "Profile")
-		}
-		if uniqueID != nil{
-			aCoder.encode(uniqueID, forKey: "UniqueID")
-		}
-
 	}
 
 }

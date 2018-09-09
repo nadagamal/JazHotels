@@ -7,8 +7,7 @@
 
 import Foundation
 
-
-class JBUserID : NSObject, NSCoding{
+class JBUserID{
 
 	var iD : String!
 	var pinNumber : String!
@@ -18,49 +17,8 @@ class JBUserID : NSObject, NSCoding{
 	 * Instantiate the instance using the passed dictionary values to set the properties values
 	 */
 	init(fromDictionary dictionary: [String:Any]){
-		iD = dictionary["ID"] as? String
-		pinNumber = dictionary["PinNumber"] as? String
-	}
-
-	/**
-	 * Returns all the available property values in the form of [String:Any] object where the key is the approperiate json key and the value is the value of the corresponding property
-	 */
-	func toDictionary() -> [String:Any]
-	{
-		var dictionary = [String:Any]()
-		if iD != nil{
-			dictionary["ID"] = iD
-		}
-		if pinNumber != nil{
-			dictionary["PinNumber"] = pinNumber
-		}
-		return dictionary
-	}
-
-    /**
-    * NSCoding required initializer.
-    * Fills the data from the passed decoder
-    */
-    @objc required init(coder aDecoder: NSCoder)
-	{
-         iD = aDecoder.decodeObject(forKey: "ID") as? String
-         pinNumber = aDecoder.decodeObject(forKey: "PinNumber") as? String
-
-	}
-
-    /**
-    * NSCoding required method.
-    * Encodes mode properties into the decoder
-    */
-    @objc func encode(with aCoder: NSCoder)
-	{
-		if iD != nil{
-			aCoder.encode(iD, forKey: "ID")
-		}
-		if pinNumber != nil{
-			aCoder.encode(pinNumber, forKey: "PinNumber")
-		}
-
+		iD = dictionary["_ID"] as? String
+		pinNumber = dictionary["_PinNumber"] as? String
 	}
 
 }

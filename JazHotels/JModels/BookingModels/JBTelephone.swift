@@ -1,5 +1,5 @@
 //
-//	JBPenaltyDescription.swift
+//	JBTelephone.swift
 //
 //	Create by Nada Gamal on 9/9/2018
 //	Copyright © 2018. All rights reserved.
@@ -7,16 +7,18 @@
 
 import Foundation
 
-class JBPenaltyDescription{
+class JBTelephone{
 
-	var text : String!
+	var defaultInd : Bool!
+	var phoneNumber : String!
 
 
 	/**
 	 * Instantiate the instance using the passed dictionary values to set the properties values
 	 */
 	init(fromDictionary dictionary: [String:Any]){
-		text = dictionary["Text"] as? String
+		defaultInd = dictionary["_DefaultInd"] as? Bool
+		phoneNumber = dictionary["_PhoneNumber"] as? String
 	}
 
 }

@@ -7,8 +7,7 @@
 
 import Foundation
 
-
-class JBOccupancy : NSObject, NSCoding{
+class JBOccupancy{
 
 	var maxOccupancy : String!
 
@@ -17,41 +16,7 @@ class JBOccupancy : NSObject, NSCoding{
 	 * Instantiate the instance using the passed dictionary values to set the properties values
 	 */
 	init(fromDictionary dictionary: [String:Any]){
-		maxOccupancy = dictionary["MaxOccupancy"] as? String
-	}
-
-	/**
-	 * Returns all the available property values in the form of [String:Any] object where the key is the approperiate json key and the value is the value of the corresponding property
-	 */
-	func toDictionary() -> [String:Any]
-	{
-		var dictionary = [String:Any]()
-		if maxOccupancy != nil{
-			dictionary["MaxOccupancy"] = maxOccupancy
-		}
-		return dictionary
-	}
-
-    /**
-    * NSCoding required initializer.
-    * Fills the data from the passed decoder
-    */
-    @objc required init(coder aDecoder: NSCoder)
-	{
-         maxOccupancy = aDecoder.decodeObject(forKey: "MaxOccupancy") as? String
-
-	}
-
-    /**
-    * NSCoding required method.
-    * Encodes mode properties into the decoder
-    */
-    @objc func encode(with aCoder: NSCoder)
-	{
-		if maxOccupancy != nil{
-			aCoder.encode(maxOccupancy, forKey: "MaxOccupancy")
-		}
-
+		maxOccupancy = dictionary["_MaxOccupancy"] as? String
 	}
 
 }

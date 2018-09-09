@@ -1,5 +1,5 @@
 //
-//	JBPenaltyDescription.swift
+//	JBReservations .swift
 //
 //	Create by Nada Gamal on 9/9/2018
 //	Copyright © 2018. All rights reserved.
@@ -7,16 +7,18 @@
 
 import Foundation
 
-class JBPenaltyDescription{
+class JBReservations{
 
-	var text : String!
+	var body : JBBody!
 
 
 	/**
 	 * Instantiate the instance using the passed dictionary values to set the properties values
 	 */
 	init(fromDictionary dictionary: [String:Any]){
-		text = dictionary["Text"] as? String
+        if let bodyData = dictionary["soap:Body"] as? [String:Any]{
+			body = JBBody(fromDictionary: bodyData)
+		}
 	}
 
 }

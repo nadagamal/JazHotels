@@ -176,6 +176,8 @@
 		52CA9DC221456A3E003C530F /* JBCompanyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CA9D8E21456A3D003C530F /* JBCompanyInfo.swift */; };
 		52CA9DC321456A3E003C530F /* JBGuaranteesAccepted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CA9D8F21456A3D003C530F /* JBGuaranteesAccepted.swift */; };
 		52CA9DC421456A3E003C530F /* JBTotal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CA9D9021456A3D003C530F /* JBTotal.swift */; };
+		52CA9DC721457944003C530F /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CA9DC621457944003C530F /* MenuViewController.swift */; };
+		52CA9DCA21457CD2003C530F /* ReservationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CA9DC921457CD2003C530F /* ReservationsViewController.swift */; };
 		9A06CB1C20EACC4900AFBCA2 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A06CB1B20EACC4900AFBCA2 /* MainTabBar.swift */; };
 		9A06CB1F20EACF6700AFBCA2 /* HotelJazConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A06CB1E20EACF6700AFBCA2 /* HotelJazConstants.swift */; };
 		9A41478D2108C31200C95F0A /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A41478C2108C31200C95F0A /* Location.swift */; };
@@ -461,6 +463,8 @@
 		52CA9D8E21456A3D003C530F /* JBCompanyInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JBCompanyInfo.swift; sourceTree = "<group>"; };
 		52CA9D8F21456A3D003C530F /* JBGuaranteesAccepted.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JBGuaranteesAccepted.swift; sourceTree = "<group>"; };
 		52CA9D9021456A3D003C530F /* JBTotal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JBTotal.swift; sourceTree = "<group>"; };
+		52CA9DC621457944003C530F /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		52CA9DC921457CD2003C530F /* ReservationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationsViewController.swift; sourceTree = "<group>"; };
 		8963E40941314293147FBF58 /* Pods-JazHotels.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JazHotels.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JazHotels/Pods-JazHotels.debug.xcconfig"; sourceTree = "<group>"; };
 		925F604466D8797ABBF10B44 /* Pods_JazHotels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JazHotels.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A06CB1B20EACC4900AFBCA2 /* MainTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
@@ -851,6 +855,22 @@
 			path = BookingModels;
 			sourceTree = "<group>";
 		};
+		52CA9DC521457934003C530F /* MenuViewController */ = {
+			isa = PBXGroup;
+			children = (
+				52CA9DC621457944003C530F /* MenuViewController.swift */,
+			);
+			path = MenuViewController;
+			sourceTree = "<group>";
+		};
+		52CA9DC821457CC5003C530F /* ReservationsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				52CA9DC921457CD2003C530F /* ReservationsViewController.swift */,
+			);
+			path = ReservationsViewController;
+			sourceTree = "<group>";
+		};
 		92276CA12D50E4A86FD2D42D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1105,6 +1125,8 @@
 		9AE61CC720DAE057006160C1 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				52CA9DC821457CC5003C530F /* ReservationsViewController */,
+				52CA9DC521457934003C530F /* MenuViewController */,
 				9A640D4721305F94002CB116 /* Authentication */,
 				9ADD3E432106B1DD00D00078 /* RatePlans */,
 				524F784C20F9364400AF0EF6 /* HotelDetailsViewController */,
@@ -1500,6 +1522,7 @@
 				9AADBF8920EDCA78009183FE /* HotelListViewController.swift in Sources */,
 				52B6165B20E891C100A1A416 /* JAffiliationInfo.swift in Sources */,
 				52B6166520E891C100A1A416 /* JTransportation.swift in Sources */,
+				52CA9DC721457944003C530F /* MenuViewController.swift in Sources */,
 				52B6163820E891C100A1A416 /* JGuestRoomInfo.swift in Sources */,
 				52B6165C20E891C100A1A416 /* JMeetingRoom.swift in Sources */,
 				52B616D520E9341E00A1A416 /* JCEnvelope.swift in Sources */,
@@ -1654,6 +1677,7 @@
 				52CA9D9121456A3E003C530F /* JBRate.swift in Sources */,
 				52CA9DA421456A3E003C530F /* JBGuestCount.swift in Sources */,
 				52B6165E20E891C100A1A416 /* JSoap:Envelope.swift in Sources */,
+				52CA9DCA21457CD2003C530F /* ReservationsViewController.swift in Sources */,
 				52B6163320E891C100A1A416 /* JTextItem.swift in Sources */,
 				52B616CA20E9341E00A1A416 /* JCCancelPenalty.swift in Sources */,
 				52CA9DB721456A3E003C530F /* JBPosition.swift in Sources */,

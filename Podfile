@@ -42,6 +42,8 @@ target 'JazHotels' do
     pod 'FBSDKCoreKit'
     pod 'FBSDKLoginKit'
     
+    # Data modeling
+    pod 'ObjectMapper'
     
     # Pods for Twitter
     

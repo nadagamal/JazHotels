@@ -121,6 +121,7 @@ PODS:
   - NVActivityIndicatorView (4.3.0):
     - NVActivityIndicatorView/Presenter (= 4.3.0)
   - NVActivityIndicatorView/Presenter (4.3.0)
+  - ObjectMapper (3.3.0)
   - PopupDialog (0.8.0):
     - DynamicBlurView (~> 2.0)
   - Protobuf (3.6.0)
@@ -174,6 +175,7 @@ DEPENDENCIES:
   - IQKeyboardManagerSwift
   - Kingfisher (~> 4.0)
   - NVActivityIndicatorView
+  - ObjectMapper
   - PopupDialog (~> 0.8)
   - PullToRefreshKit
   - SCLAlertView
@@ -188,7 +190,7 @@ DEPENDENCIES:
   - ZAlertView
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - ACFloatingTextfield-Swift
     - Alamofire
     - Bolts
@@ -222,6 +224,7 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - NVActivityIndicatorView
+    - ObjectMapper
     - PopupDialog
     - Protobuf
     - PullToRefreshKit
@@ -271,6 +274,7 @@ SPEC CHECKSUMS:
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   NVActivityIndicatorView: 963f62bf9f993fcf23218e55958e5b1761b9504c
+  ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
   PopupDialog: 11347197b6ac3e0548ac445d40ce68d1d407e9a0
   Protobuf: 0fc0ad8bec688b2a3017a139953e01374fedbd5f
   PullToRefreshKit: 172df52ab9c6cb2c1d4b1872b49f448d6291523f
@@ -286,6 +290,6 @@ SPEC CHECKSUMS:
   XLPagerTabStrip: c908b17cbf42fcd2598ee1adfc49bae25444d88a
   ZAlertView: 59fffdb4e37a01df461835566d5101052b8af953
 
-PODFILE CHECKSUM: 687a56141d0f74e6c9e7443eb2e537faf98ee448
+PODFILE CHECKSUM: 389b06f51e95eebcb8e0cd9d762e6fbca20a2d72
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.5.0

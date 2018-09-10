@@ -84,17 +84,14 @@ class SplashViewController: UIViewController {
                             (JazHotels.hotelsName,JazHotels.hotelsCode) = Helper.getHotelNamesAndIds(hotelArray: JazHotels.hotels)
                             self.setRootViewController()
                             DispatchQueue.main.async {
-                                self.activityIndicator .stopAnimating()
+                                self.activityIndicator.stopAnimating()
                             }
 
                         }
                     }
                 } catch{
                     
-                    
                 }
-                
-                
             }
             
         }

@@ -2354,14 +2354,14 @@ Alam Road, Red Sea, Egypt.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Oe6-TL-jSt">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="900"/>
+                                <rect key="frame" x="10" y="40" width="300" height="840"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="DTg-dS-jP2">
-                                    <rect key="frame" x="0.0" y="601" width="320" height="107"/>
+                                    <rect key="frame" x="0.0" y="601" width="300" height="107"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIW-LD-VZj">
-                                            <rect key="frame" x="62" y="8" width="197" height="40"/>
+                                            <rect key="frame" x="51.5" y="8" width="197" height="40"/>
                                             <color key="backgroundColor" red="0.36078431372549019" green="0.76078431372549016" blue="0.22352941176470589" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="GqO-h9-NHe"/>
@@ -2381,7 +2381,7 @@ Alam Road, Red Sea, Egypt.</string>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8na-Eq-1UX">
-                                            <rect key="frame" x="62" y="59" width="197" height="40"/>
+                                            <rect key="frame" x="51.5" y="59" width="197" height="40"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="197" id="Gry-UC-iGf"/>
@@ -2419,23 +2419,23 @@ Alam Road, Red Sea, Egypt.</string>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HotelDetailsCell" rowHeight="188" id="yU7-1U-4OW" customClass="HotelTableViewCell" customModule="JazHotels" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="188"/>
+                                        <rect key="frame" x="0.0" y="28" width="300" height="188"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yU7-1U-4OW" id="t9D-9C-zcb">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="187.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="187.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Splash" translatesAutoresizingMaskIntoConstraints="NO" id="IdS-9E-os2">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="188"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="188"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hotel Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lzq-yo-879">
-                                                    <rect key="frame" x="15" y="131.5" width="295" height="24.5"/>
+                                                    <rect key="frame" x="15" y="131.5" width="275" height="24.5"/>
                                                     <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="20"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sharm El Sheikh, Egypt" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jtX-nL-liR">
-                                                    <rect key="frame" x="15" y="161" width="295" height="16"/>
+                                                    <rect key="frame" x="15" y="161" width="275" height="16"/>
                                                     <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="13"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -2465,10 +2465,10 @@ Alam Road, Red Sea, Egypt.</string>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DateCell" rowHeight="57" id="hjn-TD-TXe" customClass="BookingDetailsCell" customModule="JazHotels" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="216" width="320" height="57"/>
+                                        <rect key="frame" x="0.0" y="216" width="300" height="57"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hjn-TD-TXe" id="DyK-gk-rq3">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="56.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="56.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Arrival Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="els-bv-e00">
@@ -2478,7 +2478,7 @@ Alam Road, Red Sea, Egypt.</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Departure Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxn-Jp-50k">
-                                                    <rect key="frame" x="198" y="10" width="89" height="14"/>
+                                                    <rect key="frame" x="177.5" y="10" width="89" height="14"/>
                                                     <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -2493,7 +2493,7 @@ Alam Road, Red Sea, Egypt.</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23-9-2018" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LKK-ML-k1J">
-                                                    <rect key="frame" x="199" y="35" width="89" height="11"/>
+                                                    <rect key="frame" x="178.5" y="35" width="89" height="11"/>
                                                     <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="11"/>
                                                     <color key="textColor" red="0.62126989389999998" green="0.62126989389999998" blue="0.62126989389999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
@@ -2523,26 +2523,26 @@ Alam Road, Red Sea, Egypt.</string>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RatePlanCell" rowHeight="57" id="FpM-eQ-2k9" customClass="BookingDetailsCell" customModule="JazHotels" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="273" width="320" height="57"/>
+                                        <rect key="frame" x="0.0" y="273" width="300" height="57"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FpM-eQ-2k9" id="ZHt-bB-AZc">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="56.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="56.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Room Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="otN-ti-LFr">
-                                                    <rect key="frame" x="33" y="10" width="123" height="14"/>
+                                                    <rect key="frame" x="33" y="10" width="123.5" height="14"/>
                                                     <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate plan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="one-z6-z6r">
-                                                    <rect key="frame" x="185.5" y="10" width="128.5" height="14.5"/>
+                                                    <rect key="frame" x="165" y="10" width="129" height="14.5"/>
                                                     <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="superior Queen Room" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jb4-Rj-C75">
-                                                    <rect key="frame" x="33" y="25" width="124" height="28"/>
+                                                    <rect key="frame" x="33" y="25" width="123.5" height="28"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="28" id="lC4-xv-cq8"/>
                                                     </constraints>
@@ -2551,7 +2551,7 @@ Alam Road, Red Sea, Egypt.</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IXS-K5-k8b">
-                                                    <rect key="frame" x="188" y="25" width="126" height="28"/>
+                                                    <rect key="frame" x="168.5" y="25" width="125.5" height="28"/>
                                                     <string key="text">Best available rate - Bed &amp; Breakfast Basis</string>
                                                     <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="10"/>
                                                     <color key="textColor" red="0.62126989389999998" green="0.62126989389999998" blue="0.62126989389999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -2582,10 +2582,10 @@ Alam Road, Red Sea, Egypt.</string>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RoomDetailsCell" rowHeight="57" id="D0S-0b-UXB" customClass="BookingDetailsCell" customModule="JazHotels" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="330" width="320" height="57"/>
+                                        <rect key="frame" x="0.0" y="330" width="300" height="57"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="D0S-0b-UXB" id="h95-5e-OHu">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="56.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="56.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rooms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2hn-ze-VkB">
@@ -2595,7 +2595,7 @@ Alam Road, Red Sea, Egypt.</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guests" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C0p-Hw-P7h">
-                                                    <rect key="frame" x="185" y="10" width="102" height="14"/>
+                                                    <rect key="frame" x="164.5" y="10" width="102" height="14"/>
                                                     <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -2610,7 +2610,7 @@ Alam Road, Red Sea, Egypt.</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 Adult, 0 Children" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1rv-HJ-aQn">
-                                                    <rect key="frame" x="186" y="35" width="102" height="11"/>
+                                                    <rect key="frame" x="165.5" y="35" width="102" height="11"/>
                                                     <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="11"/>
                                                     <color key="textColor" red="0.62126989389999998" green="0.62126989389999998" blue="0.62126989389999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
@@ -2640,10 +2640,10 @@ Alam Road, Red Sea, Egypt.</string>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ConfirmationCodeCell" rowHeight="57" id="rHK-sK-mVZ" customClass="BookingDetailsCell" customModule="JazHotels" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="387" width="320" height="57"/>
+                                        <rect key="frame" x="0.0" y="387" width="300" height="57"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rHK-sK-mVZ" id="h9I-fC-jEc">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="56.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="56.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirmation Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZiF-xd-jPD">
@@ -2678,10 +2678,10 @@ Alam Road, Red Sea, Egypt.</string>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PriceCell" rowHeight="57" id="HfN-PO-1fU" customClass="BookingDetailsCell" customModule="JazHotels" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="444" width="320" height="57"/>
+                                        <rect key="frame" x="0.0" y="444" width="300" height="57"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HfN-PO-1fU" id="zou-uw-NID">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="56.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="56.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total stay rate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vfi-Fv-gPm">
@@ -2691,13 +2691,13 @@ Alam Road, Red Sea, Egypt.</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Including taxes &amp; Fees" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EuN-mP-PQq">
-                                                    <rect key="frame" x="202" y="38.5" width="103" height="11"/>
+                                                    <rect key="frame" x="182" y="38.5" width="103" height="11"/>
                                                     <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="9"/>
                                                     <color key="textColor" red="0.62126989389999998" green="0.62126989389999998" blue="0.62126989389999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="140$" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qxa-fX-ojj">
-                                                    <rect key="frame" x="234.5" y="11.5" width="38.5" height="20"/>
+                                                    <rect key="frame" x="214.5" y="11.5" width="38.5" height="20"/>
                                                     <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="16"/>
                                                     <color key="textColor" red="0.88235294119999996" green="0.75294117650000003" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -2717,14 +2717,14 @@ Alam Road, Red Sea, Egypt.</string>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="InfoCell" rowHeight="100" id="Z0g-kT-gh9" customClass="BookingDetailsCell" customModule="JazHotels" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="501" width="320" height="100"/>
+                                        <rect key="frame" x="0.0" y="501" width="300" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Z0g-kT-gh9" id="Hka-NM-Zme">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jWP-hU-6MJ">
-                                                    <rect key="frame" x="16" y="5" width="289" height="89.5"/>
+                                                    <rect key="frame" x="16" y="5" width="269" height="89.5"/>
                                                     <string key="text">All reservations will guaranteed by a valid credit card. Hotel reserves right to pre-authorize the credit card.Please note that as per Egyptain law, all foreign  guests must pay in foreign currency.In case of canelation within 02 days prior to arrival or no show, 01 night charge apply.</string>
                                                     <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="10"/>
                                                     <color key="textColor" red="0.62126989389999998" green="0.62126989389999998" blue="0.62126989389999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -2747,12 +2747,12 @@ Alam Road, Red Sea, Egypt.</string>
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Oe6-TL-jSt" firstAttribute="trailing" secondItem="WnQ-DA-ZUS" secondAttribute="trailing" id="B1d-yA-WWQ"/>
-                            <constraint firstItem="Oe6-TL-jSt" firstAttribute="leading" secondItem="WnQ-DA-ZUS" secondAttribute="leading" id="f9U-9E-yLK"/>
-                            <constraint firstItem="Oe6-TL-jSt" firstAttribute="top" secondItem="ki5-mK-7uB" secondAttribute="top" id="pe6-tT-hoa"/>
-                            <constraint firstItem="Oe6-TL-jSt" firstAttribute="bottom" secondItem="WnQ-DA-ZUS" secondAttribute="bottom" id="qfu-uf-PnI"/>
+                            <constraint firstItem="WnQ-DA-ZUS" firstAttribute="trailing" secondItem="Oe6-TL-jSt" secondAttribute="trailing" constant="10" id="3dQ-m7-9RB"/>
+                            <constraint firstItem="WnQ-DA-ZUS" firstAttribute="bottom" secondItem="Oe6-TL-jSt" secondAttribute="bottom" constant="20" id="JMV-2k-ORn"/>
+                            <constraint firstItem="Oe6-TL-jSt" firstAttribute="leading" secondItem="WnQ-DA-ZUS" secondAttribute="leading" constant="10" id="iOA-xG-X5K"/>
+                            <constraint firstItem="Oe6-TL-jSt" firstAttribute="top" secondItem="WnQ-DA-ZUS" secondAttribute="top" constant="20" id="wod-ym-i3M"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WnQ-DA-ZUS"/>
                     </view>

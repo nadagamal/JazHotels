@@ -83,4 +83,5 @@ extension BookHotelViewController:UITableViewDelegate,UITableViewDataSource{
         }
       return 70
     }
+  
 }

@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -533,7 +534,7 @@ Iberotel Borg El Arab</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="t3X-AD-vUh">
-                                <rect key="frame" x="15" y="30" width="290" height="434"/>
+                                <rect key="frame" x="15" y="30" width="290" height="410"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="APO-Zt-19I">
                                     <rect key="frame" x="0.0" y="717.5" width="290" height="50"/>
@@ -550,6 +551,11 @@ Iberotel Borg El Arab</string>
                                             <state key="normal" title="Confirm Reservation">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="6"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="confirmReservationAction:" destination="09J-vy-6rh" eventType="touchUpInside" id="cFq-Vd-axz"/>
                                             </connections>
@@ -883,7 +889,7 @@ Iberotel Borg El Arab</string>
                             <constraint firstItem="t3X-AD-vUh" firstAttribute="top" secondItem="S37-qe-rkB" secondAttribute="top" constant="10" id="Qbd-rS-3i1"/>
                             <constraint firstItem="t3X-AD-vUh" firstAttribute="leading" secondItem="S37-qe-rkB" secondAttribute="leading" constant="15" id="RuZ-Dt-qHO"/>
                             <constraint firstItem="S37-qe-rkB" firstAttribute="trailing" secondItem="t3X-AD-vUh" secondAttribute="trailing" constant="15" id="fEO-U4-ikF"/>
-                            <constraint firstItem="S37-qe-rkB" firstAttribute="bottom" secondItem="t3X-AD-vUh" secondAttribute="bottom" constant="16" id="vRR-hP-dUu"/>
+                            <constraint firstItem="S37-qe-rkB" firstAttribute="bottom" secondItem="t3X-AD-vUh" secondAttribute="bottom" constant="40" id="vRR-hP-dUu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="S37-qe-rkB"/>
                     </view>
@@ -1419,7 +1425,7 @@ Alam Road, Red Sea, Egypt.</string>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5JM-au-hWN">
-                                                                        <rect key="frame" x="13" y="29.5" width="30" height="32"/>
+                                                                        <rect key="frame" x="12.5" y="29.5" width="30" height="32"/>
                                                                         <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="16"/>
                                                                         <state key="normal" title="-">
                                                                             <color key="titleColor" red="0.70980392160000005" green="0.73333333329999995" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -1429,13 +1435,13 @@ Alam Road, Red Sea, Egypt.</string>
                                                                         </connections>
                                                                     </button>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jYr-Zs-76m">
-                                                                        <rect key="frame" x="51" y="35.5" width="6.5" height="20"/>
+                                                                        <rect key="frame" x="50.5" y="35.5" width="6.5" height="20"/>
                                                                         <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="16"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kiZ-9R-NOr">
-                                                                        <rect key="frame" x="65.5" y="29.5" width="30" height="32"/>
+                                                                        <rect key="frame" x="65" y="29.5" width="30" height="32"/>
                                                                         <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="16"/>
                                                                         <state key="normal" title="+">
                                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1477,7 +1483,7 @@ Alam Road, Red Sea, Egypt.</string>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Mo-SD-U2B">
-                                                                        <rect key="frame" x="13" y="29.5" width="30" height="32"/>
+                                                                        <rect key="frame" x="13.5" y="29.5" width="30" height="32"/>
                                                                         <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="16"/>
                                                                         <state key="normal" title="+">
                                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1487,13 +1493,13 @@ Alam Road, Red Sea, Egypt.</string>
                                                                         </connections>
                                                                     </button>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xyj-33-kY3">
-                                                                        <rect key="frame" x="51" y="35.5" width="6.5" height="20"/>
+                                                                        <rect key="frame" x="51.5" y="35.5" width="6.5" height="20"/>
                                                                         <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="16"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uqA-wj-Od9">
-                                                                        <rect key="frame" x="64.5" y="29.5" width="30" height="32"/>
+                                                                        <rect key="frame" x="65" y="29.5" width="30" height="32"/>
                                                                         <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="16"/>
                                                                         <state key="normal" title="-">
                                                                             <color key="titleColor" red="0.70980392160000005" green="0.73333333329999995" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -2338,6 +2344,427 @@ Alam Road, Red Sea, Egypt.</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vZv-KP-xfH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2928.75" y="2869.0140845070423"/>
+        </scene>
+        <!--Booking Details View Controller-->
+        <scene sceneID="fJB-28-m4Y">
+            <objects>
+                <viewController storyboardIdentifier="BookingDetailsViewController" id="ZKE-Dz-tDc" customClass="BookingDetailsViewController" customModule="JazHotels" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ki5-mK-7uB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="900"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Oe6-TL-jSt">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="900"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="DTg-dS-jP2">
+                                    <rect key="frame" x="0.0" y="601" width="320" height="107"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIW-LD-VZj">
+                                            <rect key="frame" x="62" y="8" width="197" height="40"/>
+                                            <color key="backgroundColor" red="0.36078431372549019" green="0.76078431372549016" blue="0.22352941176470589" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="GqO-h9-NHe"/>
+                                                <constraint firstAttribute="width" constant="197" id="eAA-bA-3H6"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="13"/>
+                                            <state key="normal" title="Modify Reservation">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="modifyReservationAction:" destination="ZKE-Dz-tDc" eventType="touchUpInside" id="MOG-aa-Ujh"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8na-Eq-1UX">
+                                            <rect key="frame" x="62" y="59" width="197" height="40"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="197" id="Gry-UC-iGf"/>
+                                                <constraint firstAttribute="height" constant="40" id="tRQ-75-oDF"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="13"/>
+                                            <state key="normal" title="Cancel Reservation">
+                                                <color key="titleColor" red="1" green="0.20685251090000001" blue="0.2024811658" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="1.5"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" red="1" green="0.20685251090000001" blue="0.2024811658" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="cancelReservationAction:" destination="ZKE-Dz-tDc" eventType="touchUpInside" id="MqD-Z8-VEf"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="aIW-LD-VZj" firstAttribute="top" secondItem="DTg-dS-jP2" secondAttribute="top" constant="8" id="1ed-As-iRh"/>
+                                        <constraint firstItem="8na-Eq-1UX" firstAttribute="top" secondItem="aIW-LD-VZj" secondAttribute="bottom" constant="11" id="1sM-Xw-z3m"/>
+                                        <constraint firstAttribute="bottom" secondItem="8na-Eq-1UX" secondAttribute="bottom" constant="8" id="Z66-pH-uYN"/>
+                                        <constraint firstItem="8na-Eq-1UX" firstAttribute="centerX" secondItem="DTg-dS-jP2" secondAttribute="centerX" id="kpJ-GW-G05"/>
+                                        <constraint firstItem="aIW-LD-VZj" firstAttribute="centerX" secondItem="DTg-dS-jP2" secondAttribute="centerX" id="ljX-FU-1JV"/>
+                                        <constraint firstItem="8na-Eq-1UX" firstAttribute="top" secondItem="aIW-LD-VZj" secondAttribute="bottom" constant="11" id="sAg-3n-di0"/>
+                                    </constraints>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HotelDetailsCell" rowHeight="188" id="yU7-1U-4OW" customClass="HotelTableViewCell" customModule="JazHotels" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="188"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yU7-1U-4OW" id="t9D-9C-zcb">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="187.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Splash" translatesAutoresizingMaskIntoConstraints="NO" id="IdS-9E-os2">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="188"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hotel Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lzq-yo-879">
+                                                    <rect key="frame" x="15" y="131.5" width="295" height="24.5"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="20"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sharm El Sheikh, Egypt" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jtX-nL-liR">
+                                                    <rect key="frame" x="15" y="161" width="295" height="16"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="13"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="IdS-9E-os2" secondAttribute="trailing" id="17b-9H-yD3"/>
+                                                <constraint firstAttribute="trailing" secondItem="Lzq-yo-879" secondAttribute="trailing" constant="10" id="2lW-N1-URO"/>
+                                                <constraint firstAttribute="bottom" secondItem="jtX-nL-liR" secondAttribute="bottom" constant="10.5" id="7UO-hz-QyK"/>
+                                                <constraint firstItem="Lzq-yo-879" firstAttribute="leading" secondItem="t9D-9C-zcb" secondAttribute="leading" constant="15" id="V7o-jN-OSI"/>
+                                                <constraint firstItem="IdS-9E-os2" firstAttribute="leading" secondItem="t9D-9C-zcb" secondAttribute="leading" id="YcY-iV-ccN"/>
+                                                <constraint firstItem="jtX-nL-liR" firstAttribute="leading" secondItem="t9D-9C-zcb" secondAttribute="leading" constant="15" id="alA-sr-jQd"/>
+                                                <constraint firstAttribute="bottom" secondItem="IdS-9E-os2" secondAttribute="bottom" id="gVL-xU-Hyq"/>
+                                                <constraint firstItem="jtX-nL-liR" firstAttribute="top" secondItem="Lzq-yo-879" secondAttribute="bottom" constant="5" id="lwK-Wj-0nj"/>
+                                                <constraint firstAttribute="trailing" secondItem="jtX-nL-liR" secondAttribute="trailing" constant="10" id="ogW-CG-VOJ"/>
+                                                <constraint firstItem="IdS-9E-os2" firstAttribute="top" secondItem="t9D-9C-zcb" secondAttribute="top" id="xYv-ro-jTB"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <constraints>
+                                            <constraint firstItem="IdS-9E-os2" firstAttribute="centerY" secondItem="yU7-1U-4OW" secondAttribute="centerY" id="36V-Wo-dLM"/>
+                                            <constraint firstItem="IdS-9E-os2" firstAttribute="centerX" secondItem="yU7-1U-4OW" secondAttribute="centerX" id="kfp-Y6-aGU"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="hotel_img" destination="IdS-9E-os2" id="8ym-KO-R51"/>
+                                            <outlet property="hotel_name" destination="Lzq-yo-879" id="fzP-xH-dYI"/>
+                                            <outlet property="hotel_place" destination="jtX-nL-liR" id="aYp-u3-9wd"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DateCell" rowHeight="57" id="hjn-TD-TXe" customClass="BookingDetailsCell" customModule="JazHotels" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="216" width="320" height="57"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hjn-TD-TXe" id="DyK-gk-rq3">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="56.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Arrival Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="els-bv-e00">
+                                                    <rect key="frame" x="33" y="10" width="67" height="14"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="11"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Departure Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxn-Jp-50k">
+                                                    <rect key="frame" x="198" y="10" width="89" height="14"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="11"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23-9-2018" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="69E-3f-J00">
+                                                    <rect key="frame" x="33" y="35" width="67" height="11"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="11" id="LuE-86-UH9"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="11"/>
+                                                    <color key="textColor" red="0.62126989389999998" green="0.62126989389999998" blue="0.62126989389999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23-9-2018" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LKK-ML-k1J">
+                                                    <rect key="frame" x="199" y="35" width="89" height="11"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="11"/>
+                                                    <color key="textColor" red="0.62126989389999998" green="0.62126989389999998" blue="0.62126989389999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="lxn-Jp-50k" secondAttribute="trailing" constant="33.5" id="0BN-2D-KYC"/>
+                                                <constraint firstItem="LKK-ML-k1J" firstAttribute="top" secondItem="lxn-Jp-50k" secondAttribute="bottom" constant="11.5" id="0Pb-yP-NvH"/>
+                                                <constraint firstItem="lxn-Jp-50k" firstAttribute="top" secondItem="DyK-gk-rq3" secondAttribute="top" constant="10" id="1mX-hM-5vI"/>
+                                                <constraint firstItem="els-bv-e00" firstAttribute="leading" secondItem="DyK-gk-rq3" secondAttribute="leading" constant="33" id="3sp-lO-c8x"/>
+                                                <constraint firstItem="69E-3f-J00" firstAttribute="trailing" secondItem="els-bv-e00" secondAttribute="trailing" id="CvP-eo-7As"/>
+                                                <constraint firstItem="els-bv-e00" firstAttribute="top" secondItem="DyK-gk-rq3" secondAttribute="top" constant="10" id="FoO-9e-1O0"/>
+                                                <constraint firstItem="69E-3f-J00" firstAttribute="leading" secondItem="els-bv-e00" secondAttribute="leading" id="Hgu-K3-qoE"/>
+                                                <constraint firstItem="LKK-ML-k1J" firstAttribute="trailing" secondItem="lxn-Jp-50k" secondAttribute="trailing" constant="1" id="IzT-ew-2HC"/>
+                                                <constraint firstAttribute="bottom" secondItem="69E-3f-J00" secondAttribute="bottom" constant="10" id="TTB-a1-3yn"/>
+                                                <constraint firstItem="69E-3f-J00" firstAttribute="top" secondItem="els-bv-e00" secondAttribute="bottom" constant="11.5" id="VGD-y8-LRp"/>
+                                                <constraint firstItem="LKK-ML-k1J" firstAttribute="leading" secondItem="lxn-Jp-50k" secondAttribute="leading" constant="1" id="YB5-7S-hD4"/>
+                                                <constraint firstItem="69E-3f-J00" firstAttribute="top" secondItem="els-bv-e00" secondAttribute="bottom" constant="11.5" id="ZWo-pn-Cqx"/>
+                                                <constraint firstAttribute="bottom" secondItem="LKK-ML-k1J" secondAttribute="bottom" constant="10" id="dfE-Ub-ae4"/>
+                                                <constraint firstItem="69E-3f-J00" firstAttribute="firstBaseline" secondItem="LKK-ML-k1J" secondAttribute="firstBaseline" id="pEM-38-b6d"/>
+                                                <constraint firstItem="69E-3f-J00" firstAttribute="leading" secondItem="DyK-gk-rq3" secondAttribute="leading" constant="33" id="yQ9-Ka-SkW"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="leftValueLbl" destination="69E-3f-J00" id="PDL-kV-Aob"/>
+                                            <outlet property="rightValueLbl" destination="LKK-ML-k1J" id="Z5f-bS-d7j"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RatePlanCell" rowHeight="57" id="FpM-eQ-2k9" customClass="BookingDetailsCell" customModule="JazHotels" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="273" width="320" height="57"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FpM-eQ-2k9" id="ZHt-bB-AZc">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="56.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Room Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="otN-ti-LFr">
+                                                    <rect key="frame" x="33" y="10" width="123" height="14"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="11"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate plan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="one-z6-z6r">
+                                                    <rect key="frame" x="185.5" y="10" width="128.5" height="14.5"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="11"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="superior Queen Room" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jb4-Rj-C75">
+                                                    <rect key="frame" x="33" y="25" width="124" height="28"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="28" id="lC4-xv-cq8"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="11"/>
+                                                    <color key="textColor" red="0.62126989389999998" green="0.62126989389999998" blue="0.62126989389999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IXS-K5-k8b">
+                                                    <rect key="frame" x="188" y="25" width="126" height="28"/>
+                                                    <string key="text">Best available rate - Bed &amp; Breakfast Basis</string>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="10"/>
+                                                    <color key="textColor" red="0.62126989389999998" green="0.62126989389999998" blue="0.62126989389999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Jb4-Rj-C75" firstAttribute="leading" secondItem="otN-ti-LFr" secondAttribute="leading" id="6BN-kn-QsM"/>
+                                                <constraint firstItem="Jb4-Rj-C75" firstAttribute="top" secondItem="otN-ti-LFr" secondAttribute="bottom" constant="1" id="8Mg-sX-2Wd"/>
+                                                <constraint firstItem="Jb4-Rj-C75" firstAttribute="top" secondItem="otN-ti-LFr" secondAttribute="bottom" constant="1" id="9Vk-J4-MhF"/>
+                                                <constraint firstItem="Jb4-Rj-C75" firstAttribute="firstBaseline" secondItem="IXS-K5-k8b" secondAttribute="firstBaseline" id="I8i-pl-KTi"/>
+                                                <constraint firstItem="IXS-K5-k8b" firstAttribute="leading" secondItem="one-z6-z6r" secondAttribute="leading" constant="3.5" id="MGf-hT-n5G"/>
+                                                <constraint firstItem="IXS-K5-k8b" firstAttribute="top" secondItem="one-z6-z6r" secondAttribute="bottom" constant="0.5" id="Nhp-6v-JnB"/>
+                                                <constraint firstItem="IXS-K5-k8b" firstAttribute="trailing" secondItem="one-z6-z6r" secondAttribute="trailing" constant="-0.5" id="Tyw-jU-oGz"/>
+                                                <constraint firstAttribute="bottom" secondItem="IXS-K5-k8b" secondAttribute="bottom" constant="3.5" id="Wpf-ft-Umm"/>
+                                                <constraint firstItem="one-z6-z6r" firstAttribute="top" secondItem="ZHt-bB-AZc" secondAttribute="top" constant="10" id="Wwp-jt-cgN"/>
+                                                <constraint firstItem="otN-ti-LFr" firstAttribute="top" secondItem="ZHt-bB-AZc" secondAttribute="top" constant="10" id="k7k-xo-Af1"/>
+                                                <constraint firstAttribute="bottom" secondItem="Jb4-Rj-C75" secondAttribute="bottom" constant="3.5" id="kCo-r2-Aoq"/>
+                                                <constraint firstAttribute="trailing" secondItem="one-z6-z6r" secondAttribute="trailing" constant="6" id="kh9-G8-ohd"/>
+                                                <constraint firstItem="otN-ti-LFr" firstAttribute="leading" secondItem="ZHt-bB-AZc" secondAttribute="leading" constant="33" id="n0H-5S-6H1"/>
+                                                <constraint firstItem="Jb4-Rj-C75" firstAttribute="leading" secondItem="ZHt-bB-AZc" secondAttribute="leading" constant="33" id="qqG-Ft-u0p"/>
+                                                <constraint firstItem="Jb4-Rj-C75" firstAttribute="trailing" secondItem="otN-ti-LFr" secondAttribute="trailing" id="uOQ-rc-bxf"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="leftValueLbl" destination="Jb4-Rj-C75" id="kh0-wA-qdC"/>
+                                            <outlet property="rightValueLbl" destination="IXS-K5-k8b" id="MnA-sD-YGJ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RoomDetailsCell" rowHeight="57" id="D0S-0b-UXB" customClass="BookingDetailsCell" customModule="JazHotels" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="330" width="320" height="57"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="D0S-0b-UXB" id="h95-5e-OHu">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="56.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rooms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2hn-ze-VkB">
+                                                    <rect key="frame" x="33" y="10" width="41" height="14"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="11"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guests" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C0p-Hw-P7h">
+                                                    <rect key="frame" x="185" y="10" width="102" height="14"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="11"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 Room" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xr0-53-sfq">
+                                                    <rect key="frame" x="33" y="35" width="41" height="11"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="11" id="44S-J5-Lb6"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="11"/>
+                                                    <color key="textColor" red="0.62126989389999998" green="0.62126989389999998" blue="0.62126989389999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 Adult, 0 Children" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1rv-HJ-aQn">
+                                                    <rect key="frame" x="186" y="35" width="102" height="11"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="11"/>
+                                                    <color key="textColor" red="0.62126989389999998" green="0.62126989389999998" blue="0.62126989389999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="1rv-HJ-aQn" firstAttribute="trailing" secondItem="C0p-Hw-P7h" secondAttribute="trailing" constant="1" id="6Yk-LU-CNu"/>
+                                                <constraint firstItem="2hn-ze-VkB" firstAttribute="top" secondItem="h95-5e-OHu" secondAttribute="top" constant="10" id="9X2-Ci-hsx"/>
+                                                <constraint firstItem="xr0-53-sfq" firstAttribute="firstBaseline" secondItem="1rv-HJ-aQn" secondAttribute="firstBaseline" id="BeW-zm-bX2"/>
+                                                <constraint firstItem="xr0-53-sfq" firstAttribute="leading" secondItem="2hn-ze-VkB" secondAttribute="leading" id="P14-U5-gnw"/>
+                                                <constraint firstAttribute="trailing" secondItem="C0p-Hw-P7h" secondAttribute="trailing" constant="33.5" id="U27-Bw-avM"/>
+                                                <constraint firstItem="xr0-53-sfq" firstAttribute="trailing" secondItem="2hn-ze-VkB" secondAttribute="trailing" id="UDY-TW-FmK"/>
+                                                <constraint firstItem="xr0-53-sfq" firstAttribute="top" secondItem="2hn-ze-VkB" secondAttribute="bottom" constant="11.5" id="UgY-eM-acz"/>
+                                                <constraint firstItem="2hn-ze-VkB" firstAttribute="leading" secondItem="h95-5e-OHu" secondAttribute="leading" constant="33" id="Uw5-YO-ybT"/>
+                                                <constraint firstAttribute="bottom" secondItem="1rv-HJ-aQn" secondAttribute="bottom" constant="10" id="bSN-0e-ToN"/>
+                                                <constraint firstItem="C0p-Hw-P7h" firstAttribute="top" secondItem="h95-5e-OHu" secondAttribute="top" constant="10" id="fTQ-et-Zsf"/>
+                                                <constraint firstItem="1rv-HJ-aQn" firstAttribute="leading" secondItem="C0p-Hw-P7h" secondAttribute="leading" constant="1" id="lao-hV-zdd"/>
+                                                <constraint firstAttribute="bottom" secondItem="xr0-53-sfq" secondAttribute="bottom" constant="10" id="lxn-Ho-PLE"/>
+                                                <constraint firstItem="xr0-53-sfq" firstAttribute="top" secondItem="2hn-ze-VkB" secondAttribute="bottom" constant="11.5" id="n1v-Mq-SVp"/>
+                                                <constraint firstItem="xr0-53-sfq" firstAttribute="leading" secondItem="h95-5e-OHu" secondAttribute="leading" constant="33" id="shz-6g-fa7"/>
+                                                <constraint firstItem="1rv-HJ-aQn" firstAttribute="top" secondItem="C0p-Hw-P7h" secondAttribute="bottom" constant="11.5" id="vOu-Ng-GWx"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="leftValueLbl" destination="xr0-53-sfq" id="FCl-6D-c1d"/>
+                                            <outlet property="rightValueLbl" destination="1rv-HJ-aQn" id="4fq-xn-hYL"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ConfirmationCodeCell" rowHeight="57" id="rHK-sK-mVZ" customClass="BookingDetailsCell" customModule="JazHotels" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="387" width="320" height="57"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rHK-sK-mVZ" id="h9I-fC-jEc">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="56.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirmation Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZiF-xd-jPD">
+                                                    <rect key="frame" x="33" y="10" width="126" height="14"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="11"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="772497521305" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfQ-Fb-Hle">
+                                                    <rect key="frame" x="33" y="35" width="126" height="11"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="11" id="SHV-7H-PqZ"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="11"/>
+                                                    <color key="textColor" red="0.62126989389999998" green="0.62126989389999998" blue="0.62126989389999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="xfQ-Fb-Hle" firstAttribute="trailing" secondItem="ZiF-xd-jPD" secondAttribute="trailing" id="5X1-lc-p6z"/>
+                                                <constraint firstItem="xfQ-Fb-Hle" firstAttribute="leading" secondItem="ZiF-xd-jPD" secondAttribute="leading" id="CCG-mK-1qW"/>
+                                                <constraint firstItem="xfQ-Fb-Hle" firstAttribute="top" secondItem="ZiF-xd-jPD" secondAttribute="bottom" constant="11.5" id="Iit-Xg-Jry"/>
+                                                <constraint firstItem="ZiF-xd-jPD" firstAttribute="top" secondItem="h9I-fC-jEc" secondAttribute="top" constant="10" id="Ydw-Ux-dyv"/>
+                                                <constraint firstItem="ZiF-xd-jPD" firstAttribute="leading" secondItem="h9I-fC-jEc" secondAttribute="leading" constant="33" id="ZDC-mH-Bm3"/>
+                                                <constraint firstItem="xfQ-Fb-Hle" firstAttribute="leading" secondItem="h9I-fC-jEc" secondAttribute="leading" constant="33" id="aj6-iG-fzk"/>
+                                                <constraint firstItem="xfQ-Fb-Hle" firstAttribute="top" secondItem="ZiF-xd-jPD" secondAttribute="bottom" constant="11.5" id="c0M-Jp-aF9"/>
+                                                <constraint firstAttribute="bottom" secondItem="xfQ-Fb-Hle" secondAttribute="bottom" constant="10" id="tsK-Gn-AIB"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="leftValueLbl" destination="xfQ-Fb-Hle" id="LvG-qz-8zp"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PriceCell" rowHeight="57" id="HfN-PO-1fU" customClass="BookingDetailsCell" customModule="JazHotels" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="444" width="320" height="57"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HfN-PO-1fU" id="zou-uw-NID">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="56.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total stay rate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vfi-Fv-gPm">
+                                                    <rect key="frame" x="33" y="10" width="79.5" height="13.5"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="11"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Including taxes &amp; Fees" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EuN-mP-PQq">
+                                                    <rect key="frame" x="202" y="38.5" width="103" height="11"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="9"/>
+                                                    <color key="textColor" red="0.62126989389999998" green="0.62126989389999998" blue="0.62126989389999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="140$" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qxa-fX-ojj">
+                                                    <rect key="frame" x="234.5" y="11.5" width="38.5" height="20"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="16"/>
+                                                    <color key="textColor" red="0.88235294119999996" green="0.75294117650000003" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Vfi-Fv-gPm" firstAttribute="top" secondItem="zou-uw-NID" secondAttribute="top" constant="10" id="I6o-as-38k"/>
+                                                <constraint firstAttribute="trailing" secondItem="EuN-mP-PQq" secondAttribute="trailing" constant="15" id="YOV-ct-Aqt"/>
+                                                <constraint firstAttribute="bottom" secondItem="EuN-mP-PQq" secondAttribute="bottom" constant="7" id="gPF-fQ-ccR"/>
+                                                <constraint firstItem="Vfi-Fv-gPm" firstAttribute="leading" secondItem="zou-uw-NID" secondAttribute="leading" constant="33" id="gsw-MF-9BA"/>
+                                                <constraint firstItem="EuN-mP-PQq" firstAttribute="top" secondItem="Qxa-fX-ojj" secondAttribute="bottom" constant="7" id="hDc-Hz-BfB"/>
+                                                <constraint firstItem="Qxa-fX-ojj" firstAttribute="centerX" secondItem="EuN-mP-PQq" secondAttribute="centerX" id="kB7-9L-GhS"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="rightValueLbl" destination="Qxa-fX-ojj" id="KX9-ka-BSL"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="InfoCell" rowHeight="100" id="Z0g-kT-gh9" customClass="BookingDetailsCell" customModule="JazHotels" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="501" width="320" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Z0g-kT-gh9" id="Hka-NM-Zme">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jWP-hU-6MJ">
+                                                    <rect key="frame" x="16" y="5" width="289" height="89.5"/>
+                                                    <string key="text">All reservations will guaranteed by a valid credit card. Hotel reserves right to pre-authorize the credit card.Please note that as per Egyptain law, all foreign  guests must pay in foreign currency.In case of canelation within 02 days prior to arrival or no show, 01 night charge apply.</string>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="10"/>
+                                                    <color key="textColor" red="0.62126989389999998" green="0.62126989389999998" blue="0.62126989389999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="jWP-hU-6MJ" secondAttribute="bottom" constant="5" id="8Hk-E6-kvX"/>
+                                                <constraint firstAttribute="trailing" secondItem="jWP-hU-6MJ" secondAttribute="trailing" constant="15" id="Azj-qG-Ovp"/>
+                                                <constraint firstItem="jWP-hU-6MJ" firstAttribute="leading" secondItem="Hka-NM-Zme" secondAttribute="leading" constant="16" id="HfM-Ec-bbE"/>
+                                                <constraint firstAttribute="trailing" secondItem="jWP-hU-6MJ" secondAttribute="trailing" constant="15" id="Qh9-rL-lr4"/>
+                                                <constraint firstItem="jWP-hU-6MJ" firstAttribute="top" secondItem="Hka-NM-Zme" secondAttribute="top" constant="5" id="b0C-HU-StG"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ZKE-Dz-tDc" id="Ch3-aM-QuK"/>
+                                    <outlet property="delegate" destination="ZKE-Dz-tDc" id="Qq8-VU-klw"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Oe6-TL-jSt" firstAttribute="trailing" secondItem="WnQ-DA-ZUS" secondAttribute="trailing" id="B1d-yA-WWQ"/>
+                            <constraint firstItem="Oe6-TL-jSt" firstAttribute="leading" secondItem="WnQ-DA-ZUS" secondAttribute="leading" id="f9U-9E-yLK"/>
+                            <constraint firstItem="Oe6-TL-jSt" firstAttribute="top" secondItem="ki5-mK-7uB" secondAttribute="top" id="pe6-tT-hoa"/>
+                            <constraint firstItem="Oe6-TL-jSt" firstAttribute="bottom" secondItem="WnQ-DA-ZUS" secondAttribute="bottom" id="qfu-uf-PnI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WnQ-DA-ZUS"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="900"/>
+                    <connections>
+                        <outlet property="tableView" destination="Oe6-TL-jSt" id="p1x-0R-K68"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Lo-Hq-YU5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2928.75" y="3815"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="p3H-XX-Kzi">

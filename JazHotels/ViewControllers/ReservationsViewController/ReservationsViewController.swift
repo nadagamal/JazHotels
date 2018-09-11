@@ -87,10 +87,6 @@ extension ReservationsViewController: UITableViewDelegate , UITableViewDataSourc
         return 280
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-//        let hotelDetailsVC = UIStoryboard(name: HotelJazConstants.StoryBoard.mainSB, bundle: nil).instantiateViewController(withIdentifier: "HotelDetailsViewController") as! HotelDetailsViewController
-//        let  hotel = JazHotels.hotels[indexPath.row]
-//        hotelDetailsVC.hotel = hotel
-//        self.navigationController?.show(hotelDetailsVC, sender: nil)
+        self.navigationController?.show(BookingDetailsViewController.create(), sender: self)
     }
 }

@@ -36,6 +36,12 @@ class JCRoomStay{
                 ratePlans.append(value)
             }
         }
+        else{
+            if let ratePlanDic = dic!["RatePlan"] as? [String:Any]{
+                let value = JCRatePlan(fromDictionary: ratePlanDic)
+                ratePlans.append(value)
+            }
+        }
         }
 		if let roomRatesData = dictionary["RoomRates"] as? [String:Any]{
 			roomRates = JCRoomRate(fromDictionary: roomRatesData)

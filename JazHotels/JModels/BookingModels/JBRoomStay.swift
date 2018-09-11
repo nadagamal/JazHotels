@@ -13,7 +13,7 @@ class JBRoomStay{
 	var cancelPenalties : JBCancelPenalty!
 	var guarantee : JBGuarantee!
 	var guestCounts : JBGuestCount!
-	var ratePlans : JBRatePlan!
+	var ratePlans : [JCRatePlan]!
 	var roomRates : JBRoomRate!
 	var roomTypes : JBRoomType!
 	var timeSpan : JBTimeSpan!
@@ -38,9 +38,16 @@ class JBRoomStay{
 		if let guestCountsData = dictionary["GuestCounts"] as? [String:Any]{
 			guestCounts = JBGuestCount(fromDictionary: guestCountsData)
 		}
-		if let ratePlansData = dictionary["RatePlans"] as? [String:Any]{
-			ratePlans = JBRatePlan(fromDictionary: ratePlansData)
-		}
+//        if let ratePlansData = dictionary["RatePlans"] as? [String:Any]{
+//            ratePlans = JBRatePlan(fromDictionary: ratePlansData)
+//        }
+        ratePlans = [JCRatePlan]()
+        if let ratePlanArray = dictionary["RatePlans"] as? [[String:Any]]{
+            for dic in ratePlanArray{
+                let value = JCRatePlan(fromDictionary: dic)
+                ratePlans.append(value)
+            }
+        }
 		if let roomRatesData = dictionary["RoomRates"] as? [String:Any]{
 			roomRates = JBRoomRate(fromDictionary: roomRatesData)
 		}

@@ -22,7 +22,7 @@ class UserAddress : NSObject, NSCoding, Mappable{
 		return UserAddress()
 	}
 	required init?(map: Map){}
-	private override init(){}
+	 override init(){}
 
 	func mapping(map: Map)
 	{

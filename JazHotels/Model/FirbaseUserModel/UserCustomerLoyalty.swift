@@ -22,7 +22,7 @@ class UserCustomerLoyalty : NSObject, NSCoding, Mappable{
 		return UserCustomerLoyalty()
 	}
 	required init?(map: Map){}
-	private override init(){}
+	 override init(){}
 
 	func mapping(map: Map)
 	{

@@ -16,7 +16,12 @@ class UserSynXisInfo : NSObject, NSCoding, Mappable{
 		return UserSynXisInfo()
 	}
 	required init?(map: Map){}
-	private override init(){}
+	 override init(){}
+    
+    init( synXisPassword : String ,synXisUserID : String) {
+        self.synXisUserID = synXisPassword.toBase64()
+        self.synXisPassword =  synXisPassword
+    }
 
 	func mapping(map: Map)
 	{

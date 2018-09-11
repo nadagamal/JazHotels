@@ -20,7 +20,7 @@ class UserPaymentCard : NSObject, NSCoding, Mappable{
 		return UserPaymentCard()
 	}
 	required init?(map: Map){}
-	private override init(){}
+	 override init(){}
 
 	func mapping(map: Map)
 	{

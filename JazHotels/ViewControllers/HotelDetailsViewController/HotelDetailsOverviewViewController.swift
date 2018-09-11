@@ -42,6 +42,9 @@ class HotelDetailsOverviewViewController: UIViewController,IndicatorInfoProvider
     
     // MARK: - IndicatorInfoProvider
     
+    @IBAction func bookAction(_ sender: Any) {
+        navigationController?.show(BookHotelViewController.create(), sender: sender)
+    }
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         return itemInfo
 }

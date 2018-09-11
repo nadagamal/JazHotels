@@ -10,7 +10,7 @@ import Foundation
 class JCRoomStay{
 
 	var basicPropertyInfo : JCBasicPropertyInfo!
-	var ratePlans : JCRatePlan!
+	var ratePlans : [JCRatePlan]!
 	var roomRates : JCRoomRate!
 	var roomTypes : JCRoomType!
 	var roomStay : JCRoomStay!
@@ -24,9 +24,19 @@ class JCRoomStay{
 		if let basicPropertyInfoData = dictionary["BasicPropertyInfo"] as? [String:Any]{
 			basicPropertyInfo = JCBasicPropertyInfo(fromDictionary: basicPropertyInfoData)
 		}
-		if let ratePlansData = dictionary["RatePlans"] as? [String:Any]{
-			ratePlans = JCRatePlan(fromDictionary: ratePlansData)
-		}
+//        if let ratePlansData = dictionary["RatePlans"] as? [String:Any]{
+//            ratePlans = JCRatePlan(fromDictionary: ratePlansData)
+//        }
+        ratePlans = [JCRatePlan]()
+        var dic = dictionary["RatePlans"] as? [String:Any]
+        if dic != nil{
+        if let ratePlanArray = dic!["RatePlan"] as? [[String:Any]]{
+            for dic in ratePlanArray{
+                let value = JCRatePlan(fromDictionary: dic)
+                ratePlans.append(value)
+            }
+        }
+        }
 		if let roomRatesData = dictionary["RoomRates"] as? [String:Any]{
 			roomRates = JCRoomRate(fromDictionary: roomRatesData)
 		}

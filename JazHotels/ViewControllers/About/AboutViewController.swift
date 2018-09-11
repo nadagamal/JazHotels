@@ -22,34 +22,58 @@ class AboutViewController: UIViewController {
     }
     
     @IBAction func linkedInAction(_ sender: Any) {
-        UIApplication.shared.open(URL(string: "https://www.linkedin.com/company/18467184/")!, options: [:]) { (handler) in
-            
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(URL(string: "https://www.linkedin.com/company/jazhotelgroup/")!, options: [:]) { (handler) in
+                
+            }
+        } else {
+            // Fallback on earlier versions
         }
     }
     @IBAction func pintrestAction(_ sender: Any) {
-        UIApplication.shared.open(URL(string: "https://www.pinterest.com/jazcollection/")!, options: [:]) { (handler) in
-            
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(URL(string: "https://www.pinterest.com/jazhotelgroup/")!, options: [:]) { (handler) in
+                
+            }
+        } else {
+            // Fallback on earlier versions
         }
     }
     @IBAction func twitterAction(_ sender: Any) {
-        UIApplication.shared.open(URL(string: "https://twitter.com/Jaz_Hotels")!, options: [:]) { (handler) in
-            
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(URL(string: "https://twitter.com/Jaz_Hotels?lang=en")!, options: [:]) { (handler) in
+                
+            }
+        } else {
+            // Fallback on earlier versions
         }
     }
     @IBAction func youtubeAction(_ sender: Any) {
-        UIApplication.shared.open(URL(string: "https://www.youtube.com/user/JazHotelsandResorts")!, options: [:]) { (handler) in
-            
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(URL(string: "https://www.youtube.com/channel/UCqSBDQ8ceZN4JCqy756JIgA?view_as=subscriber")!, options: [:]) { (handler) in
+                
+            }
+        } else {
+            // Fallback on earlier versions
         }
     }
     @IBAction func facebookAction(_ sender: Any) {
-        UIApplication.shared.open(URL(string: "https://www.facebook.com/jazcollectionegypt/")!, options: [:]) { (handler) in
-            
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(URL(string: "https://www.facebook.com/jazhotelgroup/")!, options: [:]) { (handler) in
+                
+            }
+        } else {
+            // Fallback on earlier versions
         }
     }
     
     @IBAction func instagramAction(_ sender: Any) {
-        UIApplication.shared.open(URL(string: "https://www.instagram.com/jazcollectionegypt/")!, options: [:]) { (handler) in
-            
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(URL(string: "https://www.instagram.com/jazhotelgroup/")!, options: [:]) { (handler) in
+                
+            }
+        } else {
+            // Fallback on earlier versions
         }
         
     }

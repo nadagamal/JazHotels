@@ -13,7 +13,7 @@ class RatePlansViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     var roomRateList :[JCRoomRate] = []
-    var ratePlans:JCRatePlan!
+    var ratePlans:[JCRatePlan]!
     var roomStay:JCRoomStay!
     var isExpanded = false
     var expandableCells=[Int]()
@@ -76,6 +76,7 @@ class RatePlansViewController: UIViewController {
         return price
     }
     @objc func bookNowAction(sender:UIButton){
+        navigationController?.show(BookHotelViewController.create(), sender: sender)
 
     }
     @objc func roomDetailsAction(sender:UIButton){
@@ -123,8 +124,8 @@ extension RatePlansViewController :UITableViewDelegate , UITableViewDataSource
         }
     }
     func numberOfSections(in tableView: UITableView) -> Int {
-        if roomStay.ratePlans != nil && roomStay.ratePlans.ratePlan != nil && roomStay.ratePlans.ratePlan.count != 0{
-        return roomStay.ratePlans.ratePlan.count
+        if roomStay.ratePlans != nil && roomStay.ratePlans != nil && roomStay.ratePlans.count != 0{
+        return roomStay.ratePlans.count
         }
         return 0
     }
@@ -137,7 +138,7 @@ extension RatePlansViewController :UITableViewDelegate , UITableViewDataSource
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(headerTapped))
         let cell = tableView.dequeueReusableCell(withIdentifier: "rate_cell") as! RatePlanTableViewCell
         cell.tag = section
-        let ratePlan:JCRatePlan = roomStay.ratePlans.ratePlan[section]
+        let ratePlan:JCRatePlan = roomStay.ratePlans[section]
         cell.ratePrice.text = getRoomPrice(ratePlanCode: ratePlan.ratePlanCode)
         if ratePlan != nil{
             cell.rateTitle.text = ratePlan.ratePlanDescription.name ?? ""

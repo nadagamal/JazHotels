@@ -114,7 +114,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Toy-fk-lai" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2443" y="2233"/>
+            <point key="canvasLocation" x="-2736" y="2068"/>
         </scene>
         <!--Reservations View Controller-->
         <scene sceneID="6bM-kx-vGr">
@@ -262,7 +262,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SUd-0f-JBU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3756" y="1913"/>
+            <point key="canvasLocation" x="-3908" y="2068"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="auY-ph-suW">
@@ -435,7 +435,7 @@ Iberotel Borg El Arab</string>
             </objects>
             <point key="canvasLocation" x="-1458" y="2233"/>
         </scene>
-        <!--Favorite View Controller-->
+        <!--Favorites -->
         <scene sceneID="Rl5-ji-WXd">
             <objects>
                 <viewController id="rjc-Ue-DvF" customClass="FavoriteViewController" customModule="JazHotels" customModuleProvider="target" sceneMemberID="viewController">
@@ -443,8 +443,8 @@ Iberotel Borg El Arab</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hOd-9g-C6H">
-                                <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hOd-9g-C6H">
+                                <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="rjc-Ue-DvF" id="OfC-Cu-QWy"/>
@@ -461,14 +461,14 @@ Iberotel Borg El Arab</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lne-MY-ZWz"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Obq-az-kxr"/>
+                    <navigationItem key="navigationItem" title="Favorites " id="Obq-az-kxr"/>
                     <connections>
                         <outlet property="tableView" destination="hOd-9g-C6H" id="nia-ec-1RC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZbP-Cn-413" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-517.5" y="2257.394366197183"/>
+            <point key="canvasLocation" x="-529" y="2336"/>
         </scene>
         <!--Hotel Details Overview View Controller-->
         <scene sceneID="CSB-Ii-h2T">
@@ -504,6 +504,9 @@ Iberotel Borg El Arab</string>
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="bookAction:" destination="gDR-kt-xbN" eventType="touchUpInside" id="s71-or-hU9"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -521,19 +524,46 @@ Iberotel Borg El Arab</string>
             </objects>
             <point key="canvasLocation" x="-3002" y="3145"/>
         </scene>
-        <!--View Controller-->
+        <!--Book Hotel View Controller-->
         <scene sceneID="n5X-5x-SXP">
             <objects>
-                <viewController id="09J-vy-6rh" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BookHotelViewController" id="09J-vy-6rh" customClass="BookHotelViewController" customModule="JazHotels" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4kt-oM-fuu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="t3X-AD-vUh">
-                                <rect key="frame" x="15" y="30" width="290" height="440"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="15" y="30" width="290" height="434"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="APO-Zt-19I">
+                                    <rect key="frame" x="0.0" y="717.5" width="290" height="50"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CXk-er-TCg">
+                                            <rect key="frame" x="49" y="5" width="193" height="40"/>
+                                            <color key="backgroundColor" red="0.88235294117647056" green="0.75294117647058822" blue="0.39215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="193" id="7lX-sC-0U6"/>
+                                                <constraint firstAttribute="height" constant="40" id="nqy-oE-L0M"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="10"/>
+                                            <state key="normal" title="Confirm Reservation">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="confirmReservationAction:" destination="09J-vy-6rh" eventType="touchUpInside" id="cFq-Vd-axz"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="J70-EC-Pm6"/>
+                                        <constraint firstItem="CXk-er-TCg" firstAttribute="centerY" secondItem="APO-Zt-19I" secondAttribute="centerY" id="pXw-q0-EIB"/>
+                                        <constraint firstItem="CXk-er-TCg" firstAttribute="centerX" secondItem="APO-Zt-19I" secondAttribute="centerX" id="rD2-sN-W0z"/>
+                                    </constraints>
+                                </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="75" id="cH9-Xd-abM">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CardHolderCell" rowHeight="75" id="cH9-Xd-abM" customClass="TxtViewCell" customModule="JazHotels" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="55.5" width="290" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cH9-Xd-abM" id="P5v-zE-LDK">
@@ -577,7 +607,7 @@ Iberotel Borg El Arab</string>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="75" id="QrC-z7-NWv">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CardNumberCell" rowHeight="75" id="QrC-z7-NWv" customClass="TxtViewCell" customModule="JazHotels" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="130.5" width="290" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QrC-z7-NWv" id="XiC-7I-XTb">
@@ -618,7 +648,7 @@ Iberotel Borg El Arab</string>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="75" id="Wx4-P9-LLP">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CardDetailsCell" rowHeight="75" id="Wx4-P9-LLP" customClass="TxtViewCell" customModule="JazHotels" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="205.5" width="290" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Wx4-P9-LLP" id="nE6-Ue-frq">
@@ -687,7 +717,7 @@ Iberotel Borg El Arab</string>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="65" id="uXV-EM-NSk">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CardEditBtnCell" rowHeight="65" id="uXV-EM-NSk" customClass="InfoCell" customModule="JazHotels" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="280.5" width="290" height="65"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uXV-EM-NSk" id="WXi-Zn-TVs">
@@ -709,39 +739,161 @@ Iberotel Borg El Arab</string>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="95" id="Huw-cd-zo0">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArrivalDateCell" rowHeight="95" id="Huw-cd-zo0" customClass="InfoCell" customModule="JazHotels" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="345.5" width="290" height="95"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Huw-cd-zo0" id="4Yo-uc-Nl6">
                                             <rect key="frame" x="0.0" y="0.0" width="290" height="94.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Arrival Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dbn-wP-Fkf">
-                                                    <rect key="frame" x="15" y="11" width="165" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="N7a-SH-oeo">
+                                                    <rect key="frame" x="12" y="33" width="266" height="51.5"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="9"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Arrival Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dbn-wP-Fkf">
+                                                    <rect key="frame" x="15" y="10" width="67" height="13"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Dbn-wP-Fkf" firstAttribute="leading" secondItem="4Yo-uc-Nl6" secondAttribute="leading" constant="15" id="4zg-dJ-lmj"/>
+                                                <constraint firstAttribute="bottom" secondItem="N7a-SH-oeo" secondAttribute="bottom" constant="10" id="9bI-WA-QZ7"/>
+                                                <constraint firstItem="Dbn-wP-Fkf" firstAttribute="top" secondItem="4Yo-uc-Nl6" secondAttribute="top" constant="10" id="cSP-4E-qnM"/>
+                                                <constraint firstItem="N7a-SH-oeo" firstAttribute="top" secondItem="Dbn-wP-Fkf" secondAttribute="bottom" constant="10" id="osK-bh-97Z"/>
+                                                <constraint firstItem="N7a-SH-oeo" firstAttribute="leading" secondItem="4Yo-uc-Nl6" secondAttribute="leading" constant="12" id="twp-Et-ISc"/>
+                                                <constraint firstAttribute="trailing" secondItem="N7a-SH-oeo" secondAttribute="trailing" constant="12" id="xqM-Te-p8F"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CancellationCell" rowHeight="95" id="agY-ie-Rb0" customClass="InfoCell" customModule="JazHotels" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="440.5" width="290" height="95"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="agY-ie-Rb0" id="qk9-wq-Onx">
+                                            <rect key="frame" x="0.0" y="0.0" width="290" height="94.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="haS-8m-i7X">
+                                                    <rect key="frame" x="12" y="33" width="266" height="51.5"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="9"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cancellations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dT-oN-uwy">
+                                                    <rect key="frame" x="15" y="10" width="77" height="13"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="11"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="haS-8m-i7X" firstAttribute="top" secondItem="2dT-oN-uwy" secondAttribute="bottom" constant="10" id="5hF-NX-t8t"/>
+                                                <constraint firstAttribute="bottom" secondItem="haS-8m-i7X" secondAttribute="bottom" constant="10" id="BGH-XM-sAc"/>
+                                                <constraint firstItem="2dT-oN-uwy" firstAttribute="top" secondItem="qk9-wq-Onx" secondAttribute="top" constant="10" id="CWn-Fl-0FY"/>
+                                                <constraint firstAttribute="trailing" secondItem="haS-8m-i7X" secondAttribute="trailing" constant="12" id="fGP-xg-cXa"/>
+                                                <constraint firstItem="haS-8m-i7X" firstAttribute="leading" secondItem="qk9-wq-Onx" secondAttribute="leading" constant="12" id="p9n-YR-HaE"/>
+                                                <constraint firstItem="2dT-oN-uwy" firstAttribute="leading" secondItem="qk9-wq-Onx" secondAttribute="leading" constant="15" id="tC0-t7-hbv"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookingCell" rowHeight="95" id="DgE-GE-ngX" customClass="InfoCell" customModule="JazHotels" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="535.5" width="290" height="95"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DgE-GE-ngX" id="Gho-TH-myE">
+                                            <rect key="frame" x="0.0" y="0.0" width="290" height="94.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3Zm-SE-Ro2">
+                                                    <rect key="frame" x="12" y="33" width="266" height="51.5"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="9"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Booking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PDp-ch-2vc">
+                                                    <rect key="frame" x="15" y="10" width="48" height="13"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="11"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="3Zm-SE-Ro2" secondAttribute="trailing" constant="12" id="GnW-pN-wQj"/>
+                                                <constraint firstItem="PDp-ch-2vc" firstAttribute="leading" secondItem="Gho-TH-myE" secondAttribute="leading" constant="15" id="NVN-sp-sjy"/>
+                                                <constraint firstItem="PDp-ch-2vc" firstAttribute="top" secondItem="Gho-TH-myE" secondAttribute="top" constant="10" id="Qtg-Mu-B1V"/>
+                                                <constraint firstItem="3Zm-SE-Ro2" firstAttribute="top" secondItem="PDp-ch-2vc" secondAttribute="bottom" constant="10" id="Rxz-0z-1WX"/>
+                                                <constraint firstItem="3Zm-SE-Ro2" firstAttribute="leading" secondItem="Gho-TH-myE" secondAttribute="leading" constant="12" id="Xv8-Yy-Toa"/>
+                                                <constraint firstAttribute="bottom" secondItem="3Zm-SE-Ro2" secondAttribute="bottom" constant="10" id="hoH-8c-liq"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CheckCell" rowHeight="69" id="hKA-c0-O2d" customClass="InfoCell" customModule="JazHotels" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="630.5" width="290" height="69"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hKA-c0-O2d" id="wyp-hT-Thi">
+                                            <rect key="frame" x="0.0" y="0.0" width="290" height="68.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please specify that  you have read and understand the rate policies for your itiinrary." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gge-kE-TGl">
+                                                    <rect key="frame" x="43" y="15" width="235" height="39"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="10"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mYA-qa-uZX">
+                                                    <rect key="frame" x="12" y="26" width="19" height="17"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="19" id="11l-ok-c37"/>
+                                                        <constraint firstAttribute="height" constant="17" id="o90-U8-LUx"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="4"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Gge-kE-TGl" firstAttribute="top" secondItem="wyp-hT-Thi" secondAttribute="top" constant="15" id="GwQ-0G-E3E"/>
+                                                <constraint firstItem="Gge-kE-TGl" firstAttribute="leading" secondItem="mYA-qa-uZX" secondAttribute="trailing" constant="12" id="SDc-TG-8YL"/>
+                                                <constraint firstItem="mYA-qa-uZX" firstAttribute="centerY" secondItem="Gge-kE-TGl" secondAttribute="centerY" id="aAU-nM-SCx"/>
+                                                <constraint firstAttribute="bottom" secondItem="Gge-kE-TGl" secondAttribute="bottom" constant="15" id="m8y-kF-fAf"/>
+                                                <constraint firstAttribute="trailing" secondItem="Gge-kE-TGl" secondAttribute="trailing" constant="12" id="ssK-sl-e4P"/>
+                                                <constraint firstItem="mYA-qa-uZX" firstAttribute="leading" secondItem="wyp-hT-Thi" secondAttribute="leading" constant="12" id="t5U-DE-Fkb"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="09J-vy-6rh" id="7Ny-u8-wL7"/>
+                                    <outlet property="delegate" destination="09J-vy-6rh" id="qL4-Ad-MQG"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="S37-qe-rkB" firstAttribute="bottom" secondItem="t3X-AD-vUh" secondAttribute="bottom" constant="10" id="AfE-Fd-feQ"/>
                             <constraint firstItem="t3X-AD-vUh" firstAttribute="top" secondItem="S37-qe-rkB" secondAttribute="top" constant="10" id="Qbd-rS-3i1"/>
                             <constraint firstItem="t3X-AD-vUh" firstAttribute="leading" secondItem="S37-qe-rkB" secondAttribute="leading" constant="15" id="RuZ-Dt-qHO"/>
                             <constraint firstItem="S37-qe-rkB" firstAttribute="trailing" secondItem="t3X-AD-vUh" secondAttribute="trailing" constant="15" id="fEO-U4-ikF"/>
+                            <constraint firstItem="S37-qe-rkB" firstAttribute="bottom" secondItem="t3X-AD-vUh" secondAttribute="bottom" constant="16" id="vRR-hP-dUu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="S37-qe-rkB"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="t3X-AD-vUh" id="xmF-Vc-8UD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bWw-zV-cqF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3534.375" y="4224.2957746478878"/>
+            <point key="canvasLocation" x="-3534.375" y="4223.75"/>
         </scene>
         <!--Hotel Details Contact View Controller-->
         <scene sceneID="gr2-eY-Ce5">
@@ -981,7 +1133,7 @@ Alam Road, Red Sea, Egypt.</string>
                                                 <color key="textColor" red="0.45098039215686275" green="0.45098039215686275" blue="0.45098039215686275" alpha="0.56264378831595097" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZwV-PL-aSU" customClass="CosmosView" customModule="Cosmos">
+                                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZwV-PL-aSU" customClass="CosmosView" customModule="Cosmos">
                                                 <rect key="frame" x="90" y="128.5" width="120" height="20"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -1103,10 +1255,12 @@ Alam Road, Red Sea, Egypt.</string>
             <objects>
                 <navigationController id="lFj-Yz-DSO" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="hotelNav" selectedImage="hotelNavH" id="5eu-qz-tME"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backIndicatorImage="back" id="omG-C7-ux3">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" backIndicatorImage="back" id="omG-C7-ux3" customClass="GradientNavigationBar" customModule="JazHotels" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.50588235290000005" green="0.2156862745" blue="0.58431372550000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.50588235290000005" green="0.2156862745" blue="0.58431372550000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="8bO-EW-SUk" kind="relationship" relationship="rootViewController" id="yBo-1o-pN2"/>
@@ -2317,11 +2471,14 @@ Alam Road, Red Sea, Egypt.</string>
         <!--Navigation Controller-->
         <scene sceneID="FP9-et-jDE">
             <objects>
-                <navigationController navigationBarHidden="YES" id="FK2-ce-JBX" sceneMemberID="viewController">
+                <navigationController id="FK2-ce-JBX" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="favHeader" id="r56-8U-Of1"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6Ul-CD-V97" customClass="GradientNavigationBar" customModule="JazHotels" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.50588235290000005" green="0.2156862745" blue="0.58431372550000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.50588235290000005" green="0.2156862745" blue="0.58431372550000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="16"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -6,7 +6,7 @@ import Foundation
 import ObjectMapper
 
 
-class RootClass : NSObject, NSCoding, Mappable{
+class UserContact : NSObject, NSCoding, Mappable{
 
 	var emailAddress : String?
 	var landLine : String?
@@ -15,11 +15,19 @@ class RootClass : NSObject, NSCoding, Mappable{
 
 
 	class func newInstance(map: Map) -> Mappable?{
-		return RootClass()
+		return UserContact()
 	}
 	required init?(map: Map){}
-	private override init(){}
+	 override init(){}
 
+     init(emailAddress : String ,landLine : String , mobilePhone : String, phoneNumbers : String) {
+        self.emailAddress = emailAddress
+        self.landLine = landLine
+        self.mobilePhone = mobilePhone
+        self.phoneNumbers = phoneNumbers
+        
+    }
+    
 	func mapping(map: Map)
 	{
 		emailAddress <- map["emailAddress"]

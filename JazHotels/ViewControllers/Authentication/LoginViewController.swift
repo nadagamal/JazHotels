@@ -28,45 +28,24 @@ class LoginViewController: UIViewController , GIDSignInUIDelegate  {
         let settings = db.settings
         settings.areTimestampsInSnapshotsEnabled = true
         db.settings = settings
-//
-//        var ref: DocumentReference? = nil
-//        ref = db.collection("users").addDocument(data: [
-//            "first": "Zeinab",
-//            "last": "Reda"
-//        ]) { err in
-//            if let err = err {
-//                print("Error adding document: \(err)")
-//            } else {
-//                print("Document added with ID: \(ref!.documentID)")
-//            }
-//        }
+
         
         
         
 //    ((document.data() as! [String:Any])["contact"] as! [String:Any])["emailAddress"] as! String
 //        "ramyncs@gmail.com"
-        db.collection("users").getDocuments() { (querySnapshot, err) in
-            if let err = err {
-                print("Error getting documents: \(err)")
-            } else {
-                for document in querySnapshot!.documents {
-                    
-                    print("\(document.documentID) => \(document.data())")
-                }
-            }
-        }
-        
-        
-        db.collection("users").whereField("emailAddress", isEqualTo: "ramyncs@gmail.com")
-            .getDocuments() { (querySnapshot, err) in
-                if let err = err {
-                    print("Error getting documents: \(err)")
-                } else {
-                    for document in querySnapshot!.documents {
-                        print("\(document.documentID) => \(document.data())")
-                    }
-                }
-        }
+    
+//
+//        db.collection("users").whereField("emailAddress", isEqualTo: "ramyncs@gmail.com")
+//            .getDocuments() { (querySnapshot, err) in
+//                if let err = err {
+//                    print("Error getting documents: \(err)")
+//                } else {
+//                    for document in querySnapshot!.documents {
+//                        print("\(document.documentID) => \(document.data())")
+//                    }
+//                }
+//        }
 
     }
     
@@ -81,16 +60,10 @@ class LoginViewController: UIViewController , GIDSignInUIDelegate  {
     
     
     @IBAction func closeView(_ sender: Any) {
-//        self.dismiss(animated: true, completion: nil)
-//        self.navigationController?.dismiss(animated: true, completion: {
-//
-//            tabBarHome?.selectedIndex = 0
-//
-//        })
-        
+
         let mainSB = UIStoryboard(name: HotelJazConstants.StoryBoard.mainSB, bundle: nil)
         let tabBarHome = mainSB.instantiateViewController(withIdentifier: "HomeTabbar") as? RaisedTabBarController
-        self.present(tabBarHome!, animated: true, completion: nil)
+        self.present(tabBarHome!, animated: false, completion: nil)
         
     }
     @objc private func signInWithGoogle(notification: Notification) {
@@ -109,11 +82,7 @@ class LoginViewController: UIViewController , GIDSignInUIDelegate  {
                 print(error?.localizedDescription ?? "")
                 return
             }
-            print(authResult?.user.email)
-           
-            self.user?.fullName = authResult?.user.displayName
-            self.user?.emailAddress = authResult?.user.email
-            self.viewProfile()
+            self.checkAccountFound(user: authResult!)
         }
         
     }
@@ -164,10 +133,8 @@ class LoginViewController: UIViewController , GIDSignInUIDelegate  {
                     
                 else
                 {
-                    print(authResult?.user.email)
-                    self.user?.fullName = authResult?.user.displayName
-                    self.user?.emailAddress = authResult?.user.email
-                    self.viewProfile()
+                    self.checkAccountFound(user: authResult!)
+
                 }
             })
             
@@ -205,10 +172,8 @@ class LoginViewController: UIViewController , GIDSignInUIDelegate  {
                         
                     else
                     {
-                        self?.user?.fullName = authResult?.user.displayName
-                        self?.user?.emailAddress = authResult?.user.email
+                        self?.checkAccountFound(user: authResult!)
 
-                        self?.viewProfile()
                     }
                     
                 }
@@ -225,16 +190,70 @@ class LoginViewController: UIViewController , GIDSignInUIDelegate  {
     }
     
     
-    func viewProfile()
+    func viewProfile(userData:UserProfile)
     {
-        UserDefaults.saveObjectDefault(key: HotelJazConstants.userDefault.userData, value: self.user ?? "")
+        UserDefaults.saveObjectDefault(key: HotelJazConstants.userDefault.userData, value: userData)
+        
+        NotificationCenter.default.post(name: Notification.Name(HotelJazConstants.Notifications.userProfileData), object: userData)
 
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    func checkAccountFound(user:AuthDataResult)
+    {
+        db.collection("users").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                var found = false
+                for document in querySnapshot!.documents {
+                    if document.documentID == user.user.uid // sigin
+                    {
+                        print("\(document.documentID) => \(document.data())")
 
-     
-        
-        
+                        let data = document.data() as! NSDictionary
+                        let userProfile = UserProfile(userContact: UserContact(JSON: data["contact"] as! [String:Any])!, userName: UserName(JSON: data["name"] as! [String:Any])!, userAddress: UserAddress(JSON: data["name"] as! [String:Any])!, userCustomer: UserCustomerLoyalty(JSON: data["customerLoyalty"] as! [String:Any])!, userCardPayment: UserPaymentCard(JSON: data["paymentCard"] as! [String:Any])!, userSynXisInfo: UserSynXisInfo(JSON: data["synXisInfo"] as! [String:Any])!,gender:data["gender"] as! String)
+                        
+                        UserDefaults.saveObjectDefault(key: HotelJazConstants.userDefault.userData, value: userProfile)
+                        found = true
+                        self.viewProfile(userData: userProfile)
+                        break
+                    }
+                    
+                }
+                
+                
+                if !found // create user
+                {
+                    self.createNewUser()
+                
+                }
+            }
+        }
         
     }
+    
+    
+    func createNewUser()
+    {
+        let db = Firestore.firestore()
+        let user = Auth.auth().currentUser
+
+        let userProfile = UserProfile(userContact: UserContact(emailAddress: (user?.email ?? "")!, landLine: "", mobilePhone: "", phoneNumbers: (user?.phoneNumber ?? "")!), userName: UserName(firstName: (user?.displayName ?? "")!, fullName: "", lastName: "", middleInitial: "", middleName: ""), userAddress: UserAddress(), userCustomer: UserCustomerLoyalty(), userCardPayment: UserPaymentCard(), userSynXisInfo: UserSynXisInfo(),gender:"")
+            
+            
+        db.collection("users").document("\(String(describing: user?.uid))").setData(userProfile.toDictionary()) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+        
+        self.viewProfile(userData: userProfile)
+     
+    }
+    
+ 
    
 }

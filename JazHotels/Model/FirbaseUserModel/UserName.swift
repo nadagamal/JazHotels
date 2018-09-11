@@ -21,6 +21,14 @@ class UserName : NSObject, NSCoding, Mappable{
 	required init?(map: Map){}
 	private override init(){}
 
+    init(firstName : String ,fullName : String , lastName : String , middleInitial : String, middleName : String) {
+        self.firstName = firstName
+        self.fullName = fullName
+        self.lastName = lastName
+        self.middleName = middleName
+        self.middleInitial = middleInitial
+    }
+    
 	func mapping(map: Map)
 	{
 		firstName <- map["firstName"]

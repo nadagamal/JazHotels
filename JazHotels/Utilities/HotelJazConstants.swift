@@ -7,6 +7,10 @@ class HotelJazConstants: NSObject {
         static let kSocialAuthenticationPathGoogle: String = "GOOGLE"
     }
 
+    struct Notifications {
+        static let userProfileData = "userProfileData"
+
+    }
     struct userDefault {
         static let userData = "userData"
     }

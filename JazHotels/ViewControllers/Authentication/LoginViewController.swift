@@ -25,9 +25,9 @@ class LoginViewController: UIViewController , GIDSignInUIDelegate  {
         super.viewDidLoad()
         GIDSignIn.sharedInstance().uiDelegate = self
         NotificationCenter.default.addObserver(self, selector: #selector(LoginViewController.signInWithGoogle(notification:)), name: Notification.Name(HotelJazConstants.SocialPath.kSocialAuthenticationPathGoogle), object: nil)
-//        let settings = db.settings
-//        settings.areTimestampsInSnapshotsEnabled = true
-//        db.settings = settings
+        let settings = db.settings
+        settings.areTimestampsInSnapshotsEnabled = true
+        db.settings = settings
 //
 //        var ref: DocumentReference? = nil
 //        ref = db.collection("users").addDocument(data: [
@@ -40,6 +40,33 @@ class LoginViewController: UIViewController , GIDSignInUIDelegate  {
 //                print("Document added with ID: \(ref!.documentID)")
 //            }
 //        }
+        
+        
+        
+//    ((document.data() as! [String:Any])["contact"] as! [String:Any])["emailAddress"] as! String
+//        "ramyncs@gmail.com"
+        db.collection("users").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    
+                    print("\(document.documentID) => \(document.data())")
+                }
+            }
+        }
+        
+        
+        db.collection("users").whereField("emailAddress", isEqualTo: "ramyncs@gmail.com")
+            .getDocuments() { (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    for document in querySnapshot!.documents {
+                        print("\(document.documentID) => \(document.data())")
+                    }
+                }
+        }
 
     }
     
@@ -83,6 +110,7 @@ class LoginViewController: UIViewController , GIDSignInUIDelegate  {
                 return
             }
             print(authResult?.user.email)
+           
             self.user?.fullName = authResult?.user.displayName
             self.user?.emailAddress = authResult?.user.email
             self.viewProfile()

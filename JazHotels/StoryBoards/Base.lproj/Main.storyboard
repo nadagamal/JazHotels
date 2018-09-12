@@ -346,7 +346,7 @@
                                 <rect key="frame" x="16" y="278" width="288" height="221"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="tyo-In-Gyy">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="5" id="tyo-In-Gyy">
                                     <size key="itemSize" width="130" height="181"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -458,23 +458,10 @@ Iberotel Borg El Arab</string>
                                     <outlet property="delegate" destination="rjc-Ue-DvF" id="Luu-Ur-wFd"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rle-1e-zMb">
-                                <rect key="frame" x="20" y="84" width="21" height="22"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="22" id="NfY-ye-RCr"/>
-                                    <constraint firstAttribute="width" constant="21" id="j7a-B6-i7e"/>
-                                </constraints>
-                                <state key="normal" image="menu"/>
-                                <connections>
-                                    <segue destination="UsC-xV-FXi" kind="presentation" id="7iP-T3-FDS"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Rle-1e-zMb" firstAttribute="top" secondItem="lne-MY-ZWz" secondAttribute="top" constant="20" id="1KL-ls-506"/>
                             <constraint firstItem="hOd-9g-C6H" firstAttribute="leading" secondItem="lne-MY-ZWz" secondAttribute="leading" id="7Qs-kL-Z1k"/>
-                            <constraint firstItem="Rle-1e-zMb" firstAttribute="leading" secondItem="lne-MY-ZWz" secondAttribute="leading" constant="20" id="b5z-cS-Idz"/>
                             <constraint firstItem="hOd-9g-C6H" firstAttribute="trailing" secondItem="lne-MY-ZWz" secondAttribute="trailing" id="eud-M6-5K4"/>
                             <constraint firstItem="hOd-9g-C6H" firstAttribute="top" secondItem="lne-MY-ZWz" secondAttribute="top" id="jBw-Aw-j5V"/>
                             <constraint firstItem="hOd-9g-C6H" firstAttribute="bottom" secondItem="lne-MY-ZWz" secondAttribute="bottom" id="vWM-vM-lcL"/>
@@ -1273,7 +1260,7 @@ Alam Road, Red Sea, Egypt.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6yn-7F-BZ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1484" y="3125"/>
+            <point key="canvasLocation" x="-1003" y="3237"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uTC-qh-HKZ">
@@ -2279,11 +2266,11 @@ Alam Road, Red Sea, Egypt.</string>
             <objects>
                 <viewController storyboardIdentifier="RoomDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bco-le-6BK" customClass="RoomDetailsViewController" customModule="JazHotels" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UTX-F0-gVu">
-                        <rect key="frame" x="0.0" y="0.0" width="280" height="400"/>
+                        <rect key="frame" x="0.0" y="0.0" width="280" height="450"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sB7-zx-bPy">
-                                <rect key="frame" x="0.0" y="0.0" width="280" height="400"/>
+                                <rect key="frame" x="0.0" y="0.0" width="280" height="450"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Splash" translatesAutoresizingMaskIntoConstraints="NO" id="DRG-Vh-dlV">
                                         <rect key="frame" x="0.0" y="0.0" width="280" height="136"/>
@@ -2298,10 +2285,10 @@ Alam Road, Red Sea, Egypt.</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="shx-n5-14t">
-                                        <rect key="frame" x="20" y="182" width="240" height="160"/>
+                                        <rect key="frame" x="20" y="182" width="240" height="206"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="160" id="ulR-S1-QgE"/>
+                                            <constraint firstAttribute="height" constant="206" id="ulR-S1-QgE"/>
                                         </constraints>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" white="0.33333333329999998" alpha="0.71926524160000005" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2309,7 +2296,7 @@ Alam Road, Red Sea, Egypt.</string>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BOt-do-jgA">
-                                        <rect key="frame" x="80" y="357" width="120" height="39"/>
+                                        <rect key="frame" x="80" y="403" width="120" height="39"/>
                                         <color key="backgroundColor" red="0.88235294119999996" green="0.75294117650000003" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="39" id="7AL-pr-tIC"/>
@@ -2339,12 +2326,12 @@ Alam Road, Red Sea, Egypt.</string>
                                     <constraint firstItem="BOt-do-jgA" firstAttribute="centerX" secondItem="shx-n5-14t" secondAttribute="centerX" id="Hqz-Sf-QxW"/>
                                     <constraint firstAttribute="trailing" secondItem="1y6-Mj-HMD" secondAttribute="trailing" constant="20" id="N3h-Xm-4Wp"/>
                                     <constraint firstItem="DRG-Vh-dlV" firstAttribute="width" secondItem="sB7-zx-bPy" secondAttribute="width" id="RWq-tn-kC1"/>
-                                    <constraint firstAttribute="height" constant="400" id="XTY-ce-4eQ"/>
+                                    <constraint firstAttribute="height" constant="450" id="XTY-ce-4eQ"/>
                                     <constraint firstItem="DRG-Vh-dlV" firstAttribute="top" secondItem="sB7-zx-bPy" secondAttribute="top" id="Zy4-NP-X6i"/>
                                     <constraint firstItem="1y6-Mj-HMD" firstAttribute="leading" secondItem="sB7-zx-bPy" secondAttribute="leading" constant="20" id="gGB-cM-q8o"/>
                                     <constraint firstAttribute="trailing" secondItem="DRG-Vh-dlV" secondAttribute="trailing" id="hwV-bO-s7N"/>
                                     <constraint firstItem="DRG-Vh-dlV" firstAttribute="leading" secondItem="sB7-zx-bPy" secondAttribute="leading" id="xCT-zK-Cg5"/>
-                                    <constraint firstAttribute="bottom" secondItem="BOt-do-jgA" secondAttribute="bottom" constant="10" id="zSb-35-MyT"/>
+                                    <constraint firstAttribute="bottom" secondItem="BOt-do-jgA" secondAttribute="bottom" constant="8" id="zSb-35-MyT"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="delegate" destination="bco-le-6BK" id="qn9-di-MC5"/>
@@ -2367,7 +2354,7 @@ Alam Road, Red Sea, Egypt.</string>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="280" height="400"/>
+                    <size key="freeformSize" width="280" height="450"/>
                     <connections>
                         <outlet property="bookNowBtn" destination="BOt-do-jgA" id="Uqy-Yz-Oxh"/>
                         <outlet property="descriptionTxtView" destination="shx-n5-14t" id="dJt-8C-Ssi"/>
@@ -2380,7 +2367,7 @@ Alam Road, Red Sea, Egypt.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vZv-KP-xfH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2928.75" y="2869.0140845070423"/>
+            <point key="canvasLocation" x="2928" y="2869"/>
         </scene>
         <!--Booking Details View Controller-->
         <scene sceneID="fJB-28-m4Y">

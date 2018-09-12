@@ -77,10 +77,9 @@ extension MenuViewController:UITableViewDataSource,UITableViewDelegate{
       
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        var selectedCell:UITableViewCell = tableView.cellForRow(at: indexPath)!
-        selectedCell.contentView.backgroundColor = UIColor.clear
 
         if indexPath.row == 0 {
+            DispatchQueue.main.async {
             if !UserDefaults.isKeyPresentInUserDefaults(key: HotelJazConstants.userDefault.userData)
             {
                 self.navigationController?.present(LoginViewController.create(), animated: true, completion: nil)
@@ -91,6 +90,7 @@ extension MenuViewController:UITableViewDataSource,UITableViewDelegate{
                 self.navigationController?.present(LoginViewController.create(), animated: true, completion: nil)
                 UserDefaults.removeKeyUserDefault(key:  HotelJazConstants.userDefault.userData)
               
+            }
             }
         }
         else // reservartion

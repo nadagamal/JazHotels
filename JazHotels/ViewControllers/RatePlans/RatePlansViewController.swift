@@ -38,6 +38,8 @@ class RatePlansViewController: UIViewController {
     }
     @objc func headerTapped(tapGesture:UITapGestureRecognizer){
         isExpanded = true
+       let cell = tapGesture.view as! RatePlanTableViewCell
+        
         let selectedSection = (tapGesture.view?.tag)!
         if expandableCells.contains(selectedSection){
             var selectedIndex = 0
@@ -48,9 +50,12 @@ class RatePlansViewController: UIViewController {
                 }
             }
             expandableCells.remove(at: selectedIndex)
+            cell.avaiableRoomBtn.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         }
         else{
             expandableCells.append(selectedSection)
+            cell.avaiableRoomBtn.backgroundColor = #colorLiteral(red: 0.4196078431, green: 0.1568627451, blue: 0.5411764706, alpha: 1)
+
         }
         tableView.reloadData()
         
@@ -108,7 +113,6 @@ extension RatePlansViewController :UITableViewDelegate , UITableViewDataSource
         cell.roomDescriptionLbl.text = roomTypeslist[indexPath.row].roomDescription.text.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
         cell.bookNowBtn.addTarget(self, action: #selector(bookNowAction(sender:)), for: .touchUpInside)
         cell.roomDetailsBtn.addTarget(self, action: #selector(roomDetailsAction(sender:)), for: .touchUpInside)
-
         cell.roomNameLbl.text = roomTypeslist[indexPath.row].roomDescription.name
         let imageURL = URL(string: (roomTypeslist[indexPath.row].roomDescription!.image))
         cell.imgView.kf.indicatorType = .activity
@@ -140,6 +144,15 @@ extension RatePlansViewController :UITableViewDelegate , UITableViewDataSource
         cell.tag = section
         let ratePlan:JCRatePlan = roomStay.ratePlans[section]
         cell.ratePrice.text = getRoomPrice(ratePlanCode: ratePlan.ratePlanCode)
+        if expandableCells.contains(section){
+            cell.avaiableRoomBtn.backgroundColor = #colorLiteral(red: 0.4196078431, green: 0.1568627451, blue: 0.5411764706, alpha: 1)
+            cell.avaiableRoomBtn.setTitleColor(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
+        }
+        else{
+        cell.avaiableRoomBtn.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            cell.avaiableRoomBtn.setTitleColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), for: .normal)
+
+        }
         if ratePlan != nil{
             cell.rateTitle.text = ratePlan.ratePlanDescription.name ?? ""
             if ratePlan.ratePlanDescription.text != nil{

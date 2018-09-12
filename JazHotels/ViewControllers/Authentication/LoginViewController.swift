@@ -45,7 +45,9 @@ class LoginViewController: UIViewController , GIDSignInUIDelegate  {
 
         let mainSB = UIStoryboard(name: HotelJazConstants.StoryBoard.mainSB, bundle: nil)
         let tabBarHome = mainSB.instantiateViewController(withIdentifier: "HomeTabbar") as? RaisedTabBarController
-        self.present(tabBarHome!, animated: false, completion: nil)
+        DispatchQueue.main.async {
+            self.present(tabBarHome!, animated: false, completion: nil)
+        }
         
     }
     @objc private func signInWithGoogle(notification: Notification) {
@@ -104,10 +106,12 @@ class LoginViewController: UIViewController , GIDSignInUIDelegate  {
                         SVProgressHUD.dismiss()
                     }
                     print("Login error: \(error.localizedDescription)")
+                    DispatchQueue.main.async {
                     let alertController = UIAlertController(title: "Login Error", message: error.localizedDescription, preferredStyle: .alert)
                     let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
                     alertController.addAction(okayAction)
                     self.present(alertController, animated: true, completion: nil)
+                    }
                     
                     return
                 }
@@ -141,12 +145,12 @@ class LoginViewController: UIViewController , GIDSignInUIDelegate  {
                     if let error = error {
                         DispatchQueue.main.async {
                             SVProgressHUD.dismiss()
-                        }
                         print("Login error: \(error.localizedDescription)")
                         let alertController = UIAlertController(title: "Login Error", message: error.localizedDescription, preferredStyle: .alert)
                         let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
                         alertController.addAction(okayAction)
                         self?.present(alertController, animated: true, completion: nil)
+                        }
                         
                         return
                     }
@@ -174,11 +178,14 @@ class LoginViewController: UIViewController , GIDSignInUIDelegate  {
     
     func viewProfile(userData:UserProfile)
     {
+        DispatchQueue.main.async {
+
         UserDefaults.saveObjectDefault(key: HotelJazConstants.userDefault.userData, value: userData)
         
         NotificationCenter.default.post(name: Notification.Name(HotelJazConstants.Notifications.userProfileData), object: userData)
 
         self.dismiss(animated: true, completion: nil)
+        }
     }
     
     func checkAccountFound(user:AuthDataResult)

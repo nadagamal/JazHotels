@@ -181,6 +181,7 @@
 		52CA9DCA21457CD2003C530F /* ReservationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CA9DC921457CD2003C530F /* ReservationsViewController.swift */; };
 		52DAFC9C2147F0DA00F8269F /* BookingDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DAFC9B2147F0DA00F8269F /* BookingDetailsViewController.swift */; };
 		52DAFC9F2147F6DC00F8269F /* BookingDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DAFC9E2147F6DC00F8269F /* BookingDetailsCell.swift */; };
+		52DAFCA22148B4EE00F8269F /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DAFCA12148B4EE00F8269F /* MenuCell.swift */; };
 		9A06CB1C20EACC4900AFBCA2 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A06CB1B20EACC4900AFBCA2 /* MainTabBar.swift */; };
 		9A06CB1F20EACF6700AFBCA2 /* HotelJazConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A06CB1E20EACF6700AFBCA2 /* HotelJazConstants.swift */; };
 		9A11CBC52147FC7D00D5F857 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A11CBC42147FC7D00D5F857 /* UserProfile.swift */; };
@@ -482,6 +483,7 @@
 		52CA9DC921457CD2003C530F /* ReservationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationsViewController.swift; sourceTree = "<group>"; };
 		52DAFC9B2147F0DA00F8269F /* BookingDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDetailsViewController.swift; sourceTree = "<group>"; };
 		52DAFC9E2147F6DC00F8269F /* BookingDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDetailsCell.swift; sourceTree = "<group>"; };
+		52DAFCA12148B4EE00F8269F /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		8963E40941314293147FBF58 /* Pods-JazHotels.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JazHotels.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JazHotels/Pods-JazHotels.debug.xcconfig"; sourceTree = "<group>"; };
 		925F604466D8797ABBF10B44 /* Pods_JazHotels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JazHotels.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A06CB1B20EACC4900AFBCA2 /* MainTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
@@ -938,6 +940,14 @@
 			path = BookingDetailsCell;
 			sourceTree = "<group>";
 		};
+		52DAFCA02148B4E000F8269F /* MenuCell */ = {
+			isa = PBXGroup;
+			children = (
+				52DAFCA12148B4EE00F8269F /* MenuCell.swift */,
+			);
+			path = MenuCell;
+			sourceTree = "<group>";
+		};
 		92276CA12D50E4A86FD2D42D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1045,6 +1055,7 @@
 		9AADBF2020ED5208009183FE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				52DAFCA02148B4E000F8269F /* MenuCell */,
 				52DAFC9D2147F6BB00F8269F /* BookingDetailsCell */,
 				525206DC2147901500FB4DFF /* InfoCell */,
 				525206D921478FC500FB4DFF /* TxtViewCell */,
@@ -1494,6 +1505,7 @@
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/ImageSlideshow/ImageSlideshow.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/McPicker/McPicker.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/PopupDialog/PopupDialog.framework",
@@ -1538,6 +1550,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImageSlideshow.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/McPicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PopupDialog.framework",
@@ -1799,6 +1812,7 @@
 				52B616CF20E9341E00A1A416 /* JCRatePlanDescription.swift in Sources */,
 				521A4BD121458BD1008A01F8 /* JBResGlobalInfo.swift in Sources */,
 				52B6165920E891C100A1A416 /* JFacilityInfo.swift in Sources */,
+				52DAFCA22148B4EE00F8269F /* MenuCell.swift in Sources */,
 				528F600920E7BFB9003111E7 /* ServiceManager.swift in Sources */,
 				521A4BBC21458BD1008A01F8 /* JBHotelReservation.swift in Sources */,
 				52B616CD20E9341E00A1A416 /* JCRatePlan.swift in Sources */,
@@ -2064,7 +2078,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MAG9DAS3TQ;
+				DEVELOPMENT_TEAM = PKX77P5J33;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -2093,7 +2107,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MAG9DAS3TQ;
+				DEVELOPMENT_TEAM = PKX77P5J33;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

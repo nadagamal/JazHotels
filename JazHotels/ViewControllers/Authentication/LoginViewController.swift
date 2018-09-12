@@ -29,24 +29,6 @@ class LoginViewController: UIViewController , GIDSignInUIDelegate  {
         settings.areTimestampsInSnapshotsEnabled = true
         db.settings = settings
 
-        
-        
-        
-//    ((document.data() as! [String:Any])["contact"] as! [String:Any])["emailAddress"] as! String
-//        "ramyncs@gmail.com"
-    
-//
-//        db.collection("users").whereField("emailAddress", isEqualTo: "ramyncs@gmail.com")
-//            .getDocuments() { (querySnapshot, err) in
-//                if let err = err {
-//                    print("Error getting documents: \(err)")
-//                } else {
-//                    for document in querySnapshot!.documents {
-//                        print("\(document.documentID) => \(document.data())")
-//                    }
-//                }
-//        }
-
     }
     
     @objc public static func create() -> LoginViewController {
@@ -68,7 +50,6 @@ class LoginViewController: UIViewController , GIDSignInUIDelegate  {
     }
     @objc private func signInWithGoogle(notification: Notification) {
         
-        SVProgressHUD.dismiss()
         let user = notification.object as! GIDGoogleUser
         
         guard let authentication = user.authentication else { return }
@@ -78,10 +59,13 @@ class LoginViewController: UIViewController , GIDSignInUIDelegate  {
         
         Auth.auth().signInAndRetrieveData(with: credential) { (authResult, error) in
             if error != nil {
-                
+                DispatchQueue.main.async {
+                    SVProgressHUD.dismiss()
+                }
                 print(error?.localizedDescription ?? "")
                 return
             }
+            
             self.checkAccountFound(user: authResult!)
         }
         
@@ -100,9 +84,7 @@ class LoginViewController: UIViewController , GIDSignInUIDelegate  {
             SVProgressHUD.show()
 
             if let error = error {
-                DispatchQueue.main.async {
-                    SVProgressHUD.dismiss()
-                }
+              
                 print("Failed to login: \(error.localizedDescription)")
                 return
             }
@@ -116,12 +98,11 @@ class LoginViewController: UIViewController , GIDSignInUIDelegate  {
             
             // Perform login by calling Firebase APIs
             Auth.auth().signInAndRetrieveData(with: credential, completion: { (authResult, error) in
-                
-                DispatchQueue.main.async {
-                    SVProgressHUD.dismiss()
-                }
-                
+               
                 if let error = error {
+                    DispatchQueue.main.async {
+                        SVProgressHUD.dismiss()
+                    }
                     print("Login error: \(error.localizedDescription)")
                     let alertController = UIAlertController(title: "Login Error", message: error.localizedDescription, preferredStyle: .alert)
                     let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
@@ -156,11 +137,11 @@ class LoginViewController: UIViewController , GIDSignInUIDelegate  {
                 let credential = TwitterAuthProvider.credential(withToken: (session?.authToken)!, secret: (session?.authTokenSecret)!)
                 
                 Auth.auth().signInAndRetrieveData(with: credential) { (authResult, error) in
-                    DispatchQueue.main.async {
-                        SVProgressHUD.dismiss()
-                    }
-                    
+                   
                     if let error = error {
+                        DispatchQueue.main.async {
+                            SVProgressHUD.dismiss()
+                        }
                         print("Login error: \(error.localizedDescription)")
                         let alertController = UIAlertController(title: "Login Error", message: error.localizedDescription, preferredStyle: .alert)
                         let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
@@ -175,6 +156,7 @@ class LoginViewController: UIViewController , GIDSignInUIDelegate  {
                         self?.checkAccountFound(user: authResult!)
 
                     }
+                  
                     
                 }
                 
@@ -212,7 +194,7 @@ class LoginViewController: UIViewController , GIDSignInUIDelegate  {
                         print("\(document.documentID) => \(document.data())")
 
                         let data = document.data() as! NSDictionary
-                        let userProfile = UserProfile(userContact: UserContact(JSON: data["contact"] as! [String:Any])!, userName: UserName(JSON: data["name"] as! [String:Any])!, userAddress: UserAddress(JSON: data["name"] as! [String:Any])!, userCustomer: UserCustomerLoyalty(JSON: data["customerLoyalty"] as! [String:Any])!, userCardPayment: UserPaymentCard(JSON: data["paymentCard"] as! [String:Any])!, userSynXisInfo: UserSynXisInfo(JSON: data["synXisInfo"] as! [String:Any])!,gender:data["gender"] as! String)
+                        let userProfile = UserProfile(userContact: UserContact(JSON: data["contact"] as! [String:Any])!, userName: UserName(JSON: data["name"] as! [String:Any])!, userAddress: UserAddress(JSON: data["name"] as! [String:Any])!, userCustomer: UserCustomerLoyalty(JSON: data["customerLoyalty"] as! [String:Any])!, userCardPayment: UserPaymentCard(JSON: data["paymentCard"] as! [String:Any])!, userSynXisInfo: UserSynXisInfo(JSON: data["synXisInfo"] as! [String:Any])!,gender:data["gender"] as! String,userId:user.user.uid)
                         
                         UserDefaults.saveObjectDefault(key: HotelJazConstants.userDefault.userData, value: userProfile)
                         found = true
@@ -228,6 +210,10 @@ class LoginViewController: UIViewController , GIDSignInUIDelegate  {
                     self.createNewUser()
                 
                 }
+                
+                DispatchQueue.main.async {
+                    SVProgressHUD.dismiss()
+                }
             }
         }
         
@@ -239,10 +225,10 @@ class LoginViewController: UIViewController , GIDSignInUIDelegate  {
         let db = Firestore.firestore()
         let user = Auth.auth().currentUser
 
-        let userProfile = UserProfile(userContact: UserContact(emailAddress: (user?.email ?? "")!, landLine: "", mobilePhone: "", phoneNumbers: (user?.phoneNumber ?? "")!), userName: UserName(firstName: (user?.displayName ?? "")!, fullName: "", lastName: "", middleInitial: "", middleName: ""), userAddress: UserAddress(), userCustomer: UserCustomerLoyalty(), userCardPayment: UserPaymentCard(), userSynXisInfo: UserSynXisInfo(),gender:"")
+        let userProfile = UserProfile(userContact: UserContact(emailAddress: (user?.email ?? "")!, landLine: "", mobilePhone: "", phoneNumbers: (user?.phoneNumber ?? "")!), userName: UserName(firstName: (user?.displayName ?? "")!, fullName: (user?.displayName ?? "")!, lastName: "", middleInitial: "", middleName: ""), userAddress: UserAddress(), userCustomer: UserCustomerLoyalty(), userCardPayment: UserPaymentCard(), userSynXisInfo: UserSynXisInfo(synXisPassword: (user?.email ?? "")!, synXisUserID: (user?.email ?? "")!),gender:"",userId:(user?.uid)!)
             
             
-        db.collection("users").document("\(String(describing: user?.uid))").setData(userProfile.toDictionary()) { err in
+        db.collection("users").document("\(String(describing: (user?.uid)!))").setData(userProfile.toDictionary()) { err in
             if let err = err {
                 print("Error writing document: \(err)")
             } else {

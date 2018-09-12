@@ -18,8 +18,9 @@ class UserProfile: NSObject , NSCoding{
     var firestoreHotelReservation:FirestoreHotelReservation?
     var userSynXisInfo:UserSynXisInfo?
     var gender:String?
+    var userId:String?
     
-    init( userContact:UserContact,userName:UserName ,userAddress:UserAddress , userCustomer:UserCustomerLoyalty , userCardPayment:UserPaymentCard, userSynXisInfo:UserSynXisInfo?,gender:String) {
+    init( userContact:UserContact,userName:UserName ,userAddress:UserAddress , userCustomer:UserCustomerLoyalty , userCardPayment:UserPaymentCard, userSynXisInfo:UserSynXisInfo?,gender:String,userId:String) {
         self.userName = userName
         self.userAddress = userAddress
         self.userContact = userContact
@@ -27,6 +28,7 @@ class UserProfile: NSObject , NSCoding{
         self.userSynXisInfo = userSynXisInfo
         self.userCardPayment = userCardPayment
         self.gender = gender
+        self.userId = userId
     }
     
     
@@ -34,26 +36,27 @@ class UserProfile: NSObject , NSCoding{
     {
         var dictionary :[String:Any] = [:]
         if userName != nil{
-            dictionary["name"] = userName
+            dictionary["name"] = userName?.toJSON()
         }
         if userAddress != nil{
-            dictionary["address"] = userAddress
+            dictionary["address"] = userAddress?.toJSON()
         }
         if userContact != nil{
-            dictionary["contact"] = userContact
+            dictionary["contact"] = userContact?.toJSON()
         }
         if userCustomer != nil{
-            dictionary["customerLoyalty"] = userCustomer
+            dictionary["customerLoyalty"] = userCustomer?.toJSON()
         }
         if userSynXisInfo != nil{
-            dictionary["synXisInfo"] = userSynXisInfo
+            dictionary["synXisInfo"] = userSynXisInfo?.toJSON()
         }
         if userCardPayment != nil{
-            dictionary["paymentCard"] = userCardPayment
+            dictionary["paymentCard"] = userCardPayment?.toJSON()
         }
         if gender != nil{
             dictionary["gender"] = gender
         }
+        
         return dictionary
     }
     /**
@@ -69,6 +72,7 @@ class UserProfile: NSObject , NSCoding{
         userSynXisInfo = aDecoder.decodeObject(forKey: "userSynXisInfo") as? UserSynXisInfo
         userCardPayment = aDecoder.decodeObject(forKey: "userCardPayment") as? UserPaymentCard
         gender = aDecoder.decodeObject(forKey: "gender") as? String
+        userId = aDecoder.decodeObject(forKey: "userId") as? String
 
     }
     
@@ -98,6 +102,9 @@ class UserProfile: NSObject , NSCoding{
         }
         if gender != nil{
             aCoder.encode(gender, forKey: "gender")
+        }
+        if userId != nil{
+            aCoder.encode(userId, forKey: "userId")
         }
         
     }

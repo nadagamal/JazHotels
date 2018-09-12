@@ -10,7 +10,7 @@ import UIKit
 
 extension UIColor {
    
-    class func appColor() -> UIColor
+    class func appColor() -> CAGradientLayer
     {
         var gl:CAGradientLayer!
         var colors = [UIColor]()
@@ -21,7 +21,7 @@ extension UIColor {
         gl.colors = colors
         gl.locations = [0.0, 1.0]
         
-        return UIColor()
+        return gl
     }
     
   

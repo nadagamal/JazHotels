@@ -13,8 +13,6 @@ class MenuViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         self.tableView.tableFooterView = UIView()
     }
 
@@ -23,6 +21,10 @@ class MenuViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+      
+        
+    }
 
     /*
     // MARK: - Navigation
@@ -36,24 +38,69 @@ class MenuViewController: UIViewController {
 
 }
 extension MenuViewController:UITableViewDataSource,UITableViewDelegate{
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell:UITableViewCell!
+        var cell:MenuCell = tableView.dequeueReusableCell(withIdentifier: "cell") as! MenuCell
         if indexPath.row == 0{
-            cell = tableView.dequeueReusableCell(withIdentifier: "SignoutCell")
+           
+            if !UserDefaults.isKeyPresentInUserDefaults(key: HotelJazConstants.userDefault.userData)
+            {
+                cell.cellTitleLbl.text = "Sign In"
+                cell.cellIconImg.image = #imageLiteral(resourceName: "signOut")
+            }
+            else
+            {
+                cell.cellTitleLbl.text = "Sign out"
+                cell.cellIconImg.image = #imageLiteral(resourceName: "signOut")
+            }
         }else{
-        cell = tableView.dequeueReusableCell(withIdentifier: "ReservationCell")
+            cell = tableView.dequeueReusableCell(withIdentifier: "ReservationCell") as! MenuCell
+            cell.cellTitleLbl.text = "Reservation"
+            cell.cellIconImg.image = #imageLiteral(resourceName: "reservation")
         }
         return cell
+
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        
+        if !UserDefaults.isKeyPresentInUserDefaults(key: HotelJazConstants.userDefault.userData)
+        {
+             return 1
+        }
+        else
+        {
+             return 2
+        }
+      
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 1{
+        var selectedCell:UITableViewCell = tableView.cellForRow(at: indexPath)!
+        selectedCell.contentView.backgroundColor = UIColor.clear
+
+        if indexPath.row == 0 {
+            if !UserDefaults.isKeyPresentInUserDefaults(key: HotelJazConstants.userDefault.userData)
+            {
+                self.navigationController?.present(LoginViewController.create(), animated: true, completion: nil)
+
+            }
+            else
+            {
+                self.navigationController?.present(LoginViewController.create(), animated: true, completion: nil)
+                UserDefaults.removeKeyUserDefault(key:  HotelJazConstants.userDefault.userData)
+              
+            }
+        }
+        else // reservartion
+        {
             
         }
+    }
+    
+     func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        var cellToDeSelect:UITableViewCell = tableView.cellForRow(at: indexPath as IndexPath)!
+        cellToDeSelect.contentView.backgroundColor = UIColor.clear
     }
 }

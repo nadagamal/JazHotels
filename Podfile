@@ -30,6 +30,8 @@ target 'JazHotels' do
     pod 'SideMenu'
     pod 'ACFloatingTextfield-Swift', '~> 1.7'
     pod 'PopupDialog', '~> 0.8'
+    pod 'McPicker'
+
     
     # Pods for FirebaseAuth
     pod 'Firebase/Auth'

@@ -47,7 +47,7 @@ class HomeViewController: UIViewController {
     }
 
 }
-extension HomeViewController:UICollectionViewDelegate,UICollectionViewDataSource{
+extension HomeViewController:UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView .dequeueReusableCell(withReuseIdentifier: "HotelCollectionViewCell", for: indexPath) as! HotelCollectionViewCell
@@ -74,5 +74,9 @@ extension HomeViewController:UICollectionViewDelegate,UICollectionViewDataSource
         self.navigationController?.show(hotelDetailsVC, sender: nil)
 
     }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width:(UIScreen.main.bounds.width/2)-30,height:181)
+    }
+
 }
 

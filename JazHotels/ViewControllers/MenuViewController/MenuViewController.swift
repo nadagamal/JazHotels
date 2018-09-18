@@ -40,25 +40,25 @@ class MenuViewController: UIViewController {
 extension MenuViewController:UITableViewDataSource,UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCell(withIdentifier: "cell")
+        var cell:MenuCell = tableView.dequeueReusableCell(withIdentifier: "cell") as! MenuCell
         if indexPath.row == 0{
            
             if !UserDefaults.isKeyPresentInUserDefaults(key: HotelJazConstants.userDefault.userData)
             {
-                cell?.textLabel?.text = "Sign In"
-                cell?.imageView?.image = #imageLiteral(resourceName: "signOut")
+                cell.cellTitleLbl.text = "Sign In"
+                cell.cellIconImg.image = #imageLiteral(resourceName: "signOut")
             }
             else
             {
-                cell?.textLabel?.text = "Sign out"
-                cell?.imageView?.image = #imageLiteral(resourceName: "signOut")
+                cell.cellTitleLbl.text = "Sign out"
+                cell.cellIconImg.image = #imageLiteral(resourceName: "signOut")
             }
         }else{
-           
-            cell?.textLabel?.text = "Reservation"
-            cell?.imageView?.image = #imageLiteral(resourceName: "reservation")
+            cell = tableView.dequeueReusableCell(withIdentifier: "ReservationCell") as! MenuCell
+            cell.cellTitleLbl.text = "Reservation"
+            cell.cellIconImg.image = #imageLiteral(resourceName: "reservation")
         }
-        return cell!
+        return cell
 
     }
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -77,10 +77,9 @@ extension MenuViewController:UITableViewDataSource,UITableViewDelegate{
       
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        var selectedCell:UITableViewCell = tableView.cellForRow(at: indexPath)!
-        selectedCell.contentView.backgroundColor = UIColor.clear
 
         if indexPath.row == 0 {
+            DispatchQueue.main.async {
             if !UserDefaults.isKeyPresentInUserDefaults(key: HotelJazConstants.userDefault.userData)
             {
                 self.navigationController?.present(LoginViewController.create(), animated: true, completion: nil)
@@ -91,6 +90,7 @@ extension MenuViewController:UITableViewDataSource,UITableViewDelegate{
                 self.navigationController?.present(LoginViewController.create(), animated: true, completion: nil)
                 UserDefaults.removeKeyUserDefault(key:  HotelJazConstants.userDefault.userData)
               
+            }
             }
         }
         else // reservartion

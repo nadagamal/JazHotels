@@ -62,6 +62,31 @@ class HotelListViewController: UIViewController {
         }
         return price
     }
+    @objc func favBtnAction(sender:UIButton){
+        guard let cell = sender.superview?.superview?.superview as? HotelTableViewCell else {
+            return
+        }
+
+        var list = [String]()
+        if UserDefaults.standard.object(forKey: "Favourites") != nil{
+            list = UserDefaults.standard.object(forKey: "Favourites") as! [String]
+        }
+        if list.count>0 && list .contains((roomStays?[sender.tag].basicPropertyInfo.hotelCode)!){
+            for i in 0...list.count-1{
+                list.remove(at: i)
+                break
+                
+            }
+            cell.fav_btn .setImage(#imageLiteral(resourceName: "favHeader"), for: .normal)
+
+        }
+        else{
+            cell.fav_btn .setImage(#imageLiteral(resourceName: "addFavH"), for: .normal)
+            list.append((roomStays?[sender.tag].basicPropertyInfo.hotelCode)!)
+        }
+        UserDefaults.standard.set(list, forKey: "Favourites")
+        UserDefaults.standard.synchronize()
+    }
     
 }
 extension HotelListViewController: UITableViewDelegate , UITableViewDataSource
@@ -73,6 +98,8 @@ extension HotelListViewController: UITableViewDelegate , UITableViewDataSource
         cell.hotel_name.text = roomStays?[indexPath.row].basicPropertyInfo.hotelName
       
         cell.hotel_place.text = roomStayInfo?.address.cityName
+        cell.fav_btn.tag = indexPath.row
+        cell.fav_btn.addTarget(self, action: #selector(favBtnAction), for: .touchUpInside)
         if (roomStays?[indexPath.row].ratePlans != nil && roomStays?[indexPath.row].ratePlans != nil && (roomStays?[indexPath.row].ratePlans.count)!>0){
             let ratePlan:JCRatePlan = (roomStays?[indexPath.row].ratePlans[0])!
             cell.hotel_price.text = getRoomPrice(ratePlanCode: ratePlan.ratePlanCode,roomStay: (roomStays?[indexPath.row])!)

@@ -45,13 +45,16 @@ class LoginViewController: UIViewController , GIDSignInUIDelegate  {
 
         let mainSB = UIStoryboard(name: HotelJazConstants.StoryBoard.mainSB, bundle: nil)
         let tabBarHome = mainSB.instantiateViewController(withIdentifier: "HomeTabbar") as? RaisedTabBarController
-        self.present(tabBarHome!, animated: false, completion: nil)
+        DispatchQueue.main.async {
+            self.present(tabBarHome!, animated: false, completion: nil)
+        }
         
     }
     @objc private func signInWithGoogle(notification: Notification) {
         
         let user = notification.object as! GIDGoogleUser
-        
+   
+
         guard let authentication = user.authentication else { return }
         let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
                                                        accessToken: authentication.accessToken)
@@ -72,16 +75,20 @@ class LoginViewController: UIViewController , GIDSignInUIDelegate  {
     }
     
     @IBAction func siginGoogleAction(_ sender: Any) {
+        DispatchQueue.main.async {
+            SVProgressHUD.show()
+            
+        }
         GIDSignIn.sharedInstance().signIn()
     }
     
     @IBAction func siginFacebookAction(_ sender: Any) {
         
-        
+        SVProgressHUD.show()
+
         let fbLoginManager = FBSDKLoginManager()
         fbLoginManager.logIn(withReadPermissions: ["public_profile", "email"], from: self) { (result, error) in
     
-            SVProgressHUD.show()
 
             if let error = error {
               
@@ -104,10 +111,12 @@ class LoginViewController: UIViewController , GIDSignInUIDelegate  {
                         SVProgressHUD.dismiss()
                     }
                     print("Login error: \(error.localizedDescription)")
+                    DispatchQueue.main.async {
                     let alertController = UIAlertController(title: "Login Error", message: error.localizedDescription, preferredStyle: .alert)
                     let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
                     alertController.addAction(okayAction)
                     self.present(alertController, animated: true, completion: nil)
+                    }
                     
                     return
                 }
@@ -141,12 +150,12 @@ class LoginViewController: UIViewController , GIDSignInUIDelegate  {
                     if let error = error {
                         DispatchQueue.main.async {
                             SVProgressHUD.dismiss()
-                        }
                         print("Login error: \(error.localizedDescription)")
                         let alertController = UIAlertController(title: "Login Error", message: error.localizedDescription, preferredStyle: .alert)
                         let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
                         alertController.addAction(okayAction)
                         self?.present(alertController, animated: true, completion: nil)
+                        }
                         
                         return
                     }
@@ -174,11 +183,14 @@ class LoginViewController: UIViewController , GIDSignInUIDelegate  {
     
     func viewProfile(userData:UserProfile)
     {
+        DispatchQueue.main.async {
+
         UserDefaults.saveObjectDefault(key: HotelJazConstants.userDefault.userData, value: userData)
         
         NotificationCenter.default.post(name: Notification.Name(HotelJazConstants.Notifications.userProfileData), object: userData)
 
         self.dismiss(animated: true, completion: nil)
+        }
     }
     
     func checkAccountFound(user:AuthDataResult)
@@ -194,7 +206,7 @@ class LoginViewController: UIViewController , GIDSignInUIDelegate  {
                         print("\(document.documentID) => \(document.data())")
 
                         let data = document.data() as! NSDictionary
-                        let userProfile = UserProfile(userContact: UserContact(JSON: data["contact"] as! [String:Any])!, userName: UserName(JSON: data["name"] as! [String:Any])!, userAddress: UserAddress(JSON: data["name"] as! [String:Any])!, userCustomer: UserCustomerLoyalty(JSON: data["customerLoyalty"] as! [String:Any])!, userCardPayment: UserPaymentCard(JSON: data["paymentCard"] as! [String:Any])!, userSynXisInfo: UserSynXisInfo(JSON: data["synXisInfo"] as! [String:Any])!,gender:data["gender"] as! String,userId:user.user.uid)
+                        let userProfile = UserProfile(userContact: UserContact(JSON: data["contact"] as! [String:Any])!, userName: UserName(JSON: data["name"] as! [String:Any])!, userAddress: UserAddress(JSON: data["address"] as! [String:Any])!, userCustomer: UserCustomerLoyalty(JSON: data["customerLoyalty"] as! [String:Any])!, userCardPayment: UserPaymentCard(JSON: data["paymentCard"] as! [String:Any])!, userSynXisInfo: UserSynXisInfo(JSON: data["synXisInfo"] as! [String:Any])!,gender:data["gender"] as! String,userId:user.user.uid)
                         
                         UserDefaults.saveObjectDefault(key: HotelJazConstants.userDefault.userData, value: userProfile)
                         found = true

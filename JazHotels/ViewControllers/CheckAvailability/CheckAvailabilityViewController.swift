@@ -40,7 +40,8 @@ class CheckAvailabilityViewController: UIViewController , UIScrollViewDelegate {
     fileprivate var latitude:String = ""
     fileprivate var selectedHotelTitle:String = ""
 
-
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initView()
@@ -49,7 +50,9 @@ class CheckAvailabilityViewController: UIViewController , UIScrollViewDelegate {
 //
 //        }
     }
-    
+    override func viewDidAppear(_ animated: Bool) {
+        self.scrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: 700)
+    }
     func initView()
     {
         hotelSearchTF.isSearchEnable =  true

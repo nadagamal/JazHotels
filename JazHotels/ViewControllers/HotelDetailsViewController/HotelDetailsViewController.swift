@@ -78,7 +78,6 @@ class HotelDetailsViewController: SegmentedPagerTabStripViewController {
         return UIStoryboard(name: HotelJazConstants.StoryBoard.mainSB, bundle: Bundle.main).instantiateViewController(withIdentifier: String(describing: self)) as! HotelDetailsViewController
     }
     override func viewWillAppear(_ animated: Bool) {
-       setTransparentNavigationBar()
         var list = [String]()
         if UserDefaults.standard.object(forKey: "Favourites") != nil{
             list = UserDefaults.standard.object(forKey: "Favourites") as! [String]
@@ -88,6 +87,10 @@ class HotelDetailsViewController: SegmentedPagerTabStripViewController {
         }else{
             updateRighBarButton(isFavourite: false)
         }
+
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        setTransparentNavigationBar()
 
     }
     override func viewWillDisappear(_ animated: Bool) {

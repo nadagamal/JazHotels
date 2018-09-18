@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FBSDKLoginKit
 
 class MenuViewController: UIViewController {
 
@@ -82,6 +83,7 @@ extension MenuViewController:UITableViewDataSource,UITableViewDelegate{
             DispatchQueue.main.async {
             if !UserDefaults.isKeyPresentInUserDefaults(key: HotelJazConstants.userDefault.userData)
             {
+                FBSDKLoginManager().logOut()
                 self.navigationController?.present(LoginViewController.create(), animated: true, completion: nil)
 
             }

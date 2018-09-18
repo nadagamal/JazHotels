@@ -150,7 +150,7 @@ class ProfileViewController: UITableViewController {
         self.userMobile.text = userData?.userContact?.phoneNumbers ?? ""
         self.userCountry.text = userData?.userAddress?.country ?? ""
         self.userCity.text = userData?.userAddress?.city ?? ""
-        self.userAddress.text = userData?.userAddress?.addressLine1 ??  ""
+        self.userAddress.text = userData?.userAddress?.fullAddress ??  ""
         self.userCreditNumber.text = userData?.userCardPayment?.cardNumber ?? ""
     }
     @objc public static func create() -> ProfileViewController {

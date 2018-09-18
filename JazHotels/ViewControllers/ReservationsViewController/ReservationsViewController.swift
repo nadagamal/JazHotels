@@ -19,7 +19,10 @@ class ReservationsViewController: UIViewController {
         tableView.register(UINib(nibName: "HotelTableViewCell", bundle: nil), forCellReuseIdentifier: "hotel_cell")
         self.title = "Reservations"
         SVProgressHUD.show()
-        BookingAPIManager().getReservation(userName: "youannis.aziz@gmail.com", pinNumber: "qFhhnqux77") { (reservation, error) in
+        let userData = UserDefaults.getObjectDefault(key: HotelJazConstants.userDefault.userData) as? UserProfile
+
+//        BookingAPIManager().getReservation(userName: userData?.userSynXisInfo?.synXisUserID, pinNumber: userData?.userSynXisInfo?.synXisPassword) { (reservation, error) in
+        BookingAPIManager().getReservation(userName: (userData?.userSynXisInfo?.synXisUserID)!, pinNumber: (userData?.userSynXisInfo?.synXisPassword)!) { (reservation, error) in
             SVProgressHUD.dismiss()
             if error != nil{
                 DispatchQueue.main.async {
@@ -27,9 +30,11 @@ class ReservationsViewController: UIViewController {
                 }
             }
             else{
+                if reservation?.body.oTAHotelResRS.hotelReservations != nil{
                 self.hotelsReservations = (reservation?.body.oTAHotelResRS.hotelReservations.hotelReservation)!
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
+                }
                 }
             }
         }

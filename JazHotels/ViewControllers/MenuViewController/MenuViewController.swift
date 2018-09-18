@@ -73,7 +73,7 @@ extension MenuViewController:UITableViewDataSource,UITableViewDelegate{
         }
         else
         {
-             return 2
+             return 3
         }
       
     }
@@ -101,8 +101,8 @@ extension MenuViewController:UITableViewDataSource,UITableViewDelegate{
         }
     }
     
-     func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-        var cellToDeSelect:UITableViewCell = tableView.cellForRow(at: indexPath as IndexPath)!
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        let cellToDeSelect:UITableViewCell = tableView.cellForRow(at: indexPath as IndexPath)!
         cellToDeSelect.contentView.backgroundColor = UIColor.clear
     }
 }

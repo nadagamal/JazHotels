@@ -13,6 +13,8 @@ class UserName : NSObject, NSCoding, Mappable{
 	var lastName : String?
 	var middleInitial : String?
 	var middleName : String?
+    var photo:String?
+
 
 
 	class func newInstance(map: Map) -> Mappable?{
@@ -21,12 +23,13 @@ class UserName : NSObject, NSCoding, Mappable{
 	required init?(map: Map){}
 	private override init(){}
 
-    init(firstName : String ,fullName : String , lastName : String , middleInitial : String, middleName : String) {
+    init(firstName : String ,fullName : String , lastName : String , middleInitial : String, middleName : String , photo:String) {
         self.firstName = firstName
         self.fullName = fullName
         self.lastName = lastName
         self.middleName = middleName
         self.middleInitial = middleInitial
+        self.photo = photo
     }
     
 	func mapping(map: Map)
@@ -36,6 +39,7 @@ class UserName : NSObject, NSCoding, Mappable{
 		lastName <- map["lastName"]
 		middleInitial <- map["middleInitial"]
 		middleName <- map["middleName"]
+        photo <- map["photo"]
 		
 	}
 
@@ -50,6 +54,8 @@ class UserName : NSObject, NSCoding, Mappable{
          lastName = aDecoder.decodeObject(forKey: "lastName") as? String
          middleInitial = aDecoder.decodeObject(forKey: "middleInitial") as? String
          middleName = aDecoder.decodeObject(forKey: "middleName") as? String
+         photo = aDecoder.decodeObject(forKey: "photo") as? String
+    
 
 	}
 
@@ -74,6 +80,10 @@ class UserName : NSObject, NSCoding, Mappable{
 		if middleName != nil{
 			aCoder.encode(middleName, forKey: "middleName")
 		}
+        if photo != nil
+        {
+            aCoder.encode(photo, forKey: "photo")
+        }
 
 	}
 

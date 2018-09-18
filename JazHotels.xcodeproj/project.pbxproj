@@ -238,6 +238,7 @@
 		9A06CB1C20EACC4900AFBCA2 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A06CB1B20EACC4900AFBCA2 /* MainTabBar.swift */; };
 		9A06CB1F20EACF6700AFBCA2 /* HotelJazConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A06CB1E20EACF6700AFBCA2 /* HotelJazConstants.swift */; };
 		9A11CBC52147FC7D00D5F857 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A11CBC42147FC7D00D5F857 /* UserProfile.swift */; };
+		9A3EF0772151A4DD002990CC /* UserOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3EF0762151A4DD002990CC /* UserOperation.swift */; };
 		9A41478D2108C31200C95F0A /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A41478C2108C31200C95F0A /* Location.swift */; };
 		9A640D46212EF67B002CB116 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A640D45212EF67B002CB116 /* Authentication.storyboard */; };
 		9A640D4921305F94002CB116 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A640D4821305F94002CB116 /* LoginViewController.swift */; };
@@ -595,6 +596,7 @@
 		9A06CB1B20EACC4900AFBCA2 /* MainTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		9A06CB1E20EACF6700AFBCA2 /* HotelJazConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotelJazConstants.swift; sourceTree = "<group>"; };
 		9A11CBC42147FC7D00D5F857 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		9A3EF0762151A4DD002990CC /* UserOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserOperation.swift; sourceTree = "<group>"; };
 		9A41478C2108C31200C95F0A /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		9A640D45212EF67B002CB116 /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
 		9A640D4821305F94002CB116 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -942,6 +944,7 @@
 			children = (
 				528F600820E7BFB9003111E7 /* ServiceManager.swift */,
 				52AACCBE2144044D001D8869 /* BookingAPIManager.swift */,
+				9A3EF0762151A4DD002990CC /* UserOperation.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -1868,6 +1871,7 @@
 				52B6165120E891C100A1A416 /* JPolicyInfo.swift in Sources */,
 				52B6166220E891C100A1A416 /* JTypeRoom.swift in Sources */,
 				52B6166920E891C100A1A416 /* JAcceptedPayment.swift in Sources */,
+				9A3EF0772151A4DD002990CC /* UserOperation.swift in Sources */,
 				5213E76F21517DD7003D0DDF /* CBUniqueID.swift in Sources */,
 				52B616D720E9341E00A1A416 /* JCBase.swift in Sources */,
 				5213E76D21517DD7003D0DDF /* CBPersonName.swift in Sources */,

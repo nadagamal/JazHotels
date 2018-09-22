@@ -133,6 +133,8 @@
 		5279A5A220FA710F00E94FB1 /* HotelDetailsContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5279A5A120FA710F00E94FB1 /* HotelDetailsContactViewController.swift */; };
 		528F600920E7BFB9003111E7 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F600820E7BFB9003111E7 /* ServiceManager.swift */; };
 		528F600C20E82EA0003111E7 /* XMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F600B20E82EA0003111E7 /* XMLParser.swift */; };
+		52A2276B2156942500D39C60 /* CreditCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52A227692156942500D39C60 /* CreditCardCell.xib */; };
+		52A2276C2156942500D39C60 /* CreditCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A2276A2156942500D39C60 /* CreditCardCell.swift */; };
 		52AACCBF2144044D001D8869 /* BookingAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AACCBE2144044D001D8869 /* BookingAPIManager.swift */; };
 		52B615F720E8847100A1A416 /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B615F620E8847100A1A416 /* XMLDictionary.m */; };
 		52B6163320E891C100A1A416 /* JTextItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B615FA20E891C100A1A416 /* JTextItem.swift */; };
@@ -559,6 +561,8 @@
 		5279A5A120FA710F00E94FB1 /* HotelDetailsContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelDetailsContactViewController.swift; sourceTree = "<group>"; };
 		528F600820E7BFB9003111E7 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 		528F600B20E82EA0003111E7 /* XMLParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLParser.swift; sourceTree = "<group>"; };
+		52A227692156942500D39C60 /* CreditCardCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreditCardCell.xib; sourceTree = "<group>"; };
+		52A2276A2156942500D39C60 /* CreditCardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardCell.swift; sourceTree = "<group>"; };
 		52AACCBE2144044D001D8869 /* BookingAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingAPIManager.swift; sourceTree = "<group>"; };
 		52B615F520E8847100A1A416 /* XMLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLDictionary.h; sourceTree = "<group>"; };
 		52B615F620E8847100A1A416 /* XMLDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLDictionary.m; sourceTree = "<group>"; };
@@ -1119,6 +1123,15 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		52A227682156942500D39C60 /* CreditCardView */ = {
+			isa = PBXGroup;
+			children = (
+				52A227692156942500D39C60 /* CreditCardCell.xib */,
+				52A2276A2156942500D39C60 /* CreditCardCell.swift */,
+			);
+			path = CreditCardView;
+			sourceTree = "<group>";
+		};
 		52B615F420E8847100A1A416 /* XMLDictionary */ = {
 			isa = PBXGroup;
 			children = (
@@ -1458,6 +1471,7 @@
 		9AADBF2020ED5208009183FE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				52A227682156942500D39C60 /* CreditCardView */,
 				9AB548852156548C00E4098D /* ModifyBookingViews */,
 				9AB548802156491600E4098D /* MembershipInfo */,
 				9A084F132155C1FD00298431 /* UpdateProfileViews */,
@@ -1879,6 +1893,7 @@
 				9AE61CC320DAC74B006160C1 /* Montserrat-Black.otf in Resources */,
 				524F784A20F9222700AF0EF6 /* hotels-urls.json in Resources */,
 				9AE61CA520DAC74B006160C1 /* SIL Open Font License.txt in Resources */,
+				52A2276B2156942500D39C60 /* CreditCardCell.xib in Resources */,
 				9AE61CC120DAC74B006160C1 /* MontserratAlternates-Regular.otf in Resources */,
 				9AE61CA620DAC74B006160C1 /* MontserratAlternates-Black.otf in Resources */,
 				9AE61CBE20DAC74B006160C1 /* Montserrat-ExtraLightItalic.otf in Resources */,
@@ -2229,6 +2244,7 @@
 				9A9520FA2145F41600D0FD4E /* UserAddress.swift in Sources */,
 				9AD2764921484C52008A812D /* Color.swift in Sources */,
 				521A4BB621458BD1008A01F8 /* JBResGuest.swift in Sources */,
+				52A2276C2156942500D39C60 /* CreditCardCell.swift in Sources */,
 				5213E77221517DD7003D0DDF /* CBContactNumber.swift in Sources */,
 				9AADBF1120ED5052009183FE /* FavoriteViewController.swift in Sources */,
 				5213E78921517DD7003D0DDF /* CBBasicPropertyInfo.swift in Sources */,

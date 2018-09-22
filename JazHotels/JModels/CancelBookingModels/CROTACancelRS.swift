@@ -16,6 +16,7 @@ class CROTACancelRS : NSObject, NSCoding{
 	var EchoToken : String!
 	var ResResponseType : String!
 	var TimeStamp : String!
+    var errors : CBError!
 
 
 	/**
@@ -32,6 +33,9 @@ class CROTACancelRS : NSObject, NSCoding{
 		EchoToken = dictionary["_EchoToken"] as? String
 		ResResponseType = dictionary["_ResResponseType"] as? String
 		TimeStamp = dictionary["_TimeStamp"] as? String
+        if let errorsData = dictionary["Errors"] as? [String:Any]{
+            errors = CBError(fromDictionary: errorsData)
+        }
 	}
 
 	/**

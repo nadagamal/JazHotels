@@ -8,7 +8,7 @@
 import Foundation
 
 
-class MRAddres : NSObject, NSCoding{
+class MRAddres : NSObject{
 
 	var AddressLine : [String]!
 	var CountryName : MRCountryName!
@@ -82,40 +82,5 @@ class MRAddres : NSObject, NSCoding{
 
 	}
 
-    /**
-    * NSCoding required method.
-    * Encodes mode properties into the decoder
-    */
-    @objc func encode(with aCoder: NSCoder)
-	{
-		if AddressLine != nil{
-			aCoder.encode(AddressLine, forKey: "AddressLine")
-		}
-		if CityName != nil{
-			aCoder.encode(CityName, forKey: "CityName")
-		}
-		if CountryName != nil{
-			aCoder.encode(CountryName, forKey: "CountryName")
-		}
-		if PostalCode != nil{
-			aCoder.encode(PostalCode, forKey: "PostalCode")
-		}
-		if StateProv != nil{
-			aCoder.encode(StateProv, forKey: "StateProv")
-		}
-		if DefaultInd != nil{
-			aCoder.encode(DefaultInd, forKey: "_DefaultInd")
-		}
-		if FormattedInd != nil{
-			aCoder.encode(FormattedInd, forKey: "_FormattedInd")
-		}
-		if CityNamee != nil{
-			aCoder.encode(CityNamee, forKey: "CityName")
-		}
-		if PostalCodee != nil{
-			aCoder.encode(PostalCodee, forKey: "PostalCode")
-		}
-
-	}
 
 }

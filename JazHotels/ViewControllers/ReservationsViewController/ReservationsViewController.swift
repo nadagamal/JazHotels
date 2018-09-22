@@ -19,9 +19,13 @@ class ReservationsViewController: UIViewController {
         tableView.register(UINib(nibName: "HotelTableViewCell", bundle: nil), forCellReuseIdentifier: "hotel_cell")
         self.title = "Reservations"
         SVProgressHUD.show()
-        let userData = UserDefaults.getObjectDefault(key: HotelJazConstants.userDefault.userData) as? UserProfile
 
 //        BookingAPIManager().getReservation(userName: userData?.userSynXisInfo?.synXisUserID, pinNumber: userData?.userSynXisInfo?.synXisPassword) { (reservation, error) in
+
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        let userData = UserDefaults.getObjectDefault(key: HotelJazConstants.userDefault.userData) as? UserProfile
+
         BookingAPIManager().getReservation(userName: (userData?.userSynXisInfo?.synXisUserID)!, pinNumber: (userData?.userSynXisInfo?.synXisPassword)!) { (reservation, error) in
             SVProgressHUD.dismiss()
             if error != nil{
@@ -31,15 +35,14 @@ class ReservationsViewController: UIViewController {
             }
             else{
                 if reservation?.body.oTAHotelResRS.hotelReservations != nil{
-                self.hotelsReservations = (reservation?.body.oTAHotelResRS.hotelReservations.hotelReservation)!
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
+                    self.hotelsReservations = (reservation?.body.oTAHotelResRS.hotelReservations.hotelReservation)!
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
                 }
             }
         }
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

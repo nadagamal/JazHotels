@@ -9,7 +9,7 @@
 import UIKit
 
 class AddCustomStayDateDailogue: UIViewController {
-    weak var delegate: ProfileViewController?
+    weak var delegate: BookingDetailsViewController?
 
     @IBOutlet weak var commentTF: DesignableUITextField!
     override func viewDidLoad() {

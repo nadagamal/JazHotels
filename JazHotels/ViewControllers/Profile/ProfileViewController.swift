@@ -141,7 +141,7 @@ class ProfileViewController: UIViewController {
     }
   
 }
-extension ProfileViewController : UITableViewDataSource , UITableViewDelegate , UpdateProfile , changeBookingDates
+extension ProfileViewController : UITableViewDataSource , UITableViewDelegate , UpdateProfile 
 {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "profile_cell", for: indexPath) as! ProfileCellTableViewCell
@@ -280,29 +280,5 @@ extension ProfileViewController : UITableViewDataSource , UITableViewDelegate , 
         self.userData = user
         self.tableView.reloadData()
     }
-    
-    func getBookingDates(startDate: String, endDate: String, nights: String) {
-        print(startDate)
-        print(endDate)
-    }
-    func getUserModifcation(choice: ModifyReservation) {
-        switch choice {
-        case .changeStayDates:
-            let dialogViewController: SelectBookingDateDialogue = SelectBookingDateDialogue(nibName:"SelectBookingDateDialogue", bundle: nil)
-            dialogViewController.delegate = self
-            self.presentDialogViewController(dialogViewController, animationPattern: LSAnimationPattern.zoomInOut, completion: { () -> Void in })
 
-            break
-        case .addtionalRequest:
-            let dialogViewController: AddCustomStayDateDailogue = AddCustomStayDateDailogue(nibName:"AddCustomStayDateDailogue", bundle: nil)
-            dialogViewController.delegate = self
-            self.presentDialogViewController(dialogViewController, animationPattern: LSAnimationPattern.zoomInOut, completion: { () -> Void in })
-            break
-      
-        }
-    }
-    
-    func getUserAddationalRequest(request: String) {
-        print(request)
-    }
 }

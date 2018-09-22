@@ -16,7 +16,7 @@ class SelectBookingDateDialogue: UIViewController {
     @IBOutlet weak var checkOutDateLb: UILabel!
     private var dateDailog:DatePickerDialog = DatePickerDialog()
     private var checkInDate:Date?
-    weak var delegate: ProfileViewController?
+    weak var delegate: BookingDetailsViewController?
 
 
     override func viewDidLoad() {

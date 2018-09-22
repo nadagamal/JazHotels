@@ -16,7 +16,7 @@ enum ModifyReservation
 }
 class ChooseBookingDateOptionDialogue: UIViewController {
 
-    weak var delegate: ProfileViewController?
+    weak var delegate: BookingDetailsViewController?
     fileprivate var userData:UserProfile?
 
     override func viewDidLoad() {

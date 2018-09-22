@@ -29,7 +29,6 @@ class DropDownDialogue: UIViewController {
        userData = UserDefaults.getObjectDefault(key: HotelJazConstants.userDefault.userData) as? UserProfile
 
         self.optionTF.text =  self.currentOption
-        optionTF.hideArrow = false
         optionTF.optionIds = optionId
         optionTF.optionArray = optionArray
 

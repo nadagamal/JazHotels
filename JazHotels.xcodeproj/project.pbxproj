@@ -123,6 +123,12 @@
 		525206DB21478FE100FB4DFF /* TxtViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525206DA21478FE100FB4DFF /* TxtViewCell.swift */; };
 		525206DE2147902200FB4DFF /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525206DD2147902200FB4DFF /* InfoCell.swift */; };
 		5254F33C2106A17700A397B4 /* RaisedTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5254F33B2106A17700A397B4 /* RaisedTabBarController.swift */; };
+		525E377D215645B7009EFFB7 /* CRCancelBookingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525E3777215645B6009EFFB7 /* CRCancelBookingModel.swift */; };
+		525E377E215645B7009EFFB7 /* CRCancelRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525E3778215645B6009EFFB7 /* CRCancelRule.swift */; };
+		525E377F215645B7009EFFB7 /* CRSoapBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525E3779215645B6009EFFB7 /* CRSoapBody.swift */; };
+		525E3780215645B7009EFFB7 /* CRCancelInfoRS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525E377A215645B6009EFFB7 /* CRCancelInfoRS.swift */; };
+		525E3781215645B7009EFFB7 /* CROTACancelRS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525E377B215645B6009EFFB7 /* CROTACancelRS.swift */; };
+		525E3782215645B7009EFFB7 /* CRUniqueID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525E377C215645B6009EFFB7 /* CRUniqueID.swift */; };
 		5279A5A020FA70F000E94FB1 /* HotelDetailsOverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5279A59F20FA70F000E94FB1 /* HotelDetailsOverviewViewController.swift */; };
 		5279A5A220FA710F00E94FB1 /* HotelDetailsContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5279A5A120FA710F00E94FB1 /* HotelDetailsContactViewController.swift */; };
 		528F600920E7BFB9003111E7 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F600820E7BFB9003111E7 /* ServiceManager.swift */; };
@@ -489,6 +495,12 @@
 		525206DA21478FE100FB4DFF /* TxtViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TxtViewCell.swift; sourceTree = "<group>"; };
 		525206DD2147902200FB4DFF /* InfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
 		5254F33B2106A17700A397B4 /* RaisedTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RaisedTabBarController.swift; sourceTree = "<group>"; };
+		525E3777215645B6009EFFB7 /* CRCancelBookingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRCancelBookingModel.swift; sourceTree = "<group>"; };
+		525E3778215645B6009EFFB7 /* CRCancelRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRCancelRule.swift; sourceTree = "<group>"; };
+		525E3779215645B6009EFFB7 /* CRSoapBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRSoapBody.swift; sourceTree = "<group>"; };
+		525E377A215645B6009EFFB7 /* CRCancelInfoRS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRCancelInfoRS.swift; sourceTree = "<group>"; };
+		525E377B215645B6009EFFB7 /* CROTACancelRS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CROTACancelRS.swift; sourceTree = "<group>"; };
+		525E377C215645B6009EFFB7 /* CRUniqueID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRUniqueID.swift; sourceTree = "<group>"; };
 		5279A59F20FA70F000E94FB1 /* HotelDetailsOverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelDetailsOverviewViewController.swift; sourceTree = "<group>"; };
 		5279A5A120FA710F00E94FB1 /* HotelDetailsContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelDetailsContactViewController.swift; sourceTree = "<group>"; };
 		528F600820E7BFB9003111E7 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
@@ -963,6 +975,19 @@
 			path = SwiftRaisedTab;
 			sourceTree = "<group>";
 		};
+		525E3776215645B6009EFFB7 /* CancelBookingModels */ = {
+			isa = PBXGroup;
+			children = (
+				525E3777215645B6009EFFB7 /* CRCancelBookingModel.swift */,
+				525E3778215645B6009EFFB7 /* CRCancelRule.swift */,
+				525E3779215645B6009EFFB7 /* CRSoapBody.swift */,
+				525E377A215645B6009EFFB7 /* CRCancelInfoRS.swift */,
+				525E377B215645B6009EFFB7 /* CROTACancelRS.swift */,
+				525E377C215645B6009EFFB7 /* CRUniqueID.swift */,
+			);
+			path = CancelBookingModels;
+			sourceTree = "<group>";
+		};
 		528F600720E7BF7B003111E7 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
@@ -998,6 +1023,7 @@
 		52B615F920E891C100A1A416 /* JModels */ = {
 			isa = PBXGroup;
 			children = (
+				525E3776215645B6009EFFB7 /* CancelBookingModels */,
 				5213E73121517DD6003D0DDF /* ConfirmReservationModels */,
 				521A4B7521458BD1008A01F8 /* BookingModels */,
 				52B616E720E9566300A1A416 /* JBody.swift */,
@@ -1904,6 +1930,7 @@
 				9AADBF8920EDCA78009183FE /* HotelListViewController.swift in Sources */,
 				9AB548752156210700E4098D /* DesignableUITextField.swift in Sources */,
 				525206DE2147902200FB4DFF /* InfoCell.swift in Sources */,
+				525E377E215645B7009EFFB7 /* CRCancelRule.swift in Sources */,
 				52DAFC9C2147F0DA00F8269F /* BookingDetailsViewController.swift in Sources */,
 				52B6165B20E891C100A1A416 /* JAffiliationInfo.swift in Sources */,
 				52B6166520E891C100A1A416 /* JTransportation.swift in Sources */,
@@ -2043,6 +2070,7 @@
 				524EEE7220DA840D006B9917 /* AppDelegate.swift in Sources */,
 				5213E76C21517DD7003D0DDF /* CBCancelPenalty.swift in Sources */,
 				9AD2764721484024008A812D /* String.swift in Sources */,
+				525E377D215645B7009EFFB7 /* CRCancelBookingModel.swift in Sources */,
 				521A4BB021458BD1008A01F8 /* JBTax.swift in Sources */,
 				52B6164520E891C100A1A416 /* JRenovation.swift in Sources */,
 				52B616DC20E9341E00A1A416 /* JCContactNumber.swift in Sources */,
@@ -2055,6 +2083,7 @@
 				52B6164C20E891C100A1A416 /* JRestaurant.swift in Sources */,
 				52B6166120E891C100A1A416 /* JCategoryCode.swift in Sources */,
 				52B6163F20E891C100A1A416 /* JHotelInfo.swift in Sources */,
+				525E377F215645B7009EFFB7 /* CRSoapBody.swift in Sources */,
 				9AB5487321561F6500E4098D /* UpdateNameDialogue.swift in Sources */,
 				9A640D4921305F94002CB116 /* LoginViewController.swift in Sources */,
 				9ACCCC9A20FAE6000083CBD2 /* Date.swift in Sources */,
@@ -2113,6 +2142,7 @@
 				52B616BF20E9341E00A1A416 /* JCRoomRate.swift in Sources */,
 				52B6165420E891C100A1A416 /* JMeetingRoomCapacity.swift in Sources */,
 				521A4BD821458BD1008A01F8 /* JBCompanyInfo.swift in Sources */,
+				525E3780215645B7009EFFB7 /* CRCancelInfoRS.swift in Sources */,
 				521A4BA921458BD1008A01F8 /* JBUserID.swift in Sources */,
 				52B616EB20E9566400A1A416 /* JEnvelope.swift in Sources */,
 				52B6165E20E891C100A1A416 /* JSoap:Envelope.swift in Sources */,
@@ -2131,6 +2161,7 @@
 				5213E78021517DD7003D0DDF /* CBGuaranteesAccepted.swift in Sources */,
 				521A4BB821458BD1008A01F8 /* JBStateProv.swift in Sources */,
 				9ADD3E422106A76D00D00078 /* HotelMapDetailsView.swift in Sources */,
+				525E3781215645B7009EFFB7 /* CROTACancelRS.swift in Sources */,
 				5213E76921517DD7003D0DDF /* CBTelephone.swift in Sources */,
 				5213E78C21517DD7003D0DDF /* CBGuestCount.swift in Sources */,
 				52B616EA20E9566400A1A416 /* JBody.swift in Sources */,
@@ -2149,6 +2180,7 @@
 				52B616CD20E9341E00A1A416 /* JCRatePlan.swift in Sources */,
 				52B616C320E9341E00A1A416 /* JCGuaranteePayment.swift in Sources */,
 				52B6163B20E891C100A1A416 /* JRelativePosition.swift in Sources */,
+				525E3782215645B7009EFFB7 /* CRUniqueID.swift in Sources */,
 				52B6164A20E891C100A1A416 /* JPenaltyDescription.swift in Sources */,
 				521A4BCE21458BD1008A01F8 /* JBProfile.swift in Sources */,
 				52B6165820E891C100A1A416 /* JDescription.swift in Sources */,

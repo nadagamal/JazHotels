@@ -8,6 +8,7 @@
 
 import UIKit
 import Kingfisher
+import SCLAlertView
 class BookingDetailsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var reservationItem:JBHotelReservation!
@@ -15,6 +16,8 @@ class BookingDetailsViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+       self.title = reservationItem.roomStays.roomStay.basicPropertyInfo.hotelName
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,6 +29,20 @@ class BookingDetailsViewController: UIViewController {
     }
     
     @IBAction func cancelReservationAction(_ sender: Any) {
+        BookingAPIManager().cancelReservation(confirmationId: reservationItem.uniqueID.iD, hotelCode: reservationItem.roomStays.roomStay.basicPropertyInfo.hotelCode, chainCode: reservationItem.roomStays.roomStay.basicPropertyInfo.chainCode) { (bookingModel, error) in
+                if error == nil{
+                    DispatchQueue.main.async {
+                self.navigationController?.popViewController(animated: true)
+                    }
+                }
+                else{
+                    DispatchQueue.main.async {
+
+                    SCLAlertView().showError("Error", subTitle: "Reservation not cancelled")
+
+                }
+            }
+        }
     }
     /*
     // MARK: - Navigation
@@ -53,6 +70,7 @@ extension BookingDetailsViewController:UITableViewDataSource,UITableViewDelegate
                 let imageURL = URL(string: ((JazHotels.hotelsImages![reservationItem.roomStays.roomStay.basicPropertyInfo.hotelCode!]?[0])!))
                 cell.hotel_img.kf.indicatorType = .activity
                 cell.hotel_img.kf.setImage(with: imageURL, placeholder: UIImage(named: "jazLauncherLogo"), options: [.transition(ImageTransition.fade(0.7))], progressBlock: nil, completionHandler: nil)
+                cell.jazLogoImg.isHidden = true
             }
             return cell
         }
@@ -68,16 +86,37 @@ extension BookingDetailsViewController:UITableViewDataSource,UITableViewDelegate
             if reservationItem.roomStays.roomStay.roomTypes.roomType.additionalDetails != nil && reservationItem.roomStays.roomStay.roomTypes.roomType.additionalDetails.additionalDetail.count > 0{
              cell.rightValueLbl.text = reservationItem.roomStays.roomStay.roomTypes.roomType.additionalDetails.additionalDetail[0].detailDescription.text
             }
-            
+            return cell
         }
         else  if indexPath.row == 3{
-            cell = tableView.dequeueReusableCell(withIdentifier: "RoomDetailsCell")
+           let cell = tableView.dequeueReusableCell(withIdentifier: "RoomDetailsCell") as! BookingDetailsCell
+            var childNum = "0"
+            var adultNum = "0"
+            if reservationItem.roomStays.roomStay.guestCounts.guestCount != nil && reservationItem.roomStays.roomStay.guestCounts.guestCount.count == 1{
+                adultNum = reservationItem.roomStays.roomStay.guestCounts.guestCount[0].count
+                cell.rightValueLbl.text = adultNum + "adults"
+
+            }
+            else if reservationItem.roomStays.roomStay.guestCounts.guestCount != nil && reservationItem.roomStays.roomStay.guestCounts.guestCount.count == 2{
+                adultNum = reservationItem.roomStays.roomStay.guestCounts.guestCount[0].count
+                childNum = reservationItem.roomStays.roomStay.guestCounts.guestCount[1].count
+                cell.rightValueLbl.text = adultNum + " adults, " + childNum + " childern"
+
+            }
+            return cell
+
         }
         else  if indexPath.row == 4{
-            cell = tableView.dequeueReusableCell(withIdentifier: "ConfirmationCodeCell")
+           let cell = tableView.dequeueReusableCell(withIdentifier: "ConfirmationCodeCell") as! BookingDetailsCell
+            cell.leftValueLbl.text = reservationItem.uniqueID.iD
+            return cell
+
         }
         else  if indexPath.row == 5{
-            cell = tableView.dequeueReusableCell(withIdentifier: "PriceCell")
+           let cell = tableView.dequeueReusableCell(withIdentifier: "PriceCell") as! BookingDetailsCell
+            cell.rightValueLbl.text = reservationItem.roomStays.roomStay.total.amountAfterTax + "$"
+            return cell
+            
         }
         else  if indexPath.row == 6{
             cell = tableView.dequeueReusableCell(withIdentifier: "InfoCell")
@@ -98,7 +137,7 @@ extension BookingDetailsViewController:UITableViewDataSource,UITableViewDelegate
             return 57
         }
         else  if indexPath.row == 2{
-            return 57
+            return 75
         }
         else  if indexPath.row == 3{
             return 57
@@ -110,7 +149,7 @@ extension BookingDetailsViewController:UITableViewDataSource,UITableViewDelegate
             return 57
         }
         else{
-            return 100
+            return 157
         }
     }
 }

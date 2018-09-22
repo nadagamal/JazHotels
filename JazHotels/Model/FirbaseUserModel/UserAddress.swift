@@ -36,6 +36,7 @@ class UserAddress : NSObject, NSCoding, Mappable{
 		zip <- map["zip"]
 		
 	}
+    
 
     /**
     * NSCoding required initializer.

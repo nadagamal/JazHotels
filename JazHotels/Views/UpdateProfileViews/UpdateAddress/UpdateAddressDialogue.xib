@@ -40,7 +40,6 @@
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oah-nw-zTj">
                             <rect key="frame" x="0.0" y="353" width="339" height="2"/>
-                            <color key="backgroundColor" red="0.90196078430000004" green="0.90588235289999997" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="2" id="3M3-px-dAl"/>
                             </constraints>
@@ -244,11 +243,6 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="ft5-uC-mya"/>
-            <userDefinedRuntimeAttributes>
-                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                    <real key="value" value="10"/>
-                </userDefinedRuntimeAttribute>
-            </userDefinedRuntimeAttributes>
             <point key="canvasLocation" x="35.5" y="17.5"/>
         </view>
     </objects>

@@ -282,6 +282,8 @@
 		9AB5487A2156233F00E4098D /* UpdatePhoneDialogue.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AB548782156233F00E4098D /* UpdatePhoneDialogue.xib */; };
 		9AB5487E2156243F00E4098D /* UpdateAddressDialogue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB5487C2156243F00E4098D /* UpdateAddressDialogue.swift */; };
 		9AB5487F2156243F00E4098D /* UpdateAddressDialogue.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AB5487D2156243F00E4098D /* UpdateAddressDialogue.xib */; };
+		9AB548832156493C00E4098D /* MembershipInfoDialogue.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AB548812156493B00E4098D /* MembershipInfoDialogue.xib */; };
+		9AB548842156493C00E4098D /* MembershipInfoDialogue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB548822156493B00E4098D /* MembershipInfoDialogue.swift */; };
 		9AC6E48A2131AFEF00E70ABE /* RoomDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC6E4892131AFEF00E70ABE /* RoomDetailsViewController.swift */; };
 		9AC6E48C2131B00800E70ABE /* RoomDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC6E48B2131B00800E70ABE /* RoomDetailsCell.swift */; };
 		9AC6E48E2131D46B00E70ABE /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC6E48D2131D46B00E70ABE /* CreateAccountViewController.swift */; };
@@ -656,6 +658,8 @@
 		9AB548782156233F00E4098D /* UpdatePhoneDialogue.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UpdatePhoneDialogue.xib; sourceTree = "<group>"; };
 		9AB5487C2156243F00E4098D /* UpdateAddressDialogue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateAddressDialogue.swift; sourceTree = "<group>"; };
 		9AB5487D2156243F00E4098D /* UpdateAddressDialogue.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UpdateAddressDialogue.xib; sourceTree = "<group>"; };
+		9AB548812156493B00E4098D /* MembershipInfoDialogue.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MembershipInfoDialogue.xib; sourceTree = "<group>"; };
+		9AB548822156493B00E4098D /* MembershipInfoDialogue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MembershipInfoDialogue.swift; sourceTree = "<group>"; };
 		9AC6E4892131AFEF00E70ABE /* RoomDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomDetailsViewController.swift; sourceTree = "<group>"; };
 		9AC6E48B2131B00800E70ABE /* RoomDetailsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomDetailsCell.swift; sourceTree = "<group>"; };
 		9AC6E48D2131D46B00E70ABE /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
@@ -1290,6 +1294,7 @@
 		9AADBF2020ED5208009183FE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9AB548802156491600E4098D /* MembershipInfo */,
 				9A084F132155C1FD00298431 /* UpdateProfileViews */,
 				9A084F102155A48B00298431 /* ProfileCell */,
 				52DAFCA02148B4E000F8269F /* MenuCell */,
@@ -1385,6 +1390,15 @@
 				9AB5487D2156243F00E4098D /* UpdateAddressDialogue.xib */,
 			);
 			path = UpdateAddress;
+			sourceTree = "<group>";
+		};
+		9AB548802156491600E4098D /* MembershipInfo */ = {
+			isa = PBXGroup;
+			children = (
+				9AB548822156493B00E4098D /* MembershipInfoDialogue.swift */,
+				9AB548812156493B00E4098D /* MembershipInfoDialogue.xib */,
+			);
+			path = MembershipInfo;
 			sourceTree = "<group>";
 		};
 		9ACCCC9620FAA1DE0083CBD2 /* GradienViews */ = {
@@ -1724,6 +1738,7 @@
 				524EEE7920DA840F006B9917 /* Assets.xcassets in Resources */,
 				9AE61CC020DAC74B006160C1 /* MontserratAlternates-ExtraLight.otf in Resources */,
 				9AE61CBC20DAC74B006160C1 /* MontserratAlternates-BoldItalic.otf in Resources */,
+				9AB548832156493C00E4098D /* MembershipInfoDialogue.xib in Resources */,
 				9AE61CB020DAC74B006160C1 /* MontserratAlternates-Bold.otf in Resources */,
 				9AE61CC520DAC74B006160C1 /* MontserratAlternates-Italic.otf in Resources */,
 				9AADBF8420EDC0F0009183FE /* HotelTableViewCell.xib in Resources */,
@@ -2043,6 +2058,7 @@
 				52B616C820E9341E00A1A416 /* JCBasicPropertyInfo.swift in Sources */,
 				5254F33C2106A17700A397B4 /* RaisedTabBarController.swift in Sources */,
 				9ADD3E4A2106B35300D00078 /* GradientView.swift in Sources */,
+				9AB548842156493C00E4098D /* MembershipInfoDialogue.swift in Sources */,
 				5213E79521517DD7003D0DDF /* CBAdditionalDetail.swift in Sources */,
 				9A9521002145F6F500D0FD4E /* UserPaymentCard.swift in Sources */,
 				5213E79221517DD7003D0DDF /* CBTaxe.swift in Sources */,
@@ -2423,7 +2439,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PKX77P5J33;
+				DEVELOPMENT_TEAM = MAG9DAS3TQ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -2451,7 +2467,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PKX77P5J33;
+				DEVELOPMENT_TEAM = MAG9DAS3TQ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

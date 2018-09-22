@@ -51,6 +51,7 @@ target 'JazHotels' do
     # Pods for Twitter
     
     pod 'TwitterKit'
+#    pod 'DropDown'
     
     # Pods for Database Firebase
     

@@ -33,4 +33,13 @@ class UserOperation: NSObject {
         }
     }
     
+    
+    static   func updateUser(user:UserProfile)
+    {
+        UserDefaults.saveObjectDefault(key: HotelJazConstants.userDefault.userData, value: user)
+        
+        let db = Firestore.firestore()
+        db.collection("users").document("\(String(describing: (user.userId)!))").updateData(user.toDictionary())
+    }
+    
 }

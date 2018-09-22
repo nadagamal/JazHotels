@@ -12,11 +12,17 @@ class UpdatePhoneDialogue: UIViewController {
 
     @IBOutlet weak var mobilePhone: DesignableUITextField!
     @IBOutlet weak var landeLine: DesignableUITextField!
-    
-    
+    var phone:String?
+    var landline:String?
+    fileprivate var userData:UserProfile?
+    weak var delegate: ProfileViewController?
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        userData = UserDefaults.getObjectDefault(key: HotelJazConstants.userDefault.userData) as? UserProfile
 
+        self.mobilePhone.text  = phone
+        self.landeLine.text = landline
         // Do any additional setup after loading the view.
     }
 
@@ -27,8 +33,16 @@ class UpdatePhoneDialogue: UIViewController {
     
 
     @IBAction func updateBtnAction(_ sender: Any) {
+        
+        userData?.userContact?.mobilePhone = mobilePhone.text
+        userData?.userContact?.landLine = landeLine.text
+        UserOperation.updateUser(user: userData!)
+        self.delegate?.dismissDialogViewController()
+        self.delegate?.reloadProfile(user: userData!)
+
     }
   
     @IBAction func cancelBtnAction(_ sender: Any) {
+        self.delegate?.dismissDialogViewController()
     }
 }

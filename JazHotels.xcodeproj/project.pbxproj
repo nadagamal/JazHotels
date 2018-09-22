@@ -249,6 +249,8 @@
 		9A11CBC52147FC7D00D5F857 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A11CBC42147FC7D00D5F857 /* UserProfile.swift */; };
 		9A3EF0772151A4DD002990CC /* UserOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3EF0762151A4DD002990CC /* UserOperation.swift */; };
 		9A41478D2108C31200C95F0A /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A41478C2108C31200C95F0A /* Location.swift */; };
+		9A56884E21567ED0003B3026 /* AddCustomStayDateDailogue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A56884D21567ED0003B3026 /* AddCustomStayDateDailogue.swift */; };
+		9A56885021567F64003B3026 /* SelectBookingDateDialogue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A56884F21567F64003B3026 /* SelectBookingDateDialogue.swift */; };
 		9A640D46212EF67B002CB116 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A640D45212EF67B002CB116 /* Authentication.storyboard */; };
 		9A640D4921305F94002CB116 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A640D4821305F94002CB116 /* LoginViewController.swift */; };
 		9A640D4F2130690F002CB116 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9A640D4E2130690F002CB116 /* GoogleService-Info.plist */; };
@@ -284,6 +286,10 @@
 		9AB5487F2156243F00E4098D /* UpdateAddressDialogue.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AB5487D2156243F00E4098D /* UpdateAddressDialogue.xib */; };
 		9AB548832156493C00E4098D /* MembershipInfoDialogue.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AB548812156493B00E4098D /* MembershipInfoDialogue.xib */; };
 		9AB548842156493C00E4098D /* MembershipInfoDialogue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB548822156493B00E4098D /* MembershipInfoDialogue.swift */; };
+		9AB54888215654C200E4098D /* ChooseBookingDateOptionDialogue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB54886215654C100E4098D /* ChooseBookingDateOptionDialogue.swift */; };
+		9AB54889215654C200E4098D /* ChooseBookingDateOptionDialogue.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AB54887215654C200E4098D /* ChooseBookingDateOptionDialogue.xib */; };
+		9AB5488B2156607E00E4098D /* SelectBookingDateDialogue.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AB5488A2156607E00E4098D /* SelectBookingDateDialogue.xib */; };
+		9AB5488D215677D200E4098D /* AddCustomStayDateDailogue.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AB5488C215677D200E4098D /* AddCustomStayDateDailogue.xib */; };
 		9AC6E48A2131AFEF00E70ABE /* RoomDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC6E4892131AFEF00E70ABE /* RoomDetailsViewController.swift */; };
 		9AC6E48C2131B00800E70ABE /* RoomDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC6E48B2131B00800E70ABE /* RoomDetailsCell.swift */; };
 		9AC6E48E2131D46B00E70ABE /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC6E48D2131D46B00E70ABE /* CreateAccountViewController.swift */; };
@@ -625,6 +631,8 @@
 		9A11CBC42147FC7D00D5F857 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		9A3EF0762151A4DD002990CC /* UserOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserOperation.swift; sourceTree = "<group>"; };
 		9A41478C2108C31200C95F0A /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		9A56884D21567ED0003B3026 /* AddCustomStayDateDailogue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCustomStayDateDailogue.swift; sourceTree = "<group>"; };
+		9A56884F21567F64003B3026 /* SelectBookingDateDialogue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectBookingDateDialogue.swift; sourceTree = "<group>"; };
 		9A640D45212EF67B002CB116 /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
 		9A640D4821305F94002CB116 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9A640D4E2130690F002CB116 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -660,6 +668,10 @@
 		9AB5487D2156243F00E4098D /* UpdateAddressDialogue.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UpdateAddressDialogue.xib; sourceTree = "<group>"; };
 		9AB548812156493B00E4098D /* MembershipInfoDialogue.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MembershipInfoDialogue.xib; sourceTree = "<group>"; };
 		9AB548822156493B00E4098D /* MembershipInfoDialogue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MembershipInfoDialogue.swift; sourceTree = "<group>"; };
+		9AB54886215654C100E4098D /* ChooseBookingDateOptionDialogue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseBookingDateOptionDialogue.swift; sourceTree = "<group>"; };
+		9AB54887215654C200E4098D /* ChooseBookingDateOptionDialogue.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChooseBookingDateOptionDialogue.xib; sourceTree = "<group>"; };
+		9AB5488A2156607E00E4098D /* SelectBookingDateDialogue.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectBookingDateDialogue.xib; sourceTree = "<group>"; };
+		9AB5488C215677D200E4098D /* AddCustomStayDateDailogue.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddCustomStayDateDailogue.xib; sourceTree = "<group>"; };
 		9AC6E4892131AFEF00E70ABE /* RoomDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomDetailsViewController.swift; sourceTree = "<group>"; };
 		9AC6E48B2131B00800E70ABE /* RoomDetailsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomDetailsCell.swift; sourceTree = "<group>"; };
 		9AC6E48D2131D46B00E70ABE /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
@@ -1294,6 +1306,7 @@
 		9AADBF2020ED5208009183FE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9AB548852156548C00E4098D /* ModifyBookingViews */,
 				9AB548802156491600E4098D /* MembershipInfo */,
 				9A084F132155C1FD00298431 /* UpdateProfileViews */,
 				9A084F102155A48B00298431 /* ProfileCell */,
@@ -1399,6 +1412,19 @@
 				9AB548812156493B00E4098D /* MembershipInfoDialogue.xib */,
 			);
 			path = MembershipInfo;
+			sourceTree = "<group>";
+		};
+		9AB548852156548C00E4098D /* ModifyBookingViews */ = {
+			isa = PBXGroup;
+			children = (
+				9AB54887215654C200E4098D /* ChooseBookingDateOptionDialogue.xib */,
+				9AB54886215654C100E4098D /* ChooseBookingDateOptionDialogue.swift */,
+				9AB5488A2156607E00E4098D /* SelectBookingDateDialogue.xib */,
+				9A56884F21567F64003B3026 /* SelectBookingDateDialogue.swift */,
+				9AB5488C215677D200E4098D /* AddCustomStayDateDailogue.xib */,
+				9A56884D21567ED0003B3026 /* AddCustomStayDateDailogue.swift */,
+			);
+			path = ModifyBookingViews;
 			sourceTree = "<group>";
 		};
 		9ACCCC9620FAA1DE0083CBD2 /* GradienViews */ = {
@@ -1697,6 +1723,7 @@
 				9AE61CBB20DAC74B006160C1 /* MontserratAlternates-ExtraBold.otf in Resources */,
 				9A640D4F2130690F002CB116 /* GoogleService-Info.plist in Resources */,
 				9AE61CBD20DAC74B006160C1 /* Montserrat-ExtraBold.otf in Resources */,
+				9AB54889215654C200E4098D /* ChooseBookingDateOptionDialogue.xib in Resources */,
 				9AE61CC320DAC74B006160C1 /* Montserrat-Black.otf in Resources */,
 				524F784A20F9222700AF0EF6 /* hotels-urls.json in Resources */,
 				9AE61CA520DAC74B006160C1 /* SIL Open Font License.txt in Resources */,
@@ -1720,6 +1747,7 @@
 				9AE61CAE20DAC74B006160C1 /* Montserrat-ExtraLight.otf in Resources */,
 				9AE61CA420DAC74B006160C1 /* Montserrat-BlackItalic.otf in Resources */,
 				9AE61CB420DAC74B006160C1 /* Montserrat-Medium.otf in Resources */,
+				9AB5488B2156607E00E4098D /* SelectBookingDateDialogue.xib in Resources */,
 				524F784920F9222700AF0EF6 /* hotels-images.json in Resources */,
 				9AE61CB120DAC74B006160C1 /* MontserratAlternates-ExtraLightItalic.otf in Resources */,
 				9AB5487A2156233F00E4098D /* UpdatePhoneDialogue.xib in Resources */,
@@ -1743,6 +1771,7 @@
 				9AE61CC520DAC74B006160C1 /* MontserratAlternates-Italic.otf in Resources */,
 				9AADBF8420EDC0F0009183FE /* HotelTableViewCell.xib in Resources */,
 				9AE61CB620DAC74B006160C1 /* Montserrat-SemiBoldItalic.otf in Resources */,
+				9AB5488D215677D200E4098D /* AddCustomStayDateDailogue.xib in Resources */,
 				9AE61CB920DAC74B006160C1 /* MontserratAlternates-SemiBold.otf in Resources */,
 				9AE61CB520DAC74B006160C1 /* MontserratAlternates-SemiBoldItalic.otf in Resources */,
 				9AE61CAA20DAC74B006160C1 /* Montserrat-Light.otf in Resources */,
@@ -1961,6 +1990,7 @@
 				52B6163A20E891C100A1A416 /* JAmenity.swift in Sources */,
 				521A4BD221458BD1008A01F8 /* JBOccupancy.swift in Sources */,
 				52B6164E20E891C100A1A416 /* JFeature.swift in Sources */,
+				9A56884E21567ED0003B3026 /* AddCustomStayDateDailogue.swift in Sources */,
 				9AADBF1D20ED5189009183FE /* HotelsViewController.swift in Sources */,
 				52B616BE20E9341E00A1A416 /* JCMealsIncluded.swift in Sources */,
 				5213E78621517DD7003D0DDF /* CBTax.swift in Sources */,
@@ -1990,6 +2020,7 @@
 				52B6164120E891C100A1A416 /* JEmail.swift in Sources */,
 				5213E78721517DD7003D0DDF /* CBProfileInfo.swift in Sources */,
 				9A8E78D520F8F98E0034C3AF /* ViewController.swift in Sources */,
+				9A56885021567F64003B3026 /* SelectBookingDateDialogue.swift in Sources */,
 				521A4BC221458BD1008A01F8 /* JBDeadline.swift in Sources */,
 				52B6165520E891C100A1A416 /* JDimension.swift in Sources */,
 				521A4BCD21458BD1008A01F8 /* JBOTAHotelResRS.swift in Sources */,
@@ -2103,6 +2134,7 @@
 				52B6163620E891C100A1A416 /* JPetsPolicy.swift in Sources */,
 				5213E77C21517DD7003D0DDF /* CBNightlyRate.swift in Sources */,
 				52DAFC9F2147F6DC00F8269F /* BookingDetailsCell.swift in Sources */,
+				9AB54888215654C200E4098D /* ChooseBookingDateOptionDialogue.swift in Sources */,
 				52B6165D20E891C100A1A416 /* JPaymentCard.swift in Sources */,
 				521A4BB421458BD1008A01F8 /* JBRoomStay.swift in Sources */,
 				5213E77421517DD7003D0DDF /* CBReservation.swift in Sources */,
@@ -2238,7 +2270,11 @@
 				DEVELOPMENT_TEAM = PKX77P5J33;
 				INFOPLIST_FILE = JazHotelsTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.JazHotels.JazHotelsTests;
@@ -2257,7 +2293,11 @@
 				DEVELOPMENT_TEAM = PKX77P5J33;
 				INFOPLIST_FILE = JazHotelsTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.JazHotels.JazHotelsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2274,7 +2314,11 @@
 				DEVELOPMENT_TEAM = PKX77P5J33;
 				INFOPLIST_FILE = JazHotelsUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.JazHotels.JazHotelsUITests;
@@ -2292,7 +2336,11 @@
 				DEVELOPMENT_TEAM = PKX77P5J33;
 				INFOPLIST_FILE = JazHotelsUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.JazHotels.JazHotelsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2432,7 +2480,10 @@
 				);
 				INFOPLIST_FILE = JazHotels/resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jaz.JazHotels;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -2457,7 +2508,10 @@
 				);
 				INFOPLIST_FILE = JazHotels/resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jaz.JazHotels;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

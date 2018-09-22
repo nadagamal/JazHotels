@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Medium.otf">
+            <string>Montserrat-Medium</string>
+        </array>
+        <array key="Montserrat-Regular.otf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChooseBookingDateOptionDialogue" customModule="JazHotels" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="Ru4-rZ-APu" id="Ibg-La-edx"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Ru4-rZ-APu">
+            <rect key="frame" x="0.0" y="0.0" width="306" height="150"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aEn-eL-xDG">
+                    <rect key="frame" x="0.0" y="0.0" width="306" height="150"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oah-nw-zTj">
+                            <rect key="frame" x="0.0" y="107" width="306" height="2"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="2" id="3M3-px-dAl"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gxn-hq-TOy">
+                            <rect key="frame" x="152.5" y="109.5" width="1" height="40.5"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="1" id="eGo-Pw-j0R"/>
+                            </constraints>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="R4e-iy-wwM">
+                            <rect key="frame" x="8" y="0.0" width="290" height="107"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="T9j-EF-nEN">
+                                    <rect key="frame" x="0.0" y="0.0" width="290" height="53.5"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I1V-sm-7sW">
+                                            <rect key="frame" x="0.0" y="0.0" width="290" height="53.5"/>
+                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                                            <state key="normal" title="Change Stay Dates">
+                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="changeStayDateAction:" destination="-1" eventType="touchUpInside" id="0P6-lX-hoZ"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="zJ2-Ma-mu2">
+                                    <rect key="frame" x="0.0" y="53.5" width="290" height="53.5"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GaJ-ca-sEa">
+                                            <rect key="frame" x="0.0" y="0.0" width="290" height="53.5"/>
+                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                                            <state key="normal" title="Add Special Requests">
+                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="addSpecialRequestsAction:" destination="-1" eventType="touchUpInside" id="VZk-JK-Zz7"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0cG-XG-Kn1">
+                            <rect key="frame" x="225" y="109" width="73" height="33"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="33" id="9aN-A1-0Rs"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="17"/>
+                            <state key="normal" title="CANCEL">
+                                <color key="titleColor" red="0.54901960780000003" green="0.52156862749999999" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="cancelBtnAction:" destination="-1" eventType="touchUpInside" id="hpJ-te-0jm"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="R4e-iy-wwM" secondAttribute="trailing" constant="8" id="0dr-6T-DAA"/>
+                        <constraint firstAttribute="trailing" secondItem="oah-nw-zTj" secondAttribute="trailing" id="3pJ-KH-Upc"/>
+                        <constraint firstAttribute="trailing" secondItem="0cG-XG-Kn1" secondAttribute="trailing" constant="8" id="7xN-fS-q8F"/>
+                        <constraint firstItem="gxn-hq-TOy" firstAttribute="centerX" secondItem="aEn-eL-xDG" secondAttribute="centerX" id="Mtg-EI-zRC"/>
+                        <constraint firstItem="R4e-iy-wwM" firstAttribute="top" secondItem="aEn-eL-xDG" secondAttribute="top" id="Rp2-gK-vgA"/>
+                        <constraint firstItem="0cG-XG-Kn1" firstAttribute="top" secondItem="oah-nw-zTj" secondAttribute="bottom" id="WVj-MK-eyM"/>
+                        <constraint firstItem="R4e-iy-wwM" firstAttribute="leading" secondItem="aEn-eL-xDG" secondAttribute="leading" constant="8" id="dCq-cA-9qa"/>
+                        <constraint firstAttribute="bottom" secondItem="gxn-hq-TOy" secondAttribute="bottom" id="dYY-bT-LLQ"/>
+                        <constraint firstItem="gxn-hq-TOy" firstAttribute="top" secondItem="oah-nw-zTj" secondAttribute="bottom" id="fNY-UL-yRT"/>
+                        <constraint firstItem="oah-nw-zTj" firstAttribute="top" secondItem="R4e-iy-wwM" secondAttribute="bottom" id="koJ-cS-AyD"/>
+                        <constraint firstItem="oah-nw-zTj" firstAttribute="leading" secondItem="aEn-eL-xDG" secondAttribute="leading" id="tnR-P0-kFG"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="zXb-I6-Chq"/>
+                        <constraint firstAttribute="bottom" secondItem="0cG-XG-Kn1" secondAttribute="bottom" constant="8" id="zhL-aR-rBK"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="aEn-eL-xDG" secondAttribute="trailing" id="4FH-w3-JkY"/>
+                <constraint firstAttribute="bottom" secondItem="aEn-eL-xDG" secondAttribute="bottom" id="67M-ya-eoW"/>
+                <constraint firstItem="aEn-eL-xDG" firstAttribute="centerX" secondItem="ft5-uC-mya" secondAttribute="centerX" id="DpE-K6-d4R"/>
+                <constraint firstItem="aEn-eL-xDG" firstAttribute="leading" secondItem="Ru4-rZ-APu" secondAttribute="leading" id="SAt-pK-kbr"/>
+                <constraint firstItem="aEn-eL-xDG" firstAttribute="top" secondItem="Ru4-rZ-APu" secondAttribute="top" id="sqZ-LI-lNZ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="ft5-uC-mya"/>
+            <point key="canvasLocation" x="17" y="-53"/>
+        </view>
+    </objects>
+</document>

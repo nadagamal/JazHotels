@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wEp-jz-E5u">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wEp-jz-E5u">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -71,7 +73,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Made with 💛 by DigiOwl" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jvk-Ex-U5t">
-                                <rect key="frame" x="109.5" y="548" width="101" height="10"/>
+                                <rect key="frame" x="110" y="548" width="101" height="10"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="8"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -197,7 +199,7 @@
                                                     <rect key="frame" x="15" y="22" width="22" height="19"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign out" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NV7-Uj-hvA">
-                                                    <rect key="frame" x="52" y="21" width="46" height="20.5"/>
+                                                    <rect key="frame" x="52" y="22.5" width="46" height="18"/>
                                                     <fontDescription key="fontDescription" name="MyanmarSangamMN" family="Myanmar Sangam MN" pointSize="13"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -227,7 +229,7 @@
                                                     <rect key="frame" x="15" y="25" width="26" height="13"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reservations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yVs-OQ-ZXB">
-                                                    <rect key="frame" x="56" y="21" width="71.5" height="20.5"/>
+                                                    <rect key="frame" x="56" y="22.5" width="73" height="18"/>
                                                     <fontDescription key="fontDescription" name="MyanmarSangamMN" family="Myanmar Sangam MN" pointSize="13"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -1160,7 +1162,7 @@ Alam Road, Red Sea, Egypt.</string>
                                                 <color key="textColor" red="0.45098039215686275" green="0.45098039215686275" blue="0.45098039215686275" alpha="0.56264378831595097" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZwV-PL-aSU" customClass="CosmosView" customModule="Cosmos">
+                                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZwV-PL-aSU" customClass="CosmosView" customModule="Cosmos">
                                                 <rect key="frame" x="90" y="128.5" width="120" height="20"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -1447,7 +1449,7 @@ Alam Road, Red Sea, Egypt.</string>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5JM-au-hWN">
-                                                                        <rect key="frame" x="4" y="29.5" width="30" height="32"/>
+                                                                        <rect key="frame" x="4.5" y="29.5" width="30" height="32"/>
                                                                         <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="16"/>
                                                                         <state key="normal" title="-">
                                                                             <color key="titleColor" red="0.70980392160000005" green="0.73333333329999995" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -1457,13 +1459,13 @@ Alam Road, Red Sea, Egypt.</string>
                                                                         </connections>
                                                                     </button>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jYr-Zs-76m">
-                                                                        <rect key="frame" x="42" y="35.5" width="6.5" height="20"/>
+                                                                        <rect key="frame" x="42.5" y="35.5" width="6.5" height="20"/>
                                                                         <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="16"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kiZ-9R-NOr">
-                                                                        <rect key="frame" x="56.5" y="29.5" width="30" height="32"/>
+                                                                        <rect key="frame" x="57" y="29.5" width="30" height="32"/>
                                                                         <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="16"/>
                                                                         <state key="normal" title="+">
                                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1505,7 +1507,7 @@ Alam Road, Red Sea, Egypt.</string>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Mo-SD-U2B">
-                                                                        <rect key="frame" x="4" y="29.5" width="30" height="32"/>
+                                                                        <rect key="frame" x="4.5" y="29.5" width="30" height="32"/>
                                                                         <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="16"/>
                                                                         <state key="normal" title="+">
                                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1515,13 +1517,13 @@ Alam Road, Red Sea, Egypt.</string>
                                                                         </connections>
                                                                     </button>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xyj-33-kY3">
-                                                                        <rect key="frame" x="42" y="35.5" width="6.5" height="20"/>
+                                                                        <rect key="frame" x="42.5" y="35.5" width="6.5" height="20"/>
                                                                         <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="16"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uqA-wj-Od9">
-                                                                        <rect key="frame" x="55.5" y="29.5" width="30" height="32"/>
+                                                                        <rect key="frame" x="56" y="29.5" width="30" height="32"/>
                                                                         <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="16"/>
                                                                         <state key="normal" title="-">
                                                                             <color key="titleColor" red="0.70980392160000005" green="0.73333333329999995" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -1947,25 +1949,25 @@ Alam Road, Red Sea, Egypt.</string>
                                                             <rect key="frame" x="10" y="0.0" width="87" height="160"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbj-tO-OED">
-                                                                    <rect key="frame" x="10" y="54" width="27" height="12"/>
+                                                                    <rect key="frame" x="12.5" y="54" width="23.5" height="12"/>
                                                                     <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="10"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2A-wl-kni">
-                                                                    <rect key="frame" x="10" y="71" width="48.5" height="21"/>
+                                                                    <rect key="frame" x="12.5" y="71" width="42" height="20"/>
                                                                     <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="17"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FA8-o9-2f1">
-                                                                    <rect key="frame" x="10" y="95" width="28" height="13"/>
+                                                                    <rect key="frame" x="12.5" y="94" width="26" height="13"/>
                                                                     <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="11"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/ Night" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3FU-Fy-8gI">
-                                                                    <rect key="frame" x="40" y="95.5" width="34.5" height="12"/>
+                                                                    <rect key="frame" x="40.5" y="94.5" width="30" height="12"/>
                                                                     <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="10"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -2003,13 +2005,13 @@ Alam Road, Red Sea, Egypt.</string>
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MvS-6Q-cv6">
-                                                            <rect key="frame" x="117" y="20" width="123" height="18.5"/>
+                                                            <rect key="frame" x="117" y="20" width="123" height="17.5"/>
                                                             <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="la8-dM-rQm">
-                                                            <rect key="frame" x="117" y="53.5" width="123" height="16"/>
+                                                            <rect key="frame" x="117" y="52.5" width="123" height="15.5"/>
                                                             <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="13"/>
                                                             <color key="textColor" red="0.45098039220000002" green="0.45098039220000002" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -2036,7 +2038,7 @@ Alam Road, Red Sea, Egypt.</string>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Quz-os-b27">
-                                                    <rect key="frame" x="95" y="155" width="150" height="25"/>
+                                                    <rect key="frame" x="95" y="156" width="150" height="24"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="150" id="vJd-eD-CDQ"/>
@@ -2055,7 +2057,7 @@ Alam Road, Red Sea, Egypt.</string>
                                                     </connections>
                                                 </button>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="closed" translatesAutoresizingMaskIntoConstraints="NO" id="YFd-QE-f9P">
-                                                    <rect key="frame" x="215.5" y="164.5" width="9" height="6"/>
+                                                    <rect key="frame" x="215.5" y="165" width="9" height="6"/>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2097,7 +2099,7 @@ Alam Road, Red Sea, Egypt.</string>
                                                     <rect key="frame" x="0.0" y="71" width="300" height="49"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24.01 USD" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.60000002384185791" translatesAutoresizingMaskIntoConstraints="NO" id="Lsz-Sp-EmJ">
-                                                            <rect key="frame" x="25" y="5" width="87.5" height="21"/>
+                                                            <rect key="frame" x="25" y="5" width="83" height="21"/>
                                                             <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -2113,7 +2115,7 @@ Alam Road, Red Sea, Egypt.</string>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/Night" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.60000002384185791" translatesAutoresizingMaskIntoConstraints="NO" id="I62-Ov-D8V">
-                                                            <rect key="frame" x="120.5" y="5" width="56" height="21"/>
+                                                            <rect key="frame" x="116" y="5" width="56" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="56" id="Nem-wF-u0w"/>
                                                                 <constraint firstAttribute="height" constant="21" id="PTZ-AJ-PzN"/>
@@ -2144,13 +2146,13 @@ Alam Road, Red Sea, Egypt.</string>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Family Room Queen" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="AGC-KU-mbi">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Family Room Queen" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="AGC-KU-mbi">
                                                     <rect key="frame" x="15" y="128" width="270" height="21"/>
                                                     <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.84999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="l6o-Mf-jOM">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.84999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="l6o-Mf-jOM">
                                                     <rect key="frame" x="15" y="159" width="270" height="59"/>
                                                     <string key="text">Family Room features queen bed (1.8 x 2 Sqm) sofa bed (0.8 x 1.9 Sqm) Family Room features queen bed (1.8 x 2 Sqm) sofa bed (0.8 x 1.9 Sqm)</string>
                                                     <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="12"/>
@@ -2587,7 +2589,7 @@ Alam Road, Red Sea, Egypt.</string>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Room Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="otN-ti-LFr">
-                                                    <rect key="frame" x="33" y="10" width="107" height="14"/>
+                                                    <rect key="frame" x="33" y="10" width="107" height="13"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="107" id="0Ur-7S-r6l"/>
                                                     </constraints>
@@ -2596,7 +2598,7 @@ Alam Road, Red Sea, Egypt.</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate plan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="one-z6-z6r">
-                                                    <rect key="frame" x="165.5" y="10" width="129.5" height="13.5"/>
+                                                    <rect key="frame" x="165.5" y="10" width="129.5" height="13"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="129.5" id="vIk-RD-3Q3"/>
                                                     </constraints>
@@ -2759,7 +2761,7 @@ Alam Road, Red Sea, Egypt.</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qxa-fX-ojj">
-                                                    <rect key="frame" x="234" y="31.5" width="0.0" height="0.0"/>
+                                                    <rect key="frame" x="234.5" y="31.5" width="0.0" height="0.0"/>
                                                     <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="16"/>
                                                     <color key="textColor" red="0.88235294119999996" green="0.75294117650000003" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -3507,6 +3509,6 @@ qAy1DMIM1wzcDOAM4gzkDOYM7wz0DPoNAg0EDQYNCA0KDQ8NFx6DHoUeih6YHpweox6oHrUeuB7FHsoe
         <image name="yt" width="28" height="28"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4Rn-y6-3ef"/>
+        <segue reference="hMQ-bl-nvx"/>
     </inferredMetricsTieBreakers>
 </document>

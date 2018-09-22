@@ -181,10 +181,10 @@ extension ProfileViewController : UITableViewDataSource , UITableViewDelegate , 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        if indexPath.row == 0
 //        {
-//            
+//
 //            let dialogViewController: ChooseBookingDateOptionDialogue = ChooseBookingDateOptionDialogue(nibName:"ChooseBookingDateOptionDialogue", bundle: nil)
 //            dialogViewController.delegate = self
-//            
+//
 //            self.presentDialogViewController(dialogViewController, animationPattern: LSAnimationPattern.zoomInOut, completion: { () -> Void in })
 //
 //        }

@@ -8,7 +8,7 @@
 import Foundation
 
 
-class MRTpaExtension : NSObject, NSCoding{
+class MRTPAExtension : NSObject, NSCoding{
 
 	var NightlyRate : [MRNightlyRate]!
 

@@ -13,7 +13,12 @@ import LSDialogViewController
 protocol UpdateProfile
 {
     func reloadProfile(user:UserProfile)
+}
 
+protocol changeBookingDates {
+    func getBookingDates(startDate:String,endDate:String,nights:String)
+    func getUserModifcation(choice:ModifyReservation)
+    func getUserAddationalRequest(request:String)
 }
 class ProfileViewController: UIViewController {
 
@@ -136,7 +141,7 @@ class ProfileViewController: UIViewController {
     }
   
 }
-extension ProfileViewController : UITableViewDataSource , UITableViewDelegate , UpdateProfile
+extension ProfileViewController : UITableViewDataSource , UITableViewDelegate , UpdateProfile , changeBookingDates
 {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "profile_cell", for: indexPath) as! ProfileCellTableViewCell
@@ -174,7 +179,17 @@ extension ProfileViewController : UITableViewDataSource , UITableViewDelegate , 
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 0 || indexPath.row == 2 || indexPath.row == 4
+//        if indexPath.row == 0
+//        {
+//
+//            let dialogViewController: ChooseBookingDateOptionDialogue = ChooseBookingDateOptionDialogue(nibName:"ChooseBookingDateOptionDialogue", bundle: nil)
+//            dialogViewController.delegate = self
+//
+//            self.presentDialogViewController(dialogViewController, animationPattern: LSAnimationPattern.zoomInOut, completion: { () -> Void in })
+//
+//        }
+//       else
+            if indexPath.row == 0 || indexPath.row == 2 || indexPath.row == 4
         {
             let dialogViewController: DropDownDialogue = DropDownDialogue(nibName:"DropDownDialogue", bundle: nil)
             dialogViewController.delegate = self
@@ -264,5 +279,30 @@ extension ProfileViewController : UITableViewDataSource , UITableViewDelegate , 
     func reloadProfile(user:UserProfile) {
         self.userData = user
         self.tableView.reloadData()
+    }
+    
+    func getBookingDates(startDate: String, endDate: String, nights: String) {
+        print(startDate)
+        print(endDate)
+    }
+    func getUserModifcation(choice: ModifyReservation) {
+        switch choice {
+        case .changeStayDates:
+            let dialogViewController: SelectBookingDateDialogue = SelectBookingDateDialogue(nibName:"SelectBookingDateDialogue", bundle: nil)
+            dialogViewController.delegate = self
+            self.presentDialogViewController(dialogViewController, animationPattern: LSAnimationPattern.zoomInOut, completion: { () -> Void in })
+
+            break
+        case .addtionalRequest:
+            let dialogViewController: AddCustomStayDateDailogue = AddCustomStayDateDailogue(nibName:"AddCustomStayDateDailogue", bundle: nil)
+            dialogViewController.delegate = self
+            self.presentDialogViewController(dialogViewController, animationPattern: LSAnimationPattern.zoomInOut, completion: { () -> Void in })
+            break
+      
+        }
+    }
+    
+    func getUserAddationalRequest(request: String) {
+        print(request)
     }
 }

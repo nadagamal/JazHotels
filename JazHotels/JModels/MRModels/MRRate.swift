@@ -14,7 +14,7 @@ class MRRate : NSObject, NSCoding{
 	var Fees : MRFee!
 	var Taxes : MRTaxe!
 	var Total : MRTotal!
-	var TpaExtensions : MRTpaExtension!
+	var TpaExtensions : MRTPAExtension!
 	var Rate : MRRate!
 
 
@@ -35,7 +35,7 @@ class MRRate : NSObject, NSCoding{
 			Total = MRTotal(fromDictionary: TotalData)
 		}
 		if let TpaExtensionsData = dictionary["Tpa_Extensions"] as? [String:Any]{
-			TpaExtensions = MRTpaExtension(fromDictionary: TpaExtensionsData)
+			TpaExtensions = MRTPAExtension(fromDictionary: TpaExtensionsData)
 		}
 		if let RateData = dictionary["Rate"] as? [String:Any]{
 			Rate = MRRate(fromDictionary: RateData)
@@ -79,7 +79,7 @@ class MRRate : NSObject, NSCoding{
          Fees = aDecoder.decodeObject(forKey: "Fees") as? MRFee
          Taxes = aDecoder.decodeObject(forKey: "Taxes") as? MRTaxe
          Total = aDecoder.decodeObject(forKey: "Total") as? MRTotal
-         TpaExtensions = aDecoder.decodeObject(forKey: "Tpa_Extensions") as? MRTpaExtension
+         TpaExtensions = aDecoder.decodeObject(forKey: "Tpa_Extensions") as? MRTPAExtension
          Rate = aDecoder.decodeObject(forKey: "Rate") as? MRRate
 
 	}

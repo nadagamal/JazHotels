@@ -11,9 +11,7 @@ import Foundation
 class MRAddres : NSObject, NSCoding{
 
 	var AddressLine : [String]!
-	var CityName : AnyObject!
 	var CountryName : MRCountryName!
-	var PostalCode : AnyObject!
 	var StateProv : MRStateProv!
 	var DefaultInd : Bool!
 	var FormattedInd : Bool!
@@ -26,11 +24,9 @@ class MRAddres : NSObject, NSCoding{
 	 */
 	init(fromDictionary dictionary: [String:Any]){
 		AddressLine = dictionary["AddressLine"] as? [String]
-		CityName = dictionary["CityName"] as? AnyObject
 		if let CountryNameData = dictionary["CountryName"] as? [String:Any]{
 			CountryName = MRCountryName(fromDictionary: CountryNameData)
 		}
-		PostalCode = dictionary["PostalCode"] as? AnyObject
 		if let StateProvData = dictionary["StateProv"] as? [String:Any]{
 			StateProv = MRStateProv(fromDictionary: StateProvData)
 		}
@@ -49,14 +45,8 @@ class MRAddres : NSObject, NSCoding{
 		if AddressLine != nil{
 			dictionary["AddressLine"] = AddressLine
 		}
-		if CityName != nil{
-			dictionary["CityName"] = CityName
-		}
 		if CountryName != nil{
 			dictionary["CountryName"] = CountryName.toDictionary()
-		}
-		if PostalCode != nil{
-			dictionary["PostalCode"] = PostalCode
 		}
 		if StateProv != nil{
 			dictionary["StateProv"] = StateProv.toDictionary()
@@ -83,9 +73,7 @@ class MRAddres : NSObject, NSCoding{
     @objc required init(coder aDecoder: NSCoder)
 	{
          AddressLine = aDecoder.decodeObject(forKey: "AddressLine") as? [String]
-         CityName = aDecoder.decodeObject(forKey: "CityName") as? AnyObject
          CountryName = aDecoder.decodeObject(forKey: "CountryName") as? MRCountryName
-         PostalCode = aDecoder.decodeObject(forKey: "PostalCode") as? AnyObject
          StateProv = aDecoder.decodeObject(forKey: "StateProv") as? MRStateProv
          DefaultInd = aDecoder.decodeObject(forKey: "_DefaultInd") as? Bool
          FormattedInd = aDecoder.decodeObject(forKey: "_FormattedInd") as? Bool

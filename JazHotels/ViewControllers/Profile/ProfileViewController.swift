@@ -58,20 +58,12 @@ class ProfileViewController: UIViewController {
     fileprivate var genderList:[String] = ["Male","Female"]
     fileprivate var titleList:[String] = ["Mr.","Mrs.","Miss.","Pr.","Prof.","Dr.","Rev."]
 
-    
-    override func viewWillLayoutSubviews()  {
-
-    }
-    override func viewDidAppear(_ animated: Bool) {
-        let navigationBar = navigationController!.navigationBar
-        navigationBar.setBackgroundImage(UIImage(),
-                                         for: .default)
-        navigationBar.shadowImage = UIImage()
-
-    }
+   
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         
+        super.viewWillAppear(animated)
+        self.navigationController?.setTransparentNavigation()
+
         if !UserDefaults.isKeyPresentInUserDefaults(key: HotelJazConstants.userDefault.userData)
         {
             self.navigationController?.present(LoginViewController.create(), animated: true, completion: nil)
@@ -96,9 +88,9 @@ class ProfileViewController: UIViewController {
     @IBAction func menuBtnAction(_ sender: Any) {
         
         
-        
-        
     }
+    
+    
     
     @objc private func getProfile(notification: Notification) {
         
@@ -112,27 +104,6 @@ class ProfileViewController: UIViewController {
     @objc public static func create() -> ProfileViewController {
         
         return UIStoryboard(name: HotelJazConstants.StoryBoard.authSB, bundle: Bundle.main).instantiateViewController(withIdentifier: String(describing: self)) as! ProfileViewController
-    }
-
- 
-    @IBAction func creditNumberChanged(_ sender: Any) {
-        self.userData?.userCardPayment?.cardNumber  = userCreditNumber.text!
-        UserOperation.updateUser(user: self.userData!)
-    }
-    @IBAction func phoneNumberChange(_ sender: Any) {
-        self.userData?.userContact?.phoneNumbers  = userMobile.text!
-        UserOperation.updateUser(user: self.userData!)
-
-    }
-    
-    @IBAction func cityChange(_ sender: Any) {
-        self.userData?.userAddress?.city  = userCity.text!
-        UserOperation.updateUser(user: self.userData!)
-    }
-    
-    @IBAction func areaChange(_ sender: Any) {
-        self.userData?.userAddress?.fullAddress  = userAddress.text!
-        UserOperation.updateUser(user: self.userData!)
     }
   
     override func didReceiveMemoryWarning() {

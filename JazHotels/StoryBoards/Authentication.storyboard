@@ -218,7 +218,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="M62-yI-JNf" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="account-icon" landscapeImage="account-icon" largeContentSizeImage="account-icon" id="HFY-kr-8Jw"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Lld-6k-uZn">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Lld-6k-uZn">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.50588235290000005" green="0.2156862745" blue="0.58431372550000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -239,14 +239,14 @@
             <objects>
                 <viewController id="yUg-Rp-nil" customClass="ProfileViewController" customModule="JazHotels" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JT8-eg-4xg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headBg" translatesAutoresizingMaskIntoConstraints="NO" id="hJv-bD-KKr">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="172.5"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="190.5"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoSplash" translatesAutoresizingMaskIntoConstraints="NO" id="U3n-ef-Ane">
-                                <rect key="frame" x="117" y="21.5" width="140" height="50"/>
+                                <rect key="frame" x="117" y="94.5" width="140" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="0Zb-S6-qXz"/>
                                     <constraint firstAttribute="height" constant="50" id="Dso-e4-tZ8"/>
@@ -261,7 +261,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5rw-du-Moh">
-                                <rect key="frame" x="0.0" y="172.5" width="375" height="430.5"/>
+                                <rect key="frame" x="0.0" y="254.5" width="375" height="412.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="UV5-p6-7yt">
                                     <rect key="frame" x="0.0" y="87" width="375" height="44"/>

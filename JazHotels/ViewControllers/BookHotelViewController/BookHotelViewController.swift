@@ -19,7 +19,7 @@ class BookHotelViewController: UIViewController {
     var roomNum:String!
     var childNum:String!
     var adultsNum:String!
-
+    var userData:UserProfile!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,6 +27,10 @@ class BookHotelViewController: UIViewController {
         tableView.register(UINib(nibName: "CreditCardCell", bundle: nil), forCellReuseIdentifier: "CreditCardCell")
 
 //       tableView.register(UINib(nibName: "CreditCardCell", bundle: nil), forCellReuseIdentifier: "CreditCardCell")
+        //tableView.tableFooterView = UIView()
+        tableView.tableHeaderView = UIView()
+    userData = UserDefaults.getObjectDefault(key: HotelJazConstants.userDefault.userData) as? UserProfile
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,7 +53,11 @@ class BookHotelViewController: UIViewController {
     */
     @IBAction func confirmReservationAction(_ sender: Any) {
     }
-    
+    @objc func editBtnPressed(sender:UIButton){
+        let indexPath = NSIndexPath(row: 0, section: 0)
+        let cell = tableView.cellForRow(at: indexPath as IndexPath) as! CreditCardCell
+        cell.cardNameTxt .becomeFirstResponder()
+    }
 }
 extension BookHotelViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -57,32 +65,38 @@ extension BookHotelViewController:UITableViewDelegate,UITableViewDataSource{
         
         if indexPath.row == 0{
            let cell = tableView.dequeueReusableCell(withIdentifier: "CreditCardCell") as! CreditCardCell
+            if userData.userCardPayment != nil{
+                cell.cardNameTxt.text = userData.userCardPayment?.cardHolderName
+                cell.cardNumberTxt.text = userData.userCardPayment?.cardNumber
+                cell.cvcTxt.text = userData.userCardPayment?.cardCode
+                cell.cardExpirationDateTxt.text = userData.userCardPayment?.expireDate
+            }
             return cell
         }
         else  if indexPath.row == 1{
-            cell = tableView.dequeueReusableCell(withIdentifier: "CardNumberCell") as! TxtViewCell
+           let cell = tableView.dequeueReusableCell(withIdentifier: "CardEditBtnCell") as! InfoCell
+            cell.editCreditCardBtn.addTarget(self, action: #selector(editBtnPressed), for: .touchUpInside)
+            return cell
+
         }
         else  if indexPath.row == 2{
-            cell = tableView.dequeueReusableCell(withIdentifier: "CardDetailsCell") as! TxtViewCell
+            cell = tableView.dequeueReusableCell(withIdentifier: "ArrivalDateCell") as! InfoCell
+            return cell
+
         }
         else  if indexPath.row == 3{
-            cell = tableView.dequeueReusableCell(withIdentifier: "CardEditBtnCell") as! InfoCell
-        }
-        else  if indexPath.row == 4{
-            cell = tableView.dequeueReusableCell(withIdentifier: "ArrivalDateCell") as! InfoCell
-        }
-        else  if indexPath.row == 5{
             let cell = tableView.dequeueReusableCell(withIdentifier: "CancellationCell") as! InfoCell
             cell.cancellationsTxt.text = ratePlan.cancelPenalties.cancelPenalty.penaltyDescription.text.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
             return cell
         }
-        else  if indexPath.row == 6{
+        else  if indexPath.row == 4{
            let cell = tableView.dequeueReusableCell(withIdentifier: "BookingCell") as! InfoCell
             cell.bookingTxt.text = ratePlan.guarantee.guaranteeDescription.text.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
             return cell
         }
-        else  if indexPath.row == 7{
+        else  if indexPath.row == 5{
             cell = tableView.dequeueReusableCell(withIdentifier: "CheckCell") as! InfoCell
+            return cell
         }
         return cell
     }
@@ -90,17 +104,20 @@ extension BookHotelViewController:UITableViewDelegate,UITableViewDataSource{
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 8
+        return 6
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0 {
             return 185.0
         }
-        else if indexPath.row == 1 || indexPath.row == 2 || indexPath.row == 3{
-           return 75
+        else  if indexPath.row == 1 {
+            return 65.0
         }
-        else  if indexPath.row == 4 || indexPath.row == 5 || indexPath.row == 6 {
-            return 95
+        else if indexPath.row == 3{
+            return 100
+        }
+        else if indexPath.row == 2 || indexPath.row == 4 {
+            return 150
         }
       return 70
     }

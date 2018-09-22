@@ -17,13 +17,13 @@ class UserOperation: NSObject {
         
         if UserDefaults.isKeyPresentInUserDefaults(key: HotelJazConstants.userDefault.userData)
         {
-            let userData = UserDefaults.getUserDefault(key: HotelJazConstants.userDefault.userData) as! UserProfile
-            
-            userData.userCardPayment =  paymentCard
+//            let userData = UserDefaults.getUserDefault(key: HotelJazConstants.userDefault.userData) as? UserProfile
+            let userData = UserDefaults.getObjectDefault(key: HotelJazConstants.userDefault.userData) as? UserProfile
+            userData?.userCardPayment =  paymentCard
             
             UserDefaults.saveObjectDefault(key: HotelJazConstants.userDefault.userData, value: userData)
             
-            db.collection("users").document(userData.userId ?? "").setData(userData.toDictionary()) { err in
+            db.collection("users").document(userData!.userId ?? "").setData(userData?.toDictionary() ?? [:]) { err in
                 if let err = err {
                     print("Error writing document: \(err)")
                 } else {

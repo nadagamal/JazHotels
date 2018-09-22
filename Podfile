@@ -35,6 +35,7 @@ target 'JazHotels' do
     pod 'Caishen'
     pod 'CardIO'
     #pod "WASHD"
+    pod 'FormTextField'
 
     # Pods for FirebaseAuth
     pod 'Firebase/Auth'

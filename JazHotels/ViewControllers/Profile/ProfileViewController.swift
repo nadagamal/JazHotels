@@ -181,18 +181,18 @@ extension ProfileViewController : UITableViewDataSource , UITableViewDelegate
             if indexPath.row == 0 // update title
             {
                 dialogViewController.optionArray = titleList
-                dialogViewController.optionId = [0...6]
+                dialogViewController.optionId = Array(repeating: 0, count: titleList.count)
 
             }
             else if indexPath.row == 2 // update gender
             {
                 dialogViewController.optionArray = genderList
-                dialogViewController.optionId = [0,1]
+                dialogViewController.optionId = Array(repeating: 0, count: genderList.count)
             }
             else
             {
                 dialogViewController.optionArray = countries
-                dialogViewController.optionId = []
+                dialogViewController.optionId = Array(repeating: 0, count: countries.count)
 
             }
             self.presentDialogViewController(dialogViewController, animationPattern: LSAnimationPattern.zoomInOut, completion: { () -> Void in })

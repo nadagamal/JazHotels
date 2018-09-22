@@ -7,7 +7,8 @@
 //
 
 import UIKit
-
+import SCLAlertView
+import SVProgressHUD
 class BookHotelViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var roomType:JCRoomType!
@@ -51,7 +52,42 @@ class BookHotelViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func bookRoom(state:String,completion:  @escaping (_ :CBReservation?) -> Void){
+        BookingAPIManager().reserveRoom(numberOfAdults: adultsNum, numberOfChild: childNum, numberOfRooms: roomNum, roomTypeCode: roomType.roomTypeCode, ratePlanCode: ratePlan.ratePlanCode, checkInDate: checkInDate, checkOutDate: checkOutDate, hotelCode: hotelCode, chainCode: chainCode, creditCardNum: userData.userCardPayment?.cardNumber?.replacingOccurrences(of: " ", with: "", options: .literal, range: nil) ?? "", creditCardExpireDate: userData.userCardPayment?.expireDate ?? "", cardNameHolder: userData.userCardPayment?.cardHolderName ?? "", state: state) { (response, error) in
+            if (response?.body.oTAHotelResRS.errors != nil && response?.body.oTAHotelResRS.errors.error != nil && response?.body.oTAHotelResRS.errors.error.shortText != nil){
+                DispatchQueue.main.async {
+                    SVProgressHUD.dismiss()
+                    SCLAlertView().showError("Error", subTitle: response?.body.oTAHotelResRS.errors.error.shortText ?? "")
+                    
+                }
+            }
+            else{
+               // SCLAlertView().showSuccess("", subTitle: "Modification Successed")
+                completion(response)
+            }
+        }
+    }
     @IBAction func confirmReservationAction(_ sender: Any) {
+        if userData.userCardPayment?.cardHolderName != nil && userData.userCardPayment?.cardNumber != nil && (userData.userCardPayment?.cardNumber?.count)! >= 14 && userData.userCardPayment?.cardCode != nil && userData.userCardPayment?.expireDate != nil{
+        SVProgressHUD.show()
+            self.bookRoom(state: "Initiate") { (response) in
+                DispatchQueue.main.async {
+                    self.bookRoom(state: "commit") { (response) in
+                        DispatchQueue.main.async {
+                        SCLAlertView().showSuccess("", subTitle: "Done")
+                        }
+                        
+                    }
+                }
+
+            }
+    
+        }
+        else{
+            SCLAlertView().showWarning("", subTitle: "Please Fill Missing Fields")
+
+        }
     }
     @objc func editBtnPressed(sender:UIButton){
         let indexPath = NSIndexPath(row: 0, section: 0)
@@ -80,21 +116,16 @@ extension BookHotelViewController:UITableViewDelegate,UITableViewDataSource{
 
         }
         else  if indexPath.row == 2{
-            cell = tableView.dequeueReusableCell(withIdentifier: "ArrivalDateCell") as! InfoCell
-            return cell
-
-        }
-        else  if indexPath.row == 3{
             let cell = tableView.dequeueReusableCell(withIdentifier: "CancellationCell") as! InfoCell
             cell.cancellationsTxt.text = ratePlan.cancelPenalties.cancelPenalty.penaltyDescription.text.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
             return cell
         }
-        else  if indexPath.row == 4{
+        else  if indexPath.row == 3{
            let cell = tableView.dequeueReusableCell(withIdentifier: "BookingCell") as! InfoCell
             cell.bookingTxt.text = ratePlan.guarantee.guaranteeDescription.text.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
             return cell
         }
-        else  if indexPath.row == 5{
+        else  if indexPath.row == 4{
             cell = tableView.dequeueReusableCell(withIdentifier: "CheckCell") as! InfoCell
             return cell
         }
@@ -104,7 +135,7 @@ extension BookHotelViewController:UITableViewDelegate,UITableViewDataSource{
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return 5
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0 {
@@ -113,10 +144,10 @@ extension BookHotelViewController:UITableViewDelegate,UITableViewDataSource{
         else  if indexPath.row == 1 {
             return 65.0
         }
-        else if indexPath.row == 3{
+        else if indexPath.row == 2{
             return 100
         }
-        else if indexPath.row == 2 || indexPath.row == 4 {
+        else if indexPath.row == 3 {
             return 150
         }
       return 70

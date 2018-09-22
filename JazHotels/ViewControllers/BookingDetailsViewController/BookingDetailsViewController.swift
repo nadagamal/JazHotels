@@ -10,7 +10,7 @@ import UIKit
 import Kingfisher
 import SCLAlertView
 import LSDialogViewController
-
+import SVProgressHUD
 class BookingDetailsViewController: UIViewController,changeBookingDates {
     
     @IBOutlet weak var tableView: UITableView!
@@ -90,16 +90,21 @@ class BookingDetailsViewController: UIViewController,changeBookingDates {
         if reservationItem.roomStays.roomStay.ratePlans != nil && reservationItem.roomStays.roomStay.ratePlans.count>0{
             ratePlanCode = reservationItem.roomStays.roomStay.ratePlans[0].ratePlanCode
         }
+        SVProgressHUD.show()
+
         BookingAPIManager().modifyReservation(numberOfAdults: adultNum, numberOfChild: childNum, numberOfRooms: reservationItem.roomStays.roomStay.roomTypes.roomType?.numberOfUnits ?? "", roomTypeCode: reservationItem.roomStays.roomStay.roomTypes.roomType.roomTypeCode, ratePlanCode: ratePlanCode, checkInDate: startDate, checkOutDate: endDate, hotelCode: reservationItem.roomStays.roomStay.basicPropertyInfo.hotelCode, chainCode: reservationItem.roomStays.roomStay.basicPropertyInfo.chainCode, confirmationId: reservationItem.uniqueID.iD,comments: "") { (response, error) in
             if response?.Body.OTAHotelResModifyRS.errors != nil && response?.Body.OTAHotelResModifyRS.errors.error != nil && response?.Body.OTAHotelResModifyRS.errors.error.shortText != nil{
                 DispatchQueue.main.async {
+                    SVProgressHUD.dismiss()
                     SCLAlertView().showError("Error", subTitle: response?.Body.OTAHotelResModifyRS.errors.error.shortText ?? "")
 
                 }
             }
             else{
-                SCLAlertView().showSuccess("", subTitle: "Modification Successed")
-
+                DispatchQueue.main.async {
+                    SVProgressHUD.dismiss()
+                    SCLAlertView().showSuccess("", subTitle: "Modification Successed")
+                }
             }
             
         }
@@ -144,15 +149,22 @@ class BookingDetailsViewController: UIViewController,changeBookingDates {
         if reservationItem.roomStays.roomStay.ratePlans != nil && reservationItem.roomStays.roomStay.ratePlans.count>0{
             ratePlanCode = reservationItem.roomStays.roomStay.ratePlans[0].ratePlanCode
         }
+        SVProgressHUD.show()
+
         BookingAPIManager().modifyReservation(numberOfAdults: adultNum, numberOfChild: childNum, numberOfRooms: reservationItem.roomStays.roomStay.roomTypes.roomType?.numberOfUnits ?? "", roomTypeCode: reservationItem.roomStays.roomStay.roomTypes.roomType.roomTypeCode, ratePlanCode: ratePlanCode, checkInDate: startDate ?? "", checkOutDate: endDate ?? "", hotelCode: reservationItem.roomStays.roomStay.basicPropertyInfo.hotelCode, chainCode: reservationItem.roomStays.roomStay.basicPropertyInfo.chainCode, confirmationId: reservationItem.uniqueID.iD,comments: request) { (response, error) in
             if (response?.Body.OTAHotelResModifyRS.errors != nil && response?.Body.OTAHotelResModifyRS.errors.error != nil && response?.Body.OTAHotelResModifyRS.errors.error.shortText != nil) || response?.Body.OTAHotelResModifyRS.ResResponseType == "Unsuccessful"{
                 DispatchQueue.main.async {
+                    SVProgressHUD.dismiss()
+
                     SCLAlertView().showError("Error", subTitle: response?.Body.OTAHotelResModifyRS.errors.error.shortText ?? "")
                     
                 }
             }
             else{
-                SCLAlertView().showSuccess("", subTitle: "Modification Successed")
+                DispatchQueue.main.async {
+                    SVProgressHUD.dismiss()
+                    SCLAlertView().showSuccess("", subTitle: "Modification Successed")
+                }
                 
             }
             

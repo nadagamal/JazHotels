@@ -19,27 +19,16 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="183.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CVC" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4fy-eO-AfA" customClass="CVCInputTextField" customModule="Caishen">
-                        <rect key="frame" x="250" y="133.5" width="50" height="30"/>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="CVC" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4fy-eO-AfA" customClass="FormTextField" customModule="FormTextField">
+                        <rect key="frame" x="267" y="133.5" width="33" height="30"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="30" id="s8P-mH-84z"/>
                         </constraints>
                         <nil key="textColor"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
-                                <integer key="value" value="4"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="color" keyPath="invalidInputColor">
-                                <color key="value" red="1" green="0.20685251090000001" blue="0.2024811658" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                        <connections>
-                            <outlet property="delegate" destination="-1" id="ToN-Lz-jBl"/>
-                        </connections>
                     </textField>
-                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Card Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Edc-Bj-XQh" customClass="NumberInputTextField" customModule="Caishen">
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Card Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Edc-Bj-XQh" customClass="FormTextField" customModule="FormTextField">
                         <rect key="frame" x="20" y="83.5" width="280" height="30"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="30" id="sOK-R2-Na4"/>
@@ -47,37 +36,18 @@
                         <nil key="textColor"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="string" keyPath="format" value="x"/>
-                            <userDefinedRuntimeAttribute type="string" keyPath="validation" value="Error"/>
-                            <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
-                                <integer key="value" value="16"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="string" keyPath="cardNumberSeparator" value="xxxxxxxxxxxxxx"/>
-                            <userDefinedRuntimeAttribute type="color" keyPath="invalidInputColor">
-                                <color key="value" red="1" green="0.20685251090000001" blue="0.2024811658" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
                     </textField>
-                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Card Holder Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m3o-3Y-fav" customClass="MonthInputTextField" customModule="Caishen">
-                        <rect key="frame" x="20" y="133.5" width="40" height="30"/>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Expiration Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m3o-3Y-fav" customClass="FormTextField" customModule="FormTextField">
+                        <rect key="frame" x="20" y="133.5" width="102.5" height="30"/>
                         <constraints>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="TGr-7U-5au"/>
                             <constraint firstAttribute="height" constant="30" id="hI7-lY-f8z"/>
-                            <constraint firstAttribute="width" constant="40" id="rIK-OO-6Le"/>
                         </constraints>
                         <nil key="textColor"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="invalidInputColor">
-                                <color key="value" red="1" green="0.20685251090000001" blue="0.2024811658" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
-                                <integer key="value" value="2"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
                     </textField>
-                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Card Holder Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nLG-DW-4Z5">
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Card Holder Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nLG-DW-4Z5" customClass="FormTextField" customModule="FormTextField">
                         <rect key="frame" x="20" y="33.5" width="280" height="30"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="30" id="rmd-pY-e9M"/>
@@ -86,31 +56,11 @@
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
-                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Card Holder Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kn4-2f-S8a" customClass="YearInputTextField" customModule="Caishen">
-                        <rect key="frame" x="63" y="133.5" width="40" height="30"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="40" id="132-wI-Bk4"/>
-                            <constraint firstAttribute="height" constant="30" id="q4R-5C-t5K"/>
-                        </constraints>
-                        <nil key="textColor"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <textInputTraits key="textInputTraits"/>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="invalidInputColor">
-                                <color key="value" red="1" green="0.20685251090000001" blue="0.2024811658" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
-                                <integer key="value" value="2"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                    </textField>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="4fy-eO-AfA" secondAttribute="bottom" constant="20" id="351-zj-Lly"/>
                     <constraint firstItem="Edc-Bj-XQh" firstAttribute="top" secondItem="nLG-DW-4Z5" secondAttribute="bottom" constant="20" id="5Rj-5k-4F7"/>
                     <constraint firstItem="4fy-eO-AfA" firstAttribute="top" secondItem="Edc-Bj-XQh" secondAttribute="bottom" constant="20" id="5Zp-Xj-ErR"/>
-                    <constraint firstAttribute="bottom" secondItem="Kn4-2f-S8a" secondAttribute="bottom" constant="20" id="93u-eT-IpF"/>
-                    <constraint firstItem="m3o-3Y-fav" firstAttribute="width" secondItem="Kn4-2f-S8a" secondAttribute="width" id="DGG-AO-Ddn"/>
                     <constraint firstItem="4fy-eO-AfA" firstAttribute="trailing" secondItem="Edc-Bj-XQh" secondAttribute="trailing" id="DlG-Pg-A3q"/>
                     <constraint firstItem="Edc-Bj-XQh" firstAttribute="trailing" secondItem="nLG-DW-4Z5" secondAttribute="trailing" id="EPI-PS-LOk"/>
                     <constraint firstItem="Edc-Bj-XQh" firstAttribute="width" secondItem="nLG-DW-4Z5" secondAttribute="width" id="NBA-7C-6DX"/>
@@ -118,17 +68,15 @@
                     <constraint firstAttribute="bottom" secondItem="m3o-3Y-fav" secondAttribute="bottom" constant="20" id="RA2-Up-bLr"/>
                     <constraint firstAttribute="trailing" secondItem="nLG-DW-4Z5" secondAttribute="trailing" constant="20" id="aep-FH-Ed6"/>
                     <constraint firstItem="nLG-DW-4Z5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="qRw-u7-Y6Y"/>
-                    <constraint firstItem="Kn4-2f-S8a" firstAttribute="leading" secondItem="m3o-3Y-fav" secondAttribute="trailing" constant="3" id="ukw-NJ-baP"/>
                     <constraint firstItem="Edc-Bj-XQh" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="wd7-Nn-gcq"/>
                     <constraint firstItem="Edc-Bj-XQh" firstAttribute="leading" secondItem="m3o-3Y-fav" secondAttribute="leading" id="zEq-8N-DyR"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="cardMonthTxt" destination="m3o-3Y-fav" id="DQj-SG-4zW"/>
+                <outlet property="cardExpirationDateTxt" destination="m3o-3Y-fav" id="W2n-xu-4Jv"/>
                 <outlet property="cardNameTxt" destination="nLG-DW-4Z5" id="5lc-R2-oxI"/>
                 <outlet property="cardNumberTxt" destination="Edc-Bj-XQh" id="emN-DH-y6z"/>
-                <outlet property="cardYearTxt" destination="Kn4-2f-S8a" id="deJ-79-BsF"/>
                 <outlet property="cvcTxt" destination="4fy-eO-AfA" id="QyB-d4-ghG"/>
             </connections>
             <point key="canvasLocation" x="137.59999999999999" y="193.4032983508246"/>

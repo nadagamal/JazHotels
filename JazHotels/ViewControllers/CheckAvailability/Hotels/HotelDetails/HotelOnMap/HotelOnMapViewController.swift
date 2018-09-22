@@ -17,19 +17,25 @@ class HotelOnMapViewController: UIViewController {
     fileprivate var annotation: MKAnnotation!
     var roomStays: [JCRoomStay] = []
     var hotelsLocation:[Location] = []
+    var userInfo:Dictionary<String, Any>!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(self.updateHotelListCoordinates(notification:)), name: Notification.Name("getHotelListInfo"), object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(self.updateHotelListCoordinates(notification:)), name: Notification.Name("getHotelListInfo"), object: nil)
+     
 
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        NotificationCenter.default.addObserver(self, selector: #selector(self.updateHotelListCoordinates(notification:)), name: Notification.Name("getHotelListInfo"), object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(self.updateHotelListCoordinates(notification:)), name: Notification.Name("getHotelListInfo"), object: nil)
 
         self.navigationController?.navigationBar.isHidden = false
 
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        if userInfo != nil{
+            updateHotelListCoordinates()
+        }
     }
     @objc public static func create() -> HotelOnMapViewController {
         
@@ -39,10 +45,10 @@ class HotelOnMapViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    @objc func updateHotelListCoordinates(notification: Notification){
+    @objc func updateHotelListCoordinates(){
         
-        self.roomStays = (notification.userInfo!["roomStays"] as? [JCRoomStay])!
-        let hotelName = notification.userInfo!["hotelTitle"] as? String
+        self.roomStays = (userInfo!["roomStays"] as? [JCRoomStay])!
+        let hotelName = userInfo!["hotelTitle"] as? String
 
         for (_,hotel) in (roomStays.enumerated())
         {
@@ -57,9 +63,19 @@ class HotelOnMapViewController: UIViewController {
         for (index,item) in hotelsLocation.enumerated()
         {
         
-            map.addAnnotation(HotelMapDetailsView(hotelName:hotelName ?? "", hotelLocation:roomStays[index].basicPropertyInfo.hotelName, coordinate:CLLocationCoordinate2D(latitude: item.latitude, longitude:item.longtitude), image:#imageLiteral(resourceName: "Splash")))
+            DispatchQueue.main.async {
+                
+//                self.map.addAnnotation(HotelMapDetailsView(hotelName:hotelName ?? "", hotelLocation:self.roomStays[index].basicPropertyInfo.hotelName, coordinate:CLLocationCoordinate2D(latitude: item.latitude, longitude:item.longtitude), image:#imageLiteral(resourceName: "Splash")))
+                let myAnnotation: MKPointAnnotation = MKPointAnnotation()
+                myAnnotation.coordinate = CLLocationCoordinate2DMake(item.latitude, item.longtitude);
+                myAnnotation.title = self.roomStays[index].basicPropertyInfo.hotelName
+                self.map.addAnnotation(myAnnotation)
+
+            }
 
         }
+//        NotificationCenter.default.removeObserver(self, name: Notification.Name("getHotelListInfo"), object: nil)
+
         
     }
     func resizeImage(image: UIImage, newWidth: CGFloat) -> UIImage {

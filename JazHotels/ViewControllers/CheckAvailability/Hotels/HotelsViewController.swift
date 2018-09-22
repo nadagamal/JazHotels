@@ -16,6 +16,13 @@ class HotelsViewController: UIViewController {
     var roomStayInfo: JCBasicPropertyInfo?
     var roomInfoList: [JCCriterion]?
     var hotelTitle:String?
+    var checkInDate:String!
+    var checkOutDate:String!
+    var chainCode:String!
+    var hotelCode:String!
+    var roomNum:String!
+    var childNum:String!
+    var adultsNum:String!
     @IBOutlet weak var hotelListBtn: UIButton!
     @IBOutlet weak var viewOnMapBtn: UIButton!
     
@@ -64,4 +71,16 @@ class HotelsViewController: UIViewController {
         
         return UIStoryboard(name: HotelJazConstants.StoryBoard.mainSB, bundle: Bundle.main).instantiateViewController(withIdentifier: String(describing: self)) as! HotelsViewController
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "HotelsListSegue"{
+            let hotelView = segue.destination as! HotelListViewController
+            hotelView.checkInDate = self.checkInDate
+            hotelView.checkOutDate = self.checkOutDate
+            hotelView.adultsNum = self.adultsNum
+            hotelView.childNum = self.childNum
+            hotelView.roomNum = self.roomNum
+            hotelView.chainCode = "16401"
+        }
+    }
+
 }

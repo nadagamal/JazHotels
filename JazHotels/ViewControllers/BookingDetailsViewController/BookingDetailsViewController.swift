@@ -7,10 +7,10 @@
 //
 
 import UIKit
-
+import Kingfisher
 class BookingDetailsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
-    
+    var reservationItem:JBHotelReservation!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -46,13 +46,29 @@ extension BookingDetailsViewController:UITableViewDataSource,UITableViewDelegate
         var cell:UITableViewCell!
         
         if indexPath.row == 0{
-            cell = tableView.dequeueReusableCell(withIdentifier: "HotelDetailsCell") as! HotelTableViewCell            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "HotelDetailsCell") as! HotelTableViewCell
+            cell.hotel_name.text = reservationItem.roomStays.roomStay.basicPropertyInfo.hotelName
+            cell.hotel_place.text = reservationItem.roomStays.roomStay.basicPropertyInfo.address.cityName
+            if  JazHotels.hotelsImages![reservationItem.roomStays.roomStay.basicPropertyInfo.hotelCode!]?[0] != nil{
+                let imageURL = URL(string: ((JazHotels.hotelsImages![reservationItem.roomStays.roomStay.basicPropertyInfo.hotelCode!]?[0])!))
+                cell.hotel_img.kf.indicatorType = .activity
+                cell.hotel_img.kf.setImage(with: imageURL, placeholder: UIImage(named: "jazLauncherLogo"), options: [.transition(ImageTransition.fade(0.7))], progressBlock: nil, completionHandler: nil)
+            }
+            return cell
         }
         else if indexPath.row == 1{
-            cell = tableView.dequeueReusableCell(withIdentifier: "DateCell")
+           let cell = tableView.dequeueReusableCell(withIdentifier: "DateCell") as! BookingDetailsCell
+            cell.leftValueLbl.text = reservationItem.roomStays.roomStay.timeSpan.start
+            cell.rightValueLbl.text = reservationItem.roomStays.roomStay.timeSpan.end
+            return cell
         }
         else  if indexPath.row == 2{
-            cell = tableView.dequeueReusableCell(withIdentifier: "RatePlanCell")
+            let cell = tableView.dequeueReusableCell(withIdentifier: "RatePlanCell") as! BookingDetailsCell
+            cell.leftValueLbl.text = reservationItem.roomStays.roomStay.roomTypes.roomType.roomDescription.name
+            if reservationItem.roomStays.roomStay.roomTypes.roomType.additionalDetails != nil && reservationItem.roomStays.roomStay.roomTypes.roomType.additionalDetails.additionalDetail.count > 0{
+             cell.rightValueLbl.text = reservationItem.roomStays.roomStay.roomTypes.roomType.additionalDetails.additionalDetail[0].detailDescription.text
+            }
+            
         }
         else  if indexPath.row == 3{
             cell = tableView.dequeueReusableCell(withIdentifier: "RoomDetailsCell")

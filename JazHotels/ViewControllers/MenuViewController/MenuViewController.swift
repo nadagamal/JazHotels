@@ -15,6 +15,7 @@ class MenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.tableFooterView = UIView()
+        self.navigationController?.navigationBar.tintColor = UIColor.white
     }
 
     override func didReceiveMemoryWarning() {

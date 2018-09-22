@@ -390,20 +390,20 @@ class CheckAvailabilityViewController: UIViewController , UIScrollViewDelegate {
                     }
                     else
                     {
+                        DispatchQueue.main.async {
                         let hotelView = HotelsViewController.create()
                         hotelView.roomInfoList = roomInfoList
                         hotelView.roomStayInfo = roomStayInfo
                         hotelView.roomStays = roomStays
                         hotelView.hotelTitle = self.selectedHotelTitle
-                        
-
-                        //                        hotelView.roomPrice = price
-                        //                    hotelView.roomCurrency = currency
-                        //                    hotelView.rooms = hotelRooms
-                        DispatchQueue.main.async {
-
+                        hotelView.checkInDate = Helper.convertDateFormatter(date: self.startDate ?? "")
+                        hotelView.checkOutDate = Helper.convertDateFormatter(date: self.endDate ?? "")
+                        hotelView.adultsNum = self.numberOfAdultsLb.text
+                        hotelView.childNum = self.numberOfChildsLb.text
+                        hotelView.roomNum = self.numberOfRoomLb.text
+                        hotelView.chainCode = "16401"
                             self.navigationController?.pushViewController(hotelView, animated: true)
-                            
+
                         }
                     }
 

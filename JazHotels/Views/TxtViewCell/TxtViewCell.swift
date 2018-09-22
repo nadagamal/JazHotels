@@ -7,9 +7,12 @@
 //
 
 import UIKit
-
+import ACFloatingTextfield_Swift
 class TxtViewCell: UITableViewCell {
 
+    @IBOutlet weak var pinTxt: ACFloatingTextfield!
+    @IBOutlet weak var expireDateTxt: ACFloatingTextfield!
+    @IBOutlet weak var txtField: ACFloatingTextfield!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

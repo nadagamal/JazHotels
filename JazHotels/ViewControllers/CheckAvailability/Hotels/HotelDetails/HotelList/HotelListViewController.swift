@@ -17,6 +17,13 @@ class HotelListViewController: UIViewController {
     var roomStayInfo: JCBasicPropertyInfo?
     var roomInfoList: [JCCriterion]?
     var hotelTitle:String?
+    var checkInDate:String!
+    var checkOutDate:String!
+    var chainCode:String!
+    var hotelCode:String!
+    var roomNum:String!
+    var childNum:String!
+    var adultsNum:String!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -134,6 +141,14 @@ extension HotelListViewController: UITableViewDelegate , UITableViewDataSource
             rateView.roomRateList = (roomStays?[indexPath.row].roomRates?.roomRate)!
             rateView.ratePlans = roomStays?[indexPath.row].ratePlans
             rateView.roomStay = roomStays?[indexPath.row]
+            rateView.checkOutDate = self.checkOutDate
+            rateView.checkInDate = self.checkInDate
+            rateView.hotelCode = roomStays?[indexPath.row].basicPropertyInfo.hotelCode
+            rateView.adultsNum = self.adultsNum
+            rateView.childNum = self.childNum
+            rateView.chainCode = self.chainCode
+            rateView.roomNum = self.roomNum
+            
             self.navigationController?.pushViewController(rateView, animated: true)
         }
         else

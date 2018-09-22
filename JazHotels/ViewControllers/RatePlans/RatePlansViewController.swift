@@ -17,6 +17,14 @@ class RatePlansViewController: UIViewController {
     var roomStay:JCRoomStay!
     var isExpanded = false
     var expandableCells=[Int]()
+    var hotelTitle:String?
+    var checkInDate:String!
+    var checkOutDate:String!
+    var chainCode:String!
+    var hotelCode:String!
+    var roomNum:String!
+    var childNum:String!
+    var adultsNum:String!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Rate Plans"
@@ -81,7 +89,25 @@ class RatePlansViewController: UIViewController {
         return price
     }
     @objc func bookNowAction(sender:UIButton){
-        navigationController?.show(BookHotelViewController.create(), sender: sender)
+        guard let cell = sender.superview?.superview as? RoomDetailsCell else {
+            return
+        }
+        
+        let indexPath = tableView.indexPath(for: cell) as! NSIndexPath
+        let ratePlan:JCRatePlan = roomStay.ratePlans[indexPath.section]
+
+        var roomTypeslist = roomStay.roomTypes.roomType as [JCRoomType]
+        let viewController = BookHotelViewController.create()
+        viewController.roomType = roomTypeslist[indexPath.row]
+        viewController.ratePlan = ratePlan
+        viewController.checkOutDate = self.checkOutDate
+        viewController.checkInDate = self.checkInDate
+        viewController.hotelCode = self.hotelCode
+        viewController.adultsNum = self.adultsNum
+        viewController.childNum = self.childNum
+        viewController.chainCode = self.chainCode
+        viewController.roomNum = self.roomNum
+        navigationController?.show(viewController, sender: sender)
 
     }
     @objc func roomDetailsAction(sender:UIButton){
@@ -112,6 +138,7 @@ extension RatePlansViewController :UITableViewDelegate , UITableViewDataSource
         cell.priceLbl.text = getRoomPrice(roomTypeCode: roomTypeslist[indexPath.row].roomTypeCode)
         cell.roomDescriptionLbl.text = roomTypeslist[indexPath.row].roomDescription.text.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
         cell.bookNowBtn.addTarget(self, action: #selector(bookNowAction(sender:)), for: .touchUpInside)
+        cell.bookNowBtn.tag = indexPath.row
         cell.roomDetailsBtn.addTarget(self, action: #selector(roomDetailsAction(sender:)), for: .touchUpInside)
         cell.roomNameLbl.text = roomTypeslist[indexPath.row].roomDescription.name
         let imageURL = URL(string: (roomTypeslist[indexPath.row].roomDescription!.image))

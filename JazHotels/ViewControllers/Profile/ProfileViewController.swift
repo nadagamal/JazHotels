@@ -58,6 +58,11 @@ class ProfileViewController: UIViewController {
 
     }
     override func viewDidAppear(_ animated: Bool) {
+        let navigationBar = navigationController!.navigationBar
+        navigationBar.setBackgroundImage(UIImage(),
+                                         for: .default)
+        navigationBar.shadowImage = UIImage()
+
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -237,6 +242,7 @@ extension ProfileViewController : UITableViewDataSource , UITableViewDelegate , 
         else // show membership
         {
             let dialogViewController: MembershipInfoDialogue = MembershipInfoDialogue(nibName:"MembershipInfoDialogue", bundle: nil)
+            dialogViewController.delegate = self
             self.presentDialogViewController(dialogViewController, animationPattern: LSAnimationPattern.zoomInOut, completion: { () -> Void in })
             
         }

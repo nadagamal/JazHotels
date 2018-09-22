@@ -59,7 +59,7 @@
                             <rect key="frame" x="8" y="41" width="360" height="70"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check-in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HNc-cc-zIY">
-                                    <rect key="frame" x="4" y="16" width="50" height="13.5"/>
+                                    <rect key="frame" x="4" y="16" width="50" height="13"/>
                                     <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="11"/>
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
@@ -80,7 +80,7 @@
                                     </constraints>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check-out" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="63y-Ns-7Eo">
-                                    <rect key="frame" x="262" y="16" width="98" height="13.5"/>
+                                    <rect key="frame" x="262" y="16" width="98" height="13"/>
                                     <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="11"/>
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
@@ -93,25 +93,25 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wcb-SI-rGq">
-                                    <rect key="frame" x="177.5" y="22" width="4" height="13.5"/>
+                                    <rect key="frame" x="177.5" y="22" width="4.5" height="13"/>
                                     <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="11"/>
                                     <color key="textColor" red="0.0" green="0.52156862749999999" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nights" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SnR-W5-mRV">
-                                    <rect key="frame" x="166" y="37.5" width="27.5" height="10"/>
+                                    <rect key="frame" x="166" y="37" width="27.5" height="10"/>
                                     <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="8"/>
                                     <color key="textColor" red="0.0" green="0.52156862749999999" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h0d-k3-f1b">
-                                    <rect key="frame" x="4" y="30" width="89.5" height="38.5"/>
+                                    <rect key="frame" x="4" y="29.5" width="89.5" height="39"/>
                                     <connections>
                                         <action selector="checkInDateBtnAction:" destination="-1" eventType="touchUpInside" id="qbi-m7-daJ"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hu8-ua-kfy">
-                                    <rect key="frame" x="180.5" y="30" width="179.5" height="40"/>
+                                    <rect key="frame" x="180.5" y="29.5" width="179.5" height="40.5"/>
                                     <connections>
                                         <action selector="checkOutDateBtnAction:" destination="-1" eventType="touchUpInside" id="yHh-oe-9QL"/>
                                     </connections>

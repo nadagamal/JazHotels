@@ -92,6 +92,7 @@ extension BookingDetailsViewController:UITableViewDataSource,UITableViewDelegate
            let cell = tableView.dequeueReusableCell(withIdentifier: "RoomDetailsCell") as! BookingDetailsCell
             var childNum = "0"
             var adultNum = "0"
+            cell.rightValueLbl.text = reservationItem.roomStays.roomStay.roomTypes.roomType.numberOfUnits ?? ""
             if reservationItem.roomStays.roomStay.guestCounts.guestCount != nil && reservationItem.roomStays.roomStay.guestCounts.guestCount.count == 1{
                 adultNum = reservationItem.roomStays.roomStay.guestCounts.guestCount[0].count
                 cell.rightValueLbl.text = adultNum + "adults"

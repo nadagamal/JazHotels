@@ -24,13 +24,13 @@ extension UINavigationBar {
         setBackgroundImage(gradientLayer.createGradientImage(), for: UIBarMetrics.default)
     }
    
-    func transparentNavigationController()
-    {
-        self.setNavigationBarHidden(false, animated: false)
-        self.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        self.navigationBar.shadowImage = UIImage()
-        self.navigationBar.isTranslucent = true
-        self.view.backgroundColor = UIColor.clear
-        self.navigationBar.backgroundColor =  UIColor.clear
-    }
+//    func transparentNavigationController()
+//    {
+//        self.setNavigationBarHidden(false, animated: false)
+//        self.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+//        self.navigationBar.shadowImage = UIImage()
+//        self.navigationBar.isTranslucent = true
+//        self.view.backgroundColor = UIColor.clear
+//        self.navigationBar.backgroundColor =  UIColor.clear
+//    }
 }

@@ -20,6 +20,7 @@ class HotelTableViewCell: UITableViewCell {
         overlay.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 0.3)
         self.hotel_img.addSubview(overlay)
     }
+    @IBOutlet weak var jazLogoImg: UIImageView!
     @IBOutlet weak var priceView: UIView!
     @IBOutlet weak var hotel_img: UIImageView!
     @IBOutlet weak var fav_btn: UIButton!

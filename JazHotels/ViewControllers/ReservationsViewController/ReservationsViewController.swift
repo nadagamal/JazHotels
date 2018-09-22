@@ -92,6 +92,9 @@ extension ReservationsViewController: UITableViewDelegate , UITableViewDataSourc
         return 280
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.navigationController?.show(BookingDetailsViewController.create(), sender: self)
+        let viewController = BookingDetailsViewController.create()
+        let  hotel = hotelsReservations[indexPath.item]
+        viewController.reservationItem = hotel
+        self.navigationController?.show(viewController, sender: self)
     }
 }

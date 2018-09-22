@@ -16,7 +16,7 @@ class DropDownDialogue: UIViewController {
     var optionId:[Int] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-        optionTF.hideArrow = false
+       // optionTF.hideArrow = false
         optionTF.optionIds = optionId
         optionTF.optionArray = optionArray
         // Do any additional setup after loading the view.

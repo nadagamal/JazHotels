@@ -40,7 +40,14 @@ class BookingDetailsViewController: UIViewController,changeBookingDates {
         BookingAPIManager().cancelReservation(confirmationId: reservationItem.uniqueID.iD, hotelCode: reservationItem.roomStays.roomStay.basicPropertyInfo.hotelCode, chainCode: reservationItem.roomStays.roomStay.basicPropertyInfo.chainCode) { (bookingModel, error) in
             if error == nil{
                 DispatchQueue.main.async {
-                    self.navigationController?.popViewController(animated: true)
+                    if bookingModel?.soapBody.OTACancelRS.errors != nil && bookingModel?.soapBody.OTACancelRS.errors.error != nil && bookingModel?.soapBody.OTACancelRS.errors.error.shortText != nil{
+                        DispatchQueue.main.async {
+                            SCLAlertView().showError("Error", subTitle: bookingModel?.soapBody.OTACancelRS.errors.error.shortText ?? "")
+                            
+                        }
+                    }else{
+                        self.navigationController?.popViewController(animated: true)
+                    }
                 }
             }
             else{
@@ -83,12 +90,16 @@ class BookingDetailsViewController: UIViewController,changeBookingDates {
         if reservationItem.roomStays.roomStay.ratePlans != nil && reservationItem.roomStays.roomStay.ratePlans.count>0{
             ratePlanCode = reservationItem.roomStays.roomStay.ratePlans[0].ratePlanCode
         }
-        BookingAPIManager().modifyReservation(numberOfAdults: adultNum, numberOfChild: childNum, numberOfRooms: reservationItem.roomStays.roomStay.roomTypes.roomType?.numberOfUnits ?? "", roomTypeCode: reservationItem.roomStays.roomStay.roomTypes.roomType.roomTypeCode, ratePlanCode: ratePlanCode, checkInDate: startDate, checkOutDate: endDate, hotelCode: reservationItem.roomStays.roomStay.basicPropertyInfo.hotelCode, chainCode: reservationItem.roomStays.roomStay.basicPropertyInfo.chainCode, confirmationId: reservationItem.uniqueID.iD) { (response, error) in
+        BookingAPIManager().modifyReservation(numberOfAdults: adultNum, numberOfChild: childNum, numberOfRooms: reservationItem.roomStays.roomStay.roomTypes.roomType?.numberOfUnits ?? "", roomTypeCode: reservationItem.roomStays.roomStay.roomTypes.roomType.roomTypeCode, ratePlanCode: ratePlanCode, checkInDate: startDate, checkOutDate: endDate, hotelCode: reservationItem.roomStays.roomStay.basicPropertyInfo.hotelCode, chainCode: reservationItem.roomStays.roomStay.basicPropertyInfo.chainCode, confirmationId: reservationItem.uniqueID.iD,comments: "") { (response, error) in
             if response?.Body.OTAHotelResModifyRS.errors != nil && response?.Body.OTAHotelResModifyRS.errors.error != nil && response?.Body.OTAHotelResModifyRS.errors.error.shortText != nil{
                 DispatchQueue.main.async {
                     SCLAlertView().showError("Error", subTitle: response?.Body.OTAHotelResModifyRS.errors.error.shortText ?? "")
 
                 }
+            }
+            else{
+                SCLAlertView().showSuccess("", subTitle: "Modification Successed")
+
             }
             
         }
@@ -116,7 +127,36 @@ class BookingDetailsViewController: UIViewController,changeBookingDates {
     }
     
     func getUserAddationalRequest(request: String) {
-        print(request)
+        var startDate = reservationItem.roomStays.roomStay.timeSpan.start
+        var endDate = reservationItem.roomStays.roomStay.timeSpan.end
+        var childNum = "0"
+        var adultNum = "0"
+        if reservationItem.roomStays.roomStay.guestCounts.guestCount != nil && reservationItem.roomStays.roomStay.guestCounts.guestCount.count == 1{
+            adultNum = reservationItem.roomStays.roomStay.guestCounts.guestCount[0].count
+            
+        }
+        else if reservationItem.roomStays.roomStay.guestCounts.guestCount != nil && reservationItem.roomStays.roomStay.guestCounts.guestCount.count == 2{
+            adultNum = reservationItem.roomStays.roomStay.guestCounts.guestCount[0].count
+            childNum = reservationItem.roomStays.roomStay.guestCounts.guestCount[1].count
+            
+        }
+        var ratePlanCode = ""
+        if reservationItem.roomStays.roomStay.ratePlans != nil && reservationItem.roomStays.roomStay.ratePlans.count>0{
+            ratePlanCode = reservationItem.roomStays.roomStay.ratePlans[0].ratePlanCode
+        }
+        BookingAPIManager().modifyReservation(numberOfAdults: adultNum, numberOfChild: childNum, numberOfRooms: reservationItem.roomStays.roomStay.roomTypes.roomType?.numberOfUnits ?? "", roomTypeCode: reservationItem.roomStays.roomStay.roomTypes.roomType.roomTypeCode, ratePlanCode: ratePlanCode, checkInDate: startDate ?? "", checkOutDate: endDate ?? "", hotelCode: reservationItem.roomStays.roomStay.basicPropertyInfo.hotelCode, chainCode: reservationItem.roomStays.roomStay.basicPropertyInfo.chainCode, confirmationId: reservationItem.uniqueID.iD,comments: request) { (response, error) in
+            if (response?.Body.OTAHotelResModifyRS.errors != nil && response?.Body.OTAHotelResModifyRS.errors.error != nil && response?.Body.OTAHotelResModifyRS.errors.error.shortText != nil) || response?.Body.OTAHotelResModifyRS.ResResponseType == "Unsuccessful"{
+                DispatchQueue.main.async {
+                    SCLAlertView().showError("Error", subTitle: response?.Body.OTAHotelResModifyRS.errors.error.shortText ?? "")
+                    
+                }
+            }
+            else{
+                SCLAlertView().showSuccess("", subTitle: "Modification Successed")
+                
+            }
+            
+        }
     }
     
 }
@@ -154,7 +194,7 @@ extension BookingDetailsViewController:UITableViewDataSource,UITableViewDelegate
             let cell = tableView.dequeueReusableCell(withIdentifier: "RoomDetailsCell") as! BookingDetailsCell
             var childNum = "0"
             var adultNum = "0"
-            cell.leftValueLbl.text = reservationItem.roomStays.roomStay.roomTypes.roomType.numberOfUnits ?? ""
+            cell.leftValueLbl.text = reservationItem.roomStays.roomStay.roomTypes.roomType.numberOfUnits ?? "" + " Room"
             if reservationItem.roomStays.roomStay.guestCounts.guestCount != nil && reservationItem.roomStays.roomStay.guestCounts.guestCount.count == 1{
                 adultNum = reservationItem.roomStays.roomStay.guestCounts.guestCount[0].count
                 cell.rightValueLbl.text = adultNum + "adults"

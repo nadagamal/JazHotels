@@ -10,7 +10,11 @@ import UIKit
 import FirebaseFirestore
 import McPicker
 import LSDialogViewController
+protocol UpdateProfile
+{
+    func reloadProfile(user:UserProfile)
 
+}
 class ProfileViewController: UIViewController {
 
     @IBOutlet weak var profileImg: UIImageView!
@@ -29,6 +33,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     static var user:User?
+    var currentTitle:String = ""
     
     fileprivate var userData:UserProfile?
     fileprivate var countries: [String] = {
@@ -91,9 +96,7 @@ class ProfileViewController: UIViewController {
         {
             self.userData = notification.object as? UserProfile
         }
-    
-       // setUserData()
-       
+        
     }
  
     @objc public static func create() -> ProfileViewController {
@@ -104,39 +107,31 @@ class ProfileViewController: UIViewController {
  
     @IBAction func creditNumberChanged(_ sender: Any) {
         self.userData?.userCardPayment?.cardNumber  = userCreditNumber.text!
-        self.updateUser(user: self.userData!)
+        UserOperation.updateUser(user: self.userData!)
     }
     @IBAction func phoneNumberChange(_ sender: Any) {
         self.userData?.userContact?.phoneNumbers  = userMobile.text!
-        self.updateUser(user: self.userData!)
+        UserOperation.updateUser(user: self.userData!)
 
     }
     
     @IBAction func cityChange(_ sender: Any) {
         self.userData?.userAddress?.city  = userCity.text!
-        self.updateUser(user: self.userData!)
+        UserOperation.updateUser(user: self.userData!)
     }
     
     @IBAction func areaChange(_ sender: Any) {
         self.userData?.userAddress?.fullAddress  = userAddress.text!
-        self.updateUser(user: self.userData!)
+        UserOperation.updateUser(user: self.userData!)
     }
-    func updateUser(user:UserProfile)
-    {
-        UserDefaults.saveObjectDefault(key: HotelJazConstants.userDefault.userData, value: user)
-
-        let db = Firestore.firestore()
-        db.collection("users").document("\(String(describing: (user.userId)!))").updateData(user.toDictionary())
-       
-        
-    }
+  
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
   
 }
-extension ProfileViewController : UITableViewDataSource , UITableViewDelegate
+extension ProfileViewController : UITableViewDataSource , UITableViewDelegate , UpdateProfile
 {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "profile_cell", for: indexPath) as! ProfileCellTableViewCell
@@ -155,11 +150,11 @@ extension ProfileViewController : UITableViewDataSource , UITableViewDelegate
         }
         else if indexPath.row == 3 // phone
         {
-            cell.attributeValue.text = userData?.userContact?.phoneNumbers ?? ""
+            cell.attributeValue.text = userData?.userContact?.mobilePhone ?? ""
         }
         else if indexPath.row == 4 // country
         {
-            cell.attributeValue.text = userData?.userAddress?.city ?? ""
+            cell.attributeValue.text = userData?.userAddress?.country ?? ""
         }
         else if indexPath.row == 5 // address
         {
@@ -177,45 +172,75 @@ extension ProfileViewController : UITableViewDataSource , UITableViewDelegate
         if indexPath.row == 0 || indexPath.row == 2 || indexPath.row == 4
         {
             let dialogViewController: DropDownDialogue = DropDownDialogue(nibName:"DropDownDialogue", bundle: nil)
+            dialogViewController.delegate = self
 
             if indexPath.row == 0 // update title
             {
                 dialogViewController.optionArray = titleList
                 dialogViewController.optionId = Array(repeating: 0, count: titleList.count)
-
+                dialogViewController.currentOption = self.userData?.title ?? ""
+                dialogViewController.type = .title
             }
             else if indexPath.row == 2 // update gender
             {
                 dialogViewController.optionArray = genderList
                 dialogViewController.optionId = Array(repeating: 0, count: genderList.count)
+                dialogViewController.currentOption = self.userData?.gender ?? ""
+                dialogViewController.type = .gender
+
+
             }
-            else
+            else if indexPath.row == 4 // update country
             {
                 dialogViewController.optionArray = countries
                 dialogViewController.optionId = Array(repeating: 0, count: countries.count)
-
+                dialogViewController.currentOption = self.userData?.userAddress?.country ?? ""
+                dialogViewController.type = .country
             }
+            
             self.presentDialogViewController(dialogViewController, animationPattern: LSAnimationPattern.zoomInOut, completion: { () -> Void in })
         }
             
         else if indexPath.row == 1 // update name
         {
             let dialogViewController: UpdateNameDialogue = UpdateNameDialogue(nibName:"UpdateNameDialogue", bundle: nil)
+            dialogViewController.delegate = self
+
+            dialogViewController.fname = self.userData?.userName?.firstName ?? ""
+            dialogViewController.lname = self.userData?.userName?.lastName ?? ""
+            dialogViewController.mname = self.userData?.userName?.middleName ?? ""
             self.presentDialogViewController(dialogViewController, animationPattern: LSAnimationPattern.zoomInOut, completion: { () -> Void in })
         }
         else if indexPath.row == 3 // update phone
         {
             let dialogViewController: UpdatePhoneDialogue = UpdatePhoneDialogue(nibName:"UpdatePhoneDialogue", bundle: nil)
+            dialogViewController.delegate = self
+            dialogViewController.phone = self.userData?.userContact?.mobilePhone ?? ""
+            dialogViewController.landline = self.userData?.userContact?.landLine ?? ""
             self.presentDialogViewController(dialogViewController, animationPattern: LSAnimationPattern.zoomInOut, completion: { () -> Void in })
 
         }
-        else // update Address
+        else if indexPath.row == 5 // update Address
         {
             let dialogViewController: UpdateAddressDialogue = UpdateAddressDialogue(nibName:"UpdateAddressDialogue", bundle: nil)
+            dialogViewController.delegate = self
+            dialogViewController.line1 = self.userData?.userAddress?.addressLine1 ?? ""
+            dialogViewController.line2 = self.userData?.userAddress?.addressLine2 ?? ""
+            dialogViewController.line3 = self.userData?.userAddress?.addressLine3 ?? ""
+            dialogViewController.cityStr = self.userData?.userAddress?.city ?? ""
+            dialogViewController.stateStr = self.userData?.userAddress?.state ?? ""
+            dialogViewController.postalCodeStr = self.userData?.userAddress?.zip ?? ""
             self.presentDialogViewController(dialogViewController, animationPattern: LSAnimationPattern.zoomInOut, completion: { () -> Void in })
-
+        }
+        
+        
+        else // show membership
+        {
+            let dialogViewController: MembershipInfoDialogue = MembershipInfoDialogue(nibName:"MembershipInfoDialogue", bundle: nil)
+            self.presentDialogViewController(dialogViewController, animationPattern: LSAnimationPattern.zoomInOut, completion: { () -> Void in })
             
         }
+     
         
 
     }
@@ -230,5 +255,8 @@ extension ProfileViewController : UITableViewDataSource , UITableViewDelegate
         
         return 80
     }
-    
+    func reloadProfile(user:UserProfile) {
+        self.userData = user
+        self.tableView.reloadData()
+    }
 }

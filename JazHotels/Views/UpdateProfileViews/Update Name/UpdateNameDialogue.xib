@@ -37,7 +37,6 @@
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oah-nw-zTj">
                             <rect key="frame" x="0.0" y="201" width="337" height="2"/>
-                            <color key="backgroundColor" red="0.90196078430000004" green="0.90588235289999997" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="2" id="3M3-px-dAl"/>
                             </constraints>
@@ -73,10 +72,10 @@
                             </connections>
                         </button>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="R4e-iy-wwM">
-                            <rect key="frame" x="0.0" y="0.0" width="337" height="201"/>
+                            <rect key="frame" x="8" y="0.0" width="321" height="201"/>
                             <subviews>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dTs-dt-qEk" customClass="DesignableUITextField" customModule="JazHotels" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="337" height="67"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="321" height="67"/>
                                     <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
@@ -96,7 +95,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </textField>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Middle Name (Optional)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="20K-zX-u0c" customClass="DesignableUITextField" customModule="JazHotels" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="67" width="337" height="67"/>
+                                    <rect key="frame" x="0.0" y="67" width="321" height="67"/>
                                     <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
@@ -116,7 +115,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </textField>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p6q-Dg-MqB" customClass="DesignableUITextField" customModule="JazHotels" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="134" width="337" height="67"/>
+                                    <rect key="frame" x="0.0" y="134" width="321" height="67"/>
                                     <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
@@ -142,7 +141,7 @@
                         </stackView>
                     </subviews>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="R4e-iy-wwM" secondAttribute="trailing" id="0dr-6T-DAA"/>
+                        <constraint firstAttribute="trailing" secondItem="R4e-iy-wwM" secondAttribute="trailing" constant="8" id="0dr-6T-DAA"/>
                         <constraint firstAttribute="trailing" secondItem="oah-nw-zTj" secondAttribute="trailing" id="3pJ-KH-Upc"/>
                         <constraint firstAttribute="trailing" secondItem="0cG-XG-Kn1" secondAttribute="trailing" id="7xN-fS-q8F"/>
                         <constraint firstAttribute="width" secondItem="0cG-XG-Kn1" secondAttribute="width" multiplier="2" id="MOJ-ov-GaM"/>
@@ -151,7 +150,7 @@
                         <constraint firstItem="0cG-XG-Kn1" firstAttribute="top" secondItem="oah-nw-zTj" secondAttribute="bottom" id="WVj-MK-eyM"/>
                         <constraint firstItem="ShS-xM-Gt5" firstAttribute="width" secondItem="0cG-XG-Kn1" secondAttribute="width" id="Zkh-cf-rCJ"/>
                         <constraint firstItem="ShS-xM-Gt5" firstAttribute="leading" secondItem="aEn-eL-xDG" secondAttribute="leading" id="bs8-q1-rEe"/>
-                        <constraint firstItem="R4e-iy-wwM" firstAttribute="leading" secondItem="aEn-eL-xDG" secondAttribute="leading" id="dCq-cA-9qa"/>
+                        <constraint firstItem="R4e-iy-wwM" firstAttribute="leading" secondItem="aEn-eL-xDG" secondAttribute="leading" constant="8" id="dCq-cA-9qa"/>
                         <constraint firstAttribute="bottom" secondItem="gxn-hq-TOy" secondAttribute="bottom" id="dYY-bT-LLQ"/>
                         <constraint firstItem="gxn-hq-TOy" firstAttribute="top" secondItem="oah-nw-zTj" secondAttribute="bottom" id="fNY-UL-yRT"/>
                         <constraint firstItem="oah-nw-zTj" firstAttribute="top" secondItem="R4e-iy-wwM" secondAttribute="bottom" id="koJ-cS-AyD"/>

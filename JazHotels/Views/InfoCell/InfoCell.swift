@@ -10,6 +10,12 @@ import UIKit
 
 class InfoCell: UITableViewCell {
 
+  
+    @IBOutlet weak var agreeBtn: UIButton!
+    @IBOutlet weak var bookingTxt: UITextView!
+    @IBOutlet weak var arrivalDateTxt: UITextView!
+    @IBOutlet weak var editCreditCardBtn: UIButton!
+    @IBOutlet weak var cancellationsTxt: UITextView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -10,7 +10,16 @@ import UIKit
 
 class BookHotelViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
-    
+    var roomType:JCRoomType!
+    var ratePlan:JCRatePlan!
+    var checkInDate:String!
+    var checkOutDate:String!
+    var chainCode:String!
+    var hotelCode:String!
+    var roomNum:String!
+    var childNum:String!
+    var adultsNum:String!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -42,29 +51,34 @@ class BookHotelViewController: UIViewController {
 extension BookHotelViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell:UITableViewCell!
+        
         if indexPath.row == 0{
-            cell = tableView.dequeueReusableCell(withIdentifier: "CardHolderCell")
+            cell = tableView.dequeueReusableCell(withIdentifier: "CardHolderCell") as! TxtViewCell
         }
         else  if indexPath.row == 1{
-            cell = tableView.dequeueReusableCell(withIdentifier: "CardNumberCell")
+            cell = tableView.dequeueReusableCell(withIdentifier: "CardNumberCell") as! TxtViewCell
         }
         else  if indexPath.row == 2{
-            cell = tableView.dequeueReusableCell(withIdentifier: "CardDetailsCell")
+            cell = tableView.dequeueReusableCell(withIdentifier: "CardDetailsCell") as! TxtViewCell
         }
         else  if indexPath.row == 3{
-            cell = tableView.dequeueReusableCell(withIdentifier: "CardEditBtnCell")
+            cell = tableView.dequeueReusableCell(withIdentifier: "CardEditBtnCell") as! InfoCell
         }
         else  if indexPath.row == 4{
-            cell = tableView.dequeueReusableCell(withIdentifier: "ArrivalDateCell")
+            cell = tableView.dequeueReusableCell(withIdentifier: "ArrivalDateCell") as! InfoCell
         }
         else  if indexPath.row == 5{
-            cell = tableView.dequeueReusableCell(withIdentifier: "CancellationCell")
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CancellationCell") as! InfoCell
+            cell.cancellationsTxt.text = ratePlan.cancelPenalties.cancelPenalty.penaltyDescription.text.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
+            return cell
         }
         else  if indexPath.row == 6{
-            cell = tableView.dequeueReusableCell(withIdentifier: "BookingCell")
+           let cell = tableView.dequeueReusableCell(withIdentifier: "BookingCell") as! InfoCell
+            cell.bookingTxt.text = ratePlan.guarantee.guaranteeDescription.text.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
+            return cell
         }
         else  if indexPath.row == 7{
-            cell = tableView.dequeueReusableCell(withIdentifier: "CheckCell")
+            cell = tableView.dequeueReusableCell(withIdentifier: "CheckCell") as! InfoCell
         }
         return cell
     }

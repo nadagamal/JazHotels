@@ -95,7 +95,8 @@ class RatePlansViewController: UIViewController {
         
         let indexPath = tableView.indexPath(for: cell) as! NSIndexPath
         let ratePlan:JCRatePlan = roomStay.ratePlans[indexPath.section]
-
+        let userData = UserDefaults.getObjectDefault(key: HotelJazConstants.userDefault.userData) as? UserProfile
+        if userData != nil && userData?.userName != nil{
         var roomTypeslist = roomStay.roomTypes.roomType as [JCRoomType]
         let viewController = BookHotelViewController.create()
         viewController.roomType = roomTypeslist[indexPath.row]
@@ -108,6 +109,11 @@ class RatePlansViewController: UIViewController {
         viewController.chainCode = self.chainCode
         viewController.roomNum = self.roomNum
         navigationController?.show(viewController, sender: sender)
+        }
+        else{
+            self.navigationController?.present(LoginViewController.create(), animated: true, completion: nil)
+
+        }
 
     }
     @objc func roomDetailsAction(sender:UIButton){

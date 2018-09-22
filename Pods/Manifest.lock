@@ -14,6 +14,8 @@ PODS:
     - BoringSSL/Interface (= 10.0.5)
   - BoringSSL/Interface (10.0.5)
   - BSKeyboardControls (2.2)
+  - Caishen (2.1.2)
+  - CardIO (5.4.1)
   - Cosmos (15.0.0)
   - DatePickerDialog (2.0)
   - DynamicBlurView (2.0.2)
@@ -163,6 +165,8 @@ DEPENDENCIES:
   - Alamofire
   - Bolts
   - BSKeyboardControls (~> 2.2)
+  - Caishen
+  - CardIO
   - Cosmos (~> 15.0)
   - DatePickerDialog
   - FBSDKCoreKit
@@ -196,12 +200,14 @@ DEPENDENCIES:
   - ZAlertView
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - ACFloatingTextfield-Swift
     - Alamofire
     - Bolts
     - BoringSSL
     - BSKeyboardControls
+    - Caishen
+    - CardIO
     - Cosmos
     - DatePickerDialog
     - DynamicBlurView
@@ -255,6 +261,8 @@ SPEC CHECKSUMS:
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   BoringSSL: cf3f1793eb6e3c445c4d150456341f149c268a35
   BSKeyboardControls: b701935e789961102e3f20063bba7185800a2d3f
+  Caishen: 5f8195411da0f53862a246db5fc219a8db105924
+  CardIO: 56983b39b62f495fc6dae9ad7cf875143df06443
   Cosmos: a6dbd3d0baa0cc8f51f8598f7508d5a09d0a9ade
   DatePickerDialog: 5e1c24d9fe6506cd45dbc573eed7b0a251b1c09d
   DynamicBlurView: aa6db4defc6e537eb86fc5e58dd3991666178399
@@ -302,6 +310,6 @@ SPEC CHECKSUMS:
   XLPagerTabStrip: c908b17cbf42fcd2598ee1adfc49bae25444d88a
   ZAlertView: 59fffdb4e37a01df461835566d5101052b8af953
 
-PODFILE CHECKSUM: e15d381fd67c48b688cae9c305d483427ecbf373
+PODFILE CHECKSUM: 6781b2587b81925d8e3b45d2787ca7ed01e50691
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3

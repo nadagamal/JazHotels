@@ -20,6 +20,7 @@ class CRCancelBookingModel : NSObject, NSCoding{
 		if let soapBodyData = dictionary["soap:Body"] as? [String:Any]{
 			soapBody = CRSoapBody(fromDictionary: soapBodyData)
 		}
+        
 	}
 
 	/**

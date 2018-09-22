@@ -24,14 +24,17 @@ class HotelListViewController: UIViewController {
     var roomNum:String!
     var childNum:String!
     var adultsNum:String!
+    var userInfo:Dictionary<String, Any>!
     override func viewDidLoad() {
         super.viewDidLoad()
 
 //        self.navigationItem.title = hotelTitle
         // Do any additional setup after loading the view.
         hotelTB.register(UINib(nibName: "HotelTableViewCell", bundle: nil), forCellReuseIdentifier: "hotel_cell")
-        NotificationCenter.default.addObserver(self, selector: #selector(self.updateHotelList(notification:)), name: Notification.Name("getHotelListInfo"), object: nil)
-
+//        NotificationCenter.default.addObserver(self, selector: #selector(self.updateHotelList(notification:)), name: Notification.Name("getHotelListInfo"), object: nil)
+        if userInfo != nil{
+            updateHotelList()
+        }
        
     }
     
@@ -40,19 +43,19 @@ class HotelListViewController: UIViewController {
         return UIStoryboard(name: HotelJazConstants.StoryBoard.mainSB, bundle: Bundle.main).instantiateViewController(withIdentifier: String(describing: self)) as! HotelListViewController
     }
     
-    @objc func updateHotelList(notification: Notification){
+    @objc func updateHotelList(){
         
-        self.roomStays = notification.userInfo!["roomStays"] as? [JCRoomStay]
-        self.roomStayInfo = notification.userInfo!["roomStayInfo"] as? JCBasicPropertyInfo
-        self.roomInfoList = notification.userInfo!["roomInfoList"] as? [JCCriterion]
-        self.hotelTitle = notification.userInfo!["hotelTitle"] as? String
+        self.roomStays = userInfo!["roomStays"] as? [JCRoomStay]
+        self.roomStayInfo = userInfo!["roomStayInfo"] as? JCBasicPropertyInfo
+        self.roomInfoList = userInfo!["roomInfoList"] as? [JCCriterion]
+        self.hotelTitle = userInfo!["hotelTitle"] as? String
         self.hotelTB.reloadData()
 
     }
     override func viewWillAppear(_ animated: Bool) {
         self.navigationItem.title = hotelTitle
         self.navigationController?.navigationBar.isHidden = false
-        NotificationCenter.default.addObserver(self, selector: #selector(self.updateHotelList(notification:)), name: Notification.Name("getHotelListInfo"), object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(self.updateHotelList(notification:)), name: Notification.Name("getHotelListInfo"), object: nil)
 
     }
     override func didReceiveMemoryWarning() {

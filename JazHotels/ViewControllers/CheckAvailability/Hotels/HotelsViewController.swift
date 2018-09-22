@@ -23,6 +23,7 @@ class HotelsViewController: UIViewController {
     var roomNum:String!
     var childNum:String!
     var adultsNum:String!
+    
     @IBOutlet weak var hotelListBtn: UIButton!
     @IBOutlet weak var viewOnMapBtn: UIButton!
     
@@ -31,7 +32,7 @@ class HotelsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = hotelTitle
-        NotificationCenter.default.post(name: Notification.Name("getHotelListInfo"), object: nil , userInfo: ["roomStays":roomStays ?? [] ,"roomStayInfo": roomStayInfo ?? "" , "roomInfoList":roomInfoList ?? [] ,"hotelTitle":hotelTitle ?? ""])
+//        NotificationCenter.default.post(name: Notification.Name("getHotelListInfo"), object: nil , userInfo: ["roomStays":roomStays ?? [] ,"roomStayInfo": roomStayInfo ?? "" , "roomInfoList":roomInfoList ?? [] ,"hotelTitle":hotelTitle ?? ""])
 
         hotelListContainer.isHidden = false
         hotelOnMapContainer.isHidden = true
@@ -80,6 +81,11 @@ class HotelsViewController: UIViewController {
             hotelView.childNum = self.childNum
             hotelView.roomNum = self.roomNum
             hotelView.chainCode = "16401"
+            hotelView.userInfo = ["roomStays":roomStays ?? [] ,"roomStayInfo": roomStayInfo ?? "" , "roomInfoList":roomInfoList ?? [] ,"hotelTitle":hotelTitle ?? ""]
+        }
+        else if segue.identifier == "HotelsMapSegue"{
+            let hotelView = segue.destination as! HotelOnMapViewController
+            hotelView.userInfo = ["roomStays":roomStays ?? [] ,"roomStayInfo": roomStayInfo ?? "" , "roomInfoList":roomInfoList ?? [] ,"hotelTitle":hotelTitle ?? ""]
         }
     }
 

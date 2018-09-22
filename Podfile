@@ -55,6 +55,7 @@ target 'JazHotels' do
     
     pod 'Firebase/Core'
     pod 'Firebase/Firestore'
+    pod 'LSDialogViewController' , '~> 1.0.0'
 
     
     post_install do |installer|

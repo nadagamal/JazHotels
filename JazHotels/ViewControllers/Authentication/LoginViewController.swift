@@ -205,8 +205,8 @@ class LoginViewController: UIViewController , GIDSignInUIDelegate  {
                     {
                         print("\(document.documentID) => \(document.data())")
 
-                        let data = document.data() as! NSDictionary
-                        let userProfile = UserProfile(userContact: UserContact(JSON: data["contact"] as! [String:Any])!, userName: UserName(JSON: data["name"] as! [String:Any])!, userAddress: UserAddress(JSON: data["address"] as! [String:Any])!, userCustomer: UserCustomerLoyalty(JSON: data["customerLoyalty"] as! [String:Any])!, userCardPayment: UserPaymentCard(JSON: data["paymentCard"] as! [String:Any])!, userSynXisInfo: UserSynXisInfo(JSON: data["synXisInfo"] as! [String:Any])!,gender:data["gender"] as! String,userId:user.user.uid)
+                        let data = document.data() as NSDictionary
+                        let userProfile = UserProfile(userContact: UserContact(JSON: data["contact"] as! [String:Any])!, userName: UserName(JSON: data["name"] as! [String:Any])!, userAddress: UserAddress(JSON: data["address"] as! [String:Any])!, userCustomer: UserCustomerLoyalty(JSON: data["customerLoyalty"] as! [String:Any])!, userCardPayment: UserPaymentCard(JSON: data["paymentCard"] as! [String:Any])!, userSynXisInfo: UserSynXisInfo(JSON: data["synXisInfo"] as! [String:Any])!,gender:data["gender"] as! String,userId:user.user.uid,title:data["title"] as! String)
                         
                         UserDefaults.saveObjectDefault(key: HotelJazConstants.userDefault.userData, value: userProfile)
                         found = true
@@ -237,7 +237,7 @@ class LoginViewController: UIViewController , GIDSignInUIDelegate  {
         let db = Firestore.firestore()
         let user = Auth.auth().currentUser
 
-        let userProfile = UserProfile(userContact: UserContact(emailAddress: (user?.email ?? "")!, landLine: "", mobilePhone: "", phoneNumbers: (user?.phoneNumber ?? "")!), userName: UserName(firstName: (user?.displayName ?? "")!, fullName: (user?.displayName ?? "")!, lastName: "", middleInitial: "", middleName: "", photo:(user?.photoURL?.absoluteString ?? "")!), userAddress: UserAddress(), userCustomer: UserCustomerLoyalty(), userCardPayment: UserPaymentCard(), userSynXisInfo: UserSynXisInfo(synXisPassword: (user?.email ?? "")!, synXisUserID: (user?.email ?? "")!),gender:"",userId:(user?.uid)!)
+        let userProfile = UserProfile(userContact: UserContact(emailAddress: (user?.email ?? "")!, landLine: "", mobilePhone: "", phoneNumbers: (user?.phoneNumber ?? "")!), userName: UserName(firstName: (user?.displayName ?? "")!, fullName: (user?.displayName ?? "")!, lastName: "", middleInitial: "", middleName: "", photo:(user?.photoURL?.absoluteString ?? "")!), userAddress: UserAddress(), userCustomer: UserCustomerLoyalty(), userCardPayment: UserPaymentCard(), userSynXisInfo: UserSynXisInfo(synXisPassword: (user?.email ?? "")!, synXisUserID: (user?.email ?? "")!),gender:"",userId:(user?.uid)! , title : "Mr.")
             
             
         db.collection("users").document("\(String(describing: (user?.uid)!))").setData(userProfile.toDictionary()) { err in

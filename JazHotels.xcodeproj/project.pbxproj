@@ -237,6 +237,9 @@
 		52DAFCA22148B4EE00F8269F /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DAFCA12148B4EE00F8269F /* MenuCell.swift */; };
 		9A06CB1C20EACC4900AFBCA2 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A06CB1B20EACC4900AFBCA2 /* MainTabBar.swift */; };
 		9A06CB1F20EACF6700AFBCA2 /* HotelJazConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A06CB1E20EACF6700AFBCA2 /* HotelJazConstants.swift */; };
+		9A084F122155A4A200298431 /* ProfileCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A084F112155A4A200298431 /* ProfileCellTableViewCell.swift */; };
+		9A084F152155C23B00298431 /* DropDownDialogue.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A084F142155C23B00298431 /* DropDownDialogue.xib */; };
+		9A084F172155C30A00298431 /* DropDownDialogue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A084F162155C30A00298431 /* DropDownDialogue.swift */; };
 		9A11CBC52147FC7D00D5F857 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A11CBC42147FC7D00D5F857 /* UserProfile.swift */; };
 		9A3EF0772151A4DD002990CC /* UserOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3EF0762151A4DD002990CC /* UserOperation.swift */; };
 		9A41478D2108C31200C95F0A /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A41478C2108C31200C95F0A /* Location.swift */; };
@@ -595,6 +598,9 @@
 		925F604466D8797ABBF10B44 /* Pods_JazHotels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JazHotels.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A06CB1B20EACC4900AFBCA2 /* MainTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		9A06CB1E20EACF6700AFBCA2 /* HotelJazConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotelJazConstants.swift; sourceTree = "<group>"; };
+		9A084F112155A4A200298431 /* ProfileCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCellTableViewCell.swift; sourceTree = "<group>"; };
+		9A084F142155C23B00298431 /* DropDownDialogue.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DropDownDialogue.xib; sourceTree = "<group>"; };
+		9A084F162155C30A00298431 /* DropDownDialogue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownDialogue.swift; sourceTree = "<group>"; };
 		9A11CBC42147FC7D00D5F857 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		9A3EF0762151A4DD002990CC /* UserOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserOperation.swift; sourceTree = "<group>"; };
 		9A41478C2108C31200C95F0A /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
@@ -1135,6 +1141,23 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		9A084F102155A48B00298431 /* ProfileCell */ = {
+			isa = PBXGroup;
+			children = (
+				9A084F112155A4A200298431 /* ProfileCellTableViewCell.swift */,
+			);
+			path = ProfileCell;
+			sourceTree = "<group>";
+		};
+		9A084F132155C1FD00298431 /* UpdateProfileViews */ = {
+			isa = PBXGroup;
+			children = (
+				9A084F142155C23B00298431 /* DropDownDialogue.xib */,
+				9A084F162155C30A00298431 /* DropDownDialogue.swift */,
+			);
+			path = UpdateProfileViews;
+			sourceTree = "<group>";
+		};
 		9A640D4721305F94002CB116 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
@@ -1225,6 +1248,8 @@
 		9AADBF2020ED5208009183FE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9A084F132155C1FD00298431 /* UpdateProfileViews */,
+				9A084F102155A48B00298431 /* ProfileCell */,
 				52DAFCA02148B4E000F8269F /* MenuCell */,
 				52DAFC9D2147F6BB00F8269F /* BookingDetailsCell */,
 				525206DC2147901500FB4DFF /* InfoCell */,
@@ -1624,6 +1649,7 @@
 				9AE61CB920DAC74B006160C1 /* MontserratAlternates-SemiBold.otf in Resources */,
 				9AE61CB520DAC74B006160C1 /* MontserratAlternates-SemiBoldItalic.otf in Resources */,
 				9AE61CAA20DAC74B006160C1 /* Montserrat-Light.otf in Resources */,
+				9A084F152155C23B00298431 /* DropDownDialogue.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1675,6 +1701,7 @@
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/ImageSlideshow/ImageSlideshow.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/LSDialogViewController/LSDialogViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/McPicker/McPicker.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
@@ -1720,6 +1747,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImageSlideshow.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LSDialogViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/McPicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
@@ -1821,9 +1849,11 @@
 				52B6166420E891C100A1A416 /* JPolicy.swift in Sources */,
 				5279A5A220FA710F00E94FB1 /* HotelDetailsContactViewController.swift in Sources */,
 				52B616D420E9341E00A1A416 /* JCRoomStay.swift in Sources */,
+				9A084F172155C30A00298431 /* DropDownDialogue.swift in Sources */,
 				521A4BCB21458BD1008A01F8 /* JBSource.swift in Sources */,
 				52B6165320E891C100A1A416 /* JService.swift in Sources */,
 				52B616D920E9341E00A1A416 /* JCCountryName.swift in Sources */,
+				9A084F122155A4A200298431 /* ProfileCellTableViewCell.swift in Sources */,
 				521A4BAD21458BD1008A01F8 /* JBRoomType.swift in Sources */,
 				9A8E78D720F93EFE0034C3AF /* HotelCollectionViewCell.swift in Sources */,
 				52B6163A20E891C100A1A416 /* JAmenity.swift in Sources */,
@@ -2299,7 +2329,6 @@
 			baseConfigurationReference = 8963E40941314293147FBF58 /* Pods-JazHotels.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MAG9DAS3TQ;
@@ -2328,7 +2357,6 @@
 			baseConfigurationReference = 42D73029D47BCCF9EDE78E08 /* Pods-JazHotels.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MAG9DAS3TQ;

@@ -66,13 +66,7 @@ class HotelDetailsViewController: SegmentedPagerTabStripViewController {
         }
     }
  
-    func setTransparentNavigationBar(){
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.isTranslucent = true
-        self.navigationController?.view.backgroundColor = UIColor.clear
-        GradientNavigationBar.appearance().colors = [UIColor .clear]
-    }
+ 
     @objc public static func create() -> HotelDetailsViewController {
         
         return UIStoryboard(name: HotelJazConstants.StoryBoard.mainSB, bundle: Bundle.main).instantiateViewController(withIdentifier: String(describing: self)) as! HotelDetailsViewController
@@ -90,7 +84,6 @@ class HotelDetailsViewController: SegmentedPagerTabStripViewController {
 
     }
     override func viewDidAppear(_ animated: Bool) {
-        setTransparentNavigationBar()
 
     }
     override func viewWillDisappear(_ animated: Bool) {

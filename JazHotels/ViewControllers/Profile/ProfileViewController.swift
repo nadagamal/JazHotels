@@ -9,8 +9,9 @@
 import UIKit
 import FirebaseFirestore
 import McPicker
+import LSDialogViewController
 
-class ProfileViewController: UITableViewController {
+class ProfileViewController: UIViewController {
 
     @IBOutlet weak var profileImg: UIImageView!
     @IBOutlet weak var userName: UILabel!
@@ -25,6 +26,7 @@ class ProfileViewController: UITableViewController {
     @IBOutlet weak var userAddress: UITextField!
     
     @IBOutlet weak var userCreditNumber: UITextField!
+    @IBOutlet weak var tableView: UITableView!
     
     static var user:User?
     
@@ -42,10 +44,10 @@ class ProfileViewController: UITableViewController {
         return arrayOfCountries
     }()
     
+    private var attributeNames:[String] = ["Title","Full Name","Gender","Phone Number","Country","Address","Membership Number"]
     var genderList:[String] = ["Male","Female"]
     
     override func viewWillLayoutSubviews()  {
-        self.tableView.backgroundView?.layer.insertSublayer(UIColor.appColor(), at: 0)
 
     }
     override func viewDidAppear(_ animated: Bool) {
@@ -60,7 +62,9 @@ class ProfileViewController: UITableViewController {
         else
         
         {
-            setUserData()
+            self.userData = UserDefaults.getObjectDefault(key: HotelJazConstants.userDefault.userData) as? UserProfile
+            self.tableView.reloadData()
+
         }
         
     }
@@ -70,62 +74,13 @@ class ProfileViewController: UITableViewController {
 
         NotificationCenter.default.addObserver(self, selector: #selector(ProfileViewController.getProfile(notification:)), name: Notification.Name(HotelJazConstants.Notifications.userProfileData), object: nil)
         
-//        userCountry.optionArray = countries
-//        userCountry.didSelect { (selectedText, index, id) in
-//            print(selectedText)
-//            self.userData?.userAddress?.country = selectedText
-//            self.updateUser(user: self.userData!)
-//        }
-//        userTitle.optionArray = genderList
-//        userTitle.didSelect { (selectedText, index, id) in
-//            print(selectedText)
-//            self.userData?.gender = selectedText
-//            self.updateUser(user: self.userData!)
-//        }
-        
-        
-        var mcInputView = McPicker(data: [countries])
-        mcInputView.backgroundColor = .gray
-        userCountry.inputViewMcPicker = mcInputView
-        userCountry.doneHandler = { [weak userCountry] (selections) in
-            userCountry?.text = selections[0]!
-            self.userData?.userAddress?.country = selections[0]!
-            self.updateUser(user: self.userData!)
-        }
-        userCountry.selectionChangedHandler = { [weak userCountry] (selections, componentThatChanged) in
-            userCountry?.text = selections[componentThatChanged]!
-        
-        }
-      
-        userCountry.textFieldWillBeginEditingHandler = { [weak userCountry] (selections) in
-            if userCountry?.text == "" {
-                // Selections always default to the first value per component
-                userCountry?.text = selections[0]
-            }
-        }
+
+    }
+    @IBAction func menuBtnAction(_ sender: Any) {
         
         
         
         
-        mcInputView = McPicker(data: [genderList])
-        mcInputView.backgroundColor = .gray
-        userTitle.inputViewMcPicker = mcInputView
-        userTitle.doneHandler = { [weak userTitle] (selections) in
-            userTitle?.text = selections[0]!
-            self.userData?.gender  = selections[0]!
-            self.updateUser(user: self.userData!)
-        }
-        userTitle.selectionChangedHandler = { [weak userTitle] (selections, componentThatChanged) in
-            userTitle?.text = selections[componentThatChanged]!
-            
-        }
-        
-        userTitle.textFieldWillBeginEditingHandler = { [weak userTitle] (selections) in
-            if userTitle?.text == "" {
-                // Selections always default to the first value per component
-                userTitle?.text = selections[0]
-            }
-        }
     }
     
     @objc private func getProfile(notification: Notification) {
@@ -135,24 +90,10 @@ class ProfileViewController: UITableViewController {
             self.userData = notification.object as? UserProfile
         }
     
-        setUserData()
+       // setUserData()
        
     }
  
-
-    
-    func setUserData()
-    {
-         let userData = UserDefaults.getObjectDefault(key: HotelJazConstants.userDefault.userData) as? UserProfile
-        self.userData = userData
-        self.userName.text = userData?.userName?.fullName ?? ""
-        self.userTitle.text = userData?.gender ?? ""
-        self.userMobile.text = userData?.userContact?.phoneNumbers ?? ""
-        self.userCountry.text = userData?.userAddress?.country ?? ""
-        self.userCity.text = userData?.userAddress?.city ?? ""
-        self.userAddress.text = userData?.userAddress?.fullAddress ??  ""
-        self.userCreditNumber.text = userData?.userCardPayment?.cardNumber ?? ""
-    }
     @objc public static func create() -> ProfileViewController {
         
         return UIStoryboard(name: HotelJazConstants.StoryBoard.authSB, bundle: Bundle.main).instantiateViewController(withIdentifier: String(describing: self)) as! ProfileViewController
@@ -191,6 +132,64 @@ class ProfileViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+  
+}
+extension ProfileViewController : UITableViewDataSource , UITableViewDelegate
+{
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "profile_cell", for: indexPath) as! ProfileCellTableViewCell
+        cell.attributeName.text = attributeNames[indexPath.row]
+        if indexPath.row == 0 // title
+        {
+            cell.attributeValue.text = userData?.title ?? ""
+        }
+        else if indexPath.row == 1 // full Name
+        {
+            cell.attributeValue.text = userData?.userName?.fullName ?? ""
+        }
+        else if indexPath.row == 2 // gender
+        {
+            cell.attributeValue.text = userData?.gender ?? ""
+        }
+        else if indexPath.row == 3 // phone
+        {
+            cell.attributeValue.text = userData?.userContact?.phoneNumbers ?? ""
+        }
+        else if indexPath.row == 4 // country
+        {
+            cell.attributeValue.text = userData?.userAddress?.city ?? ""
+        }
+        else if indexPath.row == 5 // address
+        {
+            cell.attributeValue.text = userData?.userAddress?.fullAddress ??  ""
+        }
+        else if indexPath.row == 6 // membership
+        {
+            cell.attributeValue.text = userData?.userCustomer?.membershipNumber ??  ""
+        }
+      
+        return cell
+    }
     
-   
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let dialogViewController: DropDownDialogue = DropDownDialogue(nibName:"DropDownDialogue", bundle: nil)
+        dialogViewController.optionArray = countries
+        dialogViewController.optionId = []
+        //        dialogViewController.modalPresentationStyle = .overFullScreen
+        self.presentDialogViewController(dialogViewController, animationPattern: LSAnimationPattern.zoomInOut, completion: { () -> Void in })
+
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 7
+    }
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        return 80
+    }
+    
 }

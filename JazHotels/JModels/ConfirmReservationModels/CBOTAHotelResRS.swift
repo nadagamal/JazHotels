@@ -16,6 +16,7 @@ class CBOTAHotelResRS : NSObject, NSCoding{
 	var primaryLangID : String!
 	var resResponseType : String!
 	var timeStamp : String!
+    var errors : CBError!
 
 
 	/**
@@ -30,6 +31,9 @@ class CBOTAHotelResRS : NSObject, NSCoding{
 		primaryLangID = dictionary["_PrimaryLangID"] as? String
 		resResponseType = dictionary["_ResResponseType"] as? String
 		timeStamp = dictionary["_TimeStamp"] as? String
+        if let errorsData = dictionary["Errors"] as? [String:Any]{
+            errors = CBError(fromDictionary: errorsData)
+        }
 	}
 
 	/**

@@ -22,7 +22,9 @@ class HotelOnMapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 //        NotificationCenter.default.addObserver(self, selector: #selector(self.updateHotelListCoordinates(notification:)), name: Notification.Name("getHotelListInfo"), object: nil)
-     
+        if userInfo != nil{
+            updateHotelListCoordinates()
+        }
 
     }
 
@@ -33,9 +35,7 @@ class HotelOnMapViewController: UIViewController {
 
     }
     override func viewDidAppear(_ animated: Bool) {
-        if userInfo != nil{
-            updateHotelListCoordinates()
-        }
+      
     }
     @objc public static func create() -> HotelOnMapViewController {
         

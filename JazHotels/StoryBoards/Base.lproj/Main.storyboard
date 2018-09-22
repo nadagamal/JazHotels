@@ -559,7 +559,7 @@ Iberotel Borg El Arab</string>
                                 <rect key="frame" x="15" y="30" width="290" height="498"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="APO-Zt-19I">
-                                    <rect key="frame" x="0.0" y="492.5" width="290" height="50"/>
+                                    <rect key="frame" x="0.0" y="397.5" width="290" height="50"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CXk-er-TCg">
@@ -622,43 +622,8 @@ Iberotel Borg El Arab</string>
                                             <outlet property="editCreditCardBtn" destination="Y03-qu-6Pz" id="960-Ur-hNV"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArrivalDateCell" rowHeight="95" id="Huw-cd-zo0" customClass="InfoCell" customModule="JazHotels" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="120.5" width="290" height="95"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Huw-cd-zo0" id="4Yo-uc-Nl6">
-                                            <rect key="frame" x="0.0" y="0.0" width="290" height="94.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="N7a-SH-oeo">
-                                                    <rect key="frame" x="12" y="33" width="266" height="51.5"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                                    <color key="textColor" red="0.58431372550000005" green="0.58431372550000005" blue="0.58431372550000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="12"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                </textView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Arrival Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dbn-wP-Fkf">
-                                                    <rect key="frame" x="15" y="10" width="67" height="13"/>
-                                                    <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="11"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="Dbn-wP-Fkf" firstAttribute="leading" secondItem="4Yo-uc-Nl6" secondAttribute="leading" constant="15" id="4zg-dJ-lmj"/>
-                                                <constraint firstAttribute="bottom" secondItem="N7a-SH-oeo" secondAttribute="bottom" constant="10" id="9bI-WA-QZ7"/>
-                                                <constraint firstItem="Dbn-wP-Fkf" firstAttribute="top" secondItem="4Yo-uc-Nl6" secondAttribute="top" constant="10" id="cSP-4E-qnM"/>
-                                                <constraint firstItem="N7a-SH-oeo" firstAttribute="top" secondItem="Dbn-wP-Fkf" secondAttribute="bottom" constant="10" id="osK-bh-97Z"/>
-                                                <constraint firstItem="N7a-SH-oeo" firstAttribute="leading" secondItem="4Yo-uc-Nl6" secondAttribute="leading" constant="12" id="twp-Et-ISc"/>
-                                                <constraint firstAttribute="trailing" secondItem="N7a-SH-oeo" secondAttribute="trailing" constant="12" id="xqM-Te-p8F"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="arrivalDateTxt" destination="N7a-SH-oeo" id="iBX-ia-gnC"/>
-                                        </connections>
-                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CancellationCell" rowHeight="95" id="agY-ie-Rb0" customClass="InfoCell" customModule="JazHotels" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="215.5" width="290" height="95"/>
+                                        <rect key="frame" x="0.0" y="120.5" width="290" height="95"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="agY-ie-Rb0" id="qk9-wq-Onx">
                                             <rect key="frame" x="0.0" y="0.0" width="290" height="94.5"/>
@@ -673,7 +638,7 @@ Iberotel Borg El Arab</string>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cancellations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dT-oN-uwy">
-                                                    <rect key="frame" x="15" y="10" width="77" height="13"/>
+                                                    <rect key="frame" x="15" y="10" width="66.5" height="13"/>
                                                     <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -693,7 +658,7 @@ Iberotel Borg El Arab</string>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookingCell" rowHeight="95" id="DgE-GE-ngX" customClass="InfoCell" customModule="JazHotels" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="310.5" width="290" height="95"/>
+                                        <rect key="frame" x="0.0" y="215.5" width="290" height="95"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DgE-GE-ngX" id="Gho-TH-myE">
                                             <rect key="frame" x="0.0" y="0.0" width="290" height="94.5"/>
@@ -708,7 +673,7 @@ Iberotel Borg El Arab</string>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Booking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PDp-ch-2vc">
-                                                    <rect key="frame" x="15" y="10" width="48" height="13"/>
+                                                    <rect key="frame" x="15" y="10" width="41" height="13"/>
                                                     <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -728,7 +693,7 @@ Iberotel Borg El Arab</string>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CheckCell" rowHeight="69" id="hKA-c0-O2d" customClass="InfoCell" customModule="JazHotels" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="405.5" width="290" height="69"/>
+                                        <rect key="frame" x="0.0" y="310.5" width="290" height="69"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hKA-c0-O2d" id="wyp-hT-Thi">
                                             <rect key="frame" x="0.0" y="0.0" width="290" height="68.5"/>

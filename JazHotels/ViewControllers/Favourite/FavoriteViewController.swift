@@ -26,11 +26,7 @@ class FavoriteViewController: UIViewController {
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        self.navigationController?.isNavigationBarHidden = false
-        GradientNavigationBar.appearance().colors = [Helper.hexStringToUIColor(hex: "DF1B8E"), Helper.hexStringToUIColor(hex: "7E0E8B"),Helper.hexStringToUIColor(hex: "5E0E8B")]
-        
-        GradientNavigationBar.appearance().startPoint = CGPoint.zero
-        GradientNavigationBar.appearance().endPoint = CGPoint(x: 1, y: 1)
+//        self.navigationController?.isNavigationBarHidden = false
         
         if UserDefaults.standard.object(forKey: "Favourites") != nil{
             var list = [String]()

@@ -33,8 +33,11 @@ extension UIViewController
     // MARK: - Method Swizzling
     @objc func proj_viewWillAppear(animated: Bool)
     {
+        self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
+
         proj_viewWillAppear(animated: animated)
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+
 
 
     }

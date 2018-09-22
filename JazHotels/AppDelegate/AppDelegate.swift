@@ -28,10 +28,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UITabBarDelegate, GIDSignI
         UITabBar.appearance().layer.borderWidth = 0.0
         UITabBar.appearance().clipsToBounds = true
         
-        GradientNavigationBar.appearance().colors = [Helper.hexStringToUIColor(hex: "DF1B8E"), Helper.hexStringToUIColor(hex: "7E0E8B"),Helper.hexStringToUIColor(hex: "5E0E8B")]
+//        GradientNavigationBar.appearance().colors = [Helper.hexStringToUIColor(hex: "DF1B8E"), Helper.hexStringToUIColor(hex: "7E0E8B"),Helper.hexStringToUIColor(hex: "5E0E8B")]
 
-        GradientNavigationBar.appearance().startPoint = CGPoint.zero
-        GradientNavigationBar.appearance().endPoint = CGPoint(x: 1, y: 1)
+//        GradientNavigationBar.appearance().startPoint = CGPoint.zero
+//        GradientNavigationBar.appearance().endPoint = CGPoint(x: 1, y: 1)
         
         FirebaseApp.configure()
         

@@ -19,8 +19,9 @@ class UserProfile: NSObject , NSCoding{
     var userSynXisInfo:UserSynXisInfo?
     var gender:String?
     var userId:String?
+    var title:String?
     
-    init( userContact:UserContact,userName:UserName ,userAddress:UserAddress , userCustomer:UserCustomerLoyalty , userCardPayment:UserPaymentCard, userSynXisInfo:UserSynXisInfo?,gender:String,userId:String) {
+    init( userContact:UserContact,userName:UserName ,userAddress:UserAddress , userCustomer:UserCustomerLoyalty , userCardPayment:UserPaymentCard, userSynXisInfo:UserSynXisInfo?,gender:String,userId:String,title:String) {
         self.userName = userName
         self.userAddress = userAddress
         self.userContact = userContact
@@ -29,6 +30,7 @@ class UserProfile: NSObject , NSCoding{
         self.userCardPayment = userCardPayment
         self.gender = gender
         self.userId = userId
+        self.title = title
     }
     
     
@@ -57,6 +59,11 @@ class UserProfile: NSObject , NSCoding{
             dictionary["gender"] = gender
         }
         
+        if title != nil
+        {
+             dictionary["title"] = title
+        }
+        
         return dictionary
     }
     /**
@@ -73,6 +80,8 @@ class UserProfile: NSObject , NSCoding{
         userCardPayment = aDecoder.decodeObject(forKey: "userCardPayment") as? UserPaymentCard
         gender = aDecoder.decodeObject(forKey: "gender") as? String
         userId = aDecoder.decodeObject(forKey: "userId") as? String
+        title = aDecoder.decodeObject(forKey: "title") as? String
+        
 
     }
     
@@ -105,6 +114,9 @@ class UserProfile: NSObject , NSCoding{
         }
         if userId != nil{
             aCoder.encode(userId, forKey: "userId")
+        }
+        if title != nil {
+            aCoder.encode(title, forKey: "title")
         }
         
     }

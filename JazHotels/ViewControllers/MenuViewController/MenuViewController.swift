@@ -43,7 +43,8 @@ extension MenuViewController:UITableViewDataSource,UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell:MenuCell = tableView.dequeueReusableCell(withIdentifier: "cell") as! MenuCell
-        if indexPath.row == 0{
+        if indexPath.row == 0
+        {
            
             if !UserDefaults.isKeyPresentInUserDefaults(key: HotelJazConstants.userDefault.userData)
             {
@@ -55,7 +56,9 @@ extension MenuViewController:UITableViewDataSource,UITableViewDelegate{
                 cell.cellTitleLbl.text = "Sign out"
                 cell.cellIconImg.image = #imageLiteral(resourceName: "signOut")
             }
-        }else{
+        }
+        else if indexPath.row == 1
+        {
             cell = tableView.dequeueReusableCell(withIdentifier: "ReservationCell") as! MenuCell
             cell.cellTitleLbl.text = "Reservation"
             cell.cellIconImg.image = #imageLiteral(resourceName: "reservation")
@@ -74,7 +77,7 @@ extension MenuViewController:UITableViewDataSource,UITableViewDelegate{
         }
         else
         {
-             return 3
+             return 2
         }
       
     }

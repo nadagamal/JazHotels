@@ -17,8 +17,8 @@ class MRAddres : NSObject, NSCoding{
 	var StateProv : MRStateProv!
 	var DefaultInd : Bool!
 	var FormattedInd : Bool!
-	var CityName : String!
-	var PostalCode : String!
+	var CityNamee : String!
+	var PostalCodee : String!
 
 
 	/**
@@ -36,8 +36,8 @@ class MRAddres : NSObject, NSCoding{
 		}
 		DefaultInd = dictionary["_DefaultInd"] as? Bool
 		FormattedInd = dictionary["_FormattedInd"] as? Bool
-		CityName = dictionary["CityName"] as? String
-		PostalCode = dictionary["PostalCode"] as? String
+		CityNamee = dictionary["CityName"] as? String
+		PostalCodee = dictionary["PostalCode"] as? String
 	}
 
 	/**
@@ -67,11 +67,11 @@ class MRAddres : NSObject, NSCoding{
 		if FormattedInd != nil{
 			dictionary["_FormattedInd"] = FormattedInd
 		}
-		if CityName != nil{
-			dictionary["CityName"] = CityName
+		if CityNamee != nil{
+			dictionary["CityName"] = CityNamee
 		}
-		if PostalCode != nil{
-			dictionary["PostalCode"] = PostalCode
+		if PostalCodee != nil{
+			dictionary["PostalCode"] = PostalCodee
 		}
 		return dictionary
 	}
@@ -89,8 +89,8 @@ class MRAddres : NSObject, NSCoding{
          StateProv = aDecoder.decodeObject(forKey: "StateProv") as? MRStateProv
          DefaultInd = aDecoder.decodeObject(forKey: "_DefaultInd") as? Bool
          FormattedInd = aDecoder.decodeObject(forKey: "_FormattedInd") as? Bool
-         CityName = aDecoder.decodeObject(forKey: "CityName") as? String
-         PostalCode = aDecoder.decodeObject(forKey: "PostalCode") as? String
+         CityNamee = aDecoder.decodeObject(forKey: "CityName") as? String
+         PostalCodee = aDecoder.decodeObject(forKey: "PostalCode") as? String
 
 	}
 
@@ -121,11 +121,11 @@ class MRAddres : NSObject, NSCoding{
 		if FormattedInd != nil{
 			aCoder.encode(FormattedInd, forKey: "_FormattedInd")
 		}
-		if CityName != nil{
-			aCoder.encode(CityName, forKey: "CityName")
+		if CityNamee != nil{
+			aCoder.encode(CityNamee, forKey: "CityName")
 		}
-		if PostalCode != nil{
-			aCoder.encode(PostalCode, forKey: "PostalCode")
+		if PostalCodee != nil{
+			aCoder.encode(PostalCodee, forKey: "PostalCode")
 		}
 
 	}

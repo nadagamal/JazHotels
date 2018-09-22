@@ -53,7 +53,8 @@ extension BookHotelViewController:UITableViewDelegate,UITableViewDataSource{
         var cell:UITableViewCell!
         
         if indexPath.row == 0{
-            cell = tableView.dequeueReusableCell(withIdentifier: "CardHolderCell") as! TxtViewCell
+           let cell = tableView.dequeueReusableCell(withIdentifier: "CreditCardCell") as! CreditCardCell
+            return cell
         }
         else  if indexPath.row == 1{
             cell = tableView.dequeueReusableCell(withIdentifier: "CardNumberCell") as! TxtViewCell
@@ -89,7 +90,10 @@ extension BookHotelViewController:UITableViewDelegate,UITableViewDataSource{
         return 8
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.row == 0 || indexPath.row == 1 || indexPath.row == 2 || indexPath.row == 3{
+        if indexPath.row == 0 {
+            return 185.0
+        }
+        else if indexPath.row == 1 || indexPath.row == 2 || indexPath.row == 3{
            return 75
         }
         else  if indexPath.row == 4 || indexPath.row == 5 || indexPath.row == 6 {

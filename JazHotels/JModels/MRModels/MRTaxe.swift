@@ -11,7 +11,7 @@ import Foundation
 class MRTaxe : NSObject, NSCoding{
 
 	var Tax : MRTax!
-	var Tax : [MRTax]!
+	var Taxx : [MRTax]!
 	var Amount : String!
 
 
@@ -22,11 +22,11 @@ class MRTaxe : NSObject, NSCoding{
 		if let TaxData = dictionary["Tax"] as? [String:Any]{
 			Tax = MRTax(fromDictionary: TaxData)
 		}
-		Tax = [MRTax]()
+		Taxx = [MRTax]()
 		if let TaxArray = dictionary["Tax"] as? [[String:Any]]{
 			for dic in TaxArray{
 				let value = MRTax(fromDictionary: dic)
-				Tax.append(value)
+				Taxx.append(value)
 			}
 		}
 		Amount = dictionary["_Amount"] as? String
@@ -41,9 +41,9 @@ class MRTaxe : NSObject, NSCoding{
 		if Tax != nil{
 			dictionary["Tax"] = Tax.toDictionary()
 		}
-		if Tax != nil{
+		if Taxx != nil{
 			var dictionaryElements = [[String:Any]]()
-			for TaxElement in Tax {
+			for TaxElement in Taxx {
 				dictionaryElements.append(TaxElement.toDictionary())
 			}
 			dictionary["Tax"] = dictionaryElements
@@ -61,7 +61,7 @@ class MRTaxe : NSObject, NSCoding{
     @objc required init(coder aDecoder: NSCoder)
 	{
          Tax = aDecoder.decodeObject(forKey: "Tax") as? MRTax
-         Tax = aDecoder.decodeObject(forKey :"Tax") as? [MRTax]
+         Taxx = aDecoder.decodeObject(forKey :"Tax") as? [MRTax]
          Amount = aDecoder.decodeObject(forKey: "_Amount") as? String
 
 	}
@@ -75,8 +75,8 @@ class MRTaxe : NSObject, NSCoding{
 		if Tax != nil{
 			aCoder.encode(Tax, forKey: "Tax")
 		}
-		if Tax != nil{
-			aCoder.encode(Tax, forKey: "Tax")
+		if Taxx != nil{
+			aCoder.encode(Taxx, forKey: "Tax")
 		}
 		if Amount != nil{
 			aCoder.encode(Amount, forKey: "_Amount")

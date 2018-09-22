@@ -14,7 +14,7 @@ class MRHotelResModify : NSObject, NSCoding{
 	var ResGlobalInfo : MRResGlobalInfo!
 	var ResGuests : MRResGuest!
 	var RoomStays : MRRoomStay!
-	var TPAExtensions : MRTPAExtension!
+	var TPAExtensions : CBTpaExtension!
 	var UniqueID : MRUniqueID!
 	var HotelResModify : MRHotelResModify!
 
@@ -36,7 +36,7 @@ class MRHotelResModify : NSObject, NSCoding{
 			RoomStays = MRRoomStay(fromDictionary: RoomStaysData)
 		}
 		if let TPAExtensionsData = dictionary["TPA_Extensions"] as? [String:Any]{
-			TPAExtensions = MRTPAExtension(fromDictionary: TPAExtensionsData)
+			TPAExtensions = CBTpaExtension(fromDictionary: TPAExtensionsData)
 		}
 		if let UniqueIDData = dictionary["UniqueID"] as? [String:Any]{
 			UniqueID = MRUniqueID(fromDictionary: UniqueIDData)
@@ -86,7 +86,7 @@ class MRHotelResModify : NSObject, NSCoding{
          ResGlobalInfo = aDecoder.decodeObject(forKey: "ResGlobalInfo") as? MRResGlobalInfo
          ResGuests = aDecoder.decodeObject(forKey: "ResGuests") as? MRResGuest
          RoomStays = aDecoder.decodeObject(forKey: "RoomStays") as? MRRoomStay
-         TPAExtensions = aDecoder.decodeObject(forKey: "TPA_Extensions") as? MRTPAExtension
+         TPAExtensions = aDecoder.decodeObject(forKey: "TPA_Extensions") as? CBTpaExtension
          UniqueID = aDecoder.decodeObject(forKey: "UniqueID") as? MRUniqueID
          HotelResModify = aDecoder.decodeObject(forKey: "HotelResModify") as? MRHotelResModify
 

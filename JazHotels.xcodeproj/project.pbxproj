@@ -177,6 +177,8 @@
 		525E37E1215661CE009EFFB7 /* MRRoomType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525E37B1215661CE009EFFB7 /* MRRoomType.swift */; };
 		525E37E2215661CE009EFFB7 /* MRTotal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525E37B2215661CE009EFFB7 /* MRTotal.swift */; };
 		525E37E3215661CE009EFFB7 /* MRPOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525E37B3215661CE009EFFB7 /* MRPOS.swift */; };
+		525E37E92156729D009EFFB7 /* CreditCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525E37E72156729D009EFFB7 /* CreditCardCell.swift */; };
+		525E37EA2156729D009EFFB7 /* CreditCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 525E37E82156729D009EFFB7 /* CreditCardCell.xib */; };
 		5279A5A020FA70F000E94FB1 /* HotelDetailsOverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5279A59F20FA70F000E94FB1 /* HotelDetailsOverviewViewController.swift */; };
 		5279A5A220FA710F00E94FB1 /* HotelDetailsContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5279A5A120FA710F00E94FB1 /* HotelDetailsContactViewController.swift */; };
 		528F600920E7BFB9003111E7 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F600820E7BFB9003111E7 /* ServiceManager.swift */; };
@@ -597,6 +599,8 @@
 		525E37B1215661CE009EFFB7 /* MRRoomType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRRoomType.swift; sourceTree = "<group>"; };
 		525E37B2215661CE009EFFB7 /* MRTotal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRTotal.swift; sourceTree = "<group>"; };
 		525E37B3215661CE009EFFB7 /* MRPOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRPOS.swift; sourceTree = "<group>"; };
+		525E37E72156729D009EFFB7 /* CreditCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardCell.swift; sourceTree = "<group>"; };
+		525E37E82156729D009EFFB7 /* CreditCardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreditCardCell.xib; sourceTree = "<group>"; };
 		5279A59F20FA70F000E94FB1 /* HotelDetailsOverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelDetailsOverviewViewController.swift; sourceTree = "<group>"; };
 		5279A5A120FA710F00E94FB1 /* HotelDetailsContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelDetailsContactViewController.swift; sourceTree = "<group>"; };
 		528F600820E7BFB9003111E7 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
@@ -1139,6 +1143,15 @@
 			path = MRModels;
 			sourceTree = "<group>";
 		};
+		525E37E421567235009EFFB7 /* CreditCardView */ = {
+			isa = PBXGroup;
+			children = (
+				525E37E72156729D009EFFB7 /* CreditCardCell.swift */,
+				525E37E82156729D009EFFB7 /* CreditCardCell.xib */,
+			);
+			path = CreditCardView;
+			sourceTree = "<group>";
+		};
 		528F600720E7BF7B003111E7 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
@@ -1446,6 +1459,7 @@
 		9AADBF2020ED5208009183FE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				525E37E421567235009EFFB7 /* CreditCardView */,
 				9AB548802156491600E4098D /* MembershipInfo */,
 				9A084F132155C1FD00298431 /* UpdateProfileViews */,
 				9A084F102155A48B00298431 /* ProfileCell */,
@@ -1856,6 +1870,7 @@
 				9AE61CA620DAC74B006160C1 /* MontserratAlternates-Black.otf in Resources */,
 				9AE61CBE20DAC74B006160C1 /* Montserrat-ExtraLightItalic.otf in Resources */,
 				9ADD3E3D2106A50E00D00078 /* MapInfoHotelView.xib in Resources */,
+				525E37EA2156729D009EFFB7 /* CreditCardCell.xib in Resources */,
 				9AE61CA320DAC74B006160C1 /* Montserrat-Bold.otf in Resources */,
 				9AE61CAF20DAC74B006160C1 /* MontserratAlternates-BlackItalic.otf in Resources */,
 				9AE61CC620DAC74B006160C1 /* Montserrat-SemiBold.otf in Resources */,
@@ -1937,6 +1952,7 @@
 				"${BUILT_PRODUCTS_DIR}/BSKeyboardControls/BSKeyboardControls.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/Caishen/Caishen.framework",
 				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
 				"${BUILT_PRODUCTS_DIR}/DatePickerDialog/DatePickerDialog.framework",
 				"${BUILT_PRODUCTS_DIR}/DynamicBlurView/DynamicBlurView.framework",
@@ -1984,6 +2000,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BSKeyboardControls.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Caishen.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DatePickerDialog.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DynamicBlurView.framework",
@@ -2099,6 +2116,7 @@
 				52B6164B20E891C100A1A416 /* JOTAHotelDescriptiveInfoRS.swift in Sources */,
 				52B6164F20E891C100A1A416 /* JAttraction.swift in Sources */,
 				52B615F720E8847100A1A416 /* XMLDictionary.m in Sources */,
+				525E37E92156729D009EFFB7 /* CreditCardCell.swift in Sources */,
 				9AB548792156233F00E4098D /* UpdatePhoneDialogue.swift in Sources */,
 				521A4BD621458BD1008A01F8 /* JBTimeSpan.swift in Sources */,
 				52B6166420E891C100A1A416 /* JPolicy.swift in Sources */,
@@ -2438,7 +2456,11 @@
 				DEVELOPMENT_TEAM = PKX77P5J33;
 				INFOPLIST_FILE = JazHotelsTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.JazHotels.JazHotelsTests;
@@ -2457,7 +2479,11 @@
 				DEVELOPMENT_TEAM = PKX77P5J33;
 				INFOPLIST_FILE = JazHotelsTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.JazHotels.JazHotelsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2474,7 +2500,11 @@
 				DEVELOPMENT_TEAM = PKX77P5J33;
 				INFOPLIST_FILE = JazHotelsUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.JazHotels.JazHotelsUITests;
@@ -2492,7 +2522,11 @@
 				DEVELOPMENT_TEAM = PKX77P5J33;
 				INFOPLIST_FILE = JazHotelsUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.JazHotels.JazHotelsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2632,7 +2666,10 @@
 				);
 				INFOPLIST_FILE = JazHotels/resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jaz.JazHotels;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -2657,7 +2694,10 @@
 				);
 				INFOPLIST_FILE = JazHotels/resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jaz.JazHotels;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

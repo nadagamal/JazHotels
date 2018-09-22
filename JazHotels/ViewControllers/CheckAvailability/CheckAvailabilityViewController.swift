@@ -83,8 +83,7 @@ class CheckAvailabilityViewController: UIViewController , UIScrollViewDelegate {
 
     }
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.isHidden = true
-
+       
     }
 
     override func didReceiveMemoryWarning() {

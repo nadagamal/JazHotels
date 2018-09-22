@@ -269,6 +269,13 @@
 		9AADBF8420EDC0F0009183FE /* HotelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AADBF8320EDC0F0009183FE /* HotelTableViewCell.xib */; };
 		9AADBF8920EDCA78009183FE /* HotelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AADBF8820EDCA78009183FE /* HotelListViewController.swift */; };
 		9AADBF8B20EDCA85009183FE /* HotelOnMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AADBF8A20EDCA85009183FE /* HotelOnMapViewController.swift */; };
+		9AB5487221561F6500E4098D /* UpdateNameDialogue.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AB5487021561F6500E4098D /* UpdateNameDialogue.xib */; };
+		9AB5487321561F6500E4098D /* UpdateNameDialogue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB5487121561F6500E4098D /* UpdateNameDialogue.swift */; };
+		9AB548752156210700E4098D /* DesignableUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB548742156210600E4098D /* DesignableUITextField.swift */; };
+		9AB548792156233F00E4098D /* UpdatePhoneDialogue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB548772156233F00E4098D /* UpdatePhoneDialogue.swift */; };
+		9AB5487A2156233F00E4098D /* UpdatePhoneDialogue.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AB548782156233F00E4098D /* UpdatePhoneDialogue.xib */; };
+		9AB5487E2156243F00E4098D /* UpdateAddressDialogue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB5487C2156243F00E4098D /* UpdateAddressDialogue.swift */; };
+		9AB5487F2156243F00E4098D /* UpdateAddressDialogue.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AB5487D2156243F00E4098D /* UpdateAddressDialogue.xib */; };
 		9AC6E48A2131AFEF00E70ABE /* RoomDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC6E4892131AFEF00E70ABE /* RoomDetailsViewController.swift */; };
 		9AC6E48C2131B00800E70ABE /* RoomDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC6E48B2131B00800E70ABE /* RoomDetailsCell.swift */; };
 		9AC6E48E2131D46B00E70ABE /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC6E48D2131D46B00E70ABE /* CreateAccountViewController.swift */; };
@@ -630,6 +637,13 @@
 		9AADBF8320EDC0F0009183FE /* HotelTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HotelTableViewCell.xib; sourceTree = "<group>"; };
 		9AADBF8820EDCA78009183FE /* HotelListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelListViewController.swift; sourceTree = "<group>"; };
 		9AADBF8A20EDCA85009183FE /* HotelOnMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelOnMapViewController.swift; sourceTree = "<group>"; };
+		9AB5487021561F6500E4098D /* UpdateNameDialogue.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UpdateNameDialogue.xib; sourceTree = "<group>"; };
+		9AB5487121561F6500E4098D /* UpdateNameDialogue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateNameDialogue.swift; sourceTree = "<group>"; };
+		9AB548742156210600E4098D /* DesignableUITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableUITextField.swift; sourceTree = "<group>"; };
+		9AB548772156233F00E4098D /* UpdatePhoneDialogue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdatePhoneDialogue.swift; sourceTree = "<group>"; };
+		9AB548782156233F00E4098D /* UpdatePhoneDialogue.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UpdatePhoneDialogue.xib; sourceTree = "<group>"; };
+		9AB5487C2156243F00E4098D /* UpdateAddressDialogue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateAddressDialogue.swift; sourceTree = "<group>"; };
+		9AB5487D2156243F00E4098D /* UpdateAddressDialogue.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UpdateAddressDialogue.xib; sourceTree = "<group>"; };
 		9AC6E4892131AFEF00E70ABE /* RoomDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomDetailsViewController.swift; sourceTree = "<group>"; };
 		9AC6E48B2131B00800E70ABE /* RoomDetailsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomDetailsCell.swift; sourceTree = "<group>"; };
 		9AC6E48D2131D46B00E70ABE /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
@@ -1152,8 +1166,10 @@
 		9A084F132155C1FD00298431 /* UpdateProfileViews */ = {
 			isa = PBXGroup;
 			children = (
-				9A084F142155C23B00298431 /* DropDownDialogue.xib */,
-				9A084F162155C30A00298431 /* DropDownDialogue.swift */,
+				9AB5487B2156242000E4098D /* UpdateAddress */,
+				9AB548762156232600E4098D /* Update Phone */,
+				9AB5486F21561F0600E4098D /* Update Name */,
+				9AB5486E21561EF000E4098D /* ForMultiOption */,
 			);
 			path = UpdateProfileViews;
 			sourceTree = "<group>";
@@ -1267,6 +1283,7 @@
 		9AADBF2120ED5696009183FE /* TextField */ = {
 			isa = PBXGroup;
 			children = (
+				9AB548742156210600E4098D /* DesignableUITextField.swift */,
 				9AADBF2220ED56A1009183FE /* NoCopyPasteUITextField.swift */,
 			);
 			path = TextField;
@@ -1306,6 +1323,42 @@
 				9AADBF8A20EDCA85009183FE /* HotelOnMapViewController.swift */,
 			);
 			path = HotelOnMap;
+			sourceTree = "<group>";
+		};
+		9AB5486E21561EF000E4098D /* ForMultiOption */ = {
+			isa = PBXGroup;
+			children = (
+				9A084F142155C23B00298431 /* DropDownDialogue.xib */,
+				9A084F162155C30A00298431 /* DropDownDialogue.swift */,
+			);
+			path = ForMultiOption;
+			sourceTree = "<group>";
+		};
+		9AB5486F21561F0600E4098D /* Update Name */ = {
+			isa = PBXGroup;
+			children = (
+				9AB5487121561F6500E4098D /* UpdateNameDialogue.swift */,
+				9AB5487021561F6500E4098D /* UpdateNameDialogue.xib */,
+			);
+			path = "Update Name";
+			sourceTree = "<group>";
+		};
+		9AB548762156232600E4098D /* Update Phone */ = {
+			isa = PBXGroup;
+			children = (
+				9AB548772156233F00E4098D /* UpdatePhoneDialogue.swift */,
+				9AB548782156233F00E4098D /* UpdatePhoneDialogue.xib */,
+			);
+			path = "Update Phone";
+			sourceTree = "<group>";
+		};
+		9AB5487B2156242000E4098D /* UpdateAddress */ = {
+			isa = PBXGroup;
+			children = (
+				9AB5487C2156243F00E4098D /* UpdateAddressDialogue.swift */,
+				9AB5487D2156243F00E4098D /* UpdateAddressDialogue.xib */,
+			);
+			path = UpdateAddress;
 			sourceTree = "<group>";
 		};
 		9ACCCC9620FAA1DE0083CBD2 /* GradienViews */ = {
@@ -1622,15 +1675,18 @@
 				9A9520F72145C41300D0FD4E /* hotels.json in Resources */,
 				9AE61CAB20DAC74B006160C1 /* Montserrat-ThinItalic.otf in Resources */,
 				9AE61CA820DAC74B006160C1 /* MontserratAlternates-Medium.otf in Resources */,
+				9AB5487F2156243F00E4098D /* UpdateAddressDialogue.xib in Resources */,
 				9AE61CAD20DAC74B006160C1 /* MontserratAlternates-MediumItalic.otf in Resources */,
 				9AE61CAE20DAC74B006160C1 /* Montserrat-ExtraLight.otf in Resources */,
 				9AE61CA420DAC74B006160C1 /* Montserrat-BlackItalic.otf in Resources */,
 				9AE61CB420DAC74B006160C1 /* Montserrat-Medium.otf in Resources */,
 				524F784920F9222700AF0EF6 /* hotels-images.json in Resources */,
 				9AE61CB120DAC74B006160C1 /* MontserratAlternates-ExtraLightItalic.otf in Resources */,
+				9AB5487A2156233F00E4098D /* UpdatePhoneDialogue.xib in Resources */,
 				9A640D46212EF67B002CB116 /* Authentication.storyboard in Resources */,
 				9AE61CC420DAC74B006160C1 /* MontserratAlternates-ExtraBoldItalic.otf in Resources */,
 				9AE61CA720DAC74B006160C1 /* MontserratAlternates-LightItalic.otf in Resources */,
+				9AB5487221561F6500E4098D /* UpdateNameDialogue.xib in Resources */,
 				9AE61CB820DAC74B006160C1 /* Montserrat-Italic.otf in Resources */,
 				9AE61CB320DAC74B006160C1 /* Montserrat-LightItalic.otf in Resources */,
 				9AE61CAC20DAC74B006160C1 /* Montserrat-Thin.otf in Resources */,
@@ -1829,6 +1885,7 @@
 				52B6163520E891C100A1A416 /* JAward.swift in Sources */,
 				5213E78221517DD7003D0DDF /* CBRoomDescription.swift in Sources */,
 				9AADBF8920EDCA78009183FE /* HotelListViewController.swift in Sources */,
+				9AB548752156210700E4098D /* DesignableUITextField.swift in Sources */,
 				525206DE2147902200FB4DFF /* InfoCell.swift in Sources */,
 				52DAFC9C2147F0DA00F8269F /* BookingDetailsViewController.swift in Sources */,
 				52B6165B20E891C100A1A416 /* JAffiliationInfo.swift in Sources */,
@@ -1845,6 +1902,7 @@
 				52B6164B20E891C100A1A416 /* JOTAHotelDescriptiveInfoRS.swift in Sources */,
 				52B6164F20E891C100A1A416 /* JAttraction.swift in Sources */,
 				52B615F720E8847100A1A416 /* XMLDictionary.m in Sources */,
+				9AB548792156233F00E4098D /* UpdatePhoneDialogue.swift in Sources */,
 				521A4BD621458BD1008A01F8 /* JBTimeSpan.swift in Sources */,
 				52B6166420E891C100A1A416 /* JPolicy.swift in Sources */,
 				5279A5A220FA710F00E94FB1 /* HotelDetailsContactViewController.swift in Sources */,
@@ -1979,6 +2037,7 @@
 				52B6164C20E891C100A1A416 /* JRestaurant.swift in Sources */,
 				52B6166120E891C100A1A416 /* JCategoryCode.swift in Sources */,
 				52B6163F20E891C100A1A416 /* JHotelInfo.swift in Sources */,
+				9AB5487321561F6500E4098D /* UpdateNameDialogue.swift in Sources */,
 				9A640D4921305F94002CB116 /* LoginViewController.swift in Sources */,
 				9ACCCC9A20FAE6000083CBD2 /* Date.swift in Sources */,
 				5213E79B21517EF3003D0DDF /* CBError.swift in Sources */,
@@ -2006,6 +2065,7 @@
 				521A4BAF21458BD1008A01F8 /* JBRoomDescription.swift in Sources */,
 				9AADBF2320ED56A1009183FE /* NoCopyPasteUITextField.swift in Sources */,
 				521A4BAC21458BD1008A01F8 /* JBAddres.swift in Sources */,
+				9AB5487E2156243F00E4098D /* UpdateAddressDialogue.swift in Sources */,
 				52B6163720E891C100A1A416 /* JAddres.swift in Sources */,
 				52B6165220E891C100A1A416 /* JContactInfo.swift in Sources */,
 				52B616E520E94D3F00A1A416 /* Helper.swift in Sources */,

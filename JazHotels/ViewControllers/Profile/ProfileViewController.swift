@@ -31,7 +31,7 @@ class ProfileViewController: UIViewController {
     static var user:User?
     
     fileprivate var userData:UserProfile?
-    var countries: [String] = {
+    fileprivate var countries: [String] = {
         
         var arrayOfCountries: [String] = []
         
@@ -44,8 +44,10 @@ class ProfileViewController: UIViewController {
         return arrayOfCountries
     }()
     
-    private var attributeNames:[String] = ["Title","Full Name","Gender","Phone Number","Country","Address","Membership Number"]
-    var genderList:[String] = ["Male","Female"]
+    fileprivate var attributeNames:[String] = ["Title","Full Name","Gender","Phone Number","Country","Address","Membership Number"]
+    fileprivate var genderList:[String] = ["Male","Female"]
+    fileprivate var titleList:[String] = ["Mr.","Mrs.","Miss.","Pr.","Prof.","Dr.","Rev."]
+
     
     override func viewWillLayoutSubviews()  {
 
@@ -172,12 +174,49 @@ extension ProfileViewController : UITableViewDataSource , UITableViewDelegate
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 0 || indexPath.row == 2 || indexPath.row == 4
+        {
+            let dialogViewController: DropDownDialogue = DropDownDialogue(nibName:"DropDownDialogue", bundle: nil)
+
+            if indexPath.row == 0 // update title
+            {
+                dialogViewController.optionArray = titleList
+                dialogViewController.optionId = [0...6]
+
+            }
+            else if indexPath.row == 2 // update gender
+            {
+                dialogViewController.optionArray = genderList
+                dialogViewController.optionId = [0,1]
+            }
+            else
+            {
+                dialogViewController.optionArray = countries
+                dialogViewController.optionId = []
+
+            }
+            self.presentDialogViewController(dialogViewController, animationPattern: LSAnimationPattern.zoomInOut, completion: { () -> Void in })
+        }
+            
+        else if indexPath.row == 1 // update name
+        {
+            let dialogViewController: UpdateNameDialogue = UpdateNameDialogue(nibName:"UpdateNameDialogue", bundle: nil)
+            self.presentDialogViewController(dialogViewController, animationPattern: LSAnimationPattern.zoomInOut, completion: { () -> Void in })
+        }
+        else if indexPath.row == 3 // update phone
+        {
+            let dialogViewController: UpdatePhoneDialogue = UpdatePhoneDialogue(nibName:"UpdatePhoneDialogue", bundle: nil)
+            self.presentDialogViewController(dialogViewController, animationPattern: LSAnimationPattern.zoomInOut, completion: { () -> Void in })
+
+        }
+        else // update Address
+        {
+            let dialogViewController: UpdateAddressDialogue = UpdateAddressDialogue(nibName:"UpdateAddressDialogue", bundle: nil)
+            self.presentDialogViewController(dialogViewController, animationPattern: LSAnimationPattern.zoomInOut, completion: { () -> Void in })
+
+            
+        }
         
-        let dialogViewController: DropDownDialogue = DropDownDialogue(nibName:"DropDownDialogue", bundle: nil)
-        dialogViewController.optionArray = countries
-        dialogViewController.optionId = []
-        //        dialogViewController.modalPresentationStyle = .overFullScreen
-        self.presentDialogViewController(dialogViewController, animationPattern: LSAnimationPattern.zoomInOut, completion: { () -> Void in })
 
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

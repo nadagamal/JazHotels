@@ -62,7 +62,7 @@ class RatePlansViewController: UIViewController {
         }
         else{
             expandableCells.append(selectedSection)
-            cell.avaiableRoomBtn.backgroundColor = #colorLiteral(red: 0.4196078431, green: 0.1568627451, blue: 0.5411764706, alpha: 1)
+            cell.avaiableRoomBtn.backgroundColor = #colorLiteral(red: 0.2431372549, green: 0.537254902, blue: 0.4941176471, alpha: 1)
 
         }
         tableView.reloadData()
@@ -178,7 +178,7 @@ extension RatePlansViewController :UITableViewDelegate , UITableViewDataSource
         let ratePlan:JCRatePlan = roomStay.ratePlans[section]
         cell.ratePrice.text = getRoomPrice(ratePlanCode: ratePlan.ratePlanCode)
         if expandableCells.contains(section){
-            cell.avaiableRoomBtn.backgroundColor = #colorLiteral(red: 0.4196078431, green: 0.1568627451, blue: 0.5411764706, alpha: 1)
+            cell.avaiableRoomBtn.backgroundColor = #colorLiteral(red: 0.2431372549, green: 0.537254902, blue: 0.4941176471, alpha: 1)
             cell.avaiableRoomBtn.setTitleColor(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
         }
         else{

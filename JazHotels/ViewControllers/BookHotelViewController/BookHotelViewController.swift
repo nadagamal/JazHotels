@@ -75,7 +75,9 @@ class BookHotelViewController: UIViewController {
                 DispatchQueue.main.async {
                     self.bookRoom(state: "commit") { (response) in
                         DispatchQueue.main.async {
+                            SVProgressHUD.dismiss()
                         SCLAlertView().showSuccess("", subTitle: "Done")
+                        
                         }
                         
                     }

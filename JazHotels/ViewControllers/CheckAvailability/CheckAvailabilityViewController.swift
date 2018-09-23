@@ -51,11 +51,12 @@ class CheckAvailabilityViewController: UIViewController , UIScrollViewDelegate {
 //        }
     }
     override func viewDidAppear(_ animated: Bool) {
+        
         self.scrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: 700)
     }
     override func viewWillDisappear(_ animated: Bool) {
-      // self.navigationController?.navigationBar.isHidden = false
 
+        self.navigationController?.navigationBar.isTranslucent = false
     }
     func initView()
     {

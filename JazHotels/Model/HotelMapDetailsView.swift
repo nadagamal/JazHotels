@@ -38,5 +38,6 @@ class HotelMapDetailsView: HCAnnotation {
         self.image = image
         self.hotelName = hotelName
         self.hotelLocation  = hotelLocation
+        self.coordinate = coordinate
     }
 }

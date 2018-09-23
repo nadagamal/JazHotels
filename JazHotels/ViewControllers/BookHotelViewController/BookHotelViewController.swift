@@ -101,7 +101,7 @@ extension BookHotelViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell:UITableViewCell!
         
-        if indexPath.row == 0{
+        if indexPath.row == 0 && indexPath.section == 0{
            let cell = tableView.dequeueReusableCell(withIdentifier: "CreditCardCell") as! CreditCardCell
             if userData.userCardPayment != nil{
                 cell.cardNameTxt.text = userData.userCardPayment?.cardHolderName
@@ -111,46 +111,54 @@ extension BookHotelViewController:UITableViewDelegate,UITableViewDataSource{
             }
             return cell
         }
-        else  if indexPath.row == 1{
+        else if indexPath.section == 1{
+         if indexPath.row == 0{
            let cell = tableView.dequeueReusableCell(withIdentifier: "CardEditBtnCell") as! InfoCell
             cell.editCreditCardBtn.addTarget(self, action: #selector(editBtnPressed), for: .touchUpInside)
             return cell
 
         }
-        else  if indexPath.row == 2{
+        
+        else if indexPath.row == 1{
             let cell = tableView.dequeueReusableCell(withIdentifier: "CancellationCell") as! InfoCell
             cell.cancellationsTxt.text = ratePlan.cancelPenalties.cancelPenalty.penaltyDescription.text.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
             return cell
         }
-        else  if indexPath.row == 3{
+        else  if indexPath.row == 2{
            let cell = tableView.dequeueReusableCell(withIdentifier: "BookingCell") as! InfoCell
             cell.bookingTxt.text = ratePlan.guarantee.guaranteeDescription.text.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
             return cell
         }
-        else  if indexPath.row == 4{
+        else  if indexPath.row == 3{
             cell = tableView.dequeueReusableCell(withIdentifier: "CheckCell") as! InfoCell
             return cell
+        }
         }
         return cell
     }
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 2
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        if section == 0{
+            return 1
+        }
+        return 4
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.row == 0 {
+        if indexPath.section == 0 {
             return 185.0
         }
-        else  if indexPath.row == 1 {
+        else{
+         if indexPath.row == 0 {
             return 65.0
         }
-        else if indexPath.row == 2{
+        else if indexPath.row == 1{
             return 100
         }
-        else if indexPath.row == 3 {
+        else if indexPath.row == 2 {
             return 150
+        }
         }
       return 70
     }

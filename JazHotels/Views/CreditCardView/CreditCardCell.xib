@@ -19,15 +19,6 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="183.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="CVC" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4fy-eO-AfA" customClass="FormTextField" customModule="FormTextField">
-                        <rect key="frame" x="267" y="133.5" width="33" height="30"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="30" id="s8P-mH-84z"/>
-                        </constraints>
-                        <nil key="textColor"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <textInputTraits key="textInputTraits"/>
-                    </textField>
                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Card Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Edc-Bj-XQh" customClass="FormTextField" customModule="FormTextField">
                         <rect key="frame" x="20" y="83.5" width="280" height="30"/>
                         <constraints>
@@ -38,9 +29,9 @@
                         <textInputTraits key="textInputTraits"/>
                     </textField>
                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Expiration Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m3o-3Y-fav" customClass="FormTextField" customModule="FormTextField">
-                        <rect key="frame" x="20" y="133.5" width="102.5" height="30"/>
+                        <rect key="frame" x="20" y="133.5" width="128" height="30"/>
                         <constraints>
-                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="TGr-7U-5au"/>
+                            <constraint firstAttribute="width" constant="128" id="cLF-Mr-DyU"/>
                             <constraint firstAttribute="height" constant="30" id="hI7-lY-f8z"/>
                         </constraints>
                         <nil key="textColor"/>
@@ -51,6 +42,16 @@
                         <rect key="frame" x="20" y="33.5" width="280" height="30"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="30" id="rmd-pY-e9M"/>
+                        </constraints>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="CVC" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4fy-eO-AfA" customClass="FormTextField" customModule="FormTextField">
+                        <rect key="frame" x="172" y="133.5" width="128" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="128" id="ZTI-TG-pWx"/>
+                            <constraint firstAttribute="height" constant="30" id="s8P-mH-84z"/>
                         </constraints>
                         <nil key="textColor"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -67,6 +68,7 @@
                     <constraint firstItem="nLG-DW-4Z5" firstAttribute="leading" secondItem="Edc-Bj-XQh" secondAttribute="leading" id="PC6-lh-wa1"/>
                     <constraint firstAttribute="bottom" secondItem="m3o-3Y-fav" secondAttribute="bottom" constant="20" id="RA2-Up-bLr"/>
                     <constraint firstAttribute="trailing" secondItem="nLG-DW-4Z5" secondAttribute="trailing" constant="20" id="aep-FH-Ed6"/>
+                    <constraint firstItem="4fy-eO-AfA" firstAttribute="leading" secondItem="m3o-3Y-fav" secondAttribute="trailing" constant="24" id="irx-NR-mVw"/>
                     <constraint firstItem="nLG-DW-4Z5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="qRw-u7-Y6Y"/>
                     <constraint firstItem="Edc-Bj-XQh" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="wd7-Nn-gcq"/>
                     <constraint firstItem="Edc-Bj-XQh" firstAttribute="leading" secondItem="m3o-3Y-fav" secondAttribute="leading" id="zEq-8N-DyR"/>

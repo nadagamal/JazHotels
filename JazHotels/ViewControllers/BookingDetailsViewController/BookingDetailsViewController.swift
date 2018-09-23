@@ -152,7 +152,7 @@ class BookingDetailsViewController: UIViewController,changeBookingDates {
         SVProgressHUD.show()
 
         BookingAPIManager().modifyReservation(numberOfAdults: adultNum, numberOfChild: childNum, numberOfRooms: reservationItem.roomStays.roomStay.roomTypes.roomType?.numberOfUnits ?? "", roomTypeCode: reservationItem.roomStays.roomStay.roomTypes.roomType.roomTypeCode, ratePlanCode: ratePlanCode, checkInDate: startDate ?? "", checkOutDate: endDate ?? "", hotelCode: reservationItem.roomStays.roomStay.basicPropertyInfo.hotelCode, chainCode: reservationItem.roomStays.roomStay.basicPropertyInfo.chainCode, confirmationId: reservationItem.uniqueID.iD,comments: request) { (response, error) in
-            if (response?.Body.OTAHotelResModifyRS.errors != nil && response?.Body.OTAHotelResModifyRS.errors.error != nil && response?.Body.OTAHotelResModifyRS.errors.error.shortText != nil) || response?.Body.OTAHotelResModifyRS.ResResponseType == "Unsuccessful"{
+            if (response?.Body.OTAHotelResModifyRS.errors != nil && response?.Body.OTAHotelResModifyRS.errors.error != nil && response?.Body.OTAHotelResModifyRS.errors.error != nil && response?.Body.OTAHotelResModifyRS.errors.error.shortText != nil) || response?.Body.OTAHotelResModifyRS.ResResponseType == "Unsuccessful"{
                 DispatchQueue.main.async {
                     SVProgressHUD.dismiss()
 

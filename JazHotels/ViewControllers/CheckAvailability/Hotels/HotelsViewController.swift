@@ -49,14 +49,14 @@ class HotelsViewController: UIViewController {
     @IBAction func hotelListBtnAction(_ sender: Any)
     {
 
-        hotelListBtn.setTitleColor(#colorLiteral(red: 0.3137254902, green: 0.0431372549, blue: 0.462745098, alpha: 1), for: UIControlState.normal)
+        hotelListBtn.setTitleColor(#colorLiteral(red: 0, green: 0.5215686275, blue: 0.4705882353, alpha: 1), for: UIControlState.normal)
         viewOnMapBtn.setTitleColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.35), for: UIControlState.normal)
         hotelListContainer.isHidden = false
         hotelOnMapContainer.isHidden = true
     }
     @IBAction func viewOnMapBtnAction(_ sender: Any)
     {
-        viewOnMapBtn.setTitleColor(#colorLiteral(red: 0.3137254902, green: 0.0431372549, blue: 0.462745098, alpha: 1), for: UIControlState.normal)
+        viewOnMapBtn.setTitleColor(#colorLiteral(red: 0, green: 0.5215686275, blue: 0.4705882353, alpha: 1), for: UIControlState.normal)
         hotelListBtn.setTitleColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.35), for: UIControlState.normal)
         hotelListContainer.isHidden = true
         hotelOnMapContainer.isHidden = false

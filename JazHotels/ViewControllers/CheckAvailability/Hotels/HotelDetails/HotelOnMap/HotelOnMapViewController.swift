@@ -65,11 +65,11 @@ class HotelOnMapViewController: UIViewController {
         
             DispatchQueue.main.async {
                 
-//                self.map.addAnnotation(HotelMapDetailsView(hotelName:hotelName ?? "", hotelLocation:self.roomStays[index].basicPropertyInfo.hotelName, coordinate:CLLocationCoordinate2D(latitude: item.latitude, longitude:item.longtitude), image:#imageLiteral(resourceName: "Splash")))
+                self.map.addAnnotation(HotelMapDetailsView(hotelName:hotelName ?? "", hotelLocation:self.roomStays[index].basicPropertyInfo.hotelName, coordinate:CLLocationCoordinate2D(latitude: item.latitude, longitude:item.longtitude), image:#imageLiteral(resourceName: "img")))
                 let myAnnotation: MKPointAnnotation = MKPointAnnotation()
                 myAnnotation.coordinate = CLLocationCoordinate2DMake(item.latitude, item.longtitude);
                 myAnnotation.title = self.roomStays[index].basicPropertyInfo.hotelName
-                self.map.addAnnotation(myAnnotation)
+//                self.map.addAnnotation(myAnnotation)
 
             }
 

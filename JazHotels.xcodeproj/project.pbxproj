@@ -243,6 +243,9 @@
 		52DAFC9C2147F0DA00F8269F /* BookingDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DAFC9B2147F0DA00F8269F /* BookingDetailsViewController.swift */; };
 		52DAFC9F2147F6DC00F8269F /* BookingDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DAFC9E2147F6DC00F8269F /* BookingDetailsCell.swift */; };
 		52DAFCA22148B4EE00F8269F /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DAFCA12148B4EE00F8269F /* MenuCell.swift */; };
+		52F2329821588AD1002F3494 /* destinations.json in Resources */ = {isa = PBXBuildFile; fileRef = 52F2329721588AD1002F3494 /* destinations.json */; };
+		52F2329B21588D86002F3494 /* HotelDestinationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F2329A21588D86002F3494 /* HotelDestinationViewController.swift */; };
+		52F2329D21589102002F3494 /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F2329C21589102002F3494 /* Destination.swift */; };
 		9A06CB1C20EACC4900AFBCA2 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A06CB1B20EACC4900AFBCA2 /* MainTabBar.swift */; };
 		9A06CB1F20EACF6700AFBCA2 /* HotelJazConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A06CB1E20EACF6700AFBCA2 /* HotelJazConstants.swift */; };
 		9A084F122155A4A200298431 /* ProfileCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A084F112155A4A200298431 /* ProfileCellTableViewCell.swift */; };
@@ -673,6 +676,9 @@
 		52DAFC9B2147F0DA00F8269F /* BookingDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDetailsViewController.swift; sourceTree = "<group>"; };
 		52DAFC9E2147F6DC00F8269F /* BookingDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDetailsCell.swift; sourceTree = "<group>"; };
 		52DAFCA12148B4EE00F8269F /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		52F2329721588AD1002F3494 /* destinations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = destinations.json; sourceTree = "<group>"; };
+		52F2329A21588D86002F3494 /* HotelDestinationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelDestinationViewController.swift; sourceTree = "<group>"; };
+		52F2329C21589102002F3494 /* Destination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
 		8963E40941314293147FBF58 /* Pods-JazHotels.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JazHotels.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JazHotels/Pods-JazHotels.debug.xcconfig"; sourceTree = "<group>"; };
 		925F604466D8797ABBF10B44 /* Pods_JazHotels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JazHotels.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A06CB1B20EACC4900AFBCA2 /* MainTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
@@ -1040,6 +1046,7 @@
 				9A9520F62145C41300D0FD4E /* hotels.json */,
 				524F784620F9222700AF0EF6 /* hotels-images.json */,
 				524F784720F9222700AF0EF6 /* hotels-urls.json */,
+				52F2329721588AD1002F3494 /* destinations.json */,
 				524F784820F9222700AF0EF6 /* hotels-coords.json */,
 			);
 			path = JsonFiles;
@@ -1144,6 +1151,7 @@
 		52B615F920E891C100A1A416 /* JModels */ = {
 			isa = PBXGroup;
 			children = (
+				52F2329C21589102002F3494 /* Destination.swift */,
 				9A56885121568FBA003B3026 /* MRModels */,
 				525E3776215645B6009EFFB7 /* CancelBookingModels */,
 				5213E73121517DD6003D0DDF /* ConfirmReservationModels */,
@@ -1288,6 +1296,14 @@
 				52DAFCA12148B4EE00F8269F /* MenuCell.swift */,
 			);
 			path = MenuCell;
+			sourceTree = "<group>";
+		};
+		52F2329921588D74002F3494 /* HotelDestinationViewController */ = {
+			isa = PBXGroup;
+			children = (
+				52F2329A21588D86002F3494 /* HotelDestinationViewController.swift */,
+			);
+			path = HotelDestinationViewController;
 			sourceTree = "<group>";
 		};
 		92276CA12D50E4A86FD2D42D /* Pods */ = {
@@ -1704,6 +1720,7 @@
 		9AE61CC720DAE057006160C1 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				52F2329921588D74002F3494 /* HotelDestinationViewController */,
 				52DAFC9A2147F0C000F8269F /* BookingDetailsViewController */,
 				525206D621478D2800FB4DFF /* BookHotelViewController */,
 				52CA9DC821457CC5003C530F /* ReservationsViewController */,
@@ -1902,6 +1919,7 @@
 				9AE61CAF20DAC74B006160C1 /* MontserratAlternates-BlackItalic.otf in Resources */,
 				9AE61CC620DAC74B006160C1 /* Montserrat-SemiBold.otf in Resources */,
 				524EEE7C20DA840F006B9917 /* LaunchScreen.storyboard in Resources */,
+				52F2329821588AD1002F3494 /* destinations.json in Resources */,
 				524F784B20F9222700AF0EF6 /* hotels-coords.json in Resources */,
 				9AE61CCE20DAE0BD006160C1 /* Main.storyboard in Resources */,
 				9AE61CA920DAC74B006160C1 /* Montserrat-BoldItalic.otf in Resources */,
@@ -2209,6 +2227,7 @@
 				521A4BA821458BD1008A01F8 /* JBRate.swift in Sources */,
 				521A4BC421458BD1008A01F8 /* JBTaxe.swift in Sources */,
 				52B616C920E9341E00A1A416 /* JCAddres.swift in Sources */,
+				52F2329B21588D86002F3494 /* HotelDestinationViewController.swift in Sources */,
 				521A4BC621458BD1008A01F8 /* JBCountryName.swift in Sources */,
 				5213E79321517DD7003D0DDF /* CBProfile.swift in Sources */,
 				5213E79121517DD7003D0DDF /* CBPOS.swift in Sources */,
@@ -2443,6 +2462,7 @@
 				521A4BB921458BD1008A01F8 /* JBResStatu.swift in Sources */,
 				9AADBF1720ED50D0009183FE /* AboutViewController.swift in Sources */,
 				52B6164220E891C100A1A416 /* JPhone.swift in Sources */,
+				52F2329D21589102002F3494 /* Destination.swift in Sources */,
 				52B616E320E94B5C00A1A416 /* AlertView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,7 +11,7 @@ import Kingfisher
 class HomeViewController: UIViewController {
 
     let icon: UIButton = UIButton()
-
+    var hotelList=[JHotelDescriptiveContent]()
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,7 +49,7 @@ extension HomeViewController:UICollectionViewDelegate,UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView .dequeueReusableCell(withReuseIdentifier: "HotelCollectionViewCell", for: indexPath) as! HotelCollectionViewCell
-        let  hotel = JazHotels.hotels[indexPath.item]
+        let  hotel = hotelList[indexPath.item]
         cell.nameLbl.text = hotel.hotelName
         if JazHotels.hotelsImages![hotel.hotelCode] != nil{
         let imageURL = URL(string: JazHotels.hotelsImages![hotel.hotelCode]![0])
@@ -63,11 +63,11 @@ extension HomeViewController:UICollectionViewDelegate,UICollectionViewDataSource
         
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return JazHotels.hotels.count
+        return hotelList.count
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let hotelDetailsVC = UIStoryboard(name: HotelJazConstants.StoryBoard.mainSB, bundle: nil).instantiateViewController(withIdentifier: "HotelDetailsViewController") as! HotelDetailsViewController
-        let  hotel = JazHotels.hotels[indexPath.item]
+        let  hotel = hotelList[indexPath.item]
         hotelDetailsVC.hotel = hotel
         self.navigationController?.show(hotelDetailsVC, sender: nil)
 

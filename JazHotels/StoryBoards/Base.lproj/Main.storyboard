@@ -137,11 +137,11 @@
             <objects>
                 <viewController storyboardIdentifier="ReservationsViewController" id="43c-ek-aqI" customClass="ReservationsViewController" customModule="JazHotels" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f6U-xP-Ury">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="X0M-2e-HG6">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="43c-ek-aqI" id="jJv-sY-VYj"/>
@@ -172,14 +172,14 @@
             <objects>
                 <viewController id="oqc-X8-fk2" customClass="MenuViewController" customModule="JazHotels" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hc6-oO-JdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splashBg" translatesAutoresizingMaskIntoConstraints="NO" id="BfD-m8-SjD">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9ZT-pV-DXW">
-                                <rect key="frame" x="0.0" y="137" width="320" height="431"/>
+                                <rect key="frame" x="0.0" y="137" width="320" height="382"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -464,6 +464,12 @@ Iberotel Borg El Arab</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No favorite found in your list" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ly-ee-iX1">
+                                <rect key="frame" x="0.0" y="249" width="320" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hOd-9g-C6H">
                                 <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -476,14 +482,19 @@ Iberotel Borg El Arab</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="hOd-9g-C6H" firstAttribute="leading" secondItem="lne-MY-ZWz" secondAttribute="leading" id="7Qs-kL-Z1k"/>
+                            <constraint firstItem="9ly-ee-iX1" firstAttribute="trailing" secondItem="lne-MY-ZWz" secondAttribute="trailing" id="X7Y-GR-aMY"/>
+                            <constraint firstItem="9ly-ee-iX1" firstAttribute="leading" secondItem="lne-MY-ZWz" secondAttribute="leading" id="Ztn-gP-Kkg"/>
                             <constraint firstItem="hOd-9g-C6H" firstAttribute="trailing" secondItem="lne-MY-ZWz" secondAttribute="trailing" id="eud-M6-5K4"/>
                             <constraint firstItem="hOd-9g-C6H" firstAttribute="top" secondItem="lne-MY-ZWz" secondAttribute="top" id="jBw-Aw-j5V"/>
+                            <constraint firstItem="9ly-ee-iX1" firstAttribute="centerX" secondItem="lne-MY-ZWz" secondAttribute="centerX" id="k6P-fU-Fdn"/>
+                            <constraint firstItem="9ly-ee-iX1" firstAttribute="centerY" secondItem="lne-MY-ZWz" secondAttribute="centerY" constant="-32.5" id="kdw-2c-3CR"/>
                             <constraint firstItem="hOd-9g-C6H" firstAttribute="bottom" secondItem="lne-MY-ZWz" secondAttribute="bottom" id="vWM-vM-lcL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lne-MY-ZWz"/>
                     </view>
                     <navigationItem key="navigationItem" title="Favorites " id="Obq-az-kxr"/>
                     <connections>
+                        <outlet property="noDataFoundLbl" destination="9ly-ee-iX1" id="od0-uZ-Hcb"/>
                         <outlet property="tableView" destination="hOd-9g-C6H" id="nia-ec-1RC"/>
                     </connections>
                 </viewController>
@@ -1042,7 +1053,7 @@ Alam Road, Red Sea, Egypt.</string>
                                                 <color key="textColor" red="0.45098039215686275" green="0.45098039215686275" blue="0.45098039215686275" alpha="0.56264378831595097" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZwV-PL-aSU" customClass="CosmosView" customModule="Cosmos">
+                                            <view userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZwV-PL-aSU" customClass="CosmosView" customModule="Cosmos">
                                                 <rect key="frame" x="90" y="128.5" width="120" height="20"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -3239,20 +3250,20 @@ Or discover Luxor and Aswan that are immensely rich in history. For unwinding, t
         </scene>
     </scenes>
     <resources>
-        <image name="about-icon" width="21" height="21"/>
-        <image name="account-icon" width="23" height="21"/>
-        <image name="availabilty_bg" width="540" height="876"/>
-        <image name="back" width="10" height="16"/>
-        <image name="closed" width="9" height="6"/>
+        <image name="about-icon" width="21.5" height="21.5"/>
+        <image name="account-icon" width="23.5" height="21.5"/>
+        <image name="availabilty_bg" width="1080" height="1752"/>
+        <image name="back" width="10" height="16.5"/>
+        <image name="closed" width="9.5" height="6"/>
         <image name="edit_icon" width="24" height="24"/>
-        <image name="email" width="20" height="15"/>
+        <image name="email" width="20" height="15.5"/>
         <image name="favHeader" width="26" height="24"/>
-        <image name="fb" width="28" height="28"/>
-        <image name="headBg" width="375" height="202"/>
-        <image name="hotel-icon" width="32" height="21"/>
-        <image name="hotelLocation" width="18" height="22"/>
-        <image name="hotelNav" width="32" height="21"/>
-        <image name="hotelNavH" width="32" height="21"/>
+        <image name="fb" width="28.5" height="28.5"/>
+        <image name="headBg" width="375" height="202.5"/>
+        <image name="hotel-icon" width="32.5" height="21"/>
+        <image name="hotelLocation" width="18.5" height="22.5"/>
+        <image name="hotelNav" width="32.5" height="21"/>
+        <image name="hotelNavH" width="32.5" height="21"/>
         <image name="imageView:qe5-RF-uY5:image" width="22" height="24">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGVVZYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK8QEgcI
@@ -3393,24 +3404,24 @@ qAy1DMIM1wzcDOAM4gzkDOYM7wz0DPoNAg0EDQYNCA0KDQ8NFx6DHoUeih6YHpweox6oHrUeuB7FHsoe
 0h7VHtoe4h7lHvce+h7/AAAAAAAAAgEAAAAAAAAAWQAAAAAAAAAAAAAAAAAAHwE
 </mutableData>
         </image>
-        <image name="insta" width="28" height="28"/>
-        <image name="linkedin" width="28" height="28"/>
-        <image name="location" width="24" height="30"/>
-        <image name="locationdetails" width="24" height="31"/>
-        <image name="logoSplash" width="196" height="55"/>
-        <image name="menu" width="32" height="30"/>
-        <image name="phone" width="18" height="27"/>
-        <image name="pintrest" width="28" height="28"/>
+        <image name="insta" width="28.5" height="28.5"/>
+        <image name="linkedin" width="28.5" height="28.5"/>
+        <image name="location" width="24.5" height="30.5"/>
+        <image name="locationdetails" width="24.5" height="31"/>
+        <image name="logoSplash" width="196.5" height="55"/>
+        <image name="menu" width="32.5" height="30"/>
+        <image name="phone" width="18.5" height="27"/>
+        <image name="pintrest" width="28.5" height="28.5"/>
         <image name="reservation" width="26" height="13"/>
-        <image name="review" width="20" height="19"/>
-        <image name="reviewS" width="20" height="19"/>
-        <image name="signOut" width="22" height="19"/>
+        <image name="review" width="20.5" height="19.5"/>
+        <image name="reviewS" width="20.5" height="19.5"/>
+        <image name="signOut" width="22" height="19.5"/>
         <image name="splashBg" width="375" height="667"/>
-        <image name="tw" width="28" height="28"/>
-        <image name="website" width="18" height="17"/>
-        <image name="yt" width="28" height="28"/>
+        <image name="tw" width="28.5" height="28.5"/>
+        <image name="website" width="18" height="17.5"/>
+        <image name="yt" width="28.5" height="28.5"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4Rn-y6-3ef"/>
+        <segue reference="0CD-a8-yvp"/>
     </inferredMetricsTieBreakers>
 </document>

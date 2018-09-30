@@ -10,6 +10,7 @@ import UIKit
 import Kingfisher
 class FavoriteViewController: UIViewController {
     
+    @IBOutlet weak var noDataFoundLbl: UILabel!
     @IBOutlet weak var tableView: UITableView!
     var hotelsList = [JHotelDescriptiveContent]()
     override func viewDidLoad() {
@@ -32,6 +33,13 @@ class FavoriteViewController: UIViewController {
             var list = [String]()
             list = UserDefaults.standard.object(forKey: "Favourites") as! [String]
             hotelsList = getHotels(codes: list)
+            if hotelsList.count == 0{
+                self.noDataFoundLbl.isHidden = false
+                self.tableView.isHidden = true
+            }else{
+                self.noDataFoundLbl.isHidden = true
+                self.tableView.isHidden = false
+            }
             self.tableView.reloadData()
         }
     }

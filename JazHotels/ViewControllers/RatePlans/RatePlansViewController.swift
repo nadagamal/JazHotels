@@ -118,9 +118,12 @@ class RatePlansViewController: UIViewController {
         let ratePlan:JCRatePlan = roomStay.ratePlans[indexPath.section]
         let userData = UserDefaults.getObjectDefault(key: HotelJazConstants.userDefault.userData) as? UserProfile
         if userData != nil && userData?.userName != nil{
-        var roomTypeslist = roomStay.roomTypes.roomType as [JCRoomType]
+        //var roomTypeslist = roomStay.roomTypes.roomType as [JCRoomType]
+            let ratePlan:JCRatePlan = roomStay.ratePlans[indexPath.section]
+            var list = getRoomsList(ratePlanCode: ratePlan.ratePlanCode)
+            let room = getRoomType(roomTypeCode: list[indexPath.row].roomTypeCode)
         let viewController = BookHotelViewController.create()
-        viewController.roomType = roomTypeslist[indexPath.row]
+        viewController.roomType = room
         viewController.ratePlan = ratePlan
         viewController.checkOutDate = self.checkOutDate
         viewController.checkInDate = self.checkInDate

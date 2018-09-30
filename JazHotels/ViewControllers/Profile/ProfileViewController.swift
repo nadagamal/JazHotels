@@ -10,6 +10,8 @@ import UIKit
 import FirebaseFirestore
 import McPicker
 import LSDialogViewController
+import FirebaseUI
+import SVProgressHUD
 protocol UpdateProfile
 {
     func reloadProfile(user:UserProfile)
@@ -20,7 +22,7 @@ protocol changeBookingDates {
     func getUserModifcation(choice:ModifyReservation)
     func getUserAddationalRequest(request:String)
 }
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController,FUIAuthDelegate {
 
     @IBOutlet weak var profileImg: UIImageView!
     @IBOutlet weak var userName: UILabel!
@@ -36,7 +38,10 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var userCreditNumber: UITextField!
     @IBOutlet weak var tableView: UITableView!
-    
+    fileprivate(set) var auth: Auth? = Auth.auth()
+    fileprivate(set) var authUI: FUIAuth? = FUIAuth.defaultAuthUI()
+    fileprivate var authStateDidChangeHandle: AuthStateDidChangeListenerHandle?
+    fileprivate let db = Firestore.firestore()
     static var user:User?
     var currentTitle:String = ""
     
@@ -65,19 +70,7 @@ class ProfileViewController: UIViewController {
 //        self.navigationController?.setTransparentNavigation()
         UINavigationBar.appearance().shadowImage = UIImage()
         UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
-        UINavigationBar.appearance().isTranslucent = false      
-
-        if !UserDefaults.isKeyPresentInUserDefaults(key: HotelJazConstants.userDefault.userData)
-        {
-            self.navigationController?.present(LoginViewController.create(), animated: true, completion: nil)
-        }
-        else
-        
-        {
-            self.userData = UserDefaults.getObjectDefault(key: HotelJazConstants.userDefault.userData) as? UserProfile
-            self.tableView.reloadData()
-
-        }
+        UINavigationBar.appearance().isTranslucent = false
         
     }
 
@@ -85,6 +78,28 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
 
         NotificationCenter.default.addObserver(self, selector: #selector(ProfileViewController.getProfile(notification:)), name: Notification.Name(HotelJazConstants.Notifications.userProfileData), object: nil)
+        self.authUI?.delegate = self
+        let providers: [FUIAuthProvider] = [
+            FUIGoogleAuth(),
+            FUIFacebookAuth(),
+            ]
+        self.authUI!.providers = providers
+        let settings = db.settings
+        settings.areTimestampsInSnapshotsEnabled = true
+        db.settings = settings
+        if !UserDefaults.isKeyPresentInUserDefaults(key: HotelJazConstants.userDefault.userData)
+        {
+            //  self.navigationController?.present(LoginViewController.create(), animated: true, completion: nil)
+            let controller = self.authUI!.authViewController()
+            self.navigationController?.present(controller, animated: true, completion: nil)
+            UserDefaults.removeKeyUserDefault(key:  HotelJazConstants.userDefault.userData)
+        }
+        else
+        {
+            self.userData = UserDefaults.getObjectDefault(key: HotelJazConstants.userDefault.userData) as? UserProfile
+            self.tableView.reloadData()
+            
+        }
         
 
     }
@@ -112,6 +127,77 @@ class ProfileViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func authUI(_ authUI: FUIAuth, didSignInWith authDataResult: AuthDataResult?, error: Error?) {
+        checkAccountFound(user: authDataResult!)
+    }
+    
+    func checkAccountFound(user:AuthDataResult)
+    {
+        db.collection("users").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                var found = false
+                for document in querySnapshot!.documents {
+                    if document.documentID == user.user.uid // sigin
+                    {
+                        print("\(document.documentID) => \(document.data())")
+                        
+                        let data = document.data() as NSDictionary
+                        let userProfile = UserProfile(userContact: UserContact(JSON: data["contact"] as! [String:Any])!, userName: UserName(JSON: data["name"] as! [String:Any])!, userAddress: UserAddress(JSON: data["address"] as! [String:Any])!, userCustomer: UserCustomerLoyalty(JSON: data["customerLoyalty"] as! [String:Any])!, userCardPayment: UserPaymentCard(JSON: data["paymentCard"] as! [String:Any])!, userSynXisInfo: UserSynXisInfo(JSON: data["synXisInfo"] as! [String:Any])!,gender:data["gender"] as! String,userId:user.user.uid,title:data["title"] as? String ?? "")
+                        
+                        UserDefaults.saveObjectDefault(key: HotelJazConstants.userDefault.userData, value: userProfile)
+                        found = true
+                        self.viewProfile(userData: userProfile)
+                        break
+                    }
+                    
+                }
+                
+                
+                if !found // create user
+                {
+                    self.createNewUser()
+                    
+                }
+                
+                DispatchQueue.main.async {
+                    SVProgressHUD.dismiss()
+                }
+            }
+        }
+    }
+    func viewProfile(userData:UserProfile)
+    {
+        DispatchQueue.main.async {
+            
+            UserDefaults.saveObjectDefault(key: HotelJazConstants.userDefault.userData, value: userData)
+            
+            NotificationCenter.default.post(name: Notification.Name(HotelJazConstants.Notifications.userProfileData), object: userData)
+            
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    func createNewUser()
+    {
+        let db = Firestore.firestore()
+        let user = Auth.auth().currentUser
+        
+        let userProfile = UserProfile(userContact: UserContact(emailAddress: (user?.email ?? "")!, landLine: "", mobilePhone: (user?.phoneNumber ?? "")!, phoneNumbers: (user?.phoneNumber ?? "")!), userName: UserName(firstName: (user?.displayName ?? "")!, fullName: (user?.displayName ?? "")!, lastName: "", middleInitial: "", middleName: "", photo:(user?.photoURL?.absoluteString ?? "")!), userAddress: UserAddress(), userCustomer: UserCustomerLoyalty(), userCardPayment: UserPaymentCard(), userSynXisInfo: UserSynXisInfo(synXisPassword: (user?.email ?? "")!, synXisUserID: (user?.email ?? "")!),gender:"",userId:(user?.uid)! , title : "Mr.")
+        
+        
+        db.collection("users").document("\(String(describing: (user?.uid)!))").setData(userProfile.toDictionary()) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+        
+        self.viewProfile(userData: userProfile)
+        
     }
   
 }

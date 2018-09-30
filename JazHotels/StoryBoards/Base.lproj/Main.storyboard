@@ -310,36 +310,14 @@
                                             <constraint firstAttribute="width" constant="140" id="L04-5j-F2J"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ayM-ki-W8h">
-                                        <rect key="frame" x="80.5" y="131" width="159" height="32"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="32" id="6cJ-PE-u2J"/>
-                                            <constraint firstAttribute="width" constant="159" id="X7y-YR-Iph"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="12"/>
-                                        <state key="normal" title="Check Availability">
-                                            <color key="titleColor" red="0.0" green="0.52156862749999999" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="16"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="checkAvailbilityAction:" destination="8bO-EW-SUk" eventType="touchUpInside" id="k65-RT-Pd3"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="ryZ-tu-bhi" secondAttribute="bottom" constant="9" id="4ov-Uz-irc"/>
                                     <constraint firstItem="cRZ-oi-wq9" firstAttribute="centerX" secondItem="ryZ-tu-bhi" secondAttribute="centerX" id="H8t-5I-akS"/>
                                     <constraint firstItem="ryZ-tu-bhi" firstAttribute="leading" secondItem="bdZ-4P-H6A" secondAttribute="leading" id="YLt-FI-vSa"/>
-                                    <constraint firstItem="ayM-ki-W8h" firstAttribute="top" secondItem="cRZ-oi-wq9" secondAttribute="bottom" constant="40" id="ZqC-F9-BBK"/>
                                     <constraint firstItem="ryZ-tu-bhi" firstAttribute="top" secondItem="bdZ-4P-H6A" secondAttribute="top" id="diM-eS-DYz"/>
                                     <constraint firstAttribute="trailing" secondItem="ryZ-tu-bhi" secondAttribute="trailing" id="jT6-Lr-2J9"/>
-                                    <constraint firstItem="ayM-ki-W8h" firstAttribute="centerX" secondItem="ryZ-tu-bhi" secondAttribute="centerX" id="p5U-Hn-Ryj"/>
                                     <constraint firstItem="cRZ-oi-wq9" firstAttribute="top" secondItem="bdZ-4P-H6A" secondAttribute="top" constant="41" id="uLl-Q0-7Sa"/>
                                 </constraints>
                             </view>
@@ -3137,15 +3115,15 @@ Or discover Luxor and Aswan that are immensely rich in history. For unwinding, t
                                     </constraints>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HotelDetailsCell" rowHeight="160" id="8TZ-hf-kv9" customClass="HotelTableViewCell" customModule="JazHotels" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="212.5" width="320" height="160"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HotelDetailsCell" rowHeight="181" id="8TZ-hf-kv9" customClass="HotelTableViewCell" customModule="JazHotels" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="212.5" width="320" height="181"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8TZ-hf-kv9" id="0ME-Aa-58J">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="181"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kbK-1Q-F4R">
-                                                    <rect key="frame" x="10" y="0.0" width="300" height="160"/>
+                                                    <rect key="frame" x="10" y="0.0" width="300" height="181"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                             <real key="value" value="6"/>
@@ -3153,7 +3131,7 @@ Or discover Luxor and Aswan that are immensely rich in history. For unwinding, t
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYj-f2-DO4">
-                                                    <rect key="frame" x="20" y="133" width="284" height="20"/>
+                                                    <rect key="frame" x="20" y="154" width="284" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="284" id="d0j-13-Rzt"/>
                                                         <constraint firstAttribute="height" constant="20" id="mRy-sJ-ues"/>
@@ -3163,7 +3141,7 @@ Or discover Luxor and Aswan that are immensely rich in history. For unwinding, t
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9D9-hb-Msh">
-                                                    <rect key="frame" x="20" y="106.5" width="280" height="24.5"/>
+                                                    <rect key="frame" x="20" y="126" width="280" height="26"/>
                                                     <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="21"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>

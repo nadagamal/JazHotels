@@ -152,5 +152,14 @@ class HotelDetailsViewController: SegmentedPagerTabStripViewController {
         let childViewControllers = [child_2, child_1]
         return childViewControllers
     }
-
+    
+    @IBAction func locationBtnAction(_ sender: Any) {
+        let viewController = HotelOnMapViewController.create()
+        if let location =  JazHotels.hotelsCoords![(hotel.hotelCode)!]{
+            viewController.hotelLocation = Location(latitude: Double(location[0] )! , longtitude: Double(location[1] )!)
+            viewController.hotelNameTitle = hotel.hotelName
+            self.navigationController?.show(viewController, sender: self)
+        }
+    }
+    
 }

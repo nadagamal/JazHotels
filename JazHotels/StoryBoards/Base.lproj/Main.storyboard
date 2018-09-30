@@ -805,10 +805,8 @@ Iberotel Borg El Arab</string>
                                                         <constraint firstAttribute="height" constant="23" id="bbc-QJ-yIV"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rSe-v4-ptp">
-                                                    <rect key="frame" x="64" y="6" width="232.5" height="47.5"/>
-                                                    <string key="text">Khaled Ibn El Walid Street, P.O.Box 28,
-Gazirat Al Awameyah, Luxor, Egypt</string>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address Not Provided" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rSe-v4-ptp">
+                                                    <rect key="frame" x="64" y="6" width="132.5" height="47.5"/>
                                                     <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="12"/>
                                                     <color key="textColor" red="0.53725490196078429" green="0.53725490196078429" blue="0.53725490196078429" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -838,8 +836,8 @@ Gazirat Al Awameyah, Luxor, Egypt</string>
                                                         <constraint firstAttribute="width" constant="19" id="bhh-si-xpe"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20-95-2380925" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zXe-hM-uZ5">
-                                                    <rect key="frame" x="64" y="6" width="89" height="47.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number Not Provided" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zXe-hM-uZ5">
+                                                    <rect key="frame" x="64" y="6" width="177.5" height="47.5"/>
                                                     <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="12"/>
                                                     <color key="textColor" red="0.53725490200000003" green="0.53725490200000003" blue="0.53725490200000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -869,10 +867,8 @@ Gazirat Al Awameyah, Luxor, Egypt</string>
                                                         <constraint firstAttribute="width" constant="19" id="4Tz-U9-tWH"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CoP-S1-vMI">
-                                                    <rect key="frame" x="64" y="6" width="232.5" height="47.5"/>
-                                                    <string key="text">Khaled Ibn El Walid Street, P.O.Box 28,
-Gazirat Al Awameyah, Luxor, Egypt</string>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Not Provided" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CoP-S1-vMI">
+                                                    <rect key="frame" x="64" y="6" width="118" height="47.5"/>
                                                     <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="12"/>
                                                     <color key="textColor" red="0.53725490200000003" green="0.53725490200000003" blue="0.53725490200000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -902,10 +898,8 @@ Gazirat Al Awameyah, Luxor, Egypt</string>
                                                         <constraint firstAttribute="width" constant="19" id="fVv-Ec-DYZ"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0e6-Me-dkz">
-                                                    <rect key="frame" x="64" y="6" width="243" height="47.5"/>
-                                                    <string key="text">http://www.jaz.travel/destinations/egypt
-/luxor-hotels/iberot</string>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Website Not Provided" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0e6-Me-dkz">
+                                                    <rect key="frame" x="64" y="6" width="133.5" height="47.5"/>
                                                     <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="12"/>
                                                     <color key="textColor" red="0.53725490200000003" green="0.53725490200000003" blue="0.53725490200000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -1092,6 +1086,9 @@ Alam Road, Red Sea, Egypt.</string>
                                             <constraint firstAttribute="width" constant="24" id="TZP-j2-Aik"/>
                                         </constraints>
                                         <state key="normal" image="locationdetails"/>
+                                        <connections>
+                                            <action selector="locationBtnAction:" destination="egP-Hl-efS" eventType="touchUpInside" id="zUe-E1-u6v"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -2912,9 +2909,9 @@ In case of canelation within 02 days prior to arrival or no show, 01 night charg
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoSplash" translatesAutoresizingMaskIntoConstraints="NO" id="F3i-Fn-IDY">
-                                        <rect key="frame" x="90" y="75" width="140" height="50"/>
+                                        <rect key="frame" x="90" y="75" width="171" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="140" id="V76-Us-Ri5"/>
+                                            <constraint firstAttribute="width" constant="171" id="V76-Us-Ri5"/>
                                             <constraint firstAttribute="height" constant="50" id="x24-VV-4ps"/>
                                         </constraints>
                                     </imageView>
@@ -2927,7 +2924,7 @@ In case of canelation within 02 days prior to arrival or no show, 01 night charg
                                     <constraint firstAttribute="height" constant="212" id="T4J-Cy-rcQ"/>
                                     <constraint firstItem="F3i-Fn-IDY" firstAttribute="top" secondItem="yxY-tH-vBf" secondAttribute="top" constant="75" id="b6l-AB-Vux"/>
                                     <constraint firstItem="MWd-Pw-QU2" firstAttribute="top" secondItem="yxY-tH-vBf" secondAttribute="top" constant="20" id="iL0-IX-NTS"/>
-                                    <constraint firstItem="F3i-Fn-IDY" firstAttribute="centerX" secondItem="uer-SA-w9A" secondAttribute="centerX" id="k3I-fV-0yy"/>
+                                    <constraint firstItem="F3i-Fn-IDY" firstAttribute="centerX" secondItem="uer-SA-w9A" secondAttribute="centerX" constant="15.5" id="k3I-fV-0yy"/>
                                     <constraint firstItem="uer-SA-w9A" firstAttribute="leading" secondItem="yxY-tH-vBf" secondAttribute="leading" id="y4G-BU-gBx"/>
                                 </constraints>
                             </view>
@@ -3393,6 +3390,6 @@ qAy1DMIM1wzcDOAM4gzkDOYM7wz0DPoNAg0EDQYNCA0KDQ8NFx6DHoUeih6YHpweox6oHrUeuB7FHsoe
         <image name="yt" width="28.5" height="28.5"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="u8I-4s-555"/>
+        <segue reference="4Rn-y6-3ef"/>
     </inferredMetricsTieBreakers>
 </document>

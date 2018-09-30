@@ -320,6 +320,12 @@
 		9A9521022145F7A600D0FD4E /* UserSynXisInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9521012145F7A600D0FD4E /* UserSynXisInfo.swift */; };
 		9A9521042145F80200D0FD4E /* UserName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9521032145F80100D0FD4E /* UserName.swift */; };
 		9A9521062145F8F900D0FD4E /* FirestoreHotelReservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9521052145F8F900D0FD4E /* FirestoreHotelReservation.swift */; };
+		9AA5D19E21612CF900AB3C4D /* TrebuchetMSItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9AA5D19821612CF100AB3C4D /* TrebuchetMSItalic.ttf */; };
+		9AA5D19F21612CF900AB3C4D /* trebucbi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9AA5D19921612CF400AB3C4D /* trebucbi.ttf */; };
+		9AA5D1A021612CF900AB3C4D /* trebucbd.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9AA5D19A21612CF400AB3C4D /* trebucbd.ttf */; };
+		9AA5D1A121612CF900AB3C4D /* trebuc.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9AA5D19B21612CF500AB3C4D /* trebuc.ttf */; };
+		9AA5D1A221612CF900AB3C4D /* Trebuchet MS Bold Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9AA5D19C21612CF500AB3C4D /* Trebuchet MS Bold Italic.ttf */; };
+		9AA5D1A321612CF900AB3C4D /* Trebuchet MS.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9AA5D19D21612CF500AB3C4D /* Trebuchet MS.ttf */; };
 		9AADBF1120ED5052009183FE /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AADBF1020ED5052009183FE /* FavoriteViewController.swift */; };
 		9AADBF1320ED509C009183FE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AADBF1220ED509C009183FE /* ProfileViewController.swift */; };
 		9AADBF1720ED50D0009183FE /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AADBF1620ED50D0009183FE /* AboutViewController.swift */; };
@@ -755,6 +761,12 @@
 		9A9521012145F7A600D0FD4E /* UserSynXisInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSynXisInfo.swift; sourceTree = "<group>"; };
 		9A9521032145F80100D0FD4E /* UserName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserName.swift; sourceTree = "<group>"; };
 		9A9521052145F8F900D0FD4E /* FirestoreHotelReservation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirestoreHotelReservation.swift; sourceTree = "<group>"; };
+		9AA5D19821612CF100AB3C4D /* TrebuchetMSItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TrebuchetMSItalic.ttf; sourceTree = "<group>"; };
+		9AA5D19921612CF400AB3C4D /* trebucbi.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = trebucbi.ttf; sourceTree = "<group>"; };
+		9AA5D19A21612CF400AB3C4D /* trebucbd.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = trebucbd.ttf; sourceTree = "<group>"; };
+		9AA5D19B21612CF500AB3C4D /* trebuc.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = trebuc.ttf; sourceTree = "<group>"; };
+		9AA5D19C21612CF500AB3C4D /* Trebuchet MS Bold Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Trebuchet MS Bold Italic.ttf"; sourceTree = "<group>"; };
+		9AA5D19D21612CF500AB3C4D /* Trebuchet MS.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Trebuchet MS.ttf"; sourceTree = "<group>"; };
 		9AADBF1020ED5052009183FE /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		9AADBF1220ED509C009183FE /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		9AADBF1620ED50D0009183FE /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
@@ -1434,6 +1446,19 @@
 			path = FirbaseUserModel;
 			sourceTree = "<group>";
 		};
+		9AA5D19721612CBB00AB3C4D /* TrebuchetMS */ = {
+			isa = PBXGroup;
+			children = (
+				9AA5D19B21612CF500AB3C4D /* trebuc.ttf */,
+				9AA5D19A21612CF400AB3C4D /* trebucbd.ttf */,
+				9AA5D19921612CF400AB3C4D /* trebucbi.ttf */,
+				9AA5D19C21612CF500AB3C4D /* Trebuchet MS Bold Italic.ttf */,
+				9AA5D19D21612CF500AB3C4D /* Trebuchet MS.ttf */,
+				9AA5D19821612CF100AB3C4D /* TrebuchetMSItalic.ttf */,
+			);
+			path = TrebuchetMS;
+			sourceTree = "<group>";
+		};
 		9AADBF0D20ED502F009183FE /* Favourite */ = {
 			isa = PBXGroup;
 			children = (
@@ -1668,6 +1693,7 @@
 		9AE61C7B20DAC740006160C1 /* fonts */ = {
 			isa = PBXGroup;
 			children = (
+				9AA5D19721612CBB00AB3C4D /* TrebuchetMS */,
 				9AE61C7C20DAC74B006160C1 /* montserrat */,
 			);
 			path = fonts;
@@ -1904,6 +1930,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AE61CBB20DAC74B006160C1 /* MontserratAlternates-ExtraBold.otf in Resources */,
+				9AA5D1A121612CF900AB3C4D /* trebuc.ttf in Resources */,
 				9A640D4F2130690F002CB116 /* GoogleService-Info.plist in Resources */,
 				9AE61CBD20DAC74B006160C1 /* Montserrat-ExtraBold.otf in Resources */,
 				9AB54889215654C200E4098D /* ChooseBookingDateOptionDialogue.xib in Resources */,
@@ -1926,12 +1953,15 @@
 				9AE61CC220DAC74B006160C1 /* MontserratAlternates-ThinItalic.otf in Resources */,
 				9A9520F72145C41300D0FD4E /* hotels.json in Resources */,
 				9AE61CAB20DAC74B006160C1 /* Montserrat-ThinItalic.otf in Resources */,
+				9AA5D1A021612CF900AB3C4D /* trebucbd.ttf in Resources */,
 				9AE61CA820DAC74B006160C1 /* MontserratAlternates-Medium.otf in Resources */,
 				9AB5487F2156243F00E4098D /* UpdateAddressDialogue.xib in Resources */,
 				9AE61CAD20DAC74B006160C1 /* MontserratAlternates-MediumItalic.otf in Resources */,
 				9AE61CAE20DAC74B006160C1 /* Montserrat-ExtraLight.otf in Resources */,
 				9AE61CA420DAC74B006160C1 /* Montserrat-BlackItalic.otf in Resources */,
+				9AA5D19F21612CF900AB3C4D /* trebucbi.ttf in Resources */,
 				9AE61CB420DAC74B006160C1 /* Montserrat-Medium.otf in Resources */,
+				9AA5D19E21612CF900AB3C4D /* TrebuchetMSItalic.ttf in Resources */,
 				9AB5488B2156607E00E4098D /* SelectBookingDateDialogue.xib in Resources */,
 				524F784920F9222700AF0EF6 /* hotels-images.json in Resources */,
 				9AE61CB120DAC74B006160C1 /* MontserratAlternates-ExtraLightItalic.otf in Resources */,
@@ -1941,6 +1971,7 @@
 				9AE61CA720DAC74B006160C1 /* MontserratAlternates-LightItalic.otf in Resources */,
 				9AB5487221561F6500E4098D /* UpdateNameDialogue.xib in Resources */,
 				9AE61CB820DAC74B006160C1 /* Montserrat-Italic.otf in Resources */,
+				9AA5D1A221612CF900AB3C4D /* Trebuchet MS Bold Italic.ttf in Resources */,
 				9AE61CB320DAC74B006160C1 /* Montserrat-LightItalic.otf in Resources */,
 				9AE61CAC20DAC74B006160C1 /* Montserrat-Thin.otf in Resources */,
 				9AE61CB220DAC74B006160C1 /* MontserratAlternates-Thin.otf in Resources */,
@@ -1948,6 +1979,7 @@
 				9AE61CB720DAC74B006160C1 /* Montserrat-ExtraBoldItalic.otf in Resources */,
 				9AE61CBA20DAC74B006160C1 /* Montserrat-Regular.otf in Resources */,
 				9AE61CA220DAC74B006160C1 /* Montserrat-MediumItalic.otf in Resources */,
+				9AA5D1A321612CF900AB3C4D /* Trebuchet MS.ttf in Resources */,
 				524EEE7920DA840F006B9917 /* Assets.xcassets in Resources */,
 				9AE61CC020DAC74B006160C1 /* MontserratAlternates-ExtraLight.otf in Resources */,
 				9AE61CBC20DAC74B006160C1 /* MontserratAlternates-BoldItalic.otf in Resources */,
@@ -2713,7 +2745,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PKX77P5J33;
+				DEVELOPMENT_TEAM = MAG9DAS3TQ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -2741,7 +2773,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PKX77P5J33;
+				DEVELOPMENT_TEAM = MAG9DAS3TQ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

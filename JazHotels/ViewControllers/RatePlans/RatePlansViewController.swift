@@ -71,18 +71,39 @@ class RatePlansViewController: UIViewController {
     func getRoomPrice(ratePlanCode:String) ->String {
         var price:String = ""
         for rate in roomStay.roomRates.roomRate{
-            if rate.ratePlanCode == ratePlanCode{
-                price = rate.rates.rate.total.amountAfterTax
+            if rate.ratePlanCode == ratePlanCode && rate.rates != nil{
+                if rate.rates.rate.tpaExtensions.nightlyRate.count>0{
+                    price = rate.rates.rate.tpaExtensions.nightlyRate[0].priceWithTaxAndFee
+                }
                 break
             }
         }
         return price
     }
+    func getRoomsList(ratePlanCode:String) ->[JCRoomRate] {
+        var list = [JCRoomRate]()
+        for rate in roomRateList{
+            if rate.ratePlanCode == ratePlanCode && rate.rates != nil{
+              list.append(rate)
+            }
+        }
+        return list
+    }
+    func getRoomType(roomTypeCode:String) ->JCRoomType {
+        for room in roomStay.roomTypes.roomType{
+            if room.roomTypeCode == roomTypeCode{
+                return room
+            }
+        }
+        return JCRoomType(fromDictionary: [:])
+    }
     func getRoomPrice(roomTypeCode:String) ->String {
         var price:String = ""
         for rate in roomStay.roomRates.roomRate{
             if rate.roomTypeCode == roomTypeCode{
-                price = rate.rates.rate.total.amountAfterTax
+                if rate.rates.rate.tpaExtensions.nightlyRate.count>0{
+                    price = rate.rates.rate.tpaExtensions.nightlyRate[0].priceWithTaxAndFee
+                }
                 break
             }
         }
@@ -140,22 +161,25 @@ extension RatePlansViewController :UITableViewDelegate , UITableViewDataSource
 {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DetailsCell") as! RoomDetailsCell
-        var roomTypeslist = roomStay.roomTypes.roomType as [JCRoomType]
-        cell.priceLbl.text = getRoomPrice(roomTypeCode: roomTypeslist[indexPath.row].roomTypeCode)
-        cell.roomDescriptionLbl.text = roomTypeslist[indexPath.row].roomDescription.text.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
+        let ratePlan:JCRatePlan = roomStay.ratePlans[indexPath.section]
+        var list = getRoomsList(ratePlanCode: ratePlan.ratePlanCode)
+        let room = getRoomType(roomTypeCode: list[indexPath.row].roomTypeCode)
+        cell.priceLbl.text = getRoomPrice(roomTypeCode: room.roomTypeCode)
+        cell.roomDescriptionLbl.text = room.roomDescription.text.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
         cell.bookNowBtn.addTarget(self, action: #selector(bookNowAction(sender:)), for: .touchUpInside)
         cell.bookNowBtn.tag = indexPath.row
         cell.roomDetailsBtn.addTarget(self, action: #selector(roomDetailsAction(sender:)), for: .touchUpInside)
-        cell.roomNameLbl.text = roomTypeslist[indexPath.row].roomDescription.name
-        let imageURL = URL(string: (roomTypeslist[indexPath.row].roomDescription!.image))
+        cell.roomNameLbl.text = room.roomDescription.name
+        let imageURL = URL(string: (room.roomDescription!.image))
         cell.imgView.kf.indicatorType = .activity
         cell.imgView.kf.setImage(with: imageURL, placeholder: UIImage(named: "jazLauncherLogo"), options: [.transition(ImageTransition.fade(0.7))], progressBlock: nil, completionHandler: nil)
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let ratePlan:JCRatePlan = roomStay.ratePlans[section]
         if expandableCells.contains(section){
-            return roomStay.roomTypes.roomType.count
+            return getRoomsList(ratePlanCode: ratePlan.ratePlanCode).count
         }else{
             return 0
         }

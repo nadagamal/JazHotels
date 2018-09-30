@@ -130,7 +130,9 @@ class ProfileViewController: UIViewController,FUIAuthDelegate {
     }
     
     func authUI(_ authUI: FUIAuth, didSignInWith authDataResult: AuthDataResult?, error: Error?) {
+        if authDataResult != nil{
         checkAccountFound(user: authDataResult!)
+        }
     }
     
     func checkAccountFound(user:AuthDataResult)

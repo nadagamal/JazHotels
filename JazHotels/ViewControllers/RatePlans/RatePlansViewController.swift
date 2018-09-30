@@ -177,8 +177,9 @@ class RatePlansViewController: UIViewController,FUIAuthDelegate {
         self.navigationController?.topViewController?.present(popup, animated: true, completion: nil)
     }
     func authUI(_ authUI: FUIAuth, didSignInWith authDataResult: AuthDataResult?, error: Error?) {
-        checkAccountFound(user: authDataResult!)
-    }
+        if authDataResult != nil{
+            checkAccountFound(user: authDataResult!)
+        }    }
     
     func checkAccountFound(user:AuthDataResult)
     {

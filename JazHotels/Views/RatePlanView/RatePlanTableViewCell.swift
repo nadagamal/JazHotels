@@ -10,6 +10,7 @@ import UIKit
 
 class RatePlanTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var arrowImg: UIImageView!
     @IBOutlet weak var ratePrice: UILabel!
     @IBOutlet weak var rateTitle: UILabel!
     @IBOutlet weak var rateDesc: UILabel!

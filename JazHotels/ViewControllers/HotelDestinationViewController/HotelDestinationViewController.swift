@@ -18,8 +18,10 @@ class HotelDestinationViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         readHotelImagesJSON()
-        self.tableView.tableHeaderView = UIView()
+       // self.tableView.tableHeaderView = UIView()
         self.tableView.tableFooterView = UIView()
+        self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
+
     }
     
     func readHotelImagesJSON(){

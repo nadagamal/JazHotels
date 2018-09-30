@@ -19,7 +19,7 @@ class HomeViewController: UIViewController {
 
     }
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.setTransparentNavigation()
+      //  self.navigationController?.setTransparentNavigation()
 
     }
     override func viewWillDisappear(_ animated: Bool) {

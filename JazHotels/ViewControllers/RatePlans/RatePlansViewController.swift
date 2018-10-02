@@ -75,10 +75,18 @@ class RatePlansViewController: UIViewController,FUIAuthDelegate {
             }
             expandableCells.remove(at: selectedIndex)
             cell.avaiableRoomBtn.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            DispatchQueue.main.async {
+            cell.arrowImg.image = UIImage(named: "arrow_down")
+            }
+
         }
         else{
             expandableCells.append(selectedSection)
             cell.avaiableRoomBtn.backgroundColor = #colorLiteral(red: 0.2431372549, green: 0.537254902, blue: 0.4941176471, alpha: 1)
+            DispatchQueue.main.async {
+                cell.arrowImg.image = UIImage(named: "opend")
+
+            }
 
         }
         tableView.reloadData()
@@ -256,7 +264,7 @@ extension RatePlansViewController :UITableViewDelegate , UITableViewDataSource
         let ratePlan:JCRatePlan = roomStay.ratePlans[indexPath.section]
         var list = getRoomsList(ratePlanCode: ratePlan.ratePlanCode)
         let room = getRoomType(roomTypeCode: list[indexPath.row].roomTypeCode)
-        cell.priceLbl.text = getRoomPrice(roomTypeCode: room.roomTypeCode)
+        cell.priceLbl.text = getRoomPrice(roomTypeCode: room.roomTypeCode) + " USD"
         cell.roomDescriptionLbl.text = room.roomDescription.text.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
         cell.bookNowBtn.addTarget(self, action: #selector(bookNowAction(sender:)), for: .touchUpInside)
         cell.bookNowBtn.tag = indexPath.row
@@ -285,7 +293,7 @@ extension RatePlansViewController :UITableViewDelegate , UITableViewDataSource
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        return 295.0
+        return 320.0
     }
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(headerTapped))
@@ -315,6 +323,6 @@ extension RatePlansViewController :UITableViewDelegate , UITableViewDataSource
         return cell
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 185
+        return 220
     }
 }

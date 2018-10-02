@@ -130,6 +130,9 @@
 		525E3781215645B7009EFFB7 /* CROTACancelRS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525E377B215645B6009EFFB7 /* CROTACancelRS.swift */; };
 		525E3782215645B7009EFFB7 /* CRUniqueID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525E377C215645B6009EFFB7 /* CRUniqueID.swift */; };
 		527053802161337C00760D28 /* TopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5270537F2161337C00760D28 /* TopView.xib */; };
+		52705383216159AA00760D28 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52705381216159A900760D28 /* MessageUI.framework */; };
+		52705384216159AA00760D28 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52705382216159A900760D28 /* Messages.framework */; };
+		5270538621615B0400760D28 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5270538521615B0300760D28 /* SafariServices.framework */; };
 		5279A5A020FA70F000E94FB1 /* HotelDetailsOverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5279A59F20FA70F000E94FB1 /* HotelDetailsOverviewViewController.swift */; };
 		5279A5A220FA710F00E94FB1 /* HotelDetailsContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5279A5A120FA710F00E94FB1 /* HotelDetailsContactViewController.swift */; };
 		528F600920E7BFB9003111E7 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F600820E7BFB9003111E7 /* ServiceManager.swift */; };
@@ -568,6 +571,9 @@
 		525E377B215645B6009EFFB7 /* CROTACancelRS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CROTACancelRS.swift; sourceTree = "<group>"; };
 		525E377C215645B6009EFFB7 /* CRUniqueID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRUniqueID.swift; sourceTree = "<group>"; };
 		5270537F2161337C00760D28 /* TopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopView.xib; sourceTree = "<group>"; };
+		52705381216159A900760D28 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		52705382216159A900760D28 /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
+		5270538521615B0300760D28 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		5279A59F20FA70F000E94FB1 /* HotelDetailsOverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelDetailsOverviewViewController.swift; sourceTree = "<group>"; };
 		5279A5A120FA710F00E94FB1 /* HotelDetailsContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelDetailsContactViewController.swift; sourceTree = "<group>"; };
 		528F600820E7BFB9003111E7 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
@@ -867,6 +873,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5270538621615B0400760D28 /* SafariServices.framework in Frameworks */,
+				52705383216159AA00760D28 /* MessageUI.framework in Frameworks */,
+				52705384216159AA00760D28 /* Messages.framework in Frameworks */,
 				9ADD3E3A21069B5000D00078 /* MapKit.framework in Frameworks */,
 				9A76D23421067EFD00D23FB1 /* CoreLocation.framework in Frameworks */,
 				FA34B49D79DD74C9696B2EEE /* Pods_JazHotels.framework in Frameworks */,
@@ -1803,6 +1812,9 @@
 		B5E9232516D4B0033B321F42 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5270538521615B0300760D28 /* SafariServices.framework */,
+				52705382216159A900760D28 /* Messages.framework */,
+				52705381216159A900760D28 /* MessageUI.framework */,
 				9ADD3E3921069B5000D00078 /* MapKit.framework */,
 				9A76D23321067EFD00D23FB1 /* CoreLocation.framework */,
 				925F604466D8797ABBF10B44 /* Pods_JazHotels.framework */,

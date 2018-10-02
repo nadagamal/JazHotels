@@ -18,12 +18,16 @@ class HotelOnMapViewController: UIViewController {
     var roomStays: [JCRoomStay] = []
     var hotelsLocation:[Location] = []
     var userInfo:Dictionary<String, Any>!
+    var hotelLocation:Location!
+    var hotelNameTitle:String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 //        NotificationCenter.default.addObserver(self, selector: #selector(self.updateHotelListCoordinates(notification:)), name: Notification.Name("getHotelListInfo"), object: nil)
         if userInfo != nil{
             updateHotelListCoordinates()
+        }else if hotelNameTitle != nil && hotelLocation != nil{
+            updateHotelWithCoordinates()
         }
 
     }
@@ -44,6 +48,16 @@ class HotelOnMapViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    @objc func updateHotelWithCoordinates(){
+        DispatchQueue.main.async {
+            self.map.addAnnotation(HotelMapDetailsView(hotelName:self.hotelNameTitle ?? "", hotelLocation:self.hotelNameTitle, coordinate:CLLocationCoordinate2D(latitude: self.hotelLocation.latitude, longitude:self.hotelLocation.longtitude), image:#imageLiteral(resourceName: "img")))
+            let myAnnotation: MKPointAnnotation = MKPointAnnotation()
+            myAnnotation.coordinate = CLLocationCoordinate2DMake(self.hotelLocation.latitude, self.hotelLocation.longtitude);
+            myAnnotation.title = self.hotelNameTitle
+            
+        }
+        
     }
     @objc func updateHotelListCoordinates(){
         

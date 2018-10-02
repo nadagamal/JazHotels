@@ -129,6 +129,7 @@
 		525E3780215645B7009EFFB7 /* CRCancelInfoRS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525E377A215645B6009EFFB7 /* CRCancelInfoRS.swift */; };
 		525E3781215645B7009EFFB7 /* CROTACancelRS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525E377B215645B6009EFFB7 /* CROTACancelRS.swift */; };
 		525E3782215645B7009EFFB7 /* CRUniqueID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525E377C215645B6009EFFB7 /* CRUniqueID.swift */; };
+		527053802161337C00760D28 /* TopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5270537F2161337C00760D28 /* TopView.xib */; };
 		5279A5A020FA70F000E94FB1 /* HotelDetailsOverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5279A59F20FA70F000E94FB1 /* HotelDetailsOverviewViewController.swift */; };
 		5279A5A220FA710F00E94FB1 /* HotelDetailsContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5279A5A120FA710F00E94FB1 /* HotelDetailsContactViewController.swift */; };
 		528F600920E7BFB9003111E7 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F600820E7BFB9003111E7 /* ServiceManager.swift */; };
@@ -566,6 +567,7 @@
 		525E377A215645B6009EFFB7 /* CRCancelInfoRS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRCancelInfoRS.swift; sourceTree = "<group>"; };
 		525E377B215645B6009EFFB7 /* CROTACancelRS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CROTACancelRS.swift; sourceTree = "<group>"; };
 		525E377C215645B6009EFFB7 /* CRUniqueID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRUniqueID.swift; sourceTree = "<group>"; };
+		5270537F2161337C00760D28 /* TopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopView.xib; sourceTree = "<group>"; };
 		5279A59F20FA70F000E94FB1 /* HotelDetailsOverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelDetailsOverviewViewController.swift; sourceTree = "<group>"; };
 		5279A5A120FA710F00E94FB1 /* HotelDetailsContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelDetailsContactViewController.swift; sourceTree = "<group>"; };
 		528F600820E7BFB9003111E7 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
@@ -1512,6 +1514,7 @@
 		9AADBF2020ED5208009183FE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5270537F2161337C00760D28 /* TopView.xib */,
 				52A227682156942500D39C60 /* CreditCardView */,
 				9AB548852156548C00E4098D /* ModifyBookingViews */,
 				9AB548802156491600E4098D /* MembershipInfo */,
@@ -1949,6 +1952,7 @@
 				52F2329821588AD1002F3494 /* destinations.json in Resources */,
 				524F784B20F9222700AF0EF6 /* hotels-coords.json in Resources */,
 				9AE61CCE20DAE0BD006160C1 /* Main.storyboard in Resources */,
+				527053802161337C00760D28 /* TopView.xib in Resources */,
 				9AE61CA920DAC74B006160C1 /* Montserrat-BoldItalic.otf in Resources */,
 				9AE61CC220DAC74B006160C1 /* MontserratAlternates-ThinItalic.otf in Resources */,
 				9A9520F72145C41300D0FD4E /* hotels.json in Resources */,
@@ -2006,11 +2010,21 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-JazHotels/Pods-JazHotels-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseFacebookAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseGoogleAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebasePhoneAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseTwitterAuthUI.bundle",
 				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseFacebookAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseGoogleAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebasePhoneAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseTwitterAuthUI.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterKitResources.bundle",
 			);

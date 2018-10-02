@@ -81,13 +81,18 @@ class HotelDetailsViewController: SegmentedPagerTabStripViewController {
         }else{
             updateRighBarButton(isFavourite: false)
         }
+        self.navigationController?.setTransparentNavigation()
+
 
     }
     override func viewDidAppear(_ animated: Bool) {
-
+        UINavigationBar.appearance().tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
     }
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = false
+        self.navigationController?.navigationBar.isTranslucent = false
+
 
     }
     func updateRighBarButton(isFavourite : Bool){
@@ -105,7 +110,12 @@ class HotelDetailsViewController: SegmentedPagerTabStripViewController {
     }
 
     @objc func shareBtnAction(){
-        
+        let text = hotel.hotelName
+        let imageURL = URL(string: JazHotels.hotelsImages![hotel.hotelCode]![0])
+        let shareAll = [text,imageURL] as [Any]
+        let activityViewController = UIActivityViewController(activityItems: shareAll, applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view
+        self.present(activityViewController, animated: true, completion: nil)
     }
     @objc func favBtnAction(){
         var list = [String]()

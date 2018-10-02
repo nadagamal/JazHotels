@@ -15,12 +15,13 @@ import FBSDKLoginKit
 import TwitterKit
 import SVProgressHUD
 import FirebaseFirestore
-
-class LoginViewController: UIViewController , GIDSignInUIDelegate  {
+import FirebaseUI
+class LoginViewController: UIViewController , GIDSignInUIDelegate,FUIAuthDelegate  {
     
     fileprivate let db = Firestore.firestore()
     fileprivate var user:User?
-
+    fileprivate(set) var auth: Auth? = Auth.auth()
+    fileprivate(set) var authUI: FUIAuth? = FUIAuth.defaultAuthUI()
     override func viewDidLoad() {
         super.viewDidLoad()
         GIDSignIn.sharedInstance().uiDelegate = self
@@ -28,12 +29,17 @@ class LoginViewController: UIViewController , GIDSignInUIDelegate  {
         let settings = db.settings
         settings.areTimestampsInSnapshotsEnabled = true
         db.settings = settings
+        
+
 
     }
     
     @objc public static func create() -> LoginViewController {
         
         return UIStoryboard(name: HotelJazConstants.StoryBoard.authSB, bundle: Bundle.main).instantiateViewController(withIdentifier: String(describing: self)) as! LoginViewController
+    }
+    override func viewDidAppear(_ animated: Bool) {
+
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

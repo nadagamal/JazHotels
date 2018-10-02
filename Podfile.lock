@@ -59,6 +59,19 @@ PODS:
     - Protobuf (~> 3.1)
   - FirebaseInstanceID (3.1.1):
     - FirebaseCore (~> 5.0)
+  - FirebaseUI/Auth (5.1.3):
+    - Firebase/Auth (~> 5.0)
+  - FirebaseUI/Facebook (5.1.3):
+    - FBSDKLoginKit (~> 4.0)
+    - FirebaseUI/Auth
+  - FirebaseUI/Google (5.1.3):
+    - FirebaseUI/Auth
+    - GoogleSignIn (~> 4.0)
+  - FirebaseUI/Phone (5.1.3):
+    - FirebaseUI/Auth
+  - FirebaseUI/Twitter (5.1.3):
+    - FirebaseUI/Auth
+    - TwitterKit (~> 3.0)
   - FormTextField (2.0.1)
   - GoogleSignIn (4.1.2):
     - "GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)"
@@ -175,6 +188,11 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Firestore
+  - FirebaseUI/Auth
+  - FirebaseUI/Facebook
+  - FirebaseUI/Google
+  - FirebaseUI/Phone
+  - FirebaseUI/Twitter
   - FormTextField
   - GoogleSignIn
   - HCMapInfoView
@@ -202,7 +220,7 @@ DEPENDENCIES:
   - ZAlertView
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - ACFloatingTextfield-Swift
     - Alamofire
     - Bolts
@@ -221,6 +239,7 @@ SPEC REPOS:
     - FirebaseCore
     - FirebaseFirestore
     - FirebaseInstanceID
+    - FirebaseUI
     - FormTextField
     - GoogleSignIn
     - GoogleToolboxForMac
@@ -277,6 +296,7 @@ SPEC CHECKSUMS:
   FirebaseCore: 4c28e3b9708ba48a765e76515f913a71596eb5dd
   FirebaseFirestore: d4a3a7787624e612298a320da95935b8dc036c1d
   FirebaseInstanceID: f3f0657372592ecdfdfe2cac604a5a75758376a6
+  FirebaseUI: 6d3f86249a4de8288424e154c9ff1a976aae3910
   FormTextField: 061cd39ee77d5fb3d87b2e5a00728e2c874b3904
   GoogleSignIn: d9ef55b10f0aa401a5de2747f59b725e4b9732ac
   GoogleToolboxForMac: 91c824d21e85b31c2aae9bb011c5027c9b4e738f
@@ -314,6 +334,6 @@ SPEC CHECKSUMS:
   XLPagerTabStrip: c908b17cbf42fcd2598ee1adfc49bae25444d88a
   ZAlertView: 59fffdb4e37a01df461835566d5101052b8af953
 
-PODFILE CHECKSUM: 11325200854382b0b76a619ec22ed9009882c766
+PODFILE CHECKSUM: 25c12e399278de4ad95e7f1fe9bce20a89a9ce54
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.5.0

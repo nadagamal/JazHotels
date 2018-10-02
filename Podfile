@@ -39,7 +39,11 @@ target 'JazHotels' do
 
     # Pods for FirebaseAuth
     pod 'Firebase/Auth'
-    
+    pod 'FirebaseUI/Auth'
+    pod 'FirebaseUI/Google'
+    pod 'FirebaseUI/Facebook'
+    pod 'FirebaseUI/Twitter'
+    pod 'FirebaseUI/Phone'
     # Pods for Gmail
     pod 'GoogleSignIn'
     

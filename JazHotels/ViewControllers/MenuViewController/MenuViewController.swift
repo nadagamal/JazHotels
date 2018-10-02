@@ -8,35 +8,111 @@
 
 import UIKit
 import FBSDKLoginKit
-
-class MenuViewController: UIViewController {
-
+import FirebaseUI
+import FirebaseAuth
+import FirebaseFirestore
+import SVProgressHUD
+class MenuViewController: UIViewController ,FUIAuthDelegate{
+    
     @IBOutlet weak var tableView: UITableView!
+    fileprivate(set) var auth: Auth? = Auth.auth()
+    fileprivate(set) var authUI: FUIAuth? = FUIAuth.defaultAuthUI()
+    fileprivate var authStateDidChangeHandle: AuthStateDidChangeListenerHandle?
+    fileprivate let db = Firestore.firestore()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.tableFooterView = UIView()
         self.navigationController?.navigationBar.tintColor = UIColor.white
+        
+        self.authUI?.delegate = self
+        let providers: [FUIAuthProvider] = [
+            FUIGoogleAuth(),
+            FUIFacebookAuth(),
+            ]
+        self.authUI!.providers = providers
+        let settings = db.settings
+        settings.areTimestampsInSnapshotsEnabled = true
+        db.settings = settings
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-      
+    func authUI(_ authUI: FUIAuth, didSignInWith authDataResult: AuthDataResult?, error: Error?) {
+        if authDataResult != nil{
+        checkAccountFound(user: authDataResult!)
+        }
+    }
+    
+    func checkAccountFound(user:AuthDataResult)
+    {
+        db.collection("users").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                var found = false
+                for document in querySnapshot!.documents {
+                    if document.documentID == user.user.uid // sigin
+                    {
+                        print("\(document.documentID) => \(document.data())")
+                        
+                        let data = document.data() as NSDictionary
+                        let userProfile = UserProfile(userContact: UserContact(JSON: data["contact"] as! [String:Any])!, userName: UserName(JSON: data["name"] as! [String:Any])!, userAddress: UserAddress(JSON: data["address"] as! [String:Any])!, userCustomer: UserCustomerLoyalty(JSON: data["customerLoyalty"] as! [String:Any])!, userCardPayment: UserPaymentCard(JSON: data["paymentCard"] as! [String:Any])!, userSynXisInfo: UserSynXisInfo(JSON: data["synXisInfo"] as! [String:Any])!,gender:data["gender"] as! String,userId:user.user.uid,title:data["title"] as? String ?? "")
+                        
+                        UserDefaults.saveObjectDefault(key: HotelJazConstants.userDefault.userData, value: userProfile)
+                        found = true
+                        self.viewProfile(userData: userProfile)
+                        break
+                    }
+                    
+                }
+                
+                
+                if !found // create user
+                {
+                    self.createNewUser()
+                    
+                }
+                
+                DispatchQueue.main.async {
+                    SVProgressHUD.dismiss()
+                }
+            }
+        }
+    }
+    func viewProfile(userData:UserProfile)
+    {
+        DispatchQueue.main.async {
+            
+            UserDefaults.saveObjectDefault(key: HotelJazConstants.userDefault.userData, value: userData)
+            
+            NotificationCenter.default.post(name: Notification.Name(HotelJazConstants.Notifications.userProfileData), object: userData)
+            
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    func createNewUser()
+    {
+        let db = Firestore.firestore()
+        let user = Auth.auth().currentUser
+        
+        let userProfile = UserProfile(userContact: UserContact(emailAddress: (user?.email ?? "")!, landLine: "", mobilePhone: (user?.phoneNumber ?? "")!, phoneNumbers: (user?.phoneNumber ?? "")!), userName: UserName(firstName: (user?.displayName ?? "")!, fullName: (user?.displayName ?? "")!, lastName: "", middleInitial: "", middleName: "", photo:(user?.photoURL?.absoluteString ?? "")!), userAddress: UserAddress(), userCustomer: UserCustomerLoyalty(), userCardPayment: UserPaymentCard(), userSynXisInfo: UserSynXisInfo(synXisPassword: (user?.email ?? "")!, synXisUserID: (user?.email ?? "")!),gender:"",userId:(user?.uid)! , title : "Mr.")
+        
+        
+        db.collection("users").document("\(String(describing: (user?.uid)!))").setData(userProfile.toDictionary()) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+        
+        self.viewProfile(userData: userProfile)
         
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 extension MenuViewController:UITableViewDataSource,UITableViewDelegate{
@@ -45,7 +121,7 @@ extension MenuViewController:UITableViewDataSource,UITableViewDelegate{
         var cell:MenuCell = tableView.dequeueReusableCell(withIdentifier: "cell") as! MenuCell
         if indexPath.row == 0
         {
-           
+            
             if !UserDefaults.isKeyPresentInUserDefaults(key: HotelJazConstants.userDefault.userData)
             {
                 cell.cellTitleLbl.text = "Sign In"
@@ -64,7 +140,7 @@ extension MenuViewController:UITableViewDataSource,UITableViewDelegate{
             cell.cellIconImg.image = #imageLiteral(resourceName: "reservation")
         }
         return cell
-
+        
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -73,30 +149,36 @@ extension MenuViewController:UITableViewDataSource,UITableViewDelegate{
         
         if !UserDefaults.isKeyPresentInUserDefaults(key: HotelJazConstants.userDefault.userData)
         {
-             return 1
+            return 1
         }
         else
         {
-             return 2
+            return 2
         }
-      
+        
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
+        
         if indexPath.row == 0 {
             DispatchQueue.main.async {
-            if !UserDefaults.isKeyPresentInUserDefaults(key: HotelJazConstants.userDefault.userData)
-            {
-                FBSDKLoginManager().logOut()
-                self.navigationController?.present(LoginViewController.create(), animated: true, completion: nil)
-
-            }
-            else
-            {
-                self.navigationController?.present(LoginViewController.create(), animated: true, completion: nil)
-                UserDefaults.removeKeyUserDefault(key:  HotelJazConstants.userDefault.userData)
-              
-            }
+                if !UserDefaults.isKeyPresentInUserDefaults(key: HotelJazConstants.userDefault.userData)
+                {
+                    FBSDKLoginManager().logOut()
+                    
+                    // self.navigationController?.present(LoginViewController.create(), animated: true, completion: nil)
+                    
+                    let controller = self.authUI!.authViewController()
+                    self.navigationController?.present(controller, animated: true, completion: nil)
+                    
+                }
+                else
+                {
+                    //  self.navigationController?.present(LoginViewController.create(), animated: true, completion: nil)
+                    let controller = self.authUI!.authViewController()
+                    self.navigationController?.present(controller, animated: true, completion: nil)
+                    UserDefaults.removeKeyUserDefault(key:  HotelJazConstants.userDefault.userData)
+                    
+                }
             }
         }
         else // reservartion

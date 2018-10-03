@@ -105,6 +105,8 @@ class RatePlansViewController: UIViewController,FUIAuthDelegate {
             if rate.ratePlanCode == ratePlanCode && rate.rates != nil{
                 if rate.rates.rate.tpaExtensions.nightlyRate.count>0{
                     price = rate.rates.rate.tpaExtensions.nightlyRate[0].priceWithTaxAndFee
+                }  else if rate.rates.rate.total.amountAfterTax != nil{
+                    price = rate.rates.rate.total.amountAfterTax
                 }
                 break
             }
@@ -134,6 +136,8 @@ class RatePlansViewController: UIViewController,FUIAuthDelegate {
             if rate.roomTypeCode == roomTypeCode{
                 if rate.rates.rate.tpaExtensions.nightlyRate.count>0{
                     price = rate.rates.rate.tpaExtensions.nightlyRate[0].priceWithTaxAndFee
+                }  else if rate.rates.rate.total.amountAfterTax != nil{
+                    price = rate.rates.rate.total.amountAfterTax
                 }
                 break
             }

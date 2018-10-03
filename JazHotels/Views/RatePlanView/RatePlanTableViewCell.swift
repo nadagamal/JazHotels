@@ -13,7 +13,7 @@ class RatePlanTableViewCell: UITableViewCell {
     @IBOutlet weak var arrowImg: UIImageView!
     @IBOutlet weak var ratePrice: UILabel!
     @IBOutlet weak var rateTitle: UILabel!
-    @IBOutlet weak var rateDesc: UILabel!
+    @IBOutlet weak var rateDesc: UITextView!
     @IBOutlet weak var avaiableRoomBtn: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()

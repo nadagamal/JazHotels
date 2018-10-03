@@ -8,6 +8,8 @@
 
 import UIKit
 import Kingfisher
+import PopupDialog
+
 class RoomDetailsViewController: UIViewController {
 
     @IBOutlet weak var txtViewHeightConstraint: NSLayoutConstraint!
@@ -32,14 +34,10 @@ class RoomDetailsViewController: UIViewController {
         return UIStoryboard(name: HotelJazConstants.StoryBoard.mainSB, bundle: Bundle.main).instantiateViewController(withIdentifier: String(describing: self)) as! RoomDetailsViewController
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func closeBtnAction(_ sender: Any) {
+//        PopupDialog.dismiss(RoomDetailsViewController.self)
+//        self.navigationController?.dismiss(animated: true, completion: nil)
     }
-    */
+  
 
 }

@@ -28,6 +28,10 @@ class RatePlansViewController: UIViewController,FUIAuthDelegate {
     var roomNum:String!
     var childNum:String!
     var adultsNum:String!
+    var selectedRowIndex = 0
+    var selectedSectionIndex = 0
+    var isFromNotification = false
+
     fileprivate(set) var auth: Auth? = Auth.auth()
     fileprivate(set) var authUI: FUIAuth? = FUIAuth.defaultAuthUI()
     fileprivate var authStateDidChangeHandle: AuthStateDidChangeListenerHandle?
@@ -44,6 +48,7 @@ class RatePlansViewController: UIViewController,FUIAuthDelegate {
         let settings = db.settings
         settings.areTimestampsInSnapshotsEnabled = true
         db.settings = settings
+        NotificationCenter.default.addObserver(self, selector: #selector(bookBtnPressed), name: NSNotification.Name("BookNowAction"), object: nil)
   
     }
     
@@ -135,13 +140,26 @@ class RatePlansViewController: UIViewController,FUIAuthDelegate {
         }
         return price
     }
+    @objc func bookBtnPressed(sender:UIButton){
+        isFromNotification = true
+        bookNowAction(sender: sender)
+    }
     @objc func bookNowAction(sender:UIButton){
-        guard let cell = sender.superview?.superview as? RoomDetailsCell else {
-            return
+        var indexPath = NSIndexPath(row: selectedRowIndex, section: selectedSectionIndex)
+        if isFromNotification == false{
+        let cell = sender.superview?.superview as? RoomDetailsCell
+        indexPath = tableView.indexPath(for: cell!) as! NSIndexPath
         }
-        
-        let indexPath = tableView.indexPath(for: cell) as! NSIndexPath
+        else{
+            isFromNotification = false
+            DispatchQueue.main.async {
+                self.dismiss(animated: true, completion: {
+                    
+                })
+            }
+        }
         let ratePlan:JCRatePlan = roomStay.ratePlans[indexPath.section]
+
         let userData = UserDefaults.getObjectDefault(key: HotelJazConstants.userDefault.userData) as? UserProfile
         if userData != nil && userData?.userName != nil{
         //var roomTypeslist = roomStay.roomTypes.roomType as [JCRoomType]
@@ -174,10 +192,13 @@ class RatePlansViewController: UIViewController,FUIAuthDelegate {
         }
         
         let indexPath = tableView.indexPath(for: cell) as! NSIndexPath
-        
+        selectedSectionIndex = indexPath.section
+        selectedRowIndex = indexPath.row
         let viewController = RoomDetailsViewController.create()
         var roomTypeslist = roomStay.roomTypes.roomType as [JCRoomType]
-        viewController.room = roomTypeslist[indexPath.row]
+         viewController.room = roomTypeslist[indexPath.row]
+       // viewController.bookNowBtn.addTarget(self, action: #selector(bookNowAction(sender:)), for: .touchUpInside)
+       // viewController.room = roomTypeslist[indexPath.row]
         let popup = PopupDialog(viewController: viewController,
                                 buttonAlignment: .horizontal,
                                 transitionStyle: .fadeIn,

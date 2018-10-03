@@ -39,5 +39,8 @@ class RoomDetailsViewController: UIViewController {
 //        self.navigationController?.dismiss(animated: true, completion: nil)
     }
   
-
+    @IBAction func bookNowAction(_ sender: Any) {
+        NotificationCenter.default.post(name: NSNotification.Name("BookNowAction"), object: nil)
+    }
+    
 }

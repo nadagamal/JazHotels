@@ -104,7 +104,9 @@ class ProfileViewController: UIViewController,FUIAuthDelegate {
 
     }
     @IBAction func menuBtnAction(_ sender: Any) {
-        
+        let authMain = UIStoryboard(name: HotelJazConstants.StoryBoard.mainSB, bundle: nil)
+        let sideNV = authMain.instantiateViewController(withIdentifier: "UISideMenuNavigationController")
+        self.navigationController?.present(sideNV, animated: true, completion: nil)
         
     }
     

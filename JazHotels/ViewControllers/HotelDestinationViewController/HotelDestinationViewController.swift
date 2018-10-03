@@ -60,6 +60,12 @@ class HotelDestinationViewController: UIViewController {
         }
         return codes
     }
+    @IBAction func menuButtonAction(_ sender: Any) {
+       
+        let authMain = UIStoryboard(name: HotelJazConstants.StoryBoard.mainSB, bundle: nil)
+        let sideNV = authMain.instantiateViewController(withIdentifier: "UISideMenuNavigationController")
+        self.navigationController?.present(sideNV, animated: true, completion: nil)
+    }
     
 }
 extension HotelDestinationViewController:UITableViewDelegate,UITableViewDataSource{

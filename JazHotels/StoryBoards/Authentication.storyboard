@@ -35,8 +35,12 @@
                                     <action selector="closeView:" destination="Tx0-gd-a1D" eventType="touchUpInside" id="MCC-dH-dPD"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jazLauncherLogo" translatesAutoresizingMaskIntoConstraints="NO" id="jZ8-z6-idg">
-                                <rect key="frame" x="143" y="62.5" width="89" height="65"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoSplash" translatesAutoresizingMaskIntoConstraints="NO" id="jZ8-z6-idg">
+                                <rect key="frame" x="101.5" y="70" width="172" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="emg-uH-57a"/>
+                                    <constraint firstAttribute="width" constant="172" id="nFd-Bc-l62"/>
+                                </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="fgd-l2-dbX">
                                 <rect key="frame" x="40" y="265" width="295" height="250"/>
@@ -170,9 +174,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="172.5"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoSplash" translatesAutoresizingMaskIntoConstraints="NO" id="U3n-ef-Ane">
-                                <rect key="frame" x="117.5" y="21" width="140" height="50"/>
+                                <rect key="frame" x="101.5" y="21" width="172" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="140" id="0Zb-S6-qXz"/>
+                                    <constraint firstAttribute="width" constant="172" id="0Zb-S6-qXz"/>
                                     <constraint firstAttribute="height" constant="50" id="Dso-e4-tZ8"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -275,7 +279,6 @@
         <image name="gmail" width="24" height="16"/>
         <image name="google.png" width="18" height="18"/>
         <image name="headBg" width="375" height="202"/>
-        <image name="jazLauncherLogo" width="89" height="65"/>
         <image name="logoSplash" width="196" height="55"/>
         <image name="menu" width="32" height="30"/>
     </resources>

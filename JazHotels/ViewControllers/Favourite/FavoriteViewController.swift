@@ -25,6 +25,8 @@ class FavoriteViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    @IBAction func menuBtnAction(_ sender: Any) {
+    }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
 //        self.navigationController?.isNavigationBarHidden = false

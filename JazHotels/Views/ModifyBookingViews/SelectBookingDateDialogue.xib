@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <array key="Montserrat-Bold.otf">
             <string>Montserrat-Bold</string>
-        </array>
-        <array key="Montserrat-Medium.otf">
-            <string>Montserrat-Medium</string>
         </array>
         <array key="Montserrat-Regular.otf">
             <string>Montserrat-Regular</string>
@@ -50,7 +47,7 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nxd-Pg-u85">
-                            <rect key="frame" x="187.5" y="129.5" width="1" height="50.5"/>
+                            <rect key="frame" x="187.5" y="129" width="1" height="51"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="1" id="ex6-cL-amB"/>
                             </constraints>
@@ -59,8 +56,8 @@
                             <rect key="frame" x="8" y="41" width="360" height="70"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check-in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HNc-cc-zIY">
-                                    <rect key="frame" x="4" y="16" width="50" height="13"/>
-                                    <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="11"/>
+                                    <rect key="frame" x="4" y="16" width="66.5" height="20"/>
+                                    <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -80,38 +77,40 @@
                                     </constraints>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check-out" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="63y-Ns-7Eo">
-                                    <rect key="frame" x="262" y="16" width="98" height="13"/>
-                                    <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="11"/>
+                                    <rect key="frame" x="256.5" y="16" width="103.5" height="20"/>
+                                    <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30 Mar, 2018" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bp2-lV-e4r">
-                                    <rect key="frame" x="262" y="34.5" width="90" height="17.5"/>
+                                    <rect key="frame" x="256.5" y="33" width="95.5" height="20"/>
                                     <gestureRecognizers/>
-                                    <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="14"/>
+                                    <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                     <color key="textColor" red="0.0" green="0.52156862749999999" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wcb-SI-rGq">
-                                    <rect key="frame" x="177.5" y="22" width="4.5" height="13"/>
-                                    <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="11"/>
+                                    <rect key="frame" x="175.5" y="22" width="9" height="20"/>
+                                    <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                     <color key="textColor" red="0.0" green="0.52156862749999999" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nights" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SnR-W5-mRV">
-                                    <rect key="frame" x="166" y="37" width="27.5" height="10"/>
-                                    <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="8"/>
+                                    <rect key="frame" x="156.5" y="44" width="47.5" height="20"/>
+                                    <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                     <color key="textColor" red="0.0" green="0.52156862749999999" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h0d-k3-f1b">
-                                    <rect key="frame" x="4" y="29.5" width="89.5" height="39"/>
+                                    <rect key="frame" x="4" y="37" width="89.5" height="32"/>
+                                    <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                     <connections>
                                         <action selector="checkInDateBtnAction:" destination="-1" eventType="touchUpInside" id="qbi-m7-daJ"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hu8-ua-kfy">
-                                    <rect key="frame" x="180.5" y="29.5" width="179.5" height="40.5"/>
+                                    <rect key="frame" x="180.5" y="36" width="179.5" height="34"/>
+                                    <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                     <connections>
                                         <action selector="checkOutDateBtnAction:" destination="-1" eventType="touchUpInside" id="yHh-oe-9QL"/>
                                     </connections>
@@ -142,7 +141,6 @@
                                 <constraint firstAttribute="trailing" secondItem="hu8-ua-kfy" secondAttribute="trailing" id="PfW-i8-F1g"/>
                                 <constraint firstAttribute="bottom" secondItem="h0d-k3-f1b" secondAttribute="bottom" constant="1" id="Q15-BG-V1O"/>
                                 <constraint firstItem="63y-Ns-7Eo" firstAttribute="top" secondItem="jGe-Xf-e70" secondAttribute="top" constant="16" id="QDj-Dg-4sf"/>
-                                <constraint firstItem="hu8-ua-kfy" firstAttribute="top" secondItem="63y-Ns-7Eo" secondAttribute="bottom" constant="0.5" id="UyK-KF-SxH"/>
                                 <constraint firstAttribute="trailing" secondItem="Bp2-lV-e4r" secondAttribute="trailing" constant="8" id="WmT-Ra-hQd"/>
                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="HNc-cc-zIY" secondAttribute="trailing" constant="20" symbolic="YES" id="cT2-bk-Bmi"/>
                                 <constraint firstItem="vsh-8b-KIV" firstAttribute="leading" secondItem="HNc-cc-zIY" secondAttribute="leading" id="fnx-SQ-hL9"/>
@@ -163,7 +161,7 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="33" id="BXK-BC-adv"/>
                             </constraints>
-                            <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="17"/>
+                            <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                             <state key="normal" title="Change Date">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>

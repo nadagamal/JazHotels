@@ -106,7 +106,7 @@ class HotelDetailsViewController: SegmentedPagerTabStripViewController {
 
         }
        shareBtn = UIBarButtonItem(image: UIImage(named: "share"), style: .done, target: self, action: #selector(shareBtnAction))
-        self.navigationItem.rightBarButtonItems = [favBtn,shareBtn]
+        self.navigationItem.rightBarButtonItems = [shareBtn,favBtn]
     }
 
     @objc func shareBtnAction(){

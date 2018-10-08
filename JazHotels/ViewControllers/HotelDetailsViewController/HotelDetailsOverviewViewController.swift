@@ -44,6 +44,7 @@ class HotelDetailsOverviewViewController: UIViewController,IndicatorInfoProvider
     
     @IBAction func bookAction(_ sender: Any) {
       //  navigationController?.show(BookHotelViewController.create(), sender: sender)
+    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "BookHotel"), object: hotel)
     self.tabBarController?.selectedIndex = 2
     }
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {

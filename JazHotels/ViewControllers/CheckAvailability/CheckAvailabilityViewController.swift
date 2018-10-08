@@ -49,6 +49,8 @@ class CheckAvailabilityViewController: UIViewController , UIScrollViewDelegate {
 //        ServiceManager().checkAvailbility(startDate: "2018-09-06", endDate: "2018-09-09", adultsNum: "2", childNum: "1", hotelCodes:getHotelCodes(text: "Sharm El Sheikh") , roomsNum: "1") { (success, error) in
 //
 //        }
+        NotificationCenter.default.addObserver(self, selector: #selector(bookHotelBtnAction(notification:)), name: Notification.Name("BookHotel"), object: nil)
+
     }
     override func viewDidAppear(_ animated: Bool) {
         
@@ -57,6 +59,12 @@ class CheckAvailabilityViewController: UIViewController , UIScrollViewDelegate {
     override func viewWillDisappear(_ animated: Bool) {
 
         self.navigationController?.navigationBar.isTranslucent = false
+    }
+    @objc func bookHotelBtnAction(notification:NSNotification){
+        let hotel = notification.object as! JHotelDescriptiveContent
+       self.hotelSearchTF.text = hotel.hotelName
+        selectedHotelCode = hotel.hotelCode
+        selectedHotelCodes = [hotel.hotelCode]
     }
     func initView()
     {

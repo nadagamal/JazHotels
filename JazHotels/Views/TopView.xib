@@ -19,10 +19,10 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoSplash" translatesAutoresizingMaskIntoConstraints="NO" id="X65-El-pMS">
-                    <rect key="frame" x="101.5" y="75" width="172" height="50"/>
+                    <rect key="frame" x="102" y="52" width="171" height="48"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="172" id="4Eu-9Y-5jc"/>
-                        <constraint firstAttribute="height" constant="50" id="e8m-0I-f2k"/>
+                        <constraint firstAttribute="width" constant="171" id="4Eu-9Y-5jc"/>
+                        <constraint firstAttribute="height" constant="48" id="e8m-0I-f2k"/>
                     </constraints>
                 </imageView>
             </subviews>
@@ -32,7 +32,7 @@
                 <constraint firstItem="mbs-G8-TCZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="9Jn-o6-unF"/>
                 <constraint firstItem="mbs-G8-TCZ" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" id="E5H-L0-SIq"/>
                 <constraint firstItem="mbs-G8-TCZ" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="PV9-Cq-SLR"/>
-                <constraint firstItem="X65-El-pMS" firstAttribute="centerY" secondItem="mbs-G8-TCZ" secondAttribute="centerY" id="T4j-ja-svY"/>
+                <constraint firstItem="X65-El-pMS" firstAttribute="centerY" secondItem="mbs-G8-TCZ" secondAttribute="centerY" constant="-24" id="T4j-ja-svY"/>
                 <constraint firstItem="mbs-G8-TCZ" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="c3A-1W-RfC"/>
                 <constraint firstItem="mbs-G8-TCZ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="lY7-db-Tu9"/>
             </constraints>
@@ -41,7 +41,7 @@
         </view>
     </objects>
     <resources>
-        <image name="headBg" width="375" height="202"/>
-        <image name="logoSplash" width="196" height="55"/>
+        <image name="headBg" width="375" height="202.5"/>
+        <image name="logoSplash" width="196.5" height="55"/>
     </resources>
 </document>

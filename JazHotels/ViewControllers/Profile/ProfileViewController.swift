@@ -100,7 +100,8 @@ class ProfileViewController: UIViewController,FUIAuthDelegate {
             self.tableView.reloadData()
             
         }
-        
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+
 
     }
     @IBAction func menuBtnAction(_ sender: Any) {

@@ -18,6 +18,8 @@ class FavoriteViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         tableView.register(UINib(nibName: "HotelTableViewCell", bundle: nil), forCellReuseIdentifier: "hotel_cell")
+      //  self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
         
     }
     

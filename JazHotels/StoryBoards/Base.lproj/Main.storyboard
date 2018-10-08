@@ -245,10 +245,10 @@
                                 </connections>
                             </tableView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoSplash" translatesAutoresizingMaskIntoConstraints="NO" id="qtW-vj-w0H">
-                                <rect key="frame" x="74" y="67" width="172" height="50"/>
+                                <rect key="frame" x="75" y="56" width="171" height="48"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="172" id="HiH-ZV-1J8"/>
-                                    <constraint firstAttribute="height" constant="50" id="gFf-zE-x49"/>
+                                    <constraint firstAttribute="width" constant="171" id="HiH-ZV-1J8"/>
+                                    <constraint firstAttribute="height" constant="48" id="gFf-zE-x49"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -258,9 +258,9 @@
                             <constraint firstItem="BfD-m8-SjD" firstAttribute="top" secondItem="Hc6-oO-JdC" secondAttribute="top" id="Ibm-yS-FFe"/>
                             <constraint firstItem="BfD-m8-SjD" firstAttribute="bottom" secondItem="hnK-0K-09Q" secondAttribute="bottom" id="WPi-k8-91D"/>
                             <constraint firstItem="9ZT-pV-DXW" firstAttribute="bottom" secondItem="hnK-0K-09Q" secondAttribute="bottom" id="WmK-LO-Xj8"/>
-                            <constraint firstItem="9ZT-pV-DXW" firstAttribute="top" secondItem="qtW-vj-w0H" secondAttribute="bottom" constant="20" id="dow-gP-674"/>
+                            <constraint firstItem="9ZT-pV-DXW" firstAttribute="top" secondItem="qtW-vj-w0H" secondAttribute="bottom" constant="33" id="dow-gP-674"/>
                             <constraint firstItem="9ZT-pV-DXW" firstAttribute="trailing" secondItem="hnK-0K-09Q" secondAttribute="trailing" id="eK9-gp-ioT"/>
-                            <constraint firstItem="qtW-vj-w0H" firstAttribute="top" secondItem="hnK-0K-09Q" secondAttribute="top" constant="47" id="fYa-e8-rKC"/>
+                            <constraint firstItem="qtW-vj-w0H" firstAttribute="top" secondItem="hnK-0K-09Q" secondAttribute="top" constant="36" id="fYa-e8-rKC"/>
                             <constraint firstItem="BfD-m8-SjD" firstAttribute="trailing" secondItem="hnK-0K-09Q" secondAttribute="trailing" id="hqq-c8-GOc"/>
                             <constraint firstItem="9ZT-pV-DXW" firstAttribute="leading" secondItem="hnK-0K-09Q" secondAttribute="leading" id="qfl-RD-G85"/>
                             <constraint firstItem="BfD-m8-SjD" firstAttribute="leading" secondItem="hnK-0K-09Q" secondAttribute="leading" id="ua9-x1-HZL"/>
@@ -286,34 +286,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bdZ-4P-H6A">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="209"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headBg" translatesAutoresizingMaskIntoConstraints="NO" id="ryZ-tu-bhi">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="200" id="ZNC-jG-jd2"/>
-                                        </constraints>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoSplash" translatesAutoresizingMaskIntoConstraints="NO" id="cRZ-oi-wq9">
-                                        <rect key="frame" x="74" y="60" width="172" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="6PA-vs-Fio"/>
-                                            <constraint firstAttribute="width" constant="172" id="L04-5j-F2J"/>
-                                        </constraints>
-                                    </imageView>
-                                </subviews>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="32"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="ryZ-tu-bhi" secondAttribute="bottom" constant="9" id="4ov-Uz-irc"/>
-                                    <constraint firstItem="cRZ-oi-wq9" firstAttribute="centerX" secondItem="ryZ-tu-bhi" secondAttribute="centerX" id="H8t-5I-akS"/>
-                                    <constraint firstItem="ryZ-tu-bhi" firstAttribute="leading" secondItem="bdZ-4P-H6A" secondAttribute="leading" id="YLt-FI-vSa"/>
-                                    <constraint firstItem="ryZ-tu-bhi" firstAttribute="top" secondItem="bdZ-4P-H6A" secondAttribute="top" id="diM-eS-DYz"/>
-                                    <constraint firstAttribute="trailing" secondItem="ryZ-tu-bhi" secondAttribute="trailing" id="jT6-Lr-2J9"/>
-                                    <constraint firstItem="cRZ-oi-wq9" firstAttribute="top" secondItem="bdZ-4P-H6A" secondAttribute="top" constant="60" id="uLl-Q0-7Sa"/>
-                                </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Mj8-Td-XEk">
-                                <rect key="frame" x="16" y="217" width="288" height="331"/>
+                                <rect key="frame" x="16" y="40" width="288" height="508"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="5" id="tyo-In-Gyy">
@@ -395,6 +372,7 @@ Iberotel Borg El Arab</string>
                             <constraint firstItem="bdZ-4P-H6A" firstAttribute="top" secondItem="W9F-3j-uIg" secondAttribute="top" id="Xln-N3-OoL"/>
                             <constraint firstItem="Mj8-Td-XEk" firstAttribute="top" secondItem="bdZ-4P-H6A" secondAttribute="bottom" constant="8" id="d9W-GR-IAD"/>
                             <constraint firstItem="aqg-Ik-d4D" firstAttribute="trailing" secondItem="Mj8-Td-XEk" secondAttribute="trailing" constant="16" id="o0i-i8-dVj"/>
+                            <constraint firstItem="Mj8-Td-XEk" firstAttribute="top" secondItem="aqg-Ik-d4D" secondAttribute="top" constant="20" id="oq5-zw-U54"/>
                             <constraint firstItem="Mj8-Td-XEk" firstAttribute="bottom" secondItem="aqg-Ik-d4D" secondAttribute="bottom" constant="-20" id="oy9-KU-uZO"/>
                             <constraint firstItem="Mj8-Td-XEk" firstAttribute="top" secondItem="bdZ-4P-H6A" secondAttribute="bottom" constant="8" id="sfA-pk-MJa"/>
                             <constraint firstItem="bdZ-4P-H6A" firstAttribute="leading" secondItem="aqg-Ik-d4D" secondAttribute="leading" id="uTD-Br-9lc"/>
@@ -404,63 +382,77 @@ Iberotel Borg El Arab</string>
                     <tabBarItem key="tabBarItem" title="" image="hotel-icon" landscapeImage="hotel-icon" largeContentSizeImage="hotel-icon" id="r3f-T9-PKF"/>
                     <navigationItem key="navigationItem" id="dbj-H9-Ox4"/>
                     <nil key="simulatedTopBarMetrics"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="collectionView" destination="Mj8-Td-XEk" id="qsO-3Z-OLu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ePg-wY-gMG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1884" y="1606"/>
+            <point key="canvasLocation" x="-1884.375" y="1605.6338028169014"/>
         </scene>
         <!--Favorites -->
         <scene sceneID="Rl5-ji-WXd">
             <objects>
                 <viewController storyboardIdentifier="FavoriteViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rjc-Ue-DvF" customClass="FavoriteViewController" customModule="JazHotels" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qEO-As-aPd">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hOd-9g-C6H">
-                                <rect key="frame" x="0.0" y="264" width="320" height="255"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="XxC-Pc-npg">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="144"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headBg" translatesAutoresizingMaskIntoConstraints="NO" id="fIh-qg-IIt">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="136"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="136" id="2AU-6Z-ZG4"/>
+                                            </constraints>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoSplash" translatesAutoresizingMaskIntoConstraints="NO" id="6Pg-S2-n0U">
+                                            <rect key="frame" x="74.5" y="20" width="171" height="48"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="171" id="Z9i-ra-fHM"/>
+                                                <constraint firstAttribute="height" constant="48" id="hQm-ZH-QKt"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="6Pg-S2-n0U" firstAttribute="centerX" secondItem="fIh-qg-IIt" secondAttribute="centerX" id="4Yu-0l-AE2"/>
+                                        <constraint firstItem="fIh-qg-IIt" firstAttribute="leading" secondItem="XxC-Pc-npg" secondAttribute="leading" id="Etu-Te-rkr"/>
+                                        <constraint firstItem="fIh-qg-IIt" firstAttribute="top" secondItem="XxC-Pc-npg" secondAttribute="top" id="LGi-66-Ucj"/>
+                                        <constraint firstItem="6Pg-S2-n0U" firstAttribute="top" secondItem="XxC-Pc-npg" secondAttribute="top" constant="20" id="Zsu-aT-lcc"/>
+                                        <constraint firstAttribute="trailing" secondItem="fIh-qg-IIt" secondAttribute="trailing" id="geC-q0-Dc2"/>
+                                    </constraints>
+                                </view>
                                 <connections>
                                     <outlet property="dataSource" destination="rjc-Ue-DvF" id="OfC-Cu-QWy"/>
                                     <outlet property="delegate" destination="rjc-Ue-DvF" id="Luu-Ur-wFd"/>
                                 </connections>
                             </tableView>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No favorite found in your list" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ly-ee-iX1">
-                                <rect key="frame" x="49.5" y="381.5" width="221.5" height="20"/>
+                                <rect key="frame" x="49.5" y="217.5" width="221.5" height="20"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headBg" translatesAutoresizingMaskIntoConstraints="NO" id="XE9-eI-uFP">
-                                <rect key="frame" x="0.0" y="64" width="320" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="LGL-Kt-ity"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoSplash" translatesAutoresizingMaskIntoConstraints="NO" id="O23-1Y-Xzw">
-                                <rect key="frame" x="74" y="139" width="172" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="172" id="2JX-ev-y0I"/>
-                                    <constraint firstAttribute="height" constant="50" id="aAM-Rm-Vkq"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="hOd-9g-C6H" firstAttribute="leading" secondItem="lne-MY-ZWz" secondAttribute="leading" id="7Qs-kL-Z1k"/>
-                            <constraint firstItem="hOd-9g-C6H" firstAttribute="top" secondItem="XE9-eI-uFP" secondAttribute="bottom" id="9MM-07-fIE"/>
-                            <constraint firstItem="XE9-eI-uFP" firstAttribute="leading" secondItem="lne-MY-ZWz" secondAttribute="leading" id="IjJ-55-UwB"/>
-                            <constraint firstItem="XE9-eI-uFP" firstAttribute="top" secondItem="lne-MY-ZWz" secondAttribute="top" id="KYz-f4-t2n"/>
-                            <constraint firstItem="O23-1Y-Xzw" firstAttribute="centerX" secondItem="XE9-eI-uFP" secondAttribute="centerX" id="TlI-e2-3y8"/>
-                            <constraint firstItem="O23-1Y-Xzw" firstAttribute="centerY" secondItem="XE9-eI-uFP" secondAttribute="centerY" id="W7C-X4-W3F"/>
                             <constraint firstItem="9ly-ee-iX1" firstAttribute="centerY" secondItem="hOd-9g-C6H" secondAttribute="centerY" id="bvn-HH-Teu"/>
                             <constraint firstItem="hOd-9g-C6H" firstAttribute="trailing" secondItem="lne-MY-ZWz" secondAttribute="trailing" id="eud-M6-5K4"/>
+                            <constraint firstItem="hOd-9g-C6H" firstAttribute="top" secondItem="lne-MY-ZWz" secondAttribute="top" id="h9v-hW-1g7"/>
                             <constraint firstItem="9ly-ee-iX1" firstAttribute="centerX" secondItem="hOd-9g-C6H" secondAttribute="centerX" id="nqX-DK-FhO"/>
                             <constraint firstItem="hOd-9g-C6H" firstAttribute="bottom" secondItem="lne-MY-ZWz" secondAttribute="bottom" id="vWM-vM-lcL"/>
-                            <constraint firstItem="XE9-eI-uFP" firstAttribute="trailing" secondItem="lne-MY-ZWz" secondAttribute="trailing" id="wBe-yv-MwY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lne-MY-ZWz"/>
                     </view>
@@ -473,6 +465,11 @@ Iberotel Borg El Arab</string>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="noDataFoundLbl" destination="9ly-ee-iX1" id="od0-uZ-Hcb"/>
                         <outlet property="tableView" destination="hOd-9g-C6H" id="nia-ec-1RC"/>
@@ -480,7 +477,7 @@ Iberotel Borg El Arab</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZbP-Cn-413" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-529" y="2408"/>
+            <point key="canvasLocation" x="-530.625" y="2407.394366197183"/>
         </scene>
         <!--Hotel Details Overview View Controller-->
         <scene sceneID="CSB-Ii-h2T">
@@ -1154,12 +1151,12 @@ Alam Road, Red Sea, Egypt.</string>
             <objects>
                 <navigationController id="lFj-Yz-DSO" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="hotelNav" selectedImage="hotelNavH" id="5eu-qz-tME"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backIndicatorImage="back" id="omG-C7-ux3">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" backIndicatorImage="back" id="omG-C7-ux3">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.0" green="0.52156862749999999" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="0.0" green="0.52156862749999999" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="barTintColor" red="0.0" green="0.52156862745098043" blue="0.47058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.22654125094413757" green="0.51440143585205078" blue="0.47058624029159546" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <color key="textShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1174,6 +1171,11 @@ Alam Road, Red Sea, Egypt.</string>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </navigationBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="27e-E9-bhQ" kind="relationship" relationship="rootViewController" id="fz2-Eg-cFk"/>
                     </connections>
@@ -1187,23 +1189,23 @@ Alam Road, Red Sea, Egypt.</string>
             <objects>
                 <viewController storyboardIdentifier="CheckAvailabilityViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QCg-b4-2nr" customClass="CheckAvailabilityViewController" customModule="JazHotels" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yFf-va-rsR">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="751"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="availabilty_bg" translatesAutoresizingMaskIntoConstraints="NO" id="azK-OG-mck">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="751"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="687"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e26-nz-N4j">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="751"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="687"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m2A-d0-XZ4">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="751"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="687"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoSplash" translatesAutoresizingMaskIntoConstraints="NO" id="dl2-m7-T7e">
-                                                <rect key="frame" x="74" y="60" width="172" height="50"/>
+                                                <rect key="frame" x="74.5" y="60" width="171" height="48"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="7cA-oZ-fx0"/>
-                                                    <constraint firstAttribute="width" constant="172" id="r93-LN-GYc"/>
+                                                    <constraint firstAttribute="height" constant="48" id="7cA-oZ-fx0"/>
+                                                    <constraint firstAttribute="width" constant="171" id="r93-LN-GYc"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A TRUE TAST OF LUXURY LIVING" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Xj-0m-AFe">
@@ -1275,12 +1277,14 @@ Alam Road, Red Sea, Egypt.</string>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nLe-EO-wSL">
                                                         <rect key="frame" x="-4" y="30" width="95" height="39"/>
                                                         <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="13"/>
+                                                        <connections>
+                                                            <action selector="checkInDateAction:" destination="QCg-b4-2nr" eventType="touchUpInside" id="i6Y-Ez-6vO"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IKG-HE-wye">
                                                         <rect key="frame" x="94" y="29" width="104" height="42"/>
                                                         <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="13"/>
                                                         <connections>
-                                                            <action selector="checkInDateAction:" destination="QCg-b4-2nr" eventType="touchUpInside" id="UGN-cb-JH3"/>
                                                             <action selector="checkOutDateAction:" destination="QCg-b4-2nr" eventType="touchUpInside" id="17G-xr-8rp"/>
                                                         </connections>
                                                     </button>
@@ -1600,7 +1604,7 @@ Alam Road, Red Sea, Egypt.</string>
                                             <constraint firstAttribute="trailing" secondItem="TRe-l8-ejd" secondAttribute="trailing" constant="35" id="NYP-Gy-UOy"/>
                                             <constraint firstItem="6Xj-0m-AFe" firstAttribute="centerX" secondItem="m2A-d0-XZ4" secondAttribute="centerX" id="UIu-dM-d8g"/>
                                             <constraint firstItem="bPo-dJ-K4l" firstAttribute="top" secondItem="I04-XD-5FJ" secondAttribute="bottom" constant="20" id="UKl-Te-1Mb"/>
-                                            <constraint firstItem="6Xj-0m-AFe" firstAttribute="top" secondItem="dl2-m7-T7e" secondAttribute="bottom" constant="25" id="YS7-PO-AEt"/>
+                                            <constraint firstItem="6Xj-0m-AFe" firstAttribute="top" secondItem="dl2-m7-T7e" secondAttribute="bottom" constant="27" id="YS7-PO-AEt"/>
                                             <constraint firstItem="L3D-lW-SYF" firstAttribute="leading" secondItem="m2A-d0-XZ4" secondAttribute="leading" constant="40" id="ZZz-gg-R1t"/>
                                             <constraint firstAttribute="trailing" secondItem="L3D-lW-SYF" secondAttribute="trailing" constant="40" id="clI-3y-0SV"/>
                                             <constraint firstItem="dl2-m7-T7e" firstAttribute="centerX" secondItem="m2A-d0-XZ4" secondAttribute="centerX" id="crl-YM-ynS"/>
@@ -1809,39 +1813,39 @@ Alam Road, Red Sea, Egypt.</string>
                                 <color key="tintColor" red="0.92243321169861603" green="0.92004966334797356" blue="0.92481676004925839" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="rate_cell" rowHeight="180" id="CHw-8S-Swo" customClass="RatePlanTableViewCell" customModule="JazHotels" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="55.5" width="300" height="180"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="rate_cell" rowHeight="197" id="CHw-8S-Swo" customClass="RatePlanTableViewCell" customModule="JazHotels" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="55.5" width="300" height="197"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CHw-8S-Swo" id="uCp-lj-gxw">
-                                            <rect key="frame" x="0.0" y="0.0" width="300" height="180"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="197"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9W7-Ul-OdV">
-                                                    <rect key="frame" x="0.0" y="10" width="300" height="160"/>
+                                                    <rect key="frame" x="0.0" y="10" width="300" height="150"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rCj-dV-nuQ" customClass="GradientView" customModule="JazHotels" customModuleProvider="target">
-                                                            <rect key="frame" x="10" y="0.0" width="116" height="160"/>
+                                                            <rect key="frame" x="10" y="0.0" width="116" height="150"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbj-tO-OED">
-                                                                    <rect key="frame" x="17" y="52" width="32" height="16.5"/>
+                                                                    <rect key="frame" x="17" y="47" width="32" height="16.5"/>
                                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="14"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2A-wl-kni">
-                                                                    <rect key="frame" x="17" y="73.5" width="43.5" height="20"/>
+                                                                    <rect key="frame" x="17" y="68.5" width="43.5" height="20"/>
                                                                     <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="17"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FA8-o9-2f1">
-                                                                    <rect key="frame" x="17" y="96.5" width="35" height="20"/>
+                                                                    <rect key="frame" x="17" y="91.5" width="35" height="20"/>
                                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/ Night" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3FU-Fy-8gI">
-                                                                    <rect key="frame" x="54" y="96.5" width="54.5" height="20"/>
+                                                                    <rect key="frame" x="54" y="91.5" width="54.5" height="20"/>
                                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -1849,7 +1853,7 @@ Alam Road, Red Sea, Egypt.</string>
                                                             </subviews>
                                                             <constraints>
                                                                 <constraint firstItem="3FU-Fy-8gI" firstAttribute="leading" secondItem="FA8-o9-2f1" secondAttribute="trailing" constant="2" id="1X4-ur-Vix"/>
-                                                                <constraint firstItem="kbj-tO-OED" firstAttribute="centerY" secondItem="rCj-dV-nuQ" secondAttribute="centerY" constant="-20" id="6cq-GK-MYB"/>
+                                                                <constraint firstItem="kbj-tO-OED" firstAttribute="centerY" secondItem="rCj-dV-nuQ" secondAttribute="centerY" constant="-19.75" id="6cq-GK-MYB"/>
                                                                 <constraint firstItem="FA8-o9-2f1" firstAttribute="top" secondItem="d2A-wl-kni" secondAttribute="bottom" constant="3" id="LZz-qO-hnB"/>
                                                                 <constraint firstItem="d2A-wl-kni" firstAttribute="leading" secondItem="kbj-tO-OED" secondAttribute="leading" id="VM2-LK-TmK"/>
                                                                 <constraint firstItem="d2A-wl-kni" firstAttribute="top" secondItem="kbj-tO-OED" secondAttribute="bottom" constant="5" id="a85-Sa-LY4"/>
@@ -1887,8 +1891,11 @@ Alam Road, Red Sea, Egypt.</string>
                                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3br-BZ-egW">
                                                             <rect key="frame" x="146" y="48" width="146" height="92"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="92" id="okg-bJ-JQ1"/>
+                                                            </constraints>
                                                             <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="12"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                         </textView>
                                                     </subviews>
@@ -1913,13 +1920,13 @@ Alam Road, Red Sea, Egypt.</string>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Quz-os-b27">
-                                                    <rect key="frame" x="134" y="150" width="150" height="40"/>
+                                                    <rect key="frame" x="134" y="149" width="150" height="30"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="40" id="Ygp-jD-foG"/>
+                                                        <constraint firstAttribute="height" constant="30" id="Ygp-jD-foG"/>
                                                         <constraint firstAttribute="width" constant="150" id="vJd-eD-CDQ"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="10"/>
+                                                    <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="11"/>
                                                     <state key="normal" title="Available Rooms">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
@@ -1933,21 +1940,20 @@ Alam Road, Red Sea, Egypt.</string>
                                                     </connections>
                                                 </button>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="closed" translatesAutoresizingMaskIntoConstraints="NO" id="YFd-QE-f9P">
-                                                    <rect key="frame" x="256" y="167" width="9" height="6"/>
+                                                    <rect key="frame" x="256" y="162" width="9" height="6"/>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="9W7-Ul-OdV" secondAttribute="trailing" id="C2V-rR-TPh"/>
-                                                <constraint firstItem="Quz-os-b27" firstAttribute="bottom" secondItem="9W7-Ul-OdV" secondAttribute="bottom" constant="20" id="DvA-dM-9TQ"/>
-                                                <constraint firstAttribute="bottom" secondItem="9W7-Ul-OdV" secondAttribute="bottom" constant="10" id="MGM-Me-uga"/>
+                                                <constraint firstItem="Quz-os-b27" firstAttribute="bottom" secondItem="9W7-Ul-OdV" secondAttribute="bottom" constant="19" id="DvA-dM-9TQ"/>
                                                 <constraint firstItem="Quz-os-b27" firstAttribute="leading" secondItem="rCj-dV-nuQ" secondAttribute="trailing" constant="8" id="W93-tn-Fg7"/>
-                                                <constraint firstItem="YFd-QE-f9P" firstAttribute="centerY" secondItem="Quz-os-b27" secondAttribute="centerY" id="aeo-AL-biW"/>
+                                                <constraint firstItem="YFd-QE-f9P" firstAttribute="centerY" secondItem="Quz-os-b27" secondAttribute="centerY" constant="1" id="aeo-AL-biW"/>
                                                 <constraint firstItem="9W7-Ul-OdV" firstAttribute="top" secondItem="uCp-lj-gxw" secondAttribute="top" constant="10" id="dOc-bA-5Ia"/>
                                                 <constraint firstItem="YFd-QE-f9P" firstAttribute="leading" secondItem="Quz-os-b27" secondAttribute="trailing" constant="-28" id="dxa-qr-8hO"/>
                                                 <constraint firstItem="9W7-Ul-OdV" firstAttribute="leading" secondItem="uCp-lj-gxw" secondAttribute="leading" id="f1M-CK-Yec"/>
-                                                <constraint firstItem="Quz-os-b27" firstAttribute="top" secondItem="3br-BZ-egW" secondAttribute="bottom" id="teJ-fH-f58"/>
+                                                <constraint firstItem="Quz-os-b27" firstAttribute="top" secondItem="3br-BZ-egW" secondAttribute="bottom" constant="-1" id="teJ-fH-f58"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1961,7 +1967,7 @@ Alam Road, Red Sea, Egypt.</string>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DetailsCell" rowHeight="320" id="auM-Sg-qSf" customClass="RoomDetailsCell" customModule="JazHotels" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="235.5" width="300" height="320"/>
+                                        <rect key="frame" x="0.0" y="252.5" width="300" height="320"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="auM-Sg-qSf" id="X7p-xx-Uzp">
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="320"/>
@@ -2033,10 +2039,10 @@ Alam Road, Red Sea, Egypt.</string>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.84999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="l6o-Mf-jOM">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="1" translatesAutoresizingMaskIntoConstraints="NO" id="l6o-Mf-jOM">
                                                     <rect key="frame" x="15" y="159" width="270" height="92"/>
                                                     <string key="text">Family Room features queen bed (1.8 x 2 Sqm) sofa bed (0.8 x 1.9 Sqm) Family Room features queen bed (1.8 x 2 Sqm) sofa bed (0.8 x 1.9 Sqm)</string>
-                                                    <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="16"/>
                                                     <color key="textColor" red="0.52941176470588236" green="0.52941176470588236" blue="0.52941176470588236" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -2372,10 +2378,10 @@ Alam Road, Red Sea, Egypt.</string>
                                                     <rect key="frame" x="0.0" y="0.5" width="300" height="187"/>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoSplash" translatesAutoresizingMaskIntoConstraints="NO" id="Icl-Ph-CQB">
-                                                    <rect key="frame" x="64" y="69" width="172" height="50"/>
+                                                    <rect key="frame" x="64" y="69" width="171" height="48"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="172" id="Nig-lB-fu9"/>
-                                                        <constraint firstAttribute="height" constant="50" id="XCM-26-dff"/>
+                                                        <constraint firstAttribute="width" constant="171" id="Nig-lB-fu9"/>
+                                                        <constraint firstAttribute="height" constant="48" id="XCM-26-dff"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hotel Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lzq-yo-879">
@@ -2401,7 +2407,7 @@ Alam Road, Red Sea, Egypt.</string>
                                                 <constraint firstAttribute="bottom" secondItem="IdS-9E-os2" secondAttribute="bottom" id="gVL-xU-Hyq"/>
                                                 <constraint firstItem="jtX-nL-liR" firstAttribute="top" secondItem="Lzq-yo-879" secondAttribute="bottom" constant="5" id="lwK-Wj-0nj"/>
                                                 <constraint firstItem="Icl-Ph-CQB" firstAttribute="centerX" secondItem="IdS-9E-os2" secondAttribute="centerX" id="mce-iz-SJU"/>
-                                                <constraint firstItem="Icl-Ph-CQB" firstAttribute="centerY" secondItem="IdS-9E-os2" secondAttribute="centerY" id="oaL-0p-jXr"/>
+                                                <constraint firstItem="Icl-Ph-CQB" firstAttribute="centerY" secondItem="IdS-9E-os2" secondAttribute="centerY" constant="-1" id="oaL-0p-jXr"/>
                                                 <constraint firstAttribute="trailing" secondItem="jtX-nL-liR" secondAttribute="trailing" constant="10" id="ogW-CG-VOJ"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -2735,30 +2741,31 @@ In case of canelation within 02 days prior to arrival or no show, 01 night charg
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headBg" translatesAutoresizingMaskIntoConstraints="NO" id="Yrt-P4-bt5">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="230"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="136"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="230" id="i0Q-rq-gK3"/>
+                                    <constraint firstAttribute="height" constant="136" id="i0Q-rq-gK3"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoSplash" translatesAutoresizingMaskIntoConstraints="NO" id="aEA-ee-l8B">
-                                <rect key="frame" x="90" y="90" width="172" height="50"/>
+                                <rect key="frame" x="75" y="53" width="171" height="48"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="172" id="IZ7-6H-755"/>
-                                    <constraint firstAttribute="height" constant="50" id="fac-Jq-YTo"/>
+                                    <constraint firstAttribute="width" constant="171" id="IZ7-6H-755"/>
+                                    <constraint firstAttribute="height" constant="48" id="fac-Jq-YTo"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Yrt-P4-bt5" firstAttribute="leading" secondItem="BTt-mq-kgT" secondAttribute="leading" id="3j3-Hv-WK6"/>
-                            <constraint firstItem="aEA-ee-l8B" firstAttribute="centerX" secondItem="Yrt-P4-bt5" secondAttribute="centerX" constant="16" id="GEL-ua-f4b"/>
+                            <constraint firstItem="aEA-ee-l8B" firstAttribute="centerX" secondItem="Yrt-P4-bt5" secondAttribute="centerX" constant="0.5" id="GEL-ua-f4b"/>
                             <constraint firstItem="Yrt-P4-bt5" firstAttribute="trailing" secondItem="BTt-mq-kgT" secondAttribute="trailing" id="IZ2-Mu-QTo"/>
                             <constraint firstItem="Yrt-P4-bt5" firstAttribute="top" secondItem="GjC-zn-RGv" secondAttribute="top" id="MEw-hV-DhY"/>
-                            <constraint firstItem="aEA-ee-l8B" firstAttribute="centerY" secondItem="Yrt-P4-bt5" secondAttribute="centerY" id="luE-iH-rKz"/>
+                            <constraint firstItem="aEA-ee-l8B" firstAttribute="centerY" secondItem="Yrt-P4-bt5" secondAttribute="centerY" constant="9" id="luE-iH-rKz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BTt-mq-kgT"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="account-icon" landscapeImage="account-icon" largeContentSizeImage="account-icon" id="F3E-Tw-2Af"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GsT-FJ-aHN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2780,8 +2787,8 @@ In case of canelation within 02 days prior to arrival or no show, 01 night charg
                         <segue destination="lFj-Yz-DSO" kind="relationship" relationship="viewControllers" id="Wf3-np-dbO"/>
                         <segue destination="FK2-ce-JBX" kind="relationship" relationship="viewControllers" id="5p5-zq-Vf9"/>
                         <segue destination="hA6-x8-ph3" kind="relationship" relationship="viewControllers" id="pBi-Jy-Xz9"/>
-                        <segue destination="DC0-80-bba" kind="relationship" relationship="viewControllers" id="xQe-Ot-PG9"/>
                         <segue destination="O9v-W8-rnW" kind="relationship" relationship="viewControllers" id="XKf-XA-buZ"/>
+                        <segue destination="ehT-HV-UuU" kind="relationship" relationship="viewControllers" id="qdR-8l-Ahd"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7uR-6U-B2Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2865,13 +2872,13 @@ In case of canelation within 02 days prior to arrival or no show, 01 night charg
                 <navigationController id="FK2-ce-JBX" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="favHeader" id="r56-8U-Of1"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6Ul-CD-V97">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="6Ul-CD-V97">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.0" green="0.52156862749999999" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" red="0.0" green="0.52156862749999999" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="16"/>
+                            <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="16"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
@@ -2898,7 +2905,7 @@ In case of canelation within 02 days prior to arrival or no show, 01 night charg
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hA6-x8-ph3" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" id="V2h-ai-K8x"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9Hd-vP-uYf">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="9Hd-vP-uYf">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2927,57 +2934,75 @@ In case of canelation within 02 days prior to arrival or no show, 01 night charg
             </objects>
             <point key="canvasLocation" x="452" y="1494.6026986506747"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="ZjD-9w-GtO">
+            <objects>
+                <navigationController id="ehT-HV-UuU" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="XLO-LT-chI"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="nIv-75-Ikk">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.22654125094413757" green="0.51440143585205078" blue="0.47058624029159546" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="DC0-80-bba" kind="relationship" relationship="rootViewController" id="8cy-al-fBQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aFI-qg-0aA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1110" y="985"/>
+        </scene>
         <!--About View Controller-->
         <scene sceneID="3AD-9r-i45">
             <objects>
                 <viewController storyboardIdentifier="AboutViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DC0-80-bba" customClass="AboutViewController" customModule="JazHotels" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UcG-fx-FhI">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yxY-tH-vBf">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="212"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="142"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headBg" translatesAutoresizingMaskIntoConstraints="NO" id="uer-SA-w9A">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="223"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="136"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="223" id="PAx-pW-Zm5"/>
+                                            <constraint firstAttribute="height" constant="136" id="PAx-pW-Zm5"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MWd-Pw-QU2">
-                                        <rect key="frame" x="20" y="20" width="33" height="30"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="33" id="Q5h-ol-x5e"/>
-                                            <constraint firstAttribute="height" constant="30" id="qnr-SP-4me"/>
-                                        </constraints>
-                                        <state key="normal" image="menu"/>
-                                        <connections>
-                                            <segue destination="UsC-xV-FXi" kind="presentation" id="4Rn-y6-3ef"/>
-                                        </connections>
-                                    </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoSplash" translatesAutoresizingMaskIntoConstraints="NO" id="F3i-Fn-IDY">
-                                        <rect key="frame" x="89.5" y="75" width="172" height="50"/>
+                                        <rect key="frame" x="75" y="20" width="171" height="48"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="172" id="V76-Us-Ri5"/>
-                                            <constraint firstAttribute="height" constant="50" id="x24-VV-4ps"/>
+                                            <constraint firstAttribute="width" constant="171" id="V76-Us-Ri5"/>
+                                            <constraint firstAttribute="height" constant="48" id="x24-VV-4ps"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="uer-SA-w9A" secondAttribute="trailing" id="57N-bY-aaf"/>
-                                    <constraint firstItem="MWd-Pw-QU2" firstAttribute="leading" secondItem="yxY-tH-vBf" secondAttribute="leading" constant="20" id="7zi-vo-mXq"/>
                                     <constraint firstItem="uer-SA-w9A" firstAttribute="top" secondItem="yxY-tH-vBf" secondAttribute="top" id="Nad-l7-8GK"/>
-                                    <constraint firstAttribute="height" constant="212" id="T4J-Cy-rcQ"/>
-                                    <constraint firstItem="F3i-Fn-IDY" firstAttribute="top" secondItem="yxY-tH-vBf" secondAttribute="top" constant="75" id="b6l-AB-Vux"/>
-                                    <constraint firstItem="MWd-Pw-QU2" firstAttribute="top" secondItem="yxY-tH-vBf" secondAttribute="top" constant="20" id="iL0-IX-NTS"/>
-                                    <constraint firstItem="F3i-Fn-IDY" firstAttribute="centerX" secondItem="uer-SA-w9A" secondAttribute="centerX" constant="15.5" id="k3I-fV-0yy"/>
+                                    <constraint firstAttribute="height" constant="142" id="T4J-Cy-rcQ"/>
+                                    <constraint firstItem="F3i-Fn-IDY" firstAttribute="centerX" secondItem="uer-SA-w9A" secondAttribute="centerX" constant="0.5" id="k3I-fV-0yy"/>
                                     <constraint firstItem="uer-SA-w9A" firstAttribute="leading" secondItem="yxY-tH-vBf" secondAttribute="leading" id="y4G-BU-gBx"/>
+                                    <constraint firstItem="F3i-Fn-IDY" firstAttribute="top" secondItem="yxY-tH-vBf" secondAttribute="top" constant="20" id="zPI-3p-Oaz"/>
                                 </constraints>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CEx-ta-nDL">
-                                <rect key="frame" x="16" y="238" width="288" height="219"/>
+                                <rect key="frame" x="16" y="150" width="288" height="230"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">On your next Egypt holiday, you will feel the merry atmosphere of progress, the pride and the energy, which is characteristic for our country and currently eminently perceptible.
 
@@ -2985,11 +3010,11 @@ Don’t miss visiting the best Egypt beach holiday destinations. Experience the 
 
 Or discover Luxor and Aswan that are immensely rich in history. For unwinding, try any of the oases amidst the virgin unspoiled nature.</string>
                                 <color key="textColor" red="0.45098039220000002" green="0.45098039220000002" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="13"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="15H-b8-ALr">
-                                <rect key="frame" x="26" y="465" width="28" height="28"/>
+                                <rect key="frame" x="26" y="388" width="28" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="28" id="tm3-2L-5e7"/>
                                     <constraint firstAttribute="height" constant="28" id="w1E-Pj-Co7"/>
@@ -3000,7 +3025,7 @@ Or discover Luxor and Aswan that are immensely rich in history. For unwinding, t
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y9S-Ka-Fmc">
-                                <rect key="frame" x="74" y="465" width="28" height="28"/>
+                                <rect key="frame" x="74" y="388" width="28" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="voE-l5-zBz"/>
                                     <constraint firstAttribute="width" constant="28" id="wLg-HH-5du"/>
@@ -3011,7 +3036,7 @@ Or discover Luxor and Aswan that are immensely rich in history. For unwinding, t
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yef-SR-z7H">
-                                <rect key="frame" x="122" y="465" width="28" height="28"/>
+                                <rect key="frame" x="122" y="388" width="28" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="crr-F9-D0k"/>
                                     <constraint firstAttribute="width" constant="28" id="pJe-H2-xpD"/>
@@ -3022,7 +3047,7 @@ Or discover Luxor and Aswan that are immensely rich in history. For unwinding, t
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGe-ai-YLz">
-                                <rect key="frame" x="170" y="465" width="28" height="28"/>
+                                <rect key="frame" x="170" y="388" width="28" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="28" id="IFN-SH-Fhb"/>
                                     <constraint firstAttribute="height" constant="28" id="mph-if-yfT"/>
@@ -3033,7 +3058,7 @@ Or discover Luxor and Aswan that are immensely rich in history. For unwinding, t
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jzg-26-9Y4">
-                                <rect key="frame" x="218" y="465" width="28" height="28"/>
+                                <rect key="frame" x="218" y="388" width="28" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="Iyo-jc-f8d"/>
                                     <constraint firstAttribute="width" constant="28" id="a9M-8O-CKN"/>
@@ -3044,7 +3069,7 @@ Or discover Luxor and Aswan that are immensely rich in history. For unwinding, t
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V5a-Xe-GlR">
-                                <rect key="frame" x="266" y="465" width="28" height="28"/>
+                                <rect key="frame" x="266" y="388" width="28" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="28" id="T11-Bg-Odh"/>
                                     <constraint firstAttribute="height" constant="28" id="pCL-KT-2fp"/>
@@ -3062,33 +3087,48 @@ Or discover Luxor and Aswan that are immensely rich in history. For unwinding, t
                             <constraint firstItem="t3Y-4d-vL2" firstAttribute="trailing" secondItem="CEx-ta-nDL" secondAttribute="trailing" constant="16" id="5bD-Ui-3zL"/>
                             <constraint firstItem="Y9S-Ka-Fmc" firstAttribute="leading" secondItem="15H-b8-ALr" secondAttribute="trailing" constant="20" id="6gr-dC-pkr"/>
                             <constraint firstItem="Y9S-Ka-Fmc" firstAttribute="top" secondItem="CEx-ta-nDL" secondAttribute="bottom" constant="8" id="89P-jv-j6n"/>
-                            <constraint firstItem="t3Y-4d-vL2" firstAttribute="bottom" secondItem="V5a-Xe-GlR" secondAttribute="bottom" constant="26" id="8Z0-Oo-zzs"/>
-                            <constraint firstItem="t3Y-4d-vL2" firstAttribute="bottom" secondItem="Y9S-Ka-Fmc" secondAttribute="bottom" constant="26" id="9md-Cr-Olc"/>
-                            <constraint firstItem="CEx-ta-nDL" firstAttribute="top" secondItem="t3Y-4d-vL2" secondAttribute="top" constant="218" id="EEb-0v-H9i"/>
+                            <constraint firstItem="t3Y-4d-vL2" firstAttribute="bottom" secondItem="V5a-Xe-GlR" secondAttribute="bottom" constant="39" id="8Z0-Oo-zzs"/>
+                            <constraint firstItem="t3Y-4d-vL2" firstAttribute="bottom" secondItem="Y9S-Ka-Fmc" secondAttribute="bottom" constant="39" id="9md-Cr-Olc"/>
                             <constraint firstItem="CEx-ta-nDL" firstAttribute="leading" secondItem="t3Y-4d-vL2" secondAttribute="leading" constant="16" id="EpW-kb-rmI"/>
-                            <constraint firstItem="t3Y-4d-vL2" firstAttribute="bottom" secondItem="Jzg-26-9Y4" secondAttribute="bottom" constant="26" id="LBK-Ip-hu0"/>
+                            <constraint firstItem="t3Y-4d-vL2" firstAttribute="bottom" secondItem="Jzg-26-9Y4" secondAttribute="bottom" constant="39" id="LBK-Ip-hu0"/>
                             <constraint firstItem="yxY-tH-vBf" firstAttribute="trailing" secondItem="t3Y-4d-vL2" secondAttribute="trailing" id="LG4-cK-0Nu"/>
                             <constraint firstItem="V5a-Xe-GlR" firstAttribute="top" secondItem="CEx-ta-nDL" secondAttribute="bottom" constant="8" id="QX6-Cg-oAi"/>
                             <constraint firstItem="V5a-Xe-GlR" firstAttribute="leading" secondItem="Jzg-26-9Y4" secondAttribute="trailing" constant="20" id="SZy-CA-3ht"/>
                             <constraint firstItem="Jzg-26-9Y4" firstAttribute="top" secondItem="CEx-ta-nDL" secondAttribute="bottom" constant="8" id="W8N-tv-kYm"/>
                             <constraint firstItem="Yef-SR-z7H" firstAttribute="leading" secondItem="Y9S-Ka-Fmc" secondAttribute="trailing" constant="20" id="dd0-rq-u8i"/>
-                            <constraint firstItem="t3Y-4d-vL2" firstAttribute="bottom" secondItem="15H-b8-ALr" secondAttribute="bottom" constant="26" id="fAe-xC-q47"/>
+                            <constraint firstItem="t3Y-4d-vL2" firstAttribute="bottom" secondItem="15H-b8-ALr" secondAttribute="bottom" constant="39" id="fAe-xC-q47"/>
                             <constraint firstItem="gGe-ai-YLz" firstAttribute="leading" secondItem="Yef-SR-z7H" secondAttribute="trailing" constant="20" id="gsh-bT-ofq"/>
+                            <constraint firstItem="CEx-ta-nDL" firstAttribute="top" secondItem="yxY-tH-vBf" secondAttribute="bottom" constant="8" id="hU7-Vw-5Qz"/>
                             <constraint firstItem="gGe-ai-YLz" firstAttribute="top" secondItem="CEx-ta-nDL" secondAttribute="bottom" constant="8" id="kEY-9n-jjA"/>
-                            <constraint firstItem="t3Y-4d-vL2" firstAttribute="bottom" secondItem="Yef-SR-z7H" secondAttribute="bottom" constant="26" id="l0t-aU-ZhO"/>
+                            <constraint firstItem="t3Y-4d-vL2" firstAttribute="bottom" secondItem="Yef-SR-z7H" secondAttribute="bottom" constant="39" id="l0t-aU-ZhO"/>
                             <constraint firstItem="15H-b8-ALr" firstAttribute="top" secondItem="CEx-ta-nDL" secondAttribute="bottom" constant="8" id="qPx-2X-jLF"/>
                             <constraint firstItem="Jzg-26-9Y4" firstAttribute="leading" secondItem="gGe-ai-YLz" secondAttribute="trailing" constant="20" id="u9B-rT-K2Z"/>
                             <constraint firstItem="gGe-ai-YLz" firstAttribute="centerX" secondItem="CEx-ta-nDL" secondAttribute="centerX" constant="24" id="w2Z-If-fH6"/>
-                            <constraint firstItem="t3Y-4d-vL2" firstAttribute="bottom" secondItem="gGe-ai-YLz" secondAttribute="bottom" constant="26" id="wgF-Bi-Sdg"/>
+                            <constraint firstItem="t3Y-4d-vL2" firstAttribute="bottom" secondItem="gGe-ai-YLz" secondAttribute="bottom" constant="39" id="wgF-Bi-Sdg"/>
                             <constraint firstItem="yxY-tH-vBf" firstAttribute="leading" secondItem="t3Y-4d-vL2" secondAttribute="leading" id="xW8-Un-eNW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="t3Y-4d-vL2"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="about-icon" landscapeImage="about-icon" largeContentSizeImage="about-icon" id="CYn-DM-M9k"/>
+                    <navigationItem key="navigationItem" id="VcI-Ti-DYb">
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="xbr-hy-zv4">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </navigationItem>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sam-6R-jYO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1762.5" y="1494.7183098591549"/>
+            <point key="canvasLocation" x="1711.875" y="1731.338028169014"/>
         </scene>
         <!--Authentication-->
         <scene sceneID="8OU-bC-dOZ">
@@ -3128,23 +3168,23 @@ Or discover Luxor and Aswan that are immensely rich in history. For unwinding, t
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="5" sectionFooterHeight="5" translatesAutoresizingMaskIntoConstraints="NO" id="NaM-2w-het">
-                                <rect key="frame" x="0.0" y="56" width="320" height="410"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="446"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="7Os-bN-TTh">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="157"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="171"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headBg" translatesAutoresizingMaskIntoConstraints="NO" id="FVh-2z-wrq">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="147"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="136"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="147" id="40K-Ua-gZa"/>
+                                                <constraint firstAttribute="height" constant="136" id="40K-Ua-gZa"/>
                                             </constraints>
                                         </imageView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoSplash" translatesAutoresizingMaskIntoConstraints="NO" id="4KI-gj-laD">
-                                            <rect key="frame" x="74" y="41" width="172" height="50"/>
+                                            <rect key="frame" x="74.5" y="20" width="171" height="48"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="172" id="81q-zN-ZDq"/>
-                                                <constraint firstAttribute="height" constant="50" id="VNb-Zh-Uhm"/>
+                                                <constraint firstAttribute="width" constant="171" id="81q-zN-ZDq"/>
+                                                <constraint firstAttribute="height" constant="48" id="VNb-Zh-Uhm"/>
                                             </constraints>
                                         </imageView>
                                     </subviews>
@@ -3152,16 +3192,15 @@ Or discover Luxor and Aswan that are immensely rich in history. For unwinding, t
                                     <constraints>
                                         <constraint firstItem="4KI-gj-laD" firstAttribute="centerX" secondItem="FVh-2z-wrq" secondAttribute="centerX" id="8J7-7f-VFm"/>
                                         <constraint firstItem="FVh-2z-wrq" firstAttribute="width" secondItem="7Os-bN-TTh" secondAttribute="width" id="Gyv-or-Xnn"/>
-                                        <constraint firstAttribute="bottom" secondItem="FVh-2z-wrq" secondAttribute="bottom" constant="10" id="HH4-B5-WiN"/>
                                         <constraint firstItem="FVh-2z-wrq" firstAttribute="top" secondItem="7Os-bN-TTh" secondAttribute="top" id="e35-h4-1Cr"/>
                                         <constraint firstAttribute="trailing" secondItem="FVh-2z-wrq" secondAttribute="trailing" id="eZN-nX-1n9"/>
                                         <constraint firstItem="FVh-2z-wrq" firstAttribute="leading" secondItem="7Os-bN-TTh" secondAttribute="leading" id="fd7-iA-DDZ"/>
-                                        <constraint firstItem="4KI-gj-laD" firstAttribute="top" secondItem="7Os-bN-TTh" secondAttribute="top" constant="41" id="yLH-Zw-hl9"/>
+                                        <constraint firstItem="4KI-gj-laD" firstAttribute="top" secondItem="7Os-bN-TTh" secondAttribute="top" constant="20" id="yLH-Zw-hl9"/>
                                     </constraints>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HotelDetailsCell" rowHeight="181" id="8TZ-hf-kv9" customClass="HotelTableViewCell" customModule="JazHotels" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="212.5" width="320" height="181"/>
+                                        <rect key="frame" x="0.0" y="226.5" width="320" height="181"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8TZ-hf-kv9" id="0ME-Aa-58J">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="181"/>
@@ -3233,7 +3272,7 @@ Or discover Luxor and Aswan that are immensely rich in history. For unwinding, t
                         <constraints>
                             <constraint firstItem="eCj-Oa-aiy" firstAttribute="trailing" secondItem="NaM-2w-het" secondAttribute="trailing" id="WQZ-6a-QNY"/>
                             <constraint firstItem="NaM-2w-het" firstAttribute="leading" secondItem="eCj-Oa-aiy" secondAttribute="leading" id="d9Z-5R-7Ka"/>
-                            <constraint firstItem="NaM-2w-het" firstAttribute="top" secondItem="eCj-Oa-aiy" secondAttribute="top" constant="-8" id="f1w-bo-dtL"/>
+                            <constraint firstItem="NaM-2w-het" firstAttribute="top" secondItem="eCj-Oa-aiy" secondAttribute="top" id="f1w-bo-dtL"/>
                             <constraint firstItem="eCj-Oa-aiy" firstAttribute="bottom" secondItem="NaM-2w-het" secondAttribute="bottom" constant="9" id="hXc-DQ-Foc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eCj-Oa-aiy"/>
@@ -3247,8 +3286,13 @@ Or discover Luxor and Aswan that are immensely rich in history. For unwinding, t
                                 <action selector="menuButtonAction:" destination="27e-E9-bhQ" id="cjf-y1-8zu"/>
                             </connections>
                         </barButtonItem>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </navigationItem>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="NaM-2w-het" id="Jd4-VU-iWL"/>

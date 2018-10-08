@@ -35,8 +35,9 @@ class RoomDetailsViewController: UIViewController {
     }
 
     @IBAction func closeBtnAction(_ sender: Any) {
-//        PopupDialog.dismiss(RoomDetailsViewController.self)
-//        self.navigationController?.dismiss(animated: true, completion: nil)
+        //PopupDialog.dismiss(self)
+        self .dismiss(animated: true, completion: nil)
+        //self.navigationController?.dismiss(animated: true, completion: nil)
     }
   
     @IBAction func bookNowAction(_ sender: Any) {

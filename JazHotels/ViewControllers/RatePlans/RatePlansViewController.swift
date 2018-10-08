@@ -331,10 +331,13 @@ extension RatePlansViewController :UITableViewDelegate , UITableViewDataSource
         if expandableCells.contains(section){
             cell.avaiableRoomBtn.backgroundColor = #colorLiteral(red: 0.2431372549, green: 0.537254902, blue: 0.4941176471, alpha: 1)
             cell.avaiableRoomBtn.setTitleColor(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
+            cell.arrowImg.image = UIImage(named: "opend")
         }
         else{
         cell.avaiableRoomBtn.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
             cell.avaiableRoomBtn.setTitleColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), for: .normal)
+            cell.arrowImg.image = UIImage(named: "closed")
+
 
         }
         if ratePlan != nil{
@@ -350,6 +353,6 @@ extension RatePlansViewController :UITableViewDelegate , UITableViewDataSource
         return cell
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 220
+        return 230
     }
 }

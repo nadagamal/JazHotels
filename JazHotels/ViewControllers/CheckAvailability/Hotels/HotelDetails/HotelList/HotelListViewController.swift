@@ -144,7 +144,7 @@ extension HotelListViewController: UITableViewDelegate , UITableViewDataSource
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let rateView = RatePlansViewController.create()
-        if roomStays?[indexPath.row].roomRates?.roomRate?.count != 0
+        if roomStays?[indexPath.row].roomRates?.roomRate?.count != 0 && roomStays?[indexPath.row].roomRates?.roomRate != nil
         {
             rateView.roomRateList = (roomStays?[indexPath.row].roomRates?.roomRate)!
             rateView.ratePlans = roomStays?[indexPath.row].ratePlans

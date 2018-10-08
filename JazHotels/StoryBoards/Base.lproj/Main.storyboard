@@ -286,11 +286,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bdZ-4P-H6A">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="32"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="76"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Mj8-Td-XEk">
-                                <rect key="frame" x="16" y="40" width="288" height="508"/>
+                                <rect key="frame" x="16" y="84" width="288" height="464"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="5" id="tyo-In-Gyy">
@@ -381,7 +381,7 @@ Iberotel Borg El Arab</string>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="hotel-icon" landscapeImage="hotel-icon" largeContentSizeImage="hotel-icon" id="r3f-T9-PKF"/>
                     <navigationItem key="navigationItem" id="dbj-H9-Ox4"/>
-                    <nil key="simulatedTopBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
                             <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2228,6 +2228,9 @@ Alam Road, Red Sea, Egypt.</string>
                                                 <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="bookNowAction:" destination="bco-le-6BK" eventType="touchUpInside" id="U92-pR-Yyi"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ch2-nT-XtD">
                                         <rect key="frame" x="242" y="8" width="30" height="30"/>
@@ -3002,7 +3005,7 @@ In case of canelation within 02 days prior to arrival or no show, 01 night charg
                                 </constraints>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CEx-ta-nDL">
-                                <rect key="frame" x="16" y="150" width="288" height="230"/>
+                                <rect key="frame" x="16" y="150" width="288" height="237"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">On your next Egypt holiday, you will feel the merry atmosphere of progress, the pride and the energy, which is characteristic for our country and currently eminently perceptible.
 
@@ -3010,7 +3013,7 @@ Don’t miss visiting the best Egypt beach holiday destinations. Experience the 
 
 Or discover Luxor and Aswan that are immensely rich in history. For unwinding, try any of the oases amidst the virgin unspoiled nature.</string>
                                 <color key="textColor" red="0.45098039220000002" green="0.45098039220000002" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="12"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="15H-b8-ALr">
@@ -3082,26 +3085,26 @@ Or discover Luxor and Aswan that are immensely rich in history. For unwinding, t
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Yef-SR-z7H" firstAttribute="top" secondItem="CEx-ta-nDL" secondAttribute="bottom" constant="8" id="1WH-n7-ri2"/>
+                            <constraint firstItem="Yef-SR-z7H" firstAttribute="top" secondItem="CEx-ta-nDL" secondAttribute="bottom" constant="1" id="1WH-n7-ri2"/>
                             <constraint firstItem="yxY-tH-vBf" firstAttribute="top" secondItem="UcG-fx-FhI" secondAttribute="top" id="2W2-eZ-LDz"/>
                             <constraint firstItem="t3Y-4d-vL2" firstAttribute="trailing" secondItem="CEx-ta-nDL" secondAttribute="trailing" constant="16" id="5bD-Ui-3zL"/>
                             <constraint firstItem="Y9S-Ka-Fmc" firstAttribute="leading" secondItem="15H-b8-ALr" secondAttribute="trailing" constant="20" id="6gr-dC-pkr"/>
-                            <constraint firstItem="Y9S-Ka-Fmc" firstAttribute="top" secondItem="CEx-ta-nDL" secondAttribute="bottom" constant="8" id="89P-jv-j6n"/>
+                            <constraint firstItem="Y9S-Ka-Fmc" firstAttribute="top" secondItem="CEx-ta-nDL" secondAttribute="bottom" constant="1" id="89P-jv-j6n"/>
                             <constraint firstItem="t3Y-4d-vL2" firstAttribute="bottom" secondItem="V5a-Xe-GlR" secondAttribute="bottom" constant="39" id="8Z0-Oo-zzs"/>
                             <constraint firstItem="t3Y-4d-vL2" firstAttribute="bottom" secondItem="Y9S-Ka-Fmc" secondAttribute="bottom" constant="39" id="9md-Cr-Olc"/>
                             <constraint firstItem="CEx-ta-nDL" firstAttribute="leading" secondItem="t3Y-4d-vL2" secondAttribute="leading" constant="16" id="EpW-kb-rmI"/>
                             <constraint firstItem="t3Y-4d-vL2" firstAttribute="bottom" secondItem="Jzg-26-9Y4" secondAttribute="bottom" constant="39" id="LBK-Ip-hu0"/>
                             <constraint firstItem="yxY-tH-vBf" firstAttribute="trailing" secondItem="t3Y-4d-vL2" secondAttribute="trailing" id="LG4-cK-0Nu"/>
-                            <constraint firstItem="V5a-Xe-GlR" firstAttribute="top" secondItem="CEx-ta-nDL" secondAttribute="bottom" constant="8" id="QX6-Cg-oAi"/>
+                            <constraint firstItem="V5a-Xe-GlR" firstAttribute="top" secondItem="CEx-ta-nDL" secondAttribute="bottom" constant="1" id="QX6-Cg-oAi"/>
                             <constraint firstItem="V5a-Xe-GlR" firstAttribute="leading" secondItem="Jzg-26-9Y4" secondAttribute="trailing" constant="20" id="SZy-CA-3ht"/>
-                            <constraint firstItem="Jzg-26-9Y4" firstAttribute="top" secondItem="CEx-ta-nDL" secondAttribute="bottom" constant="8" id="W8N-tv-kYm"/>
+                            <constraint firstItem="Jzg-26-9Y4" firstAttribute="top" secondItem="CEx-ta-nDL" secondAttribute="bottom" constant="1" id="W8N-tv-kYm"/>
                             <constraint firstItem="Yef-SR-z7H" firstAttribute="leading" secondItem="Y9S-Ka-Fmc" secondAttribute="trailing" constant="20" id="dd0-rq-u8i"/>
                             <constraint firstItem="t3Y-4d-vL2" firstAttribute="bottom" secondItem="15H-b8-ALr" secondAttribute="bottom" constant="39" id="fAe-xC-q47"/>
                             <constraint firstItem="gGe-ai-YLz" firstAttribute="leading" secondItem="Yef-SR-z7H" secondAttribute="trailing" constant="20" id="gsh-bT-ofq"/>
                             <constraint firstItem="CEx-ta-nDL" firstAttribute="top" secondItem="yxY-tH-vBf" secondAttribute="bottom" constant="8" id="hU7-Vw-5Qz"/>
-                            <constraint firstItem="gGe-ai-YLz" firstAttribute="top" secondItem="CEx-ta-nDL" secondAttribute="bottom" constant="8" id="kEY-9n-jjA"/>
+                            <constraint firstItem="gGe-ai-YLz" firstAttribute="top" secondItem="CEx-ta-nDL" secondAttribute="bottom" constant="1" id="kEY-9n-jjA"/>
                             <constraint firstItem="t3Y-4d-vL2" firstAttribute="bottom" secondItem="Yef-SR-z7H" secondAttribute="bottom" constant="39" id="l0t-aU-ZhO"/>
-                            <constraint firstItem="15H-b8-ALr" firstAttribute="top" secondItem="CEx-ta-nDL" secondAttribute="bottom" constant="8" id="qPx-2X-jLF"/>
+                            <constraint firstItem="15H-b8-ALr" firstAttribute="top" secondItem="CEx-ta-nDL" secondAttribute="bottom" constant="1" id="qPx-2X-jLF"/>
                             <constraint firstItem="Jzg-26-9Y4" firstAttribute="leading" secondItem="gGe-ai-YLz" secondAttribute="trailing" constant="20" id="u9B-rT-K2Z"/>
                             <constraint firstItem="gGe-ai-YLz" firstAttribute="centerX" secondItem="CEx-ta-nDL" secondAttribute="centerX" constant="24" id="w2Z-If-fH6"/>
                             <constraint firstItem="t3Y-4d-vL2" firstAttribute="bottom" secondItem="gGe-ai-YLz" secondAttribute="bottom" constant="39" id="wgF-Bi-Sdg"/>
@@ -3113,6 +3116,9 @@ Or discover Luxor and Aswan that are immensely rich in history. For unwinding, t
                     <navigationItem key="navigationItem" id="VcI-Ti-DYb">
                         <barButtonItem key="leftBarButtonItem" image="menu" id="xbr-hy-zv4">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="UsC-xV-FXi" kind="presentation" id="3nH-RJ-33o"/>
+                            </connections>
                         </barButtonItem>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
@@ -3339,6 +3345,6 @@ Or discover Luxor and Aswan that are immensely rich in history. For unwinding, t
         <image name="yt" width="28.5" height="28.5"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="zVC-Mp-6jt"/>
+        <segue reference="3nH-RJ-33o"/>
     </inferredMetricsTieBreakers>
 </document>

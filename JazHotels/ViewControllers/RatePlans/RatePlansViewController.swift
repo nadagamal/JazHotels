@@ -102,12 +102,14 @@ class RatePlansViewController: UIViewController,FUIAuthDelegate {
     func getRoomPrice(ratePlanCode:String) ->String {
         var price:String = ""
         for rate in roomStay.roomRates.roomRate{
-            if rate.ratePlanCode == ratePlanCode && rate.rates != nil{
-                if rate.rates.rate.tpaExtensions.nightlyRate.count>0{
-                    price = rate.rates.rate.tpaExtensions.nightlyRate[0].priceWithTaxAndFee
-                }  else if rate.rates.rate.total.amountAfterTax != nil{
-                    price = rate.rates.rate.total.amountAfterTax
-                }
+            if rate.ratePlanCode == ratePlanCode && rate.rates != nil && rate.rates.rate.base.amountAfterTax != nil{
+                price = rate.rates.rate.base.amountAfterTax
+
+//                if rate.rates.rate.tpaExtensions.nightlyRate.count>0{
+//                    price = rate.rates.rate.tpaExtensions.nightlyRate[0].priceWithTaxAndFee
+//                }  else if rate.rates.rate.total.amountAfterTax != nil{
+//                    price = rate.rates.rate.total.amountAfterTax
+//                }
                 break
             }
         }
@@ -134,11 +136,14 @@ class RatePlansViewController: UIViewController,FUIAuthDelegate {
         var price:String = ""
         for rate in roomStay.roomRates.roomRate{
             if rate.roomTypeCode == roomTypeCode{
-                if rate.rates.rate.tpaExtensions.nightlyRate.count>0{
-                    price = rate.rates.rate.tpaExtensions.nightlyRate[0].priceWithTaxAndFee
-                }  else if rate.rates.rate.total.amountAfterTax != nil{
-                    price = rate.rates.rate.total.amountAfterTax
+                if rate.rates.rate.base.amountAfterTax != nil{
+                  price = rate.rates.rate.base.amountAfterTax
                 }
+//                if rate.rates.rate.tpaExtensions.nightlyRate.count>0{
+//                    price = rate.rates.rate.tpaExtensions.nightlyRate[0].priceWithTaxAndFee
+//                }  else if rate.rates.rate.total.amountAfterTax != nil{
+//                    price = rate.rates.rate.total.amountAfterTax
+//                }
                 break
             }
         }

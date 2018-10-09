@@ -66,12 +66,12 @@ class HotelListViewController: UIViewController {
         var price:String = ""
         for rate in roomStay.roomRates.roomRate{
             if rate.ratePlanCode == ratePlanCode{
-                if rate.rates.rate.tpaExtensions.nightlyRate.count>0{
-                price = rate.rates.rate.tpaExtensions.nightlyRate[0].priceWithTaxAndFee
+                if rate.rates.rate.base.amountBeforeTax != nil{
+                price = rate.rates.rate.base.amountBeforeTax
                 }
-                else if rate.rates.rate.total.amountAfterTax != nil{
-                    price = rate.rates.rate.total.amountAfterTax
-                }
+//                else if rate.rates.rate.total.amountAfterTax != nil{
+//                    price = rate.rates.rate.total.amountAfterTax
+//                }
                 break
             }
         }

@@ -87,6 +87,8 @@ class ProfileViewController: UIViewController,FUIAuthDelegate {
         let settings = db.settings
         settings.areTimestampsInSnapshotsEnabled = true
         db.settings = settings
+   
+        self.navigationController?.navigationBar.shadowImage = UIImage()
         if !UserDefaults.isKeyPresentInUserDefaults(key: HotelJazConstants.userDefault.userData)
         {
             //  self.navigationController?.present(LoginViewController.create(), animated: true, completion: nil)
@@ -94,13 +96,6 @@ class ProfileViewController: UIViewController,FUIAuthDelegate {
             self.navigationController?.present(controller, animated: true, completion: nil)
             UserDefaults.removeKeyUserDefault(key:  HotelJazConstants.userDefault.userData)
         }
-        else
-        {
-            self.userData = UserDefaults.getObjectDefault(key: HotelJazConstants.userDefault.userData) as? UserProfile
-            self.tableView.reloadData()
-            
-        }
-        self.navigationController?.navigationBar.shadowImage = UIImage()
 
 
     }
@@ -111,7 +106,18 @@ class ProfileViewController: UIViewController,FUIAuthDelegate {
         
     }
     
-    
+    override func viewDidAppear(_ animated: Bool) {
+        if !UserDefaults.isKeyPresentInUserDefaults(key: HotelJazConstants.userDefault.userData)
+        {
+
+        }
+        else
+        {
+            self.userData = UserDefaults.getObjectDefault(key: HotelJazConstants.userDefault.userData) as? UserProfile
+            self.tableView.reloadData()
+            
+        }
+    }
     
     @objc private func getProfile(notification: Notification) {
         

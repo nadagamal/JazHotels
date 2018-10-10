@@ -37,6 +37,12 @@ class HotelDetailsViewController: SegmentedPagerTabStripViewController {
         slideshow.pageIndicatorPosition = .init(horizontal: .center, vertical: .customBottom(padding: 30))
         slideshow.contentScaleMode = UIViewContentMode.scaleAspectFill
         segmentedControl.removeBorders()
+        
+        let attr = NSDictionary(object: UIFont.boldSystemFont(ofSize: 14), forKey: NSAttributedStringKey.font as NSCopying)
+        
+        
+        segmentedControl.setTitleTextAttributes(attr as! [AnyHashable : Any], for: .normal)
+
         let pageControl = UIPageControl()
         pageControl.currentPageIndicatorTintColor = UIColor.white
         pageControl.pageIndicatorTintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.5626437883)

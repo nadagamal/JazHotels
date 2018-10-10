@@ -349,6 +349,7 @@ extension RatePlansViewController :UITableViewDelegate , UITableViewDataSource
             cell.rateTitle.text = ratePlan.ratePlanDescription.name ?? ""
             if ratePlan.ratePlanDescription.text != nil{
                 let str = ratePlan.ratePlanDescription.text.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
+                cell.rateDesc.textContainer.maximumNumberOfLines = 2
                 cell.rateDesc.text = str
                 
             }

@@ -170,5 +170,88 @@ class FirestoreHotelReservation : NSObject, NSCoding, Mappable{
 		}
 
 	}
+    
+    
+    func toDictionary() -> [String:Any]
+    {
+        var dictionary :[String:Any] = [:]
+        
+        if cancelled != nil{
+            dictionary["cancelled"] = cancelled
+        }
+        if confirmed != nil{
+            dictionary["confirmed"] = confirmed
+        }
+        if adultsQuantity != nil{
+            dictionary["adultsQuantity"] = adultsQuantity
+        }
+        if amountAfterTax != nil{
+            dictionary["amountAfterTax"] = amountAfterTax
+        }
+        if amountBeforeTax != nil{
+            dictionary["amountBeforeTax"] = amountBeforeTax
+        }
+        if cancellationPolicy != nil{
+            dictionary["cancellationPolicy"] = cancellationPolicy
+        }
+        if chainCode != nil{
+            dictionary["chainCode"] = chainCode
+        }
+        if checkIn != nil
+        {
+            dictionary["checkIn"] = checkIn
+        }
+        if checkOut != nil{
+            dictionary["checkOut"] = checkOut
+        }
+        if childrenQuantity != nil{
+            dictionary["childrenQuantity"] = childrenQuantity
+        }
+        if currencyCode != nil{
+            dictionary["currencyCode"] = currencyCode
+        }
+        if dynamicPackages != nil{
+            dictionary["dynamicPackages"] = dynamicPackages
+        }
+        if guaranteePolicy != nil{
+            dictionary["guaranteePolicy"] = guaranteePolicy
+        }
+        if hotelCode != nil{
+            dictionary["hotelCode"] = hotelCode
+        }
+        if chainCode != nil{
+            dictionary["chainCode"] = chainCode
+        }
+        if hotelName != nil
+        {
+            dictionary["checkIn"] = hotelName
+        }
+        if maxOccupancy != nil{
+            dictionary["maxOccupancy"] = maxOccupancy
+        }
+        if numberOfUnits != nil{
+            dictionary["numberOfUnits"] = numberOfUnits
+        }
+        if ratePlanCode != nil{
+            dictionary["ratePlanCode"] = ratePlanCode
+        }
+        if ratePlanName != nil{
+            dictionary["ratePlanName"] = ratePlanName
+        }
+        if roomTypeCode != nil{
+            dictionary["roomTypeCode"] = roomTypeCode
+        }
+        
+        if roomTypeName != nil
+        {
+            dictionary["roomTypeName"] = roomTypeName
+        }
+        if specialRequests != nil
+        {
+            dictionary["specialRequests"] = specialRequests
+        }
+        return dictionary
+    }
+      
 
 }

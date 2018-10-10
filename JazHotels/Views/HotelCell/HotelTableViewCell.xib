@@ -120,9 +120,14 @@
                             <constraint firstItem="x8G-Mc-tZZ" firstAttribute="top" secondItem="C1w-8q-ZOv" secondAttribute="bottom" constant="8" id="rpz-7Q-nh9"/>
                             <constraint firstItem="C1w-8q-ZOv" firstAttribute="top" secondItem="s2J-0C-yxH" secondAttribute="bottom" constant="23.5" id="wdu-c3-MZp"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
-                <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="7g3-Zl-yvq" firstAttribute="top" secondItem="sXL-P7-Xvb" secondAttribute="top" constant="8" id="1F4-2D-SNS"/>
                     <constraint firstAttribute="bottom" secondItem="7g3-Zl-yvq" secondAttribute="bottom" constant="8" id="AoN-qe-j7L"/>
@@ -135,6 +140,7 @@
                     </userDefinedRuntimeAttribute>
                 </userDefinedRuntimeAttributes>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="checkInLblTxt" destination="rzH-7s-Guj" id="Ncy-yx-YIB"/>
                 <outlet property="checkInLblValue" destination="s2J-0C-yxH" id="VaI-EX-Dcn"/>

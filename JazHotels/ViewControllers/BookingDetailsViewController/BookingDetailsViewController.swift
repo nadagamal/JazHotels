@@ -11,6 +11,7 @@ import Kingfisher
 import SCLAlertView
 import LSDialogViewController
 import SVProgressHUD
+import ZAlertView
 class BookingDetailsViewController: UIViewController,changeBookingDates {
     
     @IBOutlet weak var tableView: UITableView!
@@ -37,27 +38,51 @@ class BookingDetailsViewController: UIViewController,changeBookingDates {
     }
     
     @IBAction func cancelReservationAction(_ sender: Any) {
-        BookingAPIManager().cancelReservation(confirmationId: reservationItem.uniqueID.iD, hotelCode: reservationItem.roomStays.roomStay.basicPropertyInfo.hotelCode, chainCode: reservationItem.roomStays.roomStay.basicPropertyInfo.chainCode) { (bookingModel, error) in
-            if error == nil{
-                DispatchQueue.main.async {
-                    if bookingModel?.soapBody.OTACancelRS.errors != nil && bookingModel?.soapBody.OTACancelRS.errors.error != nil && bookingModel?.soapBody.OTACancelRS.errors.error.shortText != nil{
-                        DispatchQueue.main.async {
-                            SCLAlertView().showError("Error", subTitle: bookingModel?.soapBody.OTACancelRS.errors.error.shortText ?? "")
-                            
-                        }
-                    }else{
-                        self.navigationController?.popViewController(animated: true)
-                    }
-                }
-            }
-            else{
-                DispatchQueue.main.async {
-                    
-                    SCLAlertView().showError("Error", subTitle: "Reservation cannot cancelled")
-                    
-                }
-            }
-        }
+        
+        let dialog = ZAlertView(title: "", message: "Are you sure you want to cancel this reservation", isOkButtonLeft: false, okButtonText: "Confirm", cancelButtonText: "Cancel",
+                                okButtonHandler: { alertView in
+                                    DispatchQueue.main.async {
+                                        SVProgressHUD.show()
+                                    }
+                                    BookingAPIManager().cancelReservation(confirmationId: self.reservationItem.uniqueID.iD, hotelCode: self.reservationItem.roomStays.roomStay.basicPropertyInfo.hotelCode, chainCode: self.reservationItem.roomStays.roomStay.basicPropertyInfo.chainCode) { (bookingModel, error) in
+                                        if error == nil{
+                                            DispatchQueue.main.async {
+                                                SVProgressHUD.dismiss()
+                                            }
+                                            DispatchQueue.main.async {
+                                                if bookingModel?.soapBody.OTACancelRS.errors != nil && bookingModel?.soapBody.OTACancelRS.errors.error != nil && bookingModel?.soapBody.OTACancelRS.errors.error.shortText != nil{
+                                                    DispatchQueue.main.async {
+                                                        SCLAlertView().showError("Error", subTitle: bookingModel?.soapBody.OTACancelRS.errors.error.shortText ?? "")
+                                                        
+                                                    }
+                                                }else{
+                                                    self.navigationController?.popViewController(animated: true)
+                                                }
+                                            }
+                                        }
+                                        else{
+                                            DispatchQueue.main.async {
+                                                
+//                                                SCLAlertView().showError("Error", subTitle: "Reservation cannot cancelled")
+                                                
+                                            }
+                                        }
+                                    }
+                                    DispatchQueue.main.async {
+                                        alertView.dismissAlertView()
+                                        SVProgressHUD.dismiss()
+
+                                    }
+                                    
+                                    
+        },
+                                cancelButtonHandler: { alertView in
+                                    alertView.dismissAlertView()
+        })
+        ZAlertView.normalTextColor = #colorLiteral(red: 0.3137254902, green: 0.0431372549, blue: 0.462745098, alpha: 1)
+        dialog.show()
+        
+
     }
     /*
      // MARK: - Navigation

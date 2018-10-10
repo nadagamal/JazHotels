@@ -27,7 +27,9 @@ func getReservation(userName:String, pinNumber:String,completion:  @escaping (_ 
     lobj_Request.addValue("http://synxis.com/OTA2004AService/ReadReservations", forHTTPHeaderField: "SOAPAction")
     lobj_Request.httpBody=String(format: "%@%@", soapHeader,"<OTA_ReadRQ xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" EchoToken=\"JAZ-Android_n9pYjBgNHt\" PrimaryLangID=\"en-US\" ReturnListIndicator=\"True\" PrimaryLangId=\"en-US\" MaxResponses=\"0\" xmlns=\"http://www.opentravel.org/OTA/2003/05\"><ReadRequests><HotelReadRequest ChainCode=\"16401\"><UserID PinNumber=\"\(pinNumber)\" ID=\"\(userName)\"><CompanyName /></UserID></HotelReadRequest></ReadRequests><POS><Source><RequestorID ID=\"10\" ID_Context=\"Synxis\"><CompanyName Code=\"WSBE\" /></RequestorID></Source></POS></OTA_ReadRQ></v:Body></v:Envelope>").data(using: .ascii)
     
+    print(String(format: "%@%@", soapHeader,"<OTA_ReadRQ xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" EchoToken=\"JAZ-Android_n9pYjBgNHt\" PrimaryLangID=\"en-US\" ReturnListIndicator=\"True\" PrimaryLangId=\"en-US\" MaxResponses=\"0\" xmlns=\"http://www.opentravel.org/OTA/2003/05\"><ReadRequests><HotelReadRequest ChainCode=\"16401\"><UserID PinNumber=\"\(pinNumber)\" ID=\"\(userName)\"><CompanyName /></UserID></HotelReadRequest></ReadRequests><POS><Source><RequestorID ID=\"10\" ID_Context=\"Synxis\"><CompanyName Code=\"WSBE\" /></RequestorID></Source></POS></OTA_ReadRQ></v:Body></v:Envelope>"))
     
+    lobj_Request.cachePolicy = .reloadIgnoringLocalAndRemoteCacheData
     let task = session.dataTask(with: lobj_Request, completionHandler: {data, response, error -> Void in
         if error != nil
         {

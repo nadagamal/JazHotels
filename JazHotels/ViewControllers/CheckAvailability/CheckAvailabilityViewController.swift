@@ -62,7 +62,7 @@ class CheckAvailabilityViewController: UIViewController , UIScrollViewDelegate {
     }
     @objc func bookHotelBtnAction(notification:NSNotification){
         let hotel = notification.object as! JHotelDescriptiveContent
-       self.hotelSearchTF.text = hotel.hotelName
+       self.hotelSearchTF.text = "    " + hotel.hotelName
         selectedHotelCode = hotel.hotelCode
         selectedHotelCodes = [hotel.hotelCode]
     }
@@ -260,15 +260,15 @@ class CheckAvailabilityViewController: UIViewController , UIScrollViewDelegate {
         
         if CLLocationManager.locationServicesEnabled() {
             locationManager.startUpdatingLocation()
-            hotelSearchTF.text = "Current Location"
+            hotelSearchTF.text = "    " + "Current Location"
         }
     }
     @IBAction func checkAvaibilityBtnAction(_ sender: Any)
     {
-        if hotelSearchTF.text != "" && (isContainNewHotel(hotel: hotelSearchTF.text!) ||  hotelSearchTF.text == "Current Location")
+        if hotelSearchTF.text != "" && (isContainNewHotel(hotel: hotelSearchTF.text!) ||  hotelSearchTF.text == "    " + "Current Location")
         {
             
-            if hotelSearchTF.text == "Current Location"
+            if hotelSearchTF.text == "    " + "Current Location"
             {
                 getHotelsUsingCurrentLocation()
             }

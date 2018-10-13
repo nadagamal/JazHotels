@@ -60,7 +60,7 @@ class UserOperation: NSObject {
                     {
                         found = true
                         // remove reservation
-                       db.collection("users").document(userData!.userId ?? "").collection("hotelReservations").document(firestoreHotelReservation.hotelCode ?? "").delete(completion: { (error) in
+                       db.collection("users").document(userData!.userId ?? "").collection("hotelReservations").document(firestoreHotelReservation.confirmationId ?? "").delete(completion: { (error) in
                             print("Error deleting document: \(String(describing: err))")
                             
                         })
@@ -91,7 +91,7 @@ class UserOperation: NSObject {
             } else {
                 var found = false
                 for document in querySnapshot!.documents {
-                    if document.documentID == firestoreHotelReservation.hotelCode// already exsit (Nada hwa ana 3yza a3fa document id hwa bysave b eh y3ni hotel code wala feen Id elly 2lotili 3leh msh mktob fe object)
+                    if document.documentID == firestoreHotelReservation.confirmationId// already exsit (Nada hwa ana 3yza a3fa document id hwa bysave b eh y3ni hotel code wala feen Id elly 2lotili 3leh msh mktob fe object)
                     {
                         found = true
                         // update reservation
@@ -122,7 +122,7 @@ class UserOperation: NSObject {
         let db = Firestore.firestore()
         let userData = UserDefaults.getObjectDefault(key: HotelJazConstants.userDefault.userData) as? UserProfile
         
-          db.collection("users").document(userData!.userId ?? "").collection("hotelReservations").document("\(String(describing: (firestoreHotelReservation.hotelCode)!))").setData(firestoreHotelReservation.toDictionary()) { err in
+          db.collection("users").document(userData!.userId ?? "").collection("hotelReservations").document("\(String(describing: (firestoreHotelReservation.confirmationId)!))").setData(firestoreHotelReservation.toDictionary()) { err in
             if let err = err {
                 print("Error writing document: \(err)")
             } else {

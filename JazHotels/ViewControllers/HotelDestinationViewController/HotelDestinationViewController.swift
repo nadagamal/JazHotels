@@ -21,6 +21,7 @@ class HotelDestinationViewController: UIViewController {
        // self.tableView.tableHeaderView = UIView()
         self.tableView.tableFooterView = UIView()
         self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
+        self.navigationController?.navigationBar.tintColor = UIColor.white;
 
     }
     

@@ -337,7 +337,7 @@ extension RatePlansViewController :UITableViewDelegate , UITableViewDataSource
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        return 320.0
+        return 350.0
     }
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(headerTapped))

@@ -77,7 +77,15 @@ class ReservationsViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    func getHotelLocation(hotelCode:String)->String{
+        for hotel in JazHotels.hotels{
+            if hotel.hotelCode == hotelCode && hotel.contactInfos.contactInfo.addresses.address.addressLine.count>1{
+                let location = hotel.contactInfos.contactInfo.addresses.address.addressLine[1] + "  -  " + hotel.contactInfos.contactInfo.addresses.address.cityName
+                return location
+            }
+        }
+        return ""
+    }
 }
 extension ReservationsViewController: UITableViewDelegate , UITableViewDataSource
 {
@@ -96,6 +104,7 @@ extension ReservationsViewController: UITableViewDelegate , UITableViewDataSourc
         cell.checkInLblTxt.isHidden = false
         cell.checkInLblValue.isHidden = false
         cell.checkInLblValue.text = hotel.checkIn
+        cell.hotel_place.text = getHotelLocation(hotelCode: hotel.hotelCode ?? "")
 
         return cell
     }

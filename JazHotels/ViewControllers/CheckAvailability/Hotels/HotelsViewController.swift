@@ -72,6 +72,7 @@ class HotelsViewController: UIViewController {
         
         return UIStoryboard(name: HotelJazConstants.StoryBoard.mainSB, bundle: Bundle.main).instantiateViewController(withIdentifier: String(describing: self)) as! HotelsViewController
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "HotelsListSegue"{
             let hotelView = segue.destination as! HotelListViewController

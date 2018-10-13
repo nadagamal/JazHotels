@@ -36,7 +36,15 @@ class BookingDetailsViewController: UIViewController,changeBookingDates {
         
         self.presentDialogViewController(dialogViewController, animationPattern: LSAnimationPattern.zoomInOut, completion: { () -> Void in })
     }
-    
+    func getHotelLocation(hotelCode:String)->String{
+        for hotel in JazHotels.hotels{
+            if hotel.hotelCode == hotelCode && hotel.contactInfos.contactInfo.addresses.address.addressLine.count>1{
+                let location = hotel.contactInfos.contactInfo.addresses.address.addressLine[1] + "  -  " + hotel.contactInfos.contactInfo.addresses.address.cityName
+                return location
+            }
+        }
+        return ""
+    }
     @IBAction func cancelReservationAction(_ sender: Any) {
         
         let dialog = ZAlertView(title: "", message: "Are you sure you want to cancel this reservation", isOkButtonLeft: false, okButtonText: "Confirm", cancelButtonText: "Cancel",
@@ -129,6 +137,10 @@ class BookingDetailsViewController: UIViewController,changeBookingDates {
                 }
             }
             else{
+                self.reservationItem.checkIn = startDate
+                self.reservationItem.checkOut = endDate
+                UserOperation.addReservation(firestoreHotelReservation: self.reservationItem)
+
                 DispatchQueue.main.async {
                     SVProgressHUD.dismiss()
                     SCLAlertView().showSuccess("", subTitle: "Modification Successed")
@@ -179,6 +191,10 @@ class BookingDetailsViewController: UIViewController,changeBookingDates {
             else{
                 DispatchQueue.main.async {
                     SVProgressHUD.dismiss()
+                    self.reservationItem.checkIn = startDate
+                    self.reservationItem.checkOut = endDate
+                    self.reservationItem.specialRequests = request
+                    UserOperation.addReservation(firestoreHotelReservation: self.reservationItem)
                     SCLAlertView().showSuccess("", subTitle: "Modification Successed")
                 }
                 
@@ -196,7 +212,7 @@ extension BookingDetailsViewController:UITableViewDataSource,UITableViewDelegate
             let cell = tableView.dequeueReusableCell(withIdentifier: "HotelDetailsCell") as! HotelTableViewCell
             cell.hotel_name.text = reservationItem.hotelName
 //            cell.hotel_place.text = reservationItem.roomStays.roomStay.basicPropertyInfo.address.cityName
-            cell.hotel_place.text = ""
+            cell.hotel_place.text = getHotelLocation(hotelCode: reservationItem.hotelCode ?? "")
 
             if  JazHotels.hotelsImages![reservationItem.hotelCode!]?[0] != nil{
                 let imageURL = URL(string: ((JazHotels.hotelsImages![reservationItem.hotelCode!]?[0])!))

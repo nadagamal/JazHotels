@@ -31,6 +31,7 @@ class FirestoreHotelReservation : NSObject, NSCoding, Mappable{
 	var roomTypeName : String?
 	var specialRequests : String?
      var confirmationId : String?
+    var status : String?
 
 	class func newInstance(map: Map) -> Mappable?{
 		return FirestoreHotelReservation()
@@ -42,6 +43,7 @@ class FirestoreHotelReservation : NSObject, NSCoding, Mappable{
 	{
 		cancelled <- map["Cancelled"]
 		confirmed <- map["Confirmed"]
+        status <- map["status"]
 		adultsQuantity <- map["adultsQuantity"]
 		amountAfterTax <- map["amountAfterTax"]
 		amountBeforeTax <- map["amountBeforeTax"]
@@ -73,6 +75,8 @@ class FirestoreHotelReservation : NSObject, NSCoding, Mappable{
     @objc required init(coder aDecoder: NSCoder)
 	{
          cancelled = aDecoder.decodeObject(forKey: "Cancelled") as? String
+        status = aDecoder.decodeObject(forKey: "status") as? String
+
          confirmed = aDecoder.decodeObject(forKey: "Confirmed") as? String
          adultsQuantity = aDecoder.decodeObject(forKey: "adultsQuantity") as? String
          amountAfterTax = aDecoder.decodeObject(forKey: "amountAfterTax") as? String
@@ -107,6 +111,9 @@ class FirestoreHotelReservation : NSObject, NSCoding, Mappable{
 		if cancelled != nil{
 			aCoder.encode(cancelled, forKey: "Cancelled")
 		}
+        if status != nil{
+            aCoder.encode(status, forKey: "status")
+        }
         if confirmationId != nil{
             aCoder.encode(confirmationId, forKey: "id")
         }
@@ -184,6 +191,9 @@ class FirestoreHotelReservation : NSObject, NSCoding, Mappable{
         if cancelled != nil{
             dictionary["cancelled"] = cancelled
         }
+        if status != nil{
+            dictionary["status"] = status
+        }
         if confirmationId != nil{
             dictionary["id"] = confirmationId
         }
@@ -232,7 +242,7 @@ class FirestoreHotelReservation : NSObject, NSCoding, Mappable{
         }
         if hotelName != nil
         {
-            dictionary["checkIn"] = hotelName
+            dictionary["hotelName"] = hotelName
         }
         if maxOccupancy != nil{
             dictionary["maxOccupancy"] = maxOccupancy

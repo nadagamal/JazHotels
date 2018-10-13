@@ -24,7 +24,7 @@ class BookHotelViewController: UIViewController {
     var amountBeforeTax:String!
     var hotelName:String!
     var currencyCode:String!
-
+    var isChecked = false
     var userData:UserProfile!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,7 +74,10 @@ class BookHotelViewController: UIViewController {
         }
     }
     @IBAction func confirmReservationAction(_ sender: Any) {
-        if userData.userCardPayment?.cardHolderName != nil && userData.userCardPayment?.cardNumber != nil && (userData.userCardPayment?.cardNumber?.count)! >= 14 && userData.userCardPayment?.cardCode != nil && userData.userCardPayment?.expireDate != nil{
+        if isChecked == false{
+            SCLAlertView().showWarning("", subTitle: "Please agree on policy first")
+        }
+        else if userData.userCardPayment?.cardHolderName != nil && userData.userCardPayment?.cardNumber != nil && (userData.userCardPayment?.cardNumber?.count)! >= 14 && userData.userCardPayment?.cardCode != nil && userData.userCardPayment?.expireDate != nil{
         SVProgressHUD.show()
             self.bookRoom(state: "Initiate") { (response) in
                 DispatchQueue.main.async {
@@ -86,20 +89,24 @@ class BookHotelViewController: UIViewController {
                             reservationItem?.adultsQuantity = self.adultsNum
 //                            reservationItem?.amountAfterTax = ratePlan.ratePlanDescription.
                             reservationItem?.childrenQuantity = self.childNum
-                            reservationItem?.cancellationPolicy = self.ratePlan.cancelPenalties.cancelPenalty.penaltyDescription.text.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
+                            reservationItem?.cancellationPolicy = response?.body.oTAHotelResRS.hotelReservations.hotelReservation.roomStays.roomStay.cancelPenalties.cancelPenalty.penaltyDescription.text.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
                             reservationItem?.guaranteePolicy = self.ratePlan.guarantee.guaranteeDescription.text.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
                             reservationItem?.numberOfUnits = self.roomNum
-                            reservationItem?.ratePlanCode = self.ratePlan.ratePlanCode
-                            reservationItem?.ratePlanName = self.ratePlan.ratePlanName
-                            reservationItem?.roomTypeCode = self.roomType.roomTypeCode
-                            reservationItem?.roomTypeName = self.roomType.roomDescription.text.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
+                            reservationItem?.ratePlanCode = response?.body.oTAHotelResRS.hotelReservations.hotelReservation.roomStays.roomStay.ratePlans.ratePlan.ratePlanCode
+                            reservationItem?.ratePlanName = response?.body.oTAHotelResRS.hotelReservations.hotelReservation.roomStays.roomStay.ratePlans.ratePlan.ratePlanName
+                            reservationItem?.roomTypeCode = response?.body.oTAHotelResRS.hotelReservations.hotelReservation.roomStays.roomStay.roomTypes.roomType.roomTypeCode
+                            reservationItem?.checkIn = self.checkInDate
+                            reservationItem?.checkOut = self.checkOutDate
+                            reservationItem?.roomTypeName = response?.body.oTAHotelResRS.hotelReservations.hotelReservation.roomStays.roomStay.roomTypes.roomType.roomDescription.name
                             reservationItem?.hotelCode = self.hotelCode
                             reservationItem?.hotelName = self.hotelName
                             reservationItem?.chainCode = self.chainCode
-                            reservationItem?.amountBeforeTax = self.amountBeforeTax
+                            reservationItem?.amountAfterTax = response?.body.oTAHotelResRS.hotelReservations.hotelReservation.resGlobalInfo.total.amountAfterTax
+                            reservationItem?.amountBeforeTax = response?.body.oTAHotelResRS.hotelReservations.hotelReservation.resGlobalInfo.total.amountBeforeTax
                             reservationItem?.specialRequests = ""
-                            reservationItem?.currencyCode = self.currencyCode
-                            reservationItem?.confirmationId = response?.body.oTAHotelResRS.hotelReservations.uniqueID.iD; UserOperation.addReservation(firestoreHotelReservation:reservationItem! )
+                            reservationItem?.currencyCode = response?.body.oTAHotelResRS.hotelReservations.hotelReservation.resGlobalInfo.total.currencyCode
+                            reservationItem?.status = response?.body.oTAHotelResRS.resResponseType
+                            reservationItem?.confirmationId = response?.body.oTAHotelResRS.hotelReservations.hotelReservation.uniqueID.iD; UserOperation.addReservation(firestoreHotelReservation:reservationItem! )
                         }
                         
                     }
@@ -117,6 +124,19 @@ class BookHotelViewController: UIViewController {
         let indexPath = NSIndexPath(row: 0, section: 0)
         let cell = tableView.cellForRow(at: indexPath as IndexPath) as! CreditCardCell
         cell.cardNameTxt .becomeFirstResponder()
+    }
+    @objc func agreeBtnAction(sender:UIButton){
+        let indexPath = NSIndexPath(row: 3, section: 1)
+        let cell = tableView.cellForRow(at: indexPath as IndexPath) as! InfoCell
+        if cell.agreeBtn.imageView?.image == UIImage(named: "checkDone"){
+            cell.agreeBtn .setImage(UIImage(named: "check"), for: .normal)
+        isChecked = false
+        }
+        else{
+            cell.agreeBtn .setImage(UIImage(named: "checkDone"), for: .normal)
+            isChecked = true
+
+        }
     }
 }
 extension BookHotelViewController:UITableViewDelegate,UITableViewDataSource{
@@ -152,7 +172,8 @@ extension BookHotelViewController:UITableViewDelegate,UITableViewDataSource{
             return cell
         }
         else  if indexPath.row == 3{
-            cell = tableView.dequeueReusableCell(withIdentifier: "CheckCell") as! InfoCell
+           let cell = tableView.dequeueReusableCell(withIdentifier: "CheckCell") as! InfoCell
+            cell.agreeBtn.addTarget(self, action: #selector(agreeBtnAction), for: .touchUpInside)
             return cell
         }
         }

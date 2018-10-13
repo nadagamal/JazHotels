@@ -125,12 +125,12 @@ extension MenuViewController:UITableViewDataSource,UITableViewDelegate{
             if !UserDefaults.isKeyPresentInUserDefaults(key: HotelJazConstants.userDefault.userData)
             {
                 cell.cellTitleLbl.text = "Sign In"
-                cell.cellIconImg.image = #imageLiteral(resourceName: "signOut")
+                cell.cellIconImg.image = UIImage(named: "signIn")
             }
             else
             {
                 cell.cellTitleLbl.text = "Sign out"
-                cell.cellIconImg.image = #imageLiteral(resourceName: "signOut")
+                cell.cellIconImg.image = UIImage(named: "signOut")
             }
         }
         else if indexPath.row == 1

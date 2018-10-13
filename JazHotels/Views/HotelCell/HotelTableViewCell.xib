@@ -81,8 +81,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hurghada - Egypt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x8G-Mc-tZZ">
-                                <rect key="frame" x="10" y="213" width="108" height="16.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hurghada - Egypt" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x8G-Mc-tZZ">
+                                <rect key="frame" x="10" y="213" width="605" height="16.5"/>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="14"/>
                                 <color key="textColor" red="0.45098039220000002" green="0.45098039220000002" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -113,6 +113,7 @@
                             <constraint firstItem="rzH-7s-Guj" firstAttribute="leading" secondItem="7g3-Zl-yvq" secondAttribute="leading" constant="10" id="Sbx-KS-NZc"/>
                             <constraint firstItem="x8G-Mc-tZZ" firstAttribute="leading" secondItem="C1w-8q-ZOv" secondAttribute="leading" id="TRq-MQ-Ki7"/>
                             <constraint firstItem="77g-vl-a3x" firstAttribute="top" secondItem="cKh-2y-tXO" secondAttribute="bottom" constant="-53.5" id="ThK-jq-pWP"/>
+                            <constraint firstAttribute="trailing" secondItem="x8G-Mc-tZZ" secondAttribute="trailing" constant="10" id="Vrl-8t-eQv"/>
                             <constraint firstItem="aqs-B0-AGb" firstAttribute="leading" secondItem="cKh-2y-tXO" secondAttribute="trailing" constant="-34" id="gp8-5b-eWO"/>
                             <constraint firstItem="s2J-0C-yxH" firstAttribute="top" secondItem="rzH-7s-Guj" secondAttribute="bottom" constant="10" id="h77-Ex-Wr1"/>
                             <constraint firstItem="77g-vl-a3x" firstAttribute="trailing" secondItem="aqs-B0-AGb" secondAttribute="trailing" id="orH-nm-85A"/>
@@ -152,7 +153,7 @@
                 <outlet property="hotel_price_currency" destination="Ahh-6g-f2Z" id="Pjt-OH-dK1"/>
                 <outlet property="priceView" destination="77g-vl-a3x" id="1WE-ca-jpO"/>
             </connections>
-            <point key="canvasLocation" x="140.5" y="-70"/>
+            <point key="canvasLocation" x="140" y="-70.164917541229386"/>
         </tableViewCell>
     </objects>
     <resources>

@@ -77,6 +77,15 @@ class HotelListViewController: UIViewController {
         }
         return price
     }
+    func getHotelLocation(hotelCode:String)->String{
+        for hotel in JazHotels.hotels{
+            if hotel.hotelCode == hotelCode && hotel.contactInfos.contactInfo.addresses.address.addressLine.count>1{
+                let location = hotel.contactInfos.contactInfo.addresses.address.addressLine[1] + "  -  " + hotel.contactInfos.contactInfo.addresses.address.cityName
+                return location
+            }
+        }
+        return ""
+    }
     @objc func favBtnAction(sender:UIButton){
         guard let cell = sender.superview?.superview?.superview as? HotelTableViewCell else {
             return
@@ -112,7 +121,7 @@ extension HotelListViewController: UITableViewDelegate , UITableViewDataSource
         let cell = hotelTB.dequeueReusableCell(withIdentifier: "hotel_cell") as! HotelTableViewCell
         cell.hotel_name.text = roomStays?[indexPath.row].basicPropertyInfo.hotelName
       
-        cell.hotel_place.text = roomStayInfo?.address.cityName
+        cell.hotel_place.text = getHotelLocation(hotelCode: roomStays?[indexPath.row].basicPropertyInfo.hotelCode ?? "")
         cell.fav_btn.tag = indexPath.row
         cell.fav_btn.addTarget(self, action: #selector(favBtnAction), for: .touchUpInside)
         if (roomStays?[indexPath.row].ratePlans != nil && roomStays?[indexPath.row].ratePlans != nil && (roomStays?[indexPath.row].ratePlans.count)!>0){

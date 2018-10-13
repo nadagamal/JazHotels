@@ -20,6 +20,11 @@ class BookHotelViewController: UIViewController {
     var roomNum:String!
     var childNum:String!
     var adultsNum:String!
+    var amountAfterTax:String!
+    var amountBeforeTax:String!
+    var hotelName:String!
+    var currencyCode:String!
+
     var userData:UserProfile!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,7 +82,24 @@ class BookHotelViewController: UIViewController {
                         DispatchQueue.main.async {
                             SVProgressHUD.dismiss()
                         SCLAlertView().showSuccess("", subTitle: "Done")
-                        
+                            var reservationItem = FirestoreHotelReservation(JSON: [:])
+                            reservationItem?.adultsQuantity = self.adultsNum
+//                            reservationItem?.amountAfterTax = ratePlan.ratePlanDescription.
+                            reservationItem?.childrenQuantity = self.childNum
+                            reservationItem?.cancellationPolicy = self.ratePlan.cancelPenalties.cancelPenalty.penaltyDescription.text.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
+                            reservationItem?.guaranteePolicy = self.ratePlan.guarantee.guaranteeDescription.text.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
+                            reservationItem?.numberOfUnits = self.roomNum
+                            reservationItem?.ratePlanCode = self.ratePlan.ratePlanCode
+                            reservationItem?.ratePlanName = self.ratePlan.ratePlanName
+                            reservationItem?.roomTypeCode = self.roomType.roomTypeCode
+                            reservationItem?.roomTypeName = self.roomType.roomDescription.text.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
+                            reservationItem?.hotelCode = self.hotelCode
+                            reservationItem?.hotelName = self.hotelName
+                            reservationItem?.chainCode = self.chainCode
+                            reservationItem?.amountBeforeTax = self.amountBeforeTax
+                            reservationItem?.specialRequests = ""
+                            reservationItem?.currencyCode = self.currencyCode
+                            reservationItem?.confirmationId = response?.body.oTAHotelResRS.hotelReservations.uniqueID.iD; UserOperation.addReservation(firestoreHotelReservation:reservationItem! )
                         }
                         
                     }

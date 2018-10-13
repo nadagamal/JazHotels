@@ -30,7 +30,7 @@ class FirestoreHotelReservation : NSObject, NSCoding, Mappable{
 	var roomTypeCode : String?
 	var roomTypeName : String?
 	var specialRequests : String?
-
+     var confirmationId : String?
 
 	class func newInstance(map: Map) -> Mappable?{
 		return FirestoreHotelReservation()
@@ -62,6 +62,7 @@ class FirestoreHotelReservation : NSObject, NSCoding, Mappable{
 		roomTypeCode <- map["roomTypeCode"]
 		roomTypeName <- map["roomTypeName"]
 		specialRequests <- map["specialRequests"]
+        confirmationId <- map["id"]
 		
 	}
 
@@ -93,6 +94,7 @@ class FirestoreHotelReservation : NSObject, NSCoding, Mappable{
          roomTypeCode = aDecoder.decodeObject(forKey: "roomTypeCode") as? String
          roomTypeName = aDecoder.decodeObject(forKey: "roomTypeName") as? String
          specialRequests = aDecoder.decodeObject(forKey: "specialRequests") as? String
+        confirmationId = aDecoder.decodeObject(forKey: "id") as? String
 
 	}
 
@@ -105,6 +107,9 @@ class FirestoreHotelReservation : NSObject, NSCoding, Mappable{
 		if cancelled != nil{
 			aCoder.encode(cancelled, forKey: "Cancelled")
 		}
+        if confirmationId != nil{
+            aCoder.encode(confirmationId, forKey: "id")
+        }
 		if confirmed != nil{
 			aCoder.encode(confirmed, forKey: "Confirmed")
 		}
@@ -178,6 +183,9 @@ class FirestoreHotelReservation : NSObject, NSCoding, Mappable{
         
         if cancelled != nil{
             dictionary["cancelled"] = cancelled
+        }
+        if confirmationId != nil{
+            dictionary["id"] = confirmationId
         }
         if confirmed != nil{
             dictionary["confirmed"] = confirmed

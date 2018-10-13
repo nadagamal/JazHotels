@@ -156,7 +156,9 @@ extension HotelListViewController: UITableViewDelegate , UITableViewDataSource
             rateView.childNum = self.childNum
             rateView.chainCode = self.chainCode
             rateView.roomNum = self.roomNum
-            
+            if roomStays?[indexPath.row].basicPropertyInfo.hotelName != nil{
+            rateView.hotelTitle = roomStays?[indexPath.row].basicPropertyInfo.hotelName
+            }
             self.navigationController?.pushViewController(rateView, animated: true)
         }
         else

@@ -48,18 +48,19 @@ class UserOperation: NSObject {
         let settings = db.settings
         settings.areTimestampsInSnapshotsEnabled = true
         db.settings = settings
-        
-        db.collection("hotelReservations").getDocuments() { (querySnapshot, err) in
+        let userData = UserDefaults.getObjectDefault(key: HotelJazConstants.userDefault.userData) as? UserProfile
+
+        db.collection("users").document(userData!.userId ?? "").collection("hotelReservations").getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
                 var found = false
                 for document in querySnapshot!.documents {
-                    if document.documentID == firestoreHotelReservation.hotelCode// already exsit (Nada hwa ana 3yza a3fa document id hwa bysave b eh y3ni hotel code wala feen Id elly 2lotili 3leh msh mktob fe object)
+                    if document.documentID == firestoreHotelReservation.confirmationId// already exsit (Nada hwa ana 3yza a3fa document id hwa bysave b eh y3ni hotel code wala feen Id elly 2lotili 3leh msh mktob fe object)
                     {
                         found = true
                         // remove reservation
-                        db.collection("hotelReservations").document(firestoreHotelReservation.hotelCode ?? "").delete(completion: { (error) in
+                       db.collection("users").document(userData!.userId ?? "").collection("hotelReservations").document(firestoreHotelReservation.hotelCode ?? "").delete(completion: { (error) in
                             print("Error deleting document: \(String(describing: err))")
                             
                         })
@@ -82,7 +83,9 @@ class UserOperation: NSObject {
         settings.areTimestampsInSnapshotsEnabled = true
         db.settings = settings
         
-        db.collection("hotelReservations").getDocuments() { (querySnapshot, err) in
+        let userData = UserDefaults.getObjectDefault(key: HotelJazConstants.userDefault.userData) as? UserProfile
+        
+        db.collection("users").document(userData!.userId ?? "").collection("hotelReservations").getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
@@ -92,7 +95,7 @@ class UserOperation: NSObject {
                     {
                         found = true
                         // update reservation
-                        db.collection("hotelReservations").document(firestoreHotelReservation.hotelCode ?? "").setData(firestoreHotelReservation.toDictionary()) { err in
+                        db.collection("users").document(userData!.userId ?? "").collection("hotelReservations").document().setData(firestoreHotelReservation.toDictionary()) { err in
                             if let err = err {
                                 print("Error writing document: \(err)")
                             } else {
@@ -117,12 +120,35 @@ class UserOperation: NSObject {
     static func saveReservation(firestoreHotelReservation:FirestoreHotelReservation)
     {
         let db = Firestore.firestore()
+        let userData = UserDefaults.getObjectDefault(key: HotelJazConstants.userDefault.userData) as? UserProfile
         
-        db.collection("hotelReservations").document("\(String(describing: (firestoreHotelReservation.hotelCode)!))").setData(firestoreHotelReservation.toDictionary()) { err in
+          db.collection("users").document(userData!.userId ?? "").collection("hotelReservations").document("\(String(describing: (firestoreHotelReservation.hotelCode)!))").setData(firestoreHotelReservation.toDictionary()) { err in
             if let err = err {
                 print("Error writing document: \(err)")
             } else {
                 print("Document successfully written!")
+            }
+        }
+    }
+    
+    static func getReservations(completion:  @escaping (_ :[FirestoreHotelReservation]?) -> Void)
+    {
+        let db = Firestore.firestore()
+        let settings = db.settings
+        settings.areTimestampsInSnapshotsEnabled = true
+        db.settings = settings
+        var reservations = [FirestoreHotelReservation]()
+        let userData = UserDefaults.getObjectDefault(key: HotelJazConstants.userDefault.userData) as? UserProfile
+        db.collection("users").document(userData!.userId ?? "").collection("hotelReservations").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                var item = FirestoreHotelReservation(JSON: document.data())
+                    reservations.append(item!)
+                }
+                completion(reservations)
+                
             }
         }
     }

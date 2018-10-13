@@ -139,15 +139,22 @@ class RatePlansViewController: UIViewController,FUIAuthDelegate {
                 if rate.rates.rate.base.amountAfterTax != nil{
                   price = rate.rates.rate.base.amountAfterTax
                 }
-//                if rate.rates.rate.tpaExtensions.nightlyRate.count>0{
-//                    price = rate.rates.rate.tpaExtensions.nightlyRate[0].priceWithTaxAndFee
-//                }  else if rate.rates.rate.total.amountAfterTax != nil{
-//                    price = rate.rates.rate.total.amountAfterTax
-//                }
                 break
             }
         }
         return price
+    }
+    func getRoomBase(roomTypeCode:String) ->JCBase{
+        var base:JCBase = JCBase(fromDictionary: [:])
+        for rate in roomStay.roomRates.roomRate{
+            if rate.roomTypeCode == roomTypeCode{
+                if rate.rates.rate.base != nil{
+                    base = rate.rates.rate.base
+                }
+                break
+            }
+        }
+        return base
     }
     @objc func bookBtnPressed(sender:UIButton){
         isFromNotification = true
@@ -175,6 +182,7 @@ class RatePlansViewController: UIViewController,FUIAuthDelegate {
             let ratePlan:JCRatePlan = roomStay.ratePlans[indexPath.section]
             var list = getRoomsList(ratePlanCode: ratePlan.ratePlanCode)
             let room = getRoomType(roomTypeCode: list[indexPath.row].roomTypeCode)
+            let base = getRoomBase(roomTypeCode: room.roomTypeCode)
         let viewController = BookHotelViewController.create()
         viewController.roomType = room
         viewController.ratePlan = ratePlan
@@ -185,6 +193,10 @@ class RatePlansViewController: UIViewController,FUIAuthDelegate {
         viewController.childNum = self.childNum
         viewController.chainCode = self.chainCode
         viewController.roomNum = self.roomNum
+        viewController.amountBeforeTax = base.amountBeforeTax
+        viewController.currencyCode = base.currencyCode
+        viewController.amountAfterTax = base.amountAfterTax
+        viewController.hotelName = self.hotelTitle
         navigationController?.show(viewController, sender: sender)
         }
         else{

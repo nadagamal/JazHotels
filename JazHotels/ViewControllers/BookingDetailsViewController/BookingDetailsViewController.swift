@@ -15,12 +15,12 @@ import ZAlertView
 class BookingDetailsViewController: UIViewController,changeBookingDates {
     
     @IBOutlet weak var tableView: UITableView!
-    var reservationItem:JBHotelReservation!
+    var reservationItem:FirestoreHotelReservation!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        self.title = reservationItem.roomStays.roomStay.basicPropertyInfo.hotelName
+        self.title = reservationItem.hotelName
         
     }
     
@@ -44,7 +44,7 @@ class BookingDetailsViewController: UIViewController,changeBookingDates {
                                     DispatchQueue.main.async {
                                         SVProgressHUD.show()
                                     }
-                                    BookingAPIManager().cancelReservation(confirmationId: self.reservationItem.uniqueID.iD, hotelCode: self.reservationItem.roomStays.roomStay.basicPropertyInfo.hotelCode, chainCode: self.reservationItem.roomStays.roomStay.basicPropertyInfo.chainCode) { (bookingModel, error) in
+                                    BookingAPIManager().cancelReservation(confirmationId: self.reservationItem.confirmationId!, hotelCode: self.reservationItem.hotelCode!, chainCode: self.reservationItem.chainCode!) { (bookingModel, error) in
                                         if error == nil{
                                             DispatchQueue.main.async {
                                                 SVProgressHUD.dismiss()
@@ -56,7 +56,12 @@ class BookingDetailsViewController: UIViewController,changeBookingDates {
                                                         
                                                     }
                                                 }else{
-                                                    self.navigationController?.popViewController(animated: true)
+                                            UserOperation.removeReservation(firestoreHotelReservation: self.reservationItem!)
+                                                    DispatchQueue.main.async {
+                                                        
+                                self.navigationController?.popViewController(animated: true)}
+                                                    
+
                                                 }
                                             }
                                         }
@@ -100,24 +105,22 @@ class BookingDetailsViewController: UIViewController,changeBookingDates {
     func getBookingDates(startDate: String, endDate: String, nights: String) {
         print(startDate)
         print(endDate)
-        var childNum = "0"
-        var adultNum = "0"
-        if reservationItem.roomStays.roomStay.guestCounts.guestCount != nil && reservationItem.roomStays.roomStay.guestCounts.guestCount.count == 1{
-            adultNum = reservationItem.roomStays.roomStay.guestCounts.guestCount[0].count
-            
-        }
-        else if reservationItem.roomStays.roomStay.guestCounts.guestCount != nil && reservationItem.roomStays.roomStay.guestCounts.guestCount.count == 2{
-            adultNum = reservationItem.roomStays.roomStay.guestCounts.guestCount[0].count
-            childNum = reservationItem.roomStays.roomStay.guestCounts.guestCount[1].count
-            
-        }
+        var childNum = reservationItem.childrenQuantity
+        var adultNum = reservationItem.adultsQuantity
+//        if reservationItem.roomStays.roomStay.guestCounts.guestCount != nil && reservationItem.roomStays.roomStay.guestCounts.guestCount.count == 1{
+//            adultNum = reservationItem.roomStays.roomStay.guestCounts.guestCount[0].count
+//
+//        }
+//        else if reservationItem.roomStays.roomStay.guestCounts.guestCount != nil && reservationItem.roomStays.roomStay.guestCounts.guestCount.count == 2{
+//            adultNum = reservationItem.roomStays.roomStay.guestCounts.guestCount[0].count
+//            childNum = reservationItem.roomStays.roomStay.guestCounts.guestCount[1].count
+//
+//        }
         var ratePlanCode = ""
-        if reservationItem.roomStays.roomStay.ratePlans != nil && reservationItem.roomStays.roomStay.ratePlans.count>0{
-            ratePlanCode = reservationItem.roomStays.roomStay.ratePlans[0].ratePlanCode
-        }
+        ratePlanCode = reservationItem.ratePlanCode ?? ""
         SVProgressHUD.show()
 
-        BookingAPIManager().modifyReservation(numberOfAdults: adultNum, numberOfChild: childNum, numberOfRooms: reservationItem.roomStays.roomStay.roomTypes.roomType?.numberOfUnits ?? "", roomTypeCode: reservationItem.roomStays.roomStay.roomTypes.roomType.roomTypeCode, ratePlanCode: ratePlanCode, checkInDate: startDate, checkOutDate: endDate, hotelCode: reservationItem.roomStays.roomStay.basicPropertyInfo.hotelCode, chainCode: reservationItem.roomStays.roomStay.basicPropertyInfo.chainCode, confirmationId: reservationItem.uniqueID.iD,comments: "") { (response, error) in
+        BookingAPIManager().modifyReservation(numberOfAdults: adultNum ?? "", numberOfChild: childNum ?? "", numberOfRooms: reservationItem.numberOfUnits ?? "", roomTypeCode: reservationItem.roomTypeCode ?? "", ratePlanCode: ratePlanCode, checkInDate: startDate, checkOutDate: endDate, hotelCode: reservationItem.hotelCode ?? "", chainCode: reservationItem.chainCode ?? "", confirmationId: reservationItem.confirmationId ?? "",comments: "") { (response, error) in
             if response?.Body.OTAHotelResModifyRS.errors != nil && response?.Body.OTAHotelResModifyRS.errors.error != nil && response?.Body.OTAHotelResModifyRS.errors.error.shortText != nil{
                 DispatchQueue.main.async {
                     SVProgressHUD.dismiss()
@@ -157,26 +160,14 @@ class BookingDetailsViewController: UIViewController,changeBookingDates {
     }
     
     func getUserAddationalRequest(request: String) {
-        var startDate = reservationItem.roomStays.roomStay.timeSpan.start
-        var endDate = reservationItem.roomStays.roomStay.timeSpan.end
-        var childNum = "0"
-        var adultNum = "0"
-        if reservationItem.roomStays.roomStay.guestCounts.guestCount != nil && reservationItem.roomStays.roomStay.guestCounts.guestCount.count == 1{
-            adultNum = reservationItem.roomStays.roomStay.guestCounts.guestCount[0].count
-            
-        }
-        else if reservationItem.roomStays.roomStay.guestCounts.guestCount != nil && reservationItem.roomStays.roomStay.guestCounts.guestCount.count == 2{
-            adultNum = reservationItem.roomStays.roomStay.guestCounts.guestCount[0].count
-            childNum = reservationItem.roomStays.roomStay.guestCounts.guestCount[1].count
-            
-        }
-        var ratePlanCode = ""
-        if reservationItem.roomStays.roomStay.ratePlans != nil && reservationItem.roomStays.roomStay.ratePlans.count>0{
-            ratePlanCode = reservationItem.roomStays.roomStay.ratePlans[0].ratePlanCode
-        }
+        var startDate = reservationItem.checkIn
+        var endDate = reservationItem.checkOut
+        var childNum = reservationItem.childrenQuantity ?? "0"
+        var adultNum = reservationItem.adultsQuantity ?? "0"
+        var ratePlanCode = reservationItem.ratePlanCode ?? ""
         SVProgressHUD.show()
 
-        BookingAPIManager().modifyReservation(numberOfAdults: adultNum, numberOfChild: childNum, numberOfRooms: reservationItem.roomStays.roomStay.roomTypes.roomType?.numberOfUnits ?? "", roomTypeCode: reservationItem.roomStays.roomStay.roomTypes.roomType.roomTypeCode, ratePlanCode: ratePlanCode, checkInDate: startDate ?? "", checkOutDate: endDate ?? "", hotelCode: reservationItem.roomStays.roomStay.basicPropertyInfo.hotelCode, chainCode: reservationItem.roomStays.roomStay.basicPropertyInfo.chainCode, confirmationId: reservationItem.uniqueID.iD,comments: request) { (response, error) in
+        BookingAPIManager().modifyReservation(numberOfAdults: adultNum, numberOfChild: childNum, numberOfRooms: reservationItem.numberOfUnits ?? "", roomTypeCode: reservationItem.roomTypeCode ?? "", ratePlanCode: ratePlanCode, checkInDate: startDate ?? "", checkOutDate: endDate ?? "", hotelCode: reservationItem.hotelCode ?? "", chainCode: reservationItem.chainCode ?? "", confirmationId: reservationItem.confirmationId ?? "",comments: request) { (response, error) in
             if (response?.Body.OTAHotelResModifyRS.errors != nil && response?.Body.OTAHotelResModifyRS.errors.error != nil && response?.Body.OTAHotelResModifyRS.errors.error != nil && response?.Body.OTAHotelResModifyRS.errors.error.shortText != nil) || response?.Body.OTAHotelResModifyRS.ResResponseType == "Unsuccessful"{
                 DispatchQueue.main.async {
                     SVProgressHUD.dismiss()
@@ -203,10 +194,12 @@ extension BookingDetailsViewController:UITableViewDataSource,UITableViewDelegate
         
         if indexPath.row == 0{
             let cell = tableView.dequeueReusableCell(withIdentifier: "HotelDetailsCell") as! HotelTableViewCell
-            cell.hotel_name.text = reservationItem.roomStays.roomStay.basicPropertyInfo.hotelName
-            cell.hotel_place.text = reservationItem.roomStays.roomStay.basicPropertyInfo.address.cityName
-            if  JazHotels.hotelsImages![reservationItem.roomStays.roomStay.basicPropertyInfo.hotelCode!]?[0] != nil{
-                let imageURL = URL(string: ((JazHotels.hotelsImages![reservationItem.roomStays.roomStay.basicPropertyInfo.hotelCode!]?[0])!))
+            cell.hotel_name.text = reservationItem.hotelName
+//            cell.hotel_place.text = reservationItem.roomStays.roomStay.basicPropertyInfo.address.cityName
+            cell.hotel_place.text = ""
+
+            if  JazHotels.hotelsImages![reservationItem.hotelCode!]?[0] != nil{
+                let imageURL = URL(string: ((JazHotels.hotelsImages![reservationItem.hotelCode!]?[0])!))
                 cell.hotel_img.kf.indicatorType = .activity
                 cell.hotel_img.kf.setImage(with: imageURL, placeholder: UIImage(named: "jazLauncherLogo"), options: [.transition(ImageTransition.fade(0.7))], progressBlock: nil, completionHandler: nil)
                 cell.jazLogoImg.isHidden = true
@@ -215,46 +208,40 @@ extension BookingDetailsViewController:UITableViewDataSource,UITableViewDelegate
         }
         else if indexPath.row == 1{
             let cell = tableView.dequeueReusableCell(withIdentifier: "DateCell") as! BookingDetailsCell
-            cell.leftValueLbl.text = reservationItem.roomStays.roomStay.timeSpan.start
-            cell.rightValueLbl.text = reservationItem.roomStays.roomStay.timeSpan.end
+            cell.leftValueLbl.text = reservationItem.checkIn
+            cell.rightValueLbl.text = reservationItem.checkOut
             return cell
         }
         else  if indexPath.row == 2{
             let cell = tableView.dequeueReusableCell(withIdentifier: "RatePlanCell") as! BookingDetailsCell
-            cell.leftValueLbl.text = reservationItem.roomStays.roomStay.roomTypes.roomType.roomDescription.name
-            if reservationItem.roomStays.roomStay.roomTypes.roomType.additionalDetails != nil && reservationItem.roomStays.roomStay.roomTypes.roomType.additionalDetails.additionalDetail.count > 0{
-                cell.rightValueLbl.text = reservationItem.roomStays.roomStay.roomTypes.roomType.additionalDetails.additionalDetail[0].detailDescription.text
-            }
+            cell.leftValueLbl.text = reservationItem.roomTypeName
+            cell.rightValueLbl.text = reservationItem.ratePlanName
+
             return cell
         }
         else  if indexPath.row == 3{
             let cell = tableView.dequeueReusableCell(withIdentifier: "RoomDetailsCell") as! BookingDetailsCell
-            var childNum = "0"
-            var adultNum = "0"
-            cell.leftValueLbl.text = reservationItem.roomStays.roomStay.roomTypes.roomType.numberOfUnits ?? "" + " Room"
-            if reservationItem.roomStays.roomStay.guestCounts.guestCount != nil && reservationItem.roomStays.roomStay.guestCounts.guestCount.count == 1{
-                adultNum = reservationItem.roomStays.roomStay.guestCounts.guestCount[0].count
-                cell.rightValueLbl.text = adultNum + "adults"
-                
-            }
-            else if reservationItem.roomStays.roomStay.guestCounts.guestCount != nil && reservationItem.roomStays.roomStay.guestCounts.guestCount.count == 2{
-                adultNum = reservationItem.roomStays.roomStay.guestCounts.guestCount[0].count
-                childNum = reservationItem.roomStays.roomStay.guestCounts.guestCount[1].count
+            let childNum = reservationItem.childrenQuantity ?? ""
+            let adultNum = reservationItem.adultsQuantity ?? ""
+            cell.leftValueLbl.text = reservationItem.numberOfUnits ?? "1" + " Room"
+            cell.rightValueLbl.text = adultNum + " " + "adults"
+
+            if Int(reservationItem.childrenQuantity ?? "0")! > 0{
                 cell.rightValueLbl.text = adultNum + " adults, " + childNum + " childern"
-                
             }
             return cell
-            
         }
+        
         else  if indexPath.row == 4{
             let cell = tableView.dequeueReusableCell(withIdentifier: "ConfirmationCodeCell") as! BookingDetailsCell
-            cell.leftValueLbl.text = reservationItem.uniqueID.iD
+            cell.leftValueLbl.text = reservationItem.confirmationId ?? ""
             return cell
             
         }
         else  if indexPath.row == 5{
             let cell = tableView.dequeueReusableCell(withIdentifier: "PriceCell") as! BookingDetailsCell
-            cell.rightValueLbl.text = reservationItem.roomStays.roomStay.total.amountAfterTax + "$"
+            cell.rightValueLbl.text = reservationItem.amountAfterTax ?? "" + "$"
+            
             return cell
             
         }

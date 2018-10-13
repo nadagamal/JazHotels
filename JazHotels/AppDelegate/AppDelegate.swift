@@ -13,7 +13,7 @@ import GoogleSignIn
 import FirebaseAuth
 import FBSDKCoreKit
 import TwitterKit
-
+import SideMenu
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate,UITabBarDelegate, GIDSignInDelegate {
 
@@ -44,7 +44,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UITabBarDelegate, GIDSignI
         TWTRTwitter.sharedInstance().start(withConsumerKey: "r8QRfM6loE4WTLBAOu2fWbkOZ", consumerSecret: "ZyxEnmbQ9rWgotrCz5o5KyvMJYbqVmwKK76iwqUngSoFVYWSMz")
 
 
-        
+        SideMenuManager.default.menuFadeStatusBar = false
+
         
         return true
     }

@@ -91,6 +91,7 @@ extension HotelDestinationViewController:UITableViewDelegate,UITableViewDataSour
         var hotelList=[JHotelDescriptiveContent]()
         hotelList = self.getHotels(text: hotel.id)
         let viewController = HomeViewController.create()
+        viewController.screenTitle = hotel.title ?? ""
         viewController.hotelList = hotelList
         self.navigationController?.pushViewController(viewController, animated: true)
 

@@ -95,7 +95,7 @@ extension FavoriteViewController: UITableViewDelegate , UITableViewDataSource
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let hotelDetailsVC = UIStoryboard(name: HotelJazConstants.StoryBoard.mainSB, bundle: nil).instantiateViewController(withIdentifier: "HotelDetailsViewController") as! HotelDetailsViewController
-        let  hotel = JazHotels.hotels[indexPath.row]
+        let  hotel = hotelsList[indexPath.item]
         hotelDetailsVC.hotel = hotel
         self.navigationController?.show(hotelDetailsVC, sender: nil)
     }

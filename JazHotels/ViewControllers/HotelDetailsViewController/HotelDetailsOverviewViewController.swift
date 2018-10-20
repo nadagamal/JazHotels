@@ -11,7 +11,8 @@ import XLPagerTabStrip
 class HotelDetailsOverviewViewController: UIViewController,IndicatorInfoProvider{
     var itemInfo: IndicatorInfo = "Overview"
     var hotel:JHotelDescriptiveContent!
-
+    @IBOutlet weak var overviewContent: UITextView!
+    
     init(itemInfo: IndicatorInfo) {
         self.itemInfo = itemInfo
         super.init(nibName: nil, bundle: nil)

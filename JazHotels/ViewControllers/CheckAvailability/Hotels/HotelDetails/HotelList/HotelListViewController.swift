@@ -173,7 +173,7 @@ extension HotelListViewController: UITableViewDelegate , UITableViewDataSource
         else
         {
             DispatchQueue.main.async {
-                SCLAlertView().showInfo("", subTitle: "No Rates avaiable")
+                SCLAlertView().showInfo("", subTitle: "Your search did not match any available")
                 
             }
         }

@@ -393,7 +393,7 @@ class CheckAvailabilityViewController: UIViewController , UIScrollViewDelegate {
                     
                     //                    let hotelRooms = JazHotels.hotels[0]
                     
-                    if roomStays?.count == 0
+                    if roomStays?.count == 0 || roomStays == nil
                     {
                         DispatchQueue.main.async {
                             SCLAlertView().showInfo("", subTitle: "No rooms avaiable")

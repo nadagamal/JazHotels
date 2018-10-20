@@ -13,9 +13,11 @@ class HomeViewController: UIViewController {
     let icon: UIButton = UIButton()
     var hotelList=[JHotelDescriptiveContent]()
     @IBOutlet weak var collectionView: UICollectionView!
+    var screenTitle:String?
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.navigationItem.title = screenTitle
 
     }
     override func viewWillAppear(_ animated: Bool) {

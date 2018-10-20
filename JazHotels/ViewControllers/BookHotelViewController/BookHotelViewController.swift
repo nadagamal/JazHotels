@@ -123,7 +123,11 @@ class BookHotelViewController: UIViewController {
     @objc func editBtnPressed(sender:UIButton){
         let indexPath = NSIndexPath(row: 0, section: 0)
         let cell = tableView.cellForRow(at: indexPath as IndexPath) as! CreditCardCell
-        cell.cardNameTxt .becomeFirstResponder()
+        cell.cardNameTxt.isUserInteractionEnabled = true
+        cell.cardNumberTxt.isUserInteractionEnabled = true
+        cell.cvcTxt.isUserInteractionEnabled = true
+        cell.cardExpirationDateTxt.isUserInteractionEnabled = true
+        cell.cardNameTxt.becomeFirstResponder()
     }
     @objc func agreeBtnAction(sender:UIButton){
         let indexPath = NSIndexPath(row: 3, section: 1)

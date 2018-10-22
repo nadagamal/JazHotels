@@ -246,6 +246,44 @@
                                             <segue destination="43c-ek-aqI" kind="show" id="io5-7l-uGw"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactUs" rowHeight="63" id="GJp-Or-MPR" customClass="MenuCell" customModule="JazHotels" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="154" width="320" height="63"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GJp-Or-MPR" id="ktL-SB-9H6">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="62.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="call-answer" translatesAutoresizingMaskIntoConstraints="NO" id="taI-xr-QwM">
+                                                    <rect key="frame" x="15" y="17" width="21" height="22"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="22" id="gNS-On-1xn"/>
+                                                        <constraint firstAttribute="width" constant="21" id="iPR-59-vfQ"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact Us" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UOG-XW-aLz">
+                                                    <rect key="frame" x="56" y="20" width="91" height="16"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="91" id="66s-Tb-buK"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="13"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="taI-xr-QwM" firstAttribute="leading" secondItem="ktL-SB-9H6" secondAttribute="leading" constant="15" id="32w-gR-2WV"/>
+                                                <constraint firstItem="taI-xr-QwM" firstAttribute="centerY" secondItem="ktL-SB-9H6" secondAttribute="centerY" constant="-3.25" id="JGm-AL-vaa"/>
+                                                <constraint firstItem="UOG-XW-aLz" firstAttribute="centerY" secondItem="ktL-SB-9H6" secondAttribute="centerY" constant="-3.25" id="TmQ-7w-VfI"/>
+                                                <constraint firstItem="UOG-XW-aLz" firstAttribute="leading" secondItem="taI-xr-QwM" secondAttribute="trailing" constant="20" id="ihO-zy-rxn"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="cellIconImg" destination="taI-xr-QwM" id="p4U-4H-Rax"/>
+                                            <outlet property="cellTitleLbl" destination="UOG-XW-aLz" id="QAi-sY-kcl"/>
+                                            <segue destination="IRK-Po-MwR" kind="show" id="K9U-mT-Tkm"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="oqc-X8-fk2" id="RQt-xZ-13c"/>
@@ -283,7 +321,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SUd-0f-JBU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1798" y="3323"/>
+            <point key="canvasLocation" x="-1798.125" y="3322.1830985915494"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="auY-ph-suW">
@@ -1241,26 +1279,26 @@ Alam Road, Red Sea, Egypt.</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="29 Mar, 2018" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jow-BR-6Rb">
-                                                        <rect key="frame" x="8" y="34.5" width="60" height="17.5"/>
+                                                        <rect key="frame" x="8" y="35" width="68.5" height="16.5"/>
                                                         <gestureRecognizers/>
                                                         <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="14"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5cf-bp-Vch">
-                                                        <rect key="frame" x="92" y="16" width="2" height="38"/>
+                                                        <rect key="frame" x="100.5" y="16" width="2" height="38"/>
                                                         <color key="backgroundColor" red="0.70980392156862748" green="0.63137254901960782" blue="0.40784313725490196" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="2" id="DCp-GI-vmt"/>
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check-out" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rdz-GX-esS">
-                                                        <rect key="frame" x="102" y="16" width="50" height="13"/>
+                                                        <rect key="frame" x="110.5" y="16" width="50" height="13"/>
                                                         <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="11"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30 Mar, 2018" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfK-WJ-ZZ8">
-                                                        <rect key="frame" x="102" y="34.5" width="90" height="17.5"/>
+                                                        <rect key="frame" x="110.5" y="35" width="81.5" height="16.5"/>
                                                         <gestureRecognizers/>
                                                         <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="14"/>
                                                         <nil key="highlightedColor"/>
@@ -1269,13 +1307,13 @@ Alam Road, Red Sea, Egypt.</string>
                                                         <rect key="frame" x="200" y="0.0" width="60" height="70"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nights" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uHr-zT-Ur6">
-                                                                <rect key="frame" x="0.0" y="38" width="52" height="14"/>
+                                                                <rect key="frame" x="0.0" y="37.5" width="52" height="14"/>
                                                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="12"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BjB-ao-RW5">
-                                                                <rect key="frame" x="23" y="9" width="7" height="21"/>
+                                                                <rect key="frame" x="22" y="9.5" width="9.5" height="20"/>
                                                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -1292,14 +1330,14 @@ Alam Road, Red Sea, Egypt.</string>
                                                         </constraints>
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nLe-EO-wSL">
-                                                        <rect key="frame" x="-1" y="30" width="95" height="39"/>
+                                                        <rect key="frame" x="-1" y="30" width="103.5" height="39"/>
                                                         <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="13"/>
                                                         <connections>
                                                             <action selector="checkInDateAction:" destination="QCg-b4-2nr" eventType="touchUpInside" id="i6Y-Ez-6vO"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IKG-HE-wye">
-                                                        <rect key="frame" x="94" y="29" width="104" height="42"/>
+                                                        <rect key="frame" x="102.5" y="29" width="95.5" height="42"/>
                                                         <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="13"/>
                                                         <connections>
                                                             <action selector="checkOutDateAction:" destination="QCg-b4-2nr" eventType="touchUpInside" id="17G-xr-8rp"/>
@@ -1355,7 +1393,7 @@ Alam Road, Red Sea, Egypt.</string>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5JM-au-hWN">
-                                                                        <rect key="frame" x="0.5" y="29" width="30" height="32"/>
+                                                                        <rect key="frame" x="-1" y="29" width="30" height="31"/>
                                                                         <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="16"/>
                                                                         <state key="normal" title="-">
                                                                             <color key="titleColor" red="0.70980392160000005" green="0.73333333329999995" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -1365,13 +1403,13 @@ Alam Road, Red Sea, Egypt.</string>
                                                                         </connections>
                                                                     </button>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jYr-Zs-76m">
-                                                                        <rect key="frame" x="38.5" y="35" width="6.5" height="20"/>
+                                                                        <rect key="frame" x="37" y="35" width="9" height="19"/>
                                                                         <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="16"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kiZ-9R-NOr">
-                                                                        <rect key="frame" x="53" y="29" width="30" height="32"/>
+                                                                        <rect key="frame" x="54" y="29" width="30" height="31"/>
                                                                         <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="16"/>
                                                                         <state key="normal" title="+">
                                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1413,7 +1451,7 @@ Alam Road, Red Sea, Egypt.</string>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Mo-SD-U2B">
-                                                                        <rect key="frame" x="0.5" y="29" width="30" height="32"/>
+                                                                        <rect key="frame" x="-1" y="29" width="30" height="31"/>
                                                                         <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="16"/>
                                                                         <state key="normal" title="-">
                                                                             <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1423,13 +1461,13 @@ Alam Road, Red Sea, Egypt.</string>
                                                                         </connections>
                                                                     </button>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xyj-33-kY3">
-                                                                        <rect key="frame" x="38.5" y="35" width="6.5" height="20"/>
+                                                                        <rect key="frame" x="37" y="35" width="9" height="19"/>
                                                                         <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="16"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uqA-wj-Od9">
-                                                                        <rect key="frame" x="52" y="29" width="30" height="32"/>
+                                                                        <rect key="frame" x="53" y="29" width="30" height="31"/>
                                                                         <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="16"/>
                                                                         <state key="normal" title="+">
                                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1471,7 +1509,7 @@ Alam Road, Red Sea, Egypt.</string>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKl-Bt-GHR">
-                                                                        <rect key="frame" x="55.5" y="29" width="30" height="32"/>
+                                                                        <rect key="frame" x="54.5" y="29" width="30" height="31"/>
                                                                         <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="16"/>
                                                                         <state key="normal" title="+">
                                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1481,13 +1519,13 @@ Alam Road, Red Sea, Egypt.</string>
                                                                         </connections>
                                                                     </button>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZh-ow-MEy">
-                                                                        <rect key="frame" x="36.5" y="35" width="11" height="20"/>
+                                                                        <rect key="frame" x="37.5" y="35" width="9" height="19"/>
                                                                         <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="16"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="waC-Iy-iHO">
-                                                                        <rect key="frame" x="-1.5" y="29" width="30" height="32"/>
+                                                                        <rect key="frame" x="-0.5" y="29" width="30" height="31"/>
                                                                         <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="16"/>
                                                                         <state key="normal" title="-">
                                                                             <color key="titleColor" red="0.70980392160000005" green="0.73333333329999995" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -1638,6 +1676,7 @@ Alam Road, Red Sea, Egypt.</string>
                                     <constraint firstItem="m2A-d0-XZ4" firstAttribute="top" secondItem="e26-nz-N4j" secondAttribute="top" id="5T3-SR-a6T"/>
                                     <constraint firstItem="m2A-d0-XZ4" firstAttribute="centerY" secondItem="e26-nz-N4j" secondAttribute="centerY" id="5ve-A4-5am"/>
                                     <constraint firstItem="m2A-d0-XZ4" firstAttribute="centerX" secondItem="e26-nz-N4j" secondAttribute="centerX" id="8na-Bk-zOO"/>
+                                    <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="Fwo-2j-aqR" secondAttribute="bottom" constant="104.5" id="QoL-gT-sxl"/>
                                     <constraint firstAttribute="bottom" secondItem="m2A-d0-XZ4" secondAttribute="bottom" id="UYH-hh-bMY"/>
                                     <constraint firstItem="m2A-d0-XZ4" firstAttribute="height" secondItem="e26-nz-N4j" secondAttribute="height" id="XyE-lD-gJl"/>
                                     <constraint firstItem="m2A-d0-XZ4" firstAttribute="leading" secondItem="e26-nz-N4j" secondAttribute="leading" id="p4o-5G-SKi"/>
@@ -3038,13 +3077,11 @@ In case of canelation within 02 days prior to arrival or no show, 01 night charg
                                 <constraints>
                                     <constraint firstAttribute="height" constant="230" id="38b-Lb-KGI"/>
                                 </constraints>
-                                <string key="text">On your next Egypt holiday, you will feel the merry atmosphere of progress, the pride and the energy, which is characteristic for our country and currently eminently perceptible.
-
-Don’t miss visiting the best Egypt beach holiday destinations. Experience the matchless shores of South Sinai and the Red Sea with their impeccable reef, not to mention the unruffled North Coast - Egypt's prime destination - with its velvet sandy beaches.
-
-Or discover Luxor and Aswan that are immensely rich in history. For unwinding, try any of the oases amidst the virgin unspoiled nature.</string>
+                                <string key="text">Covering 10 of the most attractive destinations across Egypt, with a variety of 45 hotels and resorts encompassing 15,428 hotel rooms… 
+Jaz Hotel Group takes pride in being the hospitality arm of Egypt’s largest travel conglomerate “Travco Group International”, and one of the biggest and most premier hotel ownership and management chains in the Middle East.
+Jaz hotel group selection of brands include: “Jaz at the Beach”, “Jaz on the Nile”, “Iberotel Hotels &amp; Resorts” &amp; “Solymar”.</string>
                                 <color key="textColor" red="0.45098039220000002" green="0.45098039220000002" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="12"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="13"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tLX-6B-U2u">
@@ -3204,6 +3241,222 @@ Or discover Luxor and Aswan that are immensely rich in history. For unwinding, t
             </objects>
             <point key="canvasLocation" x="-1284" y="34"/>
         </scene>
+        <!--Contact Us View Controller-->
+        <scene sceneID="HBq-Da-ncb">
+            <objects>
+                <viewController id="IRK-Po-MwR" customClass="ContactUsViewController" customModule="JazHotels" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XX5-5r-4FM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We’re more than happy to help you with your inquiries and requests when you contact us via:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ux-kf-AnT">
+                                <rect key="frame" x="16" y="50" width="288" height="52.5"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="15"/>
+                                <color key="textColor" red="0.58431372550000005" green="0.58431372550000005" blue="0.58431372550000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eU5-Al-aa7">
+                                <rect key="frame" x="16" y="122.5" width="288" height="227"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="227" id="Wqy-86-UqG"/>
+                                </constraints>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TelCell" rowHeight="63" id="IQD-7G-ru9" customClass="MenuCell" customModule="JazHotels" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="288" height="63"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IQD-7G-ru9" id="4Yh-Nu-rlD">
+                                            <rect key="frame" x="0.0" y="0.0" width="288" height="62.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone" translatesAutoresizingMaskIntoConstraints="NO" id="Gcc-xQ-msK">
+                                                    <rect key="frame" x="15" y="18" width="18" height="27"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+202 3854 1111 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="df6-D6-IKW">
+                                                    <rect key="frame" x="48" y="23.5" width="94" height="15.5"/>
+                                                    <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="13"/>
+                                                    <color key="textColor" red="0.58431372550000005" green="0.58431372550000005" blue="0.58431372550000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Gcc-xQ-msK" firstAttribute="leading" secondItem="4Yh-Nu-rlD" secondAttribute="leading" constant="15" id="1hf-g8-4uz"/>
+                                                <constraint firstItem="Gcc-xQ-msK" firstAttribute="centerY" secondItem="4Yh-Nu-rlD" secondAttribute="centerY" id="BuB-dL-4wI"/>
+                                                <constraint firstItem="df6-D6-IKW" firstAttribute="centerY" secondItem="4Yh-Nu-rlD" secondAttribute="centerY" id="c5i-aY-DIE"/>
+                                                <constraint firstItem="df6-D6-IKW" firstAttribute="leading" secondItem="Gcc-xQ-msK" secondAttribute="trailing" constant="15" id="exV-as-5yo"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="cellIconImg" destination="Gcc-xQ-msK" id="RMX-PC-p4g"/>
+                                            <outlet property="cellTitleLbl" destination="df6-D6-IKW" id="tHc-Uo-3Ot"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WhatsappCell" rowHeight="63" id="EeC-ZJ-mXt" customClass="MenuCell" customModule="JazHotels" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="91" width="288" height="63"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EeC-ZJ-mXt" id="nm3-bq-3BK">
+                                            <rect key="frame" x="0.0" y="0.0" width="288" height="62.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whatsapp-logo" translatesAutoresizingMaskIntoConstraints="NO" id="pLS-97-5Se">
+                                                    <rect key="frame" x="15" y="21.5" width="20" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="I9h-XV-YRO"/>
+                                                        <constraint firstAttribute="width" constant="20" id="yn2-dO-dD0"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+2012 0222 2782" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PWO-Ej-sIK">
+                                                    <rect key="frame" x="50" y="23.5" width="96.5" height="15.5"/>
+                                                    <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="13"/>
+                                                    <color key="textColor" red="0.58431372550000005" green="0.58431372550000005" blue="0.58431372550000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="PWO-Ej-sIK" firstAttribute="leading" secondItem="pLS-97-5Se" secondAttribute="trailing" constant="15" id="6tz-ia-EDe"/>
+                                                <constraint firstItem="pLS-97-5Se" firstAttribute="centerY" secondItem="nm3-bq-3BK" secondAttribute="centerY" id="96p-B3-tu1"/>
+                                                <constraint firstItem="pLS-97-5Se" firstAttribute="leading" secondItem="nm3-bq-3BK" secondAttribute="leading" constant="15" id="H1l-7y-WzI"/>
+                                                <constraint firstItem="PWO-Ej-sIK" firstAttribute="centerY" secondItem="nm3-bq-3BK" secondAttribute="centerY" id="tsg-AC-kSF"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="cellIconImg" destination="pLS-97-5Se" id="kuC-uA-6XB"/>
+                                            <outlet property="cellTitleLbl" destination="PWO-Ej-sIK" id="a4k-Q7-26D"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MailCell" rowHeight="63" id="i4i-WQ-aAR" customClass="MenuCell" customModule="JazHotels" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="154" width="288" height="63"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="i4i-WQ-aAR" id="oVC-kl-b7D">
+                                            <rect key="frame" x="0.0" y="0.0" width="288" height="62.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="email" translatesAutoresizingMaskIntoConstraints="NO" id="2hE-Ox-B3u">
+                                                    <rect key="frame" x="15" y="24" width="20" height="15"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="info@jazhotels.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j7R-kY-8RQ">
+                                                    <rect key="frame" x="50" y="23.5" width="115" height="15.5"/>
+                                                    <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="13"/>
+                                                    <color key="textColor" red="0.58431372550000005" green="0.58431372550000005" blue="0.58431372550000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="2hE-Ox-B3u" firstAttribute="centerY" secondItem="oVC-kl-b7D" secondAttribute="centerY" id="6xu-q7-zMh"/>
+                                                <constraint firstItem="j7R-kY-8RQ" firstAttribute="centerY" secondItem="oVC-kl-b7D" secondAttribute="centerY" id="9nc-Vr-Atf"/>
+                                                <constraint firstItem="2hE-Ox-B3u" firstAttribute="leading" secondItem="oVC-kl-b7D" secondAttribute="leading" constant="15" id="IYK-AF-X9S"/>
+                                                <constraint firstItem="j7R-kY-8RQ" firstAttribute="leading" secondItem="2hE-Ox-B3u" secondAttribute="trailing" constant="15" id="bSK-ul-HOs"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="cellIconImg" destination="2hE-Ox-B3u" id="pbd-11-4Mu"/>
+                                            <outlet property="cellTitleLbl" destination="j7R-kY-8RQ" id="s9Y-sl-Oo8"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="IRK-Po-MwR" id="u0l-qt-f7y"/>
+                                    <outlet property="delegate" destination="IRK-Po-MwR" id="aCJ-3l-LU4"/>
+                                </connections>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="OQx-gd-cpM">
+                                <rect key="frame" x="51" y="369.5" width="218" height="28"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CDi-yn-Akr">
+                                        <rect key="frame" x="0.0" y="0.0" width="28" height="28"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="28" id="Ful-NO-grM"/>
+                                            <constraint firstAttribute="height" constant="28" id="vb8-xc-m1n"/>
+                                        </constraints>
+                                        <state key="normal" image="fb"/>
+                                        <connections>
+                                            <action selector="facebookAction:" destination="IRK-Po-MwR" eventType="touchUpInside" id="NgO-ZQ-pJi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CD7-A6-BJx">
+                                        <rect key="frame" x="38" y="0.0" width="28" height="28"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="28" id="Ado-Ws-14L"/>
+                                            <constraint firstAttribute="height" constant="28" id="HrM-i8-r2d"/>
+                                        </constraints>
+                                        <state key="normal" image="insta"/>
+                                        <connections>
+                                            <action selector="instagramAction:" destination="IRK-Po-MwR" eventType="touchUpInside" id="Ot4-2C-s5H"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w4t-rL-YNa">
+                                        <rect key="frame" x="76" y="0.0" width="28" height="28"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="28" id="4iv-H1-AQE"/>
+                                            <constraint firstAttribute="height" constant="28" id="Def-jM-o6b"/>
+                                        </constraints>
+                                        <state key="normal" image="yt"/>
+                                        <connections>
+                                            <action selector="youtubeAction:" destination="IRK-Po-MwR" eventType="touchUpInside" id="C64-EW-c2g"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hzf-Ay-Nlx">
+                                        <rect key="frame" x="114" y="0.0" width="28" height="28"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="28" id="MQM-vU-AsQ"/>
+                                            <constraint firstAttribute="width" constant="28" id="xCC-bw-jXy"/>
+                                        </constraints>
+                                        <state key="normal" image="tw"/>
+                                        <connections>
+                                            <action selector="twitterAction:" destination="IRK-Po-MwR" eventType="touchUpInside" id="Ksg-ql-oxh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nte-uP-rn2">
+                                        <rect key="frame" x="152" y="0.0" width="28" height="28"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="28" id="SRg-qk-9FX"/>
+                                            <constraint firstAttribute="height" constant="28" id="TKW-Ys-mgM"/>
+                                        </constraints>
+                                        <state key="normal" image="pintrest"/>
+                                        <connections>
+                                            <action selector="pintrestAction:" destination="IRK-Po-MwR" eventType="touchUpInside" id="7fr-La-ECI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1q3-Er-6sy">
+                                        <rect key="frame" x="190" y="0.0" width="28" height="28"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="28" id="6aP-1R-sqp"/>
+                                            <constraint firstAttribute="height" constant="28" id="J8O-lo-9XQ"/>
+                                        </constraints>
+                                        <state key="normal" image="linkedin"/>
+                                        <connections>
+                                            <action selector="linkedInAction:" destination="IRK-Po-MwR" eventType="touchUpInside" id="Lxz-kL-UW9"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7ux-kf-AnT" firstAttribute="leading" secondItem="TBW-iZ-EdR" secondAttribute="leading" constant="16" id="1p5-Eg-Dku"/>
+                            <constraint firstItem="TBW-iZ-EdR" firstAttribute="trailing" secondItem="eU5-Al-aa7" secondAttribute="trailing" constant="16" id="6EF-Tk-2H7"/>
+                            <constraint firstItem="7ux-kf-AnT" firstAttribute="top" secondItem="TBW-iZ-EdR" secondAttribute="top" constant="30" id="CUu-6A-sPb"/>
+                            <constraint firstItem="OQx-gd-cpM" firstAttribute="centerX" secondItem="eU5-Al-aa7" secondAttribute="centerX" id="G6a-V8-faf"/>
+                            <constraint firstItem="OQx-gd-cpM" firstAttribute="top" secondItem="eU5-Al-aa7" secondAttribute="bottom" constant="20" id="YKA-ue-MmB"/>
+                            <constraint firstItem="eU5-Al-aa7" firstAttribute="top" secondItem="7ux-kf-AnT" secondAttribute="bottom" constant="20" id="lsb-oM-szX"/>
+                            <constraint firstItem="eU5-Al-aa7" firstAttribute="leading" secondItem="TBW-iZ-EdR" secondAttribute="leading" constant="16" id="oEQ-2G-1HK"/>
+                            <constraint firstItem="TBW-iZ-EdR" firstAttribute="trailing" secondItem="7ux-kf-AnT" secondAttribute="trailing" constant="16" id="tC6-HQ-q2J"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TBW-iZ-EdR"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="eU5-Al-aa7" id="Lcj-8R-Rdq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="urr-gV-bz5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2840.625" y="3300"/>
+        </scene>
         <!--Hotel Destination View Controller-->
         <scene sceneID="oM8-8R-gUO">
             <objects>
@@ -3251,7 +3504,7 @@ Or discover Luxor and Aswan that are immensely rich in history. For unwinding, t
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="181"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kbK-1Q-F4R">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="kbK-1Q-F4R">
                                                     <rect key="frame" x="10" y="0.0" width="300" height="181"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -3355,6 +3608,7 @@ Or discover Luxor and Aswan that are immensely rich in history. For unwinding, t
         <image name="account-icon" width="23.5" height="21.5"/>
         <image name="availabilty_bg" width="1080" height="1752"/>
         <image name="back" width="10" height="16.5"/>
+        <image name="call-answer" width="51.200000762939453" height="51.200000762939453"/>
         <image name="check" width="17.5" height="17.5"/>
         <image name="checkDone" width="17.5" height="17.5"/>
         <image name="closed" width="9.5" height="6"/>
@@ -3375,6 +3629,7 @@ Or discover Luxor and Aswan that are immensely rich in history. For unwinding, t
         <image name="menu" width="32.5" height="30"/>
         <image name="phone" width="18.5" height="27"/>
         <image name="pintrest" width="28.5" height="28.5"/>
+        <image name="placeholder" width="686" height="392"/>
         <image name="promo" width="22" height="24.5"/>
         <image name="reservation" width="26" height="13"/>
         <image name="review" width="20.5" height="19.5"/>
@@ -3383,9 +3638,10 @@ Or discover Luxor and Aswan that are immensely rich in history. For unwinding, t
         <image name="splashBg" width="375" height="667"/>
         <image name="tw" width="28.5" height="28.5"/>
         <image name="website" width="18" height="17.5"/>
+        <image name="whatsapp-logo" width="25.600000381469727" height="25.600000381469727"/>
         <image name="yt" width="28.5" height="28.5"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="zVC-Mp-6jt"/>
+        <segue reference="3nH-RJ-33o"/>
     </inferredMetricsTieBreakers>
 </document>

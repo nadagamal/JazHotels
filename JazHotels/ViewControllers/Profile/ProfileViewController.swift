@@ -27,6 +27,7 @@ class ProfileViewController: UIViewController,FUIAuthDelegate {
     @IBOutlet weak var profileImg: UIImageView!
     @IBOutlet weak var userName: UILabel!
 
+    @IBOutlet weak var loginBtn: UIButton!
     @IBOutlet weak var userTitle: McTextField!
     
     @IBOutlet weak var userMobile: UITextField!
@@ -91,10 +92,9 @@ class ProfileViewController: UIViewController,FUIAuthDelegate {
         self.navigationController?.navigationBar.shadowImage = UIImage()
         if !UserDefaults.isKeyPresentInUserDefaults(key: HotelJazConstants.userDefault.userData)
         {
-            //  self.navigationController?.present(LoginViewController.create(), animated: true, completion: nil)
-            let controller = self.authUI!.authViewController()
-            self.navigationController?.present(controller, animated: true, completion: nil)
-            UserDefaults.removeKeyUserDefault(key:  HotelJazConstants.userDefault.userData)
+            loginBtn.isHidden = false
+            loginBtn.isUserInteractionEnabled = true
+            tableView.isHidden = true
         }
 
 
@@ -109,21 +109,38 @@ class ProfileViewController: UIViewController,FUIAuthDelegate {
     override func viewDidAppear(_ animated: Bool) {
         if !UserDefaults.isKeyPresentInUserDefaults(key: HotelJazConstants.userDefault.userData)
         {
-
+            loginBtn.isHidden = false
+            loginBtn.isUserInteractionEnabled = true
+            tableView.isHidden = true
         }
         else
         {
+            self.loginBtn.isHidden = true
+            self.tableView.isHidden = false
             self.userData = UserDefaults.getObjectDefault(key: HotelJazConstants.userDefault.userData) as? UserProfile
             self.tableView.reloadData()
             
         }
     }
     
+    @IBAction func loginBtnAction(_ sender: Any) {
+        //  self.navigationController?.present(LoginViewController.create(), animated: true, completion: nil)
+        let controller = self.authUI!.authViewController()
+        self.navigationController?.present(controller, animated: true, completion: nil)
+        UserDefaults.removeKeyUserDefault(key:  HotelJazConstants.userDefault.userData)
+    }
     @objc private func getProfile(notification: Notification) {
         
         if notification.object != nil
         {
             self.userData = notification.object as? UserProfile
+            DispatchQueue.main.async {
+                SVProgressHUD.dismiss()
+                self.loginBtn.isHidden = true
+                self.tableView.isHidden = false
+                self.userData = UserDefaults.getObjectDefault(key: HotelJazConstants.userDefault.userData) as? UserProfile
+                self.tableView.reloadData()
+            }
         }
         
     }
@@ -139,6 +156,7 @@ class ProfileViewController: UIViewController,FUIAuthDelegate {
     }
     
     func authUI(_ authUI: FUIAuth, didSignInWith authDataResult: AuthDataResult?, error: Error?) {
+        SVProgressHUD.show()
         if authDataResult != nil{
         checkAccountFound(user: authDataResult!)
         }
@@ -146,6 +164,7 @@ class ProfileViewController: UIViewController,FUIAuthDelegate {
     
     func checkAccountFound(user:AuthDataResult)
     {
+        SVProgressHUD.show()
         db.collection("users").getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
@@ -161,6 +180,14 @@ class ProfileViewController: UIViewController,FUIAuthDelegate {
                         
                         UserDefaults.saveObjectDefault(key: HotelJazConstants.userDefault.userData, value: userProfile)
                         found = true
+                        DispatchQueue.main.async {
+                            SVProgressHUD.dismiss()
+                            self.loginBtn.isHidden = true
+                            self.tableView.isHidden = false
+                            self.userData = UserDefaults.getObjectDefault(key: HotelJazConstants.userDefault.userData) as? UserProfile
+                            self.tableView.reloadData()
+                        }
+
                         self.viewProfile(userData: userProfile)
                         break
                     }
@@ -182,6 +209,7 @@ class ProfileViewController: UIViewController,FUIAuthDelegate {
     }
     func viewProfile(userData:UserProfile)
     {
+        
         DispatchQueue.main.async {
             
             UserDefaults.saveObjectDefault(key: HotelJazConstants.userDefault.userData, value: userData)

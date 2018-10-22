@@ -132,7 +132,7 @@ extension HotelListViewController: UITableViewDelegate , UITableViewDataSource
         if  JazHotels.hotelsImages![(roomStays?[indexPath.row].basicPropertyInfo.hotelCode)!]?[0] != nil{
             let imageURL = URL(string: (JazHotels.hotelsImages![(roomStays?[indexPath.row].basicPropertyInfo.hotelCode)!]?[0])!)
             cell.hotel_img.kf.indicatorType = .activity
-            cell.hotel_img.kf.setImage(with: imageURL, placeholder: UIImage(named: "jazLauncherLogo"), options: [.transition(ImageTransition.fade(0.7))], progressBlock: nil, completionHandler: nil)
+            cell.hotel_img.kf.setImage(with: imageURL, placeholder: UIImage(named: "placeholder"), options: [.transition(ImageTransition.fade(0.7))], progressBlock: nil, completionHandler: nil)
         }
         return cell
     }

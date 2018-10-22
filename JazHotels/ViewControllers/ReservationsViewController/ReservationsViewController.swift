@@ -26,6 +26,9 @@ class ReservationsViewController: UIViewController {
 
     }
     override func viewDidAppear(_ animated: Bool) {
+        let userData = UserDefaults.getObjectDefault(key: HotelJazConstants.userDefault.userData) as? UserProfile
+
+        if userData!.userId != nil{
     UserOperation.getReservations(completion: { (response) in
           self.hotelsReservations = response!
         if self.hotelsReservations.count == 0{
@@ -42,6 +45,10 @@ class ReservationsViewController: UIViewController {
                 
             }
         })
+        }else{
+            self.tableView.isHidden = true
+            self.noDataFoundLbl.isHidden = false
+        }
     
 //        let userData = UserDefaults.getObjectDefault(key: HotelJazConstants.userDefault.userData) as? UserProfile
 //
@@ -100,7 +107,7 @@ extension ReservationsViewController: UITableViewDelegate , UITableViewDataSourc
         cell.hotel_name.text = hotel.hotelName
         let imageURL = URL(string: JazHotels.hotelsImages![hotel.hotelCode!]![0])
         cell.hotel_img.kf.indicatorType = .activity
-        cell.hotel_img.kf.setImage(with: imageURL, placeholder: UIImage(named: "jazLauncherLogo"), options: [.transition(ImageTransition.fade(0.7))], progressBlock: nil, completionHandler: nil)
+        cell.hotel_img.kf.setImage(with: imageURL, placeholder: UIImage(named: "placeholder"), options: [.transition(ImageTransition.fade(0.7))], progressBlock: nil, completionHandler: nil)
         cell.checkInLblTxt.isHidden = false
         cell.checkInLblValue.isHidden = false
         cell.checkInLblValue.text = hotel.checkIn

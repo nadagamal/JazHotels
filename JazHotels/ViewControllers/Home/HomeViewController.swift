@@ -54,7 +54,7 @@ extension HomeViewController:UICollectionViewDelegate,UICollectionViewDataSource
         if JazHotels.hotelsImages![hotel.hotelCode] != nil{
         let imageURL = URL(string: JazHotels.hotelsImages![hotel.hotelCode]![0])
         cell.imgView.kf.indicatorType = .activity
-        cell.imgView.kf.setImage(with: imageURL, placeholder: UIImage(named: "jazLauncherLogo"), options: [.transition(ImageTransition.fade(0.7))], progressBlock: nil, completionHandler: nil)
+        cell.imgView.kf.setImage(with: imageURL, placeholder: UIImage(named: "placeholder"), options: [.transition(ImageTransition.fade(0.7))], progressBlock: nil, completionHandler: nil)
         }
         if hotel.contactInfos != nil && hotel.contactInfos.contactInfo != nil && hotel.contactInfos.contactInfo.addresses != nil && hotel.contactInfos.contactInfo.addresses.address != nil && hotel.contactInfos.contactInfo.addresses.address.addressLine != nil && hotel.contactInfos.contactInfo.addresses.address.addressLine.count>0{
         cell.regionLbl.text = hotel.contactInfos.contactInfo.addresses.address.addressLine[0] + "  -  " + hotel.contactInfos.contactInfo.addresses.address.cityName

@@ -130,8 +130,8 @@
 		525E3781215645B7009EFFB7 /* CROTACancelRS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525E377B215645B6009EFFB7 /* CROTACancelRS.swift */; };
 		525E3782215645B7009EFFB7 /* CRUniqueID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525E377C215645B6009EFFB7 /* CRUniqueID.swift */; };
 		527053802161337C00760D28 /* TopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5270537F2161337C00760D28 /* TopView.xib */; };
-		52705383216159AA00760D28 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52705381216159A900760D28 /* MessageUI.framework */; };
-		52705384216159AA00760D28 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52705382216159A900760D28 /* Messages.framework */; };
+		52705383216159AA00760D28 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52705381216159A900760D28 /* MessageUI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		52705384216159AA00760D28 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52705382216159A900760D28 /* Messages.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		5270538621615B0400760D28 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5270538521615B0300760D28 /* SafariServices.framework */; };
 		5279A5A020FA70F000E94FB1 /* HotelDetailsOverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5279A59F20FA70F000E94FB1 /* HotelDetailsOverviewViewController.swift */; };
 		5279A5A220FA710F00E94FB1 /* HotelDetailsContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5279A5A120FA710F00E94FB1 /* HotelDetailsContactViewController.swift */; };
@@ -140,6 +140,7 @@
 		52A2276B2156942500D39C60 /* CreditCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52A227692156942500D39C60 /* CreditCardCell.xib */; };
 		52A2276C2156942500D39C60 /* CreditCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A2276A2156942500D39C60 /* CreditCardCell.swift */; };
 		52AACCBF2144044D001D8869 /* BookingAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AACCBE2144044D001D8869 /* BookingAPIManager.swift */; };
+		52B5B2332176DF5C008D2961 /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B5B2322176DF5C008D2961 /* ContactUsViewController.swift */; };
 		52B615F720E8847100A1A416 /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B615F620E8847100A1A416 /* XMLDictionary.m */; };
 		52B6163320E891C100A1A416 /* JTextItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B615FA20E891C100A1A416 /* JTextItem.swift */; };
 		52B6163420E891C100A1A416 /* JCancelPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B615FB20E891C100A1A416 /* JCancelPolicy.swift */; };
@@ -581,6 +582,7 @@
 		52A227692156942500D39C60 /* CreditCardCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreditCardCell.xib; sourceTree = "<group>"; };
 		52A2276A2156942500D39C60 /* CreditCardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardCell.swift; sourceTree = "<group>"; };
 		52AACCBE2144044D001D8869 /* BookingAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingAPIManager.swift; sourceTree = "<group>"; };
+		52B5B2322176DF5C008D2961 /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
 		52B615F520E8847100A1A416 /* XMLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLDictionary.h; sourceTree = "<group>"; };
 		52B615F620E8847100A1A416 /* XMLDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLDictionary.m; sourceTree = "<group>"; };
 		52B615F820E884C500A1A416 /* JazHotels-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JazHotels-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -1160,6 +1162,14 @@
 				52A2276A2156942500D39C60 /* CreditCardCell.swift */,
 			);
 			path = CreditCardView;
+			sourceTree = "<group>";
+		};
+		52B5B2312176DF4C008D2961 /* ContactUsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				52B5B2322176DF5C008D2961 /* ContactUsViewController.swift */,
+			);
+			path = ContactUsViewController;
 			sourceTree = "<group>";
 		};
 		52B615F420E8847100A1A416 /* XMLDictionary */ = {
@@ -1758,6 +1768,7 @@
 		9AE61CC720DAE057006160C1 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				52B5B2312176DF4C008D2961 /* ContactUsViewController */,
 				52F2329921588D74002F3494 /* HotelDestinationViewController */,
 				52DAFC9A2147F0C000F8269F /* BookingDetailsViewController */,
 				525206D621478D2800FB4DFF /* BookHotelViewController */,
@@ -2277,6 +2288,7 @@
 				52B616BB20E9341E00A1A416 /* JCDeadline.swift in Sources */,
 				52B6164120E891C100A1A416 /* JEmail.swift in Sources */,
 				9A56889121568FBA003B3026 /* MROccupancy.swift in Sources */,
+				52B5B2332176DF5C008D2961 /* ContactUsViewController.swift in Sources */,
 				5213E78721517DD7003D0DDF /* CBProfileInfo.swift in Sources */,
 				9A8E78D520F8F98E0034C3AF /* ViewController.swift in Sources */,
 				9A56888C21568FBA003B3026 /* MRProfileInfo.swift in Sources */,

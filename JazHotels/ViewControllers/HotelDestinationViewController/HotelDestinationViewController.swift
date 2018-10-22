@@ -76,7 +76,7 @@ extension HotelDestinationViewController:UITableViewDelegate,UITableViewDataSour
         cell.hotel_name.text = hotel.title
         let imageURL = URL(string: hotel.image)
         cell.hotel_img.kf.indicatorType = .activity
-        cell.hotel_img.kf.setImage(with: imageURL, placeholder: UIImage(named: "jazLauncherLogo"), options: [.transition(ImageTransition.fade(0.7))], progressBlock: nil, completionHandler: nil)
+        cell.hotel_img.kf.setImage(with: imageURL, placeholder: UIImage(named: "placeholder"), options: [.transition(ImageTransition.fade(0.7))], progressBlock: nil, completionHandler: nil)
         cell.hotel_place.text = hotel.location
         return cell
     }

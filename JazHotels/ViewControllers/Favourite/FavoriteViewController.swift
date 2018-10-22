@@ -74,7 +74,7 @@ extension FavoriteViewController: UITableViewDelegate , UITableViewDataSource
         cell.hotel_name.text = hotel.hotelName
         let imageURL = URL(string: JazHotels.hotelsImages![hotel.hotelCode]![0])
         cell.hotel_img.kf.indicatorType = .activity
-        cell.hotel_img.kf.setImage(with: imageURL, placeholder: UIImage(named: "jazLauncherLogo"), options: [.transition(ImageTransition.fade(0.7))], progressBlock: nil, completionHandler: nil)
+        cell.hotel_img.kf.setImage(with: imageURL, placeholder: UIImage(named: "placeholder"), options: [.transition(ImageTransition.fade(0.7))], progressBlock: nil, completionHandler: nil)
         
         return cell
     }

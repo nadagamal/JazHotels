@@ -23,7 +23,6 @@ class HotelDetailsViewController: SegmentedPagerTabStripViewController {
         super.viewDidLoad()
         
         settings.style.segmentedControlColor = #colorLiteral(red: 0.9215686275, green: 0.9254901961, blue: 0.9333333333, alpha: 1)
-        
         if JazHotels.hotelsImages![hotel.hotelCode] != nil{
             let images = JazHotels.hotelsImages![hotel.hotelCode]
             for imageStr in images!{
@@ -70,6 +69,9 @@ class HotelDetailsViewController: SegmentedPagerTabStripViewController {
         else{
             self.starView.rating = 0
         }
+        UISegmentedControl.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.white], for: .selected)
+           UISegmentedControl.appearance().tintColor = UIColor(red: 0.0, green: 133.0 / 255.0, blue: 120.0 / 255.0, alpha: 1.0)
+
     }
  
  
@@ -147,14 +149,13 @@ class HotelDetailsViewController: SegmentedPagerTabStripViewController {
     let fullScreenController = slideshow.presentFullScreenController(from:self)
     fullScreenController.slideshow.activityIndicator = DefaultActivityIndicator(style: .white, color: nil)
     }
-    // MARK: - PagerTabStripDataSource
-    
+
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
         let child_1 = HotelDetailsContactViewController.create()
         child_1.hotel = hotel
         let child_2 = HotelDetailsOverviewViewController.create()
         child_2.hotel = hotel
-
+        
         let childViewControllers = [child_2, child_1]
         return childViewControllers
     }

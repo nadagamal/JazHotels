@@ -26,7 +26,7 @@ class RoomDetailsViewController: UIViewController {
         self.roomTitleLbl.text = room.roomDescription.name
         let imageURL = URL(string: (room.roomDescription!.image))
         imgView.kf.indicatorType = .activity
-        imgView.kf.setImage(with: imageURL, placeholder: UIImage(named: "jazLauncherLogo"), options: [.transition(ImageTransition.fade(0.7))], progressBlock: nil, completionHandler: nil)
+        imgView.kf.setImage(with: imageURL, placeholder: UIImage(named: "placeholder"), options: [.transition(ImageTransition.fade(0.7))], progressBlock: nil, completionHandler: nil)
         
     }
     @objc public static func create() -> RoomDetailsViewController {

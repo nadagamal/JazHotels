@@ -316,7 +316,7 @@ extension RatePlansViewController :UITableViewDelegate , UITableViewDataSource
         cell.roomNameLbl.text = room.roomDescription.name
         let imageURL = URL(string: (room.roomDescription!.image))
         cell.imgView.kf.indicatorType = .activity
-        cell.imgView.kf.setImage(with: imageURL, placeholder: UIImage(named: "jazLauncherLogo"), options: [.transition(ImageTransition.fade(0.7))], progressBlock: nil, completionHandler: nil)
+        cell.imgView.kf.setImage(with: imageURL, placeholder: UIImage(named: "placeholder"), options: [.transition(ImageTransition.fade(0.7))], progressBlock: nil, completionHandler: nil)
         return cell
     }
     

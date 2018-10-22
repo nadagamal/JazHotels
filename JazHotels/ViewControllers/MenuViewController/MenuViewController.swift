@@ -133,11 +133,16 @@ extension MenuViewController:UITableViewDataSource,UITableViewDelegate{
                 cell.cellIconImg.image = UIImage(named: "signOut")
             }
         }
-        else if indexPath.row == 1
+        else if indexPath.row == 1 && UserDefaults.isKeyPresentInUserDefaults(key: HotelJazConstants.userDefault.userData)
         {
             cell = tableView.dequeueReusableCell(withIdentifier: "ReservationCell") as! MenuCell
             cell.cellTitleLbl.text = "Reservation"
             cell.cellIconImg.image = #imageLiteral(resourceName: "reservation")
+        }
+        else{
+            cell = tableView.dequeueReusableCell(withIdentifier: "ContactUs") as! MenuCell
+            cell.cellTitleLbl.text = "Contact Us"
+            cell.cellIconImg.image = #imageLiteral(resourceName: "call-answer")
         }
         return cell
         
@@ -149,11 +154,11 @@ extension MenuViewController:UITableViewDataSource,UITableViewDelegate{
         
         if !UserDefaults.isKeyPresentInUserDefaults(key: HotelJazConstants.userDefault.userData)
         {
-            return 1
+            return 2
         }
         else
         {
-            return 2
+            return 3
         }
         
     }

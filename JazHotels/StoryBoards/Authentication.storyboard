@@ -178,6 +178,26 @@
                                     <constraint firstAttribute="height" constant="136" id="kF4-Ut-ROv"/>
                                 </constraints>
                             </imageView>
+                            <button hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PhP-30-jir">
+                                <rect key="frame" x="137.5" y="281.5" width="100" height="40"/>
+                                <color key="backgroundColor" red="0.58431372550000005" green="0.58431372550000005" blue="0.58431372550000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="YXS-65-qBq"/>
+                                    <constraint firstAttribute="height" constant="40" id="iuR-0y-cZ4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="16"/>
+                                <state key="normal" title="SIGN IN">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginBtnAction:" destination="yUg-Rp-nil" eventType="touchUpInside" id="PV7-IF-9VC"/>
+                                </connections>
+                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoSplash" translatesAutoresizingMaskIntoConstraints="NO" id="U3n-ef-Ane">
                                 <rect key="frame" x="102" y="17" width="171" height="48"/>
                                 <constraints>
@@ -256,7 +276,9 @@
                             <constraint firstItem="5rw-du-Moh" firstAttribute="top" secondItem="hJv-bD-KKr" secondAttribute="bottom" constant="17" id="Yvz-f3-wab"/>
                             <constraint firstItem="G8s-Dl-ON8" firstAttribute="trailing" secondItem="5rw-du-Moh" secondAttribute="trailing" id="eED-Dt-5QO"/>
                             <constraint firstItem="hJv-bD-KKr" firstAttribute="leading" secondItem="G8s-Dl-ON8" secondAttribute="leading" id="iSg-Sh-ynl"/>
+                            <constraint firstItem="PhP-30-jir" firstAttribute="centerX" secondItem="G8s-Dl-ON8" secondAttribute="centerX" id="rB6-Du-qWN"/>
                             <constraint firstItem="hJv-bD-KKr" firstAttribute="top" secondItem="G8s-Dl-ON8" secondAttribute="top" id="thD-Kw-CjP"/>
+                            <constraint firstItem="PhP-30-jir" firstAttribute="centerY" secondItem="G8s-Dl-ON8" secondAttribute="centerY" id="yI2-7e-7go"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="G8s-Dl-ON8"/>
                     </view>
@@ -268,6 +290,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="loginBtn" destination="PhP-30-jir" id="7lY-S3-drw"/>
                         <outlet property="tableView" destination="5rw-du-Moh" id="UNM-w7-b3o"/>
                     </connections>
                 </viewController>

@@ -74,29 +74,12 @@ public extension Optional {
         lhs = rhs
     }
 
-    /// SwifterSwift: Assign an optional value to a variable only if the variable is nil.
-    ///
-    ///     var someText: String? = nil
-    ///     let newText = "Foo"
-    ///     let defaultText = "Bar"
-    ///     someText ?= newText //someText is now "Foo" because it was nil before
-    ///     someText ?= defaultText //someText doesn't change its value because it's not nil
-    ///
-    /// - Parameters:
-    ///   - lhs: Any?
-    ///   - rhs: Any?
-    public static func ?= (lhs: inout Optional, rhs: @autoclosure () -> Optional) {
-        if lhs == nil {
-            lhs = rhs()
-        }
-    }
-
 }
 
 // MARK: - Methods (Collection)
 public extension Optional where Wrapped: Collection {
 
-    /// SwifterSwift: Check if optional is nil or empty collection.
+    /// Check if optional is nil or empty collection.
     public var isNilOrEmpty: Bool {
         guard let collection = self else { return true }
         return collection.isEmpty
@@ -106,4 +89,3 @@ public extension Optional where Wrapped: Collection {
 
 // MARK: - Operators
 infix operator ??= : AssignmentPrecedence
-infix operator ?= : AssignmentPrecedence

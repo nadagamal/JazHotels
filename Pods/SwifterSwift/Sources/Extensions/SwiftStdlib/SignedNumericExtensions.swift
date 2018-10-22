@@ -6,35 +6,29 @@
 //  Copyright © 2017 SwifterSwift
 //
 
-#if canImport(Foundation)
-import Foundation
-#endif
-
 // MARK: - Properties
 public extension SignedNumeric {
 
-    /// SwifterSwift: String.
-    public var string: String {
-        return String(describing: self)
-    }
+	/// SwifterSwift: String.
+	public var string: String {
+		return String(describing: self)
+	}
 
-    #if canImport(Foundation)
-    /// SwifterSwift: String with number and current locale currency.
-    public var asLocaleCurrency: String? {
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .currency
-        formatter.locale = Locale.current
+	/// SwifterSwift: String with number and current locale currency.
+	public var asLocaleCurrency: String? {
+		let formatter = NumberFormatter()
+		formatter.numberStyle = .currency
+		formatter.locale = Locale.current
         // swiftlint:disable next force_cast
-        return formatter.string(from: self as! NSNumber)
-    }
-    #endif
+		return formatter.string(from: self as! NSNumber)
+	}
 
 }
 
 // MARK: - Methods
 public extension SignedNumeric {
 
-    #if canImport(Foundation)
+	#if canImport(Foundation)
     /// SwifterSwift: Spelled out representation of a number.
     ///
     ///        print((12.32).spelledOutString()) // prints "twelve point three two"
@@ -50,5 +44,4 @@ public extension SignedNumeric {
         return formatter.string(from: number)
     }
     #endif
-
 }

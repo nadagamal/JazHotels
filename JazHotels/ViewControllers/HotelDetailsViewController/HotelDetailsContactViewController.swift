@@ -42,8 +42,8 @@ class HotelDetailsContactViewController: UITableViewController , IndicatorInfoPr
             locationLbl.text = hotel.contactInfos.contactInfo.addresses.address.addressLine[0] + "  -  " + hotel.contactInfos.contactInfo.addresses.address.cityName
             
         }
-        if hotel.contactInfos != nil && hotel.contactInfos.contactInfo != nil && hotel.contactInfos.contactInfo.phones != nil && hotel.contactInfos.contactInfo.phones.phone != nil && hotel.contactInfos.contactInfo.phones.phoneNumber != nil{
-        phoneLbl.text = hotel.contactInfos.contactInfo.phones.phoneNumber
+        if hotel.contactInfos != nil && hotel.contactInfos.contactInfo != nil && hotel.contactInfos.contactInfo.phones != nil && hotel.contactInfos.contactInfo.phones.phone != nil && hotel.contactInfos.contactInfo.phones.phone.count>0 && hotel.contactInfos.contactInfo.phones.phone[0].phoneNumber != nil{
+        phoneLbl.text = hotel.contactInfos.contactInfo.phones.phone[0].phoneNumber
     }
         if hotel.contactInfos != nil && hotel.contactInfos.contactInfo != nil && hotel.contactInfos.contactInfo.emails != nil && hotel.contactInfos.contactInfo.emails.email != nil{
          mailLbl.text = hotel.contactInfos.contactInfo.emails.email
@@ -95,8 +95,8 @@ class HotelDetailsContactViewController: UITableViewController , IndicatorInfoPr
         }
         else if indexPath.row == 1{
           //phone
-            if hotel.contactInfos.contactInfo.phones.phoneNumber != nil{
-            if let url = URL(string: "tel://" + hotel.contactInfos.contactInfo.phones.phoneNumber) {
+           if hotel.contactInfos.contactInfo != nil && hotel.contactInfos.contactInfo.phones != nil && hotel.contactInfos.contactInfo.phones.phone != nil && hotel.contactInfos.contactInfo.phones.phone.count>0 && hotel.contactInfos.contactInfo.phones.phone[0].phoneNumber != nil{
+            if let url = URL(string: "tel://" + hotel.contactInfos.contactInfo.phones.phone[0].phoneNumber) {
                 UIApplication.shared.openURL(url)
             }
             }

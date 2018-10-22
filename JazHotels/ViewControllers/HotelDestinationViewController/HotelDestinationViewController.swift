@@ -56,10 +56,22 @@ class HotelDestinationViewController: UIViewController {
         var codes = [JHotelDescriptiveContent]()
         for hotel in JazHotels.hotels {
             if text == hotel.hotelName || text == hotel.contactInfos.contactInfo.addresses.address.cityName{
+                if checkHotelCode(hotelCode: hotel.hotelCode, codes: codes){
+                    
+                }else{
                 codes.append(hotel)
+                }
             }
         }
         return codes
+    }
+    func checkHotelCode(hotelCode:String,codes:[JHotelDescriptiveContent]) -> Bool {
+        for hotel in codes {
+            if hotel.hotelCode == hotelCode{
+                return true
+            }
+        }
+        return false
     }
     @IBAction func menuButtonAction(_ sender: Any) {
        

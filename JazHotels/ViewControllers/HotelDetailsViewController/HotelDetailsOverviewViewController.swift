@@ -25,6 +25,9 @@ class HotelDetailsOverviewViewController: UIViewController,IndicatorInfoProvider
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        if hotel.hotelInfo.descriptions.descriptionField.multimediaDescriptions != nil && hotel.hotelInfo.descriptions.descriptionField.multimediaDescriptions.multimediaDescription != nil && hotel.hotelInfo.descriptions.descriptionField.multimediaDescriptions.multimediaDescription[1].textItems.textItemm != nil && hotel.hotelInfo.descriptions.descriptionField.multimediaDescriptions.multimediaDescription.count>1{
+        self.overviewContent.text = hotel.hotelInfo.descriptions.descriptionField.multimediaDescriptions.multimediaDescription[1].textItems.textItemm.descriptionFieldd
+        }
     }
     override func awakeFromNib() {
         super.awakeFromNib()

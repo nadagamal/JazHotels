@@ -45,7 +45,14 @@ class HomeViewController: UIViewController {
         
         return UIStoryboard(name: HotelJazConstants.StoryBoard.mainSB, bundle: Bundle.main).instantiateViewController(withIdentifier: String(describing: self)) as! HomeViewController
     }
-
+    func getHotel(hotelCode:String)->JHotelDescriptiveContent{
+        for hotel in JazHotels.hotels{
+            if hotelCode == hotel.hotelCode{
+                return hotel
+            }
+        }
+        return JHotelDescriptiveContent(fromDictionary: [:])
+    }
 }
 extension HomeViewController:UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -69,7 +76,7 @@ extension HomeViewController:UICollectionViewDelegate,UICollectionViewDataSource
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let hotelDetailsVC = UIStoryboard(name: HotelJazConstants.StoryBoard.mainSB, bundle: nil).instantiateViewController(withIdentifier: "HotelDetailsViewController") as! HotelDetailsViewController
-        let  hotel = hotelList[indexPath.item]
+        let  hotel = getHotel(hotelCode: hotelList[indexPath.item].hotelCode)
         hotelDetailsVC.hotel = hotel
         self.navigationController?.show(hotelDetailsVC, sender: nil)
 

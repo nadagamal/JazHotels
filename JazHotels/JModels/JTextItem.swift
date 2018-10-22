@@ -29,7 +29,7 @@ class JTextItem : NSObject, NSCoding{
 			textItemm = JTextItem(fromDictionary: textItemData)
 		}
 		textItem = [JTextItem]()
-		if let textItemArray = dictionary["TextItem"] as? [[String:Any]]{
+		if let textItemArray = dictionary["TextItems"] as? [[String:Any]]{
 			for dic in textItemArray{
 				let value = JTextItem(fromDictionary: dic)
 				textItem.append(value)
@@ -58,7 +58,7 @@ class JTextItem : NSObject, NSCoding{
 			for textItemElement in textItem {
 				dictionaryElements.append(textItemElement.toDictionary())
 			}
-			dictionary["TextItem"] = dictionaryElements
+			dictionary["TextItems"] = dictionaryElements
 		}
 		if descriptionField != nil{
 			dictionary["Description"] = descriptionFieldd
@@ -75,7 +75,7 @@ class JTextItem : NSObject, NSCoding{
          descriptionField = aDecoder.decodeObject(forKey: "Description") as? JDescription
          title = aDecoder.decodeObject(forKey: "_Title") as? String
          textItemm = aDecoder.decodeObject(forKey: "TextItem") as? JTextItem
-         textItem = aDecoder.decodeObject(forKey :"TextItem") as? [JTextItem]
+         textItem = aDecoder.decodeObject(forKey :"TextItems") as? [JTextItem]
          descriptionFieldd = aDecoder.decodeObject(forKey: "Description") as? String
 
 	}
@@ -96,7 +96,7 @@ class JTextItem : NSObject, NSCoding{
 			aCoder.encode(textItem, forKey: "TextItem")
 		}
 		if textItem != nil{
-			aCoder.encode(textItem, forKey: "TextItem")
+			aCoder.encode(textItem, forKey: "TextItems")
 		}
 		if descriptionFieldd != nil{
 			aCoder.encode(descriptionField, forKey: "Description")

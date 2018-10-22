@@ -79,7 +79,7 @@ class HotelListViewController: UIViewController {
     }
     func getHotelLocation(hotelCode:String)->String{
         for hotel in JazHotels.hotels{
-            if hotel.hotelCode == hotelCode && hotel.contactInfos.contactInfo.addresses.address.addressLine.count>1{
+            if hotel.hotelCode == hotelCode && hotel.contactInfos.contactInfo.addresses.address.addressLine != nil && hotel.contactInfos.contactInfo.addresses.address.addressLine.count>1{
                 let location = hotel.contactInfos.contactInfo.addresses.address.addressLine[1] + "  -  " + hotel.contactInfos.contactInfo.addresses.address.cityName
                 return location
             }

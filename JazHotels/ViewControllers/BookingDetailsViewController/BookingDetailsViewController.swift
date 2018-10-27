@@ -129,7 +129,7 @@ class BookingDetailsViewController: UIViewController,changeBookingDates {
         SVProgressHUD.show()
 
         BookingAPIManager().modifyReservation(numberOfAdults: adultNum ?? "", numberOfChild: childNum ?? "", numberOfRooms: reservationItem.numberOfUnits ?? "", roomTypeCode: reservationItem.roomTypeCode ?? "", ratePlanCode: ratePlanCode, checkInDate: startDate, checkOutDate: endDate, hotelCode: reservationItem.hotelCode ?? "", chainCode: reservationItem.chainCode ?? "", confirmationId: reservationItem.confirmationId ?? "",comments: "") { (response, error) in
-            if response?.Body.OTAHotelResModifyRS.errors != nil && response?.Body.OTAHotelResModifyRS.errors.error != nil && response?.Body.OTAHotelResModifyRS.errors.error.shortText != nil{
+            if response?.Body.OTAHotelResModifyRS != nil && response?.Body.OTAHotelResModifyRS.errors != nil && response?.Body.OTAHotelResModifyRS.errors.error != nil && response?.Body.OTAHotelResModifyRS.errors.error.shortText != nil{
                 DispatchQueue.main.async {
                     SVProgressHUD.dismiss()
                     SCLAlertView().showError("Error", subTitle: response?.Body.OTAHotelResModifyRS.errors.error.shortText ?? "")
@@ -180,7 +180,7 @@ class BookingDetailsViewController: UIViewController,changeBookingDates {
         SVProgressHUD.show()
 
         BookingAPIManager().modifyReservation(numberOfAdults: adultNum, numberOfChild: childNum, numberOfRooms: reservationItem.numberOfUnits ?? "", roomTypeCode: reservationItem.roomTypeCode ?? "", ratePlanCode: ratePlanCode, checkInDate: startDate ?? "", checkOutDate: endDate ?? "", hotelCode: reservationItem.hotelCode ?? "", chainCode: reservationItem.chainCode ?? "", confirmationId: reservationItem.confirmationId ?? "",comments: request) { (response, error) in
-            if (response?.Body.OTAHotelResModifyRS.errors != nil && response?.Body.OTAHotelResModifyRS.errors.error != nil && response?.Body.OTAHotelResModifyRS.errors.error != nil && response?.Body.OTAHotelResModifyRS.errors.error.shortText != nil) || response?.Body.OTAHotelResModifyRS.ResResponseType == "Unsuccessful"{
+            if response?.Body.OTAHotelResModifyRS != nil && ((response?.Body.OTAHotelResModifyRS.errors != nil && response?.Body.OTAHotelResModifyRS.errors.error != nil && response?.Body.OTAHotelResModifyRS.errors.error != nil && response?.Body.OTAHotelResModifyRS.errors.error.shortText != nil) || response?.Body.OTAHotelResModifyRS.ResResponseType == "Unsuccessful"){
                 DispatchQueue.main.async {
                     SVProgressHUD.dismiss()
 

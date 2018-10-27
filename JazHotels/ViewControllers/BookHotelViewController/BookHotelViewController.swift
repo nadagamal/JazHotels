@@ -60,7 +60,7 @@ class BookHotelViewController: UIViewController {
     
     func bookRoom(state:String,completion:  @escaping (_ :CBReservation?) -> Void){
         BookingAPIManager().reserveRoom(numberOfAdults: adultsNum, numberOfChild: childNum, numberOfRooms: roomNum, roomTypeCode: roomType.roomTypeCode, ratePlanCode: ratePlan.ratePlanCode, checkInDate: checkInDate, checkOutDate: checkOutDate, hotelCode: hotelCode, chainCode: chainCode, creditCardNum: userData.userCardPayment?.cardNumber?.replacingOccurrences(of: " ", with: "", options: .literal, range: nil) ?? "", creditCardExpireDate: userData.userCardPayment?.expireDate ?? "", cardNameHolder: userData.userCardPayment?.cardHolderName ?? "", state: state) { (response, error) in
-            if (response?.body.oTAHotelResRS.errors != nil && response?.body.oTAHotelResRS.errors.error != nil && response?.body.oTAHotelResRS.errors.error.shortText != nil){
+            if (response?.body != nil && response?.body.oTAHotelResRS.errors != nil && response?.body.oTAHotelResRS.errors.error != nil && response?.body.oTAHotelResRS.errors.error.shortText != nil){
                 DispatchQueue.main.async {
                     SVProgressHUD.dismiss()
                     SCLAlertView().showError("Error", subTitle: response?.body.oTAHotelResRS.errors.error.shortText ?? "")

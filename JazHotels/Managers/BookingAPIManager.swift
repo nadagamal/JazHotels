@@ -50,7 +50,6 @@ func getReservation(userName:String, pinNumber:String,completion:  @escaping (_ 
     // states are "Initiate" or "commit"
     func reserveRoom(numberOfAdults:String,numberOfChild:String,numberOfRooms:String,roomTypeCode:String,ratePlanCode:String,checkInDate:String,checkOutDate:String,hotelCode:String,chainCode:String,creditCardNum:String,creditCardExpireDate:String,cardNameHolder:String,state:String,completion:  @escaping (_ :CBReservation?, _ :NSError?) -> Void) {
         let userData = UserDefaults.getObjectDefault(key: HotelJazConstants.userDefault.userData) as? UserProfile
-
         var lobj_Request = NSMutableURLRequest(url: NSURL(string: getBaseUrl)! as URL) as URLRequest
         let session = URLSession.shared
         var err: NSError?
@@ -71,8 +70,13 @@ func getReservation(userName:String, pinNumber:String,completion:  @escaping (_ 
             else{
                 let strData = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
                 let outputDic = NSDictionary(xmlString: strData as! String)
+                if outputDic != nil{
                 let obj  =  CBReservation.init(fromDictionary: outputDic as! [String : Any])
                 completion(obj, nil)
+                }else{
+                    completion(CBReservation(fromDictionary: [:]), nil)
+
+                }
                 
             }
             

@@ -128,8 +128,10 @@ class CheckAvailabilityViewController: UIViewController , UIScrollViewDelegate {
                 let formatter = DateFormatter()
                 formatter.dateFormat = "dd MMM, yyyy"
                 self.checkInDateLb.text = formatter.string(from: dt)
-                self.checkoutDateLb.text = formatter.string(from: (dt.tomorrow))
-                self.numberOfNightsLb.text = String(Helper.nightsBetweenDates(startDate: dt, endDate: dt.tomorrow))
+                
+//                self.checkoutDateLb.text = formatter.string(from: (dt.tomorrow))
+               
+                self.numberOfNightsLb.text = String(Helper.nightsBetweenDates(startDate: dt, endDate:  self.checkoutDateLb.text?.toDate(withFormat: "dd MMM, yyyy") ?? dt.tomorrow))
                 self.startDate = self.checkInDateLb.text
                 self.checkInDate = dt
                 self.endDate = self.checkoutDateLb.text

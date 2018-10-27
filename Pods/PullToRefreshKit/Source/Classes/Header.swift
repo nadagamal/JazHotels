@@ -99,13 +99,9 @@ open class DefaultRefreshHeader: UIView, RefreshableHeader {
         }
     }
     
-    #if swift(>=4.2)
-    public let spinner:UIActivityIndicatorView = UIActivityIndicatorView(style: .gray)
-    #else
-    public let spinner:UIActivityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
-    #endif
-    public let textLabel:UILabel = UILabel(frame: CGRect(x: 0,y: 0,width: 140,height: 40))
-    public let imageView:UIImageView = UIImageView(frame: CGRect.zero)
+    open let spinner:UIActivityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+    open let textLabel:UILabel = UILabel(frame: CGRect(x: 0,y: 0,width: 140,height: 40))
+    open let imageView:UIImageView = UIImageView(frame: CGRect.zero)
     open var durationWhenHide = 0.5
     fileprivate var textDic = [RefreshKitHeaderText:String]()
     override init(frame: CGRect) {
@@ -412,11 +408,7 @@ open class RefreshHeaderContainer:UIView{
     func endRefreshing(_ result:RefreshResult,delay:TimeInterval = 0.0){
         self.delegate?.didBeginHideAnimation(result)
         self.delayTimer = Timer(timeInterval: delay, target: self, selector: #selector(RefreshHeaderContainer.updateStateToIdea), userInfo: nil, repeats: false)
-        #if swift(>=4.2)
-        RunLoop.main.add(self.delayTimer!, forMode: RunLoop.Mode.common)
-        #else
         RunLoop.main.add(self.delayTimer!, forMode: RunLoopMode.commonModes)
-        #endif
     }
     func clearTimer(){
         if self.delayTimer != nil{

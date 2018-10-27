@@ -10,11 +10,11 @@ import UIKit
 
 
 open class DefaultRefreshRight:UIView, RefreshableLeftRight {
-    public static func right()->DefaultRefreshRight{
+    open static func right()->DefaultRefreshRight{
         return DefaultRefreshRight(frame: CGRect(x: 0, y: 0, width: PullToRefreshKitConst.defaultRightWidth, height: UIScreen.main.bounds.size.height))
     }
-    public let imageView:UIImageView = UIImageView()
-    public let textLabel:UILabel  = UILabel()
+    open let imageView:UIImageView = UIImageView()
+    open  let textLabel:UILabel  = UILabel()
     fileprivate var textDic = [RefreshKitLeftRightText:String]()
     
     /**
@@ -158,7 +158,7 @@ class RefreshRightContainer:UIView{
     }
     fileprivate func removeObservers(){
         attachedScrollView?.removeObserver(self, forKeyPath: PullToRefreshKitConst.KPathOffSet,context: nil)
-        attachedScrollView?.removeObserver(self, forKeyPath: PullToRefreshKitConst.KPathContentSize,context: nil)
+        attachedScrollView?.removeObserver(self, forKeyPath: PullToRefreshKitConst.KPathOffSet,context: nil)
     }
 
     func handleScrollOffSetChange(_ change: [NSKeyValueChangeKey : Any]?){

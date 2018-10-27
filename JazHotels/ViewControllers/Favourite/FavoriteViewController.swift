@@ -39,10 +39,10 @@ class FavoriteViewController: UIViewController {
             hotelsList = getHotels(codes: list)
             if hotelsList.count == 0{
                 self.noDataFoundLbl.isHidden = false
-                self.tableView.isHidden = true
+//                self.tableView.isHidden = true
             }else{
                 self.noDataFoundLbl.isHidden = true
-                self.tableView.isHidden = false
+//                self.tableView.isHidden = false
             }
             self.tableView.reloadData()
         }

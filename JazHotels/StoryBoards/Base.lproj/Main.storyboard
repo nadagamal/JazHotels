@@ -486,10 +486,10 @@ Iberotel Borg El Arab</string>
                                     <outlet property="delegate" destination="rjc-Ue-DvF" id="Luu-Ur-wFd"/>
                                 </connections>
                             </tableView>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No favorite found in your list" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ly-ee-iX1">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No favorite found in your list" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ly-ee-iX1">
                                 <rect key="frame" x="49.5" y="217.5" width="221.5" height="20"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.45098039220000002" green="0.45098039220000002" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -553,7 +553,7 @@ Iberotel Borg El Arab</string>
                                     <constraint firstAttribute="width" constant="242" id="nKq-RH-2Yc"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="16"/>
-                                <state key="normal" title="Book now">
+                                <state key="normal" title="BOOK NOW">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -852,6 +852,11 @@ Iberotel Borg El Arab</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="HLd-ZW-EId">
+                            <rect key="frame" x="0.0" y="312" width="320" height="27"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
                         <sections>
                             <tableViewSection id="uWJ-Fw-YYK">
                                 <cells>
@@ -999,7 +1004,7 @@ Iberotel Borg El Arab</string>
                                                         <constraint firstAttribute="height" constant="50" id="fy4-ig-awO"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="18"/>
-                                                    <state key="normal" title="Book now">
+                                                    <state key="normal" title="BOOK NOW">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
                                                     <userDefinedRuntimeAttributes>
@@ -3607,42 +3612,42 @@ Jaz hotel group selection of brands include: “Jaz at the Beach”, “Jaz on t
         </scene>
     </scenes>
     <resources>
-        <image name="about-icon" width="21.5" height="21.5"/>
-        <image name="account-icon" width="23.5" height="21.5"/>
-        <image name="availabilty_bg" width="1080" height="1752"/>
-        <image name="back" width="10" height="16.5"/>
-        <image name="call-answer" width="51.200000762939453" height="51.200000762939453"/>
-        <image name="check" width="17.5" height="17.5"/>
-        <image name="checkDone" width="17.5" height="17.5"/>
-        <image name="closed" width="9.5" height="6"/>
+        <image name="about-icon" width="21" height="21"/>
+        <image name="account-icon" width="23" height="21"/>
+        <image name="availabilty_bg" width="540" height="876"/>
+        <image name="back" width="10" height="16"/>
+        <image name="call-answer" width="64" height="64"/>
+        <image name="check" width="17" height="17"/>
+        <image name="checkDone" width="17" height="17"/>
+        <image name="closed" width="9" height="6"/>
         <image name="edit_icon" width="24" height="24"/>
-        <image name="email" width="20" height="15.5"/>
+        <image name="email" width="20" height="15"/>
         <image name="favHeader" width="26" height="24"/>
-        <image name="fb" width="28.5" height="28.5"/>
-        <image name="headBg" width="375" height="202.5"/>
-        <image name="hotel-icon" width="32.5" height="21"/>
-        <image name="hotelLocation" width="18.5" height="22.5"/>
-        <image name="hotelNav" width="32.5" height="21"/>
-        <image name="hotelNavH" width="32.5" height="21"/>
-        <image name="insta" width="28.5" height="28.5"/>
-        <image name="linkedin" width="28.5" height="28.5"/>
-        <image name="location" width="24.5" height="30.5"/>
-        <image name="locationdetails" width="24.5" height="31"/>
-        <image name="logoSplash" width="196.5" height="55"/>
-        <image name="menu" width="32.5" height="30"/>
-        <image name="phone" width="18.5" height="27"/>
-        <image name="pintrest" width="28.5" height="28.5"/>
+        <image name="fb" width="28" height="28"/>
+        <image name="headBg" width="375" height="202"/>
+        <image name="hotel-icon" width="32" height="21"/>
+        <image name="hotelLocation" width="18" height="22"/>
+        <image name="hotelNav" width="32" height="21"/>
+        <image name="hotelNavH" width="32" height="21"/>
+        <image name="insta" width="28" height="28"/>
+        <image name="linkedin" width="28" height="28"/>
+        <image name="location" width="24" height="30"/>
+        <image name="locationdetails" width="24" height="31"/>
+        <image name="logoSplash" width="196" height="55"/>
+        <image name="menu" width="32" height="30"/>
+        <image name="phone" width="18" height="27"/>
+        <image name="pintrest" width="28" height="28"/>
         <image name="placeholder" width="686" height="392"/>
-        <image name="promo" width="22" height="24.5"/>
+        <image name="promo" width="22" height="24"/>
         <image name="reservation" width="26" height="13"/>
-        <image name="review" width="20.5" height="19.5"/>
-        <image name="reviewS" width="20.5" height="19.5"/>
-        <image name="signIn" width="20" height="19.5"/>
+        <image name="review" width="20" height="19"/>
+        <image name="reviewS" width="20" height="19"/>
+        <image name="signIn" width="20" height="19"/>
         <image name="splashBg" width="375" height="667"/>
-        <image name="tw" width="28.5" height="28.5"/>
-        <image name="website" width="18" height="17.5"/>
-        <image name="whatsapp-logo" width="25.600000381469727" height="25.600000381469727"/>
-        <image name="yt" width="28.5" height="28.5"/>
+        <image name="tw" width="28" height="28"/>
+        <image name="website" width="18" height="17"/>
+        <image name="whatsapp-logo" width="32" height="32"/>
+        <image name="yt" width="28" height="28"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="3nH-RJ-33o"/>

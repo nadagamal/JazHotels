@@ -53,8 +53,13 @@ class HotelOnMapViewController: UIViewController {
         DispatchQueue.main.async {
             self.map.addAnnotation(HotelMapDetailsView(hotelName:self.hotelNameTitle ?? "", hotelLocation:self.hotelNameTitle, coordinate:CLLocationCoordinate2D(latitude: self.hotelLocation.latitude, longitude:self.hotelLocation.longtitude), image:#imageLiteral(resourceName: "img")))
             let myAnnotation: MKPointAnnotation = MKPointAnnotation()
-            myAnnotation.coordinate = CLLocationCoordinate2DMake(self.hotelLocation.latitude, self.hotelLocation.longtitude);
+            myAnnotation.coordinate = CLLocationCoordinate2DMake(self.hotelLocation.latitude, self.hotelLocation.longtitude)
             myAnnotation.title = self.hotelNameTitle
+            let location = CLLocationCoordinate2DMake(self.hotelLocation.latitude, self.hotelLocation.longtitude)
+            let span = MKCoordinateSpanMake(0.8, 0.8)
+
+            let region = MKCoordinateRegionMake(location, span)
+            self.map.setRegion(region, animated: true)
             
         }
         
@@ -68,9 +73,7 @@ class HotelOnMapViewController: UIViewController {
         {
             if let location =  JazHotels.hotelsCoords![(hotel.basicPropertyInfo.hotelCode)!]
             {
-
                 hotelsLocation.append(Location(latitude: Double(location[0] )! , longtitude: Double(location[1] )!))
-                
             }
         }
         
@@ -88,6 +91,11 @@ class HotelOnMapViewController: UIViewController {
             }
 
         }
+        let location = CLLocationCoordinate2DMake(self.hotelsLocation[0].latitude, self.hotelsLocation[0].longtitude)
+        let span = MKCoordinateSpanMake(0.8, 0.8)
+        
+        let region = MKCoordinateRegionMake(location, span)
+        self.map.setRegion(region, animated: true)
 //        NotificationCenter.default.removeObserver(self, name: Notification.Name("getHotelListInfo"), object: nil)
 
         

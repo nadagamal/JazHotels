@@ -6,9 +6,10 @@
 //  Copyright © 2017 SwifterSwift
 //
 
-#if canImport(UIKit)  && !os(watchOS)
+#if canImport(UIKit)
 import UIKit
 
+#if !os(watchOS)
 // MARK: - Methods
 public extension UIStoryboard {
 
@@ -19,13 +20,15 @@ public extension UIStoryboard {
         return UIStoryboard(name: name, bundle: bundle)
     }
 
-    /// SwifterSwift: Instantiate a UIViewController using its class name
-    ///
-    /// - Parameter name: UIViewController type
-    /// - Returns: The view controller corresponding to specified class name
-    public func instantiateViewController<T: UIViewController>(withClass name: T.Type) -> T? {
-        return instantiateViewController(withIdentifier: String(describing: name)) as? T
-    }
+	/// SwifterSwift: Instantiate a UIViewController using its class name
+	///
+	/// - Parameter name: UIViewController type
+	/// - Returns: The view controller corresponding to specified class name
+	public func instantiateViewController<T: UIViewController>(withClass name: T.Type) -> T? {
+		return instantiateViewController(withIdentifier: String(describing: name)) as? T
+	}
 
 }
+#endif
+
 #endif

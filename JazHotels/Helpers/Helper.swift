@@ -154,7 +154,10 @@ class  Helper  {
         return 0
         
     }
-    
+   static func randomString(length: Int) -> String {
+        let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        return String((0...length-1).map{ _ in letters.randomElement()! })
+    }
     static func getHotelNamesAndIds(hotelArray:[JHotelDescriptiveContent]) ->([String]?,[Int]?)
     {
         var hotelsName:[String] = []

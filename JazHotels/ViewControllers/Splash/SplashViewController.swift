@@ -34,27 +34,26 @@ class SplashViewController: UIViewController {
         }
         else {
             readHotelsJSON()
-            ServiceManager().getHotels { (data, error) in
-                if error != nil{
-                    DispatchQueue.main.async {
-                        self.activityIndicator .stopAnimating()
-//                        SCLAlertView.showRetryCustomAlertWithMessage(message: "Internet Connection Error") { (response) in
-//                            self.viewDidLoad()
-//                        }
-                    }
+
+        }
+        ServiceManager().getHotels { (data, error) in
+            if error != nil{
+                DispatchQueue.main.async {
+                    self.activityIndicator .stopAnimating()
+           
                 }
-                else{
-                    DispatchQueue.main.async {
-                        JazHotels.hotels = data
-                        if data != nil{
-                            let dataa = NSKeyedArchiver.archivedData(withRootObject: data!)
-                            UserDefaults.standard.set(dataa, forKey: "Hotels")
-                            self.activityIndicator .stopAnimating()
-                            (JazHotels.hotelsName,JazHotels.hotelsCode) = Helper.getHotelNamesAndIds(hotelArray: JazHotels.hotels)
-                        }
-                      //  self.setRootViewController()
-                        
+            }
+            else{
+                DispatchQueue.main.async {
+                    JazHotels.hotels = data
+                    if data != nil{
+                        let dataa = NSKeyedArchiver.archivedData(withRootObject: data!)
+                        UserDefaults.standard.set(dataa, forKey: "Hotels")
+                        self.activityIndicator .stopAnimating()
+                        (JazHotels.hotelsName,JazHotels.hotelsCode) = Helper.getHotelNamesAndIds(hotelArray: JazHotels.hotels)
                     }
+                    //  self.setRootViewController()
+                    
                 }
             }
         }

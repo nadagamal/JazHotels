@@ -27,9 +27,9 @@ class HotelDetailsViewController: SegmentedPagerTabStripViewController {
             let images = JazHotels.hotelsImages![hotel.hotelCode]
             for imageStr in images!{
                 kingfisherSource.append(KingfisherSource(urlString:imageStr)!)
-                if kingfisherSource.count>4{
-                    break
-                }
+//                if kingfisherSource.count>4{
+//                    break
+//                }
             }
         }
         slideshow.slideshowInterval = 10.0

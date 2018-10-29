@@ -30,7 +30,7 @@ import UIKit
      已经开始执行刷新逻辑，在一次刷新中，只会调用一次
      */
     func didBeginRefreshing()
-    
+   
     /**
      当Scroll触发刷新，这个方法返回是否需要刷新（比如你只想要点击刷新）
      */
@@ -77,11 +77,15 @@ public enum RefreshMode{
 }
 
 open class DefaultRefreshFooter:UIView, RefreshableFooter{
-    open static func footer()-> DefaultRefreshFooter{
+    public static func footer()-> DefaultRefreshFooter{
         return DefaultRefreshFooter()
     }
-    open let spinner:UIActivityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
-    open  let textLabel:UILabel = UILabel(frame: CGRect(x: 0,y: 0,width: 140,height: 40))
+    #if swift(>=4.2)
+    public let spinner:UIActivityIndicatorView = UIActivityIndicatorView(style: .gray)
+    #else
+    public let spinner:UIActivityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+    #endif
+    public  let textLabel:UILabel = UILabel(frame: CGRect(x: 0,y: 0,width: 140,height: 40))
     /// 触发刷新的模式
     open var refreshMode = RefreshMode.scrollAndTap{
         didSet{
@@ -217,6 +221,12 @@ class RefreshFooterContainer:UIView{
                 DispatchQueue.main.async(execute: {
                     self.delegate?.didBeginRefreshing()
                     self.refreshAction?()
+                    if self.attachedScrollView.footerAlwaysAtBottom{
+                        self.frame = CGRect(x: 0,
+                                            y: self.yFooter(),
+                                            width: self.frame.size.width,
+                                            height: self.frame.size.height)
+                    }
                 })
             }else if newValue == .noMoreData{
                 self.delegate?.didUpdateToNoMoreData()
@@ -298,8 +308,8 @@ class RefreshFooterContainer:UIView{
                 guard newOffset?.y > oldOffset?.y else{
                     return
                 }
-                let shouldStart = self.delegate?.shouldBeginRefreshingWhenScroll()
-                guard shouldStart! else{
+                let shouldStart = self.delegate?.shouldBeginRefreshingWhenScroll() ?? false
+                guard shouldStart else{
                     return
                 }
                 beginRefreshing()
@@ -316,16 +326,16 @@ class RefreshFooterContainer:UIView{
             let contentSize = attachedScrollView.contentSize
             if scrollInset.top + contentSize.height <= attachedScrollView.frame.height{
                 if scrollOffset.y >= -1 * scrollInset.top {
-                    let shouldStart = self.delegate?.shouldBeginRefreshingWhenScroll()
-                    guard shouldStart! else{
+                    let shouldStart = self.delegate?.shouldBeginRefreshingWhenScroll() ?? false
+                    guard shouldStart else{
                         return
                     }
                     beginRefreshing()
                 }
             }else{
                 if scrollOffset.y > contentSize.height + scrollInset.bottom - attachedScrollView.frame.height {
-                    let shouldStart = self.delegate?.shouldBeginRefreshingWhenScroll()
-                    guard shouldStart! else{
+                    let shouldStart = self.delegate?.shouldBeginRefreshingWhenScroll() ?? false
+                    guard shouldStart else{
                         return
                     }
                     beginRefreshing()
@@ -333,8 +343,20 @@ class RefreshFooterContainer:UIView{
             }
         }
     }
+    func yFooter()->CGFloat{
+        if state == .refreshing {
+            return max(self.attachedScrollView.contentSize.height - self.frame.size.height,
+                       self.attachedScrollView.frame.height)
+        }else{
+            return max(self.attachedScrollView.contentSize.height, self.attachedScrollView.frame.height)
+        }
+    }
     func handleContentSizeChange(_ change: [NSKeyValueChangeKey : Any]?){
-        self.frame = CGRect(x: 0,y: self.attachedScrollView.contentSize.height,width: self.frame.size.width,height: self.frame.size.height)
+        if self.attachedScrollView.footerAlwaysAtBottom {
+            self.frame = CGRect(x: 0,y:yFooter() ,width: self.frame.size.width,height: self.frame.size.height)
+        }else{
+            self.frame = CGRect(x: 0,y: self.attachedScrollView.contentSize.height,width: self.frame.size.width,height: self.frame.size.height)
+        }
     }
 // MARK: - KVO -
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {

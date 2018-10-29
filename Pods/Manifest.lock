@@ -7,73 +7,92 @@ PODS:
   - Bolts/AppLinks (1.9.0):
     - Bolts/Tasks
   - Bolts/Tasks (1.9.0)
-  - BoringSSL (10.0.5):
-    - BoringSSL/Implementation (= 10.0.5)
-    - BoringSSL/Interface (= 10.0.5)
-  - BoringSSL/Implementation (10.0.5):
-    - BoringSSL/Interface (= 10.0.5)
-  - BoringSSL/Interface (10.0.5)
+  - BoringSSL (10.0.6):
+    - BoringSSL/Implementation (= 10.0.6)
+    - BoringSSL/Interface (= 10.0.6)
+  - BoringSSL/Implementation (10.0.6):
+    - BoringSSL/Interface (= 10.0.6)
+  - BoringSSL/Interface (10.0.6)
   - BSKeyboardControls (2.2)
   - Caishen (2.1.2)
   - CardIO (5.4.1)
   - Cosmos (15.0.0)
   - DatePickerDialog (2.0)
-  - DynamicBlurView (2.0.2)
-  - FBSDKCoreKit (4.35.0):
-    - Bolts (~> 1.7)
-  - FBSDKLoginKit (4.35.0):
+  - DynamicBlurView (3.0.1)
+  - FBSDKCoreKit (4.38.0):
+    - Bolts (~> 1.9)
+  - FBSDKLoginKit (4.38.0):
     - FBSDKCoreKit
-  - Firebase/Auth (5.4.1):
+  - Firebase/Auth (5.11.0):
     - Firebase/CoreOnly
-    - FirebaseAuth (= 5.0.2)
-  - Firebase/Core (5.4.1):
+    - FirebaseAuth (= 5.0.4)
+  - Firebase/Core (5.11.0):
     - Firebase/CoreOnly
-    - FirebaseAnalytics (= 5.0.1)
-  - Firebase/CoreOnly (5.4.1):
-    - FirebaseCore (= 5.0.6)
-  - Firebase/Firestore (5.4.1):
+    - FirebaseAnalytics (= 5.3.0)
+  - Firebase/CoreOnly (5.11.0):
+    - FirebaseCore (= 5.1.6)
+  - Firebase/Firestore (5.11.0):
     - Firebase/CoreOnly
-    - FirebaseFirestore (= 0.12.6)
-  - FirebaseAnalytics (5.0.1):
-    - FirebaseCore (~> 5.0)
-    - FirebaseInstanceID (~> 3.0)
-    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
+    - FirebaseFirestore (= 0.13.6)
+  - FirebaseAnalytics (5.3.0):
+    - FirebaseCore (~> 5.1)
+    - FirebaseInstanceID (~> 3.3)
+    - GoogleAppMeasurement (~> 5.3)
+    - GoogleUtilities/AppDelegateSwizzler (~> 5.2)
+    - GoogleUtilities/MethodSwizzler (~> 5.2)
+    - GoogleUtilities/Network (~> 5.2)
+    - "GoogleUtilities/NSData+zlib (~> 5.2)"
     - nanopb (~> 0.3)
-  - FirebaseAuth (5.0.2):
+  - FirebaseAuth (5.0.4):
+    - FirebaseAuthInterop (~> 1.0)
     - FirebaseCore (~> 5.0)
+    - GoogleUtilities/Environment (~> 5.2)
     - GTMSessionFetcher/Core (~> 1.1)
-  - FirebaseCore (5.0.6):
-    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
-  - FirebaseFirestore (0.12.6):
-    - FirebaseCore (~> 5.0)
-    - FirebaseFirestore/abseil-cpp (= 0.12.6)
+  - FirebaseAuthInterop (1.0.0)
+  - FirebaseCore (5.1.6):
+    - GoogleUtilities/Logger (~> 5.2)
+  - FirebaseFirestore (0.13.6):
+    - FirebaseAuthInterop (~> 1.0)
+    - FirebaseCore (~> 5.1)
+    - FirebaseFirestore/abseil-cpp (= 0.13.6)
+    - "gRPC-C++ (~> 0.0.3)"
     - gRPC-ProtoRPC (~> 1.0)
-    - leveldb-library (~> 1.18)
+    - leveldb-library (~> 1.20)
     - nanopb (~> 0.3.8)
     - Protobuf (~> 3.1)
-  - FirebaseFirestore/abseil-cpp (0.12.6):
-    - FirebaseCore (~> 5.0)
+  - FirebaseFirestore/abseil-cpp (0.13.6):
+    - FirebaseAuthInterop (~> 1.0)
+    - FirebaseCore (~> 5.1)
+    - "gRPC-C++ (~> 0.0.3)"
     - gRPC-ProtoRPC (~> 1.0)
-    - leveldb-library (~> 1.18)
+    - leveldb-library (~> 1.20)
     - nanopb (~> 0.3.8)
     - Protobuf (~> 3.1)
-  - FirebaseInstanceID (3.1.1):
-    - FirebaseCore (~> 5.0)
-  - FirebaseUI/Auth (5.1.3):
+  - FirebaseInstanceID (3.3.0):
+    - FirebaseCore (~> 5.1)
+    - GoogleUtilities/Environment (~> 5.3)
+    - GoogleUtilities/UserDefaults (~> 5.3)
+  - FirebaseUI/Auth (5.2.2):
     - Firebase/Auth (~> 5.0)
-  - FirebaseUI/Facebook (5.1.3):
+  - FirebaseUI/Facebook (5.2.2):
     - FBSDKLoginKit (~> 4.0)
     - FirebaseUI/Auth
-  - FirebaseUI/Google (5.1.3):
+  - FirebaseUI/Google (5.2.2):
     - FirebaseUI/Auth
     - GoogleSignIn (~> 4.0)
-  - FirebaseUI/Phone (5.1.3):
+  - FirebaseUI/Phone (5.2.2):
     - FirebaseUI/Auth
-  - FirebaseUI/Twitter (5.1.3):
+  - FirebaseUI/Twitter (5.2.2):
     - FirebaseUI/Auth
     - TwitterKit (~> 3.0)
   - FormTextField (2.0.1)
-  - GoogleSignIn (4.1.2):
+  - GoogleAppMeasurement (5.3.0):
+    - GoogleUtilities/AppDelegateSwizzler (~> 5.2)
+    - GoogleUtilities/MethodSwizzler (~> 5.2)
+    - GoogleUtilities/Network (~> 5.2)
+    - "GoogleUtilities/NSData+zlib (~> 5.2)"
+    - nanopb (~> 0.3)
+  - GoogleSignIn (4.3.0):
     - "GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)"
     - "GoogleToolboxForMac/NSString+URLArguments (~> 2.1)"
     - GTMOAuth2 (~> 1.0)
@@ -81,34 +100,58 @@ PODS:
   - GoogleToolboxForMac/DebugUtils (2.1.4):
     - GoogleToolboxForMac/Defines (= 2.1.4)
   - GoogleToolboxForMac/Defines (2.1.4)
-  - "GoogleToolboxForMac/NSData+zlib (2.1.4)":
-    - GoogleToolboxForMac/Defines (= 2.1.4)
   - "GoogleToolboxForMac/NSDictionary+URLArguments (2.1.4)":
     - GoogleToolboxForMac/DebugUtils (= 2.1.4)
     - GoogleToolboxForMac/Defines (= 2.1.4)
     - "GoogleToolboxForMac/NSString+URLArguments (= 2.1.4)"
   - "GoogleToolboxForMac/NSString+URLArguments (2.1.4)"
-  - gRPC (1.13.0):
-    - gRPC-RxLibrary (= 1.13.0)
-    - gRPC/Main (= 1.13.0)
-  - gRPC-Core (1.13.0):
-    - gRPC-Core/Implementation (= 1.13.0)
-    - gRPC-Core/Interface (= 1.13.0)
-  - gRPC-Core/Implementation (1.13.0):
-    - BoringSSL (~> 10.0)
-    - gRPC-Core/Interface (= 1.13.0)
+  - GoogleUtilities/AppDelegateSwizzler (5.3.4):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Network
+  - GoogleUtilities/Environment (5.3.4)
+  - GoogleUtilities/Logger (5.3.4):
+    - GoogleUtilities/Environment
+  - GoogleUtilities/MethodSwizzler (5.3.4):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/Network (5.3.4):
+    - GoogleUtilities/Logger
+    - "GoogleUtilities/NSData+zlib"
+    - GoogleUtilities/Reachability
+  - "GoogleUtilities/NSData+zlib (5.3.4)"
+  - GoogleUtilities/Reachability (5.3.4):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/UserDefaults (5.3.4):
+    - GoogleUtilities/Logger
+  - gRPC (1.14.0):
+    - gRPC-RxLibrary (= 1.14.0)
+    - gRPC/Main (= 1.14.0)
+  - "gRPC-C++ (0.0.3)":
+    - "gRPC-C++/Implementation (= 0.0.3)"
+    - "gRPC-C++/Interface (= 0.0.3)"
+  - "gRPC-C++/Implementation (0.0.3)":
+    - "gRPC-C++/Interface (= 0.0.3)"
+    - gRPC-Core (= 1.14.0)
     - nanopb (~> 0.3)
-  - gRPC-Core/Interface (1.13.0)
-  - gRPC-ProtoRPC (1.13.0):
-    - gRPC-ProtoRPC/Main (= 1.13.0)
-  - gRPC-ProtoRPC/Main (1.13.0):
-    - gRPC (= 1.13.0)
-    - gRPC-RxLibrary (= 1.13.0)
+  - "gRPC-C++/Interface (0.0.3)"
+  - gRPC-Core (1.14.0):
+    - gRPC-Core/Implementation (= 1.14.0)
+    - gRPC-Core/Interface (= 1.14.0)
+  - gRPC-Core/Implementation (1.14.0):
+    - BoringSSL (~> 10.0)
+    - gRPC-Core/Interface (= 1.14.0)
+    - nanopb (~> 0.3)
+  - gRPC-Core/Interface (1.14.0)
+  - gRPC-ProtoRPC (1.14.0):
+    - gRPC-ProtoRPC/Main (= 1.14.0)
+  - gRPC-ProtoRPC/Main (1.14.0):
+    - gRPC (= 1.14.0)
+    - gRPC-RxLibrary (= 1.14.0)
     - Protobuf (~> 3.0)
-  - gRPC-RxLibrary (1.13.0)
-  - gRPC/Main (1.13.0):
-    - gRPC-Core (= 1.13.0)
-    - gRPC-RxLibrary (= 1.13.0)
+  - gRPC-RxLibrary (1.14.0)
+  - gRPC/Main (1.14.0):
+    - gRPC-Core (= 1.14.0)
+    - gRPC-RxLibrary (= 1.14.0)
   - GTMOAuth2 (1.1.6):
     - GTMSessionFetcher (~> 1.1)
   - GTMSessionFetcher (1.2.0):
@@ -116,62 +159,62 @@ PODS:
   - GTMSessionFetcher/Core (1.2.0)
   - GTMSessionFetcher/Full (1.2.0):
     - GTMSessionFetcher/Core (= 1.2.0)
-  - HCFramework (1.2.9)
+  - HCFramework (1.2.10)
   - HCMapInfoView (1.0.0):
     - HCFramework
-  - ImageSlideshow (1.6.1):
-    - ImageSlideshow/Core (= 1.6.1)
-  - ImageSlideshow/Core (1.6.1)
-  - ImageSlideshow/Kingfisher (1.6.1):
+  - ImageSlideshow (1.7.0):
+    - ImageSlideshow/Core (= 1.7.0)
+  - ImageSlideshow/Core (1.7.0)
+  - ImageSlideshow/Kingfisher (1.7.0):
     - ImageSlideshow/Core
     - Kingfisher (> 3.0)
-  - iOSDropDown (0.2.4)
-  - IQKeyboardManagerSwift (6.1.1)
-  - Kingfisher (4.8.1)
+  - iOSDropDown (0.2.6)
+  - IQKeyboardManagerSwift (6.2.0)
+  - Kingfisher (4.10.0)
   - leveldb-library (1.20)
   - LSDialogViewController (1.0.0)
-  - McPicker (1.0.0)
-  - nanopb (0.3.8):
-    - nanopb/decode (= 0.3.8)
-    - nanopb/encode (= 0.3.8)
-  - nanopb/decode (0.3.8)
-  - nanopb/encode (0.3.8)
-  - NVActivityIndicatorView (4.3.0):
-    - NVActivityIndicatorView/Presenter (= 4.3.0)
-  - NVActivityIndicatorView/Presenter (4.3.0)
+  - McPicker (2.0.0)
+  - nanopb (0.3.901):
+    - nanopb/decode (= 0.3.901)
+    - nanopb/encode (= 0.3.901)
+  - nanopb/decode (0.3.901)
+  - nanopb/encode (0.3.901)
+  - NVActivityIndicatorView (4.4.0):
+    - NVActivityIndicatorView/Presenter (= 4.4.0)
+  - NVActivityIndicatorView/Presenter (4.4.0)
   - ObjectMapper (3.3.0)
-  - PopupDialog (0.8.0):
-    - DynamicBlurView (~> 2.0)
-  - Protobuf (3.6.0)
-  - PullToRefreshKit (0.8.6)
+  - PopupDialog (0.9.1):
+    - DynamicBlurView (~> 3.0.1)
+  - Protobuf (3.6.1)
+  - PullToRefreshKit (0.8.8)
   - SCLAlertView (0.8)
   - SIAlertView (1.3)
-  - SideMenu (4.0.0)
-  - SideMenuSwift (0.4.1)
-  - SkyFloatingLabelTextField (3.5.1)
+  - SideMenu (5.0.1)
+  - SideMenuSwift (1.0.0)
+  - SkyFloatingLabelTextField (3.6.0)
   - SVProgressHUD (2.2.5)
-  - SwifterSwift (4.4.0):
-    - SwifterSwift/AppKit (= 4.4.0)
-    - SwifterSwift/CoreGraphics (= 4.4.0)
-    - SwifterSwift/CoreLocation (= 4.4.0)
-    - SwifterSwift/Foundation (= 4.4.0)
-    - SwifterSwift/MapKit (= 4.4.0)
-    - SwifterSwift/SpriteKit (= 4.4.0)
-    - SwifterSwift/SwiftStdlib (= 4.4.0)
-    - SwifterSwift/UIKit (= 4.4.0)
-  - SwifterSwift/AppKit (4.4.0)
-  - SwifterSwift/CoreGraphics (4.4.0)
-  - SwifterSwift/CoreLocation (4.4.0)
-  - SwifterSwift/Foundation (4.4.0)
-  - SwifterSwift/MapKit (4.4.0)
-  - SwifterSwift/SpriteKit (4.4.0)
-  - SwifterSwift/SwiftStdlib (4.4.0)
-  - SwifterSwift/UIKit (4.4.0)
-  - TTSegmentedControl (0.4.4)
+  - SwifterSwift (4.6.0):
+    - SwifterSwift/AppKit (= 4.6.0)
+    - SwifterSwift/CoreGraphics (= 4.6.0)
+    - SwifterSwift/CoreLocation (= 4.6.0)
+    - SwifterSwift/Foundation (= 4.6.0)
+    - SwifterSwift/MapKit (= 4.6.0)
+    - SwifterSwift/SpriteKit (= 4.6.0)
+    - SwifterSwift/SwiftStdlib (= 4.6.0)
+    - SwifterSwift/UIKit (= 4.6.0)
+  - SwifterSwift/AppKit (4.6.0)
+  - SwifterSwift/CoreGraphics (4.6.0)
+  - SwifterSwift/CoreLocation (4.6.0)
+  - SwifterSwift/Foundation (4.6.0)
+  - SwifterSwift/MapKit (4.6.0)
+  - SwifterSwift/SpriteKit (4.6.0)
+  - SwifterSwift/SwiftStdlib (4.6.0)
+  - SwifterSwift/UIKit (4.6.0)
+  - TTSegmentedControl (0.4.7)
   - TwitterCore (3.2.0)
-  - TwitterKit (3.4.0):
+  - TwitterKit (3.4.1):
     - TwitterCore (>= 3.1.0)
-  - XLPagerTabStrip (8.0.1)
+  - XLPagerTabStrip (8.1.0)
   - ZAlertView (1.0.4)
 
 DEPENDENCIES:
@@ -220,7 +263,7 @@ DEPENDENCIES:
   - ZAlertView
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - ACFloatingTextfield-Swift
     - Alamofire
     - Bolts
@@ -236,14 +279,18 @@ SPEC REPOS:
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuth
+    - FirebaseAuthInterop
     - FirebaseCore
     - FirebaseFirestore
     - FirebaseInstanceID
     - FirebaseUI
     - FormTextField
+    - GoogleAppMeasurement
     - GoogleSignIn
     - GoogleToolboxForMac
+    - GoogleUtilities
     - gRPC
+    - "gRPC-C++"
     - gRPC-Core
     - gRPC-ProtoRPC
     - gRPC-RxLibrary
@@ -281,59 +328,63 @@ SPEC CHECKSUMS:
   ACFloatingTextfield-Swift: df075d5ed5d441d8603f985fc106ec7ebe0c673f
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
-  BoringSSL: cf3f1793eb6e3c445c4d150456341f149c268a35
+  BoringSSL: e10f92a27043805c01071fe815a5cd98ae8212e7
   BSKeyboardControls: b701935e789961102e3f20063bba7185800a2d3f
   Caishen: 5f8195411da0f53862a246db5fc219a8db105924
   CardIO: 56983b39b62f495fc6dae9ad7cf875143df06443
   Cosmos: a6dbd3d0baa0cc8f51f8598f7508d5a09d0a9ade
   DatePickerDialog: 5e1c24d9fe6506cd45dbc573eed7b0a251b1c09d
-  DynamicBlurView: aa6db4defc6e537eb86fc5e58dd3991666178399
-  FBSDKCoreKit: 1a5b2e3ceb5ca827a53c54aa5f4a3480efff80d2
-  FBSDKLoginKit: 00a3d65d1226852f9d76dcddff01981e5e6d9c38
-  Firebase: 355bd535bfdacaa82a7fe8d9784115edefd6fc03
-  FirebaseAnalytics: b3628aea54c50464c32c393fb2ea032566e7ecc2
-  FirebaseAuth: 096e457cdd4274412a66c4a35874787e411f5a03
-  FirebaseCore: 4c28e3b9708ba48a765e76515f913a71596eb5dd
-  FirebaseFirestore: d4a3a7787624e612298a320da95935b8dc036c1d
-  FirebaseInstanceID: f3f0657372592ecdfdfe2cac604a5a75758376a6
-  FirebaseUI: 6d3f86249a4de8288424e154c9ff1a976aae3910
+  DynamicBlurView: b1df5415f9bd31897549e5d7077e5ec120a4d636
+  FBSDKCoreKit: 2ab7fdbf600dc6b628ba7a49aa29d357a7b4c74e
+  FBSDKLoginKit: 634fa27e72e33620eb6389253337342c03d4a407
+  Firebase: b48f9e653da971ecce5b8c749684bc8bb2d26bd3
+  FirebaseAnalytics: 63202d2665de4e6adcbdce189135255d8b5962ba
+  FirebaseAuth: 504b198ceb3472dca5c65bb95544ea44cfc9439e
+  FirebaseAuthInterop: 0ffa57668be100582bb7643d4fcb7615496c41fc
+  FirebaseCore: d16552f06821489ce1affe2e5e3e5593402ddfe3
+  FirebaseFirestore: 162502df850b584126c609f3449acfb7230d8c1a
+  FirebaseInstanceID: e2fa4cb35ef5558c200f7f0ad8a53e212215f93e
+  FirebaseUI: 09519bf436a055cd696bf68687d624423150e4c0
   FormTextField: 061cd39ee77d5fb3d87b2e5a00728e2c874b3904
-  GoogleSignIn: d9ef55b10f0aa401a5de2747f59b725e4b9732ac
+  GoogleAppMeasurement: 5029d78f2b438bd30ffb44e6c558b57c21622727
+  GoogleSignIn: 11183592dc63e105475c7305a325045ff95e02b7
   GoogleToolboxForMac: 91c824d21e85b31c2aae9bb011c5027c9b4e738f
-  gRPC: 81b990caa01d7c32605d300c2ffd1b5ba0ef9e49
-  gRPC-Core: a56b086a8ef5ced6f6ba5be5bc0a63fca185015a
-  gRPC-ProtoRPC: 842797fbe05dfcf891afb4a5048e5ccf5f06ef86
-  gRPC-RxLibrary: fa6852f98d6ec0b73c0ec2f6406c26943099d501
+  GoogleUtilities: abb092d2c12e817fa3e0e7b274987dd72fb86ec3
+  gRPC: 9d4c549f37c7cef22478634bac7a0405b6e3dbfb
+  "gRPC-C++": ee0b01db3122f0b6c2be28b5b11039f62fa15fe6
+  gRPC-Core: f4836515817c0eb479aeeb9cc27c91c4ba62a9f6
+  gRPC-ProtoRPC: 76f6053639a842e1fb45fa82aa598bf3f4d9f66f
+  gRPC-RxLibrary: 3c305f32155024b116b780f389323c73a28197e6
   GTMOAuth2: c77fe325e4acd453837e72d91e3b5f13116857b2
   GTMSessionFetcher: 0c4baf0a73acd0041bf9f71ea018deedab5ea84e
-  HCFramework: c2cc43840b694b435df171e6c02e7f92cbf0be3c
+  HCFramework: 4188c54d5c9b5fe8a20feb66380cca27c1f80511
   HCMapInfoView: 7613d773f231920a8f75d844bcdf402b5f9b6e56
-  ImageSlideshow: f0f33e1a20668e83d77f5fb7729e4ae4437c0759
-  iOSDropDown: 6d928eddd336c7bc698ad0ba4b324ce3d2d43c59
-  IQKeyboardManagerSwift: 977affaeb4d6e971975c7790a6850f31d38f1207
-  Kingfisher: 868c1149679a7ab6869be118faa9b5aed154aaf0
+  ImageSlideshow: f8eec5e37a980f60923b585ff23b0e140fd24018
+  iOSDropDown: 90608a7270234c503260ef13314907b6703b39aa
+  IQKeyboardManagerSwift: b07ccf9d8cafe993dcd6cb794eb4ba34611a0c4e
+  Kingfisher: 43c4b802d8b5256cf1f4379e9cd10b329be6d3e2
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   LSDialogViewController: d493fb4ef63654c5a950069a1e2bfb0cb2127f45
-  McPicker: 130183cd3d22fc6933ea9e63c5a0d0d1becc0122
-  nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
-  NVActivityIndicatorView: 963f62bf9f993fcf23218e55958e5b1761b9504c
+  McPicker: 1d11ad8c07c337a16dd9397e45f321125304cbb0
+  nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
+  NVActivityIndicatorView: ec7440a57af2450319d3a4181cca7da6fc127064
   ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
-  PopupDialog: 11347197b6ac3e0548ac445d40ce68d1d407e9a0
-  Protobuf: 0fc0ad8bec688b2a3017a139953e01374fedbd5f
-  PullToRefreshKit: 172df52ab9c6cb2c1d4b1872b49f448d6291523f
+  PopupDialog: 03985b669c29802661c187513bf827340db1ae4d
+  Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
+  PullToRefreshKit: 7cc53e720e69f135cffa1a57784dfb534f0222ab
   SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
   SIAlertView: 20c794b55eaf44d888773ea51647cf8907723919
-  SideMenu: 70ee5657df63ec3382660ec4ef470bf1cf5db07d
-  SideMenuSwift: c4309bd978c61a61d5941eb0fa2112f6b346a331
-  SkyFloatingLabelTextField: 4cbeece9c3aae97c6019d8fae511cb5b755874f7
+  SideMenu: 87efd943737bb83aedf0358884d09fcf5576636d
+  SideMenuSwift: f8567754feb36ade13ffd613f608829f4b86d4b3
+  SkyFloatingLabelTextField: 38164979b79512f9ff9288ad8acfc4bbf5d843e3
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
-  SwifterSwift: 1ce0e31801ddd3a2bd3256626275425adb01067a
-  TTSegmentedControl: 7a5fc6c3e117c340106efd3a35205b987f2ba23c
+  SwifterSwift: 812ffec6f301922f5430e75be3f2939ea3a80024
+  TTSegmentedControl: 422a8fab507a02a60050476d69d577052550f592
   TwitterCore: 8cbc9ad34d91c63a0035ea05bfbfc0d7ca72a28c
-  TwitterKit: bc7bd086b9b724a1d888745a054e1d0b1ecc4f3f
-  XLPagerTabStrip: c908b17cbf42fcd2598ee1adfc49bae25444d88a
+  TwitterKit: 054005edf5350aa9074af74b41456e5a61e3f322
+  XLPagerTabStrip: 22d4c58200d7c105e0e407ab6bfd01a5d85014be
   ZAlertView: 59fffdb4e37a01df461835566d5101052b8af953
 
 PODFILE CHECKSUM: 25c12e399278de4ad95e7f1fe9bce20a89a9ce54
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3

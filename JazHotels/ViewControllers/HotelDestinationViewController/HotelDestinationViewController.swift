@@ -24,6 +24,10 @@ class HotelDestinationViewController: UIViewController {
         self.navigationController?.navigationBar.tintColor = UIColor.white;
 
     }
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false
+        self.navigationController?.navigationBar.isTranslucent = false
+    }
     
     func readHotelImagesJSON(){
         if let path = Bundle.main.path(forResource: "destinations", ofType: "json") {

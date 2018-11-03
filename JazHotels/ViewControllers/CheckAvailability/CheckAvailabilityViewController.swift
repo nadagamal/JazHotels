@@ -294,7 +294,7 @@ class CheckAvailabilityViewController: UIViewController , UIScrollViewDelegate {
             else
             {
                 DispatchQueue.main.async {
-                    SCLAlertView().showError("", subTitle: "your search didnot match any avaiable room stays.")
+                    SCLAlertView().showError("", subTitle: "your search didnot match any available room stays.")
                     
                 }
             }
@@ -327,7 +327,7 @@ class CheckAvailabilityViewController: UIViewController , UIScrollViewDelegate {
                     if roomInfoList?.count == 0 || roomStays?.count == 0
                     {
                         DispatchQueue.main.async {
-                            SCLAlertView().showInfo("", subTitle: "No rooms avaiable")
+                            SCLAlertView().showInfo("", subTitle: "No rooms available")
                             
                         }
                     }
@@ -354,7 +354,7 @@ class CheckAvailabilityViewController: UIViewController , UIScrollViewDelegate {
                 else
                 {
                     DispatchQueue.main.async {
-                        SCLAlertView().showInfo("", subTitle: "No rooms avaiable")
+                        SCLAlertView().showInfo("", subTitle: "No rooms available")
                         
                     }
                 }
@@ -398,7 +398,7 @@ class CheckAvailabilityViewController: UIViewController , UIScrollViewDelegate {
                     if roomStays?.count == 0 || roomStays == nil
                     {
                         DispatchQueue.main.async {
-                            SCLAlertView().showInfo("", subTitle: "No rooms avaiable")
+                            SCLAlertView().showInfo("", subTitle: "No rooms available")
                             
                         }
                     }
@@ -425,7 +425,7 @@ class CheckAvailabilityViewController: UIViewController , UIScrollViewDelegate {
                 else
                 {
                     DispatchQueue.main.async {
-                        SCLAlertView().showInfo("", subTitle: "No rooms avaiable")
+                        SCLAlertView().showInfo("", subTitle: "No rooms available")
                         
                     }
                 }

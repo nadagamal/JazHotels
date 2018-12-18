@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UITabBarDelegate, GIDSignI
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        UIApplication.shared.statusBarView?.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.2)
 
         IQKeyboardManager.shared.enable = true
         let BarButtonItemAppearance = UIBarButtonItem.appearance()

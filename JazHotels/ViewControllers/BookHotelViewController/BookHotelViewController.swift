@@ -77,7 +77,7 @@ class BookHotelViewController: UIViewController {
         if isChecked == false{
             SCLAlertView().showWarning("", subTitle: "Please agree on policy first")
         }
-        else if userData.userCardPayment?.cardHolderName != nil && userData.userCardPayment?.cardNumber != nil && (userData.userCardPayment?.cardNumber?.count)! >= 14 && userData.userCardPayment?.cardCode != nil && userData.userCardPayment?.expireDate != nil{
+        else if userData.userCardPayment?.cardHolderName != nil && userData.userCardPayment?.cardNumber != nil && (userData.userCardPayment?.cardNumber?.count)! >= 14 && userData.userCardPayment?.seriesCode != nil && userData.userCardPayment?.expireDate != nil{
         SVProgressHUD.show()
             self.bookRoom(state: "Initiate") { (response) in
                 DispatchQueue.main.async {
@@ -152,7 +152,7 @@ extension BookHotelViewController:UITableViewDelegate,UITableViewDataSource{
             if userData.userCardPayment != nil{
                 cell.cardNameTxt.text = userData.userCardPayment?.cardHolderName
                 cell.cardNumberTxt.text = userData.userCardPayment?.cardNumber
-                cell.cvcTxt.text = userData.userCardPayment?.cardCode
+                cell.cvcTxt.text = userData.userCardPayment?.seriesCode
                 cell.cardExpirationDateTxt.text = userData.userCardPayment?.expireDate
             }
             return cell

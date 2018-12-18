@@ -124,17 +124,24 @@ class CheckAvailabilityViewController: UIViewController , UIScrollViewDelegate {
     {
         dateDailog.show("Select Date", doneButtonTitle: "Done", cancelButtonTitle: "Cancel", datePickerMode: .date) {
             (date) -> Void in
-            if let dt = date {
+            if var dt = date {
                 let formatter = DateFormatter()
                 formatter.dateFormat = "dd MMM, yyyy"
+                if dt < Date(){
+                    dt = Date()
+                    self.checkInDateLb.text = formatter.string(from: Date())
+                }else{
                 self.checkInDateLb.text = formatter.string(from: dt)
-                
-//                self.checkoutDateLb.text = formatter.string(from: (dt.tomorrow))
-               
+                }
                 self.numberOfNightsLb.text = String(Helper.nightsBetweenDates(startDate: dt, endDate:  self.checkoutDateLb.text?.toDate(withFormat: "dd MMM, yyyy") ?? dt.tomorrow))
                 self.startDate = self.checkInDateLb.text
                 self.checkInDate = dt
                 self.endDate = self.checkoutDateLb.text
+                if self.numberOfNightsLb.text == "1" || self.numberOfNightsLb.text == "0"{
+                    self.numberOfNightsLb.text = "1"
+                    self.endDate = formatter.string(from: dt.tomorrow)
+                    self.checkoutDateLb.text = self.endDate
+                }
 
                 
             }

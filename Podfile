@@ -13,7 +13,7 @@ target 'JazHotels' do
     pod 'PullToRefreshKit'
     pod 'SkyFloatingLabelTextField', '~> 3.0'
     pod 'SwifterSwift'
-    pod 'BSKeyboardControls', '~> 2.2'
+    #pod 'BSKeyboardControls', '~> 2.2'
     pod 'SCLAlertView'
     pod 'SIAlertView'
     pod 'TTSegmentedControl'

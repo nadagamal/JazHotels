@@ -100,7 +100,7 @@ extension CreditCardCell:FormTextFieldDelegate{
                 userPaymentCard?.expireDate = self.cardExpirationDateTxt.text
             }
             else  if textField == self.cvcTxt{
-                userPaymentCard?.cardCode = self.cvcTxt.text
+                userPaymentCard?.seriesCode = self.cvcTxt.text
             }
             UserOperation.saveUserCreditCard(paymentCard: userPaymentCard!)
             

@@ -17,7 +17,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.0.1</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -46,7 +46,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>1.0</string>
 	<key>FacebookAppID</key>
 	<string>305850266488530</string>
 	<key>FacebookDisplayName</key>
@@ -86,12 +86,16 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>Jaz wants to open your camera to take a photo</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>JAZ Hotels  requires GPS to get near by hotel</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>JWill you allow this app to always know your location?</string>
+	<string>JAZ wants to access your location</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Do you allow this app to know your current location?</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Jaz wants to access your photos to upload photo</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Montserrat-Bold.otf</string>
@@ -121,5 +125,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<true/>
 </dict>
 </plist>

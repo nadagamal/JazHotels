@@ -67,8 +67,14 @@ extension UIFont {
         return UIFont(name: "Montserrat-Bold", size: size)!
     }
 }
-
-
+extension UIApplication {
+    var statusBarView: UIView? {
+        if responds(to: Selector("statusBar")) {
+            return value(forKey: "statusBar") as? UIView
+        }
+        return nil
+    }
+}
 
 extension UserDefaults
 {
@@ -105,6 +111,14 @@ extension UserDefaults
             
             return ""
         }
+    }
+}
+extension UIImageView{
+    func addBlackGradientLayer(frame: CGRect, colors:[UIColor]){
+        let gradient = CAGradientLayer()
+        gradient.frame = frame
+        gradient.colors = colors.map{$0.cgColor}
+        self.layer.addSublayer(gradient)
     }
 }
 class  Helper  {
@@ -149,9 +163,9 @@ class  Helper  {
         let components = calendar.dateComponents([Calendar.Component.day], from: startDate, to: endDate)
         if let nigths = components.day {
             
-            return nigths < 0 ? 0 : nigths
+            return nigths < 0 ? 1 : nigths
         }
-        return 0
+        return 1
         
     }
    static func randomString(length: Int) -> String {

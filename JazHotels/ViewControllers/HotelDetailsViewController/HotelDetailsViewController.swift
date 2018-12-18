@@ -21,7 +21,6 @@ class HotelDetailsViewController: SegmentedPagerTabStripViewController {
     var kingfisherSource = [InputSource]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         settings.style.segmentedControlColor = #colorLiteral(red: 0.9215686275, green: 0.9254901961, blue: 0.9333333333, alpha: 1)
         if JazHotels.hotelsImages![hotel.hotelCode] != nil{
             let images = JazHotels.hotelsImages![hotel.hotelCode]
@@ -71,7 +70,10 @@ class HotelDetailsViewController: SegmentedPagerTabStripViewController {
         }
         UISegmentedControl.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.white], for: .selected)
            UISegmentedControl.appearance().tintColor = UIColor(red: 0.0, green: 133.0 / 255.0, blue: 120.0 / 255.0, alpha: 1.0)
-
+        let gradient = CAGradientLayer()
+        gradient.frame = CGRect(origin: slideshow.frame.origin, size: CGSize(width: UIScreen.main.bounds.width, height: slideshow.bounds.size.height+100))
+        gradient.colors = [UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor,UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor]
+        slideshow.layer.addSublayer(gradient)
     }
  
  
@@ -90,6 +92,7 @@ class HotelDetailsViewController: SegmentedPagerTabStripViewController {
             updateRighBarButton(isFavourite: false)
         }
         self.navigationController?.setTransparentNavigation()
+      //   self.navigationController?.navigationBar.backgroundColor =  UIColor(red: 0, green: 0, blue: 0, alpha: 0.3)
 
 
     }

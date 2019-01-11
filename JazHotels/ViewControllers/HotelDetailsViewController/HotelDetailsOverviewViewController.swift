@@ -10,7 +10,7 @@ import UIKit
 import XLPagerTabStrip
 class HotelDetailsOverviewViewController: UIViewController,IndicatorInfoProvider{
     var itemInfo: IndicatorInfo = "Overview"
-    var hotel:JHotelDescriptiveContent!
+   var hotel:JHotelDescriptiveContent!
     @IBOutlet weak var overviewContent: UITextView!
     
     init(itemInfo: IndicatorInfo) {
@@ -25,15 +25,27 @@ class HotelDetailsOverviewViewController: UIViewController,IndicatorInfoProvider
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        let hotelItem = self.getHotel(hotelCode: hotel.hotelCode)
+        
         if hotel.hotelInfo.descriptions.descriptionField.multimediaDescriptions != nil && hotel.hotelInfo.descriptions.descriptionField.multimediaDescriptions.multimediaDescription != nil && hotel.hotelInfo.descriptions.descriptionField.multimediaDescriptions.multimediaDescription[1].textItems.textItemm != nil && hotel.hotelInfo.descriptions.descriptionField.multimediaDescriptions.multimediaDescription.count>1{
         self.overviewContent.text = hotel.hotelInfo.descriptions.descriptionField.multimediaDescriptions.multimediaDescription[1].textItems.textItemm.descriptionFieldd
+        }else    if hotelItem.hotelInfo.descriptions.descriptionField.multimediaDescriptions != nil && hotelItem.hotelInfo.descriptions.descriptionField.multimediaDescriptions.multimediaDescription != nil && hotelItem.hotelInfo.descriptions.descriptionField.multimediaDescriptions.multimediaDescription[1].textItems.textItemm != nil && hotelItem.hotelInfo.descriptions.descriptionField.multimediaDescriptions.multimediaDescription.count>1{
+            self.overviewContent.text = hotelItem.hotelInfo.descriptions.descriptionField.multimediaDescriptions.multimediaDescription[1].textItems.textItemm.descriptionFieldd
+
         }
     }
     override func awakeFromNib() {
         super.awakeFromNib()
         //custom logic goes here
     }
-    
+    func getHotel(hotelCode:String) -> JHotelDescriptiveContent {
+        for hotel in JazHotels.savedhotels {
+            if hotel.hotelCode == hotelCode{
+                return hotel
+            }
+        }
+        return JHotelDescriptiveContent(fromDictionary: [:])
+    }
     /*
      // MARK: - Navigation
      

@@ -11,6 +11,7 @@ import Foundation
 class JMultimediaDescription : NSObject, NSCoding{
 
 	var textItems : JTextItem!
+    var textItem : JTextItem!
 	var multimediaDescriptionn : JMultimediaDescription!
 	var imageItems : JImageItem!
 	var additionalDetailCode : String!
@@ -24,6 +25,9 @@ class JMultimediaDescription : NSObject, NSCoding{
 		if let textItemsData = dictionary["TextItems"] as? [String:Any]{
 			textItems = JTextItem(fromDictionary: textItemsData)
 		}
+        if let textItemsData = dictionary["TextItem"] as? [String:Any]{
+            textItem = JTextItem(fromDictionary: textItemsData)
+        }
 		if let multimediaDescriptionData = dictionary["MultimediaDescription"] as? [String:Any]{
 			multimediaDescriptionn = JMultimediaDescription(fromDictionary: multimediaDescriptionData)
 		}

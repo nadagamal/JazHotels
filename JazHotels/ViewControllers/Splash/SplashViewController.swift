@@ -13,6 +13,7 @@ class SplashViewController: UIViewController {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        readTempHotelsJSON()
         getHotels()
         readHotelImagesJSON()
         readHotelURLSJSON()
@@ -95,6 +96,23 @@ class SplashViewController: UIViewController {
             
         }
     
+    func readTempHotelsJSON(){
+        if let path = Bundle.main.path(forResource: "hotels", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
+                if let jsonResult = jsonResult as? Dictionary<String, Any>{
+                    let obj  =  JSoapEnvelope.init(fromDictionary: jsonResult as Dictionary<String, Any>)
+                    if obj.body.oTAHotelDescriptiveInfoRS.hotelDescriptiveContents != nil{
+                        JazHotels.savedhotels = obj.body.oTAHotelDescriptiveInfoRS.hotelDescriptiveContents.hotelDescriptiveContent
+                    }
+                }
+            } catch{
+                
+            }
+        }
+        
+    }
     func readHotelCoordinatesJSON(){
         if let path = Bundle.main.path(forResource: "hotels-coords", ofType: "json") {
             do {

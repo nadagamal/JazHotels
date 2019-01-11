@@ -83,7 +83,7 @@ class HotelDestinationViewController: UIViewController {
         let sideNV = authMain.instantiateViewController(withIdentifier: "UISideMenuNavigationController")
         self.navigationController?.present(sideNV, animated: true, completion: nil)
     }
-    
+
 }
 extension HotelDestinationViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

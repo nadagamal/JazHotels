@@ -11,9 +11,10 @@ import ImageSlideshow
 import Cosmos
 import XLPagerTabStrip
 class HotelDetailsViewController: SegmentedPagerTabStripViewController {
-    @IBOutlet weak var slideshow: ImageSlideshow!
+    
     var hotel:JHotelDescriptiveContent!
     
+    @IBOutlet weak var slideshow: ImageSlideshow!
     @IBOutlet weak var hotelLocationLbl: UILabel!
     @IBOutlet weak var hotelNameLbl: UILabel!
     @IBOutlet weak var segmentioView: UIView!
@@ -53,9 +54,20 @@ class HotelDetailsViewController: SegmentedPagerTabStripViewController {
         let recognizer = UITapGestureRecognizer(target: self, action: #selector(didTap))
         slideshow.addGestureRecognizer(recognizer)
         self.hotelNameLbl.text = hotel.hotelName
+        let hotelItem = getHotel(hotelCode: hotel.hotelCode)
         if hotel.contactInfos != nil && hotel.contactInfos.contactInfo != nil && hotel.contactInfos.contactInfo.addresses != nil && hotel.contactInfos.contactInfo.addresses.address != nil && hotel.contactInfos.contactInfo.addresses.address.addressLine != nil && hotel.contactInfos.contactInfo.addresses.address.addressLine.count>0{
+            
             hotelLocationLbl.text = hotel.contactInfos.contactInfo.addresses.address.addressLine[0] + "  -  " + hotel.contactInfos.contactInfo.addresses.address.cityName
+            
         }
+        else if hotelItem.contactInfos != nil && hotelItem.contactInfos.contactInfo != nil && hotelItem.contactInfos.contactInfo.addresses != nil && hotelItem.contactInfos.contactInfo.addresses.address != nil && hotelItem.contactInfos.contactInfo.addresses.address.addressLineSTR != nil{
+            
+            hotelLocationLbl.text = hotelItem.contactInfos.contactInfo.addresses.address.addressLineSTR + "  -  " + hotel.contactInfos.contactInfo.addresses.address.cityName
+
+        }
+//        } else  if hotelItem.contactInfos != nil && hotelItem.contactInfos.contactInfo != nil && hotelItem.contactInfos.contactInfo.addresses != nil && hotelItem.contactInfos.contactInfo.addresses.address != nil && hotelItem.contactInfos.contactInfo.addresses.address.addressLine != nil && hotelItem.contactInfos.contactInfo.addresses.address.addressLine.count>0{
+//            hotelLocationLbl.text = hotelItem.contactInfos.contactInfo.addresses.address.addressLine[0] + "  -  " + hotel.contactInfos.contactInfo.addresses.address.cityName
+//        }
         if hotel.affiliationInfo.awards != nil && hotel.affiliationInfo.awards.award != nil && hotel.affiliationInfo.awards.award.count>0 && hotel.affiliationInfo.awards.award[0].rating != nil{
             let stringArray = hotel.affiliationInfo.awards.award[0].rating.components(separatedBy: CharacterSet.decimalDigits.inverted)
             for item in stringArray {
@@ -104,8 +116,17 @@ class HotelDetailsViewController: SegmentedPagerTabStripViewController {
         self.navigationController?.isNavigationBarHidden = false
         self.navigationController?.navigationBar.isTranslucent = false
 
-
     }
+    
+    func getHotel(hotelCode:String) -> JHotelDescriptiveContent {
+        for hotel in JazHotels.savedhotels {
+            if hotel.hotelCode == hotelCode{
+                return hotel
+            }
+        }
+        return JHotelDescriptiveContent(fromDictionary: [:])
+    }
+    
     func updateRighBarButton(isFavourite : Bool){
         var shareBtn:UIBarButtonItem!
         var favBtn:UIBarButtonItem!

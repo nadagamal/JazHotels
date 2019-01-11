@@ -16,6 +16,7 @@ class JAddres : NSObject, NSCoding{
 	var postalCode : String!
 	var defaultInd : Bool!
 	var formattedInd : Bool!
+    var addressLineSTR : String!
 
 
 	/**
@@ -23,6 +24,7 @@ class JAddres : NSObject, NSCoding{
 	 */
 	init(fromDictionary dictionary: [String:Any]){
 		addressLine = dictionary["AddressLine"] as? [String]
+        addressLineSTR = dictionary["AddressLine"] as? String
 		cityName = dictionary["CityName"] as? String
 		if let countryNameData = dictionary["CountryName"] as? [String:Any]{
 			countryName = JCountryName(fromDictionary: countryNameData)

@@ -13,6 +13,7 @@ class JDescription : NSObject, NSCoding{
 	var language : String!
 	var text : String!
 	var multimediaDescriptions : JMultimediaDescription!
+    var multimediaDescription : JMultimediaDescription!
 	var descriptionField : JDescription!
 	var textt : String!
 
@@ -30,6 +31,10 @@ class JDescription : NSObject, NSCoding{
 			descriptionField = JDescription(fromDictionary: descriptionFieldData)
 		}
 		text = dictionary["Text"] as? String
+        
+        if let multimediaDescriptionsData = dictionary["MultimediaDescription"] as? [String:Any]{
+            multimediaDescription = JMultimediaDescription(fromDictionary: multimediaDescriptionsData)
+        }
 	}
 
 	/**

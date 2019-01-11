@@ -16,7 +16,7 @@ class JHotelInfo : NSObject, NSCoding{
 	var position : JPosition!
 	var services : JService!
 	var whenBuilt : String!
-
+    var descriptionn : JDescription!
 
 	/**
 	 * Instantiate the instance using the passed dictionary values to set the properties values
@@ -38,7 +38,13 @@ class JHotelInfo : NSObject, NSCoding{
 			services = JService(fromDictionary: servicesData)
 		}
 		whenBuilt = dictionary["_WhenBuilt"] as? String
+        
+        if let descriptionFieldData = dictionary["Description"] as? [String:Any]{
+            descriptionn = JDescription(fromDictionary: descriptionFieldData)
+        }
 	}
+    
+    
 
 	/**
 	 * Returns all the available property values in the form of [String:Any] object where the key is the approperiate json key and the value is the value of the corresponding property
